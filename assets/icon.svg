@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">GIS-AI 简报图标</title>
+  <desc id="desc">深绿色圆角方形内的地图折线与 AI 节点图形</desc>
+  <rect width="512" height="512" rx="112" fill="#0b5d5e"/>
+  <path d="M107 135l96-39 106 39 96-39v280l-96 40-106-40-96 40z" fill="none" stroke="#dcefeb" stroke-width="28" stroke-linejoin="round"/>
+  <path d="M203 96v280M309 135v281" stroke="#dcefeb" stroke-width="22" opacity=".7"/>
+  <circle cx="160" cy="255" r="25" fill="#d78a3a"/>
+  <circle cx="258" cy="205" r="25" fill="#d78a3a"/>
+  <circle cx="354" cy="285" r="25" fill="#d78a3a"/>
+  <path d="M160 255l98-50 96 80" fill="none" stroke="#d78a3a" stroke-width="18" stroke-linecap="round"/>
+</svg>

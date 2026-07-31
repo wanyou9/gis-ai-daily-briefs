@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wanyou9.github.io/gis-ai-daily-briefs/

@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "site": {
+    "title": "GIS-AI 期刊每日轮检简报",
+    "public_base_url": "https://wanyou9.github.io/gis-ai-daily-briefs/",
+    "timezone": "America/Los_Angeles",
+    "primary_format": "HTML",
+    "first_daily_publication": "2026-08-01",
+    "status": "READY_FOR_FIRST_DAILY_BRIEF"
+  },
+  "updated_date": "2026-07-30",
+  "years": [
+    {
+      "year": 2026,
+      "brief_count": 0,
+      "index": "2026/index.html",
+      "months": [
+        {
+          "month": "08",
+          "brief_count": 0,
+          "index": "2026/08/index.html",
+          "status": "WAITING_FIRST_BRIEF"
+        }
+      ]
+    }
+  ],
+  "briefs": [],
+  "task_index": {},
+  "scheduled_date_index": {}
+}

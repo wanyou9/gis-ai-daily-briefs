@@ -1,0 +1,19 @@
+{
+  "name": "GIS-AI 期刊每日轮检简报",
+  "short_name": "GIS-AI 简报",
+  "description": "GIS-AI 期刊每日轮检简报的公开移动端入口。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7f3",
+  "theme_color": "#0b5d5e",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

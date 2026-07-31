@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b5d5e">
+  <meta name="description" content="GIS-AI 期刊每日轮检简报的公开移动端入口与分级索引。">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <title>GIS-AI 期刊每日轮检简报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17343a;
+      --muted: #5d7175;
+      --paper: #f5f7f3;
+      --card: #fff;
+      --brand: #0b5d5e;
+      --brand-dark: #073f40;
+      --accent: #d78a3a;
+      --line: #dbe4df;
+      --ok: #197052;
+      --shadow: 0 14px 35px rgba(19, 52, 58, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 100% 0, rgba(11, 93, 94, .12), transparent 32rem),
+        var(--paper);
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", system-ui, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--brand); text-underline-offset: .2em; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: .2rem; }
+    .shell { width: min(70rem, calc(100% - 2rem)); margin-inline: auto; }
+    .crumbs { padding: 1rem 0; color: var(--muted); font-size: .9rem; }
+    .crumbs span { color: var(--ink); font-weight: 700; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(2rem, 7vw, 5rem);
+      color: #f7fffd;
+      background: linear-gradient(135deg, var(--brand-dark), var(--brand) 58%, #14797a);
+      border-radius: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 18rem;
+      height: 18rem;
+      right: -7rem;
+      bottom: -10rem;
+      border: 1.8rem solid rgba(255,255,255,.08);
+      border-radius: 50%;
+    }
+    .eyebrow { margin: 0 0 .6rem; color: #bfe6dc; font-weight: 800; letter-spacing: .12em; }
+    h1 { max-width: 14ch; margin: 0; font-size: clamp(2rem, 7vw, 4.6rem); line-height: 1.08; letter-spacing: -.035em; }
+    .lede { max-width: 42rem; margin: 1.3rem 0 0; font-size: clamp(1rem, 2vw, 1.2rem); color: #dcefeb; }
+    .chips { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.5rem; }
+    .chip { padding: .4rem .75rem; border: 1px solid rgba(255,255,255,.24); border-radius: 999px; background: rgba(255,255,255,.09); font-size: .88rem; }
+    main { padding: 1.5rem 0 3rem; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.25rem; }
+    .card { grid-column: span 12; padding: clamp(1.25rem, 3vw, 2rem); background: var(--card); border: 1px solid var(--line); border-radius: 1.25rem; box-shadow: 0 8px 25px rgba(19,52,58,.045); }
+    .grid + .card { margin-top: 1.25rem; }
+    .card h2 { margin: 0 0 .7rem; font-size: 1.2rem; }
+    .status { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: .8rem; color: var(--ok); font-weight: 800; }
+    .status::before { content: ""; width: .65rem; height: .65rem; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 .3rem rgba(25,112,82,.12); }
+    .button { display: inline-flex; align-items: center; min-height: 2.9rem; margin-top: .6rem; padding: .65rem 1rem; color: #fff; background: var(--brand); border-radius: .7rem; font-weight: 800; text-decoration: none; }
+    .button:hover { background: var(--brand-dark); }
+    .steps { margin: .5rem 0 0; padding-left: 1.25rem; }
+    .steps li + li { margin-top: .55rem; }
+    .muted { color: var(--muted); }
+    footer { padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+    @media (min-width: 48rem) {
+      .card.primary { grid-column: span 7; }
+      .card.secondary { grid-column: span 5; }
+      .card.third { grid-column: span 4; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="crumbs" aria-label="面包屑"><span aria-current="page">首页</span></nav>
+    <header class="hero">
+      <p class="eyebrow">GIS-AI JOURNAL WATCH</p>
+      <h1>GIS-AI 期刊每日轮检简报</h1>
+      <p class="lede">面向手机、平板和电脑的公开阅读入口。无需安装软件，打开网址即可查看每日简报、摘要图与按年/月组织的分级索引。</p>
+      <div class="chips" aria-label="站点特征">
+        <span class="chip">每日 02:00 PT</span>
+        <span class="chip">每月第 1-30 组</span>
+        <span class="chip">移动端优先</span>
+        <span class="chip">官方来源可追溯</span>
+      </div>
+    </header>
+    <main>
+      <div class="grid">
+        <section class="card primary" aria-labelledby="latest-title">
+          <div class="status">公开发布通道已就绪</div>
+          <h2 id="latest-title">最新简报</h2>
+          <p>首份正式 HTML 日报计划于 <strong>2026 年 8 月 1 日</strong>发布。7 月历史 DOCX 继续作为原始审计证据保留，不回溯转换。</p>
+          <a class="button" href="2026/08/">进入 2026 年 8 月索引</a>
+        </section>
+        <section class="card secondary" aria-labelledby="use-title">
+          <h2 id="use-title">在移动设备上使用</h2>
+          <ol class="steps">
+            <li>用手机或平板浏览器打开本站网址。</li>
+            <li>从年度、月份索引进入目标日期。</li>
+            <li>可将本站“添加到主屏幕”，以后像应用一样打开。</li>
+          </ol>
+        </section>
+        <section class="card third" aria-labelledby="schedule-title">
+          <h2 id="schedule-title">月度节奏</h2>
+          <p>每月按第 1-30 组运行；不足 30 天的月份在月末截断，超过 30 天的月份第 31 日不扫描。</p>
+        </section>
+        <section class="card third" aria-labelledby="recovery-title">
+          <h2 id="recovery-title">漏扫恢复</h2>
+          <p>若某日未完成，恢复后先补齐未完成任务，再执行当天任务；历史任务与恢复日期均保留审计记录。</p>
+        </section>
+        <section class="card third" aria-labelledby="privacy-title">
+          <h2 id="privacy-title">公开范围</h2>
+          <p>本站只发布脱敏后的简报网页、摘要图与索引，不包含内部工作簿、状态 JSON、本地路径或自动化配置。</p>
+        </section>
+      </div>
+      <section class="card" aria-labelledby="archive-title">
+        <h2 id="archive-title">分级索引</h2>
+        <p><a href="2026/">查看 2026 年索引</a>。后续每日页面将提供“站点首页 → 年度 → 月份 → 当日”的面包屑与页内论文卡片目录。</p>
+      </section>
+    </main>
+    <footer>
+      <p>GIS-AI 期刊每日轮检简报 · 公开移动端档案 · America/Los_Angeles</p>
+    </footer>
+  </div>
+</body>
+</html>
