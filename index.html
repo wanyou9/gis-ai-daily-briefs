@@ -35,6 +35,8 @@
     }
     a { color: var(--brand); text-underline-offset: .2em; }
     a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: .2rem; }
+    .skip-link { position: absolute; left: -9999px; top: .5rem; z-index: 10; padding: .7rem 1rem; color: #fff; background: var(--brand-dark); border-radius: .5rem; }
+    .skip-link:focus { left: .5rem; }
     .text-link { display: inline-flex; align-items: center; min-height: 44px; }
     .shell { width: min(70rem, calc(100% - 2rem)); margin-inline: auto; }
     .crumbs { padding: 1rem 0; color: var(--muted); font-size: .9rem; }
@@ -72,6 +74,9 @@
     .status::before { content: ""; width: .65rem; height: .65rem; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 .3rem rgba(25,112,82,.12); }
     .button { display: inline-flex; align-items: center; min-height: 2.9rem; margin-top: .6rem; padding: .65rem 1rem; color: #fff; background: var(--brand); border-radius: .7rem; font-weight: 800; text-decoration: none; }
     .button:hover { background: var(--brand-dark); }
+    .button-row { display: flex; flex-wrap: wrap; gap: .7rem; }
+    .button.secondary { color: var(--brand); background: #e5f1ed; }
+    .button.secondary:hover { color: #fff; background: var(--brand-dark); }
     .steps { margin: .5rem 0 0; padding-left: 1.25rem; }
     .steps li + li { margin-top: .55rem; }
     .muted { color: var(--muted); }
@@ -85,6 +90,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
   <div class="shell">
     <nav class="crumbs" aria-label="面包屑"><span aria-current="page">首页</span></nav>
     <header class="hero">
@@ -98,13 +104,16 @@
         <span class="chip">官方来源可追溯</span>
       </div>
     </header>
-    <main>
+    <main id="main">
       <div class="grid">
         <section class="card primary" aria-labelledby="latest-title">
-          <div class="status">公开发布通道已就绪</div>
+          <div class="status">7 月历史档案已归档</div>
           <h2 id="latest-title">最新简报</h2>
-          <p>首份正式 HTML 日报计划于 <strong>2026 年 8 月 1 日</strong>发布。此前 DOCX 继续作为原始审计证据保留，不回溯转换。</p>
-          <a class="button" href="2026/08/">进入 2026 年 8 月索引</a>
+          <p>已按生成日期归档 <strong>9 份 2026 年 7 月 Word 简报</strong>，原文件保持不变并提供完整性校验。首份正式 HTML 日报计划于 2026 年 8 月 1 日发布。</p>
+          <div class="button-row">
+            <a class="button" href="2026/07/">查看 7 月 Word 档案</a>
+            <a class="button secondary" href="2026/08/">进入 8 月索引</a>
+          </div>
         </section>
         <section class="card secondary" aria-labelledby="use-title">
           <h2 id="use-title">在移动设备上使用</h2>
@@ -124,12 +133,12 @@
         </section>
         <section class="card third" aria-labelledby="privacy-title">
           <h2 id="privacy-title">公开范围</h2>
-          <p>本站只发布脱敏后的简报网页、期刊级汇总摘要图与索引；图片不列论文题名、作者、DOI 或摘要，也不包含内部工作簿、状态或自动化配置。</p>
+          <p>本站发布经公开审计的简报网页、历史 Word 原件、期刊级汇总摘要图与索引；不公开内部文件本体、凭据、本地路径或自动化配置，摘要图不列论文题名、作者、DOI 或摘要。</p>
         </section>
       </div>
       <section class="card" aria-labelledby="archive-title">
         <h2 id="archive-title">分级索引</h2>
-        <p><a class="text-link" href="2026/">查看 2026 年索引</a>。后续每日页面将提供“站点首页 → 年度 → 月份 → 当日”的面包屑与页内论文卡片目录。</p>
+        <p><a class="text-link" href="2026/">查看 2026 年索引</a>。站点采用“首页 → 年度 → 月份 → 简报”的层级；7 月保留 Word 原件，8 月起以响应式 HTML 为主格式。</p>
       </section>
     </main>
     <footer>

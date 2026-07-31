@@ -1,5 +1,5 @@
 {
-  "brief_count": 0,
+  "brief_count": 9,
   "level": "YEAR",
   "months": [
     {
@@ -9,10 +9,19 @@
       "month": "08",
       "month_key": "2026-08",
       "status": "WAITING_FIRST_BRIEF"
+    },
+    {
+      "brief_count": 9,
+      "format": "DOCX",
+      "index": "2026/07/index.html",
+      "manifest": "index/2026/07.json",
+      "month": "07",
+      "month_key": "2026-07",
+      "status": "HISTORICAL_ARCHIVE"
     }
   ],
   "schema_version": "2.0",
   "timezone": "America/Los_Angeles",
-  "updated_date": "2026-07-30",
+  "updated_date": "2026-07-31",
   "year": 2026
 }

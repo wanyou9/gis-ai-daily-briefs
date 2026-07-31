@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b5d5e">
+  <meta name="description" content="GIS-AI 期刊每日轮检简报 2026 年 7 月 Word 历史档案。">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+  <title>2026 年 7 月 Word 档案｜GIS-AI 期刊每日轮检简报</title>
+  <style>
+    :root {
+      color-scheme:light;
+      --ink:#17343a;
+      --muted:#5d7175;
+      --paper:#f5f7f3;
+      --card:#fff;
+      --brand:#0b5d5e;
+      --brand-dark:#073f40;
+      --accent:#d78a3a;
+      --line:#dbe4df;
+      --soft:#e5f1ed;
+      --warn:#8a5216;
+      --warn-soft:#fff2df;
+      --shadow:0 10px 28px rgba(19,52,58,.06);
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      color:var(--ink);
+      background:radial-gradient(circle at 100% 0,rgba(11,93,94,.11),transparent 28rem),var(--paper);
+      font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",system-ui,sans-serif;
+      font-size:16px;
+      line-height:1.65;
+    }
+    a { color:var(--brand); text-decoration-thickness:.08em; text-underline-offset:.2em; }
+    a:visited { color:#48547d; }
+    a:focus-visible, summary:focus-visible { outline:3px solid var(--accent); outline-offset:3px; border-radius:.25rem; }
+    .skip-link { position:absolute; left:-9999px; top:.5rem; z-index:10; padding:.7rem 1rem; color:#fff; background:var(--brand-dark); border-radius:.5rem; }
+    .skip-link:focus { left:.5rem; }
+    .shell { width:min(68rem,calc(100% - 2rem)); margin-inline:auto; }
+    .crumbs { padding:.75rem 0; color:var(--muted); font-size:.9rem; }
+    .crumbs a { display:inline-flex; align-items:center; min-height:44px; }
+    .hero { padding:clamp(1.8rem,6vw,4rem); color:#f7fffd; background:linear-gradient(135deg,var(--brand-dark),var(--brand) 62%,#14797a); border-radius:1.4rem; box-shadow:var(--shadow); }
+    .eyebrow { margin:0 0 .45rem; color:#bfe6dc; font-weight:800; letter-spacing:.1em; }
+    h1 { margin:0; font-size:clamp(2rem,6vw,4rem); line-height:1.08; letter-spacing:-.025em; }
+    .lede { max-width:46rem; margin:1rem 0 0; color:#dcefeb; }
+    .summary-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:.8rem; margin-top:1.3rem; }
+    .metric { padding:.9rem; color:var(--ink); background:rgba(255,255,255,.93); border-radius:.9rem; }
+    .metric strong { display:block; font-size:1.4rem; line-height:1.2; }
+    .metric span { color:var(--muted); font-size:.85rem; }
+    main { padding:1.25rem 0 3rem; }
+    .notice { padding:1.1rem 1.2rem; background:var(--warn-soft); border:1px solid #efd1a8; border-left:4px solid var(--accent); border-radius:1rem; }
+    .notice h2 { margin:0 0 .35rem; font-size:1.05rem; color:var(--warn); }
+    .notice p { margin:0; }
+    .section-head { display:flex; flex-wrap:wrap; justify-content:space-between; gap:.8rem; align-items:end; margin:1.6rem 0 .8rem; }
+    .section-head h2 { margin:0; font-size:1.3rem; }
+    .section-head p { margin:0; color:var(--muted); font-size:.9rem; }
+    .brief-list { display:grid; gap:.9rem; }
+    .brief { display:grid; grid-template-columns:5.2rem 1fr; gap:1rem; padding:clamp(1rem,3vw,1.4rem); background:var(--card); border:1px solid var(--line); border-radius:1.1rem; box-shadow:var(--shadow); scroll-margin-top:1rem; }
+    .date { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:5.2rem; color:#fff; background:var(--brand); border-radius:.9rem; text-align:center; }
+    .date strong { font-size:1.35rem; line-height:1.15; }
+    .date span { font-size:.78rem; opacity:.86; }
+    .badges { display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:.35rem; }
+    .badge { display:inline-flex; align-items:center; min-height:1.75rem; padding:.15rem .55rem; color:var(--brand); background:var(--soft); border-radius:999px; font-size:.76rem; font-weight:800; }
+    .badge.warn { color:var(--warn); background:var(--warn-soft); }
+    .brief h3 { margin:0; font-size:clamp(1.05rem,3vw,1.25rem); line-height:1.4; }
+    .brief p { margin:.45rem 0 0; color:var(--muted); }
+    .actions { display:flex; flex-wrap:wrap; gap:.65rem; margin-top:.8rem; }
+    .download { display:inline-flex; align-items:center; min-height:44px; padding:.55rem .85rem; color:#fff; background:var(--brand); border-radius:.65rem; font-weight:800; text-decoration:none; }
+    .download:visited { color:#fff; }
+    .download:hover { background:var(--brand-dark); }
+    details { margin-top:.65rem; border-top:1px solid var(--line); }
+    summary { display:flex; align-items:center; min-height:44px; width:max-content; max-width:100%; color:var(--brand); cursor:pointer; font-weight:700; }
+    .integrity { margin:.1rem 0 .35rem; padding:.75rem; background:#f7f9f7; border-radius:.65rem; font-size:.83rem; overflow-wrap:anywhere; }
+    .integrity dt { color:var(--muted); font-weight:700; }
+    .integrity dd { margin:0 0 .45rem; }
+    .integrity dd:last-child { margin-bottom:0; }
+    code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:.82rem; }
+    .bottom-nav { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.3rem; }
+    .bottom-nav a { display:inline-flex; align-items:center; min-height:44px; }
+    footer { padding:1.4rem 0 2.5rem; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem; }
+    @media (max-width:42rem) {
+      .summary-grid { grid-template-columns:1fr 1fr; }
+      .metric:last-child { grid-column:1 / -1; }
+      .brief { grid-template-columns:1fr; }
+      .date { flex-direction:row; justify-content:flex-start; gap:.45rem; min-height:auto; padding:.65rem .8rem; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="shell">
+    <nav class="crumbs" aria-label="面包屑"><a href="../../">首页</a> / <a href="../">2026</a> / <span aria-current="page">07</span></nav>
+    <header class="hero">
+      <p class="eyebrow">HISTORICAL WORD ARCHIVE</p>
+      <h1>2026 年 7 月简报档案</h1>
+      <p class="lede">保存 8 月 HTML 主格式启用前已经生成的 Word 简报原件。文档按生成日期归档，适合在电脑、手机或平板上下载后阅读。</p>
+      <div class="summary-grid" aria-label="7 月档案概况">
+        <div class="metric"><strong>9</strong><span>Word 简报</span></div>
+        <div class="metric"><strong>8 + 1</strong><span>每日轮检 + 专项整期</span></div>
+        <div class="metric"><strong>07-15 至 07-29</strong><span>文档生成日期范围</span></div>
+      </div>
+    </header>
+    <main id="main">
+      <aside class="notice" aria-labelledby="archive-note-title">
+        <h2 id="archive-note-title">归档说明</h2>
+        <p>以下文件保持原始内容和文件结构，不回溯转换为 HTML。文档中的运行状态、数量和审计说明对应其生成时点，不代表当前系统状态；完整 SHA-256 校验值可在每张卡片中展开查看。</p>
+      </aside>
+      <section aria-labelledby="briefs-title">
+        <div class="section-head">
+          <h2 id="briefs-title">按日期查看</h2>
+          <p>最新文档优先 · 共 9 份</p>
+        </div>
+        <div class="brief-list">
+          <article class="brief" id="brief-2026-07-29">
+            <time class="date" datetime="2026-07-29"><strong>07-29</strong><span>2026</span></time>
+            <div>
+              <div class="badges"><span class="badge">每日轮检</span><span class="badge">第 05 组</span><span class="badge">补扫第 29 组</span><span class="badge warn">状态未提交</span></div>
+              <h3>GIS-AI 期刊每日轮检简报 · 第 05 组</h3>
+              <p>文档记录：1 个新完整期次、7 张整期卡片、155 条元数据登记；生成时状态未提交。</p>
+              <div class="actions"><a class="download" href="docs/2026-07-29-group-05.docx" download="2026-07-29_GIS-AI期刊每日轮检简报_第05组.docx">下载 Word 简报（73.3 KB）</a></div>
+              <details><summary>查看文件校验信息</summary><dl class="integrity"><dt>原始文件名</dt><dd>2026-07-29_GIS-AI期刊每日轮检简报_第05组.docx</dd><dt>SHA-256</dt><dd><code>7dee3951995ca72b004f1caa07b5df8347d92450c72afdb981ba54ad2d4dc8d0</code></dd></dl></details>
+            </div>
+          </article>
+          <article class="brief" id="brief-2026-07-28">
+            <time class="date" datetime="2026-07-28"><strong>07-28</strong><span>2026</span></time>
+            <div>
+              <div class="badges"><span class="badge">每日轮检</span><span class="badge">第 04 组</span><span class="badge">补扫第 28 组</span></div>
+              <h3>GIS-AI 期刊每日轮检简报 · 第 04 组</h3>
+              <p>文档记录：确认 2 个新完整期次、48 张论文卡片，登记 143 条在编或未来期元数据。</p>
+              <div class="actions"><a class="download" href="docs/2026-07-28-group-04.docx" download="2026-07-28_GIS-AI期刊每日轮检简报_第04组.docx">下载 Word 简报（69.4 KB）</a></div>
+              <details><summary>查看文件校验信息</summary><dl class="integrity"><dt>原始文件名</dt><dd>2026-07-28_GIS-AI期刊每日轮检简报_第04组.docx</dd><dt>SHA-256</dt><dd><code>6facd43b508be6de74fa8328737469d07c106e00802420b730cf9fca183c12cc</code></dd></dl></details>
+            </div>
+          </article>
+          <article class="brief" id="brief-2026-07-24">
+            <time class="date" datetime="2026-07-24"><strong>07-24</strong><span>2026</span></time>
+            <div>
+              <div class="badges"><span class="badge">每日轮检</span><span class="badge">第 03 组</span><span class="badge">补扫第 24 组</span><span class="badge">状态已提交</span></div>
+              <h3>GIS-AI 期刊每日轮检简报 · 第 03 组</h3>
+              <p>文档记录：3 个新完整期次、66 张论文卡片、77 条网络首发、在编期或未来期登记。</p>
+              <div class="actions"><a class="download" href="docs/2026-07-24-group-03.docx" download="2026-07-24_GIS-AI期刊每日轮检简报_第03组.docx">下载 Word 简报（67.9 KB）</a></div>
+              <details><summary>查看文件校验信息</summary><dl class="integrity"><dt>原始文件名</dt><dd>2026-07-24_GIS-AI期刊每日轮检简报_第03组.docx</dd><dt>SHA-256</dt><dd><code>90e530239faa76b78ac784c1b2cc87031fdb291d8b5cb2a3b1eede881e6b77e6</code></dd></dl></details>
+            </div>
+          </article>
+          <article class="brief" id="brief-2026-07-20">
+            <time class="date" datetime="2026-07-20"><strong>07-20</strong><span>2026</span></time>
+            <div>
+              <div class="badges"><span class="badge">每日轮检</span><span class="badge">第 03 组</span><span class="badge">补扫第 20 组</span><span class="badge warn">状态未提交</span></div>
+              <h3>GIS-AI 期刊每日轮检简报 · 第 03 组</h3>
+              <p>文档记录：5 个新完整期次、114 项内容卡片、30 条 AOP 或在编登记；生成时状态未提交。</p>
+              <div class="actions"><a class="download" href="docs/2026-07-20-group-03.docx" download="2026-07-20_GIS-AI期刊每日轮检简报_第03组.docx">下载 Word 简报（73.2 KB）</a></div>
+              <details><summary>查看文件校验信息</summary><dl class="integrity"><dt>原始文件名</dt><dd>2026-07-20_GIS-AI期刊每日轮检简报_第03组.docx</dd><dt>SHA-256</dt><dd><code>b0bff18accbfd6d2269eab086ba49d7c715ba89a9231e20e144f8ee46ea9e626</code></dd></dl></details>
+            </div>
+          </article>
+          <article class="brief" id="brief-2026-07-19">
+            <time class="date" datetime="2026-07-19"><strong>07-19</strong><span>2026</span></time>
+            <div>
+              <div class="badges"><span class="badge">每日轮检</span><span class="badge">第 03 组</span><span class="badge">补扫第 19 组</span><span class="badge warn">状态未提交</span></div>
+              <h3>GIS-AI 期刊每日轮检简报 · 第 03 组</h3>
+              <p>文档记录：6 个新完整期次、145 项正式目录内容卡片、10 条可核验网络首发变化；生成时状态未提交。</p>
+              <div class="actions"><a class="download" href="docs/2026-07-19-group-03.docx" download="2026-07-19_GIS-AI期刊每日轮检简报_第03组.docx">下载 Word 简报（76.6 KB）</a></div>
+              <details><summary>查看文件校验信息</summary><dl class="integrity"><dt>原始文件名</dt><dd>2026-07-19_GIS-AI期刊每日轮检简报_第03组.docx</dd><dt>SHA-256</dt><dd><code>2789be3f2ed03d1c2cc4581f3e89ba2cbe61ca5df39e49aeff7672b23178d6fe</code></dd></dl></details>
+            </div>
+          </article>
+          <article class="brief" id="brief-2026-07-18">
+            <time class="date" datetime="2026-07-18"><strong>07-18</strong><span>2026</span></time>
+            <div>
+              <div class="badges"><span class="badge">每日轮检</span><span class="badge">第 02 组</span><span class="badge">补扫第 18 组</span></div>
+              <h3>GIS-AI 期刊每日轮检简报 · 第 02 组</h3>
+              <p>文档记录：未发现新增完整期次，登记 3 条网络首发记录。</p>
+              <div class="actions"><a class="download" href="docs/2026-07-18-group-02.docx" download="2026-07-18_GIS-AI期刊每日轮检简报_第02组.docx">下载 Word 简报（45.9 KB）</a></div>
+              <details><summary>查看文件校验信息</summary><dl class="integrity"><dt>原始文件名</dt><dd>2026-07-18_GIS-AI期刊每日轮检简报_第02组.docx</dd><dt>SHA-256</dt><dd><code>5b2799193a4ec69411600509a61808fdd04e138860a47ccace83662903c50b28</code></dd></dl></details>
+            </div>
+          </article>
+          <article class="brief" id="brief-2026-07-17">
+            <time class="date" datetime="2026-07-17"><strong>07-17</strong><span>2026</span></time>
+            <div>
+              <div class="badges"><span class="badge">每日轮检</span><span class="badge">第 01 组</span><span class="badge">补扫第 17 组</span></div>
+              <h3>GIS-AI 期刊每日轮检简报 · 第 01 组</h3>
+              <p>文档记录：未发现新增完整期次，登记 6 条网络首发或未来期记录。</p>
+              <div class="actions"><a class="download" href="docs/2026-07-17-group-01.docx" download="2026-07-17_GIS-AI期刊每日轮检简报_第01组.docx">下载 Word 简报（45.1 KB）</a></div>
+              <details><summary>查看文件校验信息</summary><dl class="integrity"><dt>原始文件名</dt><dd>2026-07-17_GIS-AI期刊每日轮检简报_第01组.docx</dd><dt>SHA-256</dt><dd><code>bccc1d5a2159e32610a259941b7ac646cc9876ab421614ddc1936ed785b89fd8</code></dd></dl></details>
+            </div>
+          </article>
+          <article class="brief" id="brief-2026-07-16">
+            <time class="date" datetime="2026-07-16"><strong>07-16</strong><span>2026</span></time>
+            <div>
+              <div class="badges"><span class="badge">每日轮检</span><span class="badge">第 01 组</span><span class="badge">补扫第 16 组</span></div>
+              <h3>GIS-AI 期刊每日轮检简报 · 第 01 组</h3>
+              <p>文档记录：未发现新增完整期次，登记 10 条在编期或未来期更新。</p>
+              <div class="actions"><a class="download" href="docs/2026-07-16-group-01.docx" download="2026-07-16_GIS-AI期刊每日轮检简报_第01组.docx">下载 Word 简报（46.2 KB）</a></div>
+              <details><summary>查看文件校验信息</summary><dl class="integrity"><dt>原始文件名</dt><dd>2026-07-16_GIS-AI期刊每日轮检简报_第01组.docx</dd><dt>SHA-256</dt><dd><code>8df86820bc0375d93ab391da7d6f2658ee22875141c2c34e371c321df2255664</code></dd></dl></details>
+            </div>
+          </article>
+          <article class="brief" id="brief-2026-07-15">
+            <time class="date" datetime="2026-07-15"><strong>07-15</strong><span>2026</span></time>
+            <div>
+              <div class="badges"><span class="badge">专项整期</span><span class="badge">ESWA V320</span><span class="badge">74 篇</span></div>
+              <h3>Expert Systems with Applications Volume 320 整期扫描简报</h3>
+              <p>专项整期扫描简报，覆盖 Volume 320 的 74 篇论文，并保留题名级证据边界说明。</p>
+              <div class="actions"><a class="download" href="docs/2026-07-15-eswa-v320.docx" download="2026-07-15_AI权威期刊整期扫描简报_ESWA_V320.docx">下载 Word 简报（63.3 KB）</a></div>
+              <details><summary>查看文件校验信息</summary><dl class="integrity"><dt>原始文件名</dt><dd>2026-07-15_AI权威期刊整期扫描简报_ESWA_V320.docx</dd><dt>SHA-256</dt><dd><code>02d07daa6e5a763dc8749c06c8d75fd56e92dcc442cb73a70e42bbda021fe192</code></dd></dl></details>
+            </div>
+          </article>
+        </div>
+      </section>
+      <nav class="bottom-nav" aria-label="档案导航"><a href="../">返回 2026 年索引</a><a href="../../">返回站点首页</a><a href="../../index/2026/07.json">查看机器可读索引</a></nav>
+    </main>
+    <footer><p>GIS-AI 期刊每日轮检简报 · 2026 年 7 月 Word 历史档案</p></footer>
+  </div>
+</body>
+</html>

@@ -9,48 +9,66 @@
   <link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
   <title>2026 年索引｜GIS-AI 期刊每日轮检简报</title>
   <style>
-    :root { --ink:#17343a; --muted:#5d7175; --paper:#f5f7f3; --card:#fff; --brand:#0b5d5e; --accent:#d78a3a; --line:#dbe4df; }
+    :root { --ink:#17343a; --muted:#5d7175; --paper:#f5f7f3; --card:#fff; --brand:#0b5d5e; --brand-dark:#073f40; --accent:#d78a3a; --line:#dbe4df; --soft:#e5f1ed; }
     * { box-sizing:border-box; }
     body { margin:0; color:var(--ink); background:var(--paper); font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",system-ui,sans-serif; line-height:1.65; }
     a { color:var(--brand); text-underline-offset:.2em; }
     a:focus-visible { outline:3px solid var(--accent); outline-offset:3px; border-radius:.2rem; }
+    .skip-link { position:absolute; left:-9999px; top:.5rem; z-index:10; padding:.7rem 1rem; color:#fff; background:var(--brand-dark); border-radius:.5rem; }
+    .skip-link:focus { left:.5rem; }
     .shell { width:min(64rem,calc(100% - 2rem)); margin-inline:auto; }
     .crumbs { padding:1rem 0; color:var(--muted); font-size:.9rem; }
-    .crumbs a { margin-right:.4rem; }
+    .crumbs a { display:inline-flex; align-items:center; min-height:44px; margin-right:.4rem; }
     header { padding:clamp(1.6rem,5vw,3.5rem); color:#fff; background:linear-gradient(135deg,#073f40,var(--brand)); border-radius:1.35rem; }
     .eyebrow { margin:0 0 .4rem; color:#bfe6dc; font-weight:800; letter-spacing:.1em; }
     h1 { margin:0; font-size:clamp(2rem,6vw,4rem); line-height:1.1; }
-    header p:last-child { max-width:40rem; margin:1rem 0 0; color:#dcefeb; }
+    header p:last-child { max-width:43rem; margin:1rem 0 0; color:#dcefeb; }
     main { padding:1.5rem 0 3rem; }
     h2 { margin:0 0 .8rem; font-size:1.25rem; }
-    .month { display:grid; grid-template-columns:auto 1fr auto; gap:1rem; align-items:center; padding:1.2rem; background:var(--card); border:1px solid var(--line); border-radius:1rem; }
+    .month { display:grid; grid-template-columns:auto 1fr auto; gap:1rem; align-items:center; padding:1.2rem; background:var(--card); border:1px solid var(--line); border-radius:1rem; box-shadow:0 8px 25px rgba(19,52,58,.045); }
     .month + .month { margin-top:.8rem; }
+    .month.archived { border-left:4px solid var(--brand); }
     .num { display:grid; place-items:center; width:3.3rem; height:3.3rem; color:#fff; background:var(--brand); border-radius:.8rem; font-size:1.2rem; font-weight:900; }
     .month h3 { margin:0; font-size:1.05rem; }
-    .month p { margin:.15rem 0 0; color:var(--muted); font-size:.9rem; }
+    .month h3 a { display:inline-flex; align-items:center; min-height:44px; }
+    .month p { margin:0; color:var(--muted); font-size:.92rem; }
+    .meta { display:flex; flex-wrap:wrap; gap:.45rem; margin-top:.35rem; }
+    .tag { display:inline-flex; align-items:center; min-height:1.8rem; padding:.15rem .55rem; color:var(--brand); background:var(--soft); border-radius:999px; font-size:.78rem; font-weight:800; }
     .count { color:var(--muted); font-size:.9rem; white-space:nowrap; }
     footer { padding:1.5rem 0 2.5rem; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem; }
+    footer a { display:inline-flex; align-items:center; min-height:44px; }
     @media (max-width:34rem) { .month { grid-template-columns:auto 1fr; } .count { grid-column:2; } }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
   <div class="shell">
     <nav class="crumbs" aria-label="面包屑"><a href="../">首页</a> / <span aria-current="page">2026</span></nav>
     <header>
       <p class="eyebrow">YEAR ARCHIVE</p>
       <h1>2026 年简报索引</h1>
-      <p>按月份进入每日轮检简报。每个扫描月最多 30 个常规组，漏扫恢复任务会在实际完成日期下统一呈现。</p>
+      <p>按月份进入简报档案。7 月保存生成时的 Word 原件，8 月起以移动端优先的 HTML 为主格式；两类文件均通过月份索引统一访问。</p>
     </header>
-    <main>
+    <main id="main">
       <section aria-labelledby="months-title">
         <h2 id="months-title">月份</h2>
         <article class="month">
           <div class="num" aria-hidden="true">08</div>
           <div>
             <h3><a href="08/">2026 年 8 月</a></h3>
-            <p>HTML 主格式首月 · 等待 8 月 1 日首份日报</p>
+            <p>响应式 HTML 主格式首月</p>
+            <div class="meta"><span class="tag">即将开始</span><span class="tag">第 1 组起</span></div>
           </div>
           <div class="count">0 份</div>
+        </article>
+        <article class="month archived">
+          <div class="num" aria-hidden="true">07</div>
+          <div>
+            <h3><a href="07/">2026 年 7 月</a></h3>
+            <p>7 月 15-29 日生成的历史 Word 原件</p>
+            <div class="meta"><span class="tag">已归档</span><span class="tag">DOCX</span></div>
+          </div>
+          <div class="count">9 份</div>
         </article>
       </section>
     </main>
