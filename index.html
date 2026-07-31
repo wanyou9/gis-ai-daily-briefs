@@ -35,6 +35,7 @@
     }
     a { color: var(--brand); text-underline-offset: .2em; }
     a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: .2rem; }
+    .text-link { display: inline-flex; align-items: center; min-height: 44px; }
     .shell { width: min(70rem, calc(100% - 2rem)); margin-inline: auto; }
     .crumbs { padding: 1rem 0; color: var(--muted); font-size: .9rem; }
     .crumbs span { color: var(--ink); font-weight: 700; }
@@ -92,7 +93,7 @@
       <p class="lede">面向手机、平板和电脑的公开阅读入口。无需安装软件，打开网址即可查看每日简报、摘要图与按年/月组织的分级索引。</p>
       <div class="chips" aria-label="站点特征">
         <span class="chip">每日 02:00 PT</span>
-        <span class="chip">每月第 1-30 组</span>
+        <span class="chip">1–30 日轮检 · 31 日全刊审计</span>
         <span class="chip">移动端优先</span>
         <span class="chip">官方来源可追溯</span>
       </div>
@@ -102,7 +103,7 @@
         <section class="card primary" aria-labelledby="latest-title">
           <div class="status">公开发布通道已就绪</div>
           <h2 id="latest-title">最新简报</h2>
-          <p>首份正式 HTML 日报计划于 <strong>2026 年 8 月 1 日</strong>发布。7 月历史 DOCX 继续作为原始审计证据保留，不回溯转换。</p>
+          <p>首份正式 HTML 日报计划于 <strong>2026 年 8 月 1 日</strong>发布。此前 DOCX 继续作为原始审计证据保留，不回溯转换。</p>
           <a class="button" href="2026/08/">进入 2026 年 8 月索引</a>
         </section>
         <section class="card secondary" aria-labelledby="use-title">
@@ -115,20 +116,20 @@
         </section>
         <section class="card third" aria-labelledby="schedule-title">
           <h2 id="schedule-title">月度节奏</h2>
-          <p>每月按第 1-30 组运行；不足 30 天的月份在月末截断，超过 30 天的月份第 31 日不扫描。</p>
+          <p>每月 1–30 日按日号轮检对应组；1、3、5、7、8、10、12 月的第 31 日对全部正式期刊执行更新审计。30 天月份和二月自然结束。</p>
         </section>
         <section class="card third" aria-labelledby="recovery-title">
           <h2 id="recovery-title">漏扫恢复</h2>
-          <p>若某日未完成，恢复后先补齐未完成任务，再执行当天任务；历史任务与恢复日期均保留审计记录。</p>
+          <p>若某日未完成，恢复后先补齐未完成任务，再执行当天任务；漏跑的 31 日审计仍归入原日期和月份，并保留实际完成日期。</p>
         </section>
         <section class="card third" aria-labelledby="privacy-title">
           <h2 id="privacy-title">公开范围</h2>
-          <p>本站只发布脱敏后的简报网页、摘要图与索引，不包含内部工作簿、状态 JSON、本地路径或自动化配置。</p>
+          <p>本站只发布脱敏后的简报网页、期刊级汇总摘要图与索引；图片不列论文题名、作者、DOI 或摘要，也不包含内部工作簿、状态或自动化配置。</p>
         </section>
       </div>
       <section class="card" aria-labelledby="archive-title">
         <h2 id="archive-title">分级索引</h2>
-        <p><a href="2026/">查看 2026 年索引</a>。后续每日页面将提供“站点首页 → 年度 → 月份 → 当日”的面包屑与页内论文卡片目录。</p>
+        <p><a class="text-link" href="2026/">查看 2026 年索引</a>。后续每日页面将提供“站点首页 → 年度 → 月份 → 当日”的面包屑与页内论文卡片目录。</p>
       </section>
     </main>
     <footer>
