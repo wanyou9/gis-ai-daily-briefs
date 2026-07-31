@@ -1,30 +1,30 @@
 {
-  "schema_version": "1.0",
-  "site": {
-    "title": "GIS-AI 期刊每日轮检简报",
-    "public_base_url": "https://wanyou9.github.io/gis-ai-daily-briefs/",
-    "timezone": "America/Los_Angeles",
-    "primary_format": "HTML",
-    "first_daily_publication": "2026-08-01",
-    "status": "READY_FOR_FIRST_DAILY_BRIEF"
+  "brief_count": 0,
+  "level": "ROOT",
+  "recent_briefs": [],
+  "retention": {
+    "full_history_location": "year/month shards",
+    "root_recent_brief_limit": 31,
+    "task_index_location": "month shards"
   },
+  "schema_version": "2.0",
+  "site": {
+    "first_daily_publication": "2026-08-01",
+    "primary_format": "HTML",
+    "public_base_url": "https://wanyou9.github.io/gis-ai-daily-briefs/",
+    "status": "READY_FOR_FIRST_DAILY_BRIEF",
+    "timezone": "America/Los_Angeles",
+    "title": "GIS-AI 期刊每日轮检简报"
+  },
+  "timezone": "America/Los_Angeles",
   "updated_date": "2026-07-30",
   "years": [
     {
-      "year": 2026,
       "brief_count": 0,
       "index": "2026/index.html",
-      "months": [
-        {
-          "month": "08",
-          "brief_count": 0,
-          "index": "2026/08/index.html",
-          "status": "WAITING_FIRST_BRIEF"
-        }
-      ]
+      "manifest": "index/2026.json",
+      "month_count": 1,
+      "year": 2026
     }
-  ],
-  "briefs": [],
-  "task_index": {},
-  "scheduled_date_index": {}
+  ]
 }
