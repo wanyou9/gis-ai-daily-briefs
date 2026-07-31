@@ -12,12 +12,12 @@
     },
     {
       "brief_count": 9,
-      "format": "DOCX",
+      "format": "HTML",
       "index": "2026/07/index.html",
       "manifest": "index/2026/07.json",
       "month": "07",
       "month_key": "2026-07",
-      "status": "HISTORICAL_ARCHIVE"
+      "status": "HISTORICAL_HTML_MIGRATED"
     }
   ],
   "schema_version": "2.0",
