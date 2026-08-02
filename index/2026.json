@@ -1,27 +1,26 @@
 {
-  "brief_count": 9,
+  "brief_count": 10,
   "level": "YEAR",
   "months": [
     {
-      "brief_count": 0,
-      "index": "2026/08/index.html",
-      "manifest": "index/2026/08.json",
-      "month": "08",
-      "month_key": "2026-08",
-      "status": "WAITING_FIRST_BRIEF"
-    },
-    {
       "brief_count": 9,
-      "format": "HTML",
       "index": "2026/07/index.html",
       "manifest": "index/2026/07.json",
       "month": "07",
       "month_key": "2026-07",
-      "status": "HISTORICAL_HTML_MIGRATED"
+      "status": "READY"
+    },
+    {
+      "brief_count": 1,
+      "index": "2026/08/index.html",
+      "manifest": "index/2026/08.json",
+      "month": "08",
+      "month_key": "2026-08",
+      "status": "READY"
     }
   ],
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "timezone": "America/Los_Angeles",
-  "updated_date": "2026-07-31",
+  "updated_date": "2026-08-01",
   "year": 2026
 }

@@ -1,13 +1,67 @@
 {
-  "brief_count": 0,
-  "briefs": [],
+  "brief_count": 1,
+  "briefs": [
+    {
+      "brief_id": "DAILY-20260801",
+      "commit_id": "DAILY-20260801-205225-ba099406",
+      "completed_run_date": "2026-08-01",
+      "counts": {
+        "complete_issues": 1,
+        "degraded_sources": 2,
+        "formal_articles": 22,
+        "journals": 4,
+        "online_first_updates": 17
+      },
+      "format": "HTML",
+      "group_id": 1,
+      "html_sha256": "43ecb62a427e61870d036c900fb6cf7e557938796485dc685fb6b2396c6790c8",
+      "index_anchor": "brief-DAILY-20260801",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-08-01",
+      "release_report": "releases/DAILY-20260801-205225-ba099406/2026/08/2026-08-01_GIS-AI期刊每日轮检简报_第01组.html",
+      "release_summary_image": "releases/DAILY-20260801-205225-ba099406/2026/08/assets/2026-08-01_GIS-AI期刊每日摘要_第01组.png",
+      "report": "2026/08/2026-08-01_GIS-AI期刊每日轮检简报_第01组.html",
+      "scheduled_date": "2026-08-01",
+      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "summary": "扫描 4 种期刊，确认 1 个完整期次、22 条正式目录内容和 17 条网络首发发现；2 种来源降级但证据充分。",
+      "summary_image": "2026/08/assets/2026-08-01_GIS-AI期刊每日摘要_第01组.png",
+      "summary_image_sha256": "5697852642060228639421a6d258062e47676071c35558731bf41e3ff9dc36be",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "brief-DAILY-20260801",
+          "coverage_month": "2026-08",
+          "group": 1,
+          "scheduled_date": "2026-08-01",
+          "status": "COMPLETED",
+          "task_id": "DAILY-20260801-G01",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 01 组",
+      "updated_at": "2026-08-01T21:20:23-07:00"
+    }
+  ],
   "level": "MONTH",
   "month": "08",
   "month_key": "2026-08",
-  "scheduled_date_index": {},
-  "schema_version": "2.0",
-  "task_index": {},
+  "scheduled_date_index": {
+    "2026-08-01": [
+      "DAILY-20260801-G01"
+    ]
+  },
+  "schema_version": "2.1",
+  "task_index": {
+    "DAILY-20260801-G01": {
+      "anchor": "brief-DAILY-20260801",
+      "brief_id": "DAILY-20260801",
+      "completed_run_date": "2026-08-01",
+      "logical_date": "2026-08-01",
+      "report": "2026/08/2026-08-01_GIS-AI期刊每日轮检简报_第01组.html",
+      "scheduled_date": "2026-08-01"
+    }
+  },
   "timezone": "America/Los_Angeles",
-  "updated_date": "2026-07-30",
+  "updated_date": "2026-08-01",
   "year": 2026
 }

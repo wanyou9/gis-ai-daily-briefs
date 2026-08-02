@@ -1,37 +1,59 @@
 {
-  "brief_count": 9,
+  "brief_count": 10,
   "level": "ROOT",
   "recent_briefs": [
     {
-      "brief_id": "HIST-20260729-G05-B29",
-      "date": "2026-07-29",
+      "brief_id": "HIST-20260715-ESWA-V320",
+      "date": "2026-07-15",
       "format": "HTML",
-      "html_sha256": "57e1898dcc3753d3cc617b3828b3efcdbda931e9cccb36b63f19613e879c01a8",
-      "index": "2026/07/index.html#brief-2026-07-29",
-      "kind": "DAILY_ROTATION",
-      "report": "2026/07/2026-07-29_GIS-AI期刊每日轮检简报_第05组.html",
+      "html_sha256": "aa32ca2adc5a1a90e7dd98e15c5464b8e5d7154bfdf88c96e4ffcbd54cd795a4",
+      "index": "2026/07/index.html#brief-2026-07-15",
+      "kind": "SPECIAL_ISSUE",
+      "report": "2026/07/2026-07-15_AI权威期刊整期扫描简报_ESWA_V320.html",
       "status": "HISTORICAL_HTML_MIGRATED",
-      "title": "GIS-AI 期刊每日轮检简报 · 第 05 组"
+      "title": "Expert Systems with Applications Volume 320 整期扫描简报"
     },
     {
-      "brief_id": "HIST-20260728-G04-B28",
-      "date": "2026-07-28",
+      "brief_id": "HIST-20260716-G01-B16",
+      "date": "2026-07-16",
       "format": "HTML",
-      "html_sha256": "1ea03466241524b63ebda115bca909d1710be77f24c34b82a85a20d298697acc",
-      "index": "2026/07/index.html#brief-2026-07-28",
+      "html_sha256": "bd3064092eb693ee5550d2eefa32dac0087e5484a7a55a3efc12a7fad040cfe6",
+      "index": "2026/07/index.html#brief-2026-07-16",
       "kind": "DAILY_ROTATION",
-      "report": "2026/07/2026-07-28_GIS-AI期刊每日轮检简报_第04组.html",
+      "report": "2026/07/2026-07-16_GIS-AI期刊每日轮检简报_第01组.html",
       "status": "HISTORICAL_HTML_MIGRATED",
-      "title": "GIS-AI 期刊每日轮检简报 · 第 04 组"
+      "title": "GIS-AI 期刊每日轮检简报 · 第 01 组"
     },
     {
-      "brief_id": "HIST-20260724-G03-B24",
-      "date": "2026-07-24",
+      "brief_id": "HIST-20260717-G01-B17",
+      "date": "2026-07-17",
       "format": "HTML",
-      "html_sha256": "6c3575c017c5d362a2d3a3f0515817a6a77edfe4706b40e47e312eca2bb5fd9f",
-      "index": "2026/07/index.html#brief-2026-07-24",
+      "html_sha256": "5dfad0fbcff1d6192f9c0e727d4a54ad0f2ac7286cedb74fadc9c53115bcab4b",
+      "index": "2026/07/index.html#brief-2026-07-17",
       "kind": "DAILY_ROTATION",
-      "report": "2026/07/2026-07-24_GIS-AI期刊每日轮检简报_第03组.html",
+      "report": "2026/07/2026-07-17_GIS-AI期刊每日轮检简报_第01组.html",
+      "status": "HISTORICAL_HTML_MIGRATED",
+      "title": "GIS-AI 期刊每日轮检简报 · 第 01 组"
+    },
+    {
+      "brief_id": "HIST-20260718-G02-B18",
+      "date": "2026-07-18",
+      "format": "HTML",
+      "html_sha256": "ea6d2b642d372b23a3f86b33d01ea85eef419b128e89b730d5d2d9fdc2945aea",
+      "index": "2026/07/index.html#brief-2026-07-18",
+      "kind": "DAILY_ROTATION",
+      "report": "2026/07/2026-07-18_GIS-AI期刊每日轮检简报_第02组.html",
+      "status": "HISTORICAL_HTML_MIGRATED",
+      "title": "GIS-AI 期刊每日轮检简报 · 第 02 组"
+    },
+    {
+      "brief_id": "HIST-20260719-G03-B19",
+      "date": "2026-07-19",
+      "format": "HTML",
+      "html_sha256": "801187b1fe52b60c5207339eb0e1e79dbb7eab09e9d54088b8689782d4bd73e9",
+      "index": "2026/07/index.html#brief-2026-07-19",
+      "kind": "DAILY_ROTATION",
+      "report": "2026/07/2026-07-19_GIS-AI期刊每日轮检简报_第03组.html",
       "status": "HISTORICAL_HTML_MIGRATED",
       "title": "GIS-AI 期刊每日轮检简报 · 第 03 组"
     },
@@ -47,59 +69,77 @@
       "title": "GIS-AI 期刊每日轮检简报 · 第 03 组"
     },
     {
-      "brief_id": "HIST-20260719-G03-B19",
-      "date": "2026-07-19",
+      "brief_id": "HIST-20260724-G03-B24",
+      "date": "2026-07-24",
       "format": "HTML",
-      "html_sha256": "801187b1fe52b60c5207339eb0e1e79dbb7eab09e9d54088b8689782d4bd73e9",
-      "index": "2026/07/index.html#brief-2026-07-19",
+      "html_sha256": "6c3575c017c5d362a2d3a3f0515817a6a77edfe4706b40e47e312eca2bb5fd9f",
+      "index": "2026/07/index.html#brief-2026-07-24",
       "kind": "DAILY_ROTATION",
-      "report": "2026/07/2026-07-19_GIS-AI期刊每日轮检简报_第03组.html",
+      "report": "2026/07/2026-07-24_GIS-AI期刊每日轮检简报_第03组.html",
       "status": "HISTORICAL_HTML_MIGRATED",
       "title": "GIS-AI 期刊每日轮检简报 · 第 03 组"
     },
     {
-      "brief_id": "HIST-20260718-G02-B18",
-      "date": "2026-07-18",
+      "brief_id": "HIST-20260728-G04-B28",
+      "date": "2026-07-28",
       "format": "HTML",
-      "html_sha256": "ea6d2b642d372b23a3f86b33d01ea85eef419b128e89b730d5d2d9fdc2945aea",
-      "index": "2026/07/index.html#brief-2026-07-18",
+      "html_sha256": "1ea03466241524b63ebda115bca909d1710be77f24c34b82a85a20d298697acc",
+      "index": "2026/07/index.html#brief-2026-07-28",
       "kind": "DAILY_ROTATION",
-      "report": "2026/07/2026-07-18_GIS-AI期刊每日轮检简报_第02组.html",
+      "report": "2026/07/2026-07-28_GIS-AI期刊每日轮检简报_第04组.html",
       "status": "HISTORICAL_HTML_MIGRATED",
-      "title": "GIS-AI 期刊每日轮检简报 · 第 02 组"
+      "title": "GIS-AI 期刊每日轮检简报 · 第 04 组"
     },
     {
-      "brief_id": "HIST-20260717-G01-B17",
-      "date": "2026-07-17",
+      "brief_id": "HIST-20260729-G05-B29",
+      "date": "2026-07-29",
       "format": "HTML",
-      "html_sha256": "5dfad0fbcff1d6192f9c0e727d4a54ad0f2ac7286cedb74fadc9c53115bcab4b",
-      "index": "2026/07/index.html#brief-2026-07-17",
+      "html_sha256": "57e1898dcc3753d3cc617b3828b3efcdbda931e9cccb36b63f19613e879c01a8",
+      "index": "2026/07/index.html#brief-2026-07-29",
       "kind": "DAILY_ROTATION",
-      "report": "2026/07/2026-07-17_GIS-AI期刊每日轮检简报_第01组.html",
+      "report": "2026/07/2026-07-29_GIS-AI期刊每日轮检简报_第05组.html",
       "status": "HISTORICAL_HTML_MIGRATED",
-      "title": "GIS-AI 期刊每日轮检简报 · 第 01 组"
+      "title": "GIS-AI 期刊每日轮检简报 · 第 05 组"
     },
     {
-      "brief_id": "HIST-20260716-G01-B16",
-      "date": "2026-07-16",
+      "brief_id": "DAILY-20260801",
+      "commit_id": "DAILY-20260801-205225-ba099406",
+      "completed_run_date": "2026-08-01",
+      "counts": {
+        "complete_issues": 1,
+        "degraded_sources": 2,
+        "formal_articles": 22,
+        "journals": 4,
+        "online_first_updates": 17
+      },
       "format": "HTML",
-      "html_sha256": "bd3064092eb693ee5550d2eefa32dac0087e5484a7a55a3efc12a7fad040cfe6",
-      "index": "2026/07/index.html#brief-2026-07-16",
+      "group_id": 1,
+      "html_sha256": "43ecb62a427e61870d036c900fb6cf7e557938796485dc685fb6b2396c6790c8",
+      "index_anchor": "brief-DAILY-20260801",
       "kind": "DAILY_ROTATION",
-      "report": "2026/07/2026-07-16_GIS-AI期刊每日轮检简报_第01组.html",
-      "status": "HISTORICAL_HTML_MIGRATED",
-      "title": "GIS-AI 期刊每日轮检简报 · 第 01 组"
-    },
-    {
-      "brief_id": "HIST-20260715-ESWA-V320",
-      "date": "2026-07-15",
-      "format": "HTML",
-      "html_sha256": "aa32ca2adc5a1a90e7dd98e15c5464b8e5d7154bfdf88c96e4ffcbd54cd795a4",
-      "index": "2026/07/index.html#brief-2026-07-15",
-      "kind": "SPECIAL_ISSUE",
-      "report": "2026/07/2026-07-15_AI权威期刊整期扫描简报_ESWA_V320.html",
-      "status": "HISTORICAL_HTML_MIGRATED",
-      "title": "Expert Systems with Applications Volume 320 整期扫描简报"
+      "logical_date": "2026-08-01",
+      "release_report": "releases/DAILY-20260801-205225-ba099406/2026/08/2026-08-01_GIS-AI期刊每日轮检简报_第01组.html",
+      "release_summary_image": "releases/DAILY-20260801-205225-ba099406/2026/08/assets/2026-08-01_GIS-AI期刊每日摘要_第01组.png",
+      "report": "2026/08/2026-08-01_GIS-AI期刊每日轮检简报_第01组.html",
+      "scheduled_date": "2026-08-01",
+      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "summary": "扫描 4 种期刊，确认 1 个完整期次、22 条正式目录内容和 17 条网络首发发现；2 种来源降级但证据充分。",
+      "summary_image": "2026/08/assets/2026-08-01_GIS-AI期刊每日摘要_第01组.png",
+      "summary_image_sha256": "5697852642060228639421a6d258062e47676071c35558731bf41e3ff9dc36be",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "brief-DAILY-20260801",
+          "coverage_month": "2026-08",
+          "group": 1,
+          "scheduled_date": "2026-08-01",
+          "status": "COMPLETED",
+          "task_id": "DAILY-20260801-G01",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 01 组",
+      "updated_at": "2026-08-01T21:20:23-07:00"
     }
   ],
   "retention": {
@@ -107,21 +147,21 @@
     "root_recent_brief_limit": 31,
     "task_index_location": "month shards"
   },
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "site": {
     "first_daily_publication": "2026-08-01",
+    "historical_html_archive_start": "2026-07-15",
     "primary_format": "HTML",
     "public_base_url": "https://wanyou9.github.io/gis-ai-daily-briefs/",
     "status": "ACTIVE_WITH_HISTORICAL_HTML",
     "timezone": "America/Los_Angeles",
-    "title": "GIS-AI 期刊每日轮检简报",
-    "historical_html_archive_start": "2026-07-15"
+    "title": "GIS-AI 期刊每日轮检简报"
   },
   "timezone": "America/Los_Angeles",
-  "updated_date": "2026-07-31",
+  "updated_date": "2026-08-01",
   "years": [
     {
-      "brief_count": 9,
+      "brief_count": 10,
       "index": "2026/index.html",
       "manifest": "index/2026.json",
       "month_count": 2,
