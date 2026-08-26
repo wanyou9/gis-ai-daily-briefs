@@ -1,5 +1,5 @@
 {
-  "brief_count": 18,
+  "brief_count": 19,
   "level": "ROOT",
   "recent_briefs": [
     {
@@ -467,6 +467,191 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 09 组",
       "updated_at": "2026-08-09T19:30:57-07:00"
+    },
+    {
+      "brief_id": "DAILY-20260826",
+      "commit_id": "DAILY-20260826-012737-be2432c5",
+      "completed_run_date": "2026-08-26",
+      "counts": {
+        "changed_journals": 35,
+        "complete_issues": 13,
+        "degraded_sources": 33,
+        "formal_articles": 297,
+        "journals": 51,
+        "online_first_updates": 545
+      },
+      "format": "HTML",
+      "group_id": 26,
+      "html_sha256": "4bbd9454ad8fa91b98952359e16458e779e1f4cc14cff36bc8807898fa416d9c",
+      "index_anchor": "brief-DAILY-20260826",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-08-26",
+      "release_report": "releases/DAILY-20260826-012737-be2432c5/2026/08/2026-08-26_GIS-AI期刊每日轮检简报_第26组.html",
+      "release_summary_image": "releases/DAILY-20260826-012737-be2432c5/2026/08/assets/2026-08-26_GIS-AI期刊每日摘要_第26组.png",
+      "report": "2026/08/2026-08-26_GIS-AI期刊每日轮检简报_第26组.html",
+      "scheduled_date": "2026-08-26",
+      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "summary": "补做第 10—25 组并执行当天第 26 组；51 刊完成，确认 13 个完整期次、297 篇正式论文与 545 条网络更新；94 条差异均为表示层变化。",
+      "summary_image": "2026/08/assets/2026-08-26_GIS-AI期刊每日摘要_第26组.png",
+      "summary_image_sha256": "43937f4c363d100e6da0c3ed062fb1f04d185198f1bd4d366ec4c396f28a7893",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20260810-G10",
+          "coverage_month": "2026-08",
+          "group": 10,
+          "scheduled_date": "2026-08-10",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260810-G10",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260811-G11",
+          "coverage_month": "2026-08",
+          "group": 11,
+          "scheduled_date": "2026-08-11",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260811-G11",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260812-G12",
+          "coverage_month": "2026-08",
+          "group": 12,
+          "scheduled_date": "2026-08-12",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260812-G12",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260813-G13",
+          "coverage_month": "2026-08",
+          "group": 13,
+          "scheduled_date": "2026-08-13",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260813-G13",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260814-G14",
+          "coverage_month": "2026-08",
+          "group": 14,
+          "scheduled_date": "2026-08-14",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260814-G14",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260815-G15",
+          "coverage_month": "2026-08",
+          "group": 15,
+          "scheduled_date": "2026-08-15",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260815-G15",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260816-G16",
+          "coverage_month": "2026-08",
+          "group": 16,
+          "scheduled_date": "2026-08-16",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260816-G16",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260817-G17",
+          "coverage_month": "2026-08",
+          "group": 17,
+          "scheduled_date": "2026-08-17",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260817-G17",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260818-G18",
+          "coverage_month": "2026-08",
+          "group": 18,
+          "scheduled_date": "2026-08-18",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260818-G18",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260819-G19",
+          "coverage_month": "2026-08",
+          "group": 19,
+          "scheduled_date": "2026-08-19",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260819-G19",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260820-G20",
+          "coverage_month": "2026-08",
+          "group": 20,
+          "scheduled_date": "2026-08-20",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260820-G20",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260821-G21",
+          "coverage_month": "2026-08",
+          "group": 21,
+          "scheduled_date": "2026-08-21",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260821-G21",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260822-G22",
+          "coverage_month": "2026-08",
+          "group": 22,
+          "scheduled_date": "2026-08-22",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260822-G22",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260823-G23",
+          "coverage_month": "2026-08",
+          "group": 23,
+          "scheduled_date": "2026-08-23",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260823-G23",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260824-G24",
+          "coverage_month": "2026-08",
+          "group": 24,
+          "scheduled_date": "2026-08-24",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260824-G24",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260825-G25",
+          "coverage_month": "2026-08",
+          "group": 25,
+          "scheduled_date": "2026-08-25",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260825-G25",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260826-G26",
+          "coverage_month": "2026-08",
+          "group": 26,
+          "scheduled_date": "2026-08-26",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260826-G26",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 26 组",
+      "updated_at": "2026-08-26T01:50:39-07:00"
     }
   ],
   "retention": {
@@ -485,10 +670,10 @@
     "title": "GIS-AI 期刊每日轮检简报"
   },
   "timezone": "America/Los_Angeles",
-  "updated_date": "2026-08-09",
+  "updated_date": "2026-08-26",
   "years": [
     {
-      "brief_count": 18,
+      "brief_count": 19,
       "index": "2026/index.html",
       "manifest": "index/2026.json",
       "month_count": 2,
