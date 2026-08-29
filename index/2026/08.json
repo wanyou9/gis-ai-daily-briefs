@@ -1,5 +1,5 @@
 {
-  "brief_count": 10,
+  "brief_count": 11,
   "briefs": [
     {
       "brief_id": "DAILY-20260801",
@@ -552,6 +552,56 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 26 组",
       "updated_at": "2026-08-26T01:50:39-07:00"
+    },
+    {
+      "brief_id": "DAILY-20260828",
+      "commit_id": "DAILY-20260828-225717-7f873d19",
+      "completed_run_date": "2026-08-28",
+      "counts": {
+        "changed_journals": 6,
+        "complete_issues": 9,
+        "degraded_sources": 4,
+        "formal_articles": 259,
+        "journals": 6,
+        "online_first_updates": 91
+      },
+      "format": "HTML",
+      "group_id": 28,
+      "html_sha256": "7bdb8a5620bf576902fb999012f5246fb5269e8b832bfaa787b05f83afe52635",
+      "index_anchor": "brief-DAILY-20260828",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-08-28",
+      "release_report": "releases/DAILY-20260828-225717-7f873d19/2026/08/2026-08-28_GIS-AI期刊每日轮检简报_第28组.html",
+      "release_summary_image": "releases/DAILY-20260828-225717-7f873d19/2026/08/assets/2026-08-28_GIS-AI期刊每日摘要_第28组.png",
+      "report": "2026/08/2026-08-28_GIS-AI期刊每日轮检简报_第28组.html",
+      "scheduled_date": "2026-08-28",
+      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "summary": "补做 8 月 27 日第 27 组并执行当天第 28 组；6 刊完成，确认 9 个完整期次、259 篇正式内容与 91 条网络更新；19 条差异均为字段结构变化。",
+      "summary_image": "2026/08/assets/2026-08-28_GIS-AI期刊每日摘要_第28组.png",
+      "summary_image_sha256": "8feded603505717987d564463df89cac0903fcca4b71868d0c53de0654ce7880",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20260827-G27",
+          "coverage_month": "2026-08",
+          "group": 27,
+          "scheduled_date": "2026-08-27",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260827-G27",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260828-G28",
+          "coverage_month": "2026-08",
+          "group": 28,
+          "scheduled_date": "2026-08-28",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260828-G28",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 28 组",
+      "updated_at": "2026-08-28T22:57:17-07:00"
     }
   ],
   "level": "MONTH",
@@ -635,6 +685,12 @@
     ],
     "2026-08-26": [
       "ROUTINE-20260826-G26"
+    ],
+    "2026-08-27": [
+      "ROUTINE-20260827-G27"
+    ],
+    "2026-08-28": [
+      "ROUTINE-20260828-G28"
     ]
   },
   "schema_version": "2.1",
@@ -846,9 +902,25 @@
       "logical_date": "2026-08-26",
       "report": "2026/08/2026-08-26_GIS-AI期刊每日轮检简报_第26组.html",
       "scheduled_date": "2026-08-26"
+    },
+    "ROUTINE-20260827-G27": {
+      "anchor": "task-ROUTINE-20260827-G27",
+      "brief_id": "DAILY-20260828",
+      "completed_run_date": "2026-08-28",
+      "logical_date": "2026-08-27",
+      "report": "2026/08/2026-08-28_GIS-AI期刊每日轮检简报_第28组.html",
+      "scheduled_date": "2026-08-27"
+    },
+    "ROUTINE-20260828-G28": {
+      "anchor": "task-ROUTINE-20260828-G28",
+      "brief_id": "DAILY-20260828",
+      "completed_run_date": "2026-08-28",
+      "logical_date": "2026-08-28",
+      "report": "2026/08/2026-08-28_GIS-AI期刊每日轮检简报_第28组.html",
+      "scheduled_date": "2026-08-28"
     }
   },
   "timezone": "America/Los_Angeles",
-  "updated_date": "2026-08-26",
+  "updated_date": "2026-08-28",
   "year": 2026
 }
