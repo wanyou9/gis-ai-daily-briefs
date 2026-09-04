@@ -1,0 +1,151 @@
+{
+  "brief_count": 1,
+  "briefs": [
+    {
+      "brief_id": "DAILY-20260904",
+      "commit_id": "DAILY-20260904-115855-8b25c790",
+      "completed_run_date": "2026-09-04",
+      "counts": {
+        "catchup_tasks": 3,
+        "changed_journals": 0,
+        "complete_issues": 0,
+        "completed_journals": 10,
+        "degraded_journals": 6,
+        "delta_review": 0,
+        "discovery_records": 103,
+        "duplicate_suppressed": 0,
+        "failed_journals": 0,
+        "formal_articles": 0,
+        "journals": 16,
+        "next_group": 5,
+        "online_first_updates": 0,
+        "tasks": 4
+      },
+      "format": "HTML",
+      "group_id": 4,
+      "html_sha256": "7ad9b1ae9ec246aeb8f0bb09332e623e8698f550b2841bdafd7b561e11ec902b",
+      "index_anchor": "brief-DAILY-20260904",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-09-04",
+      "release_report": "releases/DAILY-20260904-115855-8b25c790/2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
+      "release_summary_image": "releases/DAILY-20260904-115855-8b25c790/2026/09/assets/2026-09-04_GIS-AI期刊每日摘要_第04组.png",
+      "report": "2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
+      "scheduled_date": "2026-09-04",
+      "status": "COMPLETED",
+      "summary": "补做第 01—03 组并完成当天第 04 组：16 刊，10 刊官方页可达，6 刊来源降级；Crossref 元数据发现 103 条。",
+      "summary_image": "2026/09/assets/2026-09-04_GIS-AI期刊每日摘要_第04组.png",
+      "summary_image_sha256": "1cf0f28fa65243282a5d2430edd472dae80fca502ef22351b48a67995945c058",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20260901-G01",
+          "coverage_month": "2026-09",
+          "group": 1,
+          "group_id": 1,
+          "scheduled_date": "2026-09-01",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260901-G01",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260902-G02",
+          "coverage_month": "2026-09",
+          "group": 2,
+          "group_id": 2,
+          "scheduled_date": "2026-09-02",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260902-G02",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260903-G03",
+          "coverage_month": "2026-09",
+          "group": 3,
+          "group_id": 3,
+          "scheduled_date": "2026-09-03",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260903-G03",
+          "task_type": "ROUTINE"
+        },
+        {
+          "anchor": "task-ROUTINE-20260904-G04",
+          "coverage_month": "2026-09",
+          "group": 4,
+          "group_id": 4,
+          "scheduled_date": "2026-09-04",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260904-G04",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第04组",
+      "updated_at": "2026-09-04T11:58:55+08:00"
+    }
+  ],
+  "level": "MONTH",
+  "month": "09",
+  "month_key": "2026-09",
+  "scheduled_date_index": {
+    "2026-08-31": [
+      "AUDIT-20260831-ALL"
+    ],
+    "2026-09-01": [
+      "ROUTINE-20260901-G01"
+    ],
+    "2026-09-02": [
+      "ROUTINE-20260902-G02"
+    ],
+    "2026-09-03": [
+      "ROUTINE-20260903-G03"
+    ],
+    "2026-09-04": [
+      "ROUTINE-20260904-G04"
+    ]
+  },
+  "schema_version": "2.1",
+  "task_index": {
+    "AUDIT-20260831-ALL": {
+      "anchor": "task-AUDIT-20260831-ALL",
+      "brief_id": "AUDIT-20260831",
+      "completed_run_date": "2026-09-04",
+      "logical_date": "2026-08-31",
+      "report": "2026/08/2026-08-31_GIS-AI期刊月末全刊更新审计简报.html",
+      "scheduled_date": "2026-08-31"
+    },
+    "ROUTINE-20260901-G01": {
+      "anchor": "task-ROUTINE-20260901-G01",
+      "brief_id": "DAILY-20260904",
+      "completed_run_date": "2026-09-04",
+      "logical_date": "2026-09-04",
+      "report": "2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
+      "scheduled_date": "2026-09-01"
+    },
+    "ROUTINE-20260902-G02": {
+      "anchor": "task-ROUTINE-20260902-G02",
+      "brief_id": "DAILY-20260904",
+      "completed_run_date": "2026-09-04",
+      "logical_date": "2026-09-04",
+      "report": "2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
+      "scheduled_date": "2026-09-02"
+    },
+    "ROUTINE-20260903-G03": {
+      "anchor": "task-ROUTINE-20260903-G03",
+      "brief_id": "DAILY-20260904",
+      "completed_run_date": "2026-09-04",
+      "logical_date": "2026-09-04",
+      "report": "2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
+      "scheduled_date": "2026-09-03"
+    },
+    "ROUTINE-20260904-G04": {
+      "anchor": "task-ROUTINE-20260904-G04",
+      "brief_id": "DAILY-20260904",
+      "completed_run_date": "2026-09-04",
+      "logical_date": "2026-09-04",
+      "report": "2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
+      "scheduled_date": "2026-09-04"
+    }
+  },
+  "timezone": "Asia/Shanghai",
+  "updated_date": "2026-09-04",
+  "year": 2026
+}

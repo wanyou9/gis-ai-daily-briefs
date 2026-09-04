@@ -1,5 +1,5 @@
 {
-  "brief_count": 22,
+  "brief_count": 24,
   "level": "YEAR",
   "months": [
     {
@@ -11,16 +11,24 @@
       "status": "READY"
     },
     {
-      "brief_count": 13,
+      "brief_count": 14,
       "index": "2026/08/index.html",
       "manifest": "index/2026/08.json",
       "month": "08",
       "month_key": "2026-08",
       "status": "READY"
+    },
+    {
+      "brief_count": 1,
+      "index": "2026/09/index.html",
+      "manifest": "index/2026/09.json",
+      "month": "09",
+      "month_key": "2026-09",
+      "status": "READY"
     }
   ],
   "schema_version": "2.1",
-  "timezone": "America/Los_Angeles",
-  "updated_date": "2026-08-30",
+  "timezone": "Asia/Shanghai",
+  "updated_date": "2026-09-04",
   "year": 2026
 }

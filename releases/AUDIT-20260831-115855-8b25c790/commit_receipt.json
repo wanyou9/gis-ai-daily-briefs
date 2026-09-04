@@ -1,0 +1,29 @@
+{
+  "artifacts": {
+    "report": {
+      "path": "releases/AUDIT-20260831-115855-8b25c790/2026/08/2026-08-31_GIS-AI期刊月末全刊更新审计简报.html",
+      "sha256": "62b721dc555e382df4b95d5c3a825964f244280621630a68b751edace0d8544a"
+    },
+    "summary_image": {
+      "path": "releases/AUDIT-20260831-115855-8b25c790/2026/08/assets/2026-08-31_GIS-AI期刊月末全刊更新审计摘要.png",
+      "sha256": "ad6aa2494bfb30fe23e0d2ffb09f04d5d924ae1f8f9e382795fbf9eb9aa42c5a"
+    }
+  },
+  "brief_id": "AUDIT-20260831",
+  "commit_id": "AUDIT-20260831-115855-8b25c790",
+  "completed_run_date": "2026-09-04",
+  "logical_date": "2026-08-31",
+  "tasks": [
+    {
+      "anchor": "task-AUDIT-20260831-ALL",
+      "coverage_month": "2026-08",
+      "group": null,
+      "group_id": null,
+      "scheduled_date": "2026-08-31",
+      "status": "COMPLETED",
+      "task_id": "AUDIT-20260831-ALL",
+      "task_type": "MONTH_END_31_AUDIT"
+    }
+  ],
+  "timezone": "Asia/Shanghai"
+}
