@@ -811,7 +811,7 @@
     },
     {
       "brief_id": "AUDIT-20260831",
-      "commit_id": "AUDIT-20260831-115855-8b25c790",
+      "commit_id": "AUDIT-20260831-184013-8b33fe16",
       "completed_run_date": "2026-09-04",
       "counts": {
         "changed_journals": 0,
@@ -828,12 +828,13 @@
       },
       "format": "HTML",
       "group_id": null,
-      "html_sha256": "62b721dc555e382df4b95d5c3a825964f244280621630a68b751edace0d8544a",
+      "html_sha256": "fd9c6165195af54a6f49796954d619e7f683e5e2b011f47d559db3406add164a",
       "index_anchor": "brief-AUDIT-20260831",
       "kind": "MONTH_END_31_AUDIT",
       "logical_date": "2026-08-31",
-      "release_report": "releases/AUDIT-20260831-115855-8b25c790/2026/08/2026-08-31_GIS-AI期刊月末全刊更新审计简报.html",
-      "release_summary_image": "releases/AUDIT-20260831-115855-8b25c790/2026/08/assets/2026-08-31_GIS-AI期刊月末全刊更新审计摘要.png",
+      "release_report": "releases/AUDIT-20260831-184013-8b33fe16/2026/08/2026-08-31_GIS-AI期刊月末全刊更新审计简报.html",
+      "release_summary_image": "releases/AUDIT-20260831-184013-8b33fe16/2026/08/assets/2026-08-31_GIS-AI期刊月末全刊更新审计摘要.png",
+      "repackage_of": "AUDIT-20260831-115855-8b25c790",
       "report": "2026/08/2026-08-31_GIS-AI期刊月末全刊更新审计简报.html",
       "scheduled_date": "2026-08-31",
       "status": "COMPLETED",
@@ -854,11 +855,11 @@
         }
       ],
       "title": "GIS-AI 期刊月末全刊更新审计简报",
-      "updated_at": "2026-09-04T11:58:55+08:00"
+      "updated_at": "2026-09-04T18:40:13+08:00"
     },
     {
       "brief_id": "DAILY-20260904",
-      "commit_id": "DAILY-20260904-115855-8b25c790",
+      "commit_id": "DAILY-20260904-184013-8b33fe16",
       "completed_run_date": "2026-09-04",
       "counts": {
         "catchup_tasks": 3,
@@ -878,12 +879,13 @@
       },
       "format": "HTML",
       "group_id": 4,
-      "html_sha256": "7ad9b1ae9ec246aeb8f0bb09332e623e8698f550b2841bdafd7b561e11ec902b",
+      "html_sha256": "22fda40ed7bdf57d8cb5b3b6c8324fff232afce4631b7824d7b35a17e4829d43",
       "index_anchor": "brief-DAILY-20260904",
       "kind": "DAILY_ROTATION",
       "logical_date": "2026-09-04",
-      "release_report": "releases/DAILY-20260904-115855-8b25c790/2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
-      "release_summary_image": "releases/DAILY-20260904-115855-8b25c790/2026/09/assets/2026-09-04_GIS-AI期刊每日摘要_第04组.png",
+      "release_report": "releases/DAILY-20260904-184013-8b33fe16/2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
+      "release_summary_image": "releases/DAILY-20260904-184013-8b33fe16/2026/09/assets/2026-09-04_GIS-AI期刊每日摘要_第04组.png",
+      "repackage_of": "DAILY-20260904-115855-8b25c790",
       "report": "2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
       "scheduled_date": "2026-09-04",
       "status": "COMPLETED",
@@ -934,7 +936,7 @@
         }
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第04组",
-      "updated_at": "2026-09-04T11:58:55+08:00"
+      "updated_at": "2026-09-04T18:40:13+08:00"
     }
   ],
   "retention": {

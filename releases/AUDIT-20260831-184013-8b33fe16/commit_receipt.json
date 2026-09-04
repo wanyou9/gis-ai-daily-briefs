@@ -1,0 +1,172 @@
+{
+  "artifacts": [
+    {
+      "bytes": 43620,
+      "mime": "text/html",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/2026/08/2026-08-31_GIS-AI期刊月末全刊更新审计简报.html",
+      "sha256": "fd9c6165195af54a6f49796954d619e7f683e5e2b011f47d559db3406add164a"
+    },
+    {
+      "bytes": 87243,
+      "mime": "image/png",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/2026/08/assets/2026-08-31_GIS-AI期刊月末全刊更新审计摘要.png",
+      "sha256": "ad6aa2494bfb30fe23e0d2ffb09f04d5d924ae1f8f9e382795fbf9eb9aa42c5a"
+    },
+    {
+      "bytes": 8489,
+      "mime": "text/html",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/index_snapshots/2026/08/index.html",
+      "sha256": "b9d6cf70dfac873a57ef089e2aae2bbfe99070b8706e79715a1dc30a26fdea02"
+    },
+    {
+      "bytes": 3097,
+      "mime": "text/html",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/index_snapshots/2026/09/index.html",
+      "sha256": "3f4a84f9d0c52c9ee4b5904e4f8f558f6981a7ac8a7d4336856c18bf7a992cf3"
+    },
+    {
+      "bytes": 2810,
+      "mime": "text/html",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/index_snapshots/2026/index.html",
+      "sha256": "bc9e086bc5a4b6a3d60d0db8775eeb9786e74f40c079b8d5c634a255e8f726ab"
+    },
+    {
+      "bytes": 39777,
+      "mime": "application/json",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/index_snapshots/brief_index.json",
+      "sha256": "b74e2b9c0f3687e785e76c19718b4abb4a8950fa7e705d40eac0eb60dc795388"
+    },
+    {
+      "bytes": 43372,
+      "mime": "application/json",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/index_snapshots/index/2026/08.json",
+      "sha256": "7e26d8de26a9ce5378c4b91550adbc7bc51eb470ba1d41d290b69464b43596af"
+    },
+    {
+      "bytes": 4807,
+      "mime": "application/json",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/index_snapshots/index/2026/09.json",
+      "sha256": "f8e7927fdce27f48a16746d072331f94104d0951d94b2f8918bab3964224d92c"
+    },
+    {
+      "bytes": 735,
+      "mime": "application/json",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/index_snapshots/index/2026.json",
+      "sha256": "19b46ec06741dc6237b61d04d8b6af736d5c35221c567dbceb5d01ad75b9627c"
+    },
+    {
+      "bytes": 11527,
+      "mime": "text/html",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/index_snapshots/index.html",
+      "sha256": "999434d8e4e90e79eb4888ba50a1ed039f8092c46588b533f4c912f97f1dd7e2"
+    },
+    {
+      "bytes": 394,
+      "mime": "application/json",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/internal/qa_summary.json",
+      "sha256": "2c08cfdfb1892357c0c9cffcd4c743f57147a947ccc72578f0e28c5de5492886"
+    },
+    {
+      "bytes": 214100,
+      "mime": "application/json",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/internal/source_run_bundle.json",
+      "sha256": "2deb2362d9e02e98cb3bb53a2d11a945e1cb8e1a8f596a05683d664f7c87a469"
+    },
+    {
+      "bytes": 234096,
+      "mime": "application/json",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/internal/state.committed.json",
+      "sha256": "244bb47dd3662f9dc53db9500825fc330b953346334850bbf8458125d9c7606f"
+    },
+    {
+      "bytes": 238727,
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "path": "releases/AUDIT-20260831-184013-8b33fe16/internal/workbook.committed.xlsx",
+      "sha256": "6fd0592081ddc0905c25a90abc385a73a8ffcf444fdb010bc92b5e194efa92a6"
+    }
+  ],
+  "bibliographic_ledger_changed": false,
+  "brief_id": "AUDIT-20260831",
+  "commit_id": "AUDIT-20260831-184013-8b33fe16",
+  "completed_run_date": "2026-09-04",
+  "counts": {
+    "changed_journals": 0,
+    "complete_issues": 0,
+    "completed_journals": 50,
+    "degraded_journals": 48,
+    "delta_review": 0,
+    "duplicate_suppressed": 0,
+    "failed_journals": 0,
+    "formal_articles": 0,
+    "journals": 98,
+    "online_first_updates": 0,
+    "tasks": 1
+  },
+  "live_bindings": [
+    {
+      "path": "output/site/2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
+      "sha256": "fed72e0a48180749683a24e016c72c2443bb5e1bfa113b948234e46959e7fc93"
+    },
+    {
+      "path": "output/site/2026/09/assets/2026-09-04_GIS-AI期刊每日摘要_第04组.png",
+      "sha256": "1cf0f28fa65243282a5d2430edd472dae80fca502ef22351b48a67995945c058"
+    },
+    {
+      "path": "output/site/2026/08/2026-08-31_GIS-AI期刊月末全刊更新审计简报.html",
+      "sha256": "b39ef4e079a5b4bfd9a1d00d9465f51dd830fd8079f1758d6641dc360c77de05"
+    },
+    {
+      "path": "output/site/2026/08/assets/2026-08-31_GIS-AI期刊月末全刊更新审计摘要.png",
+      "sha256": "ad6aa2494bfb30fe23e0d2ffb09f04d5d924ae1f8f9e382795fbf9eb9aa42c5a"
+    },
+    {
+      "path": "output/site/brief_index.json",
+      "sha256": "b74e2b9c0f3687e785e76c19718b4abb4a8950fa7e705d40eac0eb60dc795388"
+    },
+    {
+      "path": "output/site/index.html",
+      "sha256": "999434d8e4e90e79eb4888ba50a1ed039f8092c46588b533f4c912f97f1dd7e2"
+    },
+    {
+      "path": "output/site/2026/index.html",
+      "sha256": "bc9e086bc5a4b6a3d60d0db8775eeb9786e74f40c079b8d5c634a255e8f726ab"
+    },
+    {
+      "path": "output/site/2026/08/index.html",
+      "sha256": "b9d6cf70dfac873a57ef089e2aae2bbfe99070b8706e79715a1dc30a26fdea02"
+    },
+    {
+      "path": "output/site/2026/09/index.html",
+      "sha256": "3f4a84f9d0c52c9ee4b5904e4f8f558f6981a7ac8a7d4336856c18bf7a992cf3"
+    },
+    {
+      "path": "output/site/index/2026.json",
+      "sha256": "19b46ec06741dc6237b61d04d8b6af736d5c35221c567dbceb5d01ad75b9627c"
+    },
+    {
+      "path": "output/site/index/2026/07.json",
+      "sha256": "d1ffa153ed92070aff7e13bc8b07d7d1ccb6ebba633073e57d5bde0f57915a48"
+    },
+    {
+      "path": "output/site/index/2026/08.json",
+      "sha256": "7e26d8de26a9ce5378c4b91550adbc7bc51eb470ba1d41d290b69464b43596af"
+    },
+    {
+      "path": "output/site/index/2026/09.json",
+      "sha256": "f8e7927fdce27f48a16746d072331f94104d0951d94b2f8918bab3964224d92c"
+    }
+  ],
+  "logical_date": "2026-08-31",
+  "publication_status": "PENDING",
+  "publication_transition": "Append publication_receipt.json; never rewrite this receipt, predecessor releases, or immutable snapshots.",
+  "repackage_batch_id": "REPACKAGE-20260904-6c8bd462",
+  "repackaged_at": "2026-09-04T18:40:13+08:00",
+  "rescanned": false,
+  "run_id": "48e44ce7-cb9c-45d5-a75b-899397a4ae99",
+  "schema_version": "2.1",
+  "source_commit_id": "AUDIT-20260831-115855-8b25c790",
+  "status": "PREPARED_FOR_RECOVERABLE_REPACKAGE",
+  "task_ids": [
+    "AUDIT-20260831-ALL"
+  ]
+}

@@ -3,7 +3,7 @@
   "briefs": [
     {
       "brief_id": "DAILY-20260904",
-      "commit_id": "DAILY-20260904-115855-8b25c790",
+      "commit_id": "DAILY-20260904-184013-8b33fe16",
       "completed_run_date": "2026-09-04",
       "counts": {
         "catchup_tasks": 3,
@@ -23,12 +23,13 @@
       },
       "format": "HTML",
       "group_id": 4,
-      "html_sha256": "7ad9b1ae9ec246aeb8f0bb09332e623e8698f550b2841bdafd7b561e11ec902b",
+      "html_sha256": "22fda40ed7bdf57d8cb5b3b6c8324fff232afce4631b7824d7b35a17e4829d43",
       "index_anchor": "brief-DAILY-20260904",
       "kind": "DAILY_ROTATION",
       "logical_date": "2026-09-04",
-      "release_report": "releases/DAILY-20260904-115855-8b25c790/2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
-      "release_summary_image": "releases/DAILY-20260904-115855-8b25c790/2026/09/assets/2026-09-04_GIS-AI期刊每日摘要_第04组.png",
+      "release_report": "releases/DAILY-20260904-184013-8b33fe16/2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
+      "release_summary_image": "releases/DAILY-20260904-184013-8b33fe16/2026/09/assets/2026-09-04_GIS-AI期刊每日摘要_第04组.png",
+      "repackage_of": "DAILY-20260904-115855-8b25c790",
       "report": "2026/09/2026-09-04_GIS-AI期刊每日轮检简报_第04组.html",
       "scheduled_date": "2026-09-04",
       "status": "COMPLETED",
@@ -79,16 +80,13 @@
         }
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第04组",
-      "updated_at": "2026-09-04T11:58:55+08:00"
+      "updated_at": "2026-09-04T18:40:13+08:00"
     }
   ],
   "level": "MONTH",
   "month": "09",
   "month_key": "2026-09",
   "scheduled_date_index": {
-    "2026-08-31": [
-      "AUDIT-20260831-ALL"
-    ],
     "2026-09-01": [
       "ROUTINE-20260901-G01"
     ],
@@ -104,14 +102,6 @@
   },
   "schema_version": "2.1",
   "task_index": {
-    "AUDIT-20260831-ALL": {
-      "anchor": "task-AUDIT-20260831-ALL",
-      "brief_id": "AUDIT-20260831",
-      "completed_run_date": "2026-09-04",
-      "logical_date": "2026-08-31",
-      "report": "2026/08/2026-08-31_GIS-AI期刊月末全刊更新审计简报.html",
-      "scheduled_date": "2026-08-31"
-    },
     "ROUTINE-20260901-G01": {
       "anchor": "task-ROUTINE-20260901-G01",
       "brief_id": "DAILY-20260904",
