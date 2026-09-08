@@ -1,5 +1,5 @@
 {
-  "brief_count": 4,
+  "brief_count": 5,
   "briefs": [
     {
       "brief_id": "DAILY-20260904",
@@ -228,6 +228,48 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 07 组",
       "updated_at": "2026-09-07T11:25:14+08:00"
+    },
+    {
+      "brief_id": "DAILY-20260908",
+      "commit_id": "DAILY-20260908-105927-7bddd78f",
+      "completed_run_date": "2026-09-08",
+      "counts": {
+        "changed_journals": 4,
+        "complete_issues": 2,
+        "degraded_sources": 2,
+        "formal_articles": 22,
+        "formal_assignments": 23,
+        "journals": 4,
+        "online_first_updates": 106
+      },
+      "format": "HTML",
+      "group_id": 8,
+      "html_sha256": "ce44bc931a473913484cf42c46972edd1511742ea839dc846cf4caf78eb3a4f5",
+      "index_anchor": "brief-DAILY-20260908",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-09-08",
+      "release_report": "releases/DAILY-20260908-105927-7bddd78f/2026/09/2026-09-08_GIS-AI期刊每日轮检简报_第08组.html",
+      "release_summary_image": "releases/DAILY-20260908-105927-7bddd78f/2026/09/assets/2026-09-08_GIS-AI期刊每日摘要_第08组.png",
+      "report": "2026/09/2026-09-08_GIS-AI期刊每日轮检简报_第08组.html",
+      "scheduled_date": "2026-09-08",
+      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "summary": "第 08 组共检查 4 种正式期刊；确认 2 个新完整期次、22 篇正式期次首登、23 篇既有网络优先记录正式归期，以及 106 条网络优先 / 最新文章发现。2 刊来源降级，但无期刊级扫描失败。",
+      "summary_image": "2026/09/assets/2026-09-08_GIS-AI期刊每日摘要_第08组.png",
+      "summary_image_sha256": "14ee43173b84b6c6ff945ae57ad7ac0b4fd6dcc677c788cbcf26293920ca33f1",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20260908-G08",
+          "coverage_month": "2026-09",
+          "group": 8,
+          "scheduled_date": "2026-09-08",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260908-G08",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 08 组",
+      "updated_at": "2026-09-08T11:11:27.090221+08:00"
     }
   ],
   "level": "MONTH",
@@ -254,6 +296,9 @@
     ],
     "2026-09-07": [
       "ROUTINE-20260907-G07"
+    ],
+    "2026-09-08": [
+      "ROUTINE-20260908-G08"
     ]
   },
   "schema_version": "2.1",
@@ -313,9 +358,17 @@
       "logical_date": "2026-09-07",
       "report": "2026/09/2026-09-07_GIS-AI期刊每日轮检简报_第07组.html",
       "scheduled_date": "2026-09-07"
+    },
+    "ROUTINE-20260908-G08": {
+      "anchor": "brief-DAILY-20260908",
+      "brief_id": "DAILY-20260908",
+      "completed_run_date": "2026-09-08",
+      "logical_date": "2026-09-08",
+      "report": "2026/09/2026-09-08_GIS-AI期刊每日轮检简报_第08组.html",
+      "scheduled_date": "2026-09-08"
     }
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-09-07",
+  "updated_date": "2026-09-08",
   "year": 2026
 }
