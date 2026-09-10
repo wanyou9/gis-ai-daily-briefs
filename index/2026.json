@@ -1,5 +1,5 @@
 {
-  "brief_count": 29,
+  "brief_count": 30,
   "level": "YEAR",
   "months": [
     {
@@ -19,7 +19,7 @@
       "status": "READY"
     },
     {
-      "brief_count": 6,
+      "brief_count": 7,
       "index": "2026/09/index.html",
       "manifest": "index/2026/09.json",
       "month": "09",
