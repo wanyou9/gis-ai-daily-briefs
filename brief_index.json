@@ -3,17 +3,6 @@
   "level": "ROOT",
   "recent_briefs": [
     {
-      "brief_id": "HIST-20260720-G03-B20",
-      "date": "2026-07-20",
-      "format": "HTML",
-      "html_sha256": "c1d52dea2e64e30118308a563724852537e2202db4b65e7839b19bdf2ea6e0ff",
-      "index": "2026/07/index.html#brief-2026-07-20",
-      "kind": "DAILY_ROTATION",
-      "report": "2026/07/2026-07-20_GIS-AI期刊每日轮检简报_第03组.html",
-      "status": "HISTORICAL_HTML_MIGRATED",
-      "title": "GIS-AI 期刊每日轮检简报 · 第 03 组"
-    },
-    {
       "brief_id": "HIST-20260724-G03-B24",
       "date": "2026-07-24",
       "format": "HTML",
@@ -1408,6 +1397,48 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 16 组",
       "updated_at": "2026-09-16T12:17:46.867803+08:00"
+    },
+    {
+      "brief_id": "DAILY-20260917",
+      "commit_id": "DAILY-20260917-120600-3b3d2735",
+      "completed_run_date": "2026-09-17",
+      "counts": {
+        "changed_journals": 2,
+        "complete_issues": 4,
+        "degraded_sources": 0,
+        "formal_articles": 132,
+        "formal_assignments": 0,
+        "journals": 3,
+        "online_first_updates": 0
+      },
+      "format": "HTML",
+      "group_id": 17,
+      "html_sha256": "7bb4c56f7018da02d6f5b85d07b822505616ee00f00871cfcaac121bab24867f",
+      "index_anchor": "brief-DAILY-20260917",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-09-17",
+      "release_report": "releases/DAILY-20260917-120600-3b3d2735/2026/09/2026-09-17_GIS-AI期刊每日轮检简报_第17组.html",
+      "release_summary_image": "releases/DAILY-20260917-120600-3b3d2735/2026/09/assets/2026-09-17_GIS-AI期刊每日摘要_第17组.png",
+      "report": "2026/09/2026-09-17_GIS-AI期刊每日轮检简报_第17组.html",
+      "scheduled_date": "2026-09-17",
+      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "summary": "第 17 组共检查 3 种正式期刊；确认 4 个新完整期次、132 篇正式期次首登、0 篇既有网络优先记录正式归期，以及 0 条新的网络优先/在年发现。Big Data 官方 TOC 仍被 Cloudflare 403 阻断，未 claim 任何完整期；Crossref/RSS 仅作发现提示。无期刊级扫描失败。",
+      "summary_image": "2026/09/assets/2026-09-17_GIS-AI期刊每日摘要_第17组.png",
+      "summary_image_sha256": "c825aceae17eecf03744e51c6eea3b0e92dea217273ef525eb4d50f4add6f389",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20260917-G17",
+          "coverage_month": "2026-09",
+          "group": 17,
+          "scheduled_date": "2026-09-17",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260917-G17",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 17 组",
+      "updated_at": "2026-09-17T12:25:52.868091+08:00"
     }
   ],
   "retention": {
@@ -1426,7 +1457,7 @@
     "title": "GIS-AI 期刊每日轮检简报"
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-09-16",
+  "updated_date": "2026-09-17",
   "years": [
     {
       "brief_count": 36,
