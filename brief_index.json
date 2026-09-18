@@ -1,18 +1,7 @@
 {
-  "brief_count": 36,
+  "brief_count": 38,
   "level": "ROOT",
   "recent_briefs": [
-    {
-      "brief_id": "HIST-20260724-G03-B24",
-      "date": "2026-07-24",
-      "format": "HTML",
-      "html_sha256": "6c3575c017c5d362a2d3a3f0515817a6a77edfe4706b40e47e312eca2bb5fd9f",
-      "index": "2026/07/index.html#brief-2026-07-24",
-      "kind": "DAILY_ROTATION",
-      "report": "2026/07/2026-07-24_GIS-AI期刊每日轮检简报_第03组.html",
-      "status": "HISTORICAL_HTML_MIGRATED",
-      "title": "GIS-AI 期刊每日轮检简报 · 第 03 组"
-    },
     {
       "brief_id": "HIST-20260728-G04-B28",
       "date": "2026-07-28",
@@ -1439,6 +1428,48 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 17 组",
       "updated_at": "2026-09-17T12:25:52.868091+08:00"
+    },
+    {
+      "brief_id": "DAILY-20260918",
+      "commit_id": "DAILY-20260918-120723-2ee4fddb",
+      "completed_run_date": "2026-09-18",
+      "counts": {
+        "changed_journals": 3,
+        "complete_issues": 2,
+        "degraded_sources": 0,
+        "formal_articles": 33,
+        "formal_assignments": 0,
+        "journals": 3,
+        "online_first_updates": 67
+      },
+      "format": "HTML",
+      "group_id": 18,
+      "html_sha256": "e31aa20549bdf3714698125c9b8b9d21d255eeaa3ebf1d8c803d06b9e849f6e9",
+      "index_anchor": "brief-DAILY-20260918",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-09-18",
+      "release_report": "releases/DAILY-20260918-120723-2ee4fddb/2026/09/2026-09-18_GIS-AI期刊每日轮检简报_第18组.html",
+      "release_summary_image": "releases/DAILY-20260918-120723-2ee4fddb/2026/09/assets/2026-09-18_GIS-AI期刊每日摘要_第18组.png",
+      "report": "2026/09/2026-09-18_GIS-AI期刊每日轮检简报_第18组.html",
+      "scheduled_date": "2026-09-18",
+      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "summary": "第 18 组共检查 3 种正式期刊；确认 2 个新完整期次、33 篇正式期次首登、0 篇既有网络优先记录正式归期，以及 67 条新的网络优先/在年发现。Social Network Analysis and Mining 为年度连续出版，年卷未关闭故不 claim 完整期。无期刊级扫描失败。",
+      "summary_image": "2026/09/assets/2026-09-18_GIS-AI期刊每日摘要_第18组.png",
+      "summary_image_sha256": "93dccd1a05114a2734fa0bc61dcf7f6184a1cfe22b9d57cacb0109702d5d0efc",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20260918-G18",
+          "coverage_month": "2026-09",
+          "group": 17,
+          "scheduled_date": "2026-09-18",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260918-G18",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 18 组",
+      "updated_at": "2026-09-18T12:23:36.608448+08:00"
     }
   ],
   "retention": {
@@ -1457,10 +1488,10 @@
     "title": "GIS-AI 期刊每日轮检简报"
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-09-17",
+  "updated_date": "2026-09-18",
   "years": [
     {
-      "brief_count": 36,
+      "brief_count": 38,
       "index": "2026/index.html",
       "manifest": "index/2026.json",
       "month_count": 3,
