@@ -1,5 +1,5 @@
 {
-  "brief_count": 15,
+  "brief_count": 16,
   "briefs": [
     {
       "brief_id": "DAILY-20260904",
@@ -691,6 +691,48 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 18 组",
       "updated_at": "2026-09-18T12:23:36.608448+08:00"
+    },
+    {
+      "brief_id": "DAILY-20260919",
+      "commit_id": "DAILY-20260919-121158-73aeb698",
+      "completed_run_date": "2026-09-19",
+      "counts": {
+        "changed_journals": 2,
+        "complete_issues": 0,
+        "degraded_sources": 2,
+        "formal_articles": 0,
+        "formal_assignments": 0,
+        "journals": 3,
+        "online_first_updates": 47
+      },
+      "format": "HTML",
+      "group_id": 19,
+      "html_sha256": "4a80d5f80cf31ed8dfc5eb5a853234031dc91f3f0c3165ac8411d1009d1649ea",
+      "index_anchor": "brief-DAILY-20260919",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-09-19",
+      "release_report": "releases/DAILY-20260919-121158-73aeb698/2026/09/2026-09-19_GIS-AI期刊每日轮检简报_第19组.html",
+      "release_summary_image": "releases/DAILY-20260919-121158-73aeb698/2026/09/assets/2026-09-19_GIS-AI期刊每日摘要_第19组.png",
+      "report": "2026/09/2026-09-19_GIS-AI期刊每日轮检简报_第19组.html",
+      "scheduled_date": "2026-09-19",
+      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "summary": "第 19 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式期次首登、0 篇既有网络优先记录正式归期，以及 47 条新的网络优先/在年发现。Computers, Environment and Urban Systems 与 Social Networks 官方 ScienceDirect 目录持续 403，仅以 RSS/Crossref 作发现、不 claim 新卷。其中 2 种期刊因官方源阻断降级完成。",
+      "summary_image": "2026/09/assets/2026-09-19_GIS-AI期刊每日摘要_第19组.png",
+      "summary_image_sha256": "9a3f8f40ebe2f7439f029637e2904f9942162fefc24e4823397a7a7a1fed3089",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20260919-G19",
+          "coverage_month": "2026-09",
+          "group": 19,
+          "scheduled_date": "2026-09-19",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260919-G19",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 19 组",
+      "updated_at": "2026-09-19T12:20:09.467081+08:00"
     }
   ],
   "level": "MONTH",
@@ -750,6 +792,9 @@
     ],
     "2026-09-18": [
       "ROUTINE-20260918-G18"
+    ],
+    "2026-09-19": [
+      "ROUTINE-20260919-G19"
     ]
   },
   "schema_version": "2.1",
@@ -897,9 +942,17 @@
       "logical_date": "2026-09-18",
       "report": "2026/09/2026-09-18_GIS-AI期刊每日轮检简报_第18组.html",
       "scheduled_date": "2026-09-18"
+    },
+    "ROUTINE-20260919-G19": {
+      "anchor": "brief-DAILY-20260919",
+      "brief_id": "DAILY-20260919",
+      "completed_run_date": "2026-09-19",
+      "logical_date": "2026-09-19",
+      "report": "2026/09/2026-09-19_GIS-AI期刊每日轮检简报_第19组.html",
+      "scheduled_date": "2026-09-19"
     }
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-09-18",
+  "updated_date": "2026-09-19",
   "year": 2026
 }
