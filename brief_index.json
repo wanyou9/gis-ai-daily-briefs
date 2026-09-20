@@ -3,17 +3,6 @@
   "level": "ROOT",
   "recent_briefs": [
     {
-      "brief_id": "HIST-20260729-G05-B29",
-      "date": "2026-07-29",
-      "format": "HTML",
-      "html_sha256": "57e1898dcc3753d3cc617b3828b3efcdbda931e9cccb36b63f19613e879c01a8",
-      "index": "2026/07/index.html#brief-2026-07-29",
-      "kind": "DAILY_ROTATION",
-      "report": "2026/07/2026-07-29_GIS-AI期刊每日轮检简报_第05组.html",
-      "status": "HISTORICAL_HTML_MIGRATED",
-      "title": "GIS-AI 期刊每日轮检简报 · 第 05 组"
-    },
-    {
       "brief_id": "DAILY-20260801",
       "commit_id": "DAILY-20260801-205225-ba099406",
       "completed_run_date": "2026-08-01",
@@ -1483,7 +1472,7 @@
       "release_summary_image": "releases/DAILY-20260919-121158-73aeb698/2026/09/assets/2026-09-19_GIS-AI期刊每日摘要_第19组.png",
       "report": "2026/09/2026-09-19_GIS-AI期刊每日轮检简报_第19组.html",
       "scheduled_date": "2026-09-19",
-      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "status": "PUBLISHED",
       "summary": "第 19 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式期次首登、0 篇既有网络优先记录正式归期，以及 47 条新的网络优先/在年发现。Computers, Environment and Urban Systems 与 Social Networks 官方 ScienceDirect 目录持续 403，仅以 RSS/Crossref 作发现、不 claim 新卷。其中 2 种期刊因官方源阻断降级完成。",
       "summary_image": "2026/09/assets/2026-09-19_GIS-AI期刊每日摘要_第19组.png",
       "summary_image_sha256": "9a3f8f40ebe2f7439f029637e2904f9942162fefc24e4823397a7a7a1fed3089",
@@ -1500,7 +1489,52 @@
         }
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 19 组",
-      "updated_at": "2026-09-19T12:20:09.467081+08:00"
+      "updated_at": "2026-09-19T12:20:09.467081+08:00",
+      "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/09/2026-09-19_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC19%E7%BB%84.html",
+      "public_git_commit_sha": "830776d7a77ae7edff2d9dacdaf22b8a68bf9f2d",
+      "pages_run_id": "35421026499"
+    },
+    {
+      "brief_id": "DAILY-20260920",
+      "commit_id": "DAILY-20260920-120237-e0016769",
+      "completed_run_date": "2026-09-20",
+      "counts": {
+        "changed_journals": 3,
+        "complete_issues": 2,
+        "degraded_sources": 2,
+        "formal_articles": 39,
+        "formal_assignments": 0,
+        "journals": 3,
+        "online_first_updates": 243
+      },
+      "format": "HTML",
+      "group_id": 20,
+      "html_sha256": "db20786946ea4e71f0c6a9a901bfc8f7e04b6ef353a4667b8871a718cd06c8f6",
+      "index_anchor": "brief-DAILY-20260920",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-09-20",
+      "release_report": "releases/DAILY-20260920-120237-e0016769/2026/09/2026-09-20_GIS-AI期刊每日轮检简报_第20组.html",
+      "release_summary_image": "releases/DAILY-20260920-120237-e0016769/2026/09/assets/2026-09-20_GIS-AI期刊每日摘要_第20组.png",
+      "report": "2026/09/2026-09-20_GIS-AI期刊每日轮检简报_第20组.html",
+      "scheduled_date": "2026-09-20",
+      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "summary": "第 20 组共检查 3 种正式期刊；确认 2 个新完整期次、39 篇正式期次首登、0 篇既有网络优先记录正式归期，以及 243 条新的网络优先/在年发现。中国科学院院刊确认新完整期 2026-V41-I7 与 2026-V41-I8；Environment and Planning B 与 Applied Soft Computing 官方目录不可达，仅以 RSS/Crossref 作发现、不 claim 新卷期。其中 2 种期刊因官方源阻断降级完成。",
+      "summary_image": "2026/09/assets/2026-09-20_GIS-AI期刊每日摘要_第20组.png",
+      "summary_image_sha256": "ca8456dac520cb277c057428523e606a31a20bc870e2412ebb395800f4c54ffc",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20260920-G20",
+          "coverage_month": "2026-09",
+          "group": 17,
+          "scheduled_date": "2026-09-20",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260920-G20",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 20 组",
+      "updated_at": "2026-09-20T12:17:22.345302+08:00"
     }
   ],
   "retention": {
@@ -1519,7 +1553,7 @@
     "title": "GIS-AI 期刊每日轮检简报"
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-09-19",
+  "updated_date": "2026-09-20",
   "years": [
     {
       "brief_count": 39,
