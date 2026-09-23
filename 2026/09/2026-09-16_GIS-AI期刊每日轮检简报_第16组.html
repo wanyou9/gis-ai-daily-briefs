@@ -1,8 +1,1291 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GIS-AI 期刊每日轮检简报 · 第 16 组 · 2026-09-16</title>
-<meta http-equiv="refresh" content="0; url=../../releases/DAILY-20260916-120726-b575fa0c/2026/09/2026-09-16_GIS-AI期刊每日轮检简报_第16组.html">
-</head><body>
-<p>正在打开 <a href="../../releases/DAILY-20260916-120726-b575fa0c/2026/09/2026-09-16_GIS-AI期刊每日轮检简报_第16组.html">第 16 组完整简报（不可变 release）</a>。</p>
-<p>若未自动跳转，请点击上方链接。摘要图：<a href="assets/2026-09-16_GIS-AI期刊每日摘要_第16组.png">PNG</a></p>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/09/index.html">9 月</a> / 第 16 组
+</nav>
+<p class="meta">逻辑日期 2026-09-16 · 完成时间 2026-09-16 12:17 CST · 任务 ROUTINE-20260916-G16 · Commit <code>DAILY-20260916-120726-b575fa0c</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 16 组</h1>
+<p class="lede">第 16 组共检查 3 种正式期刊；确认 2 个新完整期次、76 篇正式期次首登、14 篇既有网络优先记录正式归期，以及 50 条新的网络优先/在年发现。无期刊级扫描失败。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>3</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>2</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>76</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>50</strong><span>网络首发/在年</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">新期次</span> <strong>International Journal of Digital Earth</strong> — 相对基线 V19-I1 新确认完整期 V19-I2（60 篇，含 14 归期）；无 In Progress 徽标且两遍稳定。 <span class="evidence"><a href="https://www.tandfonline.com/toc/tjde20/19/2" rel="noopener noreferrer">证据</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 官方目录</small></span></li><li><span class="tag">新期次</span> <strong>软件学报</strong> — 相对已简报 I8 新确认完整期 I9（16 篇）；官方目录两遍稳定；I10/I11 空。 <span class="evidence"><a href="https://www.jos.org.cn/jos/article/issue/2026_37_9" rel="noopener noreferrer">证据</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 官方目录</small></span></li><li><span class="tag">在年登记</span> <strong>Discover Computing</strong> — 基线 V28 不 claim；2026 开放卷 V29-I1 登记 50 篇 NEW_ARTICLE，不提前 claim。 <span class="evidence"><a href="https://link.springer.com/journal/10791/volumes-and-issues/29-1" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-09-16 12:17 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-016<br><strong>International Journal of Digital Earth</strong></td><td>2026-V19-I2</td><td>1</td><td>60</td><td>14</td><td>0</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-046<br><strong>软件学报</strong></td><td>2026-V37-I9</td><td>1</td><td>16</td><td>0</td><td>0</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-076<br><strong>Discover Computing</strong></td><td>2026-V29-I1</td><td>0</td><td>0</td><td>0</td><td>50</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-09-16_GIS-AI期刊每日摘要_第16组.png" width="1600" height="900" alt="第16组每日摘要图：3刊，新完整期2，正式文76，在年/OF 50">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-016-2026-v19-i2"><h3>International Journal of Digital Earth · 2026-V19-I2</h3><p>T&amp;F 官方 TOC：Vol 19 No 2 无 In Progress 徽标，两遍 60 DOI 指纹稳定。相对基线 I1。gate-issue=<code>NEW_ISSUE</code>。含 14 篇 ONLINE_FIRST 归期与 46 篇 NEW_ARTICLE。</p><p><span class="evidence"><a href="https://www.tandfonline.com/toc/tjde20/19/2" rel="noopener noreferrer">官方期次目录</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>60</strong> 篇。</p></article><article class="paper" id="formal-reg-016-2026v19i2-001">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>SLFNet: an improved boundary-sensitive multi-tasks deep network for agricultural parcel delineation using high-resolution remotely sensed imagery</h3>
+<p>Ke Tong; Peijun Sun; Yingxue Mei; Zhangli Sun</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2632409</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2632409" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2632409" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>SLFNet: an improved boundary-sensitive multi-tasks deep network for agricultural parcel delineation using high-resolution remotely sensed imagery</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2632409</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2632409" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-002">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>A MSCA-CGC model for simultaneously predicting multiple soil properties via Vis–NIR spectral data</h3>
+<p>Jing Zhang; Nanzhou Hou; Hongwei Yang; Xin Feng</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2684118</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2684118" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2684118" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A MSCA-CGC model for simultaneously predicting multiple soil properties via Vis–NIR spectral data</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2684118</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2684118" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-003">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>From questions to queries: an AI-powered multi-agent framework for spatial text-to-Sql</h3>
+<p>Ali Khosravi Kazazi; Zhenlong Li; M. Naser Lessani; Guido Cervone</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2687193</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2687193" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2687193" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>From questions to queries: an AI-powered multi-agent framework for spatial text-to-Sql</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2687193</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2687193" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-004">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>A modelling framework to estimate canopy height at local scale using optical and radar images paired with GEDI measurements in Mediterranean-like landscapes</h3>
+<p>João E. Pereira-Pires; Juan Guerra-Hernández; Adrián Pascual; Raffaella Guida; João M. N. Silva; José M. Fonseca; André Mora</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2687201</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2687201" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2687201" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A modelling framework to estimate canopy height at local scale using optical and radar images paired with GEDI measurements in Mediterranean-like landscapes</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2687201</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2687201" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-005">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Evaluation of the potential of full-waveform airborne hyperspectral lidar for forest chlorophyll content detection based on a three-dimensional radiative transfer model</h3>
+<p>Chang Liu; Li Wang; Zheng Niu; Yishuo Hao; Wanjuan Song; Xin Zhang; Zishen Li; Yu Peng; Kaiyi Bi</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2687232</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2687232" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2687232" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Evaluation of the potential of full-waveform airborne hyperspectral lidar for forest chlorophyll content detection based on a three-dimensional radiative transfer model</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2687232</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2687232" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-006">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>HiSpot: an integrated and accessible python framework for spatial optimization in Urban Analytics</h3>
+<p>Shaohua Wang; Cheng Su; Zixuan Zhao; Haojian Liang; Zhenbo Wang; Yeran Sun; Yang Zhong; Jiayi Zheng; Zhuonan Huang; Jingyi Zhou</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2687273</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2687273" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2687273" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>HiSpot: an integrated and accessible python framework for spatial optimization in Urban Analytics</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2687273</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2687273" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-007">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Interactive virtual reality visualization for ocean eddies and internal waves</h3>
+<p>Fenglin Tian; Mingsheng Qu; Yahao Wang; Yongyang Qi; Ge Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2690743</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2690743" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2690743" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Interactive virtual reality visualization for ocean eddies and internal waves</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2690743</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2690743" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-008">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Diurnal land surface temperature responses to urban morphology during heatwaves: insights from SDGSAT-1 and explainable machine learning</h3>
+<p>Qixia Man; Cong Zhou; Changyin Han; Pinliang Dong; Changyong Dou; Zhongchang Sun; Xinming Yang; Baolei Zhang; Zhuang Tan</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2693363</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2693363" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2693363" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Diurnal land surface temperature responses to urban morphology during heatwaves: insights from SDGSAT-1 and explainable machine learning</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2693363</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2693363" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-009">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Monitoring and analysis of open water dynamics in the Poyang Lake region from 2015 to 2025 using sentinel-1 SAR data and an improved U-HRNet model</h3>
+<p>Silong Cheng; Jixian Zhang; Zhenjin Li; Xian Shi; Bowen Chi; Yutong Li; Ying Chen; Songman Sui</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2693368</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2693368" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2693368" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Monitoring and analysis of open water dynamics in the Poyang Lake region from 2015 to 2025 using sentinel-1 SAR data and an improved U-HRNet model</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2693368</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2693368" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-010">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>A rule-constrained modeling and enhanced visualisation method for railway line settlement</h3>
+<p>Yakun Xie; Fenyang Cao; Chenyang Du; Siru Wu; Xinyu Gong; Jun Zhu</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2694160</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2694160" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2694160" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A rule-constrained modeling and enhanced visualisation method for railway line settlement</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2694160</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2694160" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-011">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Adaptive prototype-guided multi-temporal landslide extraction from long-term landsat imagery</h3>
+<p>Mengjie Gao; Fang Chen; Lei Wang; Bo Yu; Taichang Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2695490</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2695490" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2695490" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Adaptive prototype-guided multi-temporal landslide extraction from long-term landsat imagery</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2695490</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2695490" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-012">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>High-definition shoreline digital twin from UAV-LiDAR-MBES fusion and XR-optimised 3D modelling</h3>
+<p>Tomasz Templin; Dariusz Popielarczyk; Julia Leszczyńska; Tomasz Kozakiewicz</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2696646</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2696646" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2696646" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>High-definition shoreline digital twin from UAV-LiDAR-MBES fusion and XR-optimised 3D modelling</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2696646</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2696646" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-013">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>DACF-net: a dynamic attention and context fusion network with geometry-aware multi-scale refinement for sar ship instance segmentation</h3>
+<p>Shuang Yang; Xiang Zhang; Wentao An; Zhiqing Li; Nengcheng Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2696657</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2696657" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2696657" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>DACF-net: a dynamic attention and context fusion network with geometry-aware multi-scale refinement for sar ship instance segmentation</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2696657</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2696657" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-014">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Integrating planet binary maps and Landsat fraction series for national surface water monitoring: a case study in Zimbabwe, Africa</h3>
+<p>Zehu Hong; Feng Ling; Qichi Yang; Paul Mapfumo; Zirui Wang; Lihui Wang; Yifan Chen; Elijah Nyakudya; Edmore Gasura; Yun Du; Xue Yan</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2696675</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2696675" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2696675" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Integrating planet binary maps and Landsat fraction series for national surface water monitoring: a case study in Zimbabwe, Africa</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2696675</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2696675" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-015">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Dual-dimension spectral reconstruction: spatiotemporal mapping of soil organic matter under complex cropland surface conditions</h3>
+<p>Rongpeng He; Jihua Meng; Haoyu Na</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2697113</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2697113" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2697113" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dual-dimension spectral reconstruction: spatiotemporal mapping of soil organic matter under complex cropland surface conditions</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2697113</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2697113" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-016">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>ESA-Det: edge and spatial adaptive network for robust object detection in remote sensing imagery</h3>
+<p>Keke Xu; Huanxu Li; Xianglei Liu; Jianlong Wang; Guoqing Zhou</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2698185</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2698185" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2698185" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>ESA-Det: edge and spatial adaptive network for robust object detection in remote sensing imagery</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2698185</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2698185" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-017">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Change detection method based on style transfer for heterogeneous image feature alignment</h3>
+<p>Jinsha Wu; Jiannan Cai; Shuwen Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2700833</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2700833" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2700833" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Change detection method based on style transfer for heterogeneous image feature alignment</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2700833</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2700833" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-018">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>AutoGIS: an agent framework for automated geospatial data management and analysis</h3>
+<p>Zhou Chen; Xinan Zhang; Jiaxiang Li; Yuanhong Liao; Zimeng Wang; Mingrun Zang; Juanzi Li; Yuqi Bai</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2704301</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2704301" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2704301" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>AutoGIS: an agent framework for automated geospatial data management and analysis</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2704301</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2704301" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-019">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>From intentions to path: LLM-driven path planning via recognising implicit intentions</h3>
+<p>Xuan Guo; Yibing Wei; Yihong Ren; Junnan Liu; Yufeng He; Mingliang Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2704306</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2704306" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2704306" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>From intentions to path: LLM-driven path planning via recognising implicit intentions</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2704306</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2704306" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-020">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Coupling multi-level agent system with ant colony optimization for land use allocation in Wuhan, China</h3>
+<p>Bowen Pang; Yaolin Liu; Zhaomin Tong; Sui Liu; Yanchi Lu; Dan Huang; Xinyu Chen; Yanfang Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2705634</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2705634" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2705634" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Coupling multi-level agent system with ant colony optimization for land use allocation in Wuhan, China</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2705634</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2705634" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-021">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>Development of novel indices for maize mapping in heterogeneous agricultural landscapes</h3>
+<p>Juan Zhang; Yuan Qi; Hongwei Wang; Jinlong Zhang; Xiangfeng Li; Rui Yang; Lu Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2705656</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2705656" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2705656" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Development of novel indices for maize mapping in heterogeneous agricultural landscapes</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2705656</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2705656" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-022">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Spaceborne LiDAR footprint-level AGB estimation and mapping across forest types using multisource remote sensing and U-Net</h3>
+<p>Chu Wang; Kaisen Ma; Ming Chen; Yifeng Hong; Jiaming Xu; Hua Sun</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2706251</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2706251" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2706251" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spaceborne LiDAR footprint-level AGB estimation and mapping across forest types using multisource remote sensing and U-Net</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2706251</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2706251" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-023">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>A multi-source monitoring framework for mining-induced geohazards integrating time-series InSAR and microseismic observations</h3>
+<p>Xinxin Yin; Jiangtao Qiu; Haibo Wang; Liyuan Zhou; Shuwang Wang; Yuling Liu; Xiulong Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2706887</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2706887" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2706887" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A multi-source monitoring framework for mining-induced geohazards integrating time-series InSAR and microseismic observations</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2706887</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2706887" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-024">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>LoessFormer: a self-supervised framework for loess landform recognition with unified semantic and boundary modelling</h3>
+<p>Yuting Zhang; Jingzhong Li; Pengpeng Li; Haowen Yan; Biao Pei</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2707674</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2707674" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2707674" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>LoessFormer: a self-supervised framework for loess landform recognition with unified semantic and boundary modelling</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2707674</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2707674" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-025">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Forest age effects on land surface temperature and their drivers in China</h3>
+<p>Shaoyu Zhang; Peng Gong; Feng Jiang; Shuhua Qi; Yong Ge; Wenyu Li; Hanzeyu Xu; Bisong Hu</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2707685</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2707685" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2707685" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Forest age effects on land surface temperature and their drivers in China</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2707685</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2707685" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-026">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Artefact and risk area detection of the tanDEM-X 30m edited DEM using an integrated machine learning and dem-of-difference framework: a case study in the Alps</h3>
+<p>Peijun Dong; Xingang Zhang; Yunfei Zhang; Rui Yang; Zeyu Hao</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2707690</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2707690" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2707690" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Artefact and risk area detection of the tanDEM-X 30m edited DEM using an integrated machine learning and dem-of-difference framework: a case study in the Alps</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2707690</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2707690" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-027">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Global image geolocalisation via inference with large vision–language models</h3>
+<p>Jiali Tian; Xiaofei Hu; Yang Zhou; Hanqiang Zhou; Luying Zhao; Shibo Song</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2707699</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2707699" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2707699" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Global image geolocalisation via inference with large vision–language models</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2707699</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2707699" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-028">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>A vision-language model-driven spatiotemporal alignment framework for mitigating cross-sensor inconsistencies in real-world remote sensing image super-resolution</h3>
+<p>Yujie Mao; Guojin He; Guizhou Wang; Ranyu Yin; Ziying Chen; Bin Guan; Hongxuan Zhang; Shihao An</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2709186</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2709186" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2709186" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A vision-language model-driven spatiotemporal alignment framework for mitigating cross-sensor inconsistencies in real-world remote sensing image super-resolution</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2709186</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2709186" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-029">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Geomorphology-informed multimodal learning with implicit–explicit constraints for non-salient old landslide mapping</h3>
+<p>Li Shen; Mengqing Guo; Geding Yan; Chuangli Jing; Cailong Deng; Shichuan Liu; Zhilin Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2709187</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2709187" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2709187" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Geomorphology-informed multimodal learning with implicit–explicit constraints for non-salient old landslide mapping</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2709187</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2709187" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-030">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>Dynamics of artificial aquaculture ponds in China from 2015 to 2025</h3>
+<p>Yao Chen; Xiuyuan Zhang; Shushi Peng; Haoyu Wang; Lubin Bai; Shuping Xiong; Mei Li; Shihong Du</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2709190</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2709190" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2709190" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dynamics of artificial aquaculture ponds in China from 2015 to 2025</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2709190</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2709190" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-031">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Temporal observation regimes and GeoAI ethical resonance in revisit-cycle-centered satellite change detection</h3>
+<p>Suhong Yoo</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2709683</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2709683" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2709683" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Temporal observation regimes and GeoAI ethical resonance in revisit-cycle-centered satellite change detection</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2709683</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2709683" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-032">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>A simple method for large-scale realistic mountain forest scenes reconstruction using visible stereoscopic imagery combined with unmanned aerial vehicle laser scanning data</h3>
+<p>Xiaohan Lin; Ainong Li; Jinhu Bian; Guangbin Lei; Zhengjian Zhang; Xi Nan; Limin Chen; Yi Deng</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2712011</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2712011" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2712011" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A simple method for large-scale realistic mountain forest scenes reconstruction using visible stereoscopic imagery combined with unmanned aerial vehicle laser scanning data</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2712011</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2712011" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-033">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>Built-up index and fractal dimension clustering of multispectral satellite urban images</h3>
+<p>Armando Delgadillo-Jimenez; Carina Toxqui-Quitl; Aldo Aguilar-Vallejo; Alfonso Padilla-Vivanco; Anna Carbone</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2712686</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2712686" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2712686" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Built-up index and fractal dimension clustering of multispectral satellite urban images</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2712686</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2712686" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-034">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>Global mapping of vegetation solar-induced chlorophyll fluorescence over 1981−2023 with a light-use-efficiency constrained machine-learning approach</h3>
+<p>Chaoya Dang; Yuli Yan; Qingwei Zhuang; Zhenfeng Shao; Ya Zhang; Mousong Wu; Jiaxin Qian; Gui Cheng; Yanfeng Ding; Songhan Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2712692</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2712692" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2712692" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Global mapping of vegetation solar-induced chlorophyll fluorescence over 1981−2023 with a light-use-efficiency constrained machine-learning approach</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2712692</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2712692" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-035">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>Human–AI collaboration in volunteered geographic information: a performance assessment of the fAIr mapping environment</h3>
+<p>Radim Štampach; Milan Fila; Daniel Kašík</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2714600</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2714600" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2714600" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Human–AI collaboration in volunteered geographic information: a performance assessment of the fAIr mapping environment</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2714600</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2714600" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-036">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>A cross-scale synergistic framework integrating UAV LiDAR and sentinel-2 imagery for fine-grained vegetation mapping in coastal wetlands</h3>
+<p>Youwen Wang; Yunmei Li; Juhua Luo; Guannan Li; Haoqi Luo; Yike Wang; Yong Zhou; Jinlin Shi; Haoran Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2714612</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2714612" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2714612" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A cross-scale synergistic framework integrating UAV LiDAR and sentinel-2 imagery for fine-grained vegetation mapping in coastal wetlands</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2714612</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2714612" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-037">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Forest gain in high elevations of the Himalayas revealed by long-term satellite records</h3>
+<p>Chunling Wang; Min Feng; Yijie Sui; Kuo Zhang; Zhuoyu He; Jianbang Wang; Yunqiang Zhu; Xin Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2714666</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2714666" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2714666" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Forest gain in high elevations of the Himalayas revealed by long-term satellite records</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2714666</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2714666" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-038">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>An integrated spatio-temporal feature and multi-scale landscape pattern framework for monitoring forest disturbance in Karst regions</h3>
+<p>Zhi Huang; Wenquan Zhu; Wenwu Zheng; Shixuan Ouyang; Qing Han; Weixuan Li; Shilin Zhou</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2715175</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2715175" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2715175" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An integrated spatio-temporal feature and multi-scale landscape pattern framework for monitoring forest disturbance in Karst regions</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2715175</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2715175" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-039">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>An interpretable ensemble-learning framework for total nitrogen retrieval in complex inland waters: application to the Xinfengjiang Reservoir</h3>
+<p>Shuyi Gao; Caige Sun; Xulong Liu; Xingda Chen; Xiaofei Xu; Xia Zhou; Jianhui Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2720994</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2720994" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2720994" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An interpretable ensemble-learning framework for total nitrogen retrieval in complex inland waters: application to the Xinfengjiang Reservoir</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2720994</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2720994" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-040">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>A water-vegetation dual-structure remote sensing framework for wetland health assessment on the Qinghai–Xizang Plateau</h3>
+<p>Yujie Yang; Xiaowei Nie; Hao Zhang; Min Xu; Xinwei Yang; Wei Liang; Chunxiang Cao</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2721001</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2721001" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A water-vegetation dual-structure remote sensing framework for wetland health assessment on the Qinghai–Xizang Plateau</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2721001</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-041">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>DEGS: a dual-elastic grid system for efficient 3D urban spatial data management and computation</h3>
+<p>Yuekun Sun; Xiaochong Tong; Yunrui Bai; Hao Guo; Xiaoliang Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2721034</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2721034" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721034" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>DEGS: a dual-elastic grid system for efficient 3D urban spatial data management and computation</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2721034</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721034" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-042">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Dilated residual U-Net with spatial–channel attention for building footprint extraction from UAV imagery in diverse landscapes</h3>
+<p>Dung T. Pham; Thuong V. Tran; Duy X. Tran; Pedro Latorre-Carmona; David Bruce; Xuan Zhu</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2721080</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2721080" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721080" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dilated residual U-Net with spatial–channel attention for building footprint extraction from UAV imagery in diverse landscapes</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2721080</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721080" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-043">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Retrieval of mangrove soil nutrients and their stoichiometry using diagnostic spectral bands and competitive partial least squares model</h3>
+<p>Keyue Huang; Bolin Fu; Yanli Yang; Siang Wan; Zhaoyin Wang; Tengfang Deng</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2721083</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2721083" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721083" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Retrieval of mangrove soil nutrients and their stoichiometry using diagnostic spectral bands and competitive partial least squares model</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2721083</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721083" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-044">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>County-level CO 2 emissions based on the urban–rural land-use structure in Hunan Province, China: evidence from human activity and SHAP value interpretation</h3>
+<p>Shiyu Li; Yongsheng Cheng; Xiang Xiao; Yao Zhou; Jiawei Hui; Kuanxin Huang; Wangming Li; Min Luo; Bin Zeng</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2721123</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2721123" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721123" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>County-level CO 2 emissions based on the urban–rural land-use structure in Hunan Province, China: evidence from human activity and SHAP value interpretation</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2721123</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721123" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-045">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>Spatial Econometric and Environmental Land Valuation (SEELV): modeling interactional fluxes and net land value in urban zones</h3>
+<p>Shawky Mansour</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2721128</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2721128" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721128" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spatial Econometric and Environmental Land Valuation (SEELV): modeling interactional fluxes and net land value in urban zones</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2721128</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721128" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-046">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Robust coral reef bathymetric mapping from ICESat-2 photons and multitemporal sentinel-2 imagery using sigma-clipping and a Stumpf-ratio-augmented random forest</h3>
+<p>Fengyu Li; Wenzhou Wu; Peng Zhang; Bangyi Tao; Fenzhen Su</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2721129</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2721129" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721129" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Robust coral reef bathymetric mapping from ICESat-2 photons and multitemporal sentinel-2 imagery using sigma-clipping and a Stumpf-ratio-augmented random forest</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2721129</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721129" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-047">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Research on 3D modelling of the grove mountains in Antarctica based on multisource stereo satellite imagery</h3>
+<p>Shuo Zhang; Bo Hu; Weirong Chen; Zheng Lv; Xuejun Zhou; Dongmin Huo; Yuzhan Han; Zemin Wang; Xiaohan Liu; Shaochuang Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2722451</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2722451" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2722451" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Research on 3D modelling of the grove mountains in Antarctica based on multisource stereo satellite imagery</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2722451</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2722451" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-048">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Nonlinear relationships between vegetation dynamics and ecosystem services in the Yangtze River Basin: insights from random forest and GTWR analyzes</h3>
+<p>Jinhuang Lin; Jixing Huang; Yongwu Dai; Guoqing Li; Yuanrui Zang; Yan Huang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2722459</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2722459" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2722459" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Nonlinear relationships between vegetation dynamics and ecosystem services in the Yangtze River Basin: insights from random forest and GTWR analyzes</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2722459</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2722459" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-049">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>A unified history-future spatiotemporal data model for geographic processes</h3>
+<p>Peng Zhang; Wenzhou Wu; Bingyue Zhang; Shuyuan Huang; Shaochen Shi; Cunjin Xue; Fenzhen Su</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2722460</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2722460" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2722460" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A unified history-future spatiotemporal data model for geographic processes</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2722460</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2722460" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-050">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Long-term mapping of aboveground carbon storage in China (2000−2020) using a prior-knowledge-constrained deep learning model</h3>
+<p>Qingzhou Lv; Hui Yang; Jia Wang; Wanzeng Liu; Gefei Feng; Liu Cui; Yuan Zhang; Yuan Tao; Yang Han; Xinfeng Huang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2722715</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2722715" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2722715" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Long-term mapping of aboveground carbon storage in China (2000−2020) using a prior-knowledge-constrained deep learning model</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2722715</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2722715" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-051">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ASSIGNMENT</p>
+<h3>A comparative analysis of individual tree and area-based approaches for above-ground biomass estimation and uncertainty analysis using LiDAR and hyperspectral data and machine learning</h3>
+<p>Ye Ma; Zhen Zhen; Dianfan Guo; Xingfeng Dong; Zunyi Xie; Jingyan Wu; Yinghui Zhao; Miao Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2723552</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2723552" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2723552" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A comparative analysis of individual tree and area-based approaches for above-ground biomass estimation and uncertainty analysis using LiDAR and hyperspectral data and machine learning</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2723552</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2723552" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-052">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>A visual transformer and multi-task learning framework for building generalisation from raster maps</h3>
+<p>Junbo Yu; Guanglei Pan; Yu Feng; Yi Xiao; Aji Gao; Li Liu; Huafei Yu; Tinghua Ai; Dong Ren</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2724180</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2724180" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2724180" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A visual transformer and multi-task learning framework for building generalisation from raster maps</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2724180</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2724180" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-053">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Geographically weighted ensemble learning for forest aboveground carbon storage estimation with uncertainty quantification using sentinel-2 and spaceborne LiDAR data</h3>
+<p>Yi Long; Fugen Jiang; Haohong Zhu; Hua Sun</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2724607</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2724607" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2724607" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Geographically weighted ensemble learning for forest aboveground carbon storage estimation with uncertainty quantification using sentinel-2 and spaceborne LiDAR data</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2724607</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2724607" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-054">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>First adaptive prototype last ensemble learning framework for multimodal small-data object-oriented campus LULC mapping</h3>
+<p>Yuan Zhu; Chang Li; Heli Zhu; Wenlai Liu; Yijun Pan</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2728187</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2728187" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2728187" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>First adaptive prototype last ensemble learning framework for multimodal small-data object-oriented campus LULC mapping</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2728187</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2728187" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-055">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Optimizing the spatial layout of urban service facilities under benefit uncertainty: a Bayesian-guided hierarchical reinforcement learning framework</h3>
+<p>Yijie Lyu; Baoju Liu; Yalun Li; Jianbo Tang; Min Deng; Bo Huang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2728197</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2728197" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2728197" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Optimizing the spatial layout of urban service facilities under benefit uncertainty: a Bayesian-guided hierarchical reinforcement learning framework</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2728197</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2728197" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-056">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Pan-Arctic winter sea-ice lead mapping at 80-m resolution from Sentinel-1 SAR using LeadNet: product generation and morphological insights</h3>
+<p>Xinran Yang; Yibin Ren; Youhao Zhao; Xiaofeng Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2728309</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2728309" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2728309" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Pan-Arctic winter sea-ice lead mapping at 80-m resolution from Sentinel-1 SAR using LeadNet: product generation and morphological insights</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2728309</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2728309" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-057">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Bulletin-gap estimation of Brazilian soybean harvest progress with bounded-increment reconstruction</h3>
+<p>Yizhou Zhang; Dailiang Peng; Zihang Lou; Jinkang Hu; Shijun Zheng; Enhui Cheng; Hongchi Zhang; Yulong Lv; Hao Peng; Le Yu; Xiaoyang Zhang; Fumin Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2728427</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2728427" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2728427" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Bulletin-gap estimation of Brazilian soybean harvest progress with bounded-increment reconstruction</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2728427</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2728427" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-058">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>A remote sensing-based method for river discharge estimation in data-scarce regions</h3>
+<p>Yuan Guo; Shanlong Lu; Mingyang Li; Junling Zhang; Cong Du; Jiansheng Cai; Hongxiang Guo; Ziyi Zhang; Hao Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2730681</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2730681" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2730681" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A remote sensing-based method for river discharge estimation in data-scarce regions</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2730681</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2730681" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-059">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Machine learning-based LULC mapping with AlphaEarth foundation embeddings and Sentinel-2 multitemporal features: a comparative study focusing on hazelnut ( Corylus avellana L.) orchards</h3>
+<p>Elif Sertel; Doğu İlmak; Samet Aksoy; Beyza Ustaoğlu</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2732311</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2732311" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2732311" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Machine learning-based LULC mapping with AlphaEarth foundation embeddings and Sentinel-2 multitemporal features: a comparative study focusing on hazelnut ( Corylus avellana L.) orchards</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2732311</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2732311" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-016-2026v19i2-060">
+<p class="kicker">International Journal of Digital Earth · FORMAL_ISSUE</p>
+<h3>Implementation and evaluation of 3D cadastral databases in on-premises and cloud environments</h3>
+<p>Javad Shahidinejad; Mohsen Kalantari; Abbas Rajabifard</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2732313</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2732313" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2732313" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Implementation and evaluation of 3D cadastral databases in on-premises and cloud environments</strong></p><p class="abstract-meta">DOI：10.1080/17538947.2026.2732313</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2732313" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-046-2026-v37-i9"><h3>软件学报 · 2026-V37-I9</h3><p>官方期次目录两遍 16 篇题名稳定；I10/I11 空。相对已简报 I8。gate-issue=<code>NEW_ISSUE</code>。16 篇均为 NEW_ARTICLE。</p><p><span class="evidence"><a href="https://www.jos.org.cn/jos/article/issue/2026_37_9" rel="noopener noreferrer">官方期次目录</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>16</strong> 篇。</p></article><article class="paper" id="formal-reg-046-2026v37i9-001">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>形式化方法与应用专题前言</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7610" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>形式化方法与应用专题前言</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-002">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>AWTaint: 面向Web应用漏洞检测的增量静态分析框架</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7600" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>AWTaint: 面向Web应用漏洞检测的增量静态分析框架</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-003">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>基于按需切片计算的并行化程序分析框架</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7602" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于按需切片计算的并行化程序分析框架</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-004">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>数学分析机械化工程I: 一元微积分形式化系统</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7604" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>数学分析机械化工程I: 一元微积分形式化系统</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-005">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>基于Auto-active与交互式集成的L4线程管理形式化验证</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7609" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于Auto-active与交互式集成的L4线程管理形式化验证</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-006">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>混成精化逻辑</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7601" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>混成精化逻辑</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-007">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>从设计到安全分析: 异构模型转换与交叉验证</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7605" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>从设计到安全分析: 异构模型转换与交叉验证</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-008">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>模糊映射熵驱动的强化学习系统安全监控方法</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7608" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>模糊映射熵驱动的强化学习系统安全监控方法</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-009">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>观察树驱动的确定性时间自动机主动学习</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7607" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>观察树驱动的确定性时间自动机主动学习</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-010">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>基于大语言模型的Python到Dafny代码翻译</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7606" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于大语言模型的Python到Dafny代码翻译</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-011">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>Web 3.0 前沿技术研究综述</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7611" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Web 3.0 前沿技术研究综述</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-012">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>面向分类的TSK模糊遗忘学习方法</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7503" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>面向分类的TSK模糊遗忘学习方法</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-013">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>面向方位词的时空逻辑语义分析</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7553" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>面向方位词的时空逻辑语义分析</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-014">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>时序图数据中近似环路的检测方法</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7576" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>时序图数据中近似环路的检测方法</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-015">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>基于SM2的匿名认证与密钥协商协议</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7502" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于SM2的匿名认证与密钥协商协议</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-046-2026v37i9-016">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>基于难样本挖掘的灰度图像着色模型评估</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7534" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于难样本挖掘的灰度图像着色模型评估</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在年登记</h2>
+<p>本批网络优先/在年发现共登记 <strong>50</strong> 条（REG-076 开放年度卷 V29 50；REG-016/046 本批无额外 OF）。RSS/API 仅作发现，完整性以官方 TOC 为准；开放连续卷与未来期不得提前 claim。</p>
+<p><strong>Discover Computing</strong>：开放年度卷 V29 在年新增 <strong>50</strong> 篇已写入账本；下列展示前 12 条样例，完整集合以官方 Current TOC 与 PostgreSQL article_ledger 为准。<span class="evidence"><a href="https://link.springer.com/journal/10791/volumes-and-issues/29-1" rel="noopener noreferrer">官方当期目录</a><small>link.springer.com · 2026-09-16 12:17 CST · 连续年度卷发现集合</small></span></p>
+<article class="paper" id="of-reg-076-001">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Task assignment and path planning methods for marine unmanned aerial vehicles based on improved intelligent optimisation algorithms</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10558-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10558-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10558-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Task assignment and path planning methods for marine unmanned aerial vehicles based on improved intelligent optimisation algorithms</strong></p><p class="abstract-meta">DOI：10.1007/s10791-026-10558-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10558-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-076-002">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A health- and link-aware adaptive data-rate method for enhancing quality of service in wireless body area networks</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10513-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10513-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10513-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A health- and link-aware adaptive data-rate method for enhancing quality of service in wireless body area networks</strong></p><p class="abstract-meta">DOI：10.1007/s10791-026-10513-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10513-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-076-003">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>LGF-Net: a spatial-frequency deepfake detection network with learnable gabor filters and gated cross-modal Fusion</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10548-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10548-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10548-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>LGF-Net: a spatial-frequency deepfake detection network with learnable gabor filters and gated cross-modal Fusion</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10548-5 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Deepfakes have become increasingly realistic due to recent advances in face manipulation techniques, making reliable detection in unconstrained environments more challenging. Existing spatial-frequency deepfake detection methods often rely on fixed hand-crafted frequency transforms and simple fusion strategies, which may limit their adaptability and cross-dataset generalization. To address these limitations, we propose LGF-Net, a unified framework that jointly models spatial semantics and adaptive spectral cues for deepfake detection. The Frequency Representation Module employs learnable Gabor filters and a frequency-aware attention mechanism to capture manipulation-specific spectral patterns. Moreover, the Spatial Representation Module uses multi-rate dilated convolutions to model both subtle local artifacts and long-range structural inconsistencies, while a gated cross-modal fusion module integrates the two representations into a compact forensic descriptor. Experimental results on FF++ (HQ), Celeb-DF (V2), DPDC, and DFD show that LGF-Net achieves competitive intra-dataset and cross-dataset performance compared with several state-of-the-art deepfake detection methods.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10548-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-076-004">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A circular complex q-rung orthopair fuzzy framework for the large-scale optimization of renewable energy systems under uncertainty</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10568-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10568-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10568-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A circular complex q-rung orthopair fuzzy framework for the large-scale optimization of renewable energy systems under uncertainty</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10568-1 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Renewable energy system optimization has become increasingly challenging in modern energy networks due to the rapid integration of diverse renewable resources, large-scale operational requirements, complex interdependencies among energy components, and the presence of uncertain, incomplete, and imprecise information. Consequently, effective decision-making for renewable energy planning and optimization requires advanced analytical frameworks capable of simultaneously evaluating multiple, often conflicting, criteria, including energy efficiency, economic cost, environmental sustainability, resource availability, system reliability, operational flexibility, and technological feasibility. To address these challenges, this study introduces a novel Circular Complex q-Rung Orthopair Fuzzy (CrCq-ROF) framework, specifically designed to model uncertainty, ambiguity, and hesitation associated with large-scale renewable energy optimization problems. By integrating artificial intelligence techniques with the proposed fuzzy framework, the methodology enhances data-driven decision-making, improves predictive capability, and enables adaptive optimization under highly uncertain environments. Furthermore, several novel weighted averaging, ordered weighted averaging, weighted geometric, and ordered weighted geometric aggregation operators are developed based on newly established operational laws of Circular Complex q-Rung Orthopair Fuzzy information. Their fundamental mathematical properties and special cases are thoroughly investigated to demonstrate their validity, robustness, and flexibility for large-scale renewable energy applications. These aggregation operators are subsequently incorporated into the WASPAS multi-criteria decision-making methods to evaluate, rank, and optimize renewable energy alternatives under uncertain conditions. In addition, a group decision-making framework is proposed to integrate the preferences and judgments of multiple experts, thereby improving the consistency and reliability of the decision-making process. To validate the effectiveness of the proposed methodology, practical case studies involving large-scale renewable energy system optimization and renewable technology selection are presented. Comparative analyses and sensitivity investigations demonstrate that the proposed CrCq-ROF framework provides superior performance in handling uncertainty, complex-valued information, and conflicting evaluation criteria compared with existing approaches. Overall, the proposed methodology offers a flexible, robust, intelligent, and reliable decision-support framework for large-scale renewable energy system optimization under uncertain environments, thereby contributing to sustainable energy planning and informed strategic decision-making.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10568-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-076-005">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A systematic literature review of artificial intelligence and internet of things enabled crop farming</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10549-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10549-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10549-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A systematic literature review of artificial intelligence and internet of things enabled crop farming</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10549-4 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The merging of Artificial Intelligence (AI) and the Internet of Things (IoT) has generated significant scholarly interest as a means of improving productivity, sustainability, and resilience in modern crop farming. This systematic literature review (SLR) examines recent studies published between 2022 and 2025 that focus on the development and evaluation of Artificial Intelligence of Things (AIoT) technologies in agricultural systems. Adhering to the guidelines of the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA), the results are synthesized in this review in response to four research questions focusing on AI methodologies, IoT architectures, data acquisition and management strategies, and research challenges that remain outstanding. The findings show that machine learning models and deep learning models have been widely used in various applications such as crop recommendation, predicting yield, optimisation of irrigation systems, and disease and pest detection. Convolutional neural networks and approaches based on ensemble learning dominate vision based tasks, and light-weight machine learning approaches and federated learning techniques are also subject to increasing research to enable privacy preserving and edge-based deployment. Architecturally, one can observe a certain shift in picking up from cloud-based only solutions to hybrid edge-fog-cloud frameworks to enable low-latency and better scalability. Effective data acquisition is dependent on the use of multimodal sensing and data fusion with the support of edge level preprocessing and cloud based analytics, it is also seen how emerging technologies like blockchain and InterPlanetary File System (IPFS) can be used for decentralised data acquisition to improve data security and traceability. Despite these improvements, however, the review points to ongoing barriers such as the bias in datasets, lack of field-scale validation, computational and energy constraints, interoperability problems, and gaps between experimental prototypes and real-world deployment. By bringing together recent evidence and recent open research directions, the current review provides an organized and updated reference for informing the design and development of scalable, secure, and deployment-aware AI-based IoT-based crop farming systems. Clinical trial registration Not applicable.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10549-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-076-006">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A dual path cognitive behavioural model of artificial intelligence assisted decision making for environmentally sustainable behaviour</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10587-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10587-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10587-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A dual path cognitive behavioural model of artificial intelligence assisted decision making for environmentally sustainable behaviour</strong></p><p class="abstract-meta">DOI：10.1007/s10791-026-10587-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10587-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-076-007">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Hybrid metaheuristic-optimized deep learning framework for intelligent cyber intrusion detection</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10560-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10560-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10560-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Hybrid metaheuristic-optimized deep learning framework for intelligent cyber intrusion detection</strong></p><p class="abstract-meta">DOI：10.1007/s10791-026-10560-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10560-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-076-008">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Ontology driven cross language design smell detection through semantic reasoning</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10561-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10561-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10561-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Ontology driven cross language design smell detection through semantic reasoning</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10561-8 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Design smells are structural flaws that, if not detected early, can impair software quality and increase maintenance costs. Traditional detection approaches are language-specific and rely on low-level metrics, making them ineffective for heterogeneous, multilingual systems. This paper presents Ontology-Driven Design Detector (OD3), a language-agnostic framework for detecting design smells at the design stage. OD3 reverse-engineers source code from Java, C++, C#, Ruby, and Python into a unified semantic ontology and applies rule-based reasoning to identify violations of Object-Oriented (OO) design principles. Its key contributions are: (i) detecting design smells in multilingual software projects, (ii) defining semantic representations of smells to improve interpretability, (iii) reducing incorrect detections through context-aware reasoning, (iv) introducing a catalog of cross-language design smells, and (v) validating the approach on 10 multilingual systems, achieving a precision and recall of 0.91 and 0.92, respectively. These results support scalable, early-stage detection of design flaws across heterogeneous software systems while maintaining high semantic accuracy. The proposed framework is designed to operate efficiently within High-Performance Computing (HPC) environments, where parallel ontology reasoning and distributed semantic processing facilitate the analysis of large multilingual software repositories. Consequently, the framework contributes to Sustainable Development Goal (SDG) 9 by supporting intelligent, scalable software engineering infrastructure.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10561-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-076-009">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>IoT-based multi-sensor fusion predictive maintenance of 3D printers using an ensemble model framework</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10581-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10581-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10581-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>IoT-based multi-sensor fusion predictive maintenance of 3D printers using an ensemble model framework</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10581-4 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The rapid adoption of additive manufacturing in smart industrial settings necessitates dependable and scalable maintenance solutions. This study proposes a smart IoT-based predictive maintenance system for 3D printers, integrating edge computing, multi-sensor data collection, and machine learning. The system exploits embedded sensors to track important operational parameters such as temperature, vibration, humidity, and smoke levels. An ESP32-based edge device for data acquisition and preprocessing enables real-time data collection and low-latency response to a monitoring dashboard. An optimised hybrid ensemble learning strategy integrating threshold-based detection, Isolation Forest, Random Forest, Support Vector Machine (SVM), and Logistic Regression (LR) classifiers is proposed to improve fault detection accuracy in IoT-enabled 3D printers. Additionally, Explainable Artificial Intelligence (XAI) methods were used to enhance the interpretability of the models. Experimental evaluation of the proposed optimised ensemble model achieved an accuracy of 99.53%, precision of 96.91%, recall of 100.00%, F1-score of 98.43%, and ROC-AUC of 0.9985 on the held-out test set. Repeated print-job-level validation further demonstrated stable performance, with a mean accuracy of 99.43% across ten GroupShuffleSplit evaluations. The findings indicate the importance of multi-sensor fusion and preprocessing in improving the reliability of anomaly detection. The suggested framework outlines a cost-efficient, scalable, and smart predictive maintenance solution that can contribute to the progress of smart manufacturing systems related to Industry 4.0.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10581-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-076-010">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>VCSRT extended page table assisted virtual memory mapping framework for efficient dynamic resource allocation in industrial edge virtualized runtimes</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10567-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10567-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10567-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>VCSRT extended page table assisted virtual memory mapping framework for efficient dynamic resource allocation in industrial edge virtualized runtimes</strong></p><p class="abstract-meta">DOI：10.1007/s10791-026-10567-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10567-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-076-011">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Recent advances in deep learning RF applications and metamaterial characteristics prediction</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10505-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10505-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10505-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Recent advances in deep learning RF applications and metamaterial characteristics prediction</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10505-2 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Over the past decade, deep learning (DL) and its use for radio frequency (RF) engineering and metamaterials has become increasingly important. The previous techniques used in RF processing and the design of metamaterials are limited to their high computation requirements, complex analytical design, and poor ability to model nonlinearities. DL offers a new class of tools to develop data-based models of RF signals and design RF systems through the process of Inverse Design, and allows for real-time analysis with very high analytical accuracy. The authors present a comprehensive discussion of prominent Convolutional Neural Networks, Recurrent Neural Networks, and Generative Adversarial Networks, as well as other recent developments in DL applications for RF Engineering, including spectrum sensing, channel estimation, signal classification, and waveform generation. In addition, this paper also describes how DL models can predict the electromagnetic properties of metamaterials, which allows for inverse design and rapid prototyping using Autoencoders and Surrogate Models. Finally, this paper discusses the simulation tools, essential datasets, and performance evaluation metrics that were used to compare the performance of DL to traditional methods. While the initial results are promising, there are still issues with the current state of the art including limited data, low interpretability of the model, and poor generalizability across frequency bands and geometries. Future research directions will be provided in this paper, including the implementation of real-time intelligent metasurfaces and transfer learning using Physics-Informed Neural Networks (PINNs).</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10505-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-076-012">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Leather surface defect inspection using a binary descriptor and dual channel transformer</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10572-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10572-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-16 12:17 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10572-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-16 12:17 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Leather surface defect inspection using a binary descriptor and dual channel transformer</strong></p><p class="abstract-meta">DOI：10.1007/s10791-026-10572-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10572-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>International Journal of Digital Earth（T&amp;F）：Playwright 确认 Vol 19 No 2 无 In Progress 徽标且 TOC 稳定，claim 完整期。</li>
+<li>软件学报：Playwright 确认 2026 年 37 卷 I9；RSS :8081 连接拒绝，不影响官方目录。</li>
+<li>Discover Computing（Springer）：V28 基线不 claim；V29 开放年度卷仅登记 50 篇。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>b575fa0c-c25d-4469-a638-e88dc2f53919</code></li>
+<li>Commit ID：<code>DAILY-20260916-120726-b575fa0c</code></li>
+<li>Brief ID：<code>DAILY-20260916</code></li>
+<li>去重抑制：0 · 增量复核：0 · 对账任务：4</li>
+<li>正式期刊：REG-016、REG-046、REG-076</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/09/index.html">返回 2026-09 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
 </body></html>

@@ -11,6 +11,53 @@ body, main, header, footer { max-width: 100%; overflow-x: hidden; }
 .table-wrap { overflow-x: auto; max-width: 100%; }
 table { width: 100%; }
 .evidence a { max-width: 100%; overflow-wrap: anywhere; }
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}
 </style>
 </head>
 <body id="top">
@@ -76,7 +123,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2550497" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2550497" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-002">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Advanced satellite-based model for precise measurement of point source CO 2 emission</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2550497</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2550497" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-002">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>MBLKNet: a large kernel convolution-driven network with multi-task self-supervised learning for SAR maritime target classification</h3>
 <p>Shuang Yang; Xiang Zhang; Wentao An; Guiyu Li; Zhiqing Li; Shuaiying Zhang; Tingtao Wu; Fangzhou Li; Wei Qi; Qian Yu; Nengcheng Chen</p>
@@ -88,7 +136,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2584937" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2584937" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-003">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>MBLKNet: a large kernel convolution-driven network with multi-task self-supervised learning for SAR maritime target classification</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2584937</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2584937" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-003">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Mapping 30 m fractional tree cover using PlanetScope-3B images and Landsat-8 spectral-texture data for a case study of different forest types in Indonesia</h3>
 <p>Muhammad Budi; Tao He; Dan-Xia Song; Caiqun Wang</p>
@@ -100,7 +149,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2542963" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2542963" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-004">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mapping 30 m fractional tree cover using PlanetScope-3B images and Landsat-8 spectral-texture data for a case study of different forest types in Indonesia</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2542963</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2542963" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-004">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Assessing multisensor integration for geological modeling: UAV photogrammetry, LiDAR, and hyperspectral data in a visualization workflow</h3>
 <p>Douglas Bazo de Castro; Diego Fernando Ducart</p>
@@ -112,7 +162,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2583842" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2583842" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-005">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Assessing multisensor integration for geological modeling: UAV photogrammetry, LiDAR, and hyperspectral data in a visualization workflow</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2583842</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2583842" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-005">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>An investigation into multi-scale periodic dynamic deformation monitoring of bridges through integrated spaceborne and ground-based InSAR</h3>
 <p>Zechao Bai; Yuxiao Qin; Yanping Wang; Bing Yang; Yun Lin; Mengwei Li; Guanwang Hao; Yang Li; Wenjie Shen</p>
@@ -124,7 +175,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2553876" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2553876" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-006">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An investigation into multi-scale periodic dynamic deformation monitoring of bridges through integrated spaceborne and ground-based InSAR</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2553876</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2553876" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-006">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Adaptive multi-scale feature aggregation transformer network for single remote sensing image super-resolution</h3>
 <p>Zhiqi Zhang; Qi Sun; Zhiwei Ye; Chuang Liu; Mi Wang</p>
@@ -136,7 +188,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2582378" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2582378" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-007">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Adaptive multi-scale feature aggregation transformer network for single remote sensing image super-resolution</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2582378</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2582378" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-007">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Machine learning land surface temperature downscaling method based on Landsat 9 and Sentinel-2 satellite feature interaction</h3>
 <p>Wenrui Yuan; Shi Hu; Chesheng Zhan; Guoqiang Wang; Youyu Luo</p>
@@ -148,7 +201,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2598526" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2598526" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-008">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Machine learning land surface temperature downscaling method based on Landsat 9 and Sentinel-2 satellite feature interaction</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2598526</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2598526" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-008">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Building primary structure reconstruction combining structure line-aware Markov random field refinement and watertight primitive assembly from 3D point cloud</h3>
 <p>Yufu Zang; Wenhan Mi; Xiongwu Xiao; Wuyong Tao; Yanming Chen; Haiyan Guan; Bingxuan Guo; Deren Li</p>
@@ -160,7 +214,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2596195" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2596195" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-009">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Building primary structure reconstruction combining structure line-aware Markov random field refinement and watertight primitive assembly from 3D point cloud</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2596195</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2596195" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-009">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Change-prior guided cross-scale interaction network for remote sensing image change detection</h3>
 <p>Song Gao; Deren Li; Erting Pan; Haonan Guo; Jinjiang Wei; Junyi Liu; Zijie Chen; Kaimin Sun</p>
@@ -172,7 +227,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2597544" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2597544" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-010">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Change-prior guided cross-scale interaction network for remote sensing image change detection</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2597544</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2597544" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-010">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A 10-m glacial lake dataset along the Sichuan-Tibet Railway using Sentinel-2 images</h3>
 <p>Qian Deng; Yong Nie; Jonathan L. Carrivick; Gordon G. D. Zhou; Qiyuan Lyu; Jida Wang</p>
@@ -184,7 +240,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2601921" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2601921" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-011">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A 10-m glacial lake dataset along the Sichuan-Tibet Railway using Sentinel-2 images</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2601921</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2601921" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-011">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Improving altitudinal accuracy of Sentinel-1 InSAR DEM in arid flat terrain: a machine learning approach with UAV photogrammetry and multi-source data</h3>
 <p>Yanrong Chen; Zhiwen Shi; Anwar Eziz; Siyue Zheng; Osman Ilniyaz; Hossein Azadi; Tim Van de Voorde; Alishir Kurban</p>
@@ -196,7 +253,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2600903" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2600903" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-012">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Improving altitudinal accuracy of Sentinel-1 InSAR DEM in arid flat terrain: a machine learning approach with UAV photogrammetry and multi-source data</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2600903</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2600903" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-012">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>S2TDM: Spatial-spectral transformer-based diffusion model for hyperspectral image denoising</h3>
 <p>Zhehui Wu; Yong Chen; Jin Xiong; Xiaodong Pan; Wei He</p>
@@ -208,7 +266,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2591277" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2591277" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-013">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>S2TDM: Spatial-spectral transformer-based diffusion model for hyperspectral image denoising</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2591277</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2591277" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-013">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Knowledge text-guided frequency-spatial multi-scale feature fusion and collaborative relationship learning for UAV tracking</h3>
 <p>Ning Li; Yuanzhi Zhang; Haojun Ai; Yuan Rao; Mengyun Liu; Yun Peng; Xiaoying Wang</p>
@@ -220,7 +279,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2552258" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2552258" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-014">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Knowledge text-guided frequency-spatial multi-scale feature fusion and collaborative relationship learning for UAV tracking</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2552258</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2552258" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-014">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Identification and quantification of minerals within Apollo samples using LWIR spectroscopy</h3>
 <p>Wanyue Liu; Peng Zhang; Chengbao Liu; Zheng Bo; Dongxu Han; Ran Niu; Qian Lin</p>
@@ -232,7 +292,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2543970" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2543970" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-015">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Identification and quantification of minerals within Apollo samples using LWIR spectroscopy</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2543970</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2543970" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-015">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Forest canopy height mapping considering the seasonal rhythm of different dominant tree species</h3>
 <p>Yali Zhang; Mingshi Li; Yuliang Wang; Ni Wang; Fei Liu</p>
@@ -244,7 +305,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2586368" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2586368" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-016">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Forest canopy height mapping considering the seasonal rhythm of different dominant tree species</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2586368</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2586368" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-016">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>SIGLNet: a semantic information-guided lightweight stereo matching network for satellite imagery</h3>
 <p>Xinsheng Wang; Mi Wang; Yingdong Pi; Niming Fan; Xu Cheng</p>
@@ -256,7 +318,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2584938" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2584938" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-017">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>SIGLNet: a semantic information-guided lightweight stereo matching network for satellite imagery</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2584938</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2584938" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-017">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Snow wetness retrieval for snowmelt monitoring using dualpolarization SAR data</h3>
 <p>Wei Ma; Pengfeng Xiao; Xueliang Zhang; Siyong Chen; Hao Liu</p>
@@ -268,7 +331,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2575799" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2575799" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-018">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Snow wetness retrieval for snowmelt monitoring using dualpolarization SAR data</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2575799</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2575799" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-018">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Advancing in Pinus pinea L. cone yield assessment in Chile using UAV innovations</h3>
 <p>Rodrigo Del Río; Verónica Loewe-Muñoz; Antonio Cabrera; Rómulo Santelices; Rafael Navarro-Cerrillo</p>
@@ -280,7 +344,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2575789" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2575789" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-019">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Advancing in Pinus pinea L. cone yield assessment in Chile using UAV innovations</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2575789</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2575789" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-019">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Integrating drone multispectral and LiDAR data with machine learning: toward species-level biomass estimation in heterogeneous salt marsh vegetation</h3>
 <p>Shuai Liu; Yaping Liu; Xiao Zhang; Bo Tian; Weiguo Zhang; Ying Huang; Weiming Xie; Tao Ke; Kunbo Liu; Pengjie Tao; Qiang Yao; Kai Tan</p>
@@ -292,7 +357,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2574921" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2574921" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-020">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Integrating drone multispectral and LiDAR data with machine learning: toward species-level biomass estimation in heterogeneous salt marsh vegetation</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2574921</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2574921" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-020">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A raster-based method for building simplification considering shape and texture features based on remote sensing images</h3>
 <p>Ruijie Fan; Yilang Shen</p>
@@ -304,7 +370,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2573369" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2573369" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-021">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A raster-based method for building simplification considering shape and texture features based on remote sensing images</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2573369</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2573369" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-021">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>An unstructured roadless environment navigation map construction method based on remote sensing</h3>
 <p>Ning Zhou; Guo Zhang; Chunyang Zhu; Xiaomeng Dong</p>
@@ -316,7 +383,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2570025" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2570025" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-022">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An unstructured roadless environment navigation map construction method based on remote sensing</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2570025</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2570025" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-022">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Assessing the radiometric consistency of Gaofen-6 WFV and Sentinel-2 MSI multispectral reflectance for harmonization</h3>
 <p>Jiaxin Tian; Yidi Wang; Shaoxian Gong; Boyu Ren; Yunfeng Cao</p>
@@ -328,7 +396,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2567560" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2567560" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-023">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Assessing the radiometric consistency of Gaofen-6 WFV and Sentinel-2 MSI multispectral reflectance for harmonization</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2567560</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2567560" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-023">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>BD-VITGAN: a blind dense VITGAN for satellite remote sensing images super-resolution reconstruction</h3>
 <p>Zeyuan Zhang; Wei Feng; Min Zhong; Meng Yang</p>
@@ -340,7 +409,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2567568" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2567568" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-024">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>BD-VITGAN: a blind dense VITGAN for satellite remote sensing images super-resolution reconstruction</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2567568</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2567568" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-024">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Generalized atmospheric refraction correction for optical remote sensing satellite based on rational function model</h3>
 <p>Yanli Wang; Ronghao Zhang; Yizhang Xu; Rongfan Dai; Shuying Jin; Mi Wang</p>
@@ -352,7 +422,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2558826" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2558826" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-025">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Generalized atmospheric refraction correction for optical remote sensing satellite based on rational function model</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2558826</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2558826" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-025">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Construction of a near-real-time long-term monthly water body dataset by fusing JRC MWH and Sentinel data and its application in reservoir dynamics monitoring</h3>
 <p>Yu Qiu; Wen Wang; Zhansheng Ji; Yun Yang</p>
@@ -364,7 +435,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2565473" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2565473" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-026">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Construction of a near-real-time long-term monthly water body dataset by fusing JRC MWH and Sentinel data and its application in reservoir dynamics monitoring</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2565473</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2565473" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-026">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A curve-based radiometric calibration method for wavelength of interest hyperspectral imaging: a case study of QMX-1/CCTF-HI</h3>
 <p>Keyi Rao; Siqing Zhang; Zhengcan Li; Zhixiong Dai; Liangliang Zheng; Weixing Xu; Nan Xie; Ruixin Fang; Xuemin Zhang; Shaoju Wang; Zhaocong Wu</p>
@@ -376,7 +448,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2547951" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2547951" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-027">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A curve-based radiometric calibration method for wavelength of interest hyperspectral imaging: a case study of QMX-1/CCTF-HI</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2547951</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2547951" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-027">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Significant wave height retrieval using the volumetric correlation data of SWOT KaRIn</h3>
 <p>Lin Ren; Xiao Dong; Yongjun Jia; Limin Cui; Yi Zhang; Jingsong Yang; Yiqi Wang; Zhiyang Jiang</p>
@@ -388,7 +461,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2556275" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2556275" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-028">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Significant wave height retrieval using the volumetric correlation data of SWOT KaRIn</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2556275</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2556275" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-028">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Evaluating the accuracy of ground elevation estimates from GEDI satellite LiDAR in forested terrain</h3>
 <p>Mihnea Cățeanu</p>
@@ -400,7 +474,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2555385" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2555385" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-029">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Evaluating the accuracy of ground elevation estimates from GEDI satellite LiDAR in forested terrain</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2555385</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2555385" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-029">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Quantifying urban vegetation carbon storage using seamless and dense time-series remote sensing data</h3>
 <p>Ya Zhang; Zhenfeng Shao; Xiaodi Xu; Qingwei Zhuang</p>
@@ -412,7 +487,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2547956" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2547956" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-030">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Quantifying urban vegetation carbon storage using seamless and dense time-series remote sensing data</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2547956</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2547956" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-030">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>The differences, advantages, and disadvantages of various image compositing methods on the Google Earth Engine platform: an exploration</h3>
 <p>Hanqiu Xu; Guifen Su; Chunqiang Li; Wenhui Deng</p>
@@ -424,7 +500,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2542534" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2542534" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-031">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The differences, advantages, and disadvantages of various image compositing methods on the Google Earth Engine platform: an exploration</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2542534</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2542534" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-031">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Satellite air quality monitoring: an interactive and accessible tool for spatiotemporal analysis using Google Earth Engine</h3>
 <p>Almustafa Abd Elkader Ayek; Mohannad Ali Loho; Suzan Fathe Karmoka</p>
@@ -436,7 +513,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2537352" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2537352" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-032">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Satellite air quality monitoring: an interactive and accessible tool for spatiotemporal analysis using Google Earth Engine</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2537352</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2537352" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-032">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Evolution of intercity population flow networks in China based on nighttime light remote sensing data</h3>
 <p>Congxiao Wang; Wei Li; Zuoqi Chen; Hong Zhang; Ye Wei; Yue Tu; Bailang Yu</p>
@@ -448,7 +526,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2543968" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2543968" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-033">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Evolution of intercity population flow networks in China based on nighttime light remote sensing data</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2543968</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2543968" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-033">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Satellite-based assessment reveals hydrological and ecological transformations from China’s South-to-North Water Diversion Project</h3>
 <p>Aoxue Cui; Chao Wang; Shuzhe Huang; Renke Ji; Mingming Jia; Xiang Zhang; Wei Wang; Nengcheng Chen</p>
@@ -460,7 +539,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2541071" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2541071" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-034">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Satellite-based assessment reveals hydrological and ecological transformations from China’s South-to-North Water Diversion Project</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2541071</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2541071" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-034">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Diffusion generation with homomorphic filtering for remote sensing thin cloud removal</h3>
 <p>Mingyang Lei; Huifang Li; Liying Xu; Huanfeng Shen</p>
@@ -472,7 +552,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2543495" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2543495" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-035">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Diffusion generation with homomorphic filtering for remote sensing thin cloud removal</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2543495</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2543495" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-035">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Gap filling for satellite-derived products of lake aquatic environment using historical big data</h3>
 <p>Yinguo Qiu; Chengguo Wei; Fukang Zhang; Yilin Ge; Haoran Wang; Yaqin Jiao; Qitao Xiao; Juhua Luo</p>
@@ -484,7 +565,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2548951" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2548951" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-036">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Gap filling for satellite-derived products of lake aquatic environment using historical big data</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2548951</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2548951" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-036">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>GlogSemiFNet: a semi-supervised contrastive learning framework for high-resolution remote sensing farmland edge detection based on frequency domain filters</h3>
 <p>Zhaoxiang Cao; Yuchun Huang; Yibo Zhou; Peng Zhou; Yang He</p>
@@ -496,7 +578,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2589636" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2589636" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-037">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>GlogSemiFNet: a semi-supervised contrastive learning framework for high-resolution remote sensing farmland edge detection based on frequency domain filters</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2589636</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2589636" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-037">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Generating high spatio-temporal fractional vegetation cover reference product for the Wanglang mountain area via space-air-ground integration approach</h3>
 <p>Jinhu Bian; Yaxin Wang; Ainong Li; Zhengjian Zhang; Xi Nan; Guangbin Lei; Ziyang Huang; Yi Deng; Limin Chen; Yi Bai; Miao Hu; Lianyi Deng; Amin Naboureh</p>
@@ -508,7 +591,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2633647" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2633647" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-038">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Generating high spatio-temporal fractional vegetation cover reference product for the Wanglang mountain area via space-air-ground integration approach</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2633647</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2633647" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-038">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Box2Pix: an automatic box-level to pixel-level annotation transformation method for fire detection in remote sensing images</h3>
 <p>Ming Wang; Chenxiao Zhang; Peng Yue</p>
@@ -520,7 +604,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2582278" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2582278" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-039">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Box2Pix: an automatic box-level to pixel-level annotation transformation method for fire detection in remote sensing images</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2582278</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2582278" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-039">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Enhancing machine learning-based crop mapping with high-quality training samples</h3>
 <p>Qingying Wu; Qiangyi Yu; Yulin Duan; Wenbin Wu; Yun Shi</p>
@@ -532,7 +617,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2588836" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2588836" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-040">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Enhancing machine learning-based crop mapping with high-quality training samples</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2588836</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2588836" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-040">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Multi-scale spatial fusion lightweight model for optical remote sensing image-based small object detection</h3>
 <p>Qiyi He; Ao Xu; Zhiwei Ye; Shirui Sheng; Wen Zhou; Xudong Lai</p>
@@ -544,7 +630,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2555616" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2555616" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-041">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multi-scale spatial fusion lightweight model for optical remote sensing image-based small object detection</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2555616</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2555616" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-041">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Comparing the applicability between Landsat and MODIS datasets for eco-environment quality assessment: a case study of the Yunnan-Guizhou Plateau, China</h3>
 <p>Yun Liu; Huimei Liu; Weiheng Xu; Leiguang Wang; Weili Kou; Ning Lu; Guanglong Ou</p>
@@ -556,7 +643,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2587459" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2587459" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-042">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Comparing the applicability between Landsat and MODIS datasets for eco-environment quality assessment: a case study of the Yunnan-Guizhou Plateau, China</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2587459</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2587459" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-042">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Estimating radiant flux of nighttime light images from NASA’s Black Marble product</h3>
 <p>Xi Li; Bingqing Sun; Hanrui Cao</p>
@@ -568,7 +656,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2593747" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2593747" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-043">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Estimating radiant flux of nighttime light images from NASA’s Black Marble product</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2593747</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2593747" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-043">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Daily seamless reconstruction of aerosol optical depth product from a single satellite data source using the novel stream method</h3>
 <p>Xianmei Zhang; Yang Wang; Jinyuan Xin; Meng Fan; Xingxia Jiang; Heng Jia; Linglin Xu; Zhiqiang Cheng; Yuanyuan Zhu</p>
@@ -580,7 +669,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2603729" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2603729" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-044">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Daily seamless reconstruction of aerosol optical depth product from a single satellite data source using the novel stream method</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2603729</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2603729" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-044">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Unveiling two-stage deformation mechanisms in restored Emma open-pit coal mining areas, Spain, using InSAR and NMF decomposition</h3>
 <p>Jianqi Lou; Chaoying Zhao; Guangrong Li</p>
@@ -592,7 +682,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2607833" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2607833" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-045">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Unveiling two-stage deformation mechanisms in restored Emma open-pit coal mining areas, Spain, using InSAR and NMF decomposition</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2607833</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2607833" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-045">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>First Page Preview for Correction</h3>
 <p>Yiyang Huang; Haowei Zhang; Xin Ma; Tianqi Shi; Ge Han; Zhipeng Pei; Huiqin Mao; Wei Gong; Shuang Yang; Xiang Zhang; Wentao An; Guiyu Li; Zhiqing Li; Shuaiying Zhang; Tingtao Wu; Fangzhou Li; Wei Qi; Qian Yu; Nengcheng Chen; Muhammad Budi</p>
@@ -604,7 +695,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2561331" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2561331" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-046">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>First Page Preview for Correction</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2561331</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2561331" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-046">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Citation for Correction</h3>
 <p>Yiyang Huang; Haowei Zhang; Xin Ma; Tianqi Shi; Ge Han; Zhipeng Pei; Huiqin Mao; Wei Gong; Shuang Yang; Xiang Zhang; Wentao An; Guiyu Li; Zhiqing Li; Shuaiying Zhang; Tingtao Wu; Fangzhou Li; Wei Qi; Qian Yu; Nengcheng Chen; Muhammad Budi</p>
@@ -616,7 +708,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2574196" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2574196" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-047">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Citation for Correction</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2574196</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2574196" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-047">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A hidden variables approach: assessing the influence of environmental, flight and processing parameters on LiDAR accuracy in wet heathlands in the northwest of Spain</h3>
 <p>作者未在官方目录完整给出</p>
@@ -628,7 +721,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2728347" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2728347" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-048">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A hidden variables approach: assessing the influence of environmental, flight and processing parameters on LiDAR accuracy in wet heathlands in the northwest of Spain</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2728347</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2728347" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-048">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A self-supervised mask-enhanced dual-branch convolutional neural network for reconstructing regional TEC over China</h3>
 <p>作者未在官方目录完整给出</p>
@@ -640,7 +734,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2722514" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2722514" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-049">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A self-supervised mask-enhanced dual-branch convolutional neural network for reconstructing regional TEC over China</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2722514</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2722514" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-049">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A typology-based dasymetric mapping approach for plot-level population estimation Using residential building morphology</h3>
 <p>作者未在官方目录完整给出</p>
@@ -652,7 +747,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2717925" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2717925" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-050">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A typology-based dasymetric mapping approach for plot-level population estimation Using residential building morphology</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2717925</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2717925" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i3-050">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Cross-regional performance and generalization of deep learning models for fine-grained semantic segmentation of marine aquaculture cages</h3>
 <p>作者未在官方目录完整给出</p>
@@ -664,7 +760,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2719215" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2719215" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-017-2026-v29-i4"><h3>Geo-spatial Information Science · 2026-V29-I4</h3><p>T&amp;F Current=Vol 29 No 4 无 In Progress 徽标，两遍 50 DOI 指纹稳定。gate-issue=<code>NEW_ISSUE</code>。50 篇均为 NEW_ARTICLE。</p><p><span class="evidence"><a href="https://www.tandfonline.com/toc/tgsi20/29/4" rel="noopener noreferrer">官方期次目录</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>50</strong> 篇。</p></article><article class="paper" id="formal-reg-017-2026v29i4-001">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Cross-regional performance and generalization of deep learning models for fine-grained semantic segmentation of marine aquaculture cages</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2719215</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2719215" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-017-2026-v29-i4"><h3>Geo-spatial Information Science · 2026-V29-I4</h3><p>T&amp;F Current=Vol 29 No 4 无 In Progress 徽标，两遍 50 DOI 指纹稳定。gate-issue=<code>NEW_ISSUE</code>。50 篇均为 NEW_ARTICLE。</p><p><span class="evidence"><a href="https://www.tandfonline.com/toc/tgsi20/29/4" rel="noopener noreferrer">官方期次目录</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>50</strong> 篇。</p></article><article class="paper" id="formal-reg-017-2026v29i4-001">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Toward comprehensive traffic scene understanding: a benchmark and detector for traffic object detection in smart city surveillance</h3>
 <p>Qimin Cheng; Jiajun Ling; Yingjie Du; Qunshan Zhao</p>
@@ -676,7 +773,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2542964" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2542964" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-002">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Toward comprehensive traffic scene understanding: a benchmark and detector for traffic object detection in smart city surveillance</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2542964</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2542964" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-002">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Ecological network optimization and its correlation with net primary productivity in the Thal Desert: a 20-year analysis</h3>
 <p>Tauqeer Nawaz; Muhammad Gohar Ismail Ansari; Buyanbaatar Avirmed; Tianjie Zhao; Wei Liu; Jiezixuan Lian; Yu Wang; Yilin Liu; Jikai Zhao; Xinyu Yang; Qiang Yu</p>
@@ -688,7 +786,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2546507" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2546507" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-003">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Ecological network optimization and its correlation with net primary productivity in the Thal Desert: a 20-year analysis</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2546507</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2546507" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-003">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>MSRFormer: road network representation learning using multi-scale feature fusion of heterogeneous spatial interactions</h3>
 <p>Jian Yang; Jiahui Wu; Li Fang; Hongchao Fan; Bianying Zhang; Huijie Zhao; Guangyi Yang; Rui Xin; Xiong You</p>
@@ -700,7 +799,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2583710" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2583710" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-004">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>MSRFormer: road network representation learning using multi-scale feature fusion of heterogeneous spatial interactions</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2583710</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2583710" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-004">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A CityGML ADE for flood simulations</h3>
 <p>Shaohua Luo; Linfang Ding; Hongchao Fan</p>
@@ -712,7 +812,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2547952" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2547952" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-005">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A CityGML ADE for flood simulations</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2547952</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2547952" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-005">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Land cover simulation and analysis for the Greater Bay Area of China in the context of the 2035 development plan</h3>
 <p>Gomal Amin; Majid Nazeer; Man Sing Wong</p>
@@ -724,7 +825,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2548360" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2548360" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-006">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Land cover simulation and analysis for the Greater Bay Area of China in the context of the 2035 development plan</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2548360</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2548360" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-006">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Quantifying the spatial heterogeneity of geographical flows</h3>
 <p>Hua Shu; Tao Pei; Ci Song; Sihui Guo; Jie Chen; Yaxi Liu; Xi Wang; Xiao Chen; Chenghu Zhou</p>
@@ -736,7 +838,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2559952" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2559952" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-007">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Quantifying the spatial heterogeneity of geographical flows</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2559952</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2559952" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-007">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Dynamic shopping accessibility modeling for smart cities: a crowd-behavior enhanced G2SFCA approach for Wuhan, China</h3>
 <p>Youyou Li; Quanli Xu; Yang Li; Zucheng Zhou; Zhenheng Gao; You Li; Huishan Wu</p>
@@ -748,7 +851,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2548955" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2548955" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-008">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dynamic shopping accessibility modeling for smart cities: a crowd-behavior enhanced G2SFCA approach for Wuhan, China</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2548955</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2548955" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-008">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A new multi-level neighborhood parcel-based cellular automata model for urban land use allocation</h3>
 <p>Kassem Balhas; Mohammad Karimi; Parastoo Pilehforooshha</p>
@@ -760,7 +864,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2544959" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2544959" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-009">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A new multi-level neighborhood parcel-based cellular automata model for urban land use allocation</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2544959</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2544959" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-009">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Geographic information retrieval: a systematic review of datasets and their impact on textual geolocation</h3>
 <p>Tal Bauman; Yuval Fisher; Fadi Kizel; Itzhak Omer; Sagi Dalyot</p>
@@ -772,7 +877,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2543498" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2543498" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-010">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Geographic information retrieval: a systematic review of datasets and their impact on textual geolocation</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2543498</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2543498" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-010">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>An ant lion optimizer based cellular automata model considering economic factors for simulating the change of rural settlement</h3>
 <p>Yuan Ding; Fuming Jin; Kai Cao; Weifeng Qiao; Lei Yang; Yingbao Yang</p>
@@ -784,7 +890,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2568113" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2568113" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-011">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An ant lion optimizer based cellular automata model considering economic factors for simulating the change of rural settlement</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2568113</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2568113" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-011">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Enhancing spatial learning during driving: the role of 3D navigation interface visualization in AR-HUD</h3>
 <p>Xun Xu; Jing Yang; Sixing Zhao; Yajun Li; Linyan Ren; Mengniu Li; Biao Yan</p>
@@ -796,7 +903,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2558822" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2558822" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-012">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Enhancing spatial learning during driving: the role of 3D navigation interface visualization in AR-HUD</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2558822</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2558822" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-012">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Simplification of three-dimensional urban buildings in Digital Surface Model</h3>
 <p>Yilang Shen; Zhen Luo; Zihan Jiang; Yiqing Zhang; Xiang Zhang</p>
@@ -808,7 +916,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2555617" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2555617" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-013">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Simplification of three-dimensional urban buildings in Digital Surface Model</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2555617</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2555617" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-013">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Spatial-temporal coupling coordination patterns between regional economic linkages and fine landscape resources utilization: a case of the Greater Bay Area, China</h3>
 <p>Ku Gao; Xiaomei Yang; Zhihua Wang; Yueming Liu; Huifang Zhang; Xiaowei Zeng; Qingyang Zhang</p>
@@ -820,7 +929,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2540568" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2540568" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-014">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spatial-temporal coupling coordination patterns between regional economic linkages and fine landscape resources utilization: a case of the Greater Bay Area, China</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2540568</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2540568" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-014">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Exploring cycling flow dynamics and their interaction with built environment features: evidence from bike-sharing data</h3>
 <p>Xiaoming Li; Shanlai Zou; Weixi Wang; Ding Ma; Renzhong Guo; Yixin Liu; Ye Zheng</p>
@@ -832,7 +942,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2547955" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2547955" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-015">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Exploring cycling flow dynamics and their interaction with built environment features: evidence from bike-sharing data</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2547955</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2547955" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-015">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Advancing smart disaster response by leveraging social sensing and mobile technology</h3>
 <p>Sulong Zhou; Meiliu Wu; Xinyue Ye; Janet Silbernagel; David A. Hart; Qunying Huang</p>
@@ -844,7 +955,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2588034" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2588034" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-016">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Advancing smart disaster response by leveraging social sensing and mobile technology</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2588034</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2588034" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-016">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Automated islands generalization techniques for nautical charts</h3>
 <p>Tamer Nada; Christos Kastrisios; Brian Calder; Christie Ence; Craig Greene; Amber Bethell</p>
@@ -856,7 +968,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2568115" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2568115" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-017">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Automated islands generalization techniques for nautical charts</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2568115</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2568115" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-017">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Efficient path decoding from high sampling trace data using TSPS</h3>
 <p>Zhouhao Wu; Minghui Xie; Gengze Li; Yingjie Wu; Yuanqing Wang; Huapu Lu</p>
@@ -868,7 +981,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2548370" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2548370" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-018">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Efficient path decoding from high sampling trace data using TSPS</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2548370</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2548370" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-018">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Motion-constrained pedestrian tracking framework based on distributed inertial sensors</h3>
 <p>Lin Qi; Yi Zhang; Yu Liu; Izzy Yi Jian; Yue Yu; Liang Chen; Ruizhi Chen</p>
@@ -880,7 +994,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2547947" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2547947" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-019">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Motion-constrained pedestrian tracking framework based on distributed inertial sensors</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2547947</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2547947" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-019">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A concept of levels of detail for modeling Buddhist statues in 3D</h3>
 <p>Yuehan Pan; Hongchao Fan; Huabiao Li; Miaole Hou</p>
@@ -892,7 +1007,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2543965" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2543965" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-020">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A concept of levels of detail for modeling Buddhist statues in 3D</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2543965</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2543965" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-020">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Spatially uneven mitigation effects of digital financial inclusion on carbon emissions in China</h3>
 <p>Leying Wu; Xinhao Yu; Hang Zhang; Changhong Miao; Shiyan Zhai; Guanpeng Dong</p>
@@ -904,7 +1020,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2583831" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2583831" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-021">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spatially uneven mitigation effects of digital financial inclusion on carbon emissions in China</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2583831</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2583831" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-021">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Differences in spring green up date and climate sensitivities of forest and grassland ecosystems across China</h3>
 <p>Li Yan; Zihao Feng; Changjun Chen; Jianjun Chen; Hong Xie</p>
@@ -916,7 +1033,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2586390" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2586390" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-022">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Differences in spring green up date and climate sensitivities of forest and grassland ecosystems across China</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2586390</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2586390" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-022">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Defining critical water stress thresholds for adaptive management of alpine grassland phenology on the Qinghai-Tibetan Plateau</h3>
 <p>Yin Zhang; Weibo Ma; Lijun Zhao; Nan Wang; Qingwu Hu; Haidong Li</p>
@@ -928,7 +1046,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2548393" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2548393" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-023">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Defining critical water stress thresholds for adaptive management of alpine grassland phenology on the Qinghai-Tibetan Plateau</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2548393</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2548393" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-023">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>3D line segment extraction for architectural facades via neighbor weighted local centroid and slicing strategy</h3>
 <p>Yifeng He; Jingui Zou; Ze Wang; Ruoming Zhai; Liyuan Meng</p>
@@ -940,7 +1059,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2591258" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2591258" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-024">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>3D line segment extraction for architectural facades via neighbor weighted local centroid and slicing strategy</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2591258</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2591258" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-024">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A hybrid spatial-temporal data model for indoor dynamic path planning in a 2D/2.5D environment</h3>
 <p>Xiaohui Ding; Lingjia Liu; Ce Zhang; Wei Jiang; Siwen Cao; Cai Fu</p>
@@ -952,7 +1072,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2592459" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2592459" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-025">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A hybrid spatial-temporal data model for indoor dynamic path planning in a 2D/2.5D environment</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2592459</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2592459" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-025">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Optimizing urban environment mobile sensing: a hybrid scheme with “drive-by” taxi and bus fleets</h3>
 <p>Jincheng Jiang; Wei Tu; Meng Zhou; Gege Jiang; Zhenxin Zhang; Zhihua Xu</p>
@@ -964,7 +1085,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2600143" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2600143" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-026">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Optimizing urban environment mobile sensing: a hybrid scheme with “drive-by” taxi and bus fleets</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2600143</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2600143" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-026">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Frequent geohazards exacerbate the decline of vegetation area and growth status</h3>
 <p>Yuyan Yan; Qingwei Zhuang; Chanjuan Zan; Shenghui Fang; Xiao Huang; Xiaoping Wu; Hao Fu; Yan Li</p>
@@ -976,7 +1098,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2602974" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2602974" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-027">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Frequent geohazards exacerbate the decline of vegetation area and growth status</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2602974</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2602974" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-027">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Digital twin-based evaluation of tactical interventions for high-density pedestrian environments</h3>
 <p>Seungho Yang; Muhammad Usman; Ali Hassan; Gunho Sohn; Petros Faloutsos; Brandon Haworth</p>
@@ -988,7 +1111,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2600195" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2600195" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-028">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Digital twin-based evaluation of tactical interventions for high-density pedestrian environments</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2600195</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2600195" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-028">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Semantic co-location model: a novel approach to explore the urban spatial structure with a social phenomenon</h3>
 <p>Shi Zeng; Xiaoliang Meng; Chen Zhong; Yao Shen; Yichun Xie; Michael Batty</p>
@@ -1000,7 +1124,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2601314" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2601314" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-029">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Semantic co-location model: a novel approach to explore the urban spatial structure with a social phenomenon</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2601314</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2601314" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-029">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Geospatial analysis of emergency shelter accessibility under flood-induced road disruptions: a case study of central Guangzhou, China</h3>
 <p>Qiuping Li; Yufeng Ba; Huabing Huang; Chaoyang Shi</p>
@@ -1012,7 +1137,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2597523" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2597523" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-030">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Geospatial analysis of emergency shelter accessibility under flood-induced road disruptions: a case study of central Guangzhou, China</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2597523</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2597523" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-030">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Automated extraction and remaining storage capacity estimation of check dams using the FLD-CGN method</h3>
 <p>Hongyi Li; Hongming Zhang; Qiankun Chen; Yuhan Ren; Weilin Xu; Yamin Han; Danyang Wu; Xining Zhao; Chunmei Wang</p>
@@ -1024,7 +1150,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2593762" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2593762" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-031">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Automated extraction and remaining storage capacity estimation of check dams using the FLD-CGN method</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2593762</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2593762" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-031">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Balancing classification in disaster management: a systematic literature review</h3>
 <p>Kyoo-Man Ha</p>
@@ -1036,7 +1163,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2597005" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2597005" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-032">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Balancing classification in disaster management: a systematic literature review</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2597005</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2597005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-032">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Large landslides in the upper Jinsha River basin: comprehensive inventory and implications</h3>
 <p>Langping Li; Wenxuan Huang; Hengxing Lan; Alexander Strom; Yinghui Fang; Chongjian Shao</p>
@@ -1048,7 +1176,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2582301" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2582301" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-033">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Large landslides in the upper Jinsha River basin: comprehensive inventory and implications</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2582301</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2582301" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-033">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Refining the understanding of spatial heterogeneity in closed-circuit television camera effectiveness: a new evaluation strategy</h3>
 <p>Ruidun Chen; Yanqing Xu; Shanhe Jiang; Hongchao Fan</p>
@@ -1060,7 +1189,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2587435" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2587435" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-034">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Refining the understanding of spatial heterogeneity in closed-circuit television camera effectiveness: a new evaluation strategy</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2587435</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2587435" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-034">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>How drivers’ depth perception of environmental features influences traffic speed</h3>
 <p>Yan Zhang; Haoran Ma; Mei-Po Kwan</p>
@@ -1072,7 +1202,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2584862" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2584862" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-035">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>How drivers’ depth perception of environmental features influences traffic speed</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2584862</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2584862" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-035">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Improving the segmentation of confusable indoor structures using point convolution and sparse vector attention</h3>
 <p>Yining Cui; Haihong Zhu; Lin Li; Yukun Wu; Ying Zuo; Qilong Wu</p>
@@ -1084,7 +1215,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2588064" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2588064" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-036">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Improving the segmentation of confusable indoor structures using point convolution and sparse vector attention</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2588064</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2588064" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-036">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Responses of thermokarst pond dynamics to climate change on Inexpressible Island, Antarctica (1987–2023)</h3>
 <p>Yujie Zhang; Ninglian Wang; Bo Sun; Xuewen Yang; Lizhong Zhu</p>
@@ -1096,7 +1228,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2597467" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2597467" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-037">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Responses of thermokarst pond dynamics to climate change on Inexpressible Island, Antarctica (1987–2023)</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2597467</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2597467" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-037">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Environmental drivers of the spatio-temporal variations of chlorophyll-a within the coastal polynya in the Ross Sea</h3>
 <p>Mingxing Cha; Xiaoping Pang; Juan Li; Wei Ban; Yueyun Wang</p>
@@ -1108,7 +1241,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2586985" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2586985" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-038">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Environmental drivers of the spatio-temporal variations of chlorophyll-a within the coastal polynya in the Ross Sea</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2586985</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2586985" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-038">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A bottom-up approach to urban functional zones identification: coupling crowdsourced data and agent-based modeling</h3>
 <p>Siyuan Zhou; Shijin Qu; Yu Lu; Shougeng Hu</p>
@@ -1120,7 +1254,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2631360" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2631360" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-039">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A bottom-up approach to urban functional zones identification: coupling crowdsourced data and agent-based modeling</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2631360</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2631360" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-039">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Enhancing PM 2.5 exposure assessment across China with a novel urban–rural balanced estimation framework</h3>
 <p>Yu Ding; Siwei Li; Jia Xing; Jiaxin Dong; Jie Yang; Wenjia Ni; All authors agree to be accountable for all aspects of the work.</p>
@@ -1132,7 +1267,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2624335" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2624335" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-040">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Enhancing PM 2.5 exposure assessment across China with a novel urban–rural balanced estimation framework</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2624335</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2624335" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-040">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Modeling block-scale urban vitality: integrating streetscape perception and service accessibility</h3>
 <p>Hua Yin; Liang Zhou; Shaohua Wang; Qinke Sun; Xi Wang; Zezhi Zhang</p>
@@ -1144,7 +1280,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2616557" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2616557" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-041">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Modeling block-scale urban vitality: integrating streetscape perception and service accessibility</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2616557</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2616557" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-041">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Dynamic path planning of autonomous mobile robot in off-road environments using experience replay enhanced distributed proximal policy optimization algorithm</h3>
 <p>Qingyun Liu; Xiong You; Xin Zhang; Jiwei Zuo; Jia Li</p>
@@ -1156,7 +1293,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2624861" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2624861" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-042">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dynamic path planning of autonomous mobile robot in off-road environments using experience replay enhanced distributed proximal policy optimization algorithm</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2624861</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2624861" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-042">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Construction of a time-scaled topology map of indoor WiFi access points for human mobility analysis from WiFi log</h3>
 <p>Weeriya Supanich; Veera Muangsin</p>
@@ -1168,7 +1306,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2611516" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2611516" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-043">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Construction of a time-scaled topology map of indoor WiFi access points for human mobility analysis from WiFi log</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2611516</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2611516" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-043">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Risk assessment of typical criminal events in urban street view images based on large language model and deep learning method</h3>
 <p>Zeqiang Chen; Dongyang Liu; Hongfei Xu; Zheng Xu; Lei Xu; Jixin Zhou; Wenying Du; Nengcheng Chen</p>
@@ -1180,7 +1319,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2610046" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2610046" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-044">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Risk assessment of typical criminal events in urban street view images based on large language model and deep learning method</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2610046</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2610046" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-044">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>An automatic, rapid and continuous impervious surface mapping framework based on historical land cover datasets</h3>
 <p>Lingyu Sun; Chen Wu; Liangpei Zhang; Haonan Guo</p>
@@ -1192,7 +1332,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2607195" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2607195" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-045">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An automatic, rapid and continuous impervious surface mapping framework based on historical land cover datasets</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2607195</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2607195" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-045">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>EDR-Fra: an enhanced defect recognition framework for sewer floating capsule robots</h3>
 <p>Jiasong Zhu; Antai Chen; Wenyu Jiang; Yuansheng Hua; Siyu Chen; Qingquan Li</p>
@@ -1204,7 +1345,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2025.2610866" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2610866" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-046">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>EDR-Fra: an enhanced defect recognition framework for sewer floating capsule robots</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2025.2610866</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2025.2610866" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-046">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>TSC-Net: a roadside tree structure parameter computation network using street-view images</h3>
 <p>Chen Long; Dian Chen; Zhe Chen; Ruifei Ding; Zhen Dong; Bisheng Yang</p>
@@ -1216,7 +1358,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2626665" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2626665" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-047">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>TSC-Net: a roadside tree structure parameter computation network using street-view images</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2626665</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2626665" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-047">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A hidden variables approach: assessing the influence of environmental, flight and processing parameters on LiDAR accuracy in wet heathlands in the northwest of Spain</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1228,7 +1371,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2728347" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2728347" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-048">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A hidden variables approach: assessing the influence of environmental, flight and processing parameters on LiDAR accuracy in wet heathlands in the northwest of Spain</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2728347</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2728347" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-048">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A self-supervised mask-enhanced dual-branch convolutional neural network for reconstructing regional TEC over China</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1240,7 +1384,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2722514" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2722514" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-049">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A self-supervised mask-enhanced dual-branch convolutional neural network for reconstructing regional TEC over China</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2722514</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2722514" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-049">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>A typology-based dasymetric mapping approach for plot-level population estimation Using residential building morphology</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1252,7 +1397,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2717925" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2717925" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-050">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A typology-based dasymetric mapping approach for plot-level population estimation Using residential building morphology</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2717925</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2717925" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-017-2026v29i4-050">
 <p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
 <h3>Cross-regional performance and generalization of deep learning models for fine-grained semantic segmentation of marine aquaculture cages</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1264,7 +1410,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2719215" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2719215" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-047-2026-v56-i7"><h3>中国科学：信息科学 · 2026-V56-I7</h3><p>SciEngine 官方期次目录两遍 14 DOI 指纹稳定。相对基线 I6 不 claim。gate-issue=<code>NEW_ISSUE</code>。14 篇均为 NEW_ARTICLE。独立 ISSN，不与英文姊妹刊合并。</p><p><span class="evidence"><a href="https://www.sciengine.com/SSI/issue/56/7" rel="noopener noreferrer">官方期次目录</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>14</strong> 篇。</p></article><article class="paper" id="formal-reg-047-2026v56i7-001">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Cross-regional performance and generalization of deep learning models for fine-grained semantic segmentation of marine aquaculture cages</strong></p><p class="abstract-meta">DOI：10.1080/10095020.2026.2719215</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2719215" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-047-2026-v56-i7"><h3>中国科学：信息科学 · 2026-V56-I7</h3><p>SciEngine 官方期次目录两遍 14 DOI 指纹稳定。相对基线 I6 不 claim。gate-issue=<code>NEW_ISSUE</code>。14 篇均为 NEW_ARTICLE。独立 ISSN，不与英文姊妹刊合并。</p><p><span class="evidence"><a href="https://www.sciengine.com/SSI/issue/56/7" rel="noopener noreferrer">官方期次目录</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>14</strong> 篇。</p></article><article class="paper" id="formal-reg-047-2026v56i7-001">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Collaborative reasoning on heterogeneous subgraphs for point cloud scene graph prediction</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1276,7 +1423,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2026-0001" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2026-0001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-002">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Collaborative reasoning on heterogeneous subgraphs for point cloud scene graph prediction</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2026-0001</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-002">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>A unified model for fine-grained visual categorization with mixture of category adapters</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1288,7 +1436,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2024-0389" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2024-0389" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-003">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A unified model for fine-grained visual categorization with mixture of category adapters</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2024-0389</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2024-0389" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-003">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Intra-service tracing for shared and stressed datacenters: efficient management and intelligent analysis</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1300,7 +1449,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0384" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0384" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-004">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Intra-service tracing for shared and stressed datacenters: efficient management and intelligent analysis</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0384</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0384" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-004">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Behavioral analysis of contributors in China&#x27;s open-source software ecosystem</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1312,7 +1462,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0329" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0329" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-005">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Behavioral analysis of contributors in China&#x27;s open-source software ecosystem</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0329</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0329" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-005">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>BGP origin hijacking detection model based on filtering strategy and spatio-temporal hybrid features</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1324,7 +1475,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0149" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0149" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-006">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>BGP origin hijacking detection model based on filtering strategy and spatio-temporal hybrid features</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0149</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0149" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-006">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Secure data delivery with benefit protection for exchange-assisted data trading</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1336,7 +1488,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0352" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0352" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-007">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Secure data delivery with benefit protection for exchange-assisted data trading</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0352</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0352" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-007">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Dynamic searchable encryption scheme supporting multiple data owners</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1348,7 +1501,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0420" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0420" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-008">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dynamic searchable encryption scheme supporting multiple data owners</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0420</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0420" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-008">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>PHGDiff: physics-enhanced hypergraph diffusion model for crowd trajectory prediction</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1360,7 +1514,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0299" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0299" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-009">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>PHGDiff: physics-enhanced hypergraph diffusion model for crowd trajectory prediction</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0299</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0299" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-009">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Gradient-free distributed resource allocation algorithm for second-order multi-agent systems under directed communication</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1372,7 +1527,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0152" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0152" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-010">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Gradient-free distributed resource allocation algorithm for second-order multi-agent systems under directed communication</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0152</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0152" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-010">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Robust switching control for supersonic civil aircraft based on wide-envelope flight mode partitioning</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1384,7 +1540,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0330" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0330" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-011">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Robust switching control for supersonic civil aircraft based on wide-envelope flight mode partitioning</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0330</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0330" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-011">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Strategy optimization for UAV adversarial game based on counterfactual regret minimization</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1396,7 +1553,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0391" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0391" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-012">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Strategy optimization for UAV adversarial game based on counterfactual regret minimization</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0391</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0391" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-012">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Robust trajectory tracking for hybrid terrestrial and aerial quadrotors under varying-slope terrain: a cascade control strategy</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1408,7 +1566,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0348" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0348" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-013">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Robust trajectory tracking for hybrid terrestrial and aerial quadrotors under varying-slope terrain: a cascade control strategy</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0348</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0348" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-013">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Sparse coefficient distribution identification of control equations based on high-order integration</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1420,7 +1579,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0277" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0277" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-014">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Sparse coefficient distribution identification of control equations based on high-order integration</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0277</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0277" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i7-014">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Special Topic: Advanced Optoelectronics Based on Two-Dimensional Materials</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1432,7 +1592,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2026-0297" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2026-0297" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-047-2026-v56-i8"><h3>中国科学：信息科学 · 2026-V56-I8</h3><p>SciEngine Current Issue Vol 56 Issue 8，两遍 18 DOI 指纹稳定。gate-issue=<code>NEW_ISSUE</code>。18 篇均为 NEW_ARTICLE。</p><p><span class="evidence"><a href="https://www.sciengine.com/SSI/issue/56/8" rel="noopener noreferrer">官方期次目录</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>18</strong> 篇。</p></article><article class="paper" id="formal-reg-047-2026v56i8-001">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Special Topic: Advanced Optoelectronics Based on Two-Dimensional Materials</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2026-0297</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0297" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-047-2026-v56-i8"><h3>中国科学：信息科学 · 2026-V56-I8</h3><p>SciEngine Current Issue Vol 56 Issue 8，两遍 18 DOI 指纹稳定。gate-issue=<code>NEW_ISSUE</code>。18 篇均为 NEW_ARTICLE。</p><p><span class="evidence"><a href="https://www.sciengine.com/SSI/issue/56/8" rel="noopener noreferrer">官方期次目录</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>18</strong> 篇。</p></article><article class="paper" id="formal-reg-047-2026v56i8-001">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Prediction-in-the-Loop: a decision-making paradigm endowing agents with foresight</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1444,7 +1605,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2026-0130" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2026-0130" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-002">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Prediction-in-the-Loop: a decision-making paradigm endowing agents with foresight</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2026-0130</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0130" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-002">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Towards reliable learning: anchoring and control methods for semi-supervised medical image segmentation</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1456,7 +1618,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0444" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0444" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-003">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Towards reliable learning: anchoring and control methods for semi-supervised medical image segmentation</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0444</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0444" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-003">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Movable-type eraser: separable, recoverable, and sustainable multi-concept eraser in diffusion models</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1468,7 +1631,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0204" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0204" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-004">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Movable-type eraser: separable, recoverable, and sustainable multi-concept eraser in diffusion models</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0204</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0204" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-004">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>TVPFL: traceable and verifiable privacy-preserving federated learning</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1480,7 +1644,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0297" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0297" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-005">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>TVPFL: traceable and verifiable privacy-preserving federated learning</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0297</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0297" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-005">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Implementation of embedded virtualization-based built-in defense for PLCs on Loongson architecture</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1492,7 +1657,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0319" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0319" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-006">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Implementation of embedded virtualization-based built-in defense for PLCs on Loongson architecture</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0319</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0319" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-006">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>An efficient privacy-preserving inference scheme based on transfer learning</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1504,7 +1670,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0317" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0317" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-007">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An efficient privacy-preserving inference scheme based on transfer learning</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0317</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0317" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-007">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>No-answer puzzle: a curiosity-driven attacker model and motivation inference for APT in cybersecurity of major events</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1516,7 +1683,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0493" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0493" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-008">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>No-answer puzzle: a curiosity-driven attacker model and motivation inference for APT in cybersecurity of major events</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0493</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0493" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-008">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>CE-LA: a method for addressing Hamming weight label imbalance in side-channel attacks</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1528,7 +1696,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0270" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0270" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-009">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>CE-LA: a method for addressing Hamming weight label imbalance in side-channel attacks</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0270</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0270" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-009">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Adaptive filtering based on credibility and observability</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1540,7 +1709,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2024-0146" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2024-0146" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-010">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Adaptive filtering based on credibility and observability</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2024-0146</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2024-0146" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-010">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Cognitive science-inspired industrial brain: theoretical framework, core methods, and representative applications</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1552,7 +1722,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0379" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0379" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-011">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Cognitive science-inspired industrial brain: theoretical framework, core methods, and representative applications</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0379</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0379" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-011">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>A spatio-temporal graph reinforcement learning-based multi-robot trajectory planning method for small-scale fading in underground communications</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1564,7 +1735,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0193" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0193" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-012">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A spatio-temporal graph reinforcement learning-based multi-robot trajectory planning method for small-scale fading in underground communications</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0193</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0193" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-012">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Wiener-LSTM fusion framework for lithium-ion battery end-of-life interval estimation using multi-degradation features</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1576,7 +1748,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0356" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0356" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-013">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Wiener-LSTM fusion framework for lithium-ion battery end-of-life interval estimation using multi-degradation features</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0356</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0356" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-013">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Covert communications base on energy dispersion in extended dimensions: performance and methodology</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1588,7 +1761,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0531" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0531" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-014">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Covert communications base on energy dispersion in extended dimensions: performance and methodology</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0531</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0531" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-014">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Design of a bifunctional terahertz metasurface for circular dichroism and beam manipulation</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1600,7 +1774,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0492" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0492" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-015">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Design of a bifunctional terahertz metasurface for circular dichroism and beam manipulation</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0492</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0492" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-015">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Global ionospheric tomography with deep neural operator using GNSS and radio occultation measurements</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1612,7 +1787,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0375" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0375" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-016">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Global ionospheric tomography with deep neural operator using GNSS and radio occultation measurements</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0375</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0375" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-016">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Recent developments in threshold signature scheme</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1624,7 +1800,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0340" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2025-0340" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-017">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Recent developments in threshold signature scheme</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2025-0340</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0340" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-017">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Special Topic: Large Model-Driven Aerospace Microwave Imaging</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1636,7 +1813,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2026-0429" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2026-0429" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-018">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Special Topic: Large Model-Driven Aerospace Microwave Imaging</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2026-0429</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0429" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i8-018">
 <p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
 <h3>Special Topic: Quantum Information (2026)</h3>
 <p>作者未在官方目录完整给出</p>
@@ -1648,7 +1826,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2026-0402" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-09-17 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1360/SSI-2026-0402" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-17 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Special Topic: Quantum Information (2026)</strong></p><p class="abstract-meta">DOI：10.1360/ssi-2026-0402</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0402" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 </section>
 
 <section id="online-first">

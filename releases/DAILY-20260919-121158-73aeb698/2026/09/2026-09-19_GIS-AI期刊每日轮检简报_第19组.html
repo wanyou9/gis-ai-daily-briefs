@@ -11,6 +11,53 @@ body, main, header, footer { max-width: 100%; overflow-x: hidden; }
 .table-wrap { overflow-x: auto; max-width: 100%; }
 table { width: 100%; }
 .evidence a { max-width: 100%; overflow-wrap: anywhere; }
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}
 </style>
 </head>
 <body id="top">
@@ -81,7 +128,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102509" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102509" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Street view video for urban sensing: Potential for measuring urban vitality</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102509</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102509" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-002">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Where to start with urban Digital Twins? Backward-chaining key indicators for cross-sector water, heat, and housing impact analysis</h3>
@@ -94,7 +142,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102512" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102512" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Where to start with urban Digital Twins? Backward-chaining key indicators for cross-sector water, heat, and housing impact analysis</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102512</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102512" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-003">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>OptimalStop: Predictability–complexity trade-off for optimising stop detection in human mobility data</h3>
@@ -107,7 +156,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102528" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102528" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>OptimalStop: Predictability–complexity trade-off for optimising stop detection in human mobility data</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102528</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102528" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-004">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Revealing exacerbated socioeconomic stratification of urban mobility: A case study in Beijing, China</h3>
@@ -120,7 +170,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102529" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102529" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Revealing exacerbated socioeconomic stratification of urban mobility: A case study in Beijing, China</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102529</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102529" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-005">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Beyond 2D land consumption: A scaling-law framework for evaluating 3D urban space consumption and population dynamics in fifteen East Asian megacities</h3>
@@ -133,7 +184,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102531" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102531" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Beyond 2D land consumption: A scaling-law framework for evaluating 3D urban space consumption and population dynamics in fifteen East Asian megacities</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102531</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102531" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-006">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>HyperLayout: A decoupled and planning-oriented framework for parcel-level building layout generation</h3>
@@ -146,7 +198,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102527" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102527" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>HyperLayout: A decoupled and planning-oriented framework for parcel-level building layout generation</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102527</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102527" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-007">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Open-access model for detecting openly dumped dispersed municipal solid waste from crowdsourced UAV imagery in Sub-Saharan Africa</h3>
@@ -159,7 +212,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102517" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102517" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Open-access model for detecting openly dumped dispersed municipal solid waste from crowdsourced UAV imagery in Sub-Saharan Africa</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102517</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102517" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-008">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>A representation-explanation framework for flow-based border effects on intra-urban commuting using geographically weighted additive gravity model and machine learning</h3>
@@ -172,7 +226,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102516" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102516" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A representation-explanation framework for flow-based border effects on intra-urban commuting using geographically weighted additive gravity model and machine learning</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102516</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102516" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-009">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>A novel simulation-based approach to optimizing road networks for disaster evacuation in dense urban informal settlements</h3>
@@ -185,7 +240,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102510" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102510" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A novel simulation-based approach to optimizing road networks for disaster evacuation in dense urban informal settlements</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102510</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102510" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-010">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Evaluating the digital divide in public transport services: A natural language processing analysis of user experiences in Birmingham</h3>
@@ -198,7 +254,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102507" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102507" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Evaluating the digital divide in public transport services: A natural language processing analysis of user experiences in Birmingham</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102507</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102507" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-011">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>City2Graph: A Python library for Heterogeneous Graph Neural Networks and spatial analysis in urban systems</h3>
@@ -211,7 +268,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102492" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102492" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>City2Graph: A Python library for Heterogeneous Graph Neural Networks and spatial analysis in urban systems</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102492</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102492" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-012">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>GeoPandas: Fundamental data structures for vector spatial data in Python</h3>
@@ -224,7 +282,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102495" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102495" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>GeoPandas: Fundamental data structures for vector spatial data in Python</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102495</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102495" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-013">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Assessing the significance of intra- and inter-species interactions using probabilistic space-time prisms and agent-based null models</h3>
@@ -237,7 +296,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102511" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102511" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Assessing the significance of intra- and inter-species interactions using probabilistic space-time prisms and agent-based null models</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102511</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102511" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-014">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Joint building height estimation and pose optimization using single-view smartphone image</h3>
@@ -250,7 +310,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102508" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102508" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Joint building height estimation and pose optimization using single-view smartphone image</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102508</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102508" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-015">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Census-validated agent-based modeling of immigrant settlement and diversity in Metro Vancouver</h3>
@@ -263,7 +324,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102515" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102515" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Census-validated agent-based modeling of immigrant settlement and diversity in Metro Vancouver</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102515</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102515" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-016">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Disentangling nonlinear and context-contingent built environment effects on social encounter opportunities: Evidence from explainable spatial machine learning in 15-min community life circles</h3>
@@ -276,7 +338,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102514" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102514" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Disentangling nonlinear and context-contingent built environment effects on social encounter opportunities: Evidence from explainable spatial machine learning in 15-min community life circles</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102514</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102514" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-017">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Function over morphology: Understanding street environment and pedestrian flow in urban villages through UAV-based tracking</h3>
@@ -289,7 +352,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102506" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102506" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Function over morphology: Understanding street environment and pedestrian flow in urban villages through UAV-based tracking</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102506</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102506" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-018">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>FloodLang and FloodLoc-Four: A bilingual dataset and fine-grained multilevel framework for flood-related geospatial information understanding</h3>
@@ -302,7 +366,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102505" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102505" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>FloodLang and FloodLoc-Four: A bilingual dataset and fine-grained multilevel framework for flood-related geospatial information understanding</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102505</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102505" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-019">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Identifying micro-scale risk zones for climate-driven emergency medical demand: A spatiotemporal machine learning study in Beijing</h3>
@@ -315,7 +380,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102504" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102504" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Identifying micro-scale risk zones for climate-driven emergency medical demand: A spatiotemporal machine learning study in Beijing</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102504</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102504" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-020">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Deep learning reveals cross-platform consistency in street view imagery for urban perception mapping</h3>
@@ -328,7 +394,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102493" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102493" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Deep learning reveals cross-platform consistency in street view imagery for urban perception mapping</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102493</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102493" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-021">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>Interpretable mapping of fine-grained urban building functions from street-view images using foundation models</h3>
@@ -341,7 +408,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102494" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102494" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Interpretable mapping of fine-grained urban building functions from street-view images using foundation models</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102494</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102494" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-022">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>An interpretable hybrid multiscale geographically weighted XGBoost (HMGWX) model with an empirical application to urban transport systems</h3>
@@ -354,7 +422,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102485" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102485" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An interpretable hybrid multiscale geographically weighted XGBoost (HMGWX) model with an empirical application to urban transport systems</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102485</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102485" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-023">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>How multi-sensory experience shapes place-based human sentiments: A hyperlocal analysis using environmental sensing and social media data in the Bronx, New York City</h3>
@@ -367,7 +436,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102489" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102489" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>How multi-sensory experience shapes place-based human sentiments: A hyperlocal analysis using environmental sensing and social media data in the Bronx, New York City</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102489</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102489" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-019-024">
 <p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST</p>
 <h3>A global structural typology of cities from urban centers</h3>
@@ -380,7 +450,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102490" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102490" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A global structural typology of cities from urban centers</strong></p><p class="abstract-meta">DOI：10.1016/j.compenvurbsys.2026.102490</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102490" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-001">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Returning network findings: An art gallery as a report-back in a rural community</h3>
@@ -393,7 +464,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.08.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.08.005" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Returning network findings: An art gallery as a report-back in a rural community</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.08.005</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.08.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-002">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>The security–efficiency trade-off in ransomware networks</h3>
@@ -406,7 +478,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.08.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.08.004" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The security–efficiency trade-off in ransomware networks</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.08.004</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.08.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-003">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Unlinked: Why alters reported in name generators cannot be used to estimate personal network size</h3>
@@ -419,7 +492,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.08.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.08.001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Unlinked: Why alters reported in name generators cannot be used to estimate personal network size</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.08.001</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.08.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-004">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Birds of a feather at first sight: Decomposing homophily into tie formation and persistence</h3>
@@ -432,7 +506,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.08.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.08.002" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Birds of a feather at first sight: Decomposing homophily into tie formation and persistence</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.08.002</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.08.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-005">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Co-evolution of cooperation and conflict among organized crime groups: Evidence from the United Kingdom</h3>
@@ -445,7 +520,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.005" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Co-evolution of cooperation and conflict among organized crime groups: Evidence from the United Kingdom</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.07.005</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-006">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Predicting member churn in dynamic groups: A multi-dimensional analysis</h3>
@@ -458,7 +534,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.003" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Predicting member churn in dynamic groups: A multi-dimensional analysis</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.07.003</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-007">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Social networks, language, and material culture on New Guinea</h3>
@@ -471,7 +548,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.002" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Social networks, language, and material culture on New Guinea</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.07.002</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-008">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Agency within structure: Strategic behavior and network position in explaining premium buyer access in global buyer–seller networks</h3>
@@ -484,7 +562,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.004" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Agency within structure: Strategic behavior and network position in explaining premium buyer access in global buyer–seller networks</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.07.004</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-009">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Corrigendum to “Rigid boundaries, selective salience: How classroom gender composition shapes adolescent friendships” [Soc. Netw. 86 (2026) 401–411]</h3>
@@ -497,7 +576,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.009" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.009" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Corrigendum to “Rigid boundaries, selective salience: How classroom gender composition shapes adolescent friendships” [Soc. Netw. 86 (2026) 401–411]</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.06.009</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.009" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-010">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Gender differences in workplace friendship development: Insights from network dynamics</h3>
@@ -510,7 +590,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Gender differences in workplace friendship development: Insights from network dynamics</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.07.001</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.07.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-011">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Who you know, what you believe, what you share: Personal networks and health misinformation susceptibility</h3>
@@ -523,7 +604,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.008" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.008" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Who you know, what you believe, what you share: Personal networks and health misinformation susceptibility</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.06.008</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.008" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-012">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Social network elements in loneliness interventions for older migrants: Insights from intervention documents and trainers</h3>
@@ -536,7 +618,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.007" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.007" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Social network elements in loneliness interventions for older migrants: Insights from intervention documents and trainers</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.06.007</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.007" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-013">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Not all bonds are created equal: Dyadic latent class models for relational event data</h3>
@@ -549,7 +632,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.006" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.006" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Not all bonds are created equal: Dyadic latent class models for relational event data</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.06.006</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.006" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-014">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Relationships between node degrees and hyperedge sizes in empirical hypergraphs</h3>
@@ -562,7 +646,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.004" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Relationships between node degrees and hyperedge sizes in empirical hypergraphs</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.06.004</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-015">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>When do acquaintance networks grow? Life events, civic participation, and social dynamics</h3>
@@ -575,7 +660,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.002" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>When do acquaintance networks grow? Life events, civic participation, and social dynamics</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.06.002</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-016">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Introducing VINA: An engaging and ethically responsible interface to collect social network data including cognitive social structures on smartphones</h3>
@@ -588,7 +674,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.005" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Introducing VINA: An engaging and ethically responsible interface to collect social network data including cognitive social structures on smartphones</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.06.005</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-017">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Dynamic programming for calculating the triad census</h3>
@@ -601,7 +688,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.003" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dynamic programming for calculating the triad census</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.06.003</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-018">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Bayesian modeling for aggregated relational data: A unified perspective</h3>
@@ -614,7 +702,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Bayesian modeling for aggregated relational data: A unified perspective</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.06.001</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.06.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-019">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Unequal relational gains in a sport intervention for asylum seekers: How sociodemographics and athletic skills shape network outcomes</h3>
@@ -627,7 +716,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.05.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.05.003" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Unequal relational gains in a sport intervention for asylum seekers: How sociodemographics and athletic skills shape network outcomes</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.05.003</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.05.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-020">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Neighborhood shocks and network dynamics: An instrumental variable approach to measuring triadic closure in daily mobility networks</h3>
@@ -640,7 +730,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.018" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.018" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Neighborhood shocks and network dynamics: An instrumental variable approach to measuring triadic closure in daily mobility networks</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.04.018</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.018" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-021">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Estimating within-cluster and between-cluster spillover effects in randomized saturation designs</h3>
@@ -653,7 +744,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.015" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.015" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Estimating within-cluster and between-cluster spillover effects in randomized saturation designs</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.04.015</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.015" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-022">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Wiretap surveillance of criminal networks does not resemble other types of collaborative networks</h3>
@@ -666,7 +758,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.05.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.05.002" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Wiretap surveillance of criminal networks does not resemble other types of collaborative networks</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.05.002</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.05.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-079-023">
 <p class="kicker">Social Networks · ONLINE_FIRST</p>
 <h3>Stability of egocentric social networks in children: Personal and functional dynamics across microsystems</h3>
@@ -679,7 +772,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.016" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-19 12:19 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.016" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-19 12:19 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Stability of egocentric social networks in children: Personal and functional dynamics across microsystems</strong></p><p class="abstract-meta">DOI：10.1016/j.socnet.2026.04.016</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.016" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 </section>
 
 <section id="health">

@@ -11,6 +11,53 @@ body, main, header, footer { max-width: 100%; overflow-x: hidden; }
 .table-wrap { overflow-x: auto; max-width: 100%; }
 table { width: 100%; }
 .evidence a { max-width: 100%; overflow-wrap: anywhere; }
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}
 </style>
 </head>
 <body id="top">
@@ -76,7 +123,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11215-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11215-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-002">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Lagrange interpolation-based optimization algorithm for numerical optimization and spacecraft trajectory problems</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11215-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11215-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-002">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Generalizations of k-generated implications</h3>
 <p>作者未在官方目录完整给出</p>
@@ -88,7 +136,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11395-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11395-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-003">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Generalizations of k-generated implications</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11395-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11395-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-003">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Lifting filters in residuated lattices and their applications in multi-valued decision-making</h3>
 <p>作者未在官方目录完整给出</p>
@@ -100,7 +149,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-11054-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-11054-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-004">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Lifting filters in residuated lattices and their applications in multi-valued decision-making</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-11054-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-11054-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-004">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Conservation laws and exact solutions for option pricing model with fuzzy parameters</h3>
 <p>作者未在官方目录完整给出</p>
@@ -112,7 +162,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11384-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11384-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-005">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Conservation laws and exact solutions for option pricing model with fuzzy parameters</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11384-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11384-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-005">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>A new technique for developing triangular norms and triangular conorms on bounded lattices</h3>
 <p>作者未在官方目录完整给出</p>
@@ -124,7 +175,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11385-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11385-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-006">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A new technique for developing triangular norms and triangular conorms on bounded lattices</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11385-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11385-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-006">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Adaptive neuro-fuzzy inference system technique-based channel equalization for software-defined radio systems</h3>
 <p>作者未在官方目录完整给出</p>
@@ -136,7 +188,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11393-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11393-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-007">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Adaptive neuro-fuzzy inference system technique-based channel equalization for software-defined radio systems</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11393-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11393-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-007">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>A blended sentiment analysis, large language model, and multi-criteria decision-making (BSLMM) approach to sustainable product innovation</h3>
 <p>作者未在官方目录完整给出</p>
@@ -148,7 +201,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11402-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11402-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-008">
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A blended sentiment analysis, large language model, and multi-criteria decision-making (BSLMM) approach to sustainable product innovation</strong></p><p class="abstract-meta">期刊：Soft Computing · DOI：10.1007/s00500-026-11402-y · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Owing to the growing popularity of electronic marketplaces, individual online retailers must evaluate a large volume of customer text reviews to gather feedback about consumer preferences and support sustainable product evaluation. Product evaluation involves multiple product attributes simultaneously, making it a multi-criteria decision-making problem. While traditional sentiment analysis captures isolated customer insights, this approach is subject to three key limitations. These are reliance on context-blind extraction methods for attribute identification, subjective weighting schemes that cannot handle correlated criteria, and insufficient treatment of linguistic uncertainty arising from inter-reviewer variability in sentiment intensity. To address this, this study introduces BSLMM (BERT-based Sentiment analysis with Language Models and Multi-Criteria Decision Making), a systematic framework that integrates BERT for contextual attribute extraction and aspect-level sentiment scoring, Principal Component Analysis (PCA) for transforming correlated attributes into independent criteria with objectively derived weights, and fuzzy COPRAS for ranking product alternatives. This study contributes a data analytics framework that blends sentiment analysis, pre-trained language models and MCDM for product benchmarking and development. Furthermore, it offers practitioners a low-cost data-driven approach to competitive product development towards sustainable innovation.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11402-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-008">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Simulation analytics as an eco-systemic approach to the nonlinear dynamic response of artificial adaptive systems: A toolkit</h3>
 <p>作者未在官方目录完整给出</p>
@@ -160,7 +214,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10817-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10817-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-009">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Simulation analytics as an eco-systemic approach to the nonlinear dynamic response of artificial adaptive systems: A toolkit</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10817-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10817-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-009">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>A comparative analysis of capable metaheuristic algorithms for closed-loop supply chain design focusing on fixed-cost solid transportation</h3>
 <p>作者未在官方目录完整给出</p>
@@ -172,7 +227,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10776-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10776-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-010">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A comparative analysis of capable metaheuristic algorithms for closed-loop supply chain design focusing on fixed-cost solid transportation</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10776-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10776-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-010">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>A third-order-convergence improved Newton method and its numerical performance</h3>
 <p>作者未在官方目录完整给出</p>
@@ -184,7 +240,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10673-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10673-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-011">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A third-order-convergence improved Newton method and its numerical performance</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10673-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10673-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-011">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Modeling and solving a multi-facility location-relocation problem considering two dynamic probabilistic line barriers</h3>
 <p>作者未在官方目录完整给出</p>
@@ -196,7 +253,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11375-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11375-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-012">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Modeling and solving a multi-facility location-relocation problem considering two dynamic probabilistic line barriers</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11375-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11375-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-012">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Fuzzy multi-criteria group decision-making method based on triplet-composed preference considering the group-level uncertainty in design evaluation</h3>
 <p>作者未在官方目录完整给出</p>
@@ -208,7 +266,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11394-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11394-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-013">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Fuzzy multi-criteria group decision-making method based on triplet-composed preference considering the group-level uncertainty in design evaluation</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11394-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11394-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-013">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Pricing strategy with warranty and risk-averse flexibility in sustainable supply chain: a remanufacturing process under demand uncertainty</h3>
 <p>作者未在官方目录完整给出</p>
@@ -220,7 +279,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11399-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11399-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-014">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Pricing strategy with warranty and risk-averse flexibility in sustainable supply chain: a remanufacturing process under demand uncertainty</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11399-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11399-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-014">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Improved Mask R-CNN for defect detection in aluminum alloy rims</h3>
 <p>作者未在官方目录完整给出</p>
@@ -232,7 +292,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11392-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11392-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-015">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Improved Mask R-CNN for defect detection in aluminum alloy rims</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11392-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11392-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-015">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Numerical simulation of laminar viscous MHD flow in a semi-porous channel using smooth pseudo-spectral methods</h3>
 <p>作者未在官方目录完整给出</p>
@@ -244,7 +305,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11386-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11386-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-016">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Numerical simulation of laminar viscous MHD flow in a semi-porous channel using smooth pseudo-spectral methods</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11386-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11386-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-016">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Investigation of multivariate analysis of surface-enhanced Raman scattering spectra using simple machine-learning models: prediction of the composition of mixed self-assembled monolayer on gold surface</h3>
 <p>作者未在官方目录完整给出</p>
@@ -256,7 +318,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11387-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11387-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-017">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Investigation of multivariate analysis of surface-enhanced Raman scattering spectra using simple machine-learning models: prediction of the composition of mixed self-assembled monolayer on gold surface</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11387-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11387-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-017">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>An energy-aware and fault-tolerant deep reinforcement learning-based approach for multi-agent patrolling problems</h3>
 <p>作者未在官方目录完整给出</p>
@@ -268,7 +331,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10685-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10685-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-018">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An energy-aware and fault-tolerant deep reinforcement learning-based approach for multi-agent patrolling problems</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10685-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10685-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-018">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>A method related to personality traits that detects learning challenges through physiological signals</h3>
 <p>作者未在官方目录完整给出</p>
@@ -280,7 +344,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11404-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11404-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-019">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A method related to personality traits that detects learning challenges through physiological signals</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11404-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11404-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-019">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>FedLSTM-AQI: a federated deep learning framework for air quality index prediction</h3>
 <p>作者未在官方目录完整给出</p>
@@ -292,7 +357,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11403-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11403-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-020">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>FedLSTM-AQI: a federated deep learning framework for air quality index prediction</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11403-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11403-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-020">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Forecasting bitcoin prices based on hybrid LSTM and deep neural network architectures</h3>
 <p>作者未在官方目录完整给出</p>
@@ -304,7 +370,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11296-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11296-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-021">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Forecasting bitcoin prices based on hybrid LSTM and deep neural network architectures</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11296-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11296-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-021">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>CC-ELM: a compression-coefficient-based extreme learning machine for enhanced load forecasting in electric vehicle charging stations</h3>
 <p>作者未在官方目录完整给出</p>
@@ -316,7 +383,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11401-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11401-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-022">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>CC-ELM: a compression-coefficient-based extreme learning machine for enhanced load forecasting in electric vehicle charging stations</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11401-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11401-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-022">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Multi-platform air defense hierarchical task allocation method based on a genetic type algorithm</h3>
 <p>作者未在官方目录完整给出</p>
@@ -328,7 +396,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11391-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11391-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-023">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multi-platform air defense hierarchical task allocation method based on a genetic type algorithm</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11391-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11391-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-023">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Bootstrapping for fuzzy mediation and moderated-mediation analysis using Fuzzy Lease Squares Estimation (FLSE) and Fuzzy Least Absolute Deviations (FLAD) with evolutionary algorithms</h3>
 <p>作者未在官方目录完整给出</p>
@@ -340,7 +409,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10793-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10793-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-024">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Bootstrapping for fuzzy mediation and moderated-mediation analysis using Fuzzy Lease Squares Estimation (FLSE) and Fuzzy Least Absolute Deviations (FLAD) with evolutionary algorithms</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10793-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10793-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-024">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Importance of quantum technology in economy paradigm shift</h3>
 <p>作者未在官方目录完整给出</p>
@@ -352,7 +422,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08514-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08514-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-025">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Importance of quantum technology in economy paradigm shift</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08514-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08514-0" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-025">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Quantum computing for social business optimization: a practitioner’s perspective</h3>
 <p>作者未在官方目录完整给出</p>
@@ -364,7 +435,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08764-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08764-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-026">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Quantum computing for social business optimization: a practitioner’s perspective</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08764-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08764-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-026">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>A novel approach of localization with single mobile anchor using quantum-based Salp swarm algorithm in wireless sensor networks</h3>
 <p>作者未在官方目录完整给出</p>
@@ -376,7 +448,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-09261-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-09261-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-027">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A novel approach of localization with single mobile anchor using quantum-based Salp swarm algorithm in wireless sensor networks</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-09261-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-09261-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-027">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Successful adoption of quantum technology in blockchain: a comprehensive framework</h3>
 <p>作者未在官方目录完整给出</p>
@@ -388,7 +461,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-09248-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-09248-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-028">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Successful adoption of quantum technology in blockchain: a comprehensive framework</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-09248-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-09248-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-028">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>A two-stage entity event deduplication method based on graph node selection and node optimization strategy</h3>
 <p>作者未在官方目录完整给出</p>
@@ -400,7 +474,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-09623-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-09623-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-029">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A two-stage entity event deduplication method based on graph node selection and node optimization strategy</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-09623-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-09623-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-029">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>A truncated patch-group-based hierarchical reconstruction model for color image compressive sensing</h3>
 <p>作者未在官方目录完整给出</p>
@@ -412,7 +487,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08275-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08275-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-030">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A truncated patch-group-based hierarchical reconstruction model for color image compressive sensing</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08275-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08275-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-030">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Interpretation of seizure dynamics using fuzzy-based neural computational modelling</h3>
 <p>作者未在官方目录完整给出</p>
@@ -424,7 +500,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08545-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08545-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-031">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Interpretation of seizure dynamics using fuzzy-based neural computational modelling</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08545-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08545-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-031">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Hybrid feature selection and BWTDO enabled DeepCNN-TL for intrusion detection in fuzzy cloud computing</h3>
 <p>作者未在官方目录完整给出</p>
@@ -436,7 +513,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08573-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08573-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-032">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Hybrid feature selection and BWTDO enabled DeepCNN-TL for intrusion detection in fuzzy cloud computing</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08573-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08573-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-032">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Improved quality of service with fuzzy-based optimised resource allocation with energy consumption-based IoT network application</h3>
 <p>作者未在官方目录完整给出</p>
@@ -448,7 +526,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08281-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08281-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-033">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Improved quality of service with fuzzy-based optimised resource allocation with energy consumption-based IoT network application</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08281-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08281-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-033">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>VANET security enhancement in cloud navigation with Internet of Things-based trust model in deep learning architecture</h3>
 <p>作者未在官方目录完整给出</p>
@@ -460,7 +539,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08180-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08180-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-034">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>VANET security enhancement in cloud navigation with Internet of Things-based trust model in deep learning architecture</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08180-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08180-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-034">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Machine learning based novel frameworks developments and architectures for secured communication in VANETs for smart transportation</h3>
 <p>作者未在官方目录完整给出</p>
@@ -472,7 +552,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08299-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08299-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-035">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Machine learning based novel frameworks developments and architectures for secured communication in VANETs for smart transportation</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08299-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08299-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-035">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Intelligent analytics algorithms in breach detection systems for securing VANETs and data for smart transportation management</h3>
 <p>作者未在官方目录完整给出</p>
@@ -484,7 +565,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08399-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08399-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-036">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Intelligent analytics algorithms in breach detection systems for securing VANETs and data for smart transportation management</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08399-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08399-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-036">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>AI-based efficient wireless technologies and infrastructure-based networks with VANET for smart transportation high performance</h3>
 <p>作者未在官方目录完整给出</p>
@@ -496,7 +578,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08340-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08340-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-037">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>AI-based efficient wireless technologies and infrastructure-based networks with VANET for smart transportation high performance</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08340-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08340-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-037">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>A novel weight-optimized LSTM for dynamic pricing solutions in e-commerce platforms based on customer buying behaviour</h3>
 <p>作者未在官方目录完整给出</p>
@@ -508,7 +591,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08729-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08729-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-038">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A novel weight-optimized LSTM for dynamic pricing solutions in e-commerce platforms based on customer buying behaviour</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08729-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08729-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-038">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Value of CT examination combined with serum tumor markers assisted with artificial intelligence diagnostic system in the diagnosis of benign and malignant pulmonary nodules</h3>
 <p>作者未在官方目录完整给出</p>
@@ -520,7 +604,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-09249-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-09249-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-039">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Value of CT examination combined with serum tumor markers assisted with artificial intelligence diagnostic system in the diagnosis of benign and malignant pulmonary nodules</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-09249-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-09249-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-039">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>A novel hybrid encryption method using S-box and Henon maps for multidimensional 3D medical images</h3>
 <p>作者未在官方目录完整给出</p>
@@ -532,7 +617,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08006-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08006-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-040">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A novel hybrid encryption method using S-box and Henon maps for multidimensional 3D medical images</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08006-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08006-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-040">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Soft computing in computer network security protection system with machine learning based on level protection in the cloud environment</h3>
 <p>作者未在官方目录完整给出</p>
@@ -544,7 +630,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08395-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08395-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-041">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Soft computing in computer network security protection system with machine learning based on level protection in the cloud environment</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08395-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08395-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-041">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>DeepAID: a design of smart animal intrusion detection and classification using deep hybrid neural networks</h3>
 <p>作者未在官方目录完整给出</p>
@@ -556,7 +643,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08270-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08270-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-042">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>DeepAID: a design of smart animal intrusion detection and classification using deep hybrid neural networks</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08270-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08270-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-042">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Evaluation of soft computing in methodology for calculating information protection from parameters of its distribution in social networks</h3>
 <p>作者未在官方目录完整给出</p>
@@ -568,7 +656,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08633-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08633-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-043">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Evaluation of soft computing in methodology for calculating information protection from parameters of its distribution in social networks</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08633-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08633-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i7-043">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Scrutinizing the available SRGMs in the backdrop of open-source software while offering a way-out</h3>
 <p>作者未在官方目录完整给出</p>
@@ -580,7 +669,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08761-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08761-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-081-2026-v30-i8"><h3>Soft Computing · 2026-V30-I8</h3><p>官方 volumes 页最新已列至 30-8；TOC 25 篇，两遍 DOI 集合稳定。部分 DOI 此前以 Online First 登记，本次正式归期。gate-issue=<code>NEW_ISSUE</code>。</p><p><span class="evidence"><a href="https://link.springer.com/journal/500/volumes-and-issues/30-8" rel="noopener noreferrer">官方期次目录</a><small>link.springer.com · 2026-09-21 12:20 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>25</strong> 篇。</p></article><article class="paper" id="formal-reg-081-2026v30i8-001">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Scrutinizing the available SRGMs in the backdrop of open-source software while offering a way-out</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08761-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08761-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-081-2026-v30-i8"><h3>Soft Computing · 2026-V30-I8</h3><p>官方 volumes 页最新已列至 30-8；TOC 25 篇，两遍 DOI 集合稳定。部分 DOI 此前以 Online First 登记，本次正式归期。gate-issue=<code>NEW_ISSUE</code>。</p><p><span class="evidence"><a href="https://link.springer.com/journal/500/volumes-and-issues/30-8" rel="noopener noreferrer">官方期次目录</a><small>link.springer.com · 2026-09-21 12:20 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>25</strong> 篇。</p></article><article class="paper" id="formal-reg-081-2026v30i8-001">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>A PSO-LSTM scheduling algorithm of KIF to deployment pods in kubernetes</h3>
 <p>作者未在官方目录完整给出</p>
@@ -592,7 +682,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11390-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11390-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-002">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A PSO-LSTM scheduling algorithm of KIF to deployment pods in kubernetes</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11390-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11390-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-002">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Automated and accurate tooth crown design using 3D oral scans with deep adaptive perceptual generative adversarial network</h3>
 <p>作者未在官方目录完整给出</p>
@@ -604,7 +695,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11397-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11397-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-003">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Automated and accurate tooth crown design using 3D oral scans with deep adaptive perceptual generative adversarial network</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11397-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11397-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-003">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>An information theoretic treatment of Yager’s probability distribution negation</h3>
 <p>作者未在官方目录完整给出</p>
@@ -616,7 +708,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11413-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11413-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-004">
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>An information theoretic treatment of Yager’s probability distribution negation</strong></p><p class="abstract-meta">期刊：Soft Computing · DOI：10.1007/s00500-026-11413-9 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">In the seminal paper (Yager 2015), Yager defined the negation of a probability distribution $$\textbf{p}=(p_1,\dots ,p_n)$$ p = ( p 1 , ⋯ , p n ) , as the distribution $$\overline{\textbf{p}} = (\overline{p}_1,\dots ,\overline{p}_n)$$ p ¯ = ( p ¯ 1 , ⋯ , p ¯ n ) , where $$\overline{p}_i = ({1-p_i})/({n-1}),$$ p ¯ i = ( 1 - p i ) / ( n - 1 ) , for $$ i=1, \ldots , n.$$ i = 1 , … , n . In this paper, we present a comprehensive information-theoretic analysis of Yager’s negation and its generalizations. Using tools from information theory and majorization theory, we unify, extend, and strengthen a number of previously known properties of Yager’s negation within a common framework. Overall, our results offer strong theoretical justification for Yager’s negation as the most natural and principled definition of probability distribution negation under various information theoretic criteria.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11413-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-004">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>Computing with speculations</h3>
 <p>作者未在官方目录完整给出</p>
@@ -628,7 +721,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11377-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11377-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-005">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Computing with speculations</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11377-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11377-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-005">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Regulatory strategy evaluation for digital drugs based on binaural beats marketed for psychoactive-like effects: a Fermatean fuzzy MCDM approach</h3>
 <p>作者未在官方目录完整给出</p>
@@ -640,7 +734,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11407-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11407-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-006">
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Regulatory strategy evaluation for digital drugs based on binaural beats marketed for psychoactive-like effects: a Fermatean fuzzy MCDM approach</strong></p><p class="abstract-meta">期刊：Soft Computing · DOI：10.1007/s00500-026-11407-7 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Binaural-beat audio is sometimes marketed online as “digital drugs” that can mimic psychoactive experiences. This creates a policy problem: regulators and platforms need practical strategies, but evidence is uncertain, and stakeholder judgments are often linguistic rather than numeric. This study proposes a Fermatean fuzzy multi-criteria decision-making (MCDM) framework to evaluate and rank ten regulatory strategies under uncertainty. We model expert assessments using Fermatean fuzzy numbers, compute objective criteria weights via an entropy scheme, and rank strategies using TOPSIS in the same fuzzy environment. The evaluation considers seven main criteria and 28 sub-criteria spanning public health, ethics, social impact, economics, and technical feasibility. In the reported case study, Public Health Impact receives the strongest global influence, and research-driven adaptive regulation achieves the best overall closeness to the ideal solution. Robustness is examined through sensitivity scenarios and comparative baselines against classical fuzzy and intuitionistic fuzzy settings, as well as alternative MCDM rankers. The framework supports transparent, auditable policy prioritization for families, platforms, and public agencies dealing with emerging digital audio harms.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11407-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-006">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>Permanent fuzzy graphs with application in decision making</h3>
 <p>作者未在官方目录完整给出</p>
@@ -652,7 +747,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11414-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11414-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-007">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Permanent fuzzy graphs with application in decision making</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11414-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11414-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-007">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>Polynomially accelerated explicit Gauss–Seidel method with bounded spread evolution for fully fuzzy linear systems</h3>
 <p>作者未在官方目录完整给出</p>
@@ -664,7 +760,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11412-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11412-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-008">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Polynomially accelerated explicit Gauss–Seidel method with bounded spread evolution for fully fuzzy linear systems</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11412-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11412-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-008">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>From Z∘Z^{\circ }-ideals to weak Z∘Z^{\circ }-ideals in MV-algebras</h3>
 <p>作者未在官方目录完整给出</p>
@@ -676,7 +773,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11416-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11416-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-009">
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>From Z∘Z^{\circ }-ideals to weak Z∘Z^{\circ }-ideals in MV-algebras</strong></p><p class="abstract-meta">期刊：Soft Computing · DOI：10.1007/s00500-026-11416-6 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">In this paper, the arranged element is introduced in MV -algebras, and its characteristics are studied. It is proved that an MV -algebra A is an MV -chain if and only if every nonzero element is an arranged element. In the continuation, weak $$Z^{\circ }$$ Z ∘ -ideals are defined and equivalent definitions of weak $$Z^{\circ }$$ Z ∘ -ideals are provided. Their relationships with existing notions such as $$Z^{\circ }$$ Z ∘ -ideals and $$Z^{\circ }_{J}$$ Z J ∘ -ideals are examined. This analysis makes it possible to establish new classifications of prime and minimal prime ideals. Additionally, properties of annihilators in MV -algebras are investigated.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11416-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-009">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>Ideal lacunary statistical soft convergence of order α\alpha in soft topological spaces</h3>
 <p>作者未在官方目录完整给出</p>
@@ -688,7 +786,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11419-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11419-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-010">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Ideal lacunary statistical soft convergence of order α\alpha in soft topological spaces</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11419-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11419-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-010">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>Characterization of inverse fuzzy mixed graphs in terms of cycles with application</h3>
 <p>作者未在官方目录完整给出</p>
@@ -700,7 +799,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11418-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11418-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-011">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Characterization of inverse fuzzy mixed graphs in terms of cycles with application</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11418-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11418-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-011">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Robust hybrid analytical three-way decision paradigms for conflict resolution in manufacturing systems: integrating fermatean fuzzy logic and risk assessment mechanisms</h3>
 <p>作者未在官方目录完整给出</p>
@@ -712,7 +812,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11406-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11406-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-012">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Robust hybrid analytical three-way decision paradigms for conflict resolution in manufacturing systems: integrating fermatean fuzzy logic and risk assessment mechanisms</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11406-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11406-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-012">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>An improved AdaBoost based on ensemble diversity and multi-population collaborative particle swarm optimization</h3>
 <p>作者未在官方目录完整给出</p>
@@ -724,7 +825,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10682-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10682-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-013">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An improved AdaBoost based on ensemble diversity and multi-population collaborative particle swarm optimization</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10682-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10682-0" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-013">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>Optimizing transportation and reducing carbon footprint: a multi-objective approach with carbon cap and offset policy in fixed charge scenarios under type-2 neutrosophic uncertainty</h3>
 <p>作者未在官方目录完整给出</p>
@@ -736,7 +838,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11398-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11398-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-014">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Optimizing transportation and reducing carbon footprint: a multi-objective approach with carbon cap and offset policy in fixed charge scenarios under type-2 neutrosophic uncertainty</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11398-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11398-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-014">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>Reframing optimization in Agri biotech using neuromorphic digital twins for fuzzy multi objective control of evolving bioprocesses</h3>
 <p>作者未在官方目录完整给出</p>
@@ -748,7 +851,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11405-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11405-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-015">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Reframing optimization in Agri biotech using neuromorphic digital twins for fuzzy multi objective control of evolving bioprocesses</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11405-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11405-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-015">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>A generalized three-way decision model using regret theory in Pythagorean fuzzy information systems</h3>
 <p>作者未在官方目录完整给出</p>
@@ -760,7 +864,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10831-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10831-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-016">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A generalized three-way decision model using regret theory in Pythagorean fuzzy information systems</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10831-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10831-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-016">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Bilevel optimization with graph convolutional network for electrical capacitance tomography</h3>
 <p>作者未在官方目录完整给出</p>
@@ -772,7 +877,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10719-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10719-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-017">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Bilevel optimization with graph convolutional network for electrical capacitance tomography</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10719-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10719-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-017">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>Integrative deep learning framework for Parkinson’s disease early detection using gait cycle data measured by wearable sensors: a CNN-GRU-GNN approach</h3>
 <p>作者未在官方目录完整给出</p>
@@ -784,7 +890,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10733-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10733-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-018">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Integrative deep learning framework for Parkinson’s disease early detection using gait cycle data measured by wearable sensors: a CNN-GRU-GNN approach</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10733-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10733-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-018">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>Experimental evaluation of machine learning models for goal-oriented customer service chatbot with pipeline architecture</h3>
 <p>作者未在官方目录完整给出</p>
@@ -796,7 +903,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11411-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11411-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-019">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Experimental evaluation of machine learning models for goal-oriented customer service chatbot with pipeline architecture</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11411-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11411-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-019">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>Broad learning surrogate-assisted multi-objective evolutionary rough fuzzy clustering algorithm for color image segmentation</h3>
 <p>作者未在官方目录完整给出</p>
@@ -808,7 +916,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-11019-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-11019-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-020">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Broad learning surrogate-assisted multi-objective evolutionary rough fuzzy clustering algorithm for color image segmentation</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-11019-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-11019-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-020">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>Assessment of drought impact on vegetation health using remote sensing on cloud</h3>
 <p>作者未在官方目录完整给出</p>
@@ -820,7 +929,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11383-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11383-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-021">
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Assessment of drought impact on vegetation health using remote sensing on cloud</strong></p><p class="abstract-meta">期刊：Soft Computing · DOI：10.1007/s00500-026-11383-y · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Droughts are natural phenomena that affect the health of crops, and owing to changes in climate, they are expected to increase in frequency. Drought has a significant impact on economic and social well-being. Recently, satellite data have emerged as one of the most powerful tools for studying the environment owing to the high availability of data. This paper presents the design and implementation of a system that uses satellite remote sensing data to analyze the impact of drought on agricultural regions. Our approach makes use of Sentinel Hub, a Cloud service that provides access to multi-spectral satellite imagery. In this study, we analyzed the correlation between vegetation health and soil moisture, which was detected using multi-spectral indices. A model was devised to study vegetation cover variations that occur over a period of time and to evaluate whether soil moisture played a role in those changes. The results of the model for a region of lai county in Romania matched the reports from local authorities. Such a system may be useful for farmers, businesses, and local authorities, who could utilize the information provided by the model to make informed decisions that can improve the overall health and performance of crops.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11383-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-021">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>A novel approach for house price index prediction using Multi-Source dataset and Bagging-XGBoost-PSO model</h3>
 <p>作者未在官方目录完整给出</p>
@@ -832,7 +942,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10797-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10797-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-022">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A novel approach for house price index prediction using Multi-Source dataset and Bagging-XGBoost-PSO model</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10797-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10797-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-022">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>Relief material supply chain network optimization via BWM-based MCDM modelling in fuzzy environment</h3>
 <p>作者未在官方目录完整给出</p>
@@ -844,7 +955,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10807-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10807-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-023">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Relief material supply chain network optimization via BWM-based MCDM modelling in fuzzy environment</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10807-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10807-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-023">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>Edge-deployable AI for a rare disease: automated detection of hereditary multiple exostoses in hip X-rays</h3>
 <p>作者未在官方目录完整给出</p>
@@ -856,7 +968,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11409-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11409-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-024">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Edge-deployable AI for a rare disease: automated detection of hereditary multiple exostoses in hip X-rays</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11409-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11409-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-024">
 <p class="kicker">Soft Computing · FORMAL_ASSIGNMENT</p>
 <h3>TransFeatWalk: bidirectional prototype-query adaptation with multi-head feature fusion for few-shot plant disease classification</h3>
 <p>作者未在官方目录完整给出</p>
@@ -868,7 +981,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11410-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11410-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-025">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>TransFeatWalk: bidirectional prototype-query adaptation with multi-head feature fusion for few-shot plant disease classification</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11410-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11410-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-081-2026v30i8-025">
 <p class="kicker">Soft Computing · FORMAL_ISSUE</p>
 <h3>IoV-Health: an intelligent integrated emergency health monitoring and alert generation system</h3>
 <p>作者未在官方目录完整给出</p>
@@ -880,7 +994,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-023-08251-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08251-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>IoV-Health: an intelligent integrated emergency health monitoring and alert generation system</strong></p><p class="abstract-meta">DOI：10.1007/s00500-023-08251-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-023-08251-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 </section>
 
 <section id="online-first">
@@ -897,7 +1012,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106217" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106217" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Near-optimal, path-level parallelization for sequential geostatistical simulation</strong></p><p class="abstract-meta">DOI：10.1016/j.cageo.2026.106217</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106217" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-021-002">
 <p class="kicker">Computers &amp; Geosciences · ONLINE_FIRST</p>
 <h3>Video compression for spatiotemporal Earth system data</h3>
@@ -910,7 +1026,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106227" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106227" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Video compression for spatiotemporal Earth system data</strong></p><p class="abstract-meta">DOI：10.1016/j.cageo.2026.106227</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106227" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-021-003">
 <p class="kicker">Computers &amp; Geosciences · ONLINE_FIRST</p>
 <h3>Prediction of total organic carbon content and free hydrocarbon content in shale oil reservoirs based on a Self-Consistent Adaptive Regression Network (SCARNet)</h3>
@@ -923,7 +1040,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106194" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106194" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Prediction of total organic carbon content and free hydrocarbon content in shale oil reservoirs based on a Self-Consistent Adaptive Regression Network (SCARNet)</strong></p><p class="abstract-meta">DOI：10.1016/j.cageo.2026.106194</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106194" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-021-004">
 <p class="kicker">Computers &amp; Geosciences · ONLINE_FIRST</p>
 <h3>Generative modeling of complex karst landforms using terrain feature-constrained CGANs</h3>
@@ -936,7 +1054,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106185" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106185" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Generative modeling of complex karst landforms using terrain feature-constrained CGANs</strong></p><p class="abstract-meta">DOI：10.1016/j.cageo.2026.106185</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106185" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-021-005">
 <p class="kicker">Computers &amp; Geosciences · ONLINE_FIRST</p>
 <h3>Time-series surface water enhancement using water occurrence in high-elevation areas</h3>
@@ -949,7 +1068,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106233" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106233" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Time-series surface water enhancement using water occurrence in high-elevation areas</strong></p><p class="abstract-meta">DOI：10.1016/j.cageo.2026.106233</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106233" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-021-006">
 <p class="kicker">Computers &amp; Geosciences · ONLINE_FIRST</p>
 <h3>A conditional latent diffusion framework for dynamic CT image denoising in multiphase flow and reactive transport studies of porous media</h3>
@@ -962,7 +1082,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106202" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106202" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A conditional latent diffusion framework for dynamic CT image denoising in multiphase flow and reactive transport studies of porous media</strong></p><p class="abstract-meta">DOI：10.1016/j.cageo.2026.106202</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106202" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-021-007">
 <p class="kicker">Computers &amp; Geosciences · ONLINE_FIRST</p>
 <h3>Resolution sensitivity of image-based shale pore statistics derived from multi-resolution FE-SEM data using deep learning</h3>
@@ -975,7 +1096,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106242" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106242" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Resolution sensitivity of image-based shale pore statistics derived from multi-resolution FE-SEM data using deep learning</strong></p><p class="abstract-meta">DOI：10.1016/j.cageo.2026.106242</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106242" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-021-008">
 <p class="kicker">Computers &amp; Geosciences · ONLINE_FIRST</p>
 <h3>DGSeg: Dual guidance with textual priors and structural awareness for open-vocabulary remote sensing segmentation</h3>
@@ -988,7 +1110,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106182" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106182" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>DGSeg: Dual guidance with textual priors and structural awareness for open-vocabulary remote sensing segmentation</strong></p><p class="abstract-meta">DOI：10.1016/j.cageo.2026.106182</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106182" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-021-009">
 <p class="kicker">Computers &amp; Geosciences · ONLINE_FIRST</p>
 <h3>SIFFNet: A semantic information feature fusion network for suppressing diverse DAS-VSP noise</h3>
@@ -1001,7 +1124,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106180" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106180" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>SIFFNet: A semantic information feature fusion network for suppressing diverse DAS-VSP noise</strong></p><p class="abstract-meta">DOI：10.1016/j.cageo.2026.106180</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106180" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-021-010">
 <p class="kicker">Computers &amp; Geosciences · ONLINE_FIRST</p>
 <h3>Decision-free aqueous speciation with precipitation: Migrating from iterative if-loops to closed-form tableau using Fischer–Burmeister and piecewise constraints</h3>
@@ -1014,7 +1138,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106193" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106193" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Decision-free aqueous speciation with precipitation: Migrating from iterative if-loops to closed-form tableau using Fischer–Burmeister and piecewise constraints</strong></p><p class="abstract-meta">DOI：10.1016/j.cageo.2026.106193</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106193" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-021-011">
 <p class="kicker">Computers &amp; Geosciences · ONLINE_FIRST</p>
 <h3>Computational framework for modeling, simulation, and optimization of geothermal energy production from naturally fractured reservoirs</h3>
@@ -1027,7 +1152,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106199" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106199" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Computational framework for modeling, simulation, and optimization of geothermal energy production from naturally fractured reservoirs</strong></p><p class="abstract-meta">DOI：10.1016/j.cageo.2026.106199</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106199" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-021-012">
 <p class="kicker">Computers &amp; Geosciences · ONLINE_FIRST</p>
 <h3>ContiNet: A neural network-based method for profile potential field downward continuation</h3>
@@ -1040,7 +1166,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106231" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106231" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>ContiNet: A neural network-based method for profile potential field downward continuation</strong></p><p class="abstract-meta">DOI：10.1016/j.cageo.2026.106231</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.cageo.2026.106231" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <p>Computers &amp; Geosciences 另有 64 条网络优先/在年发现已写入账本，页内从略。</p>
 <article class="paper" id="of-reg-051-001">
 <p class="kicker">Artificial Intelligence · ONLINE_FIRST</p>
@@ -1054,7 +1181,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104588" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104588" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Causal explanations of safety property violations in discrete event systems</strong></p><p class="abstract-meta">DOI：10.1016/j.artint.2026.104588</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104588" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-051-002">
 <p class="kicker">Artificial Intelligence · ONLINE_FIRST</p>
 <h3>Self-expression property theory guided multi-modal brain graph learning</h3>
@@ -1067,7 +1195,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104576" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104576" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Self-expression property theory guided multi-modal brain graph learning</strong></p><p class="abstract-meta">DOI：10.1016/j.artint.2026.104576</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104576" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-051-003">
 <p class="kicker">Artificial Intelligence · ONLINE_FIRST</p>
 <h3>The model counting competitions 2021–2023</h3>
@@ -1080,7 +1209,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104605" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104605" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The model counting competitions 2021–2023</strong></p><p class="abstract-meta">DOI：10.1016/j.artint.2026.104605</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104605" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-051-004">
 <p class="kicker">Artificial Intelligence · ONLINE_FIRST</p>
 <h3>Selection hyper-heuristics can automatically adjust the learning period to optimally solve pseudo-Boolean problems</h3>
@@ -1093,7 +1223,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104560" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104560" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Selection hyper-heuristics can automatically adjust the learning period to optimally solve pseudo-Boolean problems</strong></p><p class="abstract-meta">DOI：10.1016/j.artint.2026.104560</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104560" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-051-005">
 <p class="kicker">Artificial Intelligence · ONLINE_FIRST</p>
 <h3>Decision-theoretic planning and cognitive modeling for active cyber deception</h3>
@@ -1106,7 +1237,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104540" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104540" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Decision-theoretic planning and cognitive modeling for active cyber deception</strong></p><p class="abstract-meta">DOI：10.1016/j.artint.2026.104540</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104540" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-051-006">
 <p class="kicker">Artificial Intelligence · ONLINE_FIRST</p>
 <h3>Policy optimization for CMDPs with bandit feedback: Best-of-both-worlds and beyond</h3>
@@ -1119,7 +1251,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104589" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104589" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Policy optimization for CMDPs with bandit feedback: Best-of-both-worlds and beyond</strong></p><p class="abstract-meta">DOI：10.1016/j.artint.2026.104589</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104589" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-051-007">
 <p class="kicker">Artificial Intelligence · ONLINE_FIRST</p>
 <h3>Fast concept-based counterfactual explanations for image classification</h3>
@@ -1132,7 +1265,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104599" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104599" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Fast concept-based counterfactual explanations for image classification</strong></p><p class="abstract-meta">DOI：10.1016/j.artint.2026.104599</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104599" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-051-008">
 <p class="kicker">Artificial Intelligence · ONLINE_FIRST</p>
 <h3>Exploring the influence of missing data imputation in group fairness metrics</h3>
@@ -1145,7 +1279,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104559" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104559" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Exploring the influence of missing data imputation in group fairness metrics</strong></p><p class="abstract-meta">DOI：10.1016/j.artint.2026.104559</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104559" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-051-009">
 <p class="kicker">Artificial Intelligence · ONLINE_FIRST</p>
 <h3>Editorial Board</h3>
@@ -1158,7 +1293,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/s0004-3702(26)00138-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/s0004-3702(26)00138-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Editorial Board</strong></p><p class="abstract-meta">DOI：10.1016/s0004-3702(26)00138-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/s0004-3702(26)00138-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-051-010">
 <p class="kicker">Artificial Intelligence · ONLINE_FIRST</p>
 <h3>Editorial Board</h3>
@@ -1171,7 +1307,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/s0004-3702(26)00093-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/s0004-3702(26)00093-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Editorial Board</strong></p><p class="abstract-meta">DOI：10.1016/s0004-3702(26)00093-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/s0004-3702(26)00093-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-051-011">
 <p class="kicker">Artificial Intelligence · ONLINE_FIRST</p>
 <h3>Innovative constraint models for mining frequent and rare association rules using multi-objective optimization</h3>
@@ -1184,7 +1321,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104561" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104561" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Innovative constraint models for mining frequent and rare association rules using multi-objective optimization</strong></p><p class="abstract-meta">DOI：10.1016/j.artint.2026.104561</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104561" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-051-012">
 <p class="kicker">Artificial Intelligence · ONLINE_FIRST</p>
 <h3>Learning gradient-based mixup with extrapolation toward flatter minima for domain generalization</h3>
@@ -1197,7 +1335,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104544" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104544" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Learning gradient-based mixup with extrapolation toward flatter minima for domain generalization</strong></p><p class="abstract-meta">DOI：10.1016/j.artint.2026.104544</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.artint.2026.104544" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <p>Artificial Intelligence 另有 50 条网络优先/在年发现已写入账本，页内从略。</p>
 <article class="paper" id="of-reg-081-001">
 <p class="kicker">Soft Computing · ONLINE_FIRST</p>
@@ -1211,7 +1350,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11424-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11424-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Enhancing ALS diagnosis using EMG time series classification through integrating MiniRocket, InceptionTime, and LightGBM</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11424-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11424-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-081-002">
 <p class="kicker">Soft Computing · ONLINE_FIRST</p>
 <h3>A novel adaptive nonlinear controller based on Runge–Kutta support vector machines: a data-driven approach</h3>
@@ -1224,7 +1364,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11427-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11427-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A novel adaptive nonlinear controller based on Runge–Kutta support vector machines: a data-driven approach</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11427-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11427-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-081-003">
 <p class="kicker">Soft Computing · ONLINE_FIRST</p>
 <h3>IoT-driven early detection of plant diseases in smart farming systems based on large-scale data</h3>
@@ -1237,7 +1378,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11425-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11425-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>IoT-driven early detection of plant diseases in smart farming systems based on large-scale data</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11425-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11425-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-081-004">
 <p class="kicker">Soft Computing · ONLINE_FIRST</p>
 <h3>Automated taxonomic identification of benthic macroinvertebrates using machine learning techniques</h3>
@@ -1250,7 +1392,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11423-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11423-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Automated taxonomic identification of benthic macroinvertebrates using machine learning techniques</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11423-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11423-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-081-005">
 <p class="kicker">Soft Computing · ONLINE_FIRST</p>
 <h3>A highly accurate numerical method for fractional electrohydrodynamic flow equation</h3>
@@ -1263,7 +1406,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11433-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11433-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A highly accurate numerical method for fractional electrohydrodynamic flow equation</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11433-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11433-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-081-006">
 <p class="kicker">Soft Computing · ONLINE_FIRST</p>
 <h3>Optimal 3D deployment and trajectory selection of UAVs for maximum network utility and disaster management</h3>
@@ -1276,7 +1420,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10792-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10792-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Optimal 3D deployment and trajectory selection of UAVs for maximum network utility and disaster management</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10792-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10792-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-081-007">
 <p class="kicker">Soft Computing · ONLINE_FIRST</p>
 <h3>LBR-TBLR: an innovative local binary pattern approach for breast cancer diagnosis</h3>
@@ -1289,7 +1434,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10786-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10786-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>LBR-TBLR: an innovative local binary pattern approach for breast cancer diagnosis</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10786-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10786-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-081-008">
 <p class="kicker">Soft Computing · ONLINE_FIRST</p>
 <h3>A numerical method based on operational matrix to solve the fuzzy fractional Volterra–Fredholm integro-differential equations</h3>
@@ -1302,7 +1448,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11421-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11421-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A numerical method based on operational matrix to solve the fuzzy fractional Volterra–Fredholm integro-differential equations</strong></p><p class="abstract-meta">DOI：10.1007/s00500-026-11421-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11421-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-081-009">
 <p class="kicker">Soft Computing · ONLINE_FIRST</p>
 <h3>Advanced intrusion detection in IoT-enabled SDWSNs using artificial intelligence and feature optimization techniques</h3>
@@ -1315,7 +1462,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11432-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11432-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Advanced intrusion detection in IoT-enabled SDWSNs using artificial intelligence and feature optimization techniques</strong></p><p class="abstract-meta">期刊：Soft Computing · DOI：10.1007/s00500-026-11432-6 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The widespread deployment of the Internet of Things (IoT) and software-defined wireless sensor networks (SDWSNs) gave rise to new opportunities for smart environments but has also made these systems highly vulnerable to diverse cyberattacks. Conventional intrusion detection systems (IDSs) in IoT-enabled SDWSNs face major challenges such as high-dimensional data, inadequate preprocessing, feature extraction complexities, intricate feature selection, inefficient intrusion recognition, high computational cost, and real-time classification problems, which limit their performance in resource-constrained IoT networks. To address these limitations and challenges, this paper proposes a hybrid IDS framework that integrates three key components, such as the novel exponential grey wolf-optimized grid search algorithm (EGWOGSA), which is a stochastic optimization algorithm, while feature selection is achieved using the novel symmetric gradient Boruta for enhanced feature selection algorithm (SGBFSA), and a gated bidirectional recurrent convolutional neural network (GBR-CNN) algorithm for intrusion recognition. Extensive simulations, using the network simulator 3 (NS-3), were conducted with the NSL-KDD dataset to evaluate the framework for IoT-enabled SDWSNs. Results demonstrate that the proposed method outperforms other state-of-the-art models across most metrics, achieving 96.7% training accuracy and 91.6% testing accuracy, with 98.03% precision, 95.9% recall, and a 96.9% F1-score, and demonstrating low energy consumption and latency, high throughput, and a reliable packet delivery ratio (PDR), leading to an extended network lifetime. The study demonstrates that the proposed framework is suitable for real-time deployment. This research contributes to the advancement of security in IoT-enabled SDWSNs by proposing an efficient, accurate, and scalable IDS framework for securing them against evolving threats through advanced feature optimization and artificial intelligence techniques.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11432-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-081-010">
 <p class="kicker">Soft Computing · ONLINE_FIRST</p>
 <h3>Hierarchical multi-strategy firefly algorithm based on Hammersley initialization</h3>
@@ -1328,7 +1476,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10837-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10837-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Hierarchical multi-strategy firefly algorithm based on Hammersley initialization</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10837-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10837-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-081-011">
 <p class="kicker">Soft Computing · ONLINE_FIRST</p>
 <h3>A Dual-Layer deep learning approach with PSO-Based feature selection for filtering spam and phishing emails</h3>
@@ -1341,7 +1490,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-025-10840-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10840-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Dual-Layer deep learning approach with PSO-Based feature selection for filtering spam and phishing emails</strong></p><p class="abstract-meta">DOI：10.1007/s00500-025-10840-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-025-10840-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-081-012">
 <p class="kicker">Soft Computing · ONLINE_FIRST</p>
 <h3>A new perspective on centroid algorithms for unsupervised discrete clustering in Riemannian manifolds: an approach via optimization</h3>
@@ -1354,7 +1504,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00500-026-11422-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-21 12:20 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11422-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-21 12:20 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A new perspective on centroid algorithms for unsupervised discrete clustering in Riemannian manifolds: an approach via optimization</strong></p><p class="abstract-meta">期刊：Soft Computing · DOI：10.1007/s00500-026-11422-8 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Clustering is an unsupervised learning technique used to discover hidden structures in data. By identifying patterns and similarities among objects, this methodology enables the organization of datasets into homogeneous groups. This work presents a new perspective on a specific class of partition-based algorithms for unsupervised discrete clustering in complete finite-dimensional Riemannian manifolds by introducing statistical shape analyses to classify clusters and improve label selection. To achieve this aim, we extend the statistical concepts of skewness and kurtosis to Riemannian settings, based on vector operations in the tangent plane at each point of the manifold. Assumptions regarding the injectivity radius and the boundedness of the sectional curvature are initially adopted to enable local convex analysis. Nevertheless, the well-posedness of Riemannian weighted centroids is ensured by analyzing the coercivity and quasiconvexity properties of the distance function’s powers. In addition, we demonstrate that well-posedness and continuity extend to any positive power of the distance function, rather than being limited to powers greater than or equal to 1. Computational experiments involving diffusion tensor imaging and hyperspectral image segmentation are performed. We also present a statistical analysis to demonstrate the practical applicability and computational performance of our technique compared with leading clustering approaches. Ultimately, our methodology is applicable to any field where data modeling resides in a complete finite-dimensional Riemannian manifold.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00500-026-11422-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <p>Soft Computing 另有 38 条网络优先/在年发现已写入账本，页内从略。</p>
 </section>
 

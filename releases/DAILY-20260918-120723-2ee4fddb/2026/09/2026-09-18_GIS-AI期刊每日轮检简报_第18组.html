@@ -11,6 +11,53 @@ body, main, header, footer { max-width: 100%; overflow-x: hidden; }
 .table-wrap { overflow-x: auto; max-width: 100%; }
 table { width: 100%; }
 .evidence a { max-width: 100%; overflow-wrap: anywhere; }
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}
 </style>
 </head>
 <body id="top">
@@ -76,7 +123,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2713552" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2713552" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-002">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Bridging traditional cartography and emerging technologies: highlights of AsiaCarto 2024</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2713552</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2713552" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-002">
 <p class="kicker">Cartography and Geographic Information Science · FORMAL_ISSUE</p>
 <h3>MapLayNet: map layout representation learning using weakly supervised structure-aware graph neural networks</h3>
 <p>Jian Yang; Cheng Chen; Fenli Jia; Xiao Xie; Li Fang; Guangxia Wang; Liqiu Meng</p>
@@ -88,7 +136,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2025.2533316" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2533316" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-003">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>MapLayNet: map layout representation learning using weakly supervised structure-aware graph neural networks</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2533316</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2533316" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-003">
 <p class="kicker">Cartography and Geographic Information Science · FORMAL_ISSUE</p>
 <h3>Understanding trust in climate change communication: the role of user characteristics and decision time</h3>
 <p>Nianhua Liu; Yu Feng; Shengkai Wang; Mengyi Wei; Dongsheng Chen; Liqiu Meng</p>
@@ -100,7 +149,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2025.2604671" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2604671" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-004">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Understanding trust in climate change communication: the role of user characteristics and decision time</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2604671</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2604671" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-004">
 <p class="kicker">Cartography and Geographic Information Science · FORMAL_ISSUE</p>
 <h3>Topology-preserving line densification for creating contiguous cartograms</h3>
 <p>Nihal Z. Miaji; Adi Singhania; Matthias E. Goh; Callista Le; Atima Tharatipyakul; Michael T. Gastner</p>
@@ -112,7 +162,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2625329" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2625329" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-005">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Topology-preserving line densification for creating contiguous cartograms</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2625329</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2625329" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-005">
 <p class="kicker">Cartography and Geographic Information Science · FORMAL_ISSUE</p>
 <h3>Mapping the past: dynamic local georeferencing for historical cartography</h3>
 <p>Min Lu; Quang Sang Tran; Iori Sasaki; Koki Tamura; Masatoshi Arikawa</p>
@@ -124,7 +175,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2699662" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2699662" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-006">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mapping the past: dynamic local georeferencing for historical cartography</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2699662</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2699662" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-006">
 <p class="kicker">Cartography and Geographic Information Science · FORMAL_ISSUE</p>
 <h3>Identification of generic name-derived semantic relationships of geographical entities</h3>
 <p>Liu Hanyou; Mao Xi</p>
@@ -136,7 +188,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2025.2487489" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2487489" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-007">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Identification of generic name-derived semantic relationships of geographical entities</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2487489</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2487489" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-007">
 <p class="kicker">Cartography and Geographic Information Science · FORMAL_ISSUE</p>
 <h3>Where is Huaqiangbei? Identifying the evolutional vague region of urban business district using toponym co-occurrence on web pages with multiple time series</h3>
 <p>Yunfei Ma; Yuan Zhang; Fahui Wang; Jie He; Yongxi Gong; Yu Liu</p>
@@ -148,7 +201,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2025.2541428" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2541428" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-008">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Where is Huaqiangbei? Identifying the evolutional vague region of urban business district using toponym co-occurrence on web pages with multiple time series</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2541428</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2541428" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-008">
 <p class="kicker">Cartography and Geographic Information Science · FORMAL_ISSUE</p>
 <h3>Narrative transportation and emotional responses to storytelling maps</h3>
 <p>Michala A. Garrison; Schyler A. Reis; Shiyu Zhang; Carolyn S. Fish</p>
@@ -160,7 +214,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2025.2526847" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2526847" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-009">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Narrative transportation and emotional responses to storytelling maps</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2526847</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2526847" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-009">
 <p class="kicker">Cartography and Geographic Information Science · FORMAL_ISSUE</p>
 <h3>Do personal narratives make thematic maps more persuasive? Integrating concrete examples into maps of the social determinants of health</h3>
 <p>Rob Davidson; James Cheshire</p>
@@ -172,7 +227,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2025.2554065" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2554065" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-010">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Do personal narratives make thematic maps more persuasive? Integrating concrete examples into maps of the social determinants of health</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2554065</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2554065" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-010">
 <p class="kicker">Cartography and Geographic Information Science · FORMAL_ISSUE</p>
 <h3>Automatic segmentation of skeleton drainage pattern using local basin graph based on graph neural network</h3>
 <p>Bo Qiang</p>
@@ -184,7 +240,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2714985" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2714985" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-011">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Automatic segmentation of skeleton drainage pattern using local basin graph based on graph neural network</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2714985</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2714985" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-018-2026v53i5-011">
 <p class="kicker">Cartography and Geographic Information Science · FORMAL_ISSUE</p>
 <h3>One mobile map does not fit everyone: a research agenda for responsibly adapting mobile maps for all</h3>
 <p>Tumasch Reichenbacher</p>
@@ -196,7 +253,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2710916" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2710916" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-048-2026-v31-i9"><h3>中国图象图形学报 · 2026-V31-I9</h3><p>官网 2026年第9期目录两遍 22 DOI 指纹稳定。I7/I8 已为 ALREADY_BRIEFED 不重印。gate-issue=<code>NEW_ISSUE</code>。22 篇均为 NEW_ARTICLE。</p><p><span class="evidence"><a href="https://www.cjig.cn/zh/issue/2026/9/" rel="noopener noreferrer">官方期次目录</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>22</strong> 篇。</p></article><article class="paper" id="formal-reg-048-2026v31i9-001">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>One mobile map does not fit everyone: a research agenda for responsibly adapting mobile maps for all</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2710916</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2710916" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-048-2026-v31-i9"><h3>中国图象图形学报 · 2026-V31-I9</h3><p>官网 2026年第9期目录两遍 22 DOI 指纹稳定。I7/I8 已为 ALREADY_BRIEFED 不重印。gate-issue=<code>NEW_ISSUE</code>。22 篇均为 NEW_ARTICLE。</p><p><span class="evidence"><a href="https://www.cjig.cn/zh/issue/2026/9/" rel="noopener noreferrer">官方期次目录</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>22</strong> 篇。</p></article><article class="paper" id="formal-reg-048-2026v31i9-001">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>《中国图象图形学报》大模型在航空领域的智慧赋能专栏简介</h3>
 <p>张艳宁; 张磊; 董晶; 王明波; 闫庆森; 丁晨; 曹聪琦; 赵席彬</p>
@@ -208,7 +266,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.2600009/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.2600009" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-002">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>《中国图象图形学报》大模型在航空领域的智慧赋能专栏简介</strong></p><p class="abstract-meta">DOI：10.11834/jig.2600009</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.2600009" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-002">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>大模型赋能下的航空图像复原技术研究进展</h3>
 <p>郑萌萌; 郭宸瑞; 张磊; 魏巍</p>
@@ -220,7 +279,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260208/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260208" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-003">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>大模型赋能下的航空图像复原技术研究进展</strong></p><p class="abstract-meta">DOI：10.11834/jig.260208</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260208" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-003">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>航空光谱图像智能处理：方法、应用与挑战</h3>
 <p>赵兴兵; 郭宸瑞; 李羽珊; 张磊; 魏巍</p>
@@ -232,7 +292,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260210/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260210" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-004">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>航空光谱图像智能处理：方法、应用与挑战</strong></p><p class="abstract-meta">DOI：10.11834/jig.260210</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260210" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-004">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>航空遥感场景跨域少样本目标检测进展研究</h3>
 <p>陈布衣; 郭宸瑞; 单淳; 张磊; 魏巍</p>
@@ -244,7 +305,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260206/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260206" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-005">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>航空遥感场景跨域少样本目标检测进展研究</strong></p><p class="abstract-meta">DOI：10.11834/jig.260206</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260206" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-005">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>多模态信息融合研究进展</h3>
 <p>胡玉梅; 王晓华; 邓豹; 赵洋洋; 赵艺阳</p>
@@ -256,7 +318,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260236/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260236" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-006">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>多模态信息融合研究进展</strong></p><p class="abstract-meta">DOI：10.11834/jig.260236</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260236" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-006">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>开放词汇语义分割研究进展</h3>
 <p>刘明怡; 谢国森; 舒祥波; 张磊</p>
@@ -268,7 +331,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260205/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260205" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-007">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>开放词汇语义分割研究进展</strong></p><p class="abstract-meta">DOI：10.11834/jig.260205</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260205" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-007">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>面向无人机的多模态视觉理解大模型研究进展</h3>
 <p>余雅婷; 曹聪琦; 王昭颖; 张艳宁</p>
@@ -280,7 +344,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260215/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260215" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-008">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>面向无人机的多模态视觉理解大模型研究进展</strong></p><p class="abstract-meta">DOI：10.11834/jig.260215</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260215" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-008">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>具身智能视角下无人机视觉语言导航研究进展</h3>
 <p>郑周一; 郭宸瑞; 单淳; 张磊; 魏巍</p>
@@ -292,7 +357,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260203/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260203" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-009">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>具身智能视角下无人机视觉语言导航研究进展</strong></p><p class="abstract-meta">DOI：10.11834/jig.260203</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260203" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-009">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>人工智能辅助的单机长飞行驾驶技术综述</h3>
 <p>袁林; 李阳; 苗延飞; 李枭扬; 曹聪琦</p>
@@ -304,7 +370,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260216/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260216" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-010">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>人工智能辅助的单机长飞行驾驶技术综述</strong></p><p class="abstract-meta">DOI：10.11834/jig.260216</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260216" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-010">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>大模型赋能航空遥感智能解译的进展与思考</h3>
 <p>郎晋伟; 李娅星; 刘帅; 康晓东; 程俊强</p>
@@ -316,7 +383,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260217/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260217" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-011">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>大模型赋能航空遥感智能解译的进展与思考</strong></p><p class="abstract-meta">DOI：10.11834/jig.260217</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260217" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-011">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>时间差引导的高光谱图像变化检测网络</h3>
 <p>丁晨; 张景博; 郝小锋; 郑思睿; 闫松</p>
@@ -328,7 +396,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260214/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260214" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-012">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>时间差引导的高光谱图像变化检测网络</strong></p><p class="abstract-meta">DOI：10.11834/jig.260214</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260214" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-012">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>大模型语义增强的多时相多模态遥感影像匹配方法</h3>
 <p>张旺; 陈涛; 裴根生; 李宝晨; 韦明韬; 姚亚洲</p>
@@ -340,7 +409,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260202/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260202" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-013">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>大模型语义增强的多时相多模态遥感影像匹配方法</strong></p><p class="abstract-meta">DOI：10.11834/jig.260202</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260202" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-013">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>双时相特征增强引导的多关系差异耦合遥感变化字幕生成</h3>
 <p>于洁潇; 付雨杰; 刘婧</p>
@@ -352,7 +422,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260171/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260171" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-014">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>双时相特征增强引导的多关系差异耦合遥感变化字幕生成</strong></p><p class="abstract-meta">DOI：10.11834/jig.260171</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260171" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-014">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>模态可靠性建模的航空遥感可见光—红外目标检测</h3>
 <p>余东; 张淳杰; 张晓宇; 郑晓龙</p>
@@ -364,7 +435,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.260197/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.260197" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-015">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>模态可靠性建模的航空遥感可见光—红外目标检测</strong></p><p class="abstract-meta">DOI：10.11834/jig.260197</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.260197" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-015">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>红外视频卫星空中动目标检测数据集及其评估</h3>
 <p>李若敬; 李朝旭; 陈诺; 郭高伟; 窦泽超; 龙政兴; 罗伊杭; 曾瑶源; 盛卫东; 李博扬; 李志军; 李淼; 安玮; 龙云利; 李海鑫; 余志强; 尹小宇; 查旭阳; 曾柏文; 王吴凡; 张波; 路悦; 褚东皓; 李子怡; 黄康薇; 杨博睿; 邢颖慧; 张世周</p>
@@ -376,7 +448,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.250536/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.250536" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-016">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>红外视频卫星空中动目标检测数据集及其评估</strong></p><p class="abstract-meta">DOI：10.11834/jig.250536</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.250536" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-016">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>光照引导反射分量估计的零监督弱光图像增强</h3>
 <p>包晓安; 陈奕江; 张娜; 胡天缤; 许铭洋; 涂小妹</p>
@@ -388,7 +461,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.250486/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.250486" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-017">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>光照引导反射分量估计的零监督弱光图像增强</strong></p><p class="abstract-meta">DOI：10.11834/jig.250486</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.250486" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-017">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>频域特征优化与截断采样的条件扩散模型弱光图像增强方法</h3>
 <p>李文改; 桂柯; 肖照林; 金海燕; 苏浩楠</p>
@@ -400,7 +474,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.250342/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.250342" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-018">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>频域特征优化与截断采样的条件扩散模型弱光图像增强方法</strong></p><p class="abstract-meta">DOI：10.11834/jig.250342</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.250342" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-018">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>Transformer图表示学习驱动的自适应人脸欺诈检测模型</h3>
 <p>蔡体健; 黄远轩; 王振宇; 胡成; 易晟权; 谢昕</p>
@@ -412,7 +487,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.250373/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.250373" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-019">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Transformer图表示学习驱动的自适应人脸欺诈检测模型</strong></p><p class="abstract-meta">DOI：10.11834/jig.250373</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.250373" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-019">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>记忆机制显式引导的说话人自适应唇语识别</h3>
 <p>骆嵩涛; 王天月; 杨双; 倪群平; 山世光</p>
@@ -424,7 +500,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.250392/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.250392" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-020">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>记忆机制显式引导的说话人自适应唇语识别</strong></p><p class="abstract-meta">DOI：10.11834/jig.250392</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.250392" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-020">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>边缘簇驱动的高斯泼溅稀疏视图重建细节增强</h3>
 <p>马栋林; 惠旭同; 赵宏</p>
@@ -436,7 +513,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.250538/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.250538" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-021">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>边缘簇驱动的高斯泼溅稀疏视图重建细节增强</strong></p><p class="abstract-meta">DOI：10.11834/jig.250538</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.250538" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-021">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>融合频域自注意力的卫星云图预测网络CloudPredUNet</h3>
 <p>贺琪; 臧正源; 郝增周</p>
@@ -448,7 +526,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.250559/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.250559" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-022">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>融合频域自注意力的卫星云图预测网络CloudPredUNet</strong></p><p class="abstract-meta">DOI：10.11834/jig.250559</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.250559" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-048-2026v31i9-022">
 <p class="kicker">中国图象图形学报 · FORMAL_ISSUE</p>
 <h3>联合角度连续表示与感知平衡的遥感图像定向目标检测</h3>
 <p>王朝阳; 葛芸; 吴梦奇; 陈金梁</p>
@@ -460,7 +539,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="http://www.cjig.cn/zh/article/doi/10.11834/jig.250447/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.11834/jig.250447" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>联合角度连续表示与感知平衡的遥感图像定向目标检测</strong></p><p class="abstract-meta">DOI：10.11834/jig.250447</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.11834/jig.250447" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 </section>
 
 <section id="online-first">
@@ -477,7 +557,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2701863" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2701863" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Exploring differences of spatial visual attention and spatial confidence during spatial orientation in an unfamiliar environment between poor and good sense of direction</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2701863</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2701863" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-002">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>National-scale commuting geography: mapping and analyzing origin-destination matrices</h3>
@@ -490,7 +571,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2682245" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2682245" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>National-scale commuting geography: mapping and analyzing origin-destination matrices</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2682245</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2682245" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-003">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Ring maps: simplified, egocentric, and topology-preserving views for augmented reality navigation</h3>
@@ -503,7 +585,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2679159" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2679159" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Ring maps: simplified, egocentric, and topology-preserving views for augmented reality navigation</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2679159</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2679159" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-004">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>A side selective line simplification algorithm for nautical chart generalization</h3>
@@ -516,7 +599,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2676580" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2676580" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A side selective line simplification algorithm for nautical chart generalization</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2676580</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2676580" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-005">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Reframing geographic masking: exploiting execution-level variability for improved privacy and analytical utility</h3>
@@ -529,7 +613,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2678356" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2678356" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Reframing geographic masking: exploiting execution-level variability for improved privacy and analytical utility</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2678356</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2678356" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-006">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Extraction and change detection analysis of occupied anchor position in ports based on AIS data</h3>
@@ -542,7 +627,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2666416" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2666416" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Extraction and change detection analysis of occupied anchor position in ports based on AIS data</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2666416</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2666416" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-007">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Cartographically representing emotions: a review of visualization approaches to emotion mapping in urban design and planning</h3>
@@ -555,7 +641,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2653849" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2653849" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Cartographically representing emotions: a review of visualization approaches to emotion mapping in urban design and planning</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2653849</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2653849" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-008">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Off-road trafficability using multicriteria decision analysis: development and validation of vehicle trafficability maps</h3>
@@ -568,7 +655,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2653182" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2653182" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Off-road trafficability using multicriteria decision analysis: development and validation of vehicle trafficability maps</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2653182</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2653182" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-009">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Creation of a map color style design model for emotional expression</h3>
@@ -581,7 +669,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2652401" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2652401" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Creation of a map color style design model for emotional expression</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2652401</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2652401" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-010">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Contextualizing cartography in a changing climate</h3>
@@ -594,7 +683,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2657866" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2657866" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Contextualizing cartography in a changing climate</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2657866</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2657866" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-011">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Uncertainty-aware visualization and integration for maritime route safety assessment</h3>
@@ -607,7 +697,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2653841" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2653841" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Uncertainty-aware visualization and integration for maritime route safety assessment</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2653841</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2653841" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-012">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>3D bivariate visualizations in immersive virtual reality (IVR): the impact of map literacy and visualization method on user performance</h3>
@@ -620,7 +711,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2652392" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2652392" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>3D bivariate visualizations in immersive virtual reality (IVR): the impact of map literacy and visualization method on user performance</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2652392</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2652392" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-013">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Staring at the pointer - gaze behavior when people zoom and pan in maps</h3>
@@ -633,7 +725,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2650276" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2650276" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Staring at the pointer - gaze behavior when people zoom and pan in maps</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2650276</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2650276" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-014">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Culvert integration in drainage network mapping without drainage enforcement</h3>
@@ -646,7 +739,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2633277" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2633277" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Culvert integration in drainage network mapping without drainage enforcement</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2633277</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2633277" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-015">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>A tri-objective optimization model for map color schemes considering user preference, visual quality, and energy efficiency</h3>
@@ -659,7 +753,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2632862" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2632862" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A tri-objective optimization model for map color schemes considering user preference, visual quality, and energy efficiency</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2632862</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2632862" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-016">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Drug and Substance Abuse Point of Interest (POI) conflation and spatial attribute enrichment framework</h3>
@@ -672,7 +767,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2632858" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2632858" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Drug and Substance Abuse Point of Interest (POI) conflation and spatial attribute enrichment framework</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2632858</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2632858" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-017">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>A web-based spatial decision support system of COVID-19 wastewater surveillance on a university campus</h3>
@@ -685,7 +781,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2629334" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2629334" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A web-based spatial decision support system of COVID-19 wastewater surveillance on a university campus</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2629334</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2629334" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-018">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>GSOMAR: a geospatial SLAM framework for real-time outdoor mobile augmented reality scene modeling and semantic interaction</h3>
@@ -698,7 +795,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2629336" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2629336" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>GSOMAR: a geospatial SLAM framework for real-time outdoor mobile augmented reality scene modeling and semantic interaction</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2629336</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2629336" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-019">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Fine-tuning Small Language Models (SLMs) for autonomous web-based geographical information systems (AWebGIS)</h3>
@@ -711,7 +809,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2625987" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2625987" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Fine-tuning Small Language Models (SLMs) for autonomous web-based geographical information systems (AWebGIS)</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2625987</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2625987" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-020">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Age-related deficits in reference frame switching of navigation ability</h3>
@@ -724,7 +823,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2625330" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2625330" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Age-related deficits in reference frame switching of navigation ability</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2625330</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2625330" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-021">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>An improved multi-sources toponymic matching method by integrated encoding of textual and spatial features</h3>
@@ -737,7 +837,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2624404" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2624404" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An improved multi-sources toponymic matching method by integrated encoding of textual and spatial features</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2624404</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2624404" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-022">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Evaluating the potential of profiling users from visual behavior data in pedestrian navigation</h3>
@@ -750,7 +851,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2619028" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2619028" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Evaluating the potential of profiling users from visual behavior data in pedestrian navigation</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2619028</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2619028" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-023">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Mid-Air Gesture interaction for mobile map-making: design and comparative evaluation with Touchscreen interaction</h3>
@@ -763,7 +865,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2619027" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2619027" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mid-Air Gesture interaction for mobile map-making: design and comparative evaluation with Touchscreen interaction</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2619027</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2619027" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-024">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Continuous multi-scale transformation of building footprints</h3>
@@ -776,7 +879,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2618208" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2618208" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Continuous multi-scale transformation of building footprints</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2618208</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2618208" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-025">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Assessing the internal quality of PPGIS data: development and testing of a quality assessment framework</h3>
@@ -789,7 +893,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2616453" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2616453" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Assessing the internal quality of PPGIS data: development and testing of a quality assessment framework</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2026.2616453</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2616453" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-026">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Contour matching for multisource terrain data based on morphological classification and unsupervised learning</h3>
@@ -802,7 +907,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2589374" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2589374" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Contour matching for multisource terrain data based on morphological classification and unsupervised learning</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2589374</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2589374" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-027">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>A framework for collaborative identification of geographical information for map-based dashboards to support pandemic response policy-making</h3>
@@ -815,7 +921,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2600480" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2600480" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A framework for collaborative identification of geographical information for map-based dashboards to support pandemic response policy-making</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2600480</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2600480" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-028">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Thick mapping through co-creation and geospatial technologies in design studios</h3>
@@ -828,7 +935,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2603075" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2603075" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Thick mapping through co-creation and geospatial technologies in design studios</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2603075</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2603075" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-029">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>MapGenerator: a framework for learning a diffusion model for text promptable map generation</h3>
@@ -841,7 +949,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2587273" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2587273" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>MapGenerator: a framework for learning a diffusion model for text promptable map generation</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2587273</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2587273" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-030">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Digital literary mapping: exploring user needs and pedagogical potentials in literary geographies with the ImagiNation map tool</h3>
@@ -854,7 +963,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2588459" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2588459" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Digital literary mapping: exploring user needs and pedagogical potentials in literary geographies with the ImagiNation map tool</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2588459</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2588459" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-031">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>An AI-guided framework for automated map point symbol generation through template rendering</h3>
@@ -867,7 +977,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2586586" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2586586" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An AI-guided framework for automated map point symbol generation through template rendering</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2586586</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2586586" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-032">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Parental mobility during the perinatal period: a spatiotemporal analysis of geotagged social media data</h3>
@@ -880,7 +991,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2587841" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2587841" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Parental mobility during the perinatal period: a spatiotemporal analysis of geotagged social media data</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2587841</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2587841" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-033">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Integrating storytelling and guided interactions to reduce cognitive load in web map animations</h3>
@@ -893,7 +1005,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2586592" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2586592" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Integrating storytelling and guided interactions to reduce cognitive load in web map animations</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2586592</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2586592" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-034">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Transitions in dynamic point labeling</h3>
@@ -906,7 +1019,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2555426" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2555426" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Transitions in dynamic point labeling</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2555426</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2555426" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-035">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Temporal navigation for festival maps on mobile devices</h3>
@@ -919,7 +1033,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2567563" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2567563" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Temporal navigation for festival maps on mobile devices</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2567563</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2567563" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-036">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Mapping with a sense of place: a crowdsourced image-based color generation approach</h3>
@@ -932,7 +1047,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2580432" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2580432" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mapping with a sense of place: a crowdsourced image-based color generation approach</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2580432</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2580432" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-037">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Georeferencing historical maps using local feature matching and Delaunay consistency</h3>
@@ -945,7 +1061,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2566789" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2566789" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Georeferencing historical maps using local feature matching and Delaunay consistency</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2566789</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2566789" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-038">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Where are GIScience faculty hired from? Analyzing faculty mobility and research themes through hiring networks</h3>
@@ -958,7 +1075,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2567564" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2567564" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Where are GIScience faculty hired from? Analyzing faculty mobility and research themes through hiring networks</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2567564</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2567564" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-039">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Campus cultural landscape map: design and user experience measurement</h3>
@@ -971,7 +1089,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2570283" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2570283" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Campus cultural landscape map: design and user experience measurement</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2570283</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2570283" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-018-040">
 <p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST</p>
 <h3>Optimizing electric vehicle supply equipment allocation through GIS-Based multi-criteria decision analysis in an urban environment</h3>
@@ -984,7 +1103,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2571790" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-18 12:23 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2571790" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Optimizing electric vehicle supply equipment allocation through GIS-Based multi-criteria decision analysis in an urban environment</strong></p><p class="abstract-meta">DOI：10.1080/15230406.2025.2571790</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15230406.2025.2571790" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-001">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Supervised learning on graph-derived structural and weighted metrics for tax fraud detection</h3>
@@ -996,7 +1116,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01622-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Supervised learning on graph-derived structural and weighted metrics for tax fraud detection</strong></p><p class="abstract-meta">DOI：10.1007/s13278-026-01622-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01622-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-002">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Mapping the intellectual landscape of digital social networks: a bibliometric and citation network analysis</h3>
@@ -1008,7 +1129,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01617-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Mapping the intellectual landscape of digital social networks: a bibliometric and citation network analysis</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01617-0 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Network science and digital social network research span sociology, communication, and computational modeling, yet the field’s intellectual structure and cross-paradigm connectivity remain insufficiently characterized. Using records retrieved from the Web of Science Core Collection (n = 1,859; queried on 21 November 2024), we conduct a bibliometric, keyword co-occurrence, and citation-network analysis with CiteSpace, VOSviewer, Gephi, and NetworkX. The citation landscape exhibits a strongly centralized core (a largest connected component of 1,293 papers) surrounded by numerous small, weakly connected components, indicating a pronounced core–periphery organization. Keyword clustering and citation-burst analysis further reveal a thematic shift from classic sociological mechanisms (e.g., homophily and tie formation) toward algorithmically mediated communication and misinformation-related topics. We also highlight a set of highly central bridging works that connect otherwise separated thematic communities, suggesting that interdisciplinary exchange is concentrated around a limited number of canonical references.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01617-0" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-003">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>GRAFT-Rec: a hybrid multi-signal framework with gradient-boosted meta-ranking for collaborative filtering</h3>
@@ -1020,7 +1142,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01618-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>GRAFT-Rec: a hybrid multi-signal framework with gradient-boosted meta-ranking for collaborative filtering</strong></p><p class="abstract-meta">DOI：10.1007/s13278-026-01618-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01618-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-004">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>CaRgo : contrastive representation learning for anomaly detection in multi-relational graphs</h3>
@@ -1032,7 +1155,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01612-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>CaRgo : contrastive representation learning for anomaly detection in multi-relational graphs</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01612-5 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">In recent years, Graph Neural Network (GNN)–based anomaly detection has been widely applied to identify fraudulent or abnormal behaviors in complex relational ecosystems, such as e-commerce platforms and online review networks. Despite their popularity, conventional GNNs often struggle to generalize in these settings due to noisy and imbalanced data, limited supervision, and the implicit assumption of homogeneity. However, it is well known that the presence of anomalies typically disrupts this homogeneity and leads to a heterophilic eigenvalue distribution, which further degrades the performance of standard GNN architectures in the anomaly detection context. To address these limitations, we introduce CaRgo , a C onstr a stive R epresentation Learnin g framework for An o maly Detection in Multi-Relational Graphs. The proposed model integrates contrastive learning with multi-relational message passing to enhance both the robustness and discriminative power of learned representations. Specifically, we use a relation-aware polynomial convolution mechanism to capture heterogeneous dependencies across different entity types, and we formulate a self-supervised contrastive objective that promotes consistency in node embeddings across perturbed views of the graph. By jointly optimizing supervised and contrastive losses, CaRgo learns more informative and stable representations, even in scenarios with limited or noisy labels. Extensive experiments on two real-world datasets, Amazon and Yelp, demonstrate that our approach outperforms state-of-the-art baselines. These results highlight the effectiveness of contrastive learning as a strong inductive bias for detecting complex anomalous patterns in multi-relational graphs.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01612-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-005">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>CDifOD: mitigating class imbalance in graph outlier detection through context- and category-aware diffusion</h3>
@@ -1044,7 +1168,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01613-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>CDifOD: mitigating class imbalance in graph outlier detection through context- and category-aware diffusion</strong></p><p class="abstract-meta">DOI：10.1007/s13278-026-01613-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01613-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-006">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Epidemic wave dynamics of music virality on online social platforms</h3>
@@ -1056,7 +1181,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01607-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Epidemic wave dynamics of music virality on online social platforms</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01607-2 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Social media and streaming platforms have reshaped music consumption, enabling songs to go viral through social contagion processes that mirror the spread of infectious diseases. In this article, we investigate whether epidemiological models can effectively represent, interpret, and forecast music virality on online platforms. We introduce a wave-based approach that captures multiple independent bursts of popularity, which is not possible using classic epidemic models. We evaluate our approach using data from Spotify and TikTok, comparing its performance with traditional time-series forecasting methods. Our findings demonstrate that epidemic models are significantly more effective at capturing viral dynamics than long-term commercial success. In forecasting tasks, our method achieves accuracy comparable to conventional techniques, even when trained on partial data, while offering interpretable parameters that characterize diffusion speed, engagement duration, and adoption delay. A cross-platform comparison reveals that viral trajectories on TikTok are captured with even greater precision than those on Spotify. Overall, our findings support epidemic modeling as a powerful and interpretable framework for analyzing and forecasting music virality in contemporary digital ecosystems.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01607-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-007">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Deep learning with optimization for social media fake profile detection</h3>
@@ -1068,7 +1194,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01586-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Deep learning with optimization for social media fake profile detection</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01586-4 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The rapid increase in fake social media accounts, particularly X platform (Twitter), has been a significant issue. Fake profiles can deceive people or groups of people, disseminate falsehoods, destroy credibility, sell fake news, support evil actions, and control online interactions. Fake accounts are highly developed, thus necessitating automated, sophisticated methods to detect them manually. This paper presents a powerful deep learning model to identify false profiles in multimodal Twitter data. The architecture fuses LSTM to analyse text, CNN to analyse visual information, and ANN for metadata characteristics with Adam optimizer setting a state-of-the-art accuracy of 97.2060%, Precision: 0.9874, Recall: 0.9682, and F1-Score: 0.9777. The model does a full analysis of account activity, behavior patterns, content, and network behavior to find real and fake accounts more quickly. This paper proposes a model utilizing diverse data modalities to analyze the influence of individual characteristics and combinatorial features on detection accuracy. The proposed model improves the sphere of fake profile detection because it suggests a universal and scalable solution that will strengthen online trust and the security of platforms. It also preconditions more research and more appropriate social media rules.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01586-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-008">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Instagram and the privacy transformation a study on university students</h3>
@@ -1080,7 +1207,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01614-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Instagram and the privacy transformation a study on university students</strong></p><p class="abstract-meta">DOI：10.1007/s13278-026-01614-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01614-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-009">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Instance-level community detection in the Mastodon federation: a graph- and content-based approach</h3>
@@ -1092,7 +1220,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01597-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Instance-level community detection in the Mastodon federation: a graph- and content-based approach</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01597-1 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">This study analyzes Mastodon, a prominent federated social network made of several interconnected instances, and investigates community detection at the instance level by integrating content-based edge weighting to enhance modularity maximization techniques. Traditional community detection methods rely on structural connectivity, but in highly interconnected and dense networks, such as the one obtained through our crawling phase on Mastodon instances, this approach often fails to reveal meaningful clusters. To overcome this limitation, we computed a weighted graph by designing a process pipeline that assigns semantic similarity scores to edges, derived from trending posts. The effectiveness of this content-aware approach was evaluated using the Louvain and Leiden algorithms, showing a notable increase in modularity and community granularity compared to the results obtained on the same, but unweighted, graph. This study contributes to the field of community detection in decentralized networks by exploring the use of content-aware edge weighting, which provides insights into community structures shaped by semantic relationships. The findings enhance the understanding of decentralized social networks and offer a basis for further research into the impact of content similarity on community dynamics.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01597-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-010">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Enhanced sarcasm detection model integrating optimized Bert-BiLSTM architecture, multi-head attention and transfer learning strategy</h3>
@@ -1104,7 +1233,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-025-01571-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Enhanced sarcasm detection model integrating optimized Bert-BiLSTM architecture, multi-head attention and transfer learning strategy</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-025-01571-3 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The rapid growth of online platforms has produced a bulk of textual information including sarcastic information, which can significantly affect the interpretation of sentiment in healthcare environments. Accurate identifying sarcasm is essential to analyze patient’s communications, improving automated health support systems, and understanding the emotional aspects of medical consultations. In this study Machine Learning, Deep Learning, and Transfer Learning models performance were evaluated on healthcare-related datasets and an Optimized TL-BERT-MHA-BLSTM model proposed. The framework combines BERT-based transfer learning to obtain contextual embeddings, followed by a multi-head attention model to focus on important token-level feature and a bi-directional long short term memory that is optimized by means of Particle Swarm Optimization (PSO) for sequential sarcasm prediction. Evaluated on the curated Sarcasm in Medical Consultation Dataset, the model achieve training accuracy of 91.89, a validation accuracy of 79.20, and a test accuracy of 91.16, which is higher than benchmark models, such as BERT, LSTM, and BiLSTM and traditional ML/DL approaches. These findings highlight the effectiveness of the model to identify sarcasm in medical text and thus support the better understanding of sentiment and patient-focused analysis in healthcare systems.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-025-01571-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-011">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Understanding online conversations through fractal dimension: a case study linking semantic and structural analysis of reddit posts on AI</h3>
@@ -1116,7 +1246,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01629-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Understanding online conversations through fractal dimension: a case study linking semantic and structural analysis of reddit posts on AI</strong></p><p class="abstract-meta">DOI：10.1007/s13278-026-01629-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01629-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-012">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Mapping sentiment dependencies among online influencer communities on Weibo</h3>
@@ -1128,7 +1259,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01645-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Mapping sentiment dependencies among online influencer communities on Weibo</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01645-w · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Influencer-centered communities on social media are connected through overlapping audiences and shared topical attention, yet their directed sentiment dependencies remain difficult to observe directly. We reconstruct inter-community influence networks from sentiment time series on Weibo, a major Chinese microblogging platform. We track several prominent technology bloggers over six months, aggregating comment-level sentiment into collective sentiment trajectories for each blogger’s commenting audience. These audiences are treated as macro-agents, an aggregation justified by shared content exposure and homophily-driven sentiment alignment. Using opinion dynamics models as network inference tools, we estimate directed influence graphs capturing how collective sentiment in one community shapes that in others. The inferred networks exhibit pronounced sparsity and clear structural asymmetry. Some communities act as hubs whose sentiment radiates outward, while others are largely internally driven, reacting to their blogger’s posts and weakly coupled to peer communities. These patterns remain consistent across model variants, and the learned models demonstrate stable two-period-ahead predictive performance on held-out data. Our findings show that collective online sentiment is well described by structured inter-community averaging, yielding interpretable, empirically grounded influence graphs. The proposed framework provides an interpretable approach for mapping inter-community sentiment dependencies from social media time series.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01645-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-013">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>From intended topics to emergent discourse: a duration-weighted framework for quantifying conversational drift in X Spaces</h3>
@@ -1140,7 +1272,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01637-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>From intended topics to emergent discourse: a duration-weighted framework for quantifying conversational drift in X Spaces</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01637-w · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Live social audio platforms such as X Spaces enable conversations to evolve beyond their creator-defined thematic intent, challenging the reliability of static metadata labels for representing real-time discourse. This study investigates conversational drift and thematic stability through a duration-weighted framework combining semantic segmentation, topic classification, and thematic aggregation. Analysing 335 X Spaces sessions comprising approximately 566 hours of conversational audio, we quantify the alignment between intended topics and emergent discussion content based on aggregate thematic duration. The findings suggest that conversational drift follows structured, topic-dependent patterns rather than random disruption. Although off-topic discussion occupied a substantial proportion of conversational time, drift frequently remained semantically adjacent to the intended scope, indicating gradual thematic expansion rather than complete topical deviation. Several recurrent thematic transition patterns were observed between niche technical discussions and broader interpersonal categories. These findings highlight the limitations of static creator-assigned metadata for representing evolving live discourse within synchronous social audio environments. More broadly, they demonstrate the importance of duration-aware approaches for content discovery, recommendation, and moderation in environments where dominant conversational themes may diverge from their originally intended scope.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01637-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-014">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Fairness at no cost: how data debiasing improves equity without compromising accuracy in machine learning models</h3>
@@ -1152,7 +1285,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01635-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Fairness at no cost: how data debiasing improves equity without compromising accuracy in machine learning models</strong></p><p class="abstract-meta">DOI：10.1007/s13278-026-01635-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01635-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-015">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Exposing shortcut sensitivity in English–Norwegian hate speech detection via neutral stability analysis</h3>
@@ -1164,7 +1298,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01636-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Exposing shortcut sensitivity in English–Norwegian hate speech detection via neutral stability analysis</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01636-x · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The spread of hate speech has become a serious issue in online communities, negatively influencing user interaction and platform integrity. Although major social media companies have devoted substantial effort to developing automated detection systems, reliably classifying hateful content continues to be difficult. One key reason is shortcut learning, where models rely on frequent or sensitive words instead of understanding sentence meaning and context. Many hate speech detection systems achieve high accuracy while relying on surface-level lexical cues rather than robust semantic understanding. This shortcut-based behavior can lead to unstable predictions, particularly for neutral texts containing identity-related terms. In this paper, we analyze the prediction stability of transformer-based hate speech models when classifying neutral content. We construct a bilingual dataset of English and Norwegian social media posts annotated for binary hate speech detection and evaluate several Norwegian-specific and multilingual transformer models under identical training conditions. To mitigate shortcut learning, we introduce a neutral only stability regularization objective that encourages consistent predictions under stochastic perturbations. In post-training, we assess residual instability by applying controlled masking-based input variations through random token masking and measuring prediction variability. Our results show that Norwegian-specific models, especially Nor-BERT $$_{\text {base}}$$ , produce more stable predictions for neutral content while maintaining competitive classification performance. In contrast, the best-performing multilingual model, mm-BERT $$_{\text {base}}$$ , achieves the highest overall accuracy of 86%, outperforming the Norwegian-specific models in aggregate classification accuracy. However, all models exhibit high worst-case instability, indicating that shortcut-based behavior is not fully resolved. These findings demonstrate that standard accuracy metrics alone are insufficient and highlight the importance of stability-aware training and evaluation when deploying hate speech detection systems in real-world moderation tasks.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01636-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-016">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Mapping and visualisation of global research trend on digital twin technology (DTT): a scientometric study</h3>
@@ -1176,7 +1311,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01627-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mapping and visualisation of global research trend on digital twin technology (DTT): a scientometric study</strong></p><p class="abstract-meta">DOI：10.1007/s13278-026-01627-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01627-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-017">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Cross-platform analysis of diet discourse: scientific research, news media, and social media compared</h3>
@@ -1188,7 +1324,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01628-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Cross-platform analysis of diet discourse: scientific research, news media, and social media compared</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01628-x · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">This study investigates how eight popular diets (DASH Diet, Flexitarian Diet, Intermittent Fasting, Keto Diet, Low-FODMAP Diet, Mediterranean Diet, Paleo Diet, and Vegan Diet) are perceived across the modern communication ecosystem. We analyze discourse from academic literature (Web of Science, 1975–2024), mainstream news (The New York Times, 2000–2024), and social media (Reddit, 2005–2022) to understand information flow in a fragmented media landscape. Using time series, engagement, and sentiment analysis on nearly 800,000 documents, we map how diet narratives are constructed and disseminated. Our findings reveal distinct agendas on each platform. Academic and news sources prioritized established diets, while Reddit amplified newer, trend-driven ones. The Mediterranean Diet, for instance, dominated scholarly and news coverage but was minimally discussed on Reddit. Intermittent Fasting received attention across scientific literature, news media, and social media. Monthly bidirectional Granger causality tests revealed significant cross-platform effects only for Intermittent Fasting, with scientific publications predicting New York Times coverage and New York Times coverage predicting Reddit activity. No significant effects were observed for the other diets. Sentiment also diverged across platforms: scientific discourse was generally positive, whereas user-generated content was more mixed or negative, particularly for Veganism on Reddit. This study reveals a fragmented information ecology in which scientific consensus does not uniformly shape public discourse, challenging traditional two-step flow models. Our cross-platform framework provides a novel approach for tracking how health topics emerge and diffuse through networked interactions among scientific, media, and social platforms.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01628-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-018">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Breaking the echo-chamber effect via consent</h3>
@@ -1200,7 +1337,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01631-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Breaking the echo-chamber effect via consent</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01631-2 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Echo chambers in social media are widely regarded as a significant contributor to polarization. Existing approaches to mitigating this phenomenon typically rely on either platform-level algorithmic changes or regulatory interventions that risk undermining user autonomy and privacy. We propose a consent-driven regulatory framework that preserves both values while enabling meaningful reductions in echo-chamber dynamics. The core of our proposal is an opt-in mechanism that allows a subset of users to voluntarily grant the regulator permission to introduce diverse perspectives into their information feeds. To evaluate this approach, we developed an extended social media spreading model that incorporates platform algorithms, regulatory interventions, and a user response function driven by individual opinions, friendship, and message virality. Simulations conducted on real-world data and synthetic topologies demonstrate that even a minimal level of participation, as low as 1% of the message recipients, can significantly enhance the reach of cross-group messages across the entire network. Within the constraints of our model, this improvement in exposure diversity is achieved without reinforcing intra-group amplification or violating the core normative principles of user autonomy and informational privacy. These findings highlight the role of consenting, curious users to act as a social bridge to foster a healthier public dialogue in digital spaces.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01631-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-019">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Long live fine-tuning: task-specific transformers outperform zero-shot LLMs for misinformation response classification on Reddit</h3>
@@ -1212,7 +1350,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01633-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Long live fine-tuning: task-specific transformers outperform zero-shot LLMs for misinformation response classification on Reddit</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01633-0 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">As large language models (LLMs) become widely used tools for online information access and verification, it is important to determine when their zero-shot flexibility is sufficient and when task-specific supervision remains valuable. We examine this question in a controlled misinformation-response classification setting comprising 900 Reddit comments associated with three PolitiFact-verified claims in environment, health, and immigration. Comments are labelled as belief (propagates the claim), fact-check (corrects it), or other . We compare nine models across three paradigms—BART-MNLI, three Llama variants, three commercial LLMs (Claude Haiku 4.5, Gemini Flash Lite 2.5, and Claude Sonnet 4.6), and fine-tuned DistilBERT and RoBERTa—under universal and topic-specific label schemas. Under the evaluated prompting and supervision conditions, fine-tuned RoBERTa reaches 0.62 macro- $$F_1$$ , compared with 0.50 for the best zero-shot configuration (Claude Haiku 4.5), at a fraction of the per-query cost. The supervised advantage is concentrated on the belief class, which every evaluated zero-shot model under-detects. Increasing model size does not produce consistent improvements: Llama-3-8B matches Llama-3-70B in several settings, while Claude Sonnet 4.6 underperforms the smaller Haiku model under generic labels. Sonnet’s belief $$F_1$$ increases substantially when generic labels are replaced with claim-specific descriptions, indicating that label formulation and claim context interact with model behaviour. Performance also varies by more than 0.13 macro- $$F_1$$ across the three claim datasets under matched label conditions. For the claims, label schemas, and zero-shot configurations evaluated here, task-specific fine-tuning provides the more reliable classification strategy when labelled examples are available.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01633-0" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-020">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>SICDIM: a swarm intelligence based community detection method using influence maximization</h3>
@@ -1224,7 +1363,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01626-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>SICDIM: a swarm intelligence based community detection method using influence maximization</strong></p><p class="abstract-meta">DOI：10.1007/s13278-026-01626-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01626-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-021">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>A novel centrality-based approach for link prediction</h3>
@@ -1236,7 +1376,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01624-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A novel centrality-based approach for link prediction</strong></p><p class="abstract-meta">DOI：10.1007/s13278-026-01624-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01624-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-022">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>CounselingQA: scaling professional mental-health guidance via dense retrieval and large language models</h3>
@@ -1248,7 +1389,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01620-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>CounselingQA: scaling professional mental-health guidance via dense retrieval and large language models</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01620-5 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">In the digital era, the internet and social media have emerged as essential platforms for individuals facing mental health issues, often used for seeking information and community support. Despite the resources of informal advice available on social media, the complexity of these issues frequently exceeds non-expert knowledge. Specialized sites such as CounselChat and 7Cups offer professional guidance, yet many at-risk individuals still rely on unmoderated sources and general web search. We address this gap by investigating ranking strategies that match pre-existing expert advice to incoming mental-health questions. We introduce , a collection built from two specialized websites, pairing user questions with verified expert responses. We address the task as answer retrieval (AR): given a question, rank expert answers by relevance. We evaluate dense retrieval with SentenceBERT and MentalBERT, and propose a second stage that improves the initial ranking via transformer-based models and large language models (LLMs), used for filtering non-relevant candidates and for reordering. Beyond retrieval, we analyze linguistic style and affective attributes across topics, questions, and responses. Results show that dense retrieval provides strong candidates and that transformer/LLM-driven reranking further elevates relevant, on-topic advice to the top positions. We further conduct qualitative error analyses, including human evaluation to study the benefits and limitations of our approaches. Taken together, these findings indicate that retrieval-first pipelines can help scale access to professional guidance.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01620-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-023">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Temporal network analysis of cognitive load and meta-cognition dynamics in human-AI conversations</h3>
@@ -1260,7 +1402,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01616-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Temporal network analysis of cognitive load and meta-cognition dynamics in human-AI conversations</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01616-1 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">This paper introduces a formal methodological and computational framework that integrates temporal network analysis, cognitive load (CL) theory, and metacognitive (MC) research to model how humans learn and adapt during artificial intelligence (AI)-mediated conversations. The proposed approach provides a mathematical formalization of conversational cognitive features and their temporal interactions, defining a unified architecture and a functional platform that can estimate CL and MC awareness directly from conversation transcripts, without the need for specialized sensors or intrusive measurements. Conversational dynamics are represented as a multiplex temporal cognitive network whose layers capture distinct relational dimensions (semantic, syntactic, emotional, cognitive, among others), and latent cognitive states are inferred using a probabilistic Hidden Markov (HM) modeling of multimodal conversational features, with parameters calibrated through Maximum Likelihood Estimation. Rather than focusing on empirical validation, this work establishes the theoretical foundations, feature modeling, and inference mechanisms, together with the data processing pipeline and visual analytics components required to investigate cognitive–metacognitive dynamics in dialog-based learning. The framework opens new perspectives for designing adaptive educational chatbots, cognitively aware conversational systems, and analytical tools to study learning and collaboration in human–AI interactions.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01616-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-024">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Visual homophily as a potential mediating factor in online social network structure</h3>
@@ -1272,7 +1415,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01611-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Visual homophily as a potential mediating factor in online social network structure</strong></p><p class="abstract-meta">DOI：10.1007/s13278-026-01611-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01611-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-025">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Individual fairness in community detection: quantitative measure and comparative evaluation</h3>
@@ -1284,7 +1428,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01621-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Individual fairness in community detection: quantitative measure and comparative evaluation</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01621-4 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Community detection is a fundamental task in complex network analysis. Fairness-aware community detection seeks to prevent biased node partitions, typically framed in terms of individual fairness, which requires similar nodes to be treated similarly, and group fairness, which aims to avoid disadvantaging specific groups of nodes. While existing literature on fair community detection has primarily focused on group fairness, we introduce a novel measure to quantify individual fairness in community detection methods. The proposed measure captures unfairness in unweighted, undirected networks with crisp communities as the vector distance between a node’s true and predicted community representations, computed using the community co-occurrence matrix. We provide a comprehensive empirical investigation of a broad set of community detection algorithms from the literature on both synthetic networks, with varying levels of community explicitness, and real-world networks. We particularly investigate the fairness-performance trade-off using standard quality metrics and compare individual fairness outcomes with existing group fairness measures. The results show that individual unfairness can occur even when group fairness or clustering accuracy is high, underscoring that individual and group fairness are not interchangeable. Moreover, fairness depends critically on the detectability of community structure. However, we find that Significance and Surprise for denser graphs, and Combo, Leiden, and SBMDL for sparser graphs result in a better trade-off between individual fairness and community quality. Overall, our findings, together with the fact that community detection is an important step in many network analysis downstream tasks, highlight the necessity of developing fairness-aware community detection methods.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01621-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-026">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Exploring public discourse on artificial intelligence for teaching and learning: a social-computational mixed-methods analysis</h3>
@@ -1296,7 +1441,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01619-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Exploring public discourse on artificial intelligence for teaching and learning: a social-computational mixed-methods analysis</strong></p><p class="abstract-meta">DOI：10.1007/s13278-026-01619-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01619-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-078-027">
 <p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
 <h3>Evaluating contrastive cascade graph learning for diffusion pattern classification</h3>
@@ -1308,7 +1454,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01615-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-18 12:23 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Evaluating contrastive cascade graph learning for diffusion pattern classification</strong></p><p class="abstract-meta">DOI：10.1007/s13278-026-01615-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01615-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 </section>
 
 <section id="health">

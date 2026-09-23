@@ -11,6 +11,53 @@ body, main, header, footer { max-width: 100%; overflow-x: hidden; }
 .table-wrap { overflow-x: auto; max-width: 100%; }
 table { width: 100%; }
 .evidence a { max-width: 100%; overflow-wrap: anywhere; }
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}
 </style>
 </head>
 <body id="top">
@@ -75,7 +122,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="http://cjc.ict.ac.cn/online/onlinepaper/gc-2026713145543.pdf" rel="noopener noreferrer">官方论文页面</a><small>cjc.ict.ac.cn · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-002">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>面向神经网络量化的计算机体系结构研究进展</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-002">
 <p class="kicker">计算机学报 · FORMAL_ISSUE</p>
 <h3>面向MT-3000的软件管理SM缓存优化框架</h3>
 <p>李怀锦</p>
@@ -86,7 +134,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="http://cjc.ict.ac.cn/online/onlinepaper/lhj-2026713145822.pdf" rel="noopener noreferrer">官方论文页面</a><small>cjc.ict.ac.cn · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-003">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>面向MT-3000的软件管理SM缓存优化框架</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-003">
 <p class="kicker">计算机学报 · FORMAL_ISSUE</p>
 <h3>考虑阀门切换均衡的连续微流控生物芯片控制模式分配算法</h3>
 <p>刘耿耿</p>
@@ -97,7 +146,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="http://cjc.ict.ac.cn/online/onlinepaper/lgg-2026713150100.pdf" rel="noopener noreferrer">官方论文页面</a><small>cjc.ict.ac.cn · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-004">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>考虑阀门切换均衡的连续微流控生物芯片控制模式分配算法</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-004">
 <p class="kicker">计算机学报 · FORMAL_ISSUE</p>
 <h3>基于互信息引导信息聚合的多智能体强化学习方法</h3>
 <p>魏巍</p>
@@ -108,7 +158,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="http://cjc.ict.ac.cn/online/onlinepaper/ww-2026713150320.pdf" rel="noopener noreferrer">官方论文页面</a><small>cjc.ict.ac.cn · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-005">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于互信息引导信息聚合的多智能体强化学习方法</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-005">
 <p class="kicker">计算机学报 · FORMAL_ISSUE</p>
 <h3>基于降噪排序学习的无监督语句高效嵌入方法</h3>
 <p>刘成龙</p>
@@ -119,7 +170,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="http://cjc.ict.ac.cn/online/onlinepaper/lcl-2026713150539.pdf" rel="noopener noreferrer">官方论文页面</a><small>cjc.ict.ac.cn · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-006">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于降噪排序学习的无监督语句高效嵌入方法</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-006">
 <p class="kicker">计算机学报 · FORMAL_ISSUE</p>
 <h3>RAPID-OVD:基于区域分类与伪标签生成流程优化的开放词汇目标检测框架</h3>
 <p>朱锐</p>
@@ -130,7 +182,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="http://cjc.ict.ac.cn/online/onlinepaper/zhur-2026713150849.pdf" rel="noopener noreferrer">官方论文页面</a><small>cjc.ict.ac.cn · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-007">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>RAPID-OVD:基于区域分类与伪标签生成流程优化的开放词汇目标检测框架</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-007">
 <p class="kicker">计算机学报 · FORMAL_ISSUE</p>
 <h3>基于两阶段进化的不平衡多模态多目标优化</h3>
 <p>毛斐巧</p>
@@ -141,7 +194,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="http://cjc.ict.ac.cn/online/onlinepaper/mfq-2026713151149.pdf" rel="noopener noreferrer">官方论文页面</a><small>cjc.ict.ac.cn · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-008">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于两阶段进化的不平衡多模态多目标优化</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-008">
 <p class="kicker">计算机学报 · FORMAL_ISSUE</p>
 <h3>超高速脉冲相机的成像方法综述</h3>
 <p>赵睿</p>
@@ -152,7 +206,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="http://cjc.ict.ac.cn/online/onlinepaper/zhaor-2026713151355.pdf" rel="noopener noreferrer">官方论文页面</a><small>cjc.ict.ac.cn · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-009">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>超高速脉冲相机的成像方法综述</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-009">
 <p class="kicker">计算机学报 · FORMAL_ISSUE</p>
 <h3>基于全局空间感知的轻量级无人机航拍图像目标检测</h3>
 <p>吴家骏</p>
@@ -163,7 +218,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="http://cjc.ict.ac.cn/online/onlinepaper/wjj-2026713151612.pdf" rel="noopener noreferrer">官方论文页面</a><small>cjc.ict.ac.cn · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-010">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于全局空间感知的轻量级无人机航拍图像目标检测</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-010">
 <p class="kicker">计算机学报 · FORMAL_ISSUE</p>
 <h3>多粒度特征提取与损失优化的图像指代分割方法</h3>
 <p>张龙飞</p>
@@ -174,7 +230,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="http://cjc.ict.ac.cn/online/onlinepaper/zlf-2026713151812.pdf" rel="noopener noreferrer">官方论文页面</a><small>cjc.ict.ac.cn · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-011">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>多粒度特征提取与损失优化的图像指代分割方法</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-011">
 <p class="kicker">计算机学报 · FORMAL_ISSUE</p>
 <h3>随机分布对格KEM安全性与性能的影响分析———以Kyber和Saber为例</h3>
 <p>邵明尧</p>
@@ -185,7 +242,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="http://cjc.ict.ac.cn/online/onlinepaper/smy-2026713152600.pdf" rel="noopener noreferrer">官方论文页面</a><small>cjc.ict.ac.cn · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-012">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>随机分布对格KEM安全性与性能的影响分析———以Kyber和Saber为例</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-045-2026v49i7-012">
 <p class="kicker">计算机学报 · FORMAL_ISSUE</p>
 <h3>基于区块链的物联网无证书多重身份认证方案</h3>
 <p>刘媛妮</p>
@@ -196,7 +254,8 @@ table { width: 100%; }
 <div><dt>证据层级</dt><dd>METADATA</dd></div>
 </dl><p>
 <span class="evidence"><a href="http://cjc.ict.ac.cn/online/onlinepaper/lyn-2026713152755.pdf" rel="noopener noreferrer">官方论文页面</a><small>cjc.ict.ac.cn · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-075-2026-v35-i5"><h3>The VLDB Journal · 2026-V35-I5</h3><p>Springer 官方 Volumes & Issues：September 2026，两遍 15 DOI 稳定。正式月份已到。gate-issue=<code>NEW_ISSUE</code>。含 KNOWN_PREPUBLICATION 归期与 NEW_ARTICLE。</p><p><span class="evidence"><a href="https://link.springer.com/journal/778/volumes-and-issues/35-5" rel="noopener noreferrer">官方期次目录</a><small>link.springer.com · 2026-09-15 12:25 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>15</strong> 篇。</p></article><article class="paper" id="formal-reg-075-2026v35i5-001">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于区块链的物联网无证书多重身份认证方案</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-075-2026-v35-i5"><h3>The VLDB Journal · 2026-V35-I5</h3><p>Springer 官方 Volumes & Issues：September 2026，两遍 15 DOI 稳定。正式月份已到。gate-issue=<code>NEW_ISSUE</code>。含 KNOWN_PREPUBLICATION 归期与 NEW_ARTICLE。</p><p><span class="evidence"><a href="https://link.springer.com/journal/778/volumes-and-issues/35-5" rel="noopener noreferrer">官方期次目录</a><small>link.springer.com · 2026-09-15 12:25 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>15</strong> 篇。</p></article><article class="paper" id="formal-reg-075-2026v35i5-001">
 <p class="kicker">The VLDB Journal · FORMAL_ISSUE</p>
 <h3>Personalized w-event privacy for infinite stream estimation</h3>
 <p>Leilei Du; Xu Zhou; Peng Cheng; Lei Chen; Xuemin Lin; Wei Xi; Kenli Li</p>
@@ -208,7 +267,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-01004-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01004-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-002">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Personalized w-event privacy for infinite stream estimation</strong></p><p class="abstract-meta">DOI：10.1007/s00778-026-01004-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01004-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-002">
 <p class="kicker">The VLDB Journal · FORMAL_ASSIGNMENT</p>
 <h3>ResidualPlanner+: a scalable matrix mechanism for marginals and beyond.</h3>
 <p>Yingtai Xiao; Guanlin He; Levent Toksoz; Zeyu Ding; Danfeng Zhang; Daniel Kifer</p>
@@ -220,7 +280,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-00981-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00981-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-003">
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>ResidualPlanner+: a scalable matrix mechanism for marginals and beyond.</strong></p><p class="abstract-meta">期刊：The VLDB Journal · DOI：10.1007/s00778-026-00981-9 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Noisy marginals are a common form of confidentiality protecting data release and are useful for many downstream tasks such as contingency table analysis, construction of Bayesian networks, and even synthetic data generation. Matrix mechanisms, an important class of privacy mechanisms that provide unbiased noisy answers to linear queries, are often used to answer marginal queries. We propose ResidualPlanner and ResidualPlanner+, two highly scalable matrix mechanisms. ResidualPlanner is both optimal (among matrix mechanisms that use Gaussian noise) and scalable for answering marginal queries, while ResidualPlanner+provides support for more general workloads, such as combinations of marginals and range queries or prefix-sum queries. ResidualPlanner can optimize for many loss functions that can be written as a convex function of marginal variances (prior work was restricted to just one predefined objective function). ResidualPlanner can optimize the accuracy of marginals in large scale settings in seconds, even when the previous state of the art (HDMM) runs out of memory. It even runs on datasets with 100 attributes in a couple of minutes. Furthermore, ResidualPlanner can efficiently compute variance/covariance values for each marginal (prior methods quickly run out of memory, even for relatively small datasets). ResidualPlanner+provides support for more complex workloads that combine marginal and range/prefix-sum queries (e.g., a marginal on race, a range query on age, and a combined race/age tabulation that answers age range queries for each race). It even supports custom user-defined workloads on different attributes. With this added flexibility, ResidualPlanner+is not necessarily optimal, however it is still extremely scalable and outperforms the prior state-of-the-art (HDMM) on prefix-sum queries both in terms of accuracy and speed.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00981-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-003">
 <p class="kicker">The VLDB Journal · FORMAL_ASSIGNMENT</p>
 <h3>Towards robust and interactive text-to-visualization translation: enhancing model robustness and mitigating ambiguity in natural language queries</h3>
 <p>作者未在官方目录完整给出</p>
@@ -232,7 +293,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-00992-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00992-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-004">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Towards robust and interactive text-to-visualization translation: enhancing model robustness and mitigating ambiguity in natural language queries</strong></p><p class="abstract-meta">DOI：10.1007/s00778-026-00992-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00992-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-004">
 <p class="kicker">The VLDB Journal · FORMAL_ASSIGNMENT</p>
 <h3>Best of both worlds: contextual feature explanation</h3>
 <p>Shuai An; Yang Cao; Jia Li; Yidong Li</p>
@@ -244,7 +306,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-00998-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00998-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-005">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Best of both worlds: contextual feature explanation</strong></p><p class="abstract-meta">DOI：10.1007/s00778-026-00998-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00998-0" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-005">
 <p class="kicker">The VLDB Journal · FORMAL_ASSIGNMENT</p>
 <h3>PrivMDC: leveraging multi-dimensional correlations to answer differentially private range queries</h3>
 <p>José S. Costa Filho; Felipe T. Brito; Victor A. E. Farias; Cheryl Flynn; Javam C. Machado; Divesh Srivastava</p>
@@ -256,7 +319,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-01001-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01001-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-006">
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>PrivMDC: leveraging multi-dimensional correlations to answer differentially private range queries</strong></p><p class="abstract-meta">期刊：The VLDB Journal · DOI：10.1007/s00778-026-01001-6 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Answering an unbounded number of multi-dimensional range queries while preserving privacy is a significant problem that has been the focus of recent studies since range queries serve as a core component of many data analysis tasks. Existing techniques that use local differential privacy (LDP), which adds noise to users’ data locally, make assumptions that significantly affect utility. In particular, they assume that all attributes in a dataset are correlated and materialize all pair-wise grids/trees. Moreover, they assume that each pair-wise correlation is equally relevant when answering queries. These assumptions result in a low signal/noise ratio, especially for datasets with a large number of attributes. To address the deficiency of existing techniques, we propose a new approach to answer multi-dimensional range queries that leverages multi-dimensional correlations and workload characteristics to selectively choose the data that is collected under the LDP model. Our approach first leverages the availability of a small number of DP users to build a correlation model to determine how attributes are correlated. Then, we use the notion of multi-dimensional grids to capture multi-dimensional correlations. That allows us to materialize fewer grids, boosting the signal/noise ratio. Finally, we propose a new optimization step that makes use of available workload characteristics to identify the user distribution that minimizes the total error when answering multi-dimensional queries among users during the grid assignment process. We conduct extensive experiments on real and synthetic datasets and demonstrate the superiority of our method over existing approaches.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01001-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-006">
 <p class="kicker">The VLDB Journal · FORMAL_ASSIGNMENT</p>
 <h3>Conceptual schema inference for tabular datasets using large language models</h3>
 <p>Zhenyu Wu; Jiaoyan Chen; Norman W. Paton</p>
@@ -268,7 +332,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-01000-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01000-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-007">
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Conceptual schema inference for tabular datasets using large language models</strong></p><p class="abstract-meta">期刊：The VLDB Journal · DOI：10.1007/s00778-026-01000-7 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Large collections of tabular data from data lakes, web tables and open data portals often originate from heterogeneous sources, leading to representational inconsistencies. Understanding and organizing such repositories therefore remains a major challenge. While prior work has primarily focused on dataset discovery and exploration, this paper addresses the complementary problem of conceptual schema inference: automatically deriving a conceptual schema that captures entity types, attributes and inter-type relationships directly from raw tables. We propose two large language model (LLM)-based approaches that use only column headers and cell values: $$\text {GeSI}$$ GeSI uses generative LLMs to infer hierarchical types and their attributes from table- and column-level semantics, and to integrate them into a global schema that also captures relationships across types; $$\text {EmSI}$$ EmSI employs LLM-based table embeddings to group tables by column-level semantics, infer attributes within each group, and construct hierarchical structures from shared attribute patterns. Finally, we report an experimental analysis demonstrating the effectiveness of our approaches in terms of the conciseness and structural quality of the inferred schema components, their scalability to large repositories, and a case study illustrating end-to-end schema inference.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01000-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-007">
 <p class="kicker">The VLDB Journal · FORMAL_ASSIGNMENT</p>
 <h3>Efficient prompt learning for traffic forecasting</h3>
 <p>Qianru Zhang; Xinyi Gao; Alexander Zhou; Reynold Cheng; Siu-Ming Yiu; Hongzhi Yin</p>
@@ -280,7 +345,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-00983-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00983-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-008">
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Efficient prompt learning for traffic forecasting</strong></p><p class="abstract-meta">期刊：The VLDB Journal · DOI：10.1007/s00778-026-00983-7 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Accurate traffic prediction is essential for optimizing transportation systems, enhancing resource allocation, and improving overall urban administration. Spatio-temporal graph neural networks (GNNs) have achieved state-of-the-art performance and have been widely used in various spatio-temporal prediction scenarios. However, these prediction methods often exhibit low generalization ability, struggling with distribution shifts caused by spatio-temporal dynamics. To address this challenge, we propose an approach to enhance the generalization and adaptation of spatio-temporal GNNs through efficient prompting. Specifically, we introduce a lightweight and model-agnostic prompt tuning framework for spatio-temporal GNNs, named SimpleST. It facilitates adapting pre-trained spatio-temporal GNNs to novel distributions while keeping the model parameters fixed. This prompt mechanism reduces the overhead and complexity of adaptation, enabling efficient utilization of pre-trained models for out-of-distribution generalization. Extensive experiments conducted on five real-world urban spatio-temporal datasets demonstrate the superiority of our approach in terms of prediction accuracy and computational efficiency.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00983-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-008">
 <p class="kicker">The VLDB Journal · FORMAL_ASSIGNMENT</p>
 <h3>Static and streaming algorithms for random sampling over spatial range joins</h3>
 <p>Daichi Amagata; Duhyun Kim</p>
@@ -292,7 +358,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-00997-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00997-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-009">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Static and streaming algorithms for random sampling over spatial range joins</strong></p><p class="abstract-meta">DOI：10.1007/s00778-026-00997-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00997-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-009">
 <p class="kicker">The VLDB Journal · FORMAL_ISSUE</p>
 <h3>Can large language models be a cardinality estimator? An empirical study</h3>
 <p>Liangzu Liu; Yinjun Wu; Yiyan Wang; Zhuo Chang; Runze Su; Peizhi Wu; Jianjun Chen; Fuxin Jiang; Rui Shi; Bin Cui; Tieying Zhang</p>
@@ -304,7 +371,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-00975-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00975-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-010">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Can large language models be a cardinality estimator? An empirical study</strong></p><p class="abstract-meta">DOI：10.1007/s00778-026-00975-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00975-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-010">
 <p class="kicker">The VLDB Journal · FORMAL_ISSUE</p>
 <h3>PINE: Extracting Correlated Token Pairs for Explainable Entity Matching</h3>
 <p>Hironori Mizuguchi; Hiroyuki Kitagawa</p>
@@ -316,7 +384,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-00995-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00995-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-011">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>PINE: Extracting Correlated Token Pairs for Explainable Entity Matching</strong></p><p class="abstract-meta">DOI：10.1007/s00778-026-00995-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00995-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-011">
 <p class="kicker">The VLDB Journal · FORMAL_ISSUE</p>
 <h3>Towards GPU memory-aware efficient contrastive shapelet learning for unsupervised representation learning in multivariate time series</h3>
 <p>Zhiyu Liang; Xiongfei Li; Chen Liang; Yuchen Hu; Yutong Zhao; Zheng Liang; Jianfeng Zhang; Hongzhi Wang; Lujia Pan</p>
@@ -328,7 +397,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-00996-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00996-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-012">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Towards GPU memory-aware efficient contrastive shapelet learning for unsupervised representation learning in multivariate time series</strong></p><p class="abstract-meta">DOI：10.1007/s00778-026-00996-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00996-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-012">
 <p class="kicker">The VLDB Journal · FORMAL_ISSUE</p>
 <h3>Towards caching time-series semantically on hybrid storage</h3>
 <p>Tao Kong; Hui Li; Liping Li; Yuxuan Zhao; Xiyue Gao; Jiangtao Cui</p>
@@ -340,7 +410,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-00988-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00988-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-013">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Towards caching time-series semantically on hybrid storage</strong></p><p class="abstract-meta">DOI：10.1007/s00778-026-00988-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00988-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-013">
 <p class="kicker">The VLDB Journal · FORMAL_ISSUE</p>
 <h3>Efficient discovery of arbitrary cycles in large-scale networks</h3>
 <p>Siyi Teng; Jeffrey Xu Yu; Jiadong Xie</p>
@@ -352,7 +423,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-00994-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00994-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-014">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Efficient discovery of arbitrary cycles in large-scale networks</strong></p><p class="abstract-meta">DOI：10.1007/s00778-026-00994-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00994-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-014">
 <p class="kicker">The VLDB Journal · FORMAL_ISSUE</p>
 <h3>Multi-modal knowledge graph entity alignment: a comprehensive survey</h3>
 <p>Zhihuan Yan; Yi Wang; Chongchong Zhang; Hengyang Wu; Liping Li; QingE Wu</p>
@@ -364,7 +436,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-00986-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00986-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-015">
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multi-modal knowledge graph entity alignment: a comprehensive survey</strong></p><p class="abstract-meta">DOI：10.1007/s00778-026-00986-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00986-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-075-2026v35i5-015">
 <p class="kicker">The VLDB Journal · FORMAL_ISSUE</p>
 <h3>Distilled documentation for dialect-specific SQL generation</h3>
 <p>Till Döhmen; Adithya Krishnan; Hamilton Ulmer; Peter Boncz; Sebastian Schelter</p>
@@ -376,7 +449,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-00993-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00993-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Distilled documentation for dialect-specific SQL generation</strong></p><p class="abstract-meta">DOI：10.1007/s00778-026-00993-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-00993-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 </section>
 
 <section id="online-first">
@@ -395,7 +469,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2594344" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2594344" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>PDF (9.4 MB)</strong></p><p class="abstract-meta">DOI：10.1080/15481603.2025.2594344</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2594344" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-015-002">
 <p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
 <h3>EPUB</h3>
@@ -408,7 +483,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2604385" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2604385" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>EPUB</strong></p><p class="abstract-meta">DOI：10.1080/15481603.2025.2604385</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2604385" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-015-003">
 <p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
 <h3>EPUB</h3>
@@ -421,7 +497,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2605708" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2605708" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>EPUB</strong></p><p class="abstract-meta">DOI：10.1080/15481603.2025.2605708</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2605708" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-015-004">
 <p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
 <h3>EPUB</h3>
@@ -434,7 +511,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2605710" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2605710" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>EPUB</strong></p><p class="abstract-meta">DOI：10.1080/15481603.2025.2605710</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2605710" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-015-005">
 <p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
 <h3>EPUB</h3>
@@ -447,7 +525,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2606468" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2606468" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>EPUB</strong></p><p class="abstract-meta">DOI：10.1080/15481603.2025.2606468</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2606468" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-015-006">
 <p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
 <h3>EPUB</h3>
@@ -460,7 +539,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2606475" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2606475" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>EPUB</strong></p><p class="abstract-meta">DOI：10.1080/15481603.2025.2606475</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2606475" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-015-007">
 <p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
 <h3>EPUB</h3>
@@ -473,7 +553,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2609352" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2609352" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>EPUB</strong></p><p class="abstract-meta">DOI：10.1080/15481603.2025.2609352</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2609352" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-015-008">
 <p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
 <h3>EPUB</h3>
@@ -486,7 +567,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2609467" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2609467" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>EPUB</strong></p><p class="abstract-meta">DOI：10.1080/15481603.2025.2609467</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2609467" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-015-009">
 <p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
 <h3>PDF (13 MB)</h3>
@@ -499,7 +581,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2610548" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2610548" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>PDF (13 MB)</strong></p><p class="abstract-meta">DOI：10.1080/15481603.2025.2610548</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2610548" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-015-010">
 <p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
 <h3>PDF (13 MB)</h3>
@@ -512,7 +595,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2610549" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2610549" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>PDF (13 MB)</strong></p><p class="abstract-meta">DOI：10.1080/15481603.2025.2610549</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2610549" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-015-011">
 <p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
 <h3>EPUB</h3>
@@ -525,7 +609,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2610841" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2610841" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>EPUB</strong></p><p class="abstract-meta">DOI：10.1080/15481603.2025.2610841</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2610841" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-015-012">
 <p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
 <h3>EPUB</h3>
@@ -538,7 +623,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2611442" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2611442" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>EPUB</strong></p><p class="abstract-meta">DOI：10.1080/15481603.2025.2611442</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/15481603.2025.2611442" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-075-001">
 <p class="kicker">The VLDB Journal · ONLINE_FIRST</p>
 <h3>Duster: a deduplication framework for efficient point cloud storage and retrieval</h3>
@@ -551,7 +637,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-01002-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01002-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Duster: a deduplication framework for efficient point cloud storage and retrieval</strong></p><p class="abstract-meta">DOI：10.1007/s00778-026-01002-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01002-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-075-002">
 <p class="kicker">The VLDB Journal · ONLINE_FIRST</p>
 <h3>Efficient and cost-effective influence and blocker minimization</h3>
@@ -564,7 +651,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-01003-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01003-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Efficient and cost-effective influence and blocker minimization</strong></p><p class="abstract-meta">期刊：The VLDB Journal · DOI：10.1007/s00778-026-01003-4 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Online social networks have emerged as prominent platforms for individuals to rapidly share ideas and perspectives. However, their swift dissemination capabilities also make them powerful channels for the spread of misinformation. Such dissemination results in substantial economic and societal harm, highlighting the need for effective suppression. To support this practical demand, this paper investigates the influence minimization (IMIN) and blocker minimization (BM) problems. The IMIN problem aims to find a node set of size k (the given budget) to block, such that the reduction in influence spread of a given seed set S is maximized. The BM problem is the dual of IMIN, aiming to find a node set of minimum cardinality to block, such that the threshold condition is satisfied, i.e., the reduction in influence spread of S is not less than the given threshold $$\eta $$ η . Both problems are NP-hard and involve a non-submodular objective function. Existing IMIN solutions incur high computational costs and offer no approximation guarantees on influence spread reduction. To fill the gap, we build upon the sandwich strategy to develop the first efficient algorithm with data-dependent approximation guarantees for IMIN. In particular, we design non-trivial $$(1-1/e-\epsilon )$$ ( 1 - 1 / e - ϵ ) -approximation algorithms to optimize the proposed submodular bounding functions. For the BM problem, the existing solution is of limited effectiveness and lacks theoretical guarantees for both node set cardinality and threshold condition satisfaction. In this paper, we design a heuristic and two bicriteria approximation algorithms to address the BM problem. The heuristic is efficient and satisfies the threshold condition, but fails to ensure near-optimal cardinality. The two approximation algorithms both provide guarantees on cardinality: the first attains a tighter approximation ratio at the expense of efficiency, while the second yields a slightly weaker ratio with improved efficiency. Finally, comprehensive experiments on 9 real-world datasets are conducted to validate the efficiency and effectiveness of the proposed techniques.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01003-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 <article class="paper" id="of-reg-075-003">
 <p class="kicker">The VLDB Journal · ONLINE_FIRST</p>
 <h3>Efficient distinctiveness maximization in datasets assemblage: from homogeneous to heterogeneous datasets</h3>
@@ -577,7 +665,8 @@ table { width: 100%; }
 </dl><p>
 <span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-01005-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-15 12:25 CST · 论文身份与出版状态证据</small></span>
 <span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01005-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-15 12:25 CST · 规范化论文身份</small></span>
-</p><p class="back"><a href="#top">返回页首</a></p></article>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Efficient distinctiveness maximization in datasets assemblage: from homogeneous to heterogeneous datasets</strong></p><p class="abstract-meta">期刊：The VLDB Journal · DOI：10.1007/s00778-026-01005-2 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">We study the distinctiveness maximization problem for datasets assemblage: assembling a set of datasets from a repository that satisfies a user-specified target schema and query set under a budget constraint, while maximizing the number of distinct tuples. This problem is NP-hard in two scenarios: (i) when the repository contains datasets conforming to the target schema, and (ii) when no dataset individually satisfies the schema and candidates must be constructed through joins. For the first scenario, a greedy algorithm with exact distinctiveness computation achieves a $$(1-e^{-1})/2$$ ( 1 - e - 1 ) / 2 -approximation ratio, but is costly due to exhaustive tuple-wise marginal gain computation. We therefore propose an efficient machine learning (ML)-based method that directly estimates the marginal distinctiveness gain of each candidate dataset, avoiding costly exact computations. For the second scenario, we integrate a column-level merging technique into our ML framework to construct candidate datasets and estimate their distinctiveness without physically materializing join results, supporting efficient assemblage over heterogeneous datasets. Extensive experiments on real-world data pools show that our methods consistently outperform relevant baselines in effectiveness, efficiency, and scalability. A downstream case study on two ML tasks further shows that our approach identifies datasets with more useful tuples and improves ML performance.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01005-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
 </section>
 
 <section id="health">
