@@ -1,8 +1,454 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GIS-AI 期刊每日轮检简报 · 第 22 组 · 2026-09-22</title>
-<meta http-equiv="refresh" content="0; url=../../releases/DAILY-20260922-121646-56e716e5/2026/09/2026-09-22_GIS-AI期刊每日轮检简报_第22组.html">
-</head><body>
-<p>正在打开 <a href="../../releases/DAILY-20260922-121646-56e716e5/2026/09/2026-09-22_GIS-AI期刊每日轮检简报_第22组.html">第 22 组完整简报（不可变 release）</a>。</p>
-<p>若未自动跳转，请点击上方链接。摘要图：<a href="assets/2026-09-22_GIS-AI期刊每日摘要_第22组.png">PNG</a></p>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/09/index.html">9 月</a> / 第 22 组
+</nav>
+<p class="meta">逻辑日期 2026-09-22 · 完成时间 2026-09-22 12:28 CST · 任务 ROUTINE-20260922-G22 · Commit <code>DAILY-20260922-121646-56e716e5</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 22 组</h1>
+<p class="lede">第 22 组共检查 3 种正式期刊；确认 1 个新完整期次、6 篇正式期次论文、1 篇既有网络优先记录正式归期，以及 210 条新的网络优先/在年发现。Geographical Analysis 确认新完整期 2026-V58-I4；JMLR 保持基线 2025-V26（页面指纹未变），开放卷 V27 仅登记发现、不 claim；Evolutionary Computation 官方 MIT Press 403，仅以 Crossref 作发现、不 claim V34-I3。其中 1 种期刊因官方源阻断降级完成。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>3</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>1</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>6</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>210</strong><span>网络首发/在年</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">新期次</span> <strong>Geographical Analysis</strong> — 相对基线 V58-I3 新确认完整期 V58-I4（6 篇）；官方 Wiley TOC 两遍稳定。 <span class="evidence"><a href="https://onlinelibrary.wiley.com/toc/15384632/2026/58/4" rel="noopener noreferrer">证据</a><small>onlinelibrary.wiley.com · 2026-09-22 12:28 CST · 官方目录</small></span></li><li><span class="tag">开放卷登记</span> <strong>Journal of Machine Learning Research</strong> — V26 页面指纹未变；V27 开放卷仅登记发现，无 Volume completed 公告故不 claim。 <span class="evidence"><a href="https://www.jmlr.org/papers/v26/" rel="noopener noreferrer">证据</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 官方目录</small></span></li><li><span class="tag">官方阻断</span> <strong>Evolutionary Computation</strong> — MIT Press Direct Cloudflare 403；Crossref 见 V34-I3，不 claim。 <span class="evidence"><a href="https://direct.mit.edu/evco/issue/34/2" rel="noopener noreferrer">证据</a><small>direct.mit.edu · 2026-09-22 12:28 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-082<br><strong>Evolutionary Computation</strong></td><td>2026-V34-I2</td><td>0</td><td>0</td><td>0</td><td>5</td><td><code>OFFICIAL_403_MIT_PRESS</code></td><td>DEGRADED</td></tr><tr><td>REG-022<br><strong>Geographical Analysis</strong></td><td>2026-V58-I4</td><td>1</td><td>6</td><td>1</td><td>0</td><td><code>OFFICIAL_PAGE_OK</code></td><td>COMPLETED</td></tr><tr><td>REG-052<br><strong>Journal of Machine Learning Research</strong></td><td>2025-V26</td><td>0</td><td>0</td><td>0</td><td>205</td><td><code>OFFICIAL_PAGE_OK</code></td><td>COMPLETED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-09-22_GIS-AI期刊每日摘要_第22组.png" width="1600" height="900" alt="第22组每日摘要图：3刊，新完整期1，正式文6">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-022-2026-v58-i4"><h3>Geographical Analysis · 2026-V58-I4</h3><p>官方 Wiley TOC（headed Playwright）确认 V58-I4；LOI 2026 已列 I1–I4；TOC 6 篇（含 Issue Information），两遍 DOI 集合稳定。相对基线 I3 不 claim。gate-issue=<code>NEW_ISSUE</code>。至少 1 篇既有 Online First 正式归期。</p><p><span class="evidence"><a href="https://onlinelibrary.wiley.com/toc/15384632/2026/58/4" rel="noopener noreferrer">官方期次目录</a><small>onlinelibrary.wiley.com · 2026-09-22 12:28 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>6</strong> 篇。</p></article><article class="paper" id="formal-reg-022-2026v58i4-001">
+<p class="kicker">Geographical Analysis · FORMAL_ISSUE</p>
+<h3>Issue Information</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V58 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1111/gean.70047</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/gean.70047" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/gean.70047" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-22 12:28 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Issue Information</strong></p><p class="abstract-meta">DOI：10.1111/gean.70047</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/gean.70047" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-022-2026v58i4-002">
+<p class="kicker">Geographical Analysis · FORMAL_ISSUE</p>
+<h3>How Software Development Conceals and Constrains Critical Analytic Decisions: Tracing the Encoded Choices Behind a Failure to Reproduce a Spatial Scan Statistic</h3>
+<p>Emily Zhou; Joseph Holler; Peter Kedron</p>
+<dl>
+<div><dt>卷期</dt><dd>V58 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1111/gean.70053</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/gean.70053" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/gean.70053" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-22 12:28 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>How Software Development Conceals and Constrains Critical Analytic Decisions: Tracing the Encoded Choices Behind a Failure to Reproduce a Spatial Scan Statistic</strong></p><p class="abstract-meta">DOI：10.1111/gean.70053 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Researchers increasingly call for transparent reporting of analytic decisions as foundations for reproducible research and collective knowledge production. However, these calls for openness often overlook a critical dimension: software environments encode implicit computational decisions that are not always visible to researchers, even when the same statistical methods are applied. Analyses may be technically reproducible, while the epistemological function of reproduction to evaluate and validate prior conclusions is undermined by the opacity of software design. Moreover, unexamined software behavior can compromise the conceptual rigor of research by shaping analytic choices unbeknownst to researchers. While attempting to reproduce a study correlating spatial distributions of COVID‐19 and people with disabilities, we investigated how software‐encoded decisions influenced intermediate analytic outputs, propagated into downstream inference, and ultimately shaped the research design. Through systematic comparison across software, we demonstrate that (1) software‐encoded decisions structure both intermediate results and final analytic conclusions; (2) researchers must remain attentive to the decisions and materials required to execute an analysis, understand what software is doing on their behalf, and consider the numerical and conceptual ramifications of those decisions; and (3) cross‐software sensitivity analysis is particularly important when analytic workflows span multiple platforms or when outputs from one system are used as inputs to another.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/gean.70053" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-022-2026v58i4-003">
+<p class="kicker">Geographical Analysis · FORMAL_ISSUE</p>
+<h3>A Spatial Clustering Approach of Economic Activities: An Application to the Agribusiness Sector in Brazil&#x27;s Midwest Region</h3>
+<p>Gilvan Santos do Rosario Junior; Ticiana Grecco Zanon Moura; Mauro Ferrante</p>
+<dl>
+<div><dt>卷期</dt><dd>V58 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1111/gean.70054</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/gean.70054" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/gean.70054" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-22 12:28 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Spatial Clustering Approach of Economic Activities: An Application to the Agribusiness Sector in Brazil&#x27;s Midwest Region</strong></p><p class="abstract-meta">DOI：10.1111/gean.70054 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The spatial distribution of economic activities is central to regional economics. However, empirical tools for comparing industries based on the similarity of their spatial distributions remain limited. Traditional cluster analysis typically ignores geographical distance and connectivity, while spatial methods focus on clustering places rather than economic activities. This paper addresses this methodological gap by proposing a framework for clustering economic activities based on the similarity of their spatial distributions, explicitly incorporating geographical space. The Wasserstein distance is employed with a geographically informed cost matrix, that is, the Shimbel matrix, to measure the effort required to transform one activity&#x27;s spatial distribution into another. This approach is compared with traditional non‐spatial distance metrics through an illustrative example and then applied to 272 agribusiness activities across 466 municipalities in Brazil&#x27;s Midwest region from 2013 to 2021. The results reveal four main clusters: one spread throughout the region and others concentrated in northern, southern, or eastern areas, consistent with regional endowments, historical trajectories, and agro‐industrial linkages. The case study suggests that the approach offers a useful complementary tool for identifying co‐distributed activities and spatially similar industrial patterns, with implications for regional development analysis, place‐based policy design and future studies of economic linkages and shock exposure.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/gean.70054" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-022-2026v58i4-004">
+<p class="kicker">Geographical Analysis · FORMAL_ASSIGNMENT</p>
+<h3>A Network-Constrained Spatiotemporal Scan Statistic for Identifying Geographic Flow Hotspots</h3>
+<p>Zhuoting Fu; Xiaorui Yan; Tao Pei; Ci Song; Jie Chen; Dayu Cheng; Xiaotong Wang; Yuqing Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V58 · I4</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1111/gean.70056</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/gean.70056" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/gean.70056" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-22 12:28 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Network-Constrained Spatiotemporal Scan Statistic for Identifying Geographic Flow Hotspots</strong></p><p class="abstract-meta">期刊：Geographical Analysis · DOI：10.1111/gean.70056 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Geographic flows represent the movement of geographic objects between locations at different times. Flow hotspots reflect aggregated movements within specific spatiotemporal ranges. Accurately identifying these hotspots helps reveal their underlying causes and provides targeted insights. Among existing methods, scan statistics are widely used due to their flexible windows and unified significance testing. However, traditional Euclidean cylindrical windows are inadequate for road networks. Spatiotemporal scanning windows of network‐constrained flows must account for network topology and origin–destination temporal precedence. To address this issue, this study proposes a novel spatiotemporal scanning window that integrates network topology and temporal constraints and develops the scan statistic under completely spatiotemporal randomness (CSTR) and global time permutation (GTP) null models. Constructed via the Cartesian product of origin and destination network‐constrained prisms, the window adaptively extends along road networks to precisely capture flow distribution. Synthetic experiments demonstrate that our method outperforms baseline methods in identifying hotspots within complex scenarios. Case studies show that the CSTR model effectively identifies dominant macroscopic tidal travel patterns (such as commuting hotspots), whereas the GTP model successfully overcomes the interference from inhomogeneous backgrounds to accurately capture fine‐grained flow hotspots during off‐peak hours and between specific transit hubs.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/gean.70056" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-022-2026v58i4-005">
+<p class="kicker">Geographical Analysis · FORMAL_ISSUE</p>
+<h3>Congruence and Compatibility in Functional Regional Taxonomy: Principles and Applications</h3>
+<p>Marián Halás</p>
+<dl>
+<div><dt>卷期</dt><dd>V58 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1111/gean.70055</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/gean.70055" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/gean.70055" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-22 12:28 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Congruence and Compatibility in Functional Regional Taxonomy: Principles and Applications</strong></p><p class="abstract-meta">期刊：Geographical Analysis · DOI：10.1111/gean.70055 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The article connects several concepts that were previously used and evaluated separately in functional regional taxonomy and in the delineation of functional regions. Typically, functional regions are not defined based on absolute values of population flows. Instead, they are delineated using interaction measures, which are normalizations of population flows. In the resulting system of functional regions, it is possible to determine a membership index for each basic spatial unit, expressing the degree to which that unit belongs to the functional region in which it is located. The membership index used should be in congruence with the interaction measure applied. This means they should be based on the same normalization method. Using the example of two different states, two different datasets, and two different interaction measures with their corresponding membership indices, we demonstrate the necessity of congruence: interaction measure—functional region boundaries—membership indices. An important part of the article&#x27;s outputs is the visual representation of this congruence through map outputs. The results confirm that different interaction measures yield significantly different delineations of functional regions. Only when the interaction measure and the membership index are in congruence are the procedures&#x27; logical correctness and the results&#x27; compatibility maintained.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/gean.70055" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-022-2026v58i4-006">
+<p class="kicker">Geographical Analysis · FORMAL_ISSUE</p>
+<h3>Beyond the Border Wars: Representation, Scale, and Multi-Member Districts</h3>
+<p>Christopher S. Fowler; Linda L. Fowler</p>
+<dl>
+<div><dt>卷期</dt><dd>V58 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1111/gean.70057</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/gean.70057" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/gean.70057" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-22 12:28 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Beyond the Border Wars: Representation, Scale, and Multi-Member Districts</strong></p><p class="abstract-meta">期刊：Geographical Analysis · DOI：10.1111/gean.70057 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Proposed redistricting reforms often focus on fixing gerrymandered maps or restructuring elections to boost proportionality. Recent work shows that, averaged across all 50 states, multi‐member districts paired with proportional ranked‐choice voting can deliver near‐proportional outcomes while curbing the gains available to a partisan map‐drawer. We use the case of Pennsylvania to show that the effect of any given reform depends on how the size and location of a state&#x27;s population clusters align with the size of its districts, a geographic interaction that resists one‐size‐fits‐all prescription. Moreover, complex relationships among population clusters, district size, and administrative units like counties may limit the benefits of multi‐member districts. Enlarging districts to elect multiple representatives increases the heterogeneity of district populations, increases competitiveness, and broadens opportunities for effective representation across most of the state. However, proportionality and opportunities for Black voters to elect preferred candidates move unevenly. We argue that the match between district magnitude and cluster size must be considered for reforms to succeed.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/gean.70057" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在年登记</h2>
+<p>本批登记网络优先/在年发现 <strong>210</strong> 条（REG-052 JMLR 开放卷 V27 官网目录、REG-082 Crossref 的 NEW_ARTICLE/METADATA_CHANGED）。上述条目不作为完整期次证据。</p><article class="paper" id="of-reg-082-001">
+<p class="kicker">Evolutionary Computation · ONLINE_FIRST</p>
+<h3>Survey of Interactive Evolutionary Decomposition-Based Multiobjective Optimization Methods</h3>
+<p>Lárraga, Giomara</p>
+<dl>
+<div><dt>卷期</dt><dd>V34 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1162/evco_a_00366</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1162/evco_a_00366" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1162/evco_a_00366" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-22 12:28 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Survey of Interactive Evolutionary Decomposition-Based Multiobjective Optimization Methods</strong></p><p class="abstract-meta">期刊：Evolutionary Computation · DOI：10.1162/evco_a_00366 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Interactive methods support decision-makers in finding the most preferred solution for multiobjective optimization problems, where multiple conflicting objective functions must be optimized simultaneously. These methods let a decision-maker provide preference information iteratively during the solution process to find solutions of interest, allowing them to learn about the trade-offs in the problem and the feasibility of the preferences. Several interactive evolutionary multiobjective optimization methods have been proposed in the literature. In the evolutionary computation community, the so-called decomposition-based methods have been increasingly popular because of their good performance in problems with many objective functions. They decompose the multiobjective optimization problem into multiple subproblems to be solved collaboratively. Various interactive versions of decomposition-based methods have been proposed. However, most of them do not consider the desirable properties of real interactive solution processes, such as avoiding imposing a high cognitive burden on the decision-maker, allowing them to decide when to interact with the method, and supporting them in selecting a final solution. This article reviews interactive evolutionary decomposition-based multiobjective optimization methods and different methodologies utilized to incorporate interactivity in them. Additionally, desirable properties of interactive decomposition-based multiobjective evolutionary optimization methods are identified, aiming to make them easier to be applied in real-world problems.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1162/evco_a_00366" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-082-002">
+<p class="kicker">Evolutionary Computation · ONLINE_FIRST</p>
+<h3>Quality Diversity under Sparse Interaction and Sparse Reward: Application to Grasping in Robotics</h3>
+<p>Huber, Johann</p>
+<dl>
+<div><dt>卷期</dt><dd>V34 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1162/evco_a_00363</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1162/evco_a_00363" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1162/evco_a_00363" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-22 12:28 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Quality Diversity under Sparse Interaction and Sparse Reward: Application to Grasping in Robotics</strong></p><p class="abstract-meta">期刊：Evolutionary Computation · DOI：10.1162/evco_a_00363 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Quality-Diversity (QD) methods are algorithms that aim to generate a set of diverse and high-performing solutions to a given problem. Originally developed for evolutionary robotics, most QD studies are conducted on a limited set of domains—mainly applied to locomotion, where the fitness and the behavior signal are dense. Grasping is a crucial task for manipulation in robotics. Despite the efforts of many research communities, this task is yet to be solved. Grasping cumulates unprecedented challenges in QD literature: it suffers from reward sparsity, behavioral sparsity, and behavior space misalignment. The present work studies how QD can address grasping. Experiments have been conducted on 15 different methods on 10 grasping domains, corresponding to two different robot-gripper setups and five standard objects. The obtained results show that MAP-Elites variants that select successful solutions in priority outperform all the compared methods on the studied metrics by a large margin. We also found experimental evidence that sparse interaction can lead to deceptive novelty. To our knowledge, the ability to efficiently produce examples of grasping trajectories demonstrated in this work has no precedent in the literature.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1162/evco_a_00363" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-082-003">
+<p class="kicker">Evolutionary Computation · ONLINE_FIRST</p>
+<h3>Runtime Analysis of Typical Decomposition Approaches in MOEA/D for Many-Objective Optimization Problems</h3>
+<p>Huang, Zhengxin</p>
+<dl>
+<div><dt>卷期</dt><dd>V34 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1162/evco_a_00364</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1162/evco_a_00364" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1162/evco_a_00364" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-22 12:28 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Runtime Analysis of Typical Decomposition Approaches in MOEA/D for Many-Objective Optimization Problems</strong></p><p class="abstract-meta">期刊：Evolutionary Computation · DOI：10.1162/evco_a_00364 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Decomposition-based multiobjective evolutionary algorithms (MOEAs) are popular methods utilized to address many-objective optimization problems (MaOPs). These algorithms decompose the original MaOP into several scalar optimization subproblems, and solve them to obtain a set of solutions to approximate the Pareto front (PF). The decomposition approach is an important component in them. This paper presents a runtime analysis of a MOEA based on the classic decomposition framework using the typical weighted sum (WS), Tchebycheff (TCH), and penalty-based boundary intersection (PBI) approaches to obtain an optimal solution for any subproblem of two pseudo-Boolean benchmark MaOPs, namely mLOTZ and mCOCZ. Due to the complexity and limitation of the theoretical analysis techniques, the analyzed algorithm employs 1-bit mutation to generate offspring individuals. The results indicate that when using WS, the analyzed algorithm can consistently find an optimal solution for every subproblem, which is located in the PF, in polynomial expected runtime. In contrast, the algorithm requires at least exponential expected runtime (with respect to the number of objectives m) for certain subproblems when using TCH or PBI, even though the landscapes of all objective functions in the two benchmarks are strictly monotone. Moreover, this analysis reveals a drawback of using WS: the optimal solutions obtained by solving subproblems are more easily mapped to the same point in the PF, compared to the case of using TCH. When using PBI, a smaller value of the penalty parameter is a good choice for faster convergence to the PF but may compromise diversity. To further understand the impact of these approaches in practical algorithms, numerical experiments on using bit-wise mutation to generate offspring individuals are conducted. The findings of this study may be helpful for designing more efficient decomposition approaches for MOEAs in future research.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1162/evco_a_00364" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-082-004">
+<p class="kicker">Evolutionary Computation · ONLINE_FIRST</p>
+<h3>Beyond Landscape Analysis: DynamoRep Features for Capturing Algorithm-Problem Interaction in Single-Objective Continuous Optimization</h3>
+<p>Cenikj, Gjorgjina</p>
+<dl>
+<div><dt>卷期</dt><dd>V34 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1162/evco_a_00370</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1162/evco_a_00370" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1162/evco_a_00370" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-22 12:28 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Beyond Landscape Analysis: DynamoRep Features for Capturing Algorithm-Problem Interaction in Single-Objective Continuous Optimization</strong></p><p class="abstract-meta">期刊：Evolutionary Computation · DOI：10.1162/evco_a_00370 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The representation of optimization problems and algorithms in terms of numerical features is a well-established tool for comparing optimization problem instances, for analyzing the behavior of optimization algorithms, and the quality of existing problem benchmarks, as well as for automated per-instance algorithm selection and configuration approaches. Extending purely problem-centered feature collections, our recently proposed DynamoRep features provide a simple and inexpensive representation of the algorithm-problem interaction during the optimization process. In this paper, we conduct a comprehensive analysis of the predictive power of the DynamoRep features for the problem classification, algorithm selection, and algorithm classification tasks. In particular, the features are evaluated for the classification of problem instances into problem classes from the BBOB (Black Box Optimization Benchmarking) suite, selecting the best algorithm to solve a given problem from a portfolio of three algorithms (Differential Evolution, Evolutionary Strategy, and Particle Swarm Optimization), as well as distinguishing these algorithms based on their trajectories. We show that, despite being much cheaper to compute, they can yield results comparable to those using state-of-the-art Exploratory Landscape Analysis features.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1162/evco_a_00370" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-082-005">
+<p class="kicker">Evolutionary Computation · ONLINE_FIRST</p>
+<h3>Genetic Programming-Based Feature Selection for Symbolic Regression on Incomplete Data</h3>
+<p>Al-Helali, Baligh</p>
+<dl>
+<div><dt>卷期</dt><dd>V34 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1162/evco_a_00362</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1162/evco_a_00362" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1162/evco_a_00362" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-22 12:28 CST · 规范化论文身份</small></span>
+</p><details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Genetic Programming-Based Feature Selection for Symbolic Regression on Incomplete Data</strong></p><p class="abstract-meta">期刊：Evolutionary Computation · DOI：10.1162/evco_a_00362 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">High-dimensionality is one of the serious real-world data challenges in symbolic regression and it is more challenging if the data are incomplete. Genetic programming has been successfully utilised for high-dimensional tasks due to its natural feature selection ability, but it is not directly applicable to incomplete data. Commonly, it needs to impute the missing values first and then perform genetic programming on the imputed complete data. However, in the case of having many irrelevant features being incomplete, intuitively, it is not necessary to perform costly imputations on such features. For this purpose, this work proposes a genetic programming-based approach to select features directly from incomplete high-dimensional data to improve symbolic regression performance. We extend the concept of identity/neutral elements from mathematics into the function operators of genetic programming, thus they can handle the missing values in incomplete data. Experiments have been conducted on a number of data sets considering different missingness ratios in high-dimensional symbolic regression tasks. The results show that the proposed method leads to better symbolic regression results when compared with state-of-the-art methods that can select features directly from incomplete data. Further results show that our approach not only leads to better symbolic regression accuracy but also selects a smaller number of relevant features, and consequently improves both the effectiveness and the efficiency of the learning process.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1162/evco_a_00362" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-052-001">
+<p class="kicker">Journal of Machine Learning Research · ONLINE_FIRST</p>
+<h3>The surrogate Gibbs-posterior of a corrected stochastic MALA: Towards uncertainty quantification for neural networks</h3>
+<p>Sebastian Bieringer; Gregor Kasieczka; Maximilian F. Steffen; Mathias Trabs</p>
+<dl>
+<div><dt>卷期</dt><dd>V27 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>jmlr-v27-22-0483</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_OPEN_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jmlr.org/papers/v27/22-0483.html" rel="noopener noreferrer">官方论文页面</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The surrogate Gibbs-posterior of a corrected stochastic MALA: Towards uncertainty quantification for neural networks</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-052-002">
+<p class="kicker">Journal of Machine Learning Research · ONLINE_FIRST</p>
+<h3>Online Detection of Changes in Moment--Based Projections: When to Retrain Deep Learners or Update Portfolios?</h3>
+<p>Ansgar Steland</p>
+<dl>
+<div><dt>卷期</dt><dd>V27 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>jmlr-v27-23-0274</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_OPEN_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jmlr.org/papers/v27/23-0274.html" rel="noopener noreferrer">官方论文页面</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Online Detection of Changes in Moment--Based Projections: When to Retrain Deep Learners or Update Portfolios?</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-052-003">
+<p class="kicker">Journal of Machine Learning Research · ONLINE_FIRST</p>
+<h3>Efficient frequent directions algorithms for approximate decomposition of matrices and higher-order tensors</h3>
+<p>Maolin Che; Yimin Wei; Hong Yan</p>
+<dl>
+<div><dt>卷期</dt><dd>V27 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>jmlr-v27-23-0737</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_OPEN_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jmlr.org/papers/v27/23-0737.html" rel="noopener noreferrer">官方论文页面</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Efficient frequent directions algorithms for approximate decomposition of matrices and higher-order tensors</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-052-004">
+<p class="kicker">Journal of Machine Learning Research · ONLINE_FIRST</p>
+<h3>Identifying Weight-Variant Latent Causal Models</h3>
+<p>Yuhang Liu; Zhen Zhang; Dong Gong; Mingming Gong; Biwei Huang; Anton van den Hengel; Kun Zhang; Javen Qinfeng Shi</p>
+<dl>
+<div><dt>卷期</dt><dd>V27 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>jmlr-v27-23-1023</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_OPEN_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jmlr.org/papers/v27/23-1023.html" rel="noopener noreferrer">官方论文页面</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Identifying Weight-Variant Latent Causal Models</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-052-005">
+<p class="kicker">Journal of Machine Learning Research · ONLINE_FIRST</p>
+<h3>Classification Under Local Differential Privacy with Model Reversal and Model Averaging</h3>
+<p>Caihong Qin; Yang Bai</p>
+<dl>
+<div><dt>卷期</dt><dd>V27 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>jmlr-v27-24-0290</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_OPEN_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jmlr.org/papers/v27/24-0290.html" rel="noopener noreferrer">官方论文页面</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Classification Under Local Differential Privacy with Model Reversal and Model Averaging</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-052-006">
+<p class="kicker">Journal of Machine Learning Research · ONLINE_FIRST</p>
+<h3>Stochastic Gradient Methods: Bias, Stability and Generalization</h3>
+<p>Shuang Zeng; Yunwen Lei</p>
+<dl>
+<div><dt>卷期</dt><dd>V27 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>jmlr-v27-24-0637</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_OPEN_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jmlr.org/papers/v27/24-0637.html" rel="noopener noreferrer">官方论文页面</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Stochastic Gradient Methods: Bias, Stability and Generalization</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-052-007">
+<p class="kicker">Journal of Machine Learning Research · ONLINE_FIRST</p>
+<h3>Extending Mean-Field Variational Inference via Entropic Regularization: Theory and Computation</h3>
+<p>Bohan Wu; David M. Blei</p>
+<dl>
+<div><dt>卷期</dt><dd>V27 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>jmlr-v27-24-1057</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_OPEN_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jmlr.org/papers/v27/24-1057.html" rel="noopener noreferrer">官方论文页面</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Extending Mean-Field Variational Inference via Entropic Regularization: Theory and Computation</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-052-008">
+<p class="kicker">Journal of Machine Learning Research · ONLINE_FIRST</p>
+<h3>skwdro: a library for Wasserstein distributionally robust machine learning</h3>
+<p>Florian Vincent; Waïss Azizian; Franck Iutzeler; Jérôme Malick</p>
+<dl>
+<div><dt>卷期</dt><dd>V27 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>jmlr-v27-24-1840</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_OPEN_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jmlr.org/papers/v27/24-1840.html" rel="noopener noreferrer">官方论文页面</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>skwdro: a library for Wasserstein distributionally robust machine learning</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-052-009">
+<p class="kicker">Journal of Machine Learning Research · ONLINE_FIRST</p>
+<h3>Guaranteed Nonconvex Low-Rank Tensor Estimation via Scaled Gradient Descent</h3>
+<p>Tong Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V27 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>jmlr-v27-25-0012</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_OPEN_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jmlr.org/papers/v27/25-0012.html" rel="noopener noreferrer">官方论文页面</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Guaranteed Nonconvex Low-Rank Tensor Estimation via Scaled Gradient Descent</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-052-010">
+<p class="kicker">Journal of Machine Learning Research · ONLINE_FIRST</p>
+<h3>A Data-Augmented Contrastive Learning Approach to Nonparametric Density Estimation</h3>
+<p>Chenghao Li; Yuanyuan Lin</p>
+<dl>
+<div><dt>卷期</dt><dd>V27 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>jmlr-v27-25-0376</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_OPEN_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jmlr.org/papers/v27/25-0376.html" rel="noopener noreferrer">官方论文页面</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Data-Augmented Contrastive Learning Approach to Nonparametric Density Estimation</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-052-011">
+<p class="kicker">Journal of Machine Learning Research · ONLINE_FIRST</p>
+<h3>Nonlocal Techniques for the Analysis of Deep ReLU Neural Network Approximations</h3>
+<p>Cornelia Schneider; Mario Ullrich; Jan Vybíral</p>
+<dl>
+<div><dt>卷期</dt><dd>V27 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>jmlr-v27-25-0746</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_OPEN_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jmlr.org/papers/v27/25-0746.html" rel="noopener noreferrer">官方论文页面</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Nonlocal Techniques for the Analysis of Deep ReLU Neural Network Approximations</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-052-012">
+<p class="kicker">Journal of Machine Learning Research · ONLINE_FIRST</p>
+<h3>Nonlinear function-on-function regression by RKHS</h3>
+<p>Peijun Sang; Bing Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V27 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>jmlr-v27-25-1017</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_OPEN_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jmlr.org/papers/v27/25-1017.html" rel="noopener noreferrer">官方论文页面</a><small>www.jmlr.org · 2026-09-22 12:28 CST · 论文身份与出版状态证据</small></span>
+</p><details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Nonlinear function-on-function regression by RKHS</strong></p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Journal of Machine Learning Research 另有 193 条网络优先/在年发现已写入账本，页内从略。</p>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>Geographical Analysis（Wiley）：headed Playwright 可读；确认 V58-I4；Accepted Articles /0/0 返回 404。</li>
+<li>Journal of Machine Learning Research（JMLR）：官网 V26/V27 可读；V26 指纹未变不 claim；V27 开放卷仅登记。</li>
+<li>Evolutionary Computation（MIT Press Direct）：官方 TOC/Advance headed Playwright 持续 Cloudflare 403；Crossref 仅作发现，不 claim V34-I3。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>b5aa1f37-9325-4ef8-a877-42c69a507c8a</code></li>
+<li>Commit ID：<code>DAILY-20260922-121646-56e716e5</code></li>
+<li>Brief ID：<code>DAILY-20260922</code></li>
+<li>去重抑制：0 · 增量复核：0 · 对账任务：4 · 官方源失败计数：1</li>
+<li>正式期刊：REG-022、REG-052、REG-082</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/09/index.html">返回 2026-09 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
 </body></html>
