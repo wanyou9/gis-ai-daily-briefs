@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 23 组 · 2026-09-23</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/09/index.html">9 月</a> / 第 23 组
+</nav>
+<p class="meta">逻辑日期 2026-09-23 · 完成时间 2026-09-23 12:15 CST · 任务 ROUTINE-20260923-G23 · Commit <code>DAILY-20260923-120619-cf405523</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 23 组</h1>
+<p class="lede">第 23 组共检查 3 种正式期刊；确认 1 个新完整期次、24 篇正式期次论文、3 篇既有网络优先记录正式归期，以及 82 条新的网络优先/未来期/Early Access 发现。Machine Learning 确认新完整期 2026-V115-I9（I10 已出现故触发）；Geoinformatica 未来期 V30-I2（2026-12）仅登记不 claim；IEEE TEVC 当前仍为 V30-I4，无新完整期，Early Access 经 Crossref 登记。无期刊级扫描失败。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>3</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>1</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>24</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>82</strong><span>网络首发/在年</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">新期次</span> <strong>Machine Learning</strong> — 相对既有完整期 V115-I8 新确认完整期 V115-I9（24 篇）；I10 在编 6 篇仅登记。 <span class="evidence"><a href="https://link.springer.com/journal/10994/volumes-and-issues/115-9" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-09-23 12:15 CST · 官方目录</small></span></li><li><span class="tag">未来期登记</span> <strong>Geoinformatica</strong> — V30-I2（December 2026）官方已有 14 篇，按未来期规则不 claim ISSUE_COMPLETE。 <span class="evidence"><a href="https://link.springer.com/journal/10707/volumes-and-issues/30-2" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-09-23 12:15 CST · 官方目录</small></span></li><li><span class="tag">Early Access</span> <strong>IEEE TEVC</strong> — Current 仍为 V30-I4；无 I5。Crossref 无卷期 Early-like 条目登记新发现。 <span class="evidence"><a href="https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=4235" rel="noopener noreferrer">证据</a><small>ieeexplore.ieee.org · 2026-09-23 12:15 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-023<br><strong>Geoinformatica</strong></td><td>2026-V30-I1</td><td>0</td><td>0</td><td>0</td><td>14</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-053<br><strong>Machine Learning</strong></td><td>2026-V115-I9</td><td>1</td><td>24</td><td>3</td><td>6</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-083<br><strong>IEEE Transactions on Evolutionary Computation</strong></td><td>2026-V30-I4</td><td>0</td><td>0</td><td>0</td><td>62</td><td><code>OFFICIAL_PAGE_OK</code></td><td>COMPLETED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-09-23_GIS-AI期刊每日摘要_第23组.png" width="1600" height="900" alt="第23组每日摘要图：3刊，新完整期1，正式文24">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-053-2026-v115-i9"><h3>Machine Learning · 2026-V115-I9</h3><p>官方 Springer TOC 确认 V115-I9（September 2026）24 篇；两遍 DOI 集合稳定；因 I10 已出现，按月刊触发规则 claim。相对既有完整期 I8 / workbook 基线 I6 不重复 claim 旧期。gate-issue=<code>NEW_ISSUE</code>。</p><p><span class="evidence"><a href="https://link.springer.com/journal/10994/volumes-and-issues/115-9" rel="noopener noreferrer">官方期次目录</a><small>link.springer.com · 2026-09-23 12:15 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>24</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-053-2026v115i9-001">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>What is Attention Mechanism? A Comprehensive Survey of Attention Methods and Transformer Models</h3>
+<p>Farhad Mortezapour Shiri; Fateme Memar; Maryam Parhizgar</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07131-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07131-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07131-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>What is Attention Mechanism? A Comprehensive Survey of Attention Methods and Transformer Models</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07131-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07131-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-002">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>The Unreasonable Effectiveness of Randomized Representations in Online Continual Graph Learning</h3>
+<p>Giovanni Donghi; Daniele Zambon; Luca Pasa; Cesare Alippi; Nicolò Navarin</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07128-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07128-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07128-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>The Unreasonable Effectiveness of Randomized Representations in Online Continual Graph Learning</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07128-5 · 摘要来源：账本已存摘要</p><p class="abstract-body">Catastrophic forgetting is one of the main obstacles for Online Continual Graph Learning (OCGL), where nodes arrive one by one, distribution drifts may occur at any time and offline training on task-specific subgraphs is not feasible. In this work, we explore a surprisingly simple yet highly effective approach for OCGL: we use a fixed, randomly initialized encoder to generate robust and expressive node embeddings by aggregating neighborhood information, training online only a lightweight classifier. By freezing the encoder, we eliminate drifts of the representation parameters, a key source of forgetting, obtaining embeddings that are both expressive and stable. When evaluated across several OCGL benchmarks, despite its simplicity and lack of memory buffer, this approach yields consistent gains over state-of-the-art methods, with surprising improvements of up to 30% and performance often approaching that of the joint offline-training upper bound. These results suggest that in OCGL, catastrophic forgetting can be minimized without complex replay or regularization by embracing architectural simplicity and stability.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07128-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-003">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>A Hypernetwork Framework for Data-Free Unlearning and Continual Learning</h3>
+<p>Sayanta Adhikari; Vishnuprasadh Kumaravelu; P. K. Srijith</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07125-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07125-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07125-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Hypernetwork Framework for Data-Free Unlearning and Continual Learning</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07125-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07125-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-004">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>ReliFuse: Reliability-Calibrated Posterior Fusion for Histological Vessel Segmentation</h3>
+<p>Truong P. Le; Truong N. Nguyen; Vinh Le H. Tran; Tram T. Doan; Binh T. Nguyen; Son T. Huynh</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07154-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07154-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07154-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>ReliFuse: Reliability-Calibrated Posterior Fusion for Histological Vessel Segmentation</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07154-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07154-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-005">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Distribution-Free Deviation Bounds and the Role of Domain Knowledge in Learning via Model Selection with Cross-Validation Risk Estimation</h3>
+<p>Diego Marcondes; Claudia Peixoto</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07150-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07150-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07150-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Distribution-Free Deviation Bounds and the Role of Domain Knowledge in Learning via Model Selection with Cross-Validation Risk Estimation</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07150-7 · 摘要来源：账本已存摘要</p><p class="abstract-body">Cross-validation is one of the most widely used tools for risk estimation and model selection in statistics and machine learning, yet its theoretical properties when embedded in a learning procedure remain insufficiently understood. This paper develops a general, distribution-free framework for learning via model selection with cross -validation risk estimation within classical statistical learning theory. We establish VC dimension-based deviation bounds for the entire learning pipeline, providing detailed proofs for both bounded and unbounded loss functions, the latter requiring a novel extension of existing results. A central focus of the analysis is how the structure of the collection of candidate models influences generalization. To this end, we introduce Learning Spaces as collections of candidate models equipped with a partial order whose inclusion structure reflects increasing model complexity. We show how Learning Spaces can be constructed from domain knowledge and analyze how such structural information increases generalization. The framework is illustrated through case studies and a simulation study in high-dimensional linear regression, comparing learning via model selection in two distinct Learning Spaces against ordinary least squares, LASSO, and ridge regression across scenarios of varying alignment between prior knowledge and the true target. The results demonstrate that, when the Learning Space is well-adapted to the target and an efficient search algorithm is employed, learning via model selection can outperform standard methods by orders of magnitude. Through theoretical insights and concrete examples, we provide guidance on selecting the family of candidate models based on domain knowledge to enhance the performance of model selection with cross-validation.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07150-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-006">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>SWIFT-KD: Sliding Window Intelligent Federated Transformer Learning with Knowledge Distillation for Building Energy Prediction</h3>
+<p>Jessica Al Achy; Hassan Harb; Abdallah Makhoul</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07153-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07153-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07153-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>SWIFT-KD: Sliding Window Intelligent Federated Transformer Learning with Knowledge Distillation for Building Energy Prediction</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07153-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07153-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-007">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Equation Discovery for Classification: Finding Interpretable Symbolic Specifications of the Decision Boundary</h3>
+<p>Guus Toussaint; Arno Knobbe</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07156-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07156-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07156-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Equation Discovery for Classification: Finding Interpretable Symbolic Specifications of the Decision Boundary</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07156-1 · 摘要来源：账本已存摘要</p><p class="abstract-body">Equation discovery has traditionally focused on regression, where the goal is to recover analytical expressions that model numerical targets. In this paper, we extend this paradigm to binary classification and introduce Equation Discovery for Classification (EDC), a framework that discovers concise symbolic expressions that explicitly define decision boundaries. EDC searches over a configurable grammar of analytical expressions using beam search and optimises equation parameters via dedicated numerical procedures, yielding a single interpretable equation whose sign determines class membership. We design a redundancy-aware grammar that balances expressivity and tractability, enabling the discovery of non-linear decision boundaries while maintaining interpretability. Through experiments on artificial datasets with known generating mechanisms, we show that EDC reliably reconstructs complex target boundaries, including XOR-like and interaction-driven structures, and adapts effectively under increasing levels of noise. Notably, in noisy settings EDC can outperform the original generating equation by approximating the implicit, noise-shifted decision boundary. On UCI benchmark datasets, EDC consistently outperforms existing symbolic classification approaches and other interpretable baselines, while achieving performance competitive with state-of-the-art black-box models. Although computationally more demanding than standard classifiers, we demonstrate that substantial speed-ups can be achieved with reduced search depth and simplified grammars at minimal loss of predictive performance. Overall, EDC provides a principled bridge between symbolic regression and classification, offering a transparent yet expressive alternative to black-box models for applications where interpretability of the decision boundary is essential.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07156-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-008">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Graph Spectral Client Scheduling for Reliable Federated Learning in Safety-Critical LEO Satellite Networks</h3>
+<p>Bilal Ahmad</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07159-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07159-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07159-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Graph Spectral Client Scheduling for Reliable Federated Learning in Safety-Critical LEO Satellite Networks</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07159-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07159-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-009">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>P$$^{2}$$CE: Model-Agnostic Plausible Pareto-Optimal Counterfactual Explanations</h3>
+<p>Arthur Hendricks Mendes de Oliveira; Giovani Valdrighi; Marcos Medeiros Raimundo</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07143-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07143-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07143-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>P$$^{2}$$CE: Model-Agnostic Plausible Pareto-Optimal Counterfactual Explanations</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07143-6 · 摘要来源：账本已存摘要</p><p class="abstract-body">The increasing use of machine learning algorithms in social applications has raised concerns about fairness and transparency, leading to the development of counterfactual explanations. These explanations support individuals to understand and potentially alter unfavorable decisions in areas such as loan applications, job selections, and more, by providing actionable changes to input features that would lead to a desired outcome. Existing methods often struggle to balance feasibility, plausibility, and computational efficiency. To address this, we introduce P $$^{2}$$ CE, an algorithm for generating plausible Pareto-optimal counterfactual explanations, offering users a diverse set of optimal trade-offs between different notions of feasibility. P $$^{2}$$ CE employs an auxiliary isolation forest outlier detector to ensure that explanations are in accordance with the data distribution and leverages SHAP values to obtain optimal results with short computing times, regardless of the underlying model. Our algorithm was empirically evaluated on three datasets, demonstrating superior performance in terms of both solution quality and computational efficiency compared to related techniques.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07143-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-010">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Learning Without Forgetting for Continual Learning in LLMs Through Adaptive LoRA Ranks</h3>
+<p>Fuli Qiao; Mehrdad Mahdavi</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07145-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07145-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07145-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Learning Without Forgetting for Continual Learning in LLMs Through Adaptive LoRA Ranks</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07145-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07145-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-011">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Robust Multi-label Classification via Preference Learning</h3>
+<p>Vu-Linh Nguyen; Xuan-Truong Hoang; Sébastien Destercke; Cassio de Campos; Van-Nam Huynh</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07147-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07147-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07147-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Robust Multi-label Classification via Preference Learning</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07147-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07147-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-012">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Symbolic Neural Generation with Applications to Lead Discovery in Drug Design</h3>
+<p>Ashwin Srinivasan; Tirtharaj Dash; A. Baskar; Michael Bain; Sanjay Kumar Dey; Mainak Banerjee</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07136-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07136-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07136-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Symbolic Neural Generation with Applications to Lead Discovery in Drug Design</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07136-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07136-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-013">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Generative Distribution Prediction: A Unified Approach to Multimodal Learning</h3>
+<p>Xinyu Tian; Xiaotong Shen</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07148-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07148-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07148-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Generative Distribution Prediction: A Unified Approach to Multimodal Learning</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07148-1 · 摘要来源：账本已存摘要</p><p class="abstract-body">Accurate prediction for multimodal data—including tabular, textual, and visual inputs or outputs—is essential for advancing analytics across diverse application domains. Existing methods often struggle to integrate heterogeneous data types while maintaining strong predictive performance. We introduce Generative Distribution Prediction (GDP), a model-agnostic framework that leverages high-fidelity multimodal synthetic data generated from the conditional distribution of interest, such as via conditional diffusion models, to enhance prediction across both structured and unstructured modalities. GDP is compatible with any expressive generative model and naturally supports transfer learning for domain adaptation. We provide a rigorous theoretical foundation for GDP, establishing statistical guarantees on its predictive accuracy when diffusion models serve as the generative backbone. By estimating the underlying data-generating distribution and enabling loss-adapted risk minimization, GDP delivers accurate point predictions in broad multimodal settings. We empirically validate GDP on a range of supervised learning tasks, including adaptive quantile regression, modal regression, tabular prediction, image captioning, and question answering, demonstrating its versatility and effectiveness across domains.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07148-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-014">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Less is More: Unlabeled Data Selection for Efficient Tabular Self-supervised Learning</h3>
+<p>Sintija Stevanoska; Christian L. Camacho Villalón; Sašo Džeroski; Katharina Dost</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07133-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07133-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07133-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Less is More: Unlabeled Data Selection for Efficient Tabular Self-supervised Learning</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07133-8 · 摘要来源：账本已存摘要</p><p class="abstract-body">Self-supervised learning (SSL) addresses label scarcity by leveraging large amounts of unlabeled data to learn transferable representations. However, pretraining on very large unlabeled datasets can be computationally expensive and may include noisy or unrepresentative samples that degrade learning. In this work, we explore whether selecting a subset of the available unlabeled examples for the pretext task can reduce computational cost while maintaining strong performance of SSL methods for tabular data. In particular, we investigate whether uncertainty-, diversity-, and transport-based criteria can guide this selection and improve representation quality. To this end, we conduct large-scale experiments on 25 tabular benchmark datasets using four SSL models, across varying amounts of labeled data under both biased and unbiased label selection, and multiple strategies for sampling unlabeled data. To better understand when and how unlabeled data subsampling is effective, we relate dataset characteristics to experimentally observed performance gains through a meta-analysis. Our results show that reducing the unlabeled data pool yields substantial computational savings while maintaining, and often even improving, downstream performance.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07133-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-015">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Neural Probabilistic Circuits: Enabling Compositional and Interpretable Predictions Through Logical Reasoning</h3>
+<p>Weixin Chen; Simon Yu; Huajie Shao; Lui Sha; Han Zhao</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07118-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07118-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07118-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Neural Probabilistic Circuits: Enabling Compositional and Interpretable Predictions Through Logical Reasoning</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07118-7 · 摘要来源：账本已存摘要</p><p class="abstract-body">End-to-end deep neural networks have achieved remarkable success across various domains but are often criticized for their lack of interpretability. While post hoc explanation methods attempt to address this issue, they often fail to accurately represent these black-box models, resulting in misleading or incomplete explanations. To overcome these challenges, we propose an inherently transparent model architecture called Neural Probabilistic Circuits (NPCs), which enable compositional and interpretable predictions through logical reasoning. In particular, an NPC consists of two modules: an attribute recognition model, which predicts probabilities for various attributes, and a task predictor built on a probabilistic circuit, which enables logical reasoning over recognized attributes to make class predictions. To train NPCs, we introduce a three-stage training algorithm comprising attribute recognition, circuit construction, and joint optimization. Moreover, we theoretically demonstrate that an NPC’s error is upper-bounded by a linear combination of the errors from its modules. To further demonstrate the interpretability of NPC, we provide both the most probable explanations and the counterfactual explanations. Empirical results on four benchmark datasets show that NPCs strike a balance between interpretability and performance, achieving results competitive even with those of end-to-end black-box models while providing enhanced interpretability.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07118-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-016">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Morphing-Based Sensitivity Analysis: A Comparative Study of Linear and Non-linear Temporal Transformations in TSC Robustness</h3>
+<p>Antónia Brito; Duarte Folgado; Carlos Soares; Moisés Santos</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07132-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07132-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07132-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Morphing-Based Sensitivity Analysis: A Comparative Study of Linear and Non-linear Temporal Transformations in TSC Robustness</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07132-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07132-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-017">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Imagining Trajectories for Anomaly Detection in Reinforcement Learning from Images</h3>
+<p>Tom Haider; Karsten Roscher; Stephan Günnemann</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07126-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07126-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07126-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Imagining Trajectories for Anomaly Detection in Reinforcement Learning from Images</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07126-7 · 摘要来源：账本已存摘要</p><p class="abstract-body">Detecting anomalous inputs is a critical prerequisite for the safe deployment of reinforcement learning (RL) agents in real-world environments. Although anomaly detection (AD) has been extensively studied in other domains, its application to reinforcement learning remains challenging due to high-dimensional sensory observations and complex temporal dependencies. Existing approaches in this setting are limited and often rely on access to internal representations of trained agents, creating an undesirable coupling between policy and safety mechanisms. In this work, we propose ITRM, a novel approach to anomaly detection in visual reinforcement learning that is fully agent-agnostic and does not require access to policy internals. Our method is based on the observation that deviations from nominal environment dynamics can be identified through discrepancies in the latent representations of a learned world model. Specifically, we leverage predictive components of a recurrent state-space model to generate deterministic latent embeddings that serve as normative references for anomaly detection. Anomalies are detected by comparing predicted latent features against a reference set of nominal embeddings using a similarity-based criterion. Operating in the world model’s latent space allows the detector to capture semantically meaningful deviations. Extensive empirical evaluations and ablation studies demonstrate that the proposed approach achieves strong detection performance. On the Anomaly-Gym benchmark, our method outperforms existing baselines, achieving an average AUROC of 0.853 and an FPR95 of 0.279.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07126-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-018">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Certainty-Aware Partition and Sufficient Utilization of Noisy Samples</h3>
+<p>Jia Zhang; Gaoxia Jiang; Senyu Hou; Haijun Zhang; Wenjian Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07138-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07138-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07138-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Certainty-Aware Partition and Sufficient Utilization of Noisy Samples</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07138-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07138-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-019">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Probing Spatial Robustness in OCR-Dependent Document Understanding: Adversarial Attacks on Bounding Box Metadata Across Layout-Aware Architectures</h3>
+<p>Dong Nguyen Tien; Dung D. Le; Dang Nguyen Hoang; Hoang Vu Viet; Vinh Nguyen Thanh; Minh Nguyen Anh</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07087-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07087-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07087-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Probing Spatial Robustness in OCR-Dependent Document Understanding: Adversarial Attacks on Bounding Box Metadata Across Layout-Aware Architectures</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07087-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07087-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-020">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Federated Learning for Large Language Models: Opportunities, Challenges, and Open Research Directions</h3>
+<p>Fatiha Ait Baali; Chaima Lhasnaoui; Addi Ait-Mlouk; Tarik Agouti</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07142-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07142-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07142-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Federated Learning for Large Language Models: Opportunities, Challenges, and Open Research Directions</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07142-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07142-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-021">
+<p class="kicker">Machine Learning · FORMAL_ISSUE</p>
+<h3>Improving GraphRAG with Multi-hop Knowledge Graph Completion on the Example of the Telecommunications Domain</h3>
+<p>Aleksei Golovin; Nataly Zhukova; Tianxing Man</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07141-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07141-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07141-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Improving GraphRAG with Multi-hop Knowledge Graph Completion on the Example of the Telecommunications Domain</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07141-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07141-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-022">
+<p class="kicker">Machine Learning · FORMAL_ASSIGNMENT</p>
+<h3>Instruction Learning Paradigms: A Dual Perspective on White-Box and Black-Box LLMs</h3>
+<p>Yanwei Ren; Liu Liu; Baosheng Yu; Jiayan Qiu; Quan Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07137-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07137-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07137-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Instruction Learning Paradigms: A Dual Perspective on White-Box and Black-Box LLMs</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07137-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07137-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-023">
+<p class="kicker">Machine Learning · FORMAL_ASSIGNMENT</p>
+<h3>Modeling Soft Intervention Effects for Implicit Causal Representation Learning</h3>
+<p>Shayan Shirahmad Gale Bagi; Zahra Gharaee; Oliver Schulte; Mark Crowley</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07144-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07144-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07144-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Modeling Soft Intervention Effects for Implicit Causal Representation Learning</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07144-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07144-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-053-2026v115i9-024">
+<p class="kicker">Machine Learning · FORMAL_ASSIGNMENT</p>
+<h3>Reinforcement Learning Pruning with Dynamic Reward Function and Joint Selecting Mechanism</h3>
+<p>Rui Cai; Yixin Zhao</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I9</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07135-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07135-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07135-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Reinforcement Learning Pruning with Dynamic Reward Function and Joint Selecting Mechanism</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07135-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07135-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在年登记</h2>
+<p>本批登记网络优先/未来期/Early Access 发现 <strong>82</strong> 条（REG-023 未来期 V30-I2、REG-053 在编 I10、REG-083 Crossref Early-like）。上述条目不作为完整期次证据。</p><article class="paper" id="of-reg-023-001">
+<p class="kicker">Geoinformatica · FUTURE_ISSUE</p>
+<h3>Towards city information modeling: a distributed framework for geo-referencing 3D models in GIS</h3>
+<p>Zhenpeng Han; Yukang Wang; Xiaoping Zhou; Weisong Zhang; Pingying Hou; Penghui Cao</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10707-026-00594-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00594-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10707-026-00594-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Towards city information modeling: a distributed framework for geo-referencing 3D models in GIS</strong></p><p class="abstract-meta">期刊：Geoinformatica · DOI：10.1007/s10707-026-00594-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00594-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-023-002">
+<p class="kicker">Geoinformatica · FUTURE_ISSUE</p>
+<h3>K Nearest neighbor join algorithms for spatial data using compact and plain data structures in main memory</h3>
+<p>Guillermo de Bernardo; Miguel R. Penabad; Antonio Corral; Michael Vassilakopoulos; Nieves R. Brisaboa</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10707-026-00591-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00591-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10707-026-00591-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>K Nearest neighbor join algorithms for spatial data using compact and plain data structures in main memory</strong></p><p class="abstract-meta">期刊：Geoinformatica · DOI：10.1007/s10707-026-00591-1 · 摘要来源：账本已存摘要</p><p class="abstract-body">The K Nearest Neighbors Query ( K NNQ) is a fundamental distance-based query with applications in Geographic Information Systems (GIS) and many other domains. The K Nearest Neighbors Join Query ( K NNJQ) combines K NNQ with the join operation to find the K nearest neighbors from a dataset P to every object in another dataset Q . Due to the large number of distance computations involved, K NNJQ is an expensive operation that poses a challenge for in-memory systems. In this paper, we propose and evaluate novel in-memory algorithms for K NNQ and K NNJQ using the compact data structure $$k^2$$ -tree. The proposed algorithms exploit hierarchical spatial decomposition together with grouping, pre-processing and progressive pruning techniques. In addition, we develop two new plane-sweep algorithms for K NNQ and K NNJQ, that improve the brute-force algorithms by reducing redundant computations. We conduct an extensive experimental evaluation using real-world spatial datasets to evaluate the performance of our K NNQ and K NNJQ algorithms, comparing them with KD-tree and R*-tree based algorithms. Our results highlight the efficiency of pruning techniques in $$k^2$$ -trees, which reduce distance computations and response time by up to an order of magnitude in K NNJQ, in comparison with the equivalent KD-tree, R*-tree and plane-sweep algorithms.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00591-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-023-003">
+<p class="kicker">Geoinformatica · FUTURE_ISSUE</p>
+<h3>On the applicability of artificial intelligence models to geospatial vector data analysis and exploration</h3>
+<p>Majid Saeedan; Alberto Belussi; Sara Migliorini; Ahmed Eldawy</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10707-026-00587-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00587-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10707-026-00587-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>On the applicability of artificial intelligence models to geospatial vector data analysis and exploration</strong></p><p class="abstract-meta">期刊：Geoinformatica · DOI：10.1007/s10707-026-00587-x · 摘要来源：账本已存摘要</p><p class="abstract-body">Data-driven prediction and decision-making increasingly depend on large-scale data lakes and machine learning (ML) and deep learning (DL) analytics across a wide range of application domains. Nevertheless, although geospatial vector data constitutes a substantial fraction of contemporary datasets, it has remained primarily managed within traditional GIS and database systems and has benefited only to a limited extent from recent advances in artificial intelligence (AI). This limitation has been largely attributable to the intrinsic characteristics of geospatial information, in particular when represented in vector format, like multidimensional spatial coordinates, scale and projection effects, variable-size geometries, and a broad spectrum of spatial operations, which are difficult to reconcile with the fixed-dimensional inputs typically required by DL models. This paper advanced DL-enabled geospatial analytics by enabling AI models and agents to provide native access, interpretation, and query processing over geospatial vector datasets. Rather than proposing novel architectures, we introduced a methodology for leveraging existing DL models by properly encoding both geospatial inputs and the spatial operations to be estimated. We investigated three representation/architecture families: (i) image-like, georeferenced histograms processed with ResNet and UNet, (ii) point- and graph-based variants of PointNet++, and (iii) fixed-length geometry embeddings obtained by extending Poly2Vec combined with a Transformer model. We instantiated these approaches on three representative geospatial operators, spatial synopsis, spatial clustering, and walkability estimation, and evaluated them using synthetic and real-world datasets. The results demonstrated that all three families could achieve high accuracy in specific configurations with distinct trade-offs: graph-based models were most effective for dense data and short-range interactions, whereas image- and vector-based approaches exhibited superior scalability due to fixed-size inputs, and the image-based approach was particularly effective for multi-dataset operations.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00587-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-023-004">
+<p class="kicker">Geoinformatica · FUTURE_ISSUE</p>
+<h3>A reputation-based incentive and allocation model using double auction for mobile crowdsensing</h3>
+<p>Chieh-Yi Hsuan; Yu-Ling Hsueh</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10707-026-00588-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00588-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10707-026-00588-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A reputation-based incentive and allocation model using double auction for mobile crowdsensing</strong></p><p class="abstract-meta">期刊：Geoinformatica · DOI：10.1007/s10707-026-00588-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00588-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-023-005">
+<p class="kicker">Geoinformatica · FUTURE_ISSUE</p>
+<h3>Mobility tokens with routine-aware learning for LLM-based human mobility prediction</h3>
+<p>Chenhao Wang; Qingsen Ge; Nan Hu; Silin Zhou; Lisi Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10707-026-00589-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00589-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10707-026-00589-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mobility tokens with routine-aware learning for LLM-based human mobility prediction</strong></p><p class="abstract-meta">期刊：Geoinformatica · DOI：10.1007/s10707-026-00589-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00589-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-023-006">
+<p class="kicker">Geoinformatica · FUTURE_ISSUE</p>
+<h3>Correction: From satellite to street: a hybrid framework integrating stable diffusion and PanoGAN for consistent cross–view synthesis</h3>
+<p>Khawlah Bajbaa; Abbas Anwar; Muhammad Saqib; Hafeez Anwar; Nabin Sharma; Muhammad Usman</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10707-026-00590-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00590-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10707-026-00590-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Correction: From satellite to street: a hybrid framework integrating stable diffusion and PanoGAN for consistent cross–view synthesis</strong></p><p class="abstract-meta">期刊：Geoinformatica · DOI：10.1007/s10707-026-00590-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00590-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-023-007">
+<p class="kicker">Geoinformatica · FUTURE_ISSUE</p>
+<h3>Agricultural machinery operation mode identification based on a multifiltered graph convolutional neural network with self-learning graph topology</h3>
+<p>Weixin Zhai; Xiaoyu Cheng; Jinming Liu; Jiawen Pan; Caicong Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10707-026-00583-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00583-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10707-026-00583-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Agricultural machinery operation mode identification based on a multifiltered graph convolutional neural network with self-learning graph topology</strong></p><p class="abstract-meta">期刊：Geoinformatica · DOI：10.1007/s10707-026-00583-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00583-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-023-008">
+<p class="kicker">Geoinformatica · FUTURE_ISSUE</p>
+<h3>TIM: trajectory-image-audio multimodal learning for agricultural machinery trajectory time-series classification</h3>
+<p>Zhou Guo; Jiawen Pan; Weixin Zhai</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10707-026-00586-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00586-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10707-026-00586-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>TIM: trajectory-image-audio multimodal learning for agricultural machinery trajectory time-series classification</strong></p><p class="abstract-meta">期刊：Geoinformatica · DOI：10.1007/s10707-026-00586-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00586-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-023-009">
+<p class="kicker">Geoinformatica · FUTURE_ISSUE</p>
+<h3>Diagnosing and mitigating teacher-forced copying in LLM-based POI trajectory generation</h3>
+<p>Qingsen Ge; Nan Hu; Chenhao Wang; Xiaocheng Hu; Lisi Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10707-026-00585-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00585-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10707-026-00585-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Diagnosing and mitigating teacher-forced copying in LLM-based POI trajectory generation</strong></p><p class="abstract-meta">期刊：Geoinformatica · DOI：10.1007/s10707-026-00585-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00585-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-023-010">
+<p class="kicker">Geoinformatica · FUTURE_ISSUE</p>
+<h3>Beyond unimodal metrics: a multimodal evaluation framework for geo-referenced content on social media</h3>
+<p>Ehsaneddin Jalilian; David Hanny; Bernd Resch</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10707-026-00584-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00584-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10707-026-00584-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Beyond unimodal metrics: a multimodal evaluation framework for geo-referenced content on social media</strong></p><p class="abstract-meta">期刊：Geoinformatica · DOI：10.1007/s10707-026-00584-0 · 摘要来源：账本已存摘要</p><p class="abstract-body">Social media platforms generate large volumes of real-time, geo-referenced content during natural hazards, enabling multimodal topic models to uncover latent themes and their spatial organisation. However, the evaluation of such models typically relies on unimodal metrics, primarily semantic coherence, which overlook spatial structure, temporal dynamics, and the practical usefulness of discovered topics. This paper proposes a multidimensional evaluation framework for disaster-related social media analysis that integrates semantic, spatial, temporal, and operational indicators of topic quality. The framework distinguishes between Utility Information Value (UIV), capturing the informational usefulness of topic representations, and Diagnostic Information Value (DIV), capturing the structural and hazard-consistent validity of spatial and spatio-temporal topic patterns. We examine the framework through a comparative benchmarking analysis of multimodal topic models (MultiGraph and JSTTS) alongside a strong unimodal baseline, using eight geo-referenced datasets from X (Twitter) and Bluesky covering earthquakes, floods, hurricanes, and wildfires under a unified experimental setup. Results show that multimodal models achieve higher actionability (up to 0.75), while the unimodal baseline shows greater semantic diversity (up to 0.99). Spatio-temporal interaction varies across hazards (0.07-0.45), and spatial patterns exhibit hazard-dependent structure. UIV and DIV are strongly correlated (Pearson $$r = 0.89$$ ). However, mean performance remains similar across models (UIV $$\approx$$ 0.49-0.50, DIV $$\approx$$ 0.52-0.53), with no statistically significant differences ( $$p&amp;gt; 0.05$$ ), indicating that performance differences are moderate and dataset-dependent rather than consistently model-driven.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00584-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-023-011">
+<p class="kicker">Geoinformatica · FUTURE_ISSUE</p>
+<h3>$$k^2$$-MS: A compact data structure for raster datasets</h3>
+<p>Miguel Saavedra; Gilberto Gutiérrez; Guillermo de Bernardo</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10707-026-00578-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00578-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10707-026-00578-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>$$k^2$$-MS: A compact data structure for raster datasets</strong></p><p class="abstract-meta">期刊：Geoinformatica · DOI：10.1007/s10707-026-00578-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00578-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-023-012">
+<p class="kicker">Geoinformatica · FUTURE_ISSUE</p>
+<h3>A scalable AIS-based model for vessel-generated underwater noise</h3>
+<p>Giulia Rovinelli; Esteban Zimányi; Marta Simeoni; Davide Rocchesso; Alessandra Raffaetà</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10707-026-00580-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00580-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10707-026-00580-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A scalable AIS-based model for vessel-generated underwater noise</strong></p><p class="abstract-meta">期刊：Geoinformatica · DOI：10.1007/s10707-026-00580-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10707-026-00580-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Geoinformatica 另有 2 条网络优先/未来期/Early Access 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-053-001">
+<p class="kicker">Machine Learning · IN_PROGRESS_ISSUE</p>
+<h3>Cortex: A Retrieval-Augmented Framework for Career-Aligned Learning Paths</h3>
+<p>Vatsala Ramachandran; Manasvi Vedanta; Sonia Khetarpaul</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07160-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07160-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07160-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Cortex: A Retrieval-Augmented Framework for Career-Aligned Learning Paths</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07160-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07160-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-053-002">
+<p class="kicker">Machine Learning · IN_PROGRESS_ISSUE</p>
+<h3>Sequential Estimation of Remaining Useful Life Through VAE-Based Deep Reinforcement Learning With Reward Shaping</h3>
+<p>Hima Soni; Vibha Patel; Arnav Modanwal; Hepil Italiya; Aastha Patel</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07152-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07152-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07152-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Sequential Estimation of Remaining Useful Life Through VAE-Based Deep Reinforcement Learning With Reward Shaping</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07152-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07152-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-053-003">
+<p class="kicker">Machine Learning · IN_PROGRESS_ISSUE</p>
+<h3>Incremental Graph Construction Enables Robust Spectral Clustering of Texts</h3>
+<p>Marko Pranjić; Boshko Koloski; Nada Lavrač; Senja Pollak; Marko Robnik-Šikonja</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07158-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07158-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07158-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Incremental Graph Construction Enables Robust Spectral Clustering of Texts</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07158-z · 摘要来源：账本已存摘要</p><p class="abstract-body">Neighborhood graphs over document embeddings are a common component of text-mining pipelines, supporting topic discovery, deduplication, semi-supervised label propagation, and retrieval-index construction, and they are a critical but fragile step in spectral clustering of text embeddings. On realistic text datasets, standard k -NN graphs can contain many disconnected components at practical sparsity levels (small k ), making spectral clustering degenerate and sensitive to hyperparameters. We introduce an incremental k -NN graph construction algorithm in which each new node is linked to its k nearest previously inserted nodes; this guarantees a connected graph for any k . We provide an inductive proof of connectedness and discuss implications for incremental updates when new documents arrive. We validate the approach on spectral clustering of SentenceTransformer embeddings using Laplacian eigenmaps across eleven sentence- and paragraph-level clustering tasks drawn from six dataset sources in the Massive Text Embedding Benchmark. Compared to standard k -NN graphs, our method outperforms in the low- k regime where disconnected components are prevalent, and matches standard k -NN at larger k . The advantage at low k persists when the standard k -NN graph is repaired with a minimum spanning tree, while our construction avoids the dense distance matrix an exact repair requires and is consequently far cheaper to build, in both time and memory. The code is available on https://github.com/bkolosk1/incremental_clustering_graphs.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07158-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-053-004">
+<p class="kicker">Machine Learning · IN_PROGRESS_ISSUE</p>
+<h3>On the Minimization of Graph Counterfactual Explanations: Theory and a Local Bounded Search Algorithm</h3>
+<p>Rodrigo García; Mario Alfonso Prado-Romero; Francesco Gullo; Giovanni Stilo</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07157-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07157-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07157-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>On the Minimization of Graph Counterfactual Explanations: Theory and a Local Bounded Search Algorithm</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07157-0 · 摘要来源：账本已存摘要</p><p class="abstract-body">Graph counterfactual explainability (GCE) addresses the interpretability limitations of opaque machine learning models on graph-structured data by producing graph counterfactuals (GCs): alternative graphs that remain maximally similar to a given instance while inducing a different model prediction. State-of-the-art GCE methods usually follow a generate-and-minimize pipeline: first, generate a valid counterfactual, then refine it to be closer to the original graph. While generation is well-studied, minimization still lacks a formal definition, complexity analysis, and general-purpose algorithms; existing solutions are either simple random edge-swap heuristics or tightly coupled to specific generators, limiting effectiveness and generality. In this work, we address a key gap in GCE by providing the first principled study of minimizing a given valid graph counterfactual. We formalize the task as an optimization problem and prove it is NP-hard. We then propose a decoupled generate-and-minimize framework and introduce Local Bounded Search (LBS), a model-agnostic heuristic that refines any valid counterfactual via constrained structural and attribute edits to reduce dissimilarity while preserving validity. Across nine synthetic and real-world datasets (molecular, biomedical, social), LBS reduces structural edit distance by up to 98% from the initial counterfactual and consistently outperforms existing refinement heuristics.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07157-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-053-005">
+<p class="kicker">Machine Learning · IN_PROGRESS_ISSUE</p>
+<h3>Similarity-Promoting Resilient Adaptive Aggregation in Peer-to-Peer Machine Learning</h3>
+<p>Chandreyee Bhowmick; Xenofon Koutsoukos</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07162-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07162-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07162-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Similarity-Promoting Resilient Adaptive Aggregation in Peer-to-Peer Machine Learning</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07162-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07162-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-053-006">
+<p class="kicker">Machine Learning · IN_PROGRESS_ISSUE</p>
+<h3>Stay Rational, Resist Illusions: De-biasing Source-Free Domain Adaptation with CLIP-Verified Pseudo-Source Domain</h3>
+<p>Qing Tian; Yongjiang Liu; Keyang Cheng; Weihua Ou; Jianping Gou</p>
+<dl>
+<div><dt>卷期</dt><dd>V115 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10994-026-07163-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07163-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10994-026-07163-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Stay Rational, Resist Illusions: De-biasing Source-Free Domain Adaptation with CLIP-Verified Pseudo-Source Domain</strong></p><p class="abstract-meta">期刊：Machine Learning · DOI：10.1007/s10994-026-07163-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10994-026-07163-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-083-001">
+<p class="kicker">IEEE Transactions on Evolutionary Computation · EARLY_ACCESS</p>
+<h3>Sexual Selection in Genetic Programming: Advertising Good Genes</h3>
+<p>José Maria Simões; Nuno Lourenço; Penousal Machado</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tevc.2026.3691878</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3691878" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3691878" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Sexual Selection in Genetic Programming: Advertising Good Genes</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Evolutionary Computation · DOI：10.1109/tevc.2026.3691878</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3691878" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-083-002">
+<p class="kicker">IEEE Transactions on Evolutionary Computation · EARLY_ACCESS</p>
+<h3>Visual Analysis of Dynamic Multi-objective Optimisation Problems and Algorithms</h3>
+<p>Jose Gustavo S. Paiva; Miqing Li; Leandro L. Minku</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tevc.2026.3712491</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3712491" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3712491" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Visual Analysis of Dynamic Multi-objective Optimisation Problems and Algorithms</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Evolutionary Computation · DOI：10.1109/tevc.2026.3712491</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3712491" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-083-003">
+<p class="kicker">IEEE Transactions on Evolutionary Computation · EARLY_ACCESS</p>
+<h3>AutoPSO: A Meta-Framework for Automated Particle Swarm Optimization</h3>
+<p>Xinmeng Yu; Jiaxin Gao; Jianguo Zhang; Dongmei Jiang; Ran Cheng</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tevc.2026.3718908</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3718908" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3718908" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>AutoPSO: A Meta-Framework for Automated Particle Swarm Optimization</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Evolutionary Computation · DOI：10.1109/tevc.2026.3718908</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3718908" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-083-004">
+<p class="kicker">IEEE Transactions on Evolutionary Computation · EARLY_ACCESS</p>
+<h3>Top-K-Aware Set Optimization for Component-Sharing Multiobjective Optimization</h3>
+<p>Liang Zhao; Peng Wang; Jiangtao Shen; Luziwei Leng; Zhichao Lu; Qingfu Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tevc.2026.3678952</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3678952" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3678952" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Top-K-Aware Set Optimization for Component-Sharing Multiobjective Optimization</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Evolutionary Computation · DOI：10.1109/tevc.2026.3678952</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3678952" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-083-005">
+<p class="kicker">IEEE Transactions on Evolutionary Computation · EARLY_ACCESS</p>
+<h3>Multitree Genetic Programming with Behavioral Semantics for Large-Scale Dynamic Air Traffic Flow Management</h3>
+<p>Tong Guo; Yi Mei; Mengjie Zhang; Hui Ding; Wenbo Du</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tevc.2026.3691342</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3691342" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3691342" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multitree Genetic Programming with Behavioral Semantics for Large-Scale Dynamic Air Traffic Flow Management</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Evolutionary Computation · DOI：10.1109/tevc.2026.3691342</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3691342" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-083-006">
+<p class="kicker">IEEE Transactions on Evolutionary Computation · EARLY_ACCESS</p>
+<h3>Dynamic Escaping Population Driven Evolutionary Algorithm for Multi-objective Optimization Problems with Deceptive Constraints</h3>
+<p>Xinyu Zhou; Weifeng Lin; KunJie Yu; Kangjia Qiao</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tevc.2026.3697492</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3697492" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3697492" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dynamic Escaping Population Driven Evolutionary Algorithm for Multi-objective Optimization Problems with Deceptive Constraints</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Evolutionary Computation · DOI：10.1109/tevc.2026.3697492</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3697492" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-083-007">
+<p class="kicker">IEEE Transactions on Evolutionary Computation · EARLY_ACCESS</p>
+<h3>CoDE-GAN: Consistency Diffusion Evolutionary Algorithm Based Neural Architecture Search for Generative Adversarial Networks</h3>
+<p>Yongtai Liu; Rong Fu; Eunchong Kim; Hyoung-goo Kanga</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tevc.2026.3698189</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3698189" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3698189" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>CoDE-GAN: Consistency Diffusion Evolutionary Algorithm Based Neural Architecture Search for Generative Adversarial Networks</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Evolutionary Computation · DOI：10.1109/tevc.2026.3698189</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3698189" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-083-008">
+<p class="kicker">IEEE Transactions on Evolutionary Computation · EARLY_ACCESS</p>
+<h3>Frequency-domain Assisted Multitask Differential Evolution Algorithm for Operational Optimization of Coal Mine Integrated Energy Systems</h3>
+<p>Weidong Wu; Yong Zhang; Canyun Dai; Jun Ma; Xiaoyan Sun; Dunwei Gong; Ali Wagdy Mohamed</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tevc.2026.3656445</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3656445" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3656445" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Frequency-domain Assisted Multitask Differential Evolution Algorithm for Operational Optimization of Coal Mine Integrated Energy Systems</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Evolutionary Computation · DOI：10.1109/tevc.2026.3656445</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3656445" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-083-009">
+<p class="kicker">IEEE Transactions on Evolutionary Computation · EARLY_ACCESS</p>
+<h3>Adaptive Feasible Region Estimation via Solution Space Partitioning for Constrained Optimization</h3>
+<p>Mengli Shan; Changhe Li; Yuhan Liu; Xiaobo Liu; Shengxiang Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tevc.2026.3685228</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3685228" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3685228" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Adaptive Feasible Region Estimation via Solution Space Partitioning for Constrained Optimization</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Evolutionary Computation · DOI：10.1109/tevc.2026.3685228</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3685228" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-083-010">
+<p class="kicker">IEEE Transactions on Evolutionary Computation · EARLY_ACCESS</p>
+<h3>Cross-Phase Knowledge Transfer via Variable Space Alignment for Expensive Incremental Optimization</h3>
+<p>Fei Li; Xun Huang; Cuie Yang; Yuanchao Liu; Jinliang Ding</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tevc.2026.3684126</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3684126" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3684126" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Cross-Phase Knowledge Transfer via Variable Space Alignment for Expensive Incremental Optimization</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Evolutionary Computation · DOI：10.1109/tevc.2026.3684126</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3684126" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-083-011">
+<p class="kicker">IEEE Transactions on Evolutionary Computation · EARLY_ACCESS</p>
+<h3>A Theoretically Guaranteed Evolutionary Algorithm with Dual-Knowledge Integration for Subset Selection</h3>
+<p>Lei Zhang; Simin Xia; Zhanpeng Wang; Haipeng Yang; Fan Cheng</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tevc.2026.3702868</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3702868" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3702868" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Theoretically Guaranteed Evolutionary Algorithm with Dual-Knowledge Integration for Subset Selection</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Evolutionary Computation · DOI：10.1109/tevc.2026.3702868</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3702868" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-083-012">
+<p class="kicker">IEEE Transactions on Evolutionary Computation · EARLY_ACCESS</p>
+<h3>Enabling Population-Based Architectures for Neural Combinatorial Optimization</h3>
+<p>Andoni I. Garmendia; Josu Ceberio; Alexander Mendiburu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tevc.2026.3730516</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3730516" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-23 12:15 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3730516" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-23 12:15 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Enabling Population-Based Architectures for Neural Combinatorial Optimization</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Evolutionary Computation · DOI：10.1109/tevc.2026.3730516</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tevc.2026.3730516" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>IEEE Transactions on Evolutionary Computation 另有 50 条网络优先/未来期/Early Access 发现已写入账本，页内从略。</p>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>Geoinformatica（Springer Nature Link）：Playwright 可读；基线 V30-I1；未来期 V30-I2（Dec 2026）仅登记；Online First 页无 2026 新文。</li>
+<li>Machine Learning（Springer Nature Link）：Playwright 可读；claim V115-I9；I10 在编累积仅登记。</li>
+<li>IEEE TEVC（IEEE Xplore）：Recent/All Issues/Current 可读；Early Access 可达；无新正式期 I5。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>042c5c3a-36d1-4f9d-b526-a947447c9ac8</code></li>
+<li>Commit ID：<code>DAILY-20260923-120619-cf405523</code></li>
+<li>Brief ID：<code>DAILY-20260923</code></li>
+<li>去重抑制：0 · 增量复核：0 · 对账任务：4 · 官方源失败计数：0</li>
+<li>正式期刊：REG-023、REG-053、REG-083</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/09/index.html">返回 2026-09 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
+</body></html>
