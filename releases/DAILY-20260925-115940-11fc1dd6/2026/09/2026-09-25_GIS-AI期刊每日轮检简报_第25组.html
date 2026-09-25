@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 25 组 · 2026-09-25</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/09/index.html">9 月</a> / 第 25 组
+</nav>
+<p class="meta">逻辑日期 2026-09-25 · 完成时间 2026-09-25 12:08 CST · 任务 ROUTINE-20260925-G25 · Commit <code>DAILY-20260925-115940-11fc1dd6</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 25 组</h1>
+<p class="lede">第 25 组共检查 3 种正式期刊；确认 1 个新完整期次、9 篇正式期次论文、0 篇既有网络优先记录正式归期，以及 136 条新的网络优先/未来期/Early Access 发现。Journal of Combinatorial Optimization 确认新完整期 2026-V52-I2（I3 十月未来期已出现故触发）；ISPRS JPRS 与 IJAIT 官方源 403，降级完成，RSS/Crossref 仅作 OF/未来卷或候选期发现、不 claim 新完整期。其中 2 种期刊因官方源阻断降级完成。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>3</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>1</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>9</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>136</strong><span>网络首发/在年</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">新期次</span> <strong>Journal of Combinatorial Optimization</strong> — 相对既有完整期 V52-I1 新确认完整期 V52-I2（9 篇）；I3（Oct）未来期已列出，Crossref 7 篇仅登记不 claim。 <span class="evidence"><a href="https://link.springer.com/journal/10878/volumes-and-issues/52-2" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-09-25 12:08 CST · 官方目录</small></span></li><li><span class="tag">官方源阻断</span> <strong>ISPRS Journal of Photogrammetry and Remote Sensing</strong> — ScienceDirect Issues/卷页/AIP 均 403；RSS+Crossref 仅登记 OF/未来卷，不 claim V237+。 <span class="evidence"><a href="https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing/issues" rel="noopener noreferrer">证据</a><small>www.sciencedirect.com · 2026-09-25 12:08 CST · 官方目录</small></span></li><li><span class="tag">官方源阻断</span> <strong>International Journal on Artificial Intelligence Tools</strong> — World Scientific TOC/Online Ready Cloudflare 403；Crossref I4/I5 与 Online Ready 仅登记不 claim。 <span class="evidence"><a href="https://www.worldscientific.com/toc/ijait/35/03" rel="noopener noreferrer">证据</a><small>www.worldscientific.com · 2026-09-25 12:08 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-025<br><strong>ISPRS Journal of Photogrammetry and Remote Sensing</strong></td><td>2026-V236</td><td>0</td><td>0</td><td>0</td><td>98</td><td><code>OFFICIAL_403</code></td><td>DEGRADED</td></tr><tr><td>REG-055<br><strong>International Journal on Artificial Intelligence Tools</strong></td><td>2026-V35-I3</td><td>0</td><td>0</td><td>0</td><td>31</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr><tr><td>REG-085<br><strong>Journal of Combinatorial Optimization</strong></td><td>2026-V52-I2</td><td>1</td><td>9</td><td>0</td><td>7</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-09-25_GIS-AI期刊每日摘要_第25组.png" width="1600" height="900" alt="第25组每日摘要图：3刊，新完整期1，正式文9">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-085-2026-v52-i2"><h3>Journal of Combinatorial Optimization · 2026-V52-I2</h3><p>官方 Springer Volumes & Issues 确认 V52-I2（September 2026）9 篇；Crossref DOI 数一致；因 I3（October 2026）已出现，按规则 claim I2。既有完整期 V52-I1 已 briefed，不重复。gate-issue=<code>NEW_ISSUE</code>。</p><p><span class="evidence"><a href="https://link.springer.com/journal/10878/volumes-and-issues/52-2" rel="noopener noreferrer">官方期次目录</a><small>link.springer.com · 2026-09-25 12:08 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>9</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-085-2026v52i2-001">
+<p class="kicker">Journal of Combinatorial Optimization · FORMAL_ISSUE</p>
+<h3>Parallel-machine scheduling with weighted earliness-tardiness and optional job rejection</h3>
+<p>Ren-Xia Chen; Shi-Sheng Li; Cheng-Wen Jiao</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01462-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01462-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Parallel-machine scheduling with weighted earliness-tardiness and optional job rejection</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01462-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01462-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-085-2026v52i2-002">
+<p class="kicker">Journal of Combinatorial Optimization · FORMAL_ISSUE</p>
+<h3>Directed star packing: Tractability, inapproximability, and approximation algorithms</h3>
+<p>Yue Sun; Zhikai Chen; Mingyang Gong; Guohui Lin; Dachuan Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01466-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01466-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Directed star packing: Tractability, inapproximability, and approximation algorithms</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01466-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01466-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-085-2026v52i2-003">
+<p class="kicker">Journal of Combinatorial Optimization · FORMAL_ISSUE</p>
+<h3>A short proof and experimental study of the approximation algorithm for label s-t cut</h3>
+<p>Peng Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01463-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01463-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A short proof and experimental study of the approximation algorithm for label s-t cut</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01463-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01463-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-085-2026v52i2-004">
+<p class="kicker">Journal of Combinatorial Optimization · FORMAL_ISSUE</p>
+<h3>Total-neighbor-distinguishing coloring by sums of fractals of generalized Sierpiński graphs</h3>
+<p>Miguel Del-Rio-Palma; Carlos Arturo Rodriguez Palma; Simone Dantas</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01447-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01447-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Total-neighbor-distinguishing coloring by sums of fractals of generalized Sierpiński graphs</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01447-y · 摘要来源：账本已存摘要</p><p class="abstract-body">The Total-Neighbor-Distinguishing Index by Sums of a graph G ( $$\textrm{TNDI}_{\sum }(G)$$ TNDI ∑ ( G ) ) is the smallest positive integer for which there exists a total coloring such that the sum of the color assigned to a vertex and the colors of all its incident edges is distinct, for every pair of adjacent vertices u and w . Pilsniak and Wozniak (2015) introduced this notion and conjectured that $$\textrm{TNDI}_{\sum }$$ TNDI ∑ is less than or equal to the maximum degree plus 3. In 2011, Gravier et al. introduced the concept of generalized Sierpiński graphs, denoted S ( n , G ), which extends the notion of Sierpiński graphs given by Hinz et al. (2017) by replacing the complete graph in their definition with any graph G . In this paper, we verify that S ( n , G ) graphs satisfy the $$\textrm{TNDI}_{\sum }$$ TNDI ∑ Conjecture, when G is a bipartite graph, a path, a cycle, a star or a complete graph. Furthermore, we determine the $$\textrm{TNDI}_{\sum }(S(n,G))$$ TNDI ∑ ( S ( n , G ) ) when G is a complete bipartite, a path, a cycle, a star or a regular bipartite graph. Remarkably, these colorings also satisfy the corresponding conjecture for the Adjacent-Vertex-Distinguishing Total Coloring (AVDTC), and the $$\textrm{TNDI}_{\sum }$$ TNDI ∑ of these graphs coincides with their AVDTC chromatic number. Moreover, we show that the $$\textrm{TNDI}_{\sum }$$ TNDI ∑ Conjecture is satisfied for the graph classes of the regularizations $$+S_p^n$$ + S p n and $$++S_p^n$$ + + S p n of Sierpiński graphs $$S_p^n$$ S p n , which contributes to proving that the conjecture holds for their respective fractals as well.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01447-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-085-2026v52i2-005">
+<p class="kicker">Journal of Combinatorial Optimization · FORMAL_ISSUE</p>
+<h3>Shortest longest-path graph orientations</h3>
+<p>Yuichi Asahiro; Jesper Jansson; Avraham A. Melkman; Eiji Miyano; Hirotaka Ono; Quan Xue; Shay Zakov</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01438-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01438-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Shortest longest-path graph orientations</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01438-z · 摘要来源：账本已存摘要</p><p class="abstract-body">We consider a graph orientation problem that can be viewed as a generalization of Minimum Graph Coloring. Our problem takes as input an undirected graph $$G = (V, E)$$ G = ( V , E ) in which every edge $$\{u, v\} \in E$$ { u , v } ∈ E has two (potentially different and not necessarily positive) weights representing the lengths of its two possible directions ( u , v ) and ( v , u ), and asks for an orientation, i.e., an assignment of a direction to each edge of G , such that the length of a longest simple directed path in the resulting directed graph is minimized. A longest path in a graph is not always a maximal path when some edges have negative lengths, so the problem has two variants depending on whether all simple directed paths or maximal simple directed paths only are taken into account in the definition. We prove that the problems are NP-hard to approximate even if restricted to subcubic planar graphs, and develop fast polynomial-time algorithms for both problem variants for three classes of graphs: path graphs, cycle graphs, and star graphs.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01438-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-085-2026v52i2-006">
+<p class="kicker">Journal of Combinatorial Optimization · FORMAL_ISSUE</p>
+<h3>Perfect hierarchical matchings in graphs</h3>
+<p>Ian G. Ludden; Ellen Veomett; Sheldon H. Jacobson</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01458-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01458-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Perfect hierarchical matchings in graphs</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01458-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01458-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-085-2026v52i2-007">
+<p class="kicker">Journal of Combinatorial Optimization · FORMAL_ISSUE</p>
+<h3>Uncertainty-aware multi-objective optimization for rebalancing bike shared systems</h3>
+<p>Diego Daniel Pedroza-Perez; Gabriel Luque; Sergio Nesmachnow; Jamal Toutouh</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01460-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01460-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Uncertainty-aware multi-objective optimization for rebalancing bike shared systems</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01460-1 · 摘要来源：账本已存摘要</p><p class="abstract-body">Overnight rebalancing in dock-based bike-sharing systems requires routing a limited fleet of trucks before user activity begins. This article formulates static rebalancing problem under stochastic demand uncertainty as a bi-objective combinatorial optimization problem that selects truck routes and visited stations. The first objective minimizes total travel distance. The second objective minimizes scenario-weighted unmet demand under a finite set of demand scenarios derived from historical station-status data. A deterministic recourse evaluation simulates truck loads and station inventories along each route and computes unmet demand for visited and unvisited stations. The article applies two multi-objective evolutionary algorithms, NSGA-II and MOEA/D, using a permutation–partition encoding and relocate-based operators that implement a 1–0 relocate neighborhood between routes. A roulette-wheel-based relocation operator (BB2) biases move selection by the induced change in route distance. Experiments on the Barcelona Bicing network with 518 stations and on clustered subinstances show that NSGA-II attains higher hypervolume and larger non-dominated sets, whereas MOEA/D attains lower runtime; an ablation analysis shows that BB2 improves coverage and proximity indicators.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01460-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-085-2026v52i2-008">
+<p class="kicker">Journal of Combinatorial Optimization · FORMAL_ASSIGNMENT</p>
+<h3>Branch and price algorithm for the stop number minimization problem</h3>
+<p>Victor Nascimento; Luidi Simonetti</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01459-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01459-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Branch and price algorithm for the stop number minimization problem</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01459-8 · 摘要来源：账本已存摘要</p><p class="abstract-body">The Stop Number Minimization Problem (SNMP), inspired by an autonomous vehicle service from France, arises when a homogeneous fleet of autonomous vehicles transports cargo and personnel across a circuit of stations. The objective is to satisfy all client requests while minimizing the total number of pickup/dropoff stops made by the vehicles, without violating their maximum capacity. We modeled the SNMP as a Pickup and Delivery Problem on an expanded graph with an ordered structure and solved it via a branch-and-price algorithm. The pricing problem was solved using a labeling algorithm with two distinct dominance rules. Additionally, three types of path elimination were introduced in the pricing algorithm. When branching, two strategies were implemented: SOS and Ryan-Foster. We tested our approach in a setting where each vehicle may perform up to 4 laps on the circuit. Computational experiments indicate that this approach solves instances of equivalent size to those tested in previous works in less time. Furthermore, our approach solved instances with up to 80 requests in the single-lap setting, contrasting previous works that solved instances with up to 50 requests.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01459-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-085-2026v52i2-009">
+<p class="kicker">Journal of Combinatorial Optimization · FORMAL_ASSIGNMENT</p>
+<h3>Maximum linear arrangement: exact algorithms for specific classes of graphs and approximation algorithms for wide classes of graphs</h3>
+<p>Lluís Alemany-Puig; Juan Luis Esteban; Ramon Ferrer-i-Cancho</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I2</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01454-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01454-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Maximum linear arrangement: exact algorithms for specific classes of graphs and approximation algorithms for wide classes of graphs</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01454-z · 摘要来源：账本已存摘要</p><p class="abstract-body">Linear arrangements of graphs are a well-known type of graph labeling and are found in many important computational problems. A linear arrangement is usually defined as a permutation of the n vertices of a graph. An intuitive geometric setting is that of vertices lying on consecutive integer positions in the real line, starting at 1; edges are often drawn as semicircles above the real line. A well-known computational problem is the Minimum Linear Arrangement Problem () where the goal is to find an arrangement that minimizes the sum of edge lengths. In this paper we study the Maximum Linear Arrangement problem (), the counterpart of . We devise a new characterization of maximum arrangements of general graphs, and prove that can be solved for k -regular graphs ( $$k\le 2$$ k ≤ 2 ) in time $$O{\left( n\right) }$$ O n , and for k -linear trees ( $$k\le 2$$ k ≤ 2 ) in time $$O{\left( n\right) }$$ O n . We present two constrained variants of we call and . We prove that the former can be solved in time $$O{\left( n\right) }$$ O n for any connected bipartite graph; the latter can be solved by an algorithm that typically runs in time $$O{\left( n^3\log n\right) }$$ O n 3 log n on unlabeled trees. We show that is a 3/2-approximation algorithm for for trees.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01454-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在年登记</h2>
+<p>本批登记网络优先/未来期/Early Access 发现 <strong>136</strong> 条（REG-025 RSS/Crossref OF、REG-055 Crossref 候选期/Online Ready、REG-085 未来期 I3）。上述条目不作为完整期次证据。</p><article class="paper" id="of-reg-025-001">
+<p class="kicker">ISPRS Journal of Photogrammetry and Remote Sensing · ONLINE_FIRST</p>
+<h3>Depth-guided attenuation compensation for real-time color restoration in deep-sea stereo imaging</h3>
+<p>Qingsheng Liu; Jianjun Miao; Xilin Zhang; Hebo Wang; Zhilei Sun; Zihao Wang; Xuecheng Li; Chao Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V238 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.isprsjprs.2026.05.037</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.05.037" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Depth-guided attenuation compensation for real-time color restoration in deep-sea stereo imaging</strong></p><p class="abstract-meta">期刊：ISPRS Journal of Photogrammetry and Remote Sensing · DOI：10.1016/j.isprsjprs.2026.05.037</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.05.037" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-025-002">
+<p class="kicker">ISPRS Journal of Photogrammetry and Remote Sensing · ONLINE_FIRST</p>
+<h3>BIM-vSLAM: Bridging BIM and visual SLAM with plane-based representation for automated registration and image-based reconstruction</h3>
+<p>Xiao Zhang; Changhao Song; Zhenyu Liang; Zhuoyue Niu; Jiaying Zhang; Jack C.P. Cheng</p>
+<dl>
+<div><dt>卷期</dt><dd>V239 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.isprsjprs.2026.06.026</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.06.026" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>BIM-vSLAM: Bridging BIM and visual SLAM with plane-based representation for automated registration and image-based reconstruction</strong></p><p class="abstract-meta">期刊：ISPRS Journal of Photogrammetry and Remote Sensing · DOI：10.1016/j.isprsjprs.2026.06.026</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.06.026" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-025-003">
+<p class="kicker">ISPRS Journal of Photogrammetry and Remote Sensing · ONLINE_FIRST</p>
+<h3>PVP-adapter: Dual-branch spatial-frequency adaptation for change detection of photovoltaic panels</h3>
+<p>Rui Huang; Jianhua Guo; Huanjing Yue; Xiaoqiang Lu; Jingyu Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V240 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.isprsjprs.2026.07.032</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.07.032" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>PVP-adapter: Dual-branch spatial-frequency adaptation for change detection of photovoltaic panels</strong></p><p class="abstract-meta">期刊：ISPRS Journal of Photogrammetry and Remote Sensing · DOI：10.1016/j.isprsjprs.2026.07.032</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.07.032" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-025-004">
+<p class="kicker">ISPRS Journal of Photogrammetry and Remote Sensing · ONLINE_FIRST</p>
+<h3>Explicit spatial localization and task-adaptive balancing for remote sensing image-text retrieval</h3>
+<p>Chengyu Zheng; Hanzhang Lu; Qianyu Shang; Yong Gao; Jie Nie; Shan Du</p>
+<dl>
+<div><dt>卷期</dt><dd>V241 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.isprsjprs.2026.08.022</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.08.022" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Explicit spatial localization and task-adaptive balancing for remote sensing image-text retrieval</strong></p><p class="abstract-meta">期刊：ISPRS Journal of Photogrammetry and Remote Sensing · DOI：10.1016/j.isprsjprs.2026.08.022</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.08.022" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-025-005">
+<p class="kicker">ISPRS Journal of Photogrammetry and Remote Sensing · ONLINE_FIRST</p>
+<h3>Advancing global urban mapping with multimodal robustness and versatile applications</h3>
+<p>Yuhan Zhou; Qihao Weng</p>
+<dl>
+<div><dt>卷期</dt><dd>V242 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.isprsjprs.2026.08.042</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.08.042" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Advancing global urban mapping with multimodal robustness and versatile applications</strong></p><p class="abstract-meta">期刊：ISPRS Journal of Photogrammetry and Remote Sensing · DOI：10.1016/j.isprsjprs.2026.08.042</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.08.042" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-025-006">
+<p class="kicker">ISPRS Journal of Photogrammetry and Remote Sensing · ONLINE_FIRST</p>
+<h3>WheatScoper: A lightweight organ-based framework for multi-view wheat phenotyping using time-series RGB images</h3>
+<p>Haotian Deng; Xiaomiao Tian; Yufeng Zhang; Yong Ren; Guoqiang Yuan; Bingxi Qin; Honghao Zhou; Jiawei Chen; Xiao Wang; Qin Zhou; Jian Cai; Yingxin Zhong; Mei Huang; Qixin Sun; Dong Jiang; Yingyin Yao; Qing Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V242 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.isprsjprs.2026.08.039</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.08.039" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>WheatScoper: A lightweight organ-based framework for multi-view wheat phenotyping using time-series RGB images</strong></p><p class="abstract-meta">期刊：ISPRS Journal of Photogrammetry and Remote Sensing · DOI：10.1016/j.isprsjprs.2026.08.039</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.08.039" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-025-007">
+<p class="kicker">ISPRS Journal of Photogrammetry and Remote Sensing · ONLINE_FIRST</p>
+<h3>Disentangling representation and cross-domain adaptation for unsupervised change detection in multimodal remote sensing images</h3>
+<p>Erlei Zhang; Xinyu Li; He Zong; Yuan Gao; Jinchang Ren</p>
+<dl>
+<div><dt>卷期</dt><dd>V237 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.isprsjprs.2026.04.011</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.04.011" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Disentangling representation and cross-domain adaptation for unsupervised change detection in multimodal remote sensing images</strong></p><p class="abstract-meta">期刊：ISPRS Journal of Photogrammetry and Remote Sensing · DOI：10.1016/j.isprsjprs.2026.04.011</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.04.011" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-025-008">
+<p class="kicker">ISPRS Journal of Photogrammetry and Remote Sensing · ONLINE_FIRST</p>
+<h3>Hyperspectral object tracking with dimensionality reduction and spatial–spectral–temporal modeling</h3>
+<p>Zhuanfeng Li; Jing Wang; Jue Zhang; Diqi Chen; Guanyiman Fu; Jiangtao Wang; Jianfeng Lu</p>
+<dl>
+<div><dt>卷期</dt><dd>V238 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.isprsjprs.2026.04.052</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.04.052" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Hyperspectral object tracking with dimensionality reduction and spatial–spectral–temporal modeling</strong></p><p class="abstract-meta">期刊：ISPRS Journal of Photogrammetry and Remote Sensing · DOI：10.1016/j.isprsjprs.2026.04.052</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.04.052" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-025-009">
+<p class="kicker">ISPRS Journal of Photogrammetry and Remote Sensing · ONLINE_FIRST</p>
+<h3>PatchFusion: Resilient LiDAR-camera fusion for point cloud semantic segmentation in autonomous driving</h3>
+<p>Yifan Sun; Chenguang Dai; Yongsheng Zhang; Xuchu Yu; Song Ji; Xuanguang Liu; Wenke Li; Hanyun Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V242 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.isprsjprs.2026.09.008</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.09.008" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>PatchFusion: Resilient LiDAR-camera fusion for point cloud semantic segmentation in autonomous driving</strong></p><p class="abstract-meta">期刊：ISPRS Journal of Photogrammetry and Remote Sensing · DOI：10.1016/j.isprsjprs.2026.09.008</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.09.008" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-025-010">
+<p class="kicker">ISPRS Journal of Photogrammetry and Remote Sensing · ONLINE_FIRST</p>
+<h3>Bayesian polarimetric detector for improved forest loss monitoring using dual-polarization Sentinel-1 data</h3>
+<p>Marta Bottani; Laurent Ferro-Famil; Thuy Le Toan; Juan Doblas Prieto; Stéphane Mermoz; Thierry Koleck</p>
+<dl>
+<div><dt>卷期</dt><dd>V237 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.isprsjprs.2026.04.028</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.04.028" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Bayesian polarimetric detector for improved forest loss monitoring using dual-polarization Sentinel-1 data</strong></p><p class="abstract-meta">期刊：ISPRS Journal of Photogrammetry and Remote Sensing · DOI：10.1016/j.isprsjprs.2026.04.028</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.04.028" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-025-011">
+<p class="kicker">ISPRS Journal of Photogrammetry and Remote Sensing · ONLINE_FIRST</p>
+<h3>Combined change detection analysis of the impacts resulting from heavy rainfall events in mountainous areas</h3>
+<p>E. Matta; G. Nigrelli; W. Alberto; A. Filipello; M. Zittlau; M. Chiarle</p>
+<dl>
+<div><dt>卷期</dt><dd>V238 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.isprsjprs.2026.04.059</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.04.059" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Combined change detection analysis of the impacts resulting from heavy rainfall events in mountainous areas</strong></p><p class="abstract-meta">期刊：ISPRS Journal of Photogrammetry and Remote Sensing · DOI：10.1016/j.isprsjprs.2026.04.059</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.04.059" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-025-012">
+<p class="kicker">ISPRS Journal of Photogrammetry and Remote Sensing · ONLINE_FIRST</p>
+<h3>TAIS-Net: Time adaptive implicit sampling diffusion model for arbitrary-scale UAV video super-resolution</h3>
+<p>Wenke Li; Chenguang Dai; Huixin Fan; Zhen Zhao; Kangrui Li; Yifan Sun; Yongsheng Zhang; Longguang Wang; Hanyun Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V238 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.isprsjprs.2026.04.060</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.04.060" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>TAIS-Net: Time adaptive implicit sampling diffusion model for arbitrary-scale UAV video super-resolution</strong></p><p class="abstract-meta">期刊：ISPRS Journal of Photogrammetry and Remote Sensing · DOI：10.1016/j.isprsjprs.2026.04.060</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.isprsjprs.2026.04.060" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>ISPRS Journal of Photogrammetry and Remote Sensing 另有 86 条网络优先/未来期/Early Access 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-055-001">
+<p class="kicker">International Journal on Artificial Intelligence Tools · ONLINE_FIRST</p>
+<h3>Intelligent Inventory and Knowledge Management in Healthcare Supply Chains</h3>
+<p>Alaa O. Khadidos; Hariprasath Manoharan; Adil O. Khadidos; Olfat M. Mirza; Shitharth Selvarajan; Srinidhi Sundaram</p>
+<dl>
+<div><dt>卷期</dt><dd>V35 · I05</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s021821302640004x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s021821302640004x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Intelligent Inventory and Knowledge Management in Healthcare Supply Chains</strong></p><p class="abstract-meta">期刊：International Journal on Artificial Intelligence Tools · DOI：10.1142/s021821302640004x · 摘要来源：账本已存摘要</p><p class="abstract-body">In this paper, the significance of supply chain management in healthcare logistics is emphasized by addressing the challenges of fluctuating demand and controlled drug production. To overcome these issues, the proposed system monitors the quantity of manufactured drugs through a combination of centralized and individual hub establishments that manage product distribution efficiently. An Artificial Intelligence (AI)-based automatic product clustering mechanism is integrated to analyze demand expectations and associated risk factors. The clustered products are then systematically arranged, and the internal connectivity between local suppliers is optimized to ensure minimal demand imbalance. Furthermore, to enhance the stability of the healthcare supply chain, proportional connections among hubs are evaluated, enabling data-driven and optimized decision-making. The performance of the proposed AI model is validated using four case studies, demonstrating its capability to achieve high connectivity and scalability. The model can be implemented in real time with a minimal operational cost of approximately 1635 dollars, confirming its practicality and cost effectiveness.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s021821302640004x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-055-002">
+<p class="kicker">International Journal on Artificial Intelligence Tools · ONLINE_FIRST</p>
+<h3>BlockWave: A Blockchain-Enabled Security Architecture for Trustworthy Data Exchange in 6G-Powered IoT Networks</h3>
+<p>Wahida Mansouri; Abdulrahman M. Qahtani; M. M. Kamruzzaman; Anandhavalli Muniasamy; Ghadah Aldehim; Mohamed Loey</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218213026500120</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218213026500120" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>BlockWave: A Blockchain-Enabled Security Architecture for Trustworthy Data Exchange in 6G-Powered IoT Networks</strong></p><p class="abstract-meta">期刊：International Journal on Artificial Intelligence Tools · DOI：10.1142/s0218213026500120 · 摘要来源：账本已存摘要</p><p class="abstract-body">The evolution of 6G networks brings unprecedented connectivity and processing capabilities to Internet of Things environments, yet it also raises more challenges in data security, intrusion detection, and computational efficiency. In this paper, a complete end-to-end framework with the inclusion of Artificial Intelligence, blockchain technology, and novel encryption techniques is proposed to address these challenges in 6G-IoT networks. Then, the AI-Powered Cybersecurity Events Dataset is utilized first, wherein network traffic is normalized through Min-Max normalization to normalize heterogeneous features to a uniform scale. A Gated Recurrent Unit-based neural network is then trained on this normalized data to detect real-time intrusions by learning complex temporal dependencies. Upon detecting anomalies, a blockchain layer is called to execute smart contracts that apply automatic security measures, e.g., quarantining affected nodes. For efficient processing, the architecture accommodates GRU-assisted task offloading optimization on a multi-factor delay, energy, and network load optimization model. Blockchain smart contracts manage load balancing and delegation verification autonomously without any central authority. Homomorphic encryption and proxy re-encryption also ensure data confidentiality in edge computing and secure multi-party computation. All encryption and task offloading operations are permanently stored on the blockchain, ensuring system-wide transparency and auditability. Federated learning support is built-in to enable privacy-preserving decentralized AI training from distributed edge nodes. The entire framework is implemented in Python using TensorFlow/Keras for the GRU model and web3.py for blockchain-related interactions. Experimental measurements demonstrated the efficiency and stability of the system by exhibiting a percentage of accuracy of 98.9% in intrusion detection, justifying the applicability for future 6G-IoT secure and scalable operations. The experiments utilize the AI-Powered Cybersecurity Events Dataset containing approximately 1.5 million network flow records with a class distribution of 52% benign traffic, 21% DoS, 15% probing, and 12% privilege escalation events.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218213026500120" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-055-003">
+<p class="kicker">International Journal on Artificial Intelligence Tools · ONLINE_FIRST</p>
+<h3>Adaptive Multi-Dimensional Convolution with Sparse Attention Mechanism for Traffic Volume Prediction Using High-Resolution Aerial Images</h3>
+<p>Syed Reshma; G. Rosline Nesa Kumari</p>
+<dl>
+<div><dt>卷期</dt><dd>V35 · I04</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218213026500089</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218213026500089" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Adaptive Multi-Dimensional Convolution with Sparse Attention Mechanism for Traffic Volume Prediction Using High-Resolution Aerial Images</strong></p><p class="abstract-meta">期刊：International Journal on Artificial Intelligence Tools · DOI：10.1142/s0218213026500089 · 摘要来源：账本已存摘要</p><p class="abstract-body">This work developed a new predictive system using an innovative deep learning approach for traffic management using high-resolution aerial images. The proposed method leverages a novel 3D Transformer-based You Only Look Once v9 (3D-TYolov9) model for the detection and tracking of vehicles from converted 3D image frames (feature 1, f1). The developed 3D-TYolov9 is defined as a system that likely combines the established You Only Look Once v9 (YOLOv9) object detection framework with extensions for 3D data processing, specifically incorporating a Transformer-based module for enhanced feature analysis and tracking within 3D space. Subsequently, 2D features reflecting real-time traffic behavior, such as speed and position (f2), are extracted. To enhance accuracy further, diverse external 1D contextual features (f3), including weather conditions and event disruptions, are integrated. These multi-dimensional features (f1, f2, and f3) are then processed by a Multi-Dimensional Convolution with Sparse Attention-based Dilated Densenet (MDC-SADDNet) for robust traffic forecasting. This architecture effectively captures complex patterns, enabling significant improvements in future traffic management, smart routing, and urban mobility planning. Performance validation confirms the developed model’s effectiveness over existing methods.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218213026500089" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-055-004">
+<p class="kicker">International Journal on Artificial Intelligence Tools · ONLINE_FIRST</p>
+<h3>Effectively Self-Labeled Method with Accelerated Particle Swarm Optimization-Based Sample Subspace Optimization</h3>
+<p>Shuang Liu; Yanshu Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V35 · I04</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218213026500107</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218213026500107" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Effectively Self-Labeled Method with Accelerated Particle Swarm Optimization-Based Sample Subspace Optimization</strong></p><p class="abstract-meta">期刊：International Journal on Artificial Intelligence Tools · DOI：10.1142/s0218213026500107 · 摘要来源：账本已存摘要</p><p class="abstract-body">Mislabeling is a challenging problem in self-labeled methods utilizing labeled and unlabeled samples to train classifiers. For overcoming misprediction, the existing self-labeled methods employ ensemble classifiers to improve predictive performance on unlabeled samples or employ heuristic strategies to find correctly predicted samples. Yet, they experience the following issues: (a) adopted ensemble classifiers employ random resampling or entire labeled samples without considering training sample quality and usefulness; (b) adopted heuristic strategies for selecting high-confidence pseudo-labeled samples explicitly rely on assumptions about geometric and class relationships; and (c) a few adopt ensemble classifiers and heuristic strategies to overcome misprediction. Inspired by the state-of-the-art sample subspace optimization with accelerated binary particle swarm optimization (SSO-ABPSO), an ensemble self-labeled method (ESLM-SSO) based on sample subspace optimization with accelerated binary particle swarm optimization is proposed against the above issues. The novelties of ESLM-SSO are as follows: (a) a SSO-ABPSO-based ensemble classifier considering training sample quality and usefulness is proposed to predict unlabeled samples, and (b) a SSO-ABPSO-based heuristic strategy that evaluates pseudo-labeled samples based on empirical subset performance, rather than explicit geometric assumptions, is proposed to identify correctly predicted samples. Experiments demonstrated that ESLM-SSO outperforms seven state-of-the-art self-labeled methods in improving two classifiers on extensive datasets.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218213026500107" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-055-005">
+<p class="kicker">International Journal on Artificial Intelligence Tools · ONLINE_FIRST</p>
+<h3>A Face Recognition System to Distinguish Monozygotic/Identical Twins</h3>
+<p>Vinusha Sundaresan; S. Amala Shanthi</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218213026500156</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218213026500156" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Face Recognition System to Distinguish Monozygotic/Identical Twins</strong></p><p class="abstract-meta">期刊：International Journal on Artificial Intelligence Tools · DOI：10.1142/s0218213026500156 · 摘要来源：账本已存摘要</p><p class="abstract-body">Face recognition systems often fail to distinguish monozygotic twins, commonly called identical twins, due to their high facial similarity. Specifically, changes in illumination or expression reduce the discriminative ability of such systems further. Hence, this research introduces a novel twin face recognition methodology that combines Super-Resolution Convolutional Neural Networks (SRCNN) and Multi-Orientation-Summed Gabor Local Binary Patterns (MSGLBPs) to achieve twin recognition across four test cases, which involve real-time constraints, such as illumination variations and changing facial expressions. At first, the SRCNN module of the proposed method enhances the high-frequency details and the texture quality in the face images of twins, so as to improve recognition under such constraints. Subsequently, the subtle biometric differences between the twin faces are extracted by capturing local texture variations across multiple Gabor orientations using MSGLBP. Finally, identity recognition is done using Support Vector Machine (SVM). Experimental outcomes confirm that a recognition accuracy and an [Formula: see text]1-score of up to 98.48% and 0.98, respectively, are achievable with this method using the ND-TWINS-2009-2010 dataset. This research contributes to advancing face recognition technology and ensuring security in Human Computer Interaction (HCI), particularly in challenging scenarios involving identical twins.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218213026500156" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-055-006">
+<p class="kicker">International Journal on Artificial Intelligence Tools · ONLINE_FIRST</p>
+<h3>Graphic Coloring Based on Emotion-Driven and Digital Visualization Color Mapping</h3>
+<p>Yiran Kong</p>
+<dl>
+<div><dt>卷期</dt><dd>V35 · I05</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218213026400099</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218213026400099" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Graphic Coloring Based on Emotion-Driven and Digital Visualization Color Mapping</strong></p><p class="abstract-meta">期刊：International Journal on Artificial Intelligence Tools · DOI：10.1142/s0218213026400099 · 摘要来源：账本已存摘要</p><p class="abstract-body">To improve the consistency between color semantic expression and user emotional needs in graphic design, a graphic color matching method based on emotion-driven and digital visualization color mapping is proposed. This method quantifies users’ ratings of pleasure and activation through a self-assessment model to form a two-dimensional emotional space. The [Formula: see text]-means algorithm extracts color features from color palettes. A multi-task lasso regression model is used to jointly train an emotion prediction model. The L1/L2 mixed regularization is introduced to screen key features. In the optimization phase, multi-objective functions are used to synchronously optimize emotional bias and color distinguishability. A color mapping algorithm based on color gamut boundary intersection points is designed to reduce the cross-device color offset rate. Experiments showed that the model had high reliability in predicting pleasure and activation, with Cronbach’s alpha reaching 0.9037 and 0.9045, respectively, and mean square error converging to 0.012. User testing showed that the optimized color palette’s emotional coordinates reduced the deviation from the target emotion by 42%. In scenes such as film and television stylization and data visualization, the efficiency of color style conversion was increased by 35%. The color palette achieved an emotional matching accuracy of 89% while maintaining color harmony. The study addresses the limitations of traditional discrete emotion mapping, providing theoretical support for interdisciplinary research in color psychology and computer graphics.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218213026400099" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-055-007">
+<p class="kicker">International Journal on Artificial Intelligence Tools · ONLINE_FIRST</p>
+<h3>Effectiveness of Chain of Thought Strategies to Mitigate Sycophancy in Quantized Small Language Models</h3>
+<p>Hayri Baytan Ozmen; Fatih Ahmet Senel</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s021821302650017x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s021821302650017x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Effectiveness of Chain of Thought Strategies to Mitigate Sycophancy in Quantized Small Language Models</strong></p><p class="abstract-meta">期刊：International Journal on Artificial Intelligence Tools · DOI：10.1142/s021821302650017x · 摘要来源：账本已存摘要</p><p class="abstract-body">Small Language Models (SLMs) deployed in resource-constrained environments are increasingly susceptible to “sycophancy”, a behavioral failure where models prioritize user-suggested biases over factual truth. Although mitigation strategies exist for high-resource settings, the effectiveness of these interventions remains largely unexplored for morphologically rich languages where subword tokenization disrupts logical coherence. To address this problem, this study investigates the efficacy of Chain-of-Thought (CoT) strategies in mitigating sycophancy within a Turkish context utilizing a 4-bit quantized Gemma-3-12B model. We evaluated performance across legal, analytical, knowledge-based, and reading comprehension domains under four conditions, namely Neutral, Sycophancy (bias injection), Implicit (silent) CoT, and Explicit (verbalized) CoT. Results reveal that while bias injection caused a catastrophic accuracy drop (from 49.8% to 17.4%), the considered silent reasoning approach failed to provide resistance against the bias. Conversely, Explicit CoT significantly mitigated sycophancy, recovering accuracy to 32.8% and correcting confidence discrepancy by reducing the reported confidence when wrong. However, this robustness incurs a six-fold increase in inference latency and a fifteen-fold increase in token consumption. We conclude that while silent reasoning is insufficient for low-resource languages, verbal reasoning serves as a necessary but costly protective constraint for high-stakes tasks.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s021821302650017x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-055-008">
+<p class="kicker">International Journal on Artificial Intelligence Tools · ONLINE_FIRST</p>
+<h3>Scheduling Mixed Deteriorating Jobs on a Single Machine for Makespan Minimization</h3>
+<p>Abdesselam Kali</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218213026400129</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218213026400129" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Scheduling Mixed Deteriorating Jobs on a Single Machine for Makespan Minimization</strong></p><p class="abstract-meta">期刊：International Journal on Artificial Intelligence Tools · DOI：10.1142/s0218213026400129 · 摘要来源：账本已存摘要</p><p class="abstract-body">A set of jobs has to be scheduled on a single machine starting from a non-zero time. The processing time of one job from the set is a quadratic non-decreasing function of its start time, while the processing times of the other jobs are proportional non-decreasing functions of their start times. The objective is to minimize the makespan. We present a criterion for optimally scheduling a job with proportional processing time alongside the job with quadratic processing time. We identify some polynomially solvable cases and provide for the remaining cases an upper bound on the starting time of the job with quadratic processing time. Additionally, we establish the NP-hardness of this problem and propose a pseudo-polynomial-time optimal algorithm and a fully polynomial-time approximation scheme.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218213026400129" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-055-009">
+<p class="kicker">International Journal on Artificial Intelligence Tools · ONLINE_FIRST</p>
+<h3>A VNS-Based Solution Approach to the Bi-Objective Generalized Regenerator Location Problem</h3>
+<p>Lazar Mrkela; Zorica Stanimirović; Miroslav Marić</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218213026500193</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218213026500193" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A VNS-Based Solution Approach to the Bi-Objective Generalized Regenerator Location Problem</strong></p><p class="abstract-meta">期刊：International Journal on Artificial Intelligence Tools · DOI：10.1142/s0218213026500193 · 摘要来源：账本已存摘要</p><p class="abstract-body">The main problem in the design of optical networks is the degradation of optical signal over time; therefore, it is necessary to install expensive devices, named regenerators, to maintain the signal quality. The goal of the well-known generalized regenerator location problem (GRLP) is to find locations to install a minimal number of regenerators while preserving the signal quality between all pairs of end-user nodes. This study introduces a bi-objective GRLP that better reflects the optical network design compared to the single-objective GRLP. In addition to the costs of installing regenerators at different locations, the bi-objective GRLP includes the weights of the end-user pairs, reflecting their different priorities or importance. The goal of the proposed problem is to provide a balance between the total cost of installing regenerators and the total weight of the connected end-user pairs. As the considered problem is NP-hard, three variants of the multi-objective variable neighborhood search (MO-VNS) metaheuristic are proposed. The results of MO-VNS methods are compared with those obtained using three modified multi-objective evolutionary algorithms (MOEAs) on the modified GRLP instances. The presented results show excellent performance of all three MO-VNS variants, and one of them outperformed all the considered methods in terms of both solution quality and computational efficiency.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218213026500193" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-055-010">
+<p class="kicker">International Journal on Artificial Intelligence Tools · ONLINE_FIRST</p>
+<h3>Exploring the Role of Argumentation in Human–Centered Artificial Intelligence: Communication, Collaboration, and Trust</h3>
+<p>Sofia Almpani; Petros Stefaneas</p>
+<dl>
+<div><dt>卷期</dt><dd>V35 · I04</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218213026500144</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218213026500144" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Exploring the Role of Argumentation in Human–Centered Artificial Intelligence: Communication, Collaboration, and Trust</strong></p><p class="abstract-meta">期刊：International Journal on Artificial Intelligence Tools · DOI：10.1142/s0218213026500144 · 摘要来源：账本已存摘要</p><p class="abstract-body">The growing impact of artificial intelligence on everyday life has fueled the emergence of Human–Centered Artificial Intelligence (HCAI), an approach aimed at developing intelligent systems that not only emulate and extend human capabilities but also foster meaningful collaboration, societal integration, and ethical responsibility. In this work, we present a comprehensive survey of the role of argumentation in HCAI, examining its theoretical foundations, methodologies, and applications, as well as its potential to enhance communication, informed decision-making, and responsible human–AI interaction across diverse domains. Building on this analysis, we introduce the Argumentation-based Proof-Event Calculus (APEC), a formal and aligned framework designed to support trustworthy collaboration between humans and AI agents in goal-oriented decision processes. The proposed APEC framework advances HCAI by explicitly incorporating temporal dynamics, evaluating both individual and collective agent contributions in multi-agent systems, and supporting the iterative refinement and evolution of decisions toward well-justified outcomes.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218213026500144" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-055-011">
+<p class="kicker">International Journal on Artificial Intelligence Tools · ONLINE_FIRST</p>
+<h3>GAEn/MGT: A Novel Framework for Bilingual Sentiment Analysis in Mental Health Applications</h3>
+<p>Rahul Dubey; Premnarayan Arya; Shiv Shakti Shrivastava; Rahul Kumar Chawda</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218213026500119</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218213026500119" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>GAEn/MGT: A Novel Framework for Bilingual Sentiment Analysis in Mental Health Applications</strong></p><p class="abstract-meta">期刊：International Journal on Artificial Intelligence Tools · DOI：10.1142/s0218213026500119 · 摘要来源：账本已存摘要</p><p class="abstract-body">Mental health sentiment expressed via bilingual and code-mixed text, such as Hindi text written in Latin script, presents some unique challenges to computational understanding of language. This paper proposes GAEn/MGT (Generative Auto-encoder Network / Multi-generative Transformer), an integrated generative-transformer model used for robust sentiment analysis task for mental health discourse, which has bilingual and transliterated data. In proposed model, the generative reconstruction, variational regularization and supervised classification are all embedded into a holistic hybrid learning objective, which enables high-quality cross-linguistic alignment and semantic preservation. Generally, GAEn/MGT uses the multilingual transformer backbones (mBERT, XLM-R, MuRIL, and IndicBERT) with transliteration-consistent embeddings and domain alignment mechanisms in order to deal with noisy, code-mixed and emotionally complex text. Experiments on large scale bilingual mental health data sets (Twitter, Reddit, ISEAR, Sentiment140, and Hinglish corpus) have shown that GAEn/MGT achieves 0.920 accuracy and 0.908 macro-F1 (Precision = 0.910, Recall = 0.905). Stratified bootstrap confidence intervals are used to verify the robustness of these results (macro-F1 95% CI: [0.897, 0.916]), and this improvement over the best performing baseline XLM-R is statistically significant (p ≤ 0.01). Beyond achieving quantitatively higher results, the model is also more interpretable thanks to reconstruction and latent visualization, which reveals greater insight into variance in emotion across languages. The results signal GAEn/MGT as an efficient and inclusive system, which is ethically responsible about early detection, emotional monitoring and digital-psychiatric research in multilingual societies.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218213026500119" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-055-012">
+<p class="kicker">International Journal on Artificial Intelligence Tools · ONLINE_FIRST</p>
+<h3>EnsembleXAI Framework for Real-Time Intelligent Data Security, Distributed Computing, and Explainable Cloud Storage Applications</h3>
+<p>D. Kamalakkannan; Sajja Suneel; Selva Nidhyananthan Sundaradhas; Jnaneshwar Pai Maroor; S. Pragadeeswaran; Shaikshavali Shaik</p>
+<dl>
+<div><dt>卷期</dt><dd>V35 · I05</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218213026400117</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218213026400117" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>EnsembleXAI Framework for Real-Time Intelligent Data Security, Distributed Computing, and Explainable Cloud Storage Applications</strong></p><p class="abstract-meta">期刊：International Journal on Artificial Intelligence Tools · DOI：10.1142/s0218213026400117 · 摘要来源：账本已存摘要</p><p class="abstract-body">The rapid expansion of distributed computing and cloud storage has increased the demand for intelligent and explainable data security frameworks. Traditional anomaly detection models often function as black boxes, providing little to no insight into decision-making processes, thus limiting their adoption in critical infrastructures where transparency and compliance are mandatory. This study introduces the EnsembleXAI Framework, an integrated architecture combining ensemble learning, explainable artificial intelligence (XAI), federated learning, and distributed edge–cloud computing. The methodology incorporates parallel CNN, LSTM, and Transformer pipelines to extract deep spatiotemporal features, fused through attention gating and ensemble classifiers such as Random Forests and deep neural networks. Interpretability is ensured using SHAP, LIME, and Integrated Gradients, allowing local and global explanations for anomaly detection outcomes. Privacy preservation is achieved via federated learning with differential privacy and homomorphic encryption, while blockchain mechanisms guarantee model update integrity. The proposed framework achieves 98.1% detection accuracy, 97.6% precision, 97.0% recall, and 97.3% [Formula: see text]1-score, significantly outperforming baseline CNN, LSTM, and Transformer-only models. Furthermore, explainability fidelity exceeds 93%, ensuring regulatory compliance and user trust. Edge–fog deployment reduces latency to 41.2[Formula: see text]ms, enabling real-time inference and dynamic access control for secure cloud storage. Overall, the framework delivers scalable, secure, and interpretable solutions for distributed IoT and cloud ecosystems, advancing the state of trustworthy AI in cybersecurity.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218213026400117" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>International Journal on Artificial Intelligence Tools 另有 19 条网络优先/未来期/Early Access 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-085-001">
+<p class="kicker">Journal of Combinatorial Optimization · ONLINE_FIRST</p>
+<h3>Submodular maximization under knapsack and partition matroid constraints</h3>
+<p>Dongkai Xu; Jianhua Yuan; Zhongzheng Tang</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01470-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01470-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Submodular maximization under knapsack and partition matroid constraints</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01470-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01470-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-085-002">
+<p class="kicker">Journal of Combinatorial Optimization · ONLINE_FIRST</p>
+<h3>Greedy approximation for the minimum (1, m)-connected dominating set with labeling</h3>
+<p>Tianshuo Lv; Bo Hou; Wen Liu; Ke Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01474-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01474-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Greedy approximation for the minimum (1, m)-connected dominating set with labeling</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01474-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01474-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-085-003">
+<p class="kicker">Journal of Combinatorial Optimization · ONLINE_FIRST</p>
+<h3>Multi-set function maximization with application in viral marketing</h3>
+<p>Chensheng Ma; Hongbin G. Du; Hongmin W. Du; Zhao Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01475-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01475-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multi-set function maximization with application in viral marketing</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01475-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01475-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-085-004">
+<p class="kicker">Journal of Combinatorial Optimization · ONLINE_FIRST</p>
+<h3>Lanzhou index of trees with perfect matching</h3>
+<p>Xuan Zhao; Ke Zhao; Fang Zhu</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01465-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01465-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Lanzhou index of trees with perfect matching</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01465-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01465-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-085-005">
+<p class="kicker">Journal of Combinatorial Optimization · ONLINE_FIRST</p>
+<h3>Approximation algorithms for the minimum b-matching blocker problem on bipartite graphs</h3>
+<p>Ruiqing Sun; Weidong Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01464-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01464-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Approximation algorithms for the minimum b-matching blocker problem on bipartite graphs</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01464-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01464-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-085-006">
+<p class="kicker">Journal of Combinatorial Optimization · ONLINE_FIRST</p>
+<h3>An FPT approximation algorithm for the partition set cover problem with penalties</h3>
+<p>Hao Zhang; Bo Hou; Gengsheng Zhang; Ke Li; Wen Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01476-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01476-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An FPT approximation algorithm for the partition set cover problem with penalties</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01476-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01476-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-085-007">
+<p class="kicker">Journal of Combinatorial Optimization · ONLINE_FIRST</p>
+<h3>$$K_{1,r}$$-structure connectivity and neighbor connectivity in hierarchical networks</h3>
+<p>Liying Zhao; Shumin Zhang; Bo Zhu; Jou-Ming Chang</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10878-026-01469-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01469-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-25 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>$$K_{1,r}$$-structure connectivity and neighbor connectivity in hierarchical networks</strong></p><p class="abstract-meta">期刊：Journal of Combinatorial Optimization · DOI：10.1007/s10878-026-01469-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10878-026-01469-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>ISPRS Journal of Photogrammetry and Remote Sensing（ScienceDirect）：官方 Issues/V236–V238/AIP Playwright 均 403；RSS+Crossref 可登记 OF；不 claim 新完整卷。</li>
+<li>Journal of Combinatorial Optimization（Springer Nature Link）：Playwright 可读；claim V52-I2；I3（Oct 2026）未来期仅登记。</li>
+<li>IJAIT（World Scientific）：Cloudflare 403；Crossref I4/I5 与 Online Ready 仅登记。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>11fc1dd6-0997-4ff7-9d1d-0198aa233d24</code></li>
+<li>Commit ID：<code>DAILY-20260925-115940-11fc1dd6</code></li>
+<li>Brief ID：<code>DAILY-20260925</code></li>
+<li>去重抑制：0 · 增量复核：0 · 对账任务：4 · 官方源失败计数：2</li>
+<li>正式期刊：REG-025、REG-055、REG-085</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/09/index.html">返回 2026-09 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
+</body></html>

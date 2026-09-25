@@ -1,48 +1,7 @@
 {
-  "brief_count": 44,
+  "brief_count": 45,
   "level": "ROOT",
   "recent_briefs": [
-    {
-      "brief_id": "DAILY-20260805",
-      "commit_id": "DAILY-20260805-192126-a472a96b",
-      "completed_run_date": "2026-08-05",
-      "counts": {
-        "changed_journals": 3,
-        "complete_issues": 3,
-        "degraded_sources": 1,
-        "formal_articles": 25,
-        "journals": 4,
-        "online_first_updates": 31
-      },
-      "format": "HTML",
-      "group_id": 5,
-      "html_sha256": "7127ba312162a9246531d5d04e3e7c39c828965e87629b61cf14ec20f56941a0",
-      "index_anchor": "brief-DAILY-20260805",
-      "kind": "DAILY_ROTATION",
-      "logical_date": "2026-08-05",
-      "release_report": "releases/DAILY-20260805-192126-a472a96b/2026/08/2026-08-05_GIS-AI期刊每日轮检简报_第05组.html",
-      "release_summary_image": "releases/DAILY-20260805-192126-a472a96b/2026/08/assets/2026-08-05_GIS-AI期刊每日摘要_第05组.png",
-      "report": "2026/08/2026-08-05_GIS-AI期刊每日轮检简报_第05组.html",
-      "scheduled_date": "2026-08-05",
-      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
-      "summary": "扫描 4 种期刊；确认 3 个新完整期次和 25 篇正式论文，登记 31 条网络首发；《测绘通报》目录降级。",
-      "summary_image": "2026/08/assets/2026-08-05_GIS-AI期刊每日摘要_第05组.png",
-      "summary_image_sha256": "660942b507e4905ca79a7e1960652eb2b7bb3ac327f8add4179e1a9b0991943a",
-      "task_type": "ROUTINE",
-      "tasks": [
-        {
-          "anchor": "brief-DAILY-20260805",
-          "coverage_month": "2026-08",
-          "group": 5,
-          "scheduled_date": "2026-08-05",
-          "status": "COMPLETED",
-          "task_id": "ROUTINE-20260805-G05",
-          "task_type": "ROUTINE"
-        }
-      ],
-      "title": "GIS-AI 期刊每日轮检简报 · 第 05 组",
-      "updated_at": "2026-08-05T19:23:33-07:00"
-    },
     {
       "brief_id": "DAILY-20260806",
       "commit_id": "DAILY-20260806-192145-ca00d740",
@@ -1542,6 +1501,48 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 24 组",
       "updated_at": "2026-09-24T12:07:38.017350+08:00"
+    },
+    {
+      "brief_id": "DAILY-20260925",
+      "commit_id": "DAILY-20260925-115940-11fc1dd6",
+      "completed_run_date": "2026-09-25",
+      "counts": {
+        "changed_journals": 3,
+        "complete_issues": 1,
+        "degraded_sources": 2,
+        "formal_articles": 9,
+        "formal_assignments": 0,
+        "journals": 3,
+        "online_first_updates": 136
+      },
+      "format": "HTML",
+      "group_id": 25,
+      "html_sha256": "c9f7afc00569ed04dbe6cdc479198ff10ef2c9087ba2c9dc61ec1e0266f23e14",
+      "index_anchor": "brief-DAILY-20260925",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-09-25",
+      "release_report": "releases/DAILY-20260925-115940-11fc1dd6/2026/09/2026-09-25_GIS-AI期刊每日轮检简报_第25组.html",
+      "release_summary_image": "releases/DAILY-20260925-115940-11fc1dd6/2026/09/assets/2026-09-25_GIS-AI期刊每日摘要_第25组.png",
+      "report": "2026/09/2026-09-25_GIS-AI期刊每日轮检简报_第25组.html",
+      "scheduled_date": "2026-09-25",
+      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "summary": "第 25 组共检查 3 种正式期刊；确认 1 个新完整期次、9 篇正式期次论文、0 篇既有网络优先记录正式归期，以及 136 条新的网络优先/未来期/Early Access 发现。Journal of Combinatorial Optimization 确认新完整期 2026-V52-I2（I3 十月未来期已出现故触发）；ISPRS JPRS 与 IJAIT 官方源 403，降级完成，RSS/Crossref 仅作 OF/未来卷或候选期发现、不 claim 新完整期。其中 2 种期刊因官方源阻断降级完成。",
+      "summary_image": "2026/09/assets/2026-09-25_GIS-AI期刊每日摘要_第25组.png",
+      "summary_image_sha256": "ca5164d21d34684bf5e568261f61200dac40fc31bef7914ffb7556133e9039f9",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20260925-G25",
+          "coverage_month": "2026-09",
+          "group": 25,
+          "scheduled_date": "2026-09-25",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260925-G25",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 25 组",
+      "updated_at": "2026-09-25T12:08:55.783428+08:00"
     }
   ],
   "retention": {
@@ -1560,10 +1561,10 @@
     "title": "GIS-AI 期刊每日轮检简报"
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-09-24",
+  "updated_date": "2026-09-25",
   "years": [
     {
-      "brief_count": 44,
+      "brief_count": 45,
       "index": "2026/index.html",
       "manifest": "index/2026.json",
       "month_count": 3,
