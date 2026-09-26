@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 26 组 · 2026-09-26</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/09/index.html">9 月</a> / 第 26 组
+</nav>
+<p class="meta">逻辑日期 2026-09-26 · 完成时间 2026-09-26 12:13 CST · 任务 ROUTINE-20260926-G26 · Commit <code>DAILY-20260926-115245-3c50cd11</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 26 组</h1>
+<p class="lede">第 26 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式期次论文、0 篇既有网络优先记录正式归期，以及 2456 条新的网络优先/在年卷/Advance Articles 发现。IEEE TGRS 官方确认 Volume 64-2026 连续卷开放中（2,128 篇）不 claim；IJIS 官方 Wiley Cloudflare 403，降级并以 Crossref 仅登记；JRSS Series A 官方仍为 V189-I3，I4 404，Advance Articles 仅登记。其中 1 种期刊因官方源阻断降级完成。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>3</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>0</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>0</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>2456</strong><span>网络首发/在年</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">连续卷开放</span> <strong>IEEE Transactions on Geoscience and Remote Sensing</strong> — 官方 Current Volume=Volume 64-2026，Showing of 2,128；按年度卷关闭后触发规则，本批不 claim；Crossref 在年 DOI 仅登记。 <span class="evidence"><a href="https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=36" rel="noopener noreferrer">证据</a><small>ieeexplore.ieee.org · 2026-09-26 12:13 CST · 官方目录</small></span></li><li><span class="tag">官方源阻断</span> <strong>International Journal of Intelligent Systems</strong> — Wiley TOC/LOI Cloudflare 403；Crossref 2026-V2026-I1 仅登记不 claim。 <span class="evidence"><a href="https://onlinelibrary.wiley.com/toc/ijis/2026/2026/1" rel="noopener noreferrer">证据</a><small>onlinelibrary.wiley.com · 2026-09-26 12:13 CST · 官方目录</small></span></li><li><span class="tag">无新完整期</span> <strong>Journal of the Royal Statistical Society Series A: Statistics in Society</strong> — 官方仍为 V189-I3；I4 404；Advance Articles 仅登记。 <span class="evidence"><a href="https://academic.oup.com/jrsssa/issue/189/3" rel="noopener noreferrer">证据</a><small>academic.oup.com · 2026-09-26 12:13 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-026<br><strong>IEEE Transactions on Geoscience and Remote Sensing</strong></td><td>2026-V64</td><td>0</td><td>0</td><td>0</td><td>2236</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-056<br><strong>International Journal of Intelligent Systems</strong></td><td>2025-V2025-I1</td><td>0</td><td>0</td><td>0</td><td>120</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr><tr><td>REG-086<br><strong>Journal of the Royal Statistical Society Series A: Statistics in Society</strong></td><td>2026-V189-I3</td><td>0</td><td>0</td><td>0</td><td>100</td><td><code>OFFICIAL_PAGE_OK_VIA_CURL</code></td><td>COMPLETED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-09-26_GIS-AI期刊每日摘要_第26组.png" width="1600" height="900" alt="第26组每日摘要图：3刊，新完整期0，正式文0">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<p>本批无新完整期次。</p>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在年登记</h2>
+<p>本批登记网络优先/未来期/Early Access 发现 <strong>2456</strong> 条（REG-026 Crossref 在年卷/EA、REG-056 Crossref 在年卷、REG-086 Advance Articles）。上述条目不作为完整期次证据。</p><article class="paper" id="of-reg-026-001">
+<p class="kicker">IEEE Transactions on Geoscience and Remote Sensing · ONLINE_FIRST</p>
+<h3>Split Federated Learning for Real-Time Aerial Video Event Recognition in UAV-Based Geospatial Monitoring</h3>
+<p>Waseem Ullah; Fatma Outay; Latif U. Khan; Mohsen Guizani</p>
+<dl>
+<div><dt>卷期</dt><dd>V64 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tgrs.2025.3596389</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3596389" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3596389" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Split Federated Learning for Real-Time Aerial Video Event Recognition in UAV-Based Geospatial Monitoring</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Geoscience and Remote Sensing · DOI：10.1109/tgrs.2025.3596389</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3596389" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-026-002">
+<p class="kicker">IEEE Transactions on Geoscience and Remote Sensing · ONLINE_FIRST</p>
+<h3>Hierarchical Diffusion Model for Remote Sensing Image Change Detection</h3>
+<p>Pengfei Han; Yunpeng Gao; Guofang Chen; Bin Zhao; Xuelong Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V64 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tgrs.2025.3608791</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3608791" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3608791" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Hierarchical Diffusion Model for Remote Sensing Image Change Detection</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Geoscience and Remote Sensing · DOI：10.1109/tgrs.2025.3608791</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3608791" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-026-003">
+<p class="kicker">IEEE Transactions on Geoscience and Remote Sensing · ONLINE_FIRST</p>
+<h3>CA-DiffSeg: Cross-Attention Guided Diffusion Model for Seismic Facies Segmentation</h3>
+<p>Lin Zhou; Jinghuai Gao; Jihao Yang; Hongling Chen; Chuangji Meng</p>
+<dl>
+<div><dt>卷期</dt><dd>V64 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tgrs.2025.3612494</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3612494" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3612494" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>CA-DiffSeg: Cross-Attention Guided Diffusion Model for Seismic Facies Segmentation</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Geoscience and Remote Sensing · DOI：10.1109/tgrs.2025.3612494</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3612494" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-026-004">
+<p class="kicker">IEEE Transactions on Geoscience and Remote Sensing · ONLINE_FIRST</p>
+<h3>Physics-Informed Neural Networks for 3-D Seismic Fault Segmentation With Topological and Geological Priors</h3>
+<p>Ke Xu; Qubo Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V64 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tgrs.2025.3623694</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3623694" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3623694" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Physics-Informed Neural Networks for 3-D Seismic Fault Segmentation With Topological and Geological Priors</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Geoscience and Remote Sensing · DOI：10.1109/tgrs.2025.3623694</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3623694" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-026-005">
+<p class="kicker">IEEE Transactions on Geoscience and Remote Sensing · ONLINE_FIRST</p>
+<h3>W2WDiff: Generalizing Underwater Diffusion Model via Unsupervised Underwater Conversion</h3>
+<p>Yuanlin Zhang; Jieyu Yuan; Xiao Chen; Xiongxin Tang; Qiao Chen; Yiquan Wang; Chongyi Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V64 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tgrs.2025.3629979</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3629979" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3629979" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>W2WDiff: Generalizing Underwater Diffusion Model via Unsupervised Underwater Conversion</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Geoscience and Remote Sensing · DOI：10.1109/tgrs.2025.3629979</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3629979" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-026-006">
+<p class="kicker">IEEE Transactions on Geoscience and Remote Sensing · ONLINE_FIRST</p>
+<h3>Overcoming the Identity Mapping Problem in Self-Supervised Hyperspectral Anomaly Detection</h3>
+<p>Yongchuan Cui; Jinhe Zhang; Zedong Yan; Peng Liu; Weijing Song; Yi Zeng</p>
+<dl>
+<div><dt>卷期</dt><dd>V64 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tgrs.2025.3632330</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3632330" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3632330" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Overcoming the Identity Mapping Problem in Self-Supervised Hyperspectral Anomaly Detection</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Geoscience and Remote Sensing · DOI：10.1109/tgrs.2025.3632330</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3632330" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-026-007">
+<p class="kicker">IEEE Transactions on Geoscience and Remote Sensing · ONLINE_FIRST</p>
+<h3>Scattering-Attention Semi-Supervised-Guided Reinforced Region Proposal Network for Zero-Shot Detection on SAR Images</h3>
+<p>Dunyun He; Yucong He; Gui Gao</p>
+<dl>
+<div><dt>卷期</dt><dd>V64 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tgrs.2025.3631095</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3631095" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3631095" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Scattering-Attention Semi-Supervised-Guided Reinforced Region Proposal Network for Zero-Shot Detection on SAR Images</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Geoscience and Remote Sensing · DOI：10.1109/tgrs.2025.3631095</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3631095" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-026-008">
+<p class="kicker">IEEE Transactions on Geoscience and Remote Sensing · ONLINE_FIRST</p>
+<h3>A Novel Fusion Method of Optical and Wide-Swath Interferometric Radar Altimeter Images for Enhanced Water Detection</h3>
+<p>Yixuan Li; Yunhua Zhang; Dong Li; Jiayi Song</p>
+<dl>
+<div><dt>卷期</dt><dd>V64 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tgrs.2025.3636400</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3636400" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3636400" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Novel Fusion Method of Optical and Wide-Swath Interferometric Radar Altimeter Images for Enhanced Water Detection</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Geoscience and Remote Sensing · DOI：10.1109/tgrs.2025.3636400</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3636400" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-026-009">
+<p class="kicker">IEEE Transactions on Geoscience and Remote Sensing · ONLINE_FIRST</p>
+<h3>CIFNet: Context Information Focused Network for Road Extraction From Remote Sensing Images</h3>
+<p>Bo-Wen Gong; Wei Lu; Si-Bao Chen; Jin Tang; Bin Luo</p>
+<dl>
+<div><dt>卷期</dt><dd>V64 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tgrs.2025.3636896</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3636896" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3636896" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>CIFNet: Context Information Focused Network for Road Extraction From Remote Sensing Images</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Geoscience and Remote Sensing · DOI：10.1109/tgrs.2025.3636896</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3636896" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-026-010">
+<p class="kicker">IEEE Transactions on Geoscience and Remote Sensing · ONLINE_FIRST</p>
+<h3>Automatic Seismic Facies Segmentation via Wavelet Scattering Transform and Convolutional Network</h3>
+<p>Yang Yang; Zijian Ye; Qiuyi Long; Jinghuai Gao; Zhiguo Wang; Naihao Liu; Zongben Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V64 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tgrs.2025.3637219</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3637219" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3637219" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Automatic Seismic Facies Segmentation via Wavelet Scattering Transform and Convolutional Network</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Geoscience and Remote Sensing · DOI：10.1109/tgrs.2025.3637219</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3637219" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-026-011">
+<p class="kicker">IEEE Transactions on Geoscience and Remote Sensing · ONLINE_FIRST</p>
+<h3>Revisiting Attention Mechanisms and Transformer Networks for Infrared Small Target Detection</h3>
+<p>Libo Cao; Yunxiu Yang; Yapei Zhu; Xiaoguang Shao; Qin Shu</p>
+<dl>
+<div><dt>卷期</dt><dd>V64 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tgrs.2025.3638738</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3638738" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3638738" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Revisiting Attention Mechanisms and Transformer Networks for Infrared Small Target Detection</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Geoscience and Remote Sensing · DOI：10.1109/tgrs.2025.3638738</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3638738" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-026-012">
+<p class="kicker">IEEE Transactions on Geoscience and Remote Sensing · ONLINE_FIRST</p>
+<h3>InSAR Atmospheric Error Correction Method Based on GNSS Spatial Interpolation With Application to the Southern North Island of New Zealand</h3>
+<p>Huineng Yan; Zhigang Lu; Yu Li; Rui Wang; Fang Li; Qing Tang</p>
+<dl>
+<div><dt>卷期</dt><dd>V64 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tgrs.2025.3638790</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3638790" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3638790" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>InSAR Atmospheric Error Correction Method Based on GNSS Spatial Interpolation With Application to the Southern North Island of New Zealand</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Geoscience and Remote Sensing · DOI：10.1109/tgrs.2025.3638790</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/tgrs.2025.3638790" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>IEEE Transactions on Geoscience and Remote Sensing 另有 2224 条网络优先/未来期/Early Access 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-056-001">
+<p class="kicker">International Journal of Intelligent Systems · ONLINE_FIRST</p>
+<h3>Chaotic Archerfish Optimizer–Enhanced Double‐Attention Dense BiGRU for Video‐Based Facial Expression Recognition</h3>
+<p>Punithavathi</p>
+<dl>
+<div><dt>卷期</dt><dd>V2026 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1155/int/3099014</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1155/int/3099014" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1155/int/3099014" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Chaotic Archerfish Optimizer–Enhanced Double‐Attention Dense BiGRU for Video‐Based Facial Expression Recognition</strong></p><p class="abstract-meta">期刊：International Journal of Intelligent Systems · DOI：10.1155/int/3099014 · 摘要来源：账本已存摘要</p><p class="abstract-body">Facial expression recognition (FER) is a growing and important area of pattern recognition research. In today’s application domains, such as the identification of human facial expression, deep learning techniques have gained popularity. The expressions on people’s faces reveal their motives and emotional actions. An expression is the easiest and most efficient form of nonverbal communication. The accuracy of facial expression detection techniques decreases when faces are partially obscured or the illumination is uneven. To address the issues in the existing systems, a novel optimal hybrid deep learning method is presented in this paper. Here, chaotic archerfish hunting optimizer–based double attention dense bidirectional gated recurrent unit (ChAO‐based DAttn_DenseBi_Net) is introduced to detect the FER from videos. The proposed method is designed by integrating the double attention mechanism based on spatial and temporal attentions with the DenseNet and BiGRU, which is tuned using the proposed ChAO algorithm to enhance the recognition accuracy. The proposed ChAO‐based DAttn_DenseBi_Net technique for FER in three different datasets: RAVDESS, iCVMEFED, and AFEW. With 90% training data, the proposed ChAO‐based DAttn_DenseBi_Net approach attains accuracies of 95.23% for RAVDESS, 96.21% for iCVMEFED, and 95.38% for AFEW. The performance of the proposed method is measured based on various assessment measures such as accuracy, specificity, precision, recall, F1‐measure, and MSE and acquired the values of 96.21%, 97.36%, 94.93%, 96.21%, 95.55%, and 3.79 respectively.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1155/int/3099014" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-056-002">
+<p class="kicker">International Journal of Intelligent Systems · ONLINE_FIRST</p>
+<h3>A Neural Network‐Based Decision Framework Utilizing Large Language Models and Neutrosophic Sets for Sustainable Supplier Selection</h3>
+<p>Nafei</p>
+<dl>
+<div><dt>卷期</dt><dd>V2026 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1155/int/3011074</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1155/int/3011074" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1155/int/3011074" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Neural Network‐Based Decision Framework Utilizing Large Language Models and Neutrosophic Sets for Sustainable Supplier Selection</strong></p><p class="abstract-meta">期刊：International Journal of Intelligent Systems · DOI：10.1155/int/3011074 · 摘要来源：账本已存摘要</p><p class="abstract-body">Sustainable supplier selection is a high‐impact decision problem in which organizations must jointly evaluate economic performance, environmental impact, and social responsibility under heterogeneous stakeholder preferences, asymmetric decision authority, and predominantly linguistic assessments. Conventional multiattribute group decision‐making (MAGDM) methods, based on crisp scores, fixed aggregation rules, and implicit consensus are poorly suited to contexts where expert opinions are expressed in natural language, indeterminacy is substantial, and strategic priorities may override majority preferences. To address these limitations, this study proposes a neural‐based decision framework that integrates large language models (LLMs), neutrosophic sets, an autocratic aggregation strategy, and a neural network for supplier selection. Criterion‐specific textual judgments provided by experts are processed by a pretrained model to extract sentiment polarity and confidence, which are then mapped to neutrosophic triplets. An autocratic mechanism empowers a designated decision leader to choose context‐appropriate scoring and aggregation functions, avoiding forced consensus and reducing the need for extensive pairwise comparisons. A neural aggregation layer further learns how to combine multiple neutrosophic score functions, refining ranking behavior and lowering computational complexity. The framework is validated through a case study on sustainable supplier selection. The results demonstrate that the proposed approach produces stable, interpretable rankings with reduced computational burden and closer alignment with strategic sustainability goals than benchmark MAGDM methods.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1155/int/3011074" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-056-003">
+<p class="kicker">International Journal of Intelligent Systems · ONLINE_FIRST</p>
+<h3>GCKT: Context‐Aware Gating of Heterogeneous Learning Features With Transformer for Cognitive Knowledge Tracing in Intelligent Tutoring Systems</h3>
+<p>Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V2026 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1155/int/3037960</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1155/int/3037960" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1155/int/3037960" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>GCKT: Context‐Aware Gating of Heterogeneous Learning Features With Transformer for Cognitive Knowledge Tracing in Intelligent Tutoring Systems</strong></p><p class="abstract-meta">期刊：International Journal of Intelligent Systems · DOI：10.1155/int/3037960 · 摘要来源：账本已存摘要</p><p class="abstract-body">With the rapid growth of online education, Knowledge Tracing (KT) has become central to adaptive learning systems. Yet existing models struggle to integrate the multidimensional and heterogeneous signals generated during learning—such as exercise attributes, response behaviors, temporal factors, and hierarchical knowledge structure. Many methods rely on naive feature concatenation or fixed weighting, limiting their ability to capture synergistic interactions among features. We propose Gated full‐features Transformer Cognitive Knowledge Tracing (GCKT), a Transformer‐based model with a gated fusion mechanism that dynamically integrates multiple inputs. The model first embeds exercise, response correctness, response time, and hierarchical knowledge features (topics and concepts). Topic and concept embeddings are linearly projected into a unified knowledge representation. The exercise, time, correctness, and unified knowledge embeddings are then concatenated and passed through a learnable gating network (linear layer with sigmoid) to produce context‐aware importance weights. These weights are applied element‐wise to adaptively scale each feature before projection into a fused representation for the sequence encoder, enabling the Transformer to more accurately model the evolution of students’ cognitive states. Extensive experiments on public datasets, including MOOCRadar and Math, show that GCKT consistently outperforms strong baselines—such as DKT, AKT, and SAINT+—on key metrics (AUC and F1), delivering robust gains across settings. The results demonstrate that dynamic, fine‐grained feature fusion substantially improves KT performance and that GCKT offers a general, effective approach for modeling complex learning scenarios.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1155/int/3037960" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-056-004">
+<p class="kicker">International Journal of Intelligent Systems · ONLINE_FIRST</p>
+<h3>Feature Fusion Attention‐Based Deep Reinforcement Learning for Multidepot O2O Food Delivery Route Optimization</h3>
+<p>Zou</p>
+<dl>
+<div><dt>卷期</dt><dd>V2026 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1155/int/3716055</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1155/int/3716055" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1155/int/3716055" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Feature Fusion Attention‐Based Deep Reinforcement Learning for Multidepot O2O Food Delivery Route Optimization</strong></p><p class="abstract-meta">期刊：International Journal of Intelligent Systems · DOI：10.1155/int/3716055 · 摘要来源：账本已存摘要</p><p class="abstract-body">The online‐to‐offline (O2O) business model has facilitated millions of daily transactions on popular online food ordering platforms. Online food delivery route planning presents a complex multidepot vehicle routing problem (VRP) with capacity limits, pickup–delivery, and time‐window constraints. However, the vast volume of transactions and computational complexities of delivery routes pose significant challenges. This paper proposes a novel feature fusion attention‐based deep reinforcement learning model to address such constrained routing problems. The innovative encoding and masking scheme with a self‐attention‐guided order relocation operator efficiently handles multidepot and multiconstraint scenarios. Additionally, incorporating self‐attention with a graph neural network (GNN) framework extends existing research from static unit square environments to dynamic real road networks. Computational experiments demonstrate that our proposed route solver outperforms state‐of‐the‐art heuristics and reinforcement learning methods regarding solution quality and computation time across unit square environments and real road networks. Exploratory analysis using real‐world delivery data a illustrates the applicability of our approach to practical online ordering platforms.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1155/int/3716055" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-056-005">
+<p class="kicker">International Journal of Intelligent Systems · ONLINE_FIRST</p>
+<h3>Research Progress on Memristors for Compute‐In‐Memory Architectures</h3>
+<p>Shang</p>
+<dl>
+<div><dt>卷期</dt><dd>V2026 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1155/int/8837606</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1155/int/8837606" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1155/int/8837606" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Research Progress on Memristors for Compute‐In‐Memory Architectures</strong></p><p class="abstract-meta">期刊：International Journal of Intelligent Systems · DOI：10.1155/int/8837606 · 摘要来源：账本已存摘要</p><p class="abstract-body">The era of artificial intelligence and big data has witnessed an explosive growth in computational demands. The von Neumann architecture faces constraints from the “memory wall” and “power wall” due to its separation of storage and computation. Compute‐in‐memory (CIM) technology has emerged as a key pathway to overcome the von Neumann bottleneck. As a novel class of semiconductor devices capable of both storage and computation, memristors offer advantages such as simple structure, low‐power consumption, and great potential for high‐density integration, showing great promise for CIM architectures. This article provides a systematic review of the latest research progress on memristors in terms of their operating mechanisms, array integration, and applications. It mainly focuses on the working principles, performance characteristics, and optimization strategies of four types of memristors based on the conductive filaments, phase‐change, magnetic tunnel junction, and ferroelectric tunnel junction mechanisms. Key performance parameters of various memristive devices are compared. In addition, the paper introduces multiple integrated solutions for overcoming sneak‐path current interference, presents typical application cases of memristors, and provides an outlook on future development, serving as a reference for further research on memristors.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1155/int/8837606" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-056-006">
+<p class="kicker">International Journal of Intelligent Systems · ONLINE_FIRST</p>
+<h3>Smart Service Placement Model for IoT Applications in Fog Computing Using an Improved Imperialist Competitive Algorithm Service Placement (IICASP)</h3>
+<p>Safarzad</p>
+<dl>
+<div><dt>卷期</dt><dd>V2026 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1155/int/4072074</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1155/int/4072074" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1155/int/4072074" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Smart Service Placement Model for IoT Applications in Fog Computing Using an Improved Imperialist Competitive Algorithm Service Placement (IICASP)</strong></p><p class="abstract-meta">期刊：International Journal of Intelligent Systems · DOI：10.1155/int/4072074 · 摘要来源：账本已存摘要</p><p class="abstract-body">With the rapid growth of the Internet of Things (IoT), traditional infrastructures have evolved into intelligent systems that generate large volumes of dynamic and heterogeneous data, significantly increasing the need for efficient processing, analysis, and storage. Transmitting such data to traditional cloud data centers has led to challenges such as network congestion, increased latency, and reduced Quality of Service (QoS). In response, fog computing has emerged as a novel distributed architecture that brings computational resources closer to the network edge and end‐users. One of the key challenges in this domain is the optimal placement of services within the fog environment in a way that optimizes execution time, QoS, and reliability. In this study, we propose a smart improved version of the imperialist competitive algorithm (ICA), named improved imperialist competitive algorithm service placement (IICASP), which leverages adaptive search mechanisms, dynamic allocation strategies, and revolution rate control based on problem‐specific conditions to optimize the service placement process in fog computing environments. The performance of this algorithm is evaluated against various versions of ICA, hybrid algorithms such as genetic algorithm (GA)–PSO, and other metaheuristic approaches. Evaluations conducted across scenarios with varying numbers of tasks and fog nodes demonstrate that IICASP significantly outperforms other methods in most performance indicators. Experimental results show that compared with the standard ICA, IICASP reduces total execution time by 35.2% and decreases the number of failed services by 50%. Additionally, compared with the GA, it achieves a 46.6% improvement in execution time and a 66.6% reduction in the service failure rate. The proposed algorithm not only executes the highest number of successful services but also proves robust in maintaining performance stability under high‐load conditions. Finally, despite certain limitations—such as the assumption of static resources and the omission of task migration—the paper proposes future research directions aimed at enhancing intelligence and adaptability in resource allocation for fog computing environments.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1155/int/4072074" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-056-007">
+<p class="kicker">International Journal of Intelligent Systems · ONLINE_FIRST</p>
+<h3>Risk Factor Extraction in Financial Disclosures via a Knowledge Graph–Enhanced Language Model</h3>
+<p>Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V2026 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1155/int/9295056</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1155/int/9295056" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1155/int/9295056" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Risk Factor Extraction in Financial Disclosures via a Knowledge Graph–Enhanced Language Model</strong></p><p class="abstract-meta">期刊：International Journal of Intelligent Systems · DOI：10.1155/int/9295056 · 摘要来源：账本已存摘要</p><p class="abstract-body">Risk disclosures play a crucial role in the investment decision‐making processes for investors. However, extracting relevant variables from unstructured financial text poses a nontrivial challenge. In this paper, we propose RiskBERT, a large language model (LLM) trained on financial texts and risk knowledge graphs, specifically designed for risk factors extraction. By incorporating both finance and risk knowledge, RiskBERT significantly improves the extraction of risk factors in financial texts. We evaluate RiskBERT’s performance on a labeled risk factors dataset comprising 119,153 sentences from 2400 Chinese A‐listed companies and compare it against other LLMs and automated text analysis algorithms for risk types’ classification. Our findings demonstrate that RiskBERT outperforms alternative models, particularly when the training sample size is limited. Moreover, we uncover that RiskBERT provides risk informativeness estimates in annual reports that are at least 4.5% higher than those derived from other models. These results highlight the value of RiskBERT as a powerful tool for extracting risk factors and enhancing risk analysis in finance and accounting domains.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1155/int/9295056" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-056-008">
+<p class="kicker">International Journal of Intelligent Systems · ONLINE_FIRST</p>
+<h3>Comparative Evaluation of ChatGPT and DeepSeek for Competitive Programming: International Collegiate Programming Contest Case</h3>
+<p>Vyas</p>
+<dl>
+<div><dt>卷期</dt><dd>V2026 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1155/int/7757033</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1155/int/7757033" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1155/int/7757033" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Comparative Evaluation of ChatGPT and DeepSeek for Competitive Programming: International Collegiate Programming Contest Case</strong></p><p class="abstract-meta">期刊：International Journal of Intelligent Systems · DOI：10.1155/int/7757033 · 摘要来源：账本已存摘要</p><p class="abstract-body">The International Collegiate Programming Contest (ICPC) is widely regarded as one of the most prestigious algorithmic programming competitions for university students. Given the challenges faced by students from developing countries in preparing for the contest, it is important to examine how generative AI tools can support their learning and preparation. The effectiveness of two leading generative AI models, ChatGPT and DeepSeek, is evaluated in addressing complex programming problems based on the Association for Computing Machinery (ACM)’s International Collegiate Programming Contest (ICPC) (ACM ICPC). The evaluation of both models in terms of readability, error handling, computation speed, code accuracy, and educational value is presented in this study. In a two‐trial experimental setup, both models are evaluated on 145 different ICPC problems from data structures, algorithms, mathematics, geometry, advanced optimization, and so on. Prompts were standardized, and evaluation was conducted over two iterations to simulate iterative learning. The results indicate that both DeepSeek and ChatGPT improved their performance over time. DeepSeek consistently outperformed ChatGPT in code accuracy (88.28% vs. 84.14%), both generated more efficient algorithms for linear time complexity (41 vs. 19), and had lower logical error rates (7.58% vs. 15.86%). DeepSeek and ChatGPT performed almost the same in code quality scores (37.79 vs. 37.85). Approximately 46.90% of the solutions generated by DeepSeek were fully insightful, surpassing ChatGPT’s 42.07%. However, ChatGPT demonstrated significant improvement across trials, particularly drastically reducing syntax errors from 4.83% to 0.69%. DeepSeek outperforms ChatGPT in high‐stakes programming scenarios, making it the more suitable choice. These results offer actionable guidance for incorporating generative AI tools into advanced programming education.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1155/int/7757033" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-056-009">
+<p class="kicker">International Journal of Intelligent Systems · ONLINE_FIRST</p>
+<h3>Machine Learning Classifier–Based Breast Thermography Enhancement Using Adaptive Multiaverage Gamma Correction for Breast Cancer Diagnosis</h3>
+<p>Victor</p>
+<dl>
+<div><dt>卷期</dt><dd>V2026 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1155/int/9714490</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1155/int/9714490" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1155/int/9714490" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Machine Learning Classifier–Based Breast Thermography Enhancement Using Adaptive Multiaverage Gamma Correction for Breast Cancer Diagnosis</strong></p><p class="abstract-meta">期刊：International Journal of Intelligent Systems · DOI：10.1155/int/9714490 · 摘要来源：账本已存摘要</p><p class="abstract-body">Detecting breast cancer has always been a challenging task in medicinal field. Among various screening techniques, breast thermography proves to be a reliable technique. Though it aids in the diagnosis of tumors, its low color contrast between diseased and normal tissues makes it difficult to identify subtle image features and detect cancer in thick breast tissues. To solve these problems, this study presents an adaptive multiaverage gamma correction (AMAGC) technique that improves breast thermograms by increasing contrast between cancerous and normal regions. Using an enhanced greyscale image as a reference, the AMAGC method separates the grayscale thermogram into several subimages according to their different brightness levels (low, medium, and high). This is followed by applying customized average gamma corrections to each subimage, and then performing histogram matching on the Value (V) component of the HSV color model. This technique was implemented on PC running MATLAB 2016a. Comprehensive objective quality measures, such as PSNR, AMBE, SSIM, and DSSIM, were used for validation. Dimension‐reduced GLCM features were used for classification using a Random Forest (RF) classifier created in Python/Jupiter. The classification stage is used exclusively to test the diagnostic value of the improved thermograms. A total of 120 segmented thermal pictures received from the Indira Gandhi Centre for Atomic Research (IGCAR) in Kalpakkam, India, constitute the dataset. With the RF classifier achieving 95.3% accuracy, 97.2% sensitivity, and 95.7% specificity, experimental results showed that AMAGC significantly outperformed traditional methods, such as BBHE, DSIHE, and RETINEX, in both subjective and objective assessments, emphasizing the efficacy of the proposed improvement method in computer‐aided diagnosis in breast cancer cases.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1155/int/9714490" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-056-010">
+<p class="kicker">International Journal of Intelligent Systems · ONLINE_FIRST</p>
+<h3>Decision Support System for Equipment Fault Diagnosis Based on Large Language Model: Dynamic Construction of Unstructured Industrial Knowledge Graph for Industrial Equipment</h3>
+<p>Fang</p>
+<dl>
+<div><dt>卷期</dt><dd>V2026 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1155/int/4611626</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1155/int/4611626" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1155/int/4611626" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Decision Support System for Equipment Fault Diagnosis Based on Large Language Model: Dynamic Construction of Unstructured Industrial Knowledge Graph for Industrial Equipment</strong></p><p class="abstract-meta">期刊：International Journal of Intelligent Systems · DOI：10.1155/int/4611626 · 摘要来源：账本已存摘要</p><p class="abstract-body">With the deepening of industrial digital transformation, equipment fault diagnosis faces challenges including low utilization of unstructured data, weak cross‐modal semantic association, and lagging knowledge updates. Traditional methods relying on artificial rules and static knowledge bases struggle to effectively integrate multimodal information such as text, images, and sensors. This paper proposes a decision support system for equipment fault diagnosis based on large language models (LLMs), with an unstructured industrial knowledge graph (UIKG) as the core knowledge carrier. We construct a dynamic UIKG driven by multimodal data, abandoning static manual construction modes. The system employs a domain‐adaptive LLM combined with contrastive learning and low‐rank fine‐tuning to enhance professional terminology understanding and contextual reasoning. A cloud‐edge collaborative architecture balances real‐time response and computational constraints through lightweight deployment and dynamic knowledge subgraph transmission. Temporal weight update and distributed graph incremental mechanisms ensure dynamic knowledge evolution. Experiments on port cranes and wind turbines show that the system reduces the missed detection rate to 1.5% and maintenance costs by over 20%, while supporting rapid cross‐device migration. The core novelties of this work are threefold: (1) proposing a domain‐adaptive UIKG construction method driven by multimodal data, breaking the static manual construction mode of traditional industrial knowledge graphs; (2) designing a cloud‐edge collaborative dynamic UIKG update and reasoning framework, balancing the real‐time performance of edge fault diagnosis and the depth of cloud knowledge analysis; and (3) integrating LoRA fine‐tuning and contrastive learning to realize cross‐modal semantic alignment of industrial text, image, and sensor data, solving the problem of semantic discretization of unstructured industrial data. Future research will focus on federated learning frameworks and multimodal generation technologies to further optimize knowledge sharing mechanisms and adaptive reasoning capabilities.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1155/int/4611626" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-056-011">
+<p class="kicker">International Journal of Intelligent Systems · ONLINE_FIRST</p>
+<h3>An Advanced FMEA Method Integrating Consensus‐Based Bayesian Network Model and Risk Propagation Model</h3>
+<p>Teng</p>
+<dl>
+<div><dt>卷期</dt><dd>V2026 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1155/int/5741891</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1155/int/5741891" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1155/int/5741891" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>An Advanced FMEA Method Integrating Consensus‐Based Bayesian Network Model and Risk Propagation Model</strong></p><p class="abstract-meta">期刊：International Journal of Intelligent Systems · DOI：10.1155/int/5741891 · 摘要来源：账本已存摘要</p><p class="abstract-body">Traditional failure mode and effects analysis (FMEA) often overlooks interdependencies among failure modes (FMs), leading to incomplete risk assessments. This paper presents an enhanced FMEA framework that integrates Bayesian networks (BNs) and risk propagation operators to address FM interactions, introducing propagation ( P ) as a novel risk factor (RF) alongside the conventional occurrence ( O ), detection ( D ), and severity ( S ). The proposed framework is structured into three hierarchical layers based on distinct risk assessment mechanisms. Layer 1 (expert direct assessment) assesses D and S through a two‐round evaluation process, including an expert weight determination model that combines competency scores with a dual‐dimensional reliability assessment. Layer 2 (model‐dependent inference) first builds a BN topology and uses a two‐stage consensus model to obtain acceptable conditional probability tables, from which O is derived; then, based on the constructed BN, it quantifies P through propagation operators and BN inference, capturing both forward and backward risk propagation. Layer 3 (multicriteria decision‐making) integrates the four RFs using a dynamic grey relational analysis method for risk prioritization. In this layer, an optimization model is formulated to maximize global benefits and minimize individual losses, thereby determining the relative importance of each RF. Finally, a case study on risk management in the new energy vehicle supply chain is conducted, and the effectiveness and applicability of the proposed framework are validated through stress tests, sensitivity analyses, and comparative analyses.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1155/int/5741891" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-056-012">
+<p class="kicker">International Journal of Intelligent Systems · ONLINE_FIRST</p>
+<h3>A Depth‐Ordered Forwarding Game With Niche‐Confined Evolutionary Recovery for Energy‐Efficient Underwater Wireless Sensor Networks</h3>
+<p>Almohamedh</p>
+<dl>
+<div><dt>卷期</dt><dd>V2026 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1155/int/8405408</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1155/int/8405408" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1155/int/8405408" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Depth‐Ordered Forwarding Game With Niche‐Confined Evolutionary Recovery for Energy‐Efficient Underwater Wireless Sensor Networks</strong></p><p class="abstract-meta">期刊：International Journal of Intelligent Systems · DOI：10.1155/int/8405408 · 摘要来源：账本已存摘要</p><p class="abstract-body">Underwater wireless sensor networks operate under scarce acoustic bandwidth, long propagation delay, depth‐dependent attenuation, and a fixed energy budget that is rarely replenished. We propose the Hawk–Dove Game Optimization Algorithm with Elite Niche Clone Evolutionary Computing (HDGOA‐ENCEC), a routing protocol that couples a depth‐ordered forwarding game, inspired by Hawk–Dove interactions, with an elite niche‐confined cloning mechanism for localized recovery. A single behavioral index compresses residual energy, data priority, and congestion into one adaptive scalar; an event‐driven rule updates a node only when its standardized payoff deviates from the neighborhood mean; and recovery is restricted to depth niches, so a failed region is repaired locally rather than through network‐wide re‐optimization. We formulate the forwarding‐game payoff matrix, derive the condition under which cooperation becomes the strict best response, and obtain a Lyapunov‐drift bound for regional queue stability while the energy state remains bounded by the battery and its reserve threshold. Across NS‐3.35 simulations using the AquaSim‐NG channel and Bellhop‐derived transmission loss, under varied loads, densities, mobilities, and three failure models, the lifetime energy per delivered bit remains near 13–18 mJ/bit, which is 8%–12% lower than the strongest baseline and 22%–28% lower than RCRP in deep layers. Under depth‐correlated failure, packet delivery remains 10–16 percentage points above nonrecovery baselines. The results show that the main advantage of HDGOA‐ENCEC lies in resilience and energy‐normalized delivery rather than raw throughput.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1155/int/8405408" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>International Journal of Intelligent Systems 另有 108 条网络优先/未来期/Early Access 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-086-001">
+<p class="kicker">Journal of the Royal Statistical Society Series A: Statistics in Society · ONLINE_FIRST</p>
+<h3>Dynamic healthcare demand with informative dropout: evidence from register data</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssa/qnag108</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag108" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag108" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Dynamic healthcare demand with informative dropout: evidence from register data</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series A: Statistics in Society · DOI：10.1093/jrsssa/qnag108 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">We study the dynamic relationship between outpatient secondary care and emergency secondary care using linked Danish register data on approximately 30,000 individuals with type-2 diabetes followed for 5 years after an emergency hospital admission. The data present 3 challenges: utilization is observed as 2 interrelated count outcomes, attrition is informative because it is largely driven by mortality, and the timing of death is recorded only at the quarterly level. We address these features using a hidden Markov dropout bivariate Poisson model that combines time-varying latent health states with a discrete-time specification for dropout. This framework allows us to separately identify dynamic state dependence and unobserved heterogeneity in both care utilization and survival. Accounting for latent health dynamics substantially alters the estimated relationship between the 2 services: standard random-effects models suggest mild complementarity, whereas the hidden Markov specification indicates substitution. Modelling dropout as informative further refines these estimates and clarifies the role of unobserved heterogeneity, disentangling persistent frailty from time-varying health dynamics. The results reveal substantial heterogeneity in patient trajectories and show that more recent cohorts experience improved survival together with a shift from emergency towards outpatient utilization. The framework is applicable to settings with interdependent recurrent events and endogenous attrition.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag108" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-086-002">
+<p class="kicker">Journal of the Royal Statistical Society Series A: Statistics in Society · ONLINE_FIRST</p>
+<h3>Mathematical Engineering of Deep Learning</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssa/qnag103</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag103" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag103" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mathematical Engineering of Deep Learning</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series A: Statistics in Society · DOI：10.1093/jrsssa/qnag103</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag103" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-086-003">
+<p class="kicker">Journal of the Royal Statistical Society Series A: Statistics in Society · ONLINE_FIRST</p>
+<h3>Herman Chernoff, 1923–2026</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssa/qnag105</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag105" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag105" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Herman Chernoff, 1923–2026</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series A: Statistics in Society · DOI：10.1093/jrsssa/qnag105</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag105" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-086-004">
+<p class="kicker">Journal of the Royal Statistical Society Series A: Statistics in Society · ONLINE_FIRST</p>
+<h3>A statistical framework for dynamic cognitive diagnosis in digital learning environments</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssa/qnag104</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag104" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag104" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A statistical framework for dynamic cognitive diagnosis in digital learning environments</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series A: Statistics in Society · DOI：10.1093/jrsssa/qnag104 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Reading is foundational for educational, employment, and economic outcomes, but a persistent proportion of students globally struggle to develop adequate reading skills. Some countries promote digital tools to support reading development, alongside regular classroom instruction. Such tools generate rich log data capturing students’ behaviour and performance. This study proposes a dynamic cognitive diagnostic modelling (CDM) framework based on restricted latent class models to trace students’ time-varying skill mastery using log files from digital tools. Unlike traditional CDMs that require expert-defined skill-item mappings (Q-matrix), our approach jointly estimates the Q-matrix and latent skill profiles, integrates log-derived covariates (e.g. reattempts, response times, counts of mastered items) and individual characteristics, and models transitions in mastery using a Bayesian estimation approach. Applied to real-world data, the model demonstrates practical value in educational settings by effectively uncovering individual skill profiles and the skill-item mappings. Simulation studies confirm robust recovery of Q-matrix structures and latent profiles with high accuracy under varied sample sizes, item counts, and different sparsity of Q-matrices. The framework offers a data-driven, time-dependent restricted latent class modelling approach to understanding early reading development.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag104" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-086-005">
+<p class="kicker">Journal of the Royal Statistical Society Series A: Statistics in Society · ONLINE_FIRST</p>
+<h3>A latent space model for multivariate count data time series analysis</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssa/qnag097</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag097" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag097" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A latent space model for multivariate count data time series analysis</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series A: Statistics in Society · DOI：10.1093/jrsssa/qnag097 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Motivated by a dataset of burglaries in Chicago, USA, we introduce a novel framework to analyse time series of count data combining common multivariate time series models with latent position network models. This novel methodology allows us to gain a new latent variable perspective on the crime dataset that we consider, allowing us to disentangle and explain the complex patterns exhibited by the data, while providing a natural time series framework that can be used to make future predictions. Our model is underpinned by two well known statistical approaches: a log-linear vector autoregressive model, which is prominent in the literature on multivariate count time series, and a latent projection model, which is a popular latent variable model for networks. The role of the projection model is to characterize the interaction parameters of the vector autoregressive model, thus uncovering the underlying network that is associated with the pairwise relationships between the time series. Estimation and inferential procedures are performed using an optimization algorithm and a Hamiltonian Monte Carlo procedure for efficient Bayesian inference. We also include a simulation study to illustrate the merits of our methodology in recovering consistent parameter estimates, and in making accurate future predictions for the time series.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag097" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-086-006">
+<p class="kicker">Journal of the Royal Statistical Society Series A: Statistics in Society · ONLINE_FIRST</p>
+<h3>Principles of Psychological Assessment: With Applied Examples in R</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssa/qnag101</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag101" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag101" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Principles of Psychological Assessment: With Applied Examples in R</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series A: Statistics in Society · DOI：10.1093/jrsssa/qnag101</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag101" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-086-007">
+<p class="kicker">Journal of the Royal Statistical Society Series A: Statistics in Society · ONLINE_FIRST</p>
+<h3>A decay-adjusted spatio-temporal model to account for the impact of mass drug administration on neglected tropical disease prevalence</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssa/qnag100</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag100" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag100" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A decay-adjusted spatio-temporal model to account for the impact of mass drug administration on neglected tropical disease prevalence</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series A: Statistics in Society · DOI：10.1093/jrsssa/qnag100 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Prevalence surveys are routinely used to monitor the effectiveness of mass drug administration (MDA) programmes for controlling Neglected Tropical Diseases (NTDs). We propose a decay-adjusted spatio-temporal (DAST) model that explicitly accounts for the time-varying impact of MDA on NTD prevalence, providing a flexible and interpretable framework for estimating intervention effects from sparse survey data. Using case studies on soil-transmitted helminths and lymphatic filariasis, we show that DAST offers a practical alternative to standard geostatistical models when the objective includes quantifying MDA impact and supporting short-term programmatic forecasting. We also discuss extensions and identifiability challenges, advocating for data-driven parsimony over complexity in settings where the available data are too sparse to support the estimation of highly parameterized models.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag100" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-086-008">
+<p class="kicker">Journal of the Royal Statistical Society Series A: Statistics in Society · ONLINE_FIRST</p>
+<h3>Behaviour Analysis with Machine Learning Using R</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssa/qnag102</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag102" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag102" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Behaviour Analysis with Machine Learning Using R</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series A: Statistics in Society · DOI：10.1093/jrsssa/qnag102</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag102" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-086-009">
+<p class="kicker">Journal of the Royal Statistical Society Series A: Statistics in Society · ONLINE_FIRST</p>
+<h3>The Energy of Data and Distance Correlation</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssa/qnag098</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag098" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag098" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The Energy of Data and Distance Correlation</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series A: Statistics in Society · DOI：10.1093/jrsssa/qnag098</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag098" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-086-010">
+<p class="kicker">Journal of the Royal Statistical Society Series A: Statistics in Society · ONLINE_FIRST</p>
+<h3>Spatial vertical regression for spatial panel data: evaluating the effect of the florentine tramway’s first line on commercial vitality</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssa/qnag096</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag096" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag096" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Spatial vertical regression for spatial panel data: evaluating the effect of the florentine tramway’s first line on commercial vitality</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series A: Statistics in Society · DOI：10.1093/jrsssa/qnag096 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Synthetic control methods are commonly used in panel data settings to evaluate the effect of an intervention. In many cases, the treated and control units correspond to spatial units such as regions or neighborhoods. Our approach addresses the challenge of understanding how an intervention applied at specific locations influences the surrounding area. Traditional synthetic control applications do not address how to define the effective area of impact, the extent of treatment propagation across space, and how effects vary with distance from the treatment sites. To address these challenges, we introduce spatial vertical regression (SVR) within the Bayesian paradigm. SVR predict the missing potential outcomes in varying proximities to the treatment sites, while accounting for the spatial structure inherent in the data. Rooted in the vertical regression framework of the synthetic control method, SVR employs a Gaussian process to ensure that the imputation of missing potential outcomes is spatially coherent, reflecting the expectation that nearby treated areas have similar relationships to control areas and experience similar outcomes. This approach is particularly pertinent to our study on the Florentine tramway’s first line construction. We study its influence on the local commercial landscape, focusing on how business prevalence varies at different distances from the tram stops.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag096" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-086-011">
+<p class="kicker">Journal of the Royal Statistical Society Series A: Statistics in Society · ONLINE_FIRST</p>
+<h3>Correction to: Modelling the Loss Given Default Distribution via a Family of Zero-and-one Inflated Mixture Models</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssa/qnag099</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag099" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag099" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Correction to: Modelling the Loss Given Default Distribution via a Family of Zero-and-one Inflated Mixture Models</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series A: Statistics in Society · DOI：10.1093/jrsssa/qnag099</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag099" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-086-012">
+<p class="kicker">Journal of the Royal Statistical Society Series A: Statistics in Society · ONLINE_FIRST</p>
+<h3>Fake news detection via wisdom of synthetic and representative crowds</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssa/qnag095</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag095" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-26 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag095" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-26 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Fake news detection via wisdom of synthetic and representative crowds</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series A: Statistics in Society · DOI：10.1093/jrsssa/qnag095 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Social-media companies have struggled to define fake news in a democratically legitimate way. Reliance on expert judgement has faced criticism due to trust deficits and political polarization. Crowd-based approaches offer a cost-effective, transparent, and inclusive alternative. This article presents a novel end-to-end method to detect fake news on X using the wisdom of synthetic, representative crowds. Drawing from multilevel regression and poststratification literature, we train a Hierarchical Bayesian model to predict tweet veracity from the perspective of diverse personae within the target population. We then weight these predictions using a representative stratification frame, ensuring decisions about ‘fake’ tweets reflect the broader polity. Based on the aggregated scores, we analyse a corpus of tweets and conduct a second multilevel regression and poststratification to estimate the characteristics of fake news sharers. We find small but statistically meaningful heterogeneity in US fake news sharing on X: (i) sharing is rare, with a low average probability; (ii) strong evidence that Democrats share less fake news than Republicans; and (iii) when Republican definitions are used, Republicans show a decreased propensity to share fake news.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssa/qnag095" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Journal of the Royal Statistical Society Series A: Statistics in Society 另有 88 条网络优先/未来期/Early Access 发现已写入账本，页内从略。</p>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>IEEE TGRS（IEEE Xplore）：Playwright 可读 Current Volume/All Issues/Early Access；连续卷开放不 claim。</li>
+<li>IJIS（Wiley Online Library）：Playwright Cloudflare 403；Crossref 仅发现登记。</li>
+<li>JRSS Series A（Oxford Academic）：curl 官方 I3/Advance 可读；Playwright 遇 Cloudflare，不影响 curl 证据；I4 404。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>3c50cd11-51a6-4b45-9511-c1fbb2f6ffd4</code></li>
+<li>Commit ID：<code>DAILY-20260926-115245-3c50cd11</code></li>
+<li>Brief ID：<code>DAILY-20260926</code></li>
+<li>去重抑制：0 · 增量复核：0 · 对账任务：4 · 官方源失败计数：1</li>
+<li>正式期刊：REG-026、REG-056、REG-086</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/09/index.html">返回 2026-09 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
+</body></html>

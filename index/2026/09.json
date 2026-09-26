@@ -1,5 +1,5 @@
 {
-  "brief_count": 22,
+  "brief_count": 23,
   "briefs": [
     {
       "brief_id": "DAILY-20260904",
@@ -966,11 +966,14 @@
       "index_anchor": "brief-DAILY-20260925",
       "kind": "DAILY_ROTATION",
       "logical_date": "2026-09-25",
+      "pages_run_id": "36093298979",
+      "public_git_commit_sha": "0c89c5b523ec5d2fa1dd23c52efcaf6e6bca1cf6",
+      "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/09/2026-09-25_GIS-AI期刊每日轮检简报_第25组.html",
       "release_report": "releases/DAILY-20260925-115940-11fc1dd6/2026/09/2026-09-25_GIS-AI期刊每日轮检简报_第25组.html",
       "release_summary_image": "releases/DAILY-20260925-115940-11fc1dd6/2026/09/assets/2026-09-25_GIS-AI期刊每日摘要_第25组.png",
       "report": "2026/09/2026-09-25_GIS-AI期刊每日轮检简报_第25组.html",
       "scheduled_date": "2026-09-25",
-      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "status": "PUBLISHED",
       "summary": "第 25 组共检查 3 种正式期刊；确认 1 个新完整期次、9 篇正式期次论文、0 篇既有网络优先记录正式归期，以及 136 条新的网络优先/未来期/Early Access 发现。Journal of Combinatorial Optimization 确认新完整期 2026-V52-I2（I3 十月未来期已出现故触发）；ISPRS JPRS 与 IJAIT 官方源 403，降级完成，RSS/Crossref 仅作 OF/未来卷或候选期发现、不 claim 新完整期。其中 2 种期刊因官方源阻断降级完成。",
       "summary_image": "2026/09/assets/2026-09-25_GIS-AI期刊每日摘要_第25组.png",
       "summary_image_sha256": "ca5164d21d34684bf5e568261f61200dac40fc31bef7914ffb7556133e9039f9",
@@ -988,6 +991,48 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 25 组",
       "updated_at": "2026-09-25T12:08:55.783428+08:00"
+    },
+    {
+      "brief_id": "DAILY-20260926",
+      "commit_id": "DAILY-20260926-115245-3c50cd11",
+      "completed_run_date": "2026-09-26",
+      "counts": {
+        "changed_journals": 3,
+        "complete_issues": 0,
+        "degraded_sources": 1,
+        "formal_articles": 0,
+        "formal_assignments": 0,
+        "journals": 3,
+        "online_first_updates": 2456
+      },
+      "format": "HTML",
+      "group_id": 26,
+      "html_sha256": "0e1074ec2d35609d291255b2456514c6037c203e4380cad71c8a31b182fc88e4",
+      "index_anchor": "brief-DAILY-20260926",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-09-26",
+      "release_report": "releases/DAILY-20260926-115245-3c50cd11/2026/09/2026-09-26_GIS-AI期刊每日轮检简报_第26组.html",
+      "release_summary_image": "releases/DAILY-20260926-115245-3c50cd11/2026/09/assets/2026-09-26_GIS-AI期刊每日摘要_第26组.png",
+      "report": "2026/09/2026-09-26_GIS-AI期刊每日轮检简报_第26组.html",
+      "scheduled_date": "2026-09-26",
+      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "summary": "第 26 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式期次论文、0 篇既有网络优先记录正式归期，以及 2456 条新的网络优先/在年卷/Advance Articles 发现。IEEE TGRS 官方确认 Volume 64-2026 连续卷开放中（2,128 篇）不 claim；IJIS 官方 Wiley Cloudflare 403，降级并以 Crossref 仅登记；JRSS Series A 官方仍为 V189-I3，I4 404，Advance Articles 仅登记。其中 1 种期刊因官方源阻断降级完成。",
+      "summary_image": "2026/09/assets/2026-09-26_GIS-AI期刊每日摘要_第26组.png",
+      "summary_image_sha256": "a84cf743d1f47851961b6a0ff70bc94b2245a36b1cec08db17aede89db89836f",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20260926-G26",
+          "coverage_month": "2026-09",
+          "group": 26,
+          "scheduled_date": "2026-09-26",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20260926-G26",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 26 组",
+      "updated_at": "2026-09-26T12:14:04.636359+08:00"
     }
   ],
   "level": "MONTH",
@@ -1068,6 +1113,9 @@
     ],
     "2026-09-25": [
       "ROUTINE-20260925-G25"
+    ],
+    "2026-09-26": [
+      "ROUTINE-20260926-G26"
     ]
   },
   "schema_version": "2.1",
@@ -1269,11 +1317,23 @@
       "brief_id": "DAILY-20260925",
       "completed_run_date": "2026-09-25",
       "logical_date": "2026-09-25",
+      "pages_run_id": "36093298979",
+      "public_git_commit_sha": "0c89c5b523ec5d2fa1dd23c52efcaf6e6bca1cf6",
+      "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/09/2026-09-25_GIS-AI期刊每日轮检简报_第25组.html",
       "report": "2026/09/2026-09-25_GIS-AI期刊每日轮检简报_第25组.html",
-      "scheduled_date": "2026-09-25"
+      "scheduled_date": "2026-09-25",
+      "status": "PUBLISHED"
+    },
+    "ROUTINE-20260926-G26": {
+      "anchor": "brief-DAILY-20260926",
+      "brief_id": "DAILY-20260926",
+      "completed_run_date": "2026-09-26",
+      "logical_date": "2026-09-26",
+      "report": "2026/09/2026-09-26_GIS-AI期刊每日轮检简报_第26组.html",
+      "scheduled_date": "2026-09-26"
     }
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-09-25",
+  "updated_date": "2026-09-26",
   "year": 2026
 }
