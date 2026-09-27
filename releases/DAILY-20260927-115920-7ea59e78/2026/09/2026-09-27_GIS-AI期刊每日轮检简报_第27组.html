@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 27 组 · 2026-09-27</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/09/index.html">9 月</a> / 第 27 组
+</nav>
+<p class="meta">逻辑日期 2026-09-27 · 完成时间 2026-09-27 12:11 CST · 任务 ROUTINE-20260927-G27 · Commit <code>DAILY-20260927-115920-7ea59e78</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 27 组</h1>
+<p class="lede">第 27 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式期次论文、0 篇既有网络优先记录正式归期，以及 415 条新的网络优先/在年卷/Advance Articles 发现。IJAEOG（ScienceDirect）官方 Cloudflare/403，V153/V154 仅凭 Crossref/RSS 登记不 claim；IJPRAI（World Scientific）官方 Cloudflare 403，V40-I11+ 与 Online Ready 仅登记；JRSS Series B（Oxford）官方 Cloudflare 403，V88-I4/Advance 仅登记。其中 3 种期刊因官方源阻断降级完成。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>3</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>0</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>0</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>415</strong><span>网络首发/在年</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">连续卷开放</span> <strong>IEEE Transactions on Geoscience and Remote Sensing</strong> — 官方 Current Volume=Volume 64-2026，Showing of 2,128；按年度卷关闭后触发规则，本批不 claim；Crossref 在年 DOI 仅登记。 <span class="evidence"><a href="https://www.sciencedirect.com/journal/international-journal-of-applied-earth-observation-and-geoinformation/vol/151/suppl/C" rel="noopener noreferrer">证据</a><small>www.sciencedirect.com · 2026-09-27 12:11 CST · 官方目录</small></span></li><li><span class="tag">官方源阻断</span> <strong>International Journal of Intelligent Systems</strong> — Wiley TOC/LOI Cloudflare 403；Crossref 2026-V2026-I1 仅登记不 claim。 <span class="evidence"><a href="https://www.worldscientific.com/toc/ijprai/40/09" rel="noopener noreferrer">证据</a><small>www.worldscientific.com · 2026-09-27 12:11 CST · 官方目录</small></span></li><li><span class="tag">无新完整期</span> <strong>Journal of the Royal Statistical Society Series A: Statistics in Society</strong> — 官方仍为 V189-I3；I4 404；Advance Articles 仅登记。 <span class="evidence"><a href="https://academic.oup.com/jrsssb/issue/88/2" rel="noopener noreferrer">证据</a><small>academic.oup.com · 2026-09-27 12:11 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-027<br><strong>International Journal of Applied Earth Observation and Geoinformation</strong></td><td>2026-V152</td><td>0</td><td>0</td><td>0</td><td>108</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr><tr><td>REG-057<br><strong>International Journal of Pattern Recognition and Artificial Intelligence</strong></td><td>2026-V40-I10</td><td>0</td><td>0</td><td>0</td><td>201</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr><tr><td>REG-087<br><strong>Journal of the Royal Statistical Society Series B: Statistical Methodology</strong></td><td>2026-V88-I3</td><td>0</td><td>0</td><td>0</td><td>106</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-09-27_GIS-AI期刊每日摘要_第27组.png" width="1600" height="900" alt="第27组每日摘要图：3刊，新完整期0，正式文0">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<p>本批无新完整期次。</p>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在年登记</h2>
+<p>本批登记网络优先/未来期/Early Access 发现 <strong>415</strong> 条（REG-027 Crossref/RSS 在年卷 V153+、REG-057 Crossref/RSS Online Ready 与 V40-I11+、REG-087 Advance/未确认 I4）。上述条目不作为完整期次证据。</p><article class="paper" id="of-reg-027-001">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>A new approach for comprehensive and spatiotemporally comparable Eco-Environmental quality assessment of surface coal Mines: MiecoI</h3>
+<p>Li Feiyue; Li Jun; Zhang Chengye; Zhang Han; Peng Chuanying; Liang Lixia; Hao Jingyu; Raval Simit</p>
+<dl>
+<div><dt>卷期</dt><dd>V153 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105506</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105506" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105506" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A new approach for comprehensive and spatiotemporally comparable Eco-Environmental quality assessment of surface coal Mines: MiecoI</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105506</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105506" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-027-002">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>A near-real-time and unsupervised framework for grain crop harvest detection using sentinel-2 imagery: the reaped index (RI) and automated thresholding</h3>
+<p>Tang Kai; Li Zeteng; Zhang Youzhi; Wang Laigang; Yang Peng; Qiu Bingwen; Chen Xuehong; Chen Ruilin; Li Jianlong; Chen Jin</p>
+<dl>
+<div><dt>卷期</dt><dd>V153 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105510</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105510" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105510" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A near-real-time and unsupervised framework for grain crop harvest detection using sentinel-2 imagery: the reaped index (RI) and automated thresholding</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105510</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105510" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-027-003">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>V-BUILD: A graph Transformer-based decision framework for selective updating of vector building data</h3>
+<p>Qiu Yue; Wu Fang; Qian Haizhong; Yin Jichong; Gong Xianyong; Liu Chengyi; Zhang Hao; Cao Rui</p>
+<dl>
+<div><dt>卷期</dt><dd>V153 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105507</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105507" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105507" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>V-BUILD: A graph Transformer-based decision framework for selective updating of vector building data</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105507</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105507" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-027-004">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Early detection of rice bacterial leaf blight disease using canopy hyperspectral data and machine learning</h3>
+<p>Wang Ziyi; Darvishzadeh Roshanak; Castilla Nancy; Laborte Alice; Nelson Andrew</p>
+<dl>
+<div><dt>卷期</dt><dd>V153 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105511</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105511" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105511" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Early detection of rice bacterial leaf blight disease using canopy hyperspectral data and machine learning</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105511</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105511" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-027-005">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Linear-Fitting calibration algorithm for Aerosol-Cloud detection channels at 532 nm of the DQ-1/ACDL</h3>
+<p>Mao Feiyue; Li Chengen; Zang Lin; Pan Zengxin; Xu Weiwei; Han Ge; Hu Xiuqing; Chen Weibiao; Gong Wei</p>
+<dl>
+<div><dt>卷期</dt><dd>V153 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105504</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105504" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105504" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Linear-Fitting calibration algorithm for Aerosol-Cloud detection channels at 532 nm of the DQ-1/ACDL</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105504</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105504" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-027-006">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Reducing grid artifacts in air temperature downscaling with a Volume-Preserving interpolation preprocessing step</h3>
+<p>Wen Zitong; Zhuo Lu; Wang Jiao; Abdelhalim Ahmed; Zhong Ming; Han Dawei</p>
+<dl>
+<div><dt>卷期</dt><dd>V153 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105515</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105515" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105515" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Reducing grid artifacts in air temperature downscaling with a Volume-Preserving interpolation preprocessing step</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105515</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105515" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-027-007">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Global cloud phase monitoring from FY-3G multi-angle polarimetric observations using the new MAPLE-CP framework with independent multi-site lidar validation</h3>
+<p>Wang Yaying; Wang Haofei; Zhao Chuanfeng; Wang Qiao; Jia Kun; Fan Jinlong; Lyu Hang; Chen Sijie; Yin Zhenping; Yan Xing</p>
+<dl>
+<div><dt>卷期</dt><dd>V153 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105512</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105512" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105512" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Global cloud phase monitoring from FY-3G multi-angle polarimetric observations using the new MAPLE-CP framework with independent multi-site lidar validation</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105512</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105512" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-027-008">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Global assessment of karst drought propagation from multisource Earth Observation: Epikarst-mediated rapid shallow coupling and delayed deep responses</h3>
+<p>Tian Chengchang; Zhou Qiuwen; Yuan Ze; Li Yuan; Leščešen Igor; Gnjato Slobodan; Leite Pedro A.M.</p>
+<dl>
+<div><dt>卷期</dt><dd>V153 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105516</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105516" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105516" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Global assessment of karst drought propagation from multisource Earth Observation: Epikarst-mediated rapid shallow coupling and delayed deep responses</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105516</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105516" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-027-009">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Brick kilns across India: A temporal analysis of brick kiln distribution and technology types</h3>
+<p>Arora Sugandha; Goldmann Clément; Oehmcke Stefan; Pauls Jan; Zhou Chuanlong; Sharma Abhinav; Tibrewal Kushal; Phuleria Harish; Gieseke Fabian; Ciais Philippe</p>
+<dl>
+<div><dt>卷期</dt><dd>V153 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105496</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105496" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105496" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Brick kilns across India: A temporal analysis of brick kiln distribution and technology types</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105496</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105496" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-027-010">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Integrating spatiotemporal prior knowledge from co-segmented time-series into factor-driven modeling for forest insect damage warning</h3>
+<p>Zhang Haoyan; Li Shiming; Pan Yaozhong</p>
+<dl>
+<div><dt>卷期</dt><dd>V153 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105518</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105518" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105518" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Integrating spatiotemporal prior knowledge from co-segmented time-series into factor-driven modeling for forest insect damage warning</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105518</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105518" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-027-011">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Quantifying earthquake-induced building damage from VIIRS nighttime lights: A multi-scale framework with deep learning–based area validation</h3>
+<p>Joo Hee-Su; Kim Seon-Gyu; Lee Jin-Hyeong; Jung Hyung-Sup</p>
+<dl>
+<div><dt>卷期</dt><dd>V153 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105513</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105513" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105513" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Quantifying earthquake-induced building damage from VIIRS nighttime lights: A multi-scale framework with deep learning–based area validation</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105513</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105513" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-027-012">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Feature selection from Multi-Angular TECIS data for forest biomass estimation using a Model-driven sensitivity analysis approach</h3>
+<p>Sun Xuexia; Li Xiaoyao; Tan Bingxiang; Wu Fayun; Liu Yuxuan; Xiong Shimei</p>
+<dl>
+<div><dt>卷期</dt><dd>V153 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105519</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105519" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105519" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Feature selection from Multi-Angular TECIS data for forest biomass estimation using a Model-driven sensitivity analysis approach</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105519</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105519" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>International Journal of Applied Earth Observation and Geoinformation 另有 96 条网络优先/未来期/Early Access 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-057-001">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>Lane Detection for Self-Driving Cars Using Mouse Customized Golden Eagle Optimizer (Mcgeo) and Two-Fold-Deep-Learning Model</h3>
+<p>Qingmiao Zhang; Mariano Vladimir Y.; Dinghua Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001425530027</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001425530027" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001425530027" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Lane Detection for Self-Driving Cars Using Mouse Customized Golden Eagle Optimizer (Mcgeo) and Two-Fold-Deep-Learning Model</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001425530027 · 摘要来源：账本已存摘要</p><p class="abstract-body">Road boundary lane detection has emerged as an essential task toward avoiding road accidents that occur predominantly because of vehicular unintentional crossing of road lane boundaries. Significant advances have been made so far in various Machine Learning (ML) algorithms meant for lane detection; however, it is indeed difficult to meet accuracy and efficiency levels. Thus, this work attempts to explore a new kind of driver alert related to cross-boundary lanes. The designed approach can be divided into four major steps, which are as follows: (1) preprocesses raw images by applying Sobel filters and Histogram Equalization; (2) performs foreground region identification using an optimized Fuzzy C-Means Clustering technique with the membership function of the clustering model being optimized by the hybrid optimization technique Golden Eagle Optimizer–Cat-and-Mouse-based Optimization (GEO–CMBO); (3) performs key feature extractions including color moments, edges, lines, and corners detections employing various image processing techniques like Prewitt edge detector, Probabilistic Hough Transform, and Harris corner detection; and (4) does feature selection using MCGEO followed by classification using Transformer Neural Network (TNN) and Recurrent Neural Networks (RNNs). The proposed system is implemented in MATLAB and tested based on various metrics such as Accuracy (99.7%), Sensitivity (99.9%), Precision (99.8%), Specificity (99.5%), False Positive Rate (FPR) (0.1%), and False Negative Rate (FNR) (0.2%). Comparative results show the superiority of the proposed method over existing models, thus having a high potential for real-world applications, especially in autonomous vehicles.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001425530027" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-057-002">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>VivoOptiNet: A Gradient Update Adam Optimizer for ECG Arrhythmia Classification</h3>
+<p>Patel Kumud; Pandey Jai Prakash; Dutta Malay Kishore</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001425400063</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001425400063" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001425400063" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>VivoOptiNet: A Gradient Update Adam Optimizer for ECG Arrhythmia Classification</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001425400063 · 摘要来源：账本已存摘要</p><p class="abstract-body">The aim of this work is to develop a hybrid AI model, termed VivoOptiNet, to classify five arrhythmia types and provide their interpretations from ECG signal data. The RNN-based model uses an attention mechanism, a transformer encoder and the Adam optimizer to extract local and global ECG features and classify them. The Adam optimizer proposed in this work addresses the difficulties in non-stationary ECG signals by correcting the gradient norm behavior over time and adding Gaussian noise to achieve natural exploration and adaptation to local minima. The arrhythmia (MIT–BIH) dataset is used for preprocessing, and the SMOTE–ENN technique is employed to balance the classes and assess the model’s performance. The results indicate that VivoOptiNet achieved 99.51% accuracy in classifying five arrhythmia types from ECG signals. The addition of channel attention mechanism and a transformer encoder has inherent interpretability, highlighting the ECG segments that are most relevant, thereby leading to greater omniscience of the ECG sequence and supporting explainable AI in clinical decisions. The success of the VivoOptiNet model in extracting arrhythmias from ECG data represents a significant development in the diagnosis of cardiac patients, potentially reducing the complexity of, for example, multi-lead ECG systems involved and simplifying their use in clinical settings for arrhythmia detection. The model demonstrates its ability to handle imbalanced data using the SMOTE–ENN technique, providing evidence that such models can deliver satisfactory results and that these techniques may be helpful for real-world problems where certain types of arrhythmia are underrepresented in the training data.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001425400063" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-057-003">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>BiTabNet_CFs: A Novel Hybrid Deep Learning Framework for Diabetes Mellitus Detection</h3>
+<p>Rajan R.; Karthik C; Jeslin J Gnana; Gurusamy Nagarajan</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001425400075</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001425400075" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001425400075" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>BiTabNet_CFs: A Novel Hybrid Deep Learning Framework for Diabetes Mellitus Detection</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001425400075 · 摘要来源：账本已存摘要</p><p class="abstract-body">The detection of diabetes mellitus (DM) involves identifying the presence of the body’s inability to produce insulin, which results in high blood sugar levels. The model faces challenges with ambiguous data inputs, ambiguous patient data, computational overhead, and reliance on high-quality sensor data. This study presented a new pipeline for reliable and interpretable classification of DM with Bidirectional TabNet_CounterFactuals (BiTabNet_CFs) to overcome the existing limitations. The input data undergoes preprocessing, which includes quantile normalization and adaptive Box–Cox transformation. Feature selection is performed using the Boruta algorithm, which is a robust random forest-based method that discerns relevant features. To address class imbalance, CTGAN uses conditional vectors and log-frequency sampling to generate realistic synthetic samples, ensuring representation of insufficient classes. A hybrid deep learning (DL) model that combines TabNet and BiLSTM is used for classification. TabNet uses sparse attention to identify and transform relevant features while BiLSTM captures bidirectional dependencies to improve pattern recognition. It includes counterfactuals (CFs) for model interpretability to simulate minimal changes to understand small interrupts on predictions. The proposed method enhances predictive accuracy, making it highly applicable for real-world clinical decision support in diabetes management. The proposed BiTabNet_CFs model shows superior performance in DM classification by achieving an accuracy of 98.7%, a precision of 96.4%, a recall of 90.1%, and an F1-score of 89.2% which significantly overcomes the performance of existing methods.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001425400075" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-057-004">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>Finite Element Model Updating for Cable-Stayed Bridges Using Adaptive Wind-driven Optimization with Gradient Assistance</h3>
+<p>Yi Zhang; Long Hao; Hua Fang; Peijuan Zheng</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I13</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001425520421</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001425520421" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001425520421" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Finite Element Model Updating for Cable-Stayed Bridges Using Adaptive Wind-driven Optimization with Gradient Assistance</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001425520421 · 摘要来源：账本已存摘要</p><p class="abstract-body">Finite Element Model Updating (FEMU) is crucial for ensuring bridge safety within Structural Health Monitoring (SHM); yet traditional methods face significant challenges, such as high computational cost, susceptibility of surrogate models to local optima, and imbalanced exploration–exploitation in metaheuristic algorithms. To overcome these limitations, this paper proposes an innovative Adaptive Wind-Driven Optimization with Gradient Assistance (AWDO-GA) framework to optimize Backpropagation (BP) neural networks for efficient and high-precision FEMU. The core innovation lies in integrating the physics-inspired exploration mechanism of Wind-Driven Optimization (WDO) with the gradient information of BP networks: first, adaptive global–local balance is achieved by dynamically tuning the Coriolis force coefficient, friction coefficient, and velocity constraint (e.g. g = 1.5g_base during early exploration, g = 0.8g_base during late exploitation); second, a gradient-physical fusion velocity update rule ([Formula: see text] = (1 – [Formula: see text] (–[Formula: see text]) accelerates convergence and helps mitigate measurement noise effects. Applied to the Guanhe long-span steel–concrete composite cable-stayed bridge, sample data were generated using D-optimal experimental design, and the AWDO framework optimized BP network weights and thresholds. AWDO was compared with traditional algorithms (GA, PSO) and modern metaheuristics (DE, CMA-ES). Results show that AWDO reduces optimization time by 44% (only 6.5[Formula: see text]min), improves convergence, and provides more accurate parameter identification. Specifically, AWDO reduces lateral mode ([Formula: see text]) error by 79% (to 1.21%) and achieves vertical mode ([Formula: see text]–[Formula: see text]) errors of ≤1%, surpassing GA and PSO. DE and CMA-ES also showed competitive performance, with CMA-ES achieving similar optimization times. Parameter sensitivity analysis highlights the dominance of material properties (steel modulus [Formula: see text] and boundary conditions (bearing stiffness [Formula: see text] in modal sensitivity. Despite a 6.26% residual error in torsional mode due to simplified boundary modeling, this study provides a robust algorithm for creating high-fidelity digital twins of bridges.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001425520421" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-057-005">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>Multi-Label Chest X-Ray Classification with CNNs, Transformers, and Grad-CAM: An Explainable AI Approach</h3>
+<p>Bamatraf Mahmoud; Alsolami Fawaz; Saleh Mostafa</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001425400087</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001425400087" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001425400087" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Multi-Label Chest X-Ray Classification with CNNs, Transformers, and Grad-CAM: An Explainable AI Approach</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001425400087 · 摘要来源：账本已存摘要</p><p class="abstract-body">This study evaluates advanced deep learning models — specifically CNNs (EfficientNetB2 and DenseNet201) and transformers (DeiT and ViT) — for the multi-label classification of chest X-ray images, with a primary focus on AI model development and optimization. Using the small CheXpert dataset for training/validation and the original CheXpert test set for evaluation, the research addresses all 14 labels (12 thoracic pathologies, “No Findings,” and “Support Device”), tackling the inherent challenges of overlapping pathologies in multi-label classification. While DeiT showed the highest performance, EfficientNetB2 was chosen for further refinement because it surpassed DenseNet201 on overall metrics and, along with DenseNet201, supports Grad-CAM for post-hoc explainability. Grad-CAM attention maps identified clinically relevant regions in correctly classified cases and pinpointed areas needing improvement in misclassified instances, thereby providing transparency into the models’ decision-making processes. Overall, despite the limitations imposed by lower image resolution and task complexity, the study demonstrates the adaptability of these deep learning models and contributes to the development of trustworthy AI systems in medical imaging that effectively balance diagnostic accuracy with interpretability. Our proposed method achieved promising results with 0.81 accuracy, 0.79 AUC, and integrates explainable AI by providing visual explanations through attention maps using Grad-CAM to enhance model interpretability.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001425400087" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-057-006">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>EEG Signal Classification Based on Multitask Diffusion Adaptation Over Customized Hyper-Networks</h3>
+<p>Bahraini Tahereh; Shamsollahi Mohammad B.; Afkhaminia Fatemeh</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001425400099</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001425400099" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001425400099" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>EEG Signal Classification Based on Multitask Diffusion Adaptation Over Customized Hyper-Networks</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001425400099 · 摘要来源：账本已存摘要</p><p class="abstract-body">The classification of multi-channel signals remains a challenging yet essential task in biomedical signal processing. Among these, electroencephalogram (EEG) signals stand out due to their potential to assist clinicians in diagnosing neurological conditions. Existing classification methods, however, often struggle with issues such as noise, variability across subjects, and the complexity of real-time data processing. This study introduces a novel classification framework grounded in the concept of a customized hyper-network. Within this architecture, hyper-nodes dynamically represent independent adaptive networks that collectively enhance the system’s flexibility and robustness. By integrating a classification strategy into the hyper-network structure, the proposed method demonstrates improved performance in handling real EEG signals, even when corrupted by noise. Extensive comparative experiments conducted on both synthetic and real-world EEG datasets validate the proposed approach. The results highlight its superior accuracy and adaptability in comparison to existing methods, underscoring the frameworks potential for real-time applications and clinical integration.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001425400099" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-057-007">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>A Lightweight Multi-Scale Network With High-Frequency Learning for Seismic Data Denoising</h3>
+<p>Zhang Fuhong; Huang Xuri; Tang Cong; Chen Kang; Ran Qi</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s021800142659007x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s021800142659007x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s021800142659007x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Lightweight Multi-Scale Network With High-Frequency Learning for Seismic Data Denoising</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s021800142659007x · 摘要来源：账本已存摘要</p><p class="abstract-body">Facing complex geological conditions, the acquired seismic data are often seriously contaminated by noise. How to recover seismic signals in a strong noise background remains a challenging issue. In this paper, we propose a Lightweight Cascaded Multi-Scale (LCMS) network for seismic data denoising, which efficiently and effectively mines seismic signals from low Signal-to-Noise Ratio (SNR) data while reducing computational costs. The network comprises a series of LCMS residual blocks to fully explore the multi-scale dense features of seismic data, in which each layer directly accesses the features of all previous layers to implement a continuous memory mechanism, not only enhancing feature utilization but also reducing redundant computations. The architecture of the network is optimized to achieve a compact structure, ensuring that it requires fewer parameters and computational resources compared to traditional deep networks, thus enabling faster processing without sacrificing performance. Furthermore, high-frequency information mainly presents seismic reflection details, and the lack of high frequencies affects the bandwidth of seismic data. To this end, we employ the nonsubsampled shearlet transform (NSST) to acquire high-frequency prior information and integrate it into the network, which guides the network to focus more on the learning of high-frequency features. The qualitative and quantitative performance evaluations are conducted on synthetic data and real seismic data. Compared with the SOTA methods, our method achieves higher Peak Signal-to-Noise Ratio (PSNR) values and fewer parameters. When applied to real seismic data, our method efficiently recovers more effective signals of seismic data.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s021800142659007x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-057-008">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>A Novel EEG–ECG Based Fusion Model for Multimodal Emotional Classification</h3>
+<p>Gornale Shivanand S.; Palaiahnakote Shivakumara; Unki Amruta; Moreno-Garcia Carlos Francisco</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I12</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001426590081</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426590081" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426590081" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Novel EEG–ECG Based Fusion Model for Multimodal Emotional Classification</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001426590081 · 摘要来源：账本已存摘要</p><p class="abstract-body">The identification of emotional states through physiological signals is vital in human–computer interaction, mental health monitoring, and management. In contrast to existing models, which use either a combination of visual and electroencephalogram (EEG) features or individual features, this study introduces a hybrid multimodal machine learning framework that fuses EEG and electrocardiogram (ECG) features for emotion classification. The EEG indeed captures the brain’s neural activity associated with emotional states, while the ECG monitors the heart’s electrical signals, reflecting autonomic responses that are highly responsive to emotional fluctuations. Integrating these physiological signals enhances the representation of emotional states by capturing complementary information from both the cortical and autonomic nervous systems. To exploit this observation, we explore the combination of a temporal convolutional network (TCN) and a long short-term memory (LSTM) network. This work considers four distinct emotion levels based on valence and arousal dimensions. Experiments on two benchmark datasets, namely, DREAMER and Multimodal, demonstrate the superiority of the proposed method over state-of-the-art methods.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001426590081" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-057-009">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>Application and Optimization Design of HCI Technology with Edge Computing in Intelligent Exhibition of Museum Cultural Heritage</h3>
+<p>Hanbing Wang; Lie Zhang; Ziyi Huang</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I13</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001426560021</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426560021" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426560021" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Application and Optimization Design of HCI Technology with Edge Computing in Intelligent Exhibition of Museum Cultural Heritage</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001426560021 · 摘要来源：账本已存摘要</p><p class="abstract-body">This paper focuses on the practical application and optimal design of human-computer interaction (HCI) technology with edge computing in the intelligent exhibition of museum cultural heritage, and then proposes an intelligent exhibition system architecture based on edge node deployment and resource dynamic scheduling. This architecture reduces the interaction delay and improves the efficiency of multimodal perception and feedback by putting the data processing and artificial intelligence (AI) model reasoning links on the edge devices close to the user. In the research, taking the digital protection project of Dunhuang Mogao Grottoes as an example, 3D laser scanning, deep learning image restoration and VR/AR technology are used to complete the digital collection and virtual reconstruction of cultural relics, and AI models such as ResNet-152 and DCGAN are deployed on edge devices for localization reasoning. Experiments show that compared with the traditional cloud architecture, the average response time of the edge enhancement system is reduced by 68.6%, the user’s stay time is increased to 42.6[Formula: see text]min, and the score of knowledge understanding is 8.5 (out of 10), which significantly improves the audience’s participation and cultural cognitive effect. This article puts forward a closed-loop interactive paradigm of “perception-cognition-feedback”, which provides theoretical support and a practical path for building an intelligent and evolvable wisdom museum.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001426560021" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-057-010">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>Efficient Graph Monte Carlo Hopcroft–Karp Hungarian Neural Network for Analyzing Büchi Automata</h3>
+<p>Songara Dalpat; Rathi Rakesh</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001426560033</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426560033" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426560033" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Efficient Graph Monte Carlo Hopcroft–Karp Hungarian Neural Network for Analyzing Büchi Automata</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001426560033 · 摘要来源：账本已存摘要</p><p class="abstract-body">Büchi automata models verify the systems with infinite sequences, which is crucial for formal verification, program synthesis, and model checking of reactive systems, wherein the analysis struggles with accurate verification. Hence, Graph Monte Carlo Bidirectional Hopcroft–Karp Hungarian Neural Network (GMBHN) is proposed to analyze Buchi automata properties. During the automata analysis, loops with asymmetric transition dependencies and self-reinforcing non-deterministic loops create delays in the acceptance conditions and selecting the same state subsets, which leads to false convergence, and leaves a vast area unverified. To mitigate this, Monte Carlo Tree Bidirectional Long Short-Term Memory (MCT-BLSTM) is employed in GNN’s first hidden layer, which traces all probable execution routes based on probabilistic weight assignments while learning asymmetric patterns for verifying acceptance. Moreover, micro-phase misalignment from asymmetric transition delays, independent event clocks, or unseen microstate dependencies induces phantom livelocks trapping the system in oscillatory cycles and non-converging state trajectories, causing verification failures. Thus, the Hopcroft–Karp Hungarian Algorithm (HKHA) is integrated in GNN’s second layer for mapping optimal states and optimizing assignments, thereby reducing livelocks. Additionally, the Non-Deterministic Buchi Automata (NBW) execute multiple runs for the same input due to state ambiguity, overlapping acceptance conditions, or conflicting transition priorities, which complicates universality verification. The proposed GMBHN tackles this issue by universality-based ranking of the possible execution paths, which is refined by eliminating redundant transitions, thereby satisfying the acceptance conditions. Experimental evaluations showed higher classification accuracy of 98% and precision of 97%, proving its higher performance in Büchi automata analysis with accurate misleading loops detection.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001426560033" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-057-011">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>Enhanced Skin Disease Diagnosis through Optimized Multi-Dimensional Attention Spiking Neural Networks Utilizing Clinical Imaging and Patient Data</h3>
+<p>Kumar K. Saravana; Pandian Rajasekaran M.; Kathirvel N.; Sasidhar A.</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s021800142657003x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s021800142657003x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s021800142657003x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Enhanced Skin Disease Diagnosis through Optimized Multi-Dimensional Attention Spiking Neural Networks Utilizing Clinical Imaging and Patient Data</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s021800142657003x · 摘要来源：账本已存摘要</p><p class="abstract-body">The early and accurate diagnosis of skin lesions is crucial for effective treatment and patient results, particularly in identifying malignant conditions. Traditional diagnostic methods often depend on manual analysis, which can be susceptible to human error due to the vast number of lesion images that need evaluation. To address these limitations, an innovative approach named Optimized Multi-Dimensional Attention Spiking Neural Networks Utilizing Clinical Imaging and Patient Data (SDD-OMDASNN) is proposed. Initially, the data are collected from the PAD-UFES-20 dataset. The system begins with image preprocessing using a Learnable Edge Collaborative Filter (LECF), which effectively removes noise and preserves essential image details. A key innovation in this method is the feature extraction process, which utilizes Parameterized Local Maximum Synchrosqueezing Transforms (PLMST) to extract Bi-Sectional Texture Features, which allows the system to analyze skin texture from multiple perspectives. A Multi-Dimensional Attention Spiking Neural Network (MDASNN) is used for classification that focuses on the most relevant features of the lesion, mimicking the human brain’s ability to prioritize some information. The network’s performance is further enhanced by the Binary Battle Royale Optimizer Algorithm (BBROA), which fine-tunes the model to achieve optimal classification accuracy. The proposed SDD-OMDASNN system is evaluated on various skin conditions, including Basal Cell Carcinoma (BCC), Squamous Cell Carcinoma (SCC), Actinic Keratosis (ACK), Seborrheic Keratosis (SEK), Bowen’s disease (BOD), Melanoma (MEL) and nevus (NEV). The results demonstrate that the proposed methodology gives a higher accuracy of 99.05% and a higher recall of 98%, outperforming other existing techniques.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s021800142657003x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-057-012">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>Design of a Lightweight Grasp Detection Network for Industrial Humanoid Robots Based on Dual-Modal Fusion Transformer</h3>
+<p>Ma Changsheng; Jia Ruchun; Lou Jing; Wang Mingqian; Peng Bo; Qiao Jian Chun</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s021800142640001x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s021800142640001x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s021800142640001x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Design of a Lightweight Grasp Detection Network for Industrial Humanoid Robots Based on Dual-Modal Fusion Transformer</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s021800142640001x · 摘要来源：账本已存摘要</p><p class="abstract-body">In recent years, with the rapid development of artificial intelligence technology, the robotics field is undergoing a new round of transformation. Data-driven methods represented by deep learning, leveraging their powerful feature extraction capabilities, have successfully overcome problems in traditional robotic grasp detection tasks, such as reliance on manually designed geometric features and poor generalization in complex environments. Through end-to-end training of multimodal perceptual data using approaches like convolutional neural networks, Transformer architectures, and reinforcement learning, robotic systems can now achieve recognition, localization, and grasp planning for target objects of different shapes. However, existing grasp detection methods adopt complex-structured networks to improve performance, which not only results in large parameter sizes and low operational efficiency for robotic grasp networks but also hinders their transplantation and deployment on other low-power devices. Meanwhile, single-modal-based object detection and robotic grasp tasks expose potential issues as networks further deepen: single-modal data cannot record relatively complete information features, thus limiting grasp performance. To address the problem that data from different modalities cannot be fully aligned in robotic grasp tasks, an intelligent dual-modal alignment Transformer deep network (SATNet) is designed for the dual-modal input data of RGB images and depth images. This network enables high-precision grasping with a lightweight architecture (model size: 0.27M). Experimental validation was conducted on the Cornell dataset, achieving an inference time of 16.3[Formula: see text]ms and a grasp accuracy of 97.8%-delivering strong performance at an extremely low computational cost.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s021800142640001x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>International Journal of Pattern Recognition and Artificial Intelligence 另有 189 条网络优先/未来期/Early Access 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-087-001">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Mixing time of the conditional backward sampling particle filter</h3>
+<p>Karjalainen Joona; Lee Anthony; Singh Sumeetpal S; Vihola Matti</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkaf078</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf078" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf078" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Mixing time of the conditional backward sampling particle filter</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkaf078 · 摘要来源：账本已存摘要</p><p class="abstract-body">The conditional backward sampling particle filter (CBPF) is a powerful Markov chain Monte Carlo sampler for general state space hidden Markov model (HMM) smoothing. It was proposed as an improvement over the conditional particle filter (CPF), which has an O(T2) complexity under a general ‘strong’ mixing assumption, where T is the time horizon. Empirical evidence of the superiority of the CBPF over the CPF has never been theoretically quantified. We show that the CBPF has O(TlogT) time complexity under strong mixing: its mixing time is upper bounded by O(logT), for any sufficiently large number of particles N independent of T. This O(logT) mixing time is optimal. To prove our main result, we introduce a novel coupling of two CBPFs, which employs a maximal coupling of two particle systems at each time instant. The coupling is implementable and we use it to construct unbiased, finite variance, estimates of functionals which have arbitrary dependence on the latent state’s path, with a total expected cost of O(TlogT). We use this to construct unbiased estimates of the HMM’s score function, and also investigate other couplings which can exhibit improved behaviour. We demonstrate our methods on financial and calcium imaging applications.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf078" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-087-002">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Using a two-parameter sensitivity analysis framework to efficiently combine randomized and nonrandomized studies</h3>
+<p>Yu Ruoqi; Karmakar Bikram; Vandeleest Jessica; Schwarz Eleanor Bimla</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkaf079</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf079" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf079" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Using a two-parameter sensitivity analysis framework to efficiently combine randomized and nonrandomized studies</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkaf079 · 摘要来源：账本已存摘要</p><p class="abstract-body">Causal inference is vital for informed decision-making across fields such as biomedical research and social sciences. Randomized controlled trials (RCTs) are considered the gold standard for internal validity of inferences, whereas observational studies (OSs) often provide the opportunity for greater external validity. However, both data sources have inherent limitations preventing their use for broadly valid statistical inferences: RCTs may lack generalizability due to their selective eligibility criterion, and OSs are vulnerable to unobserved confounding. This paper proposes an innovative approach to integrate RCT and OS that borrows the other study’s strengths to remedy each study’s limitations. The method uses a novel triplet matching algorithm to align RCT and OS samples and a new two-parameter sensitivity analysis framework to quantify internal and external validity biases. This combined approach yields causal estimates that are more robust to hidden biases than OSs alone and provides reliable inferences about the treatment effect in the general population. We apply this method to investigate the effects of lactation on maternal health using a small RCT and a long-term observational health records dataset from the California National Primate Research Center. This application demonstrates the practical utility of our approach in generating scientifically sound and actionable causal estimates.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf079" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-087-003">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Bayesian quantile estimation and regression with martingale posteriors</h3>
+<p>Fong Edwin; Yiu Andrew</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkaf080</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf080" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf080" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Bayesian quantile estimation and regression with martingale posteriors</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkaf080 · 摘要来源：账本已存摘要</p><p class="abstract-body">Quantile estimation and regression within the Bayesian framework is challenging as the choice of likelihood and prior is not obvious. In this paper, we introduce a novel Bayesian nonparametric method for quantile estimation and regression based on the recently introduced martingale posterior (MP) framework. The core idea of the MP is that posterior sampling is equivalent to predictive imputation, which allows us to break free of the stringent likelihood-prior specification. We demonstrate that a recursive estimate of a smooth quantile function, subject to a martingale condition, is entirely sufficient for full nonparametric Bayesian inference. We term the resulting posterior distribution as the quantile martingale posterior (QMP), which arises from an implicit generative predictive distribution. Associated with the QMP is an expedient, MCMC-free and parallelizable posterior computation scheme, which can be further accelerated with an asymptotic approximation based on a Gaussian process. Furthermore, the well-known issue of monotonicity in quantile estimation is naturally alleviated through increasing rearrangement due to the connections to the Bayesian bootstrap. Finally, the QMP has a particularly tractable form that allows for comprehensive theoretical study, which forms a main focus of the work. We demonstrate the ease of posterior computation in simulations and real data experiments.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf080" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-087-004">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>A new integrative learning framework for integrating multiple secondary outcomes into primary outcome analysis: a case study on liver health</h3>
+<p>Deng Daxuan; Han Peisong; Chen Shuo; Wang Ming; Chen Chixiang</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkaf081</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf081" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf081" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A new integrative learning framework for integrating multiple secondary outcomes into primary outcome analysis: a case study on liver health</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkaf081 · 摘要来源：账本已存摘要</p><p class="abstract-body">In the era of big data, secondary outcomes have become increasingly important alongside primary outcomes. These secondary outcomes, which can be derived from traditional endpoints in clinical trials, compound measures, or risk prediction scores, hold the potential to enhance the analysis of primary outcomes. Our method is motivated by the challenge of utilizing multiple secondary outcomes, such as blood biochemistry markers and urine assays, to improve the analysis of the primary outcome related to liver health. Current integration methods often fall short, as they impose strong model assumptions or require prior knowledge to construct over-identified working functions. This article addresses these challenges and opens a new avenue in data integration by introducing a novel integrative learning framework applicable in a general setting. The proposed framework allows for the robust, data-driven integration of information from multiple secondary outcomes, promotes the development of efficient learning algorithms, and ensures optimal use of available data. Extensive simulation studies demonstrate that the proposed method significantly reduces variance in primary outcome analysis, outperforming existing integration approaches. Additionally, applying this method to UK Biobank reveals that cigarette smoking is associated with increased fatty liver measures, with these effects being particularly pronounced in the older adult cohort.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf081" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-087-005">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Skew-symmetric approximations of posterior distributions</h3>
+<p>Pozza Francesco; Durante Daniele; Szabo Botond</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkaf082</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf082" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf082" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Skew-symmetric approximations of posterior distributions</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkaf082 · 摘要来源：账本已存摘要</p><p class="abstract-body">Popular deterministic approximations of posterior distributions from, e.g. the Laplace method, variational Bayes and expectation-propagation, generally rely on symmetric families, often taken to be Gaussian. This choice facilitates optimization and inference, but typically affects the quality of the approximation. In fact, even in basic parametric models, posterior distributions often display asymmetries that yield bias and reduced accuracy when considering symmetric approximations. Recent research has moved towards more flexible approximations incorporating skewness. However, current solutions are often model specific, lack general supporting theory, increase the computational complexity of the optimization problem, and do not provide broadly applicable solutions to incorporate skewness in any symmetric approximation. This article addresses such a gap by introducing a general and provably optimal strategy to perturb any symmetric approximation of a generic posterior distribution. The proposed solution is derived without additional optimization steps, and yields a similarly tractable approximation within the class of skew-symmetric densities that enhances the finite sample accuracy of the original symmetric counterpart. Furthermore, under suitable assumptions, it improves the convergence rate to the exact posterior by at least a n factor, in asymptotic regimes. These advancements are illustrated in numerical studies focusing on skewed perturbations of state-of-the-art Gaussian approximations.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf082" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-087-006">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Scalability of Metropolis-within-Gibbs schemes for high-dimensional Bayesian models</h3>
+<p>Ascolani Filippo; Roberts Gareth O; Zanella Giacomo</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkaf084</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf084" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf084" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Scalability of Metropolis-within-Gibbs schemes for high-dimensional Bayesian models</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkaf084 · 摘要来源：账本已存摘要</p><p class="abstract-body">We study general coordinate-wise Markov chain Monte Carlo schemes (such as Metropolis-within-Gibbs samplers), which are commonly used to fit Bayesian non-conjugate hierarchical models. We relate their convergence properties to the ones of the corresponding (potentially not implementable) random scan Gibbs sampler through the notion of conditional conductance. This allows us to study the performances of popular Metropolis-within-Gibbs schemes for non-conjugate hierarchical models, in high-dimensional regimes where both number of datapoints and parameters increase. Given random data-generating assumptions, we establish dimension-free convergence results, which are in close accordance with numerical evidences. Application to Bayesian models for binary regression with unknown hyperparameters is also discussed. Motivated by such statistical applications, auxiliary results of independent interest on approximate conductances and perturbation of Markov operators are provided.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkaf084" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-087-007">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Online kernel CUSUM for change-point detection</h3>
+<p>Wei Song; Xie Yao</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag020</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag020" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag020" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Online kernel CUSUM for change-point detection</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag020 · 摘要来源：账本已存摘要</p><p class="abstract-body">We present a computationally efficient online kernel Cumulative Sum method for change-point detection that utilizes the maximum over a set of kernel statistics to account for the unknown change-point location. Our approach exhibits increased sensitivity to small changes compared to existing kernel-based change-point detection methods, including the Scan-B statistic, corresponding to a non-parametric Shewhart chart-type procedure. We provide accurate analytic approximations for two key performance metrics: the average run length (ARL) and expected detection delay, which enable us to establish an optimal window length to be on the order of the logarithm of ARL to ensure minimal power loss relative to an oracle procedure with infinite memory. Moreover, we introduce a recursive calculation procedure for detection statistics to ensure constant computational and memory complexity, which is essential for online implementation. Through extensive experiments on both simulated and real data, we demonstrate the competitive performance of our method and validate our theoretical results.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag020" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-087-008">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Penalized empirical likelihood over decentralized networks</h3>
+<p>Du Jinye; Wang Qihua</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag042</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag042" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag042" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Penalized empirical likelihood over decentralized networks</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag042 · 摘要来源：账本已存摘要</p><p class="abstract-body">Empirical likelihood encounters serious computational challenges when applied to massive datasets or multiple data sources distributed across decentralized networks. This paper proposes a constrained empirical likelihood framework for decentralized networks, utilizing a novel penalization technique to obtain a penalized empirical log-likelihood. The resulting empirical log-likelihood ratio statistic is proved to be asymptotically standard chi-squared even for a divergent machine number. However, the optimization problem with the fused penalty is still hard to solve in the decentralized distributed network due to the coupling structure. To address the problem, two novel algorithms are developed to solve the optimization problem in a decentralized manner, with established convergence properties and linear convergence for the second algorithm in specific network structures. The methods are validated through simulations and real data analyses of census income and Ford gobike datasets.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag042" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-087-009">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>ART: distribution-free and model-agnostic changepoint detection with finite-sample guarantees</h3>
+<p>Cui Xiaolong; Geng Haoyu; Wang Guanghui; Wang Zhaojun; Zou Changliang</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag037</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag037" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag037" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>ART: distribution-free and model-agnostic changepoint detection with finite-sample guarantees</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag037 · 摘要来源：账本已存摘要</p><p class="abstract-body">We introduce ART, a distribution-free and model-agnostic framework for changepoint analysis with finite-sample guarantees. ART transforms independent observations into real-valued scores via a symmetric function; under the null hypothesis of no changepoint these scores are exchangeable. Ranking and aggregating the scores yields test statistics whose null distribution is known exactly from the permutation law of ranks, enabling exact finite-sample Type I error control without repeated refitting under permutations. ART extends naturally to a multi-scale setting: by locally ranking scores over a family of intervals and aggregating them, it supports multiple changepoint testing, localization with inference, and post-detection inference, while retaining distribution-free calibration. The approach is model-agnostic: it imposes minimal structural or distributional assumptions and accommodates diverse score constructions, including features learned by statistical or machine-learning models. Across simulations and real-data applications, ART delivers valid error control and competitive power across a range of models and distributions. These properties make ART a reliable and versatile tool for modern changepoint analysis.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag037" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-087-010">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Inference on function-valued parameters using a restricted score test</h3>
+<p>Hudson Aaron; Carone Marco; Shojaie Ali</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag043</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag043" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag043" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Inference on function-valued parameters using a restricted score test</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag043 · 摘要来源：账本已存摘要</p><p class="abstract-body">It is often of interest to make inference on an unknown function that is a local parameter of the data-generating mechanism, such as a density or regression function. Such estimands can typically only be estimated at a slower-than-parametric rate in nonparametric and semiparametric models, and performing calibrated inference can be challenging. In many cases, these estimands can be expressed as the minimizer of a population risk functional. Here, we propose a general framework that leverages such representation and provides a nonparametric extension of the score test for inference on an infinite-dimensional risk minimizer. We demonstrate that our framework is applicable in a wide variety of problems. As both analytic and computational examples, we describe how to use our general approach for inference on a mean regression function under (i) nonparametric and (ii) partially additive models, and evaluate the operating characteristics of the resulting procedures via simulations. Assessment of effect heterogeneity, inference on density functions, and conditional independence testing are discussed as additional examples.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag043" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-087-011">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Principal stratification with U-statistics under principal ignorability</h3>
+<p>Chen Xinyuan; Li Fan</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag044</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag044" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag044" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Principal stratification with U-statistics under principal ignorability</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag044 · 摘要来源：账本已存摘要</p><p class="abstract-body">Principal stratification is a popular framework for causal inference in the presence of an intermediate outcome. While the principal average treatment effects are the standard target of inference, they may be insufficient when interest lies in the relative ordering of potential outcomes within a principal stratum. We introduce the principal generalized causal effect estimands to accommodate nonlinear contrast functions, providing robust, probability-scale summaries suitable for ordinal outcomes and win–loss comparisons with composite endpoints. Under principal ignorability, we expand the theoretical results in Jiang et al. (J R Stat Soc Series B., 2022, 84(4), 1423–1445) to a broader class of causal estimands in the presence of a binary intermediate variable. We develop nonparametric identification results and derive efficient influence functions for the generalized causal estimands in principal stratification analyses. These efficient influence functions motivate multiply robust estimators and lay the ground for obtaining efficient debiased machine learning estimators via cross-fitting based on U-statistics. The proposed methods are illustrated through simulations and the analysis of a data example.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag044" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-087-012">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Anytime validity is free: inducing sequential tests</h3>
+<p>Koning Nick W; van Meer Sam</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag050</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag050" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-09-27 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag050" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-27 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Anytime validity is free: inducing sequential tests</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag050 · 摘要来源：账本已存摘要</p><p class="abstract-body">Anytime valid sequential tests permit us to stop testing based on the current data, without invalidating the inference. Given a maximum number of observations N, one may believe this must come at the cost of power when compared to a conventional test that waits until all N observations have arrived. Our first contribution is to show that this is false: for any valid test based on N observations, we show how to construct an anytime valid sequential test that matches it after N observations. Our second contribution is that we may use the outcome of a [0,1]-valued test as a conditional significance level in subsequent testing, leading to an overall procedure that is valid at the original significance level. This shows that anytime validity and optional continuation are readily available in traditional testing, without requiring explicit use of e-values. We illustrate this by deriving the anytime valid sequentialized z-test and t-test, which at time N coincide with the traditional z-test and t-test. Finally, we characterize the Sequential Probability Ratio Test by invariance under test induction, and show that it is induced by the Neyman–Pearson test for a tiny level and huge N under an i.i.d. assumption.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag050" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Journal of the Royal Statistical Society Series B: Statistical Methodology 另有 94 条网络优先/未来期/Early Access 发现已写入账本，页内从略。</p>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>IJAEOG（ScienceDirect）：Playwright/curl HTTP 403；RSS+Crossref 仅发现登记；连续卷不 claim。</li>
+<li>IJPRAI（World Scientific）：Playwright Cloudflare 403；RSS+Crossref 仅发现登记。</li>
+<li>JRSS Series B（Oxford Academic）：Playwright/curl Cloudflare 403；RSS+Crossref 仅发现登记。</li>
+<li>信号源 REG-100 科学网—地球科学：本批仅登记为信号，不计入正式完成。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>7ea59e78-da09-463c-baa1-415cb7c6f9ea</code></li>
+<li>Commit ID：<code>DAILY-20260927-115920-7ea59e78</code></li>
+<li>Brief ID：<code>DAILY-20260927</code></li>
+<li>去重抑制：0 · 增量复核：0 · 对账任务：4 · 官方源失败计数：3</li>
+<li>正式期刊：REG-027、REG-057、REG-087 · 信号：REG-100</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/09/index.html">返回 2026-09 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
+</body></html>
