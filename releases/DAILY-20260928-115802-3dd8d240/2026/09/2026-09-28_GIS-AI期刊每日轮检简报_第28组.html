@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 28 组 · 2026-09-28</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/09/index.html">9 月</a> / 第 28 组
+</nav>
+<p class="meta">逻辑日期 2026-09-28 · 完成时间 2026-09-28 12:05 CST · 任务 ROUTINE-20260928-G28 · Commit <code>DAILY-20260928-115802-3dd8d240</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 28 组</h1>
+<p class="lede">第 28 组共检查 3 种正式期刊；确认 2 个新完整期次、33 篇正式期次论文、0 篇既有网络优先记录正式归期，以及 179 条新的网络优先/Latest Articles/在编期发现。PERS（ASPRS）官方列出 No.9 Sep 2026，镜像目录 6 篇与 Crossref V92-I9 一致并 claim；Applied Intelligence（Springer）官方 I14（Sep，27 篇）因 I15 已出现而 claim，I15（Oct）在编仅登记；JCGS（T&amp;F）Current 仍为 V35-I3，I4 无正式目录，Latest Articles 仅登记。无期刊级扫描失败。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>3</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>2</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>33</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>179</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">新完整期</span> <strong>Photogrammetric Engineering &amp; Remote Sensing</strong> — 官方列出 No.9 Sep 2026；claim 2026-V92-I9（6 篇）。 <span class="evidence"><a href="https://my.asprs.org/PERS/PERS/Default.aspx" rel="noopener noreferrer">证据</a><small>my.asprs.org · 2026-09-28 12:05 CST · 官方目录</small></span></li><li><span class="tag">新完整期</span> <strong>Applied Intelligence</strong> — 官方 I14（Sep，27 篇）claim；I15（Oct，30 篇）在编不 claim。 <span class="evidence"><a href="https://link.springer.com/journal/10489/volumes-and-issues/56-14" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-09-28 12:05 CST · 官方目录</small></span></li><li><span class="tag">无新完整期</span> <strong>Journal of Computational and Graphical Statistics</strong> — Current 仍为 V35-I3；I4 重定向 Latest Articles，仅登记。 <span class="evidence"><a href="https://www.tandfonline.com/toc/ucgs20/current" rel="noopener noreferrer">证据</a><small>www.tandfonline.com · 2026-09-28 12:05 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-028<br><strong>Photogrammetric Engineering &amp; Remote Sensing</strong></td><td>2026-V92-I9</td><td>1</td><td>6</td><td>0</td><td>46</td><td><code>OFFICIAL_PAGE_OK</code></td><td>COMPLETED</td></tr><tr><td>REG-058<br><strong>Applied Intelligence</strong></td><td>2026-V56-I14</td><td>1</td><td>27</td><td>0</td><td>31</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-088<br><strong>Journal of Computational and Graphical Statistics</strong></td><td>2026-V35-I3</td><td>0</td><td>0</td><td>0</td><td>102</td><td><code>OFFICIAL_PAGE_OK</code></td><td>COMPLETED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-09-28_GIS-AI期刊每日摘要_第28组.png" width="1600" height="900" alt="第28组每日摘要图：3刊，新完整期2，正式文33">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-028-2026-v92-i9"><h3>Photogrammetric Engineering &amp; Remote Sensing · 2026-V92-I9</h3><p>ASPRS 官方首页列出 No. 9 Sep 2026；镜像 Issue 09 目录与 Crossref 6 DOI 一致。</p><p><span class="evidence"><a href="https://tang1693.github.io/PERShtml/IssuesArticles/html/202609.html" rel="noopener noreferrer">官方期次目录</a><small>tang1693.github.io · 2026-09-28 12:05 CST · 一级完整性证据</small></span><span class="evidence"><a href="https://my.asprs.org/PERS/PERS/Default.aspx" rel="noopener noreferrer">ASPRS 官方首页</a><small>my.asprs.org · 2026-09-28 12:05 CST · 期次列表交叉核验</small></span></p><p>本简报收录正式论文 <strong>6</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-028-2026v92i9-001">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · FORMAL_ISSUE</p>
+<h3>ELFFNet: An Efficient Lightweight Feature Fusion Network for Change Detection</h3>
+<p>Yichen Cui; Hong Shen; Chan-Tong Lam</p>
+<dl>
+<div><dt>卷期</dt><dd>V92 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.25-00163r3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.25-00163r3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>ELFFNet: An Efficient Lightweight Feature Fusion Network for Change Detection</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.25-00163r3 · 摘要来源：账本已存摘要</p><p class="abstract-body">Remote sensing change detection is essential for land use planning, urban monitoring, and disaster response. However, conventional deep learning methods often suffer from blurred building and vegetation edges, shadow misclassification, and low efficiency due to excessive complexity. To address these issues, we propose ELFFNet, a lightweight and efficient network that achieves high detection accuracy with reduced computational cost. ELFFNet integrates Asymmetric Dilated Convolution Modules for deep semantic extraction, Multi Efficient Attention Modules between encoder and decoder to retain fine spatial details, and a simplified Pyramid Pooling Module at the deepest stage for low-cost global context aggregation. Experiments on the GVLM-CD and WHU-CD data sets show superior performance, with Kappa coefficients of 82.86% and 94.48%, F1 scores of 91.72% and 95.24%, and mean intersection over union values of 84.96% and 94.73%. Importantly, ELFFNet requires a parameter size of 7.31 MB and 22.6 giga floating-point operations [GFLOPs])—far fewer than Transformer-based models—while delivering strong edge detection for small targets and complex disaster areas. This balance of accuracy and efficiency makes ELFFNet highly suitable for practical remote sensing applications.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.25-00163r3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-028-2026v92i9-002">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · FORMAL_ISSUE</p>
+<h3>Exploring the Utility of a Multivariate Soil Hyperspectral Reflectance Model for Estimating Soil Moisture Using Sentinel-2 Data</h3>
+<p>Yonwaba Atyosi; Moses Azong Cho; Nobuhle Patience Majozi; Wessel Bonnet; Abel Ramoelo</p>
+<dl>
+<div><dt>卷期</dt><dd>V92 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.25-00204r2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.25-00204r2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Exploring the Utility of a Multivariate Soil Hyperspectral Reflectance Model for Estimating Soil Moisture Using Sentinel-2 Data</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.25-00204r2 · 摘要来源：账本已存摘要</p><p class="abstract-body">Accurate and spatially transferable estimation of soil moisture is critical for sustainable agriculture, water resource management, and drought monitoring, particularly in data-scarce semiarid regions. However, soil moisture retrieval from optical satellite data remains challenging due to heterogeneous soil conditions and limited model generalizability, especially when interactions between soil moisture and clay content are neglected. This study presents a physically informed, simulation-based multivariate framework for estimating soil moisture from freely available Sentinel-2 multispectral imagery that explicitly accounts for soil clay content and its interaction with moisture. A Monte Carlo look-up table comprising 100,000 synthetic soil reflectance spectra was generated under varying soil moisture and clay conditions and resampled to Sentinel-2 spectral bands. Soil moisture-sensitive spectral band combinations, ratios, and newly developed soil moisture indices were derived and used to train machine learning models, which were evaluated using group-aware cross-validation to assess spatial robustness and transferability. Model application across multiple agricultural sites in South Africa’s Eastern Cape and Limpopo provinces, regions geographically distinct from calibration areas and spanning contrasting ecological and climatic conditions demonstrated high predictive performance (R² up to 0.91; RMSE as low as 0.71) and strong spatial transferability. The results indicate that explicitly integrating soil property interactions within a synthetic spectral modeling framework substantially improves Sentinel-2–based soil moisture estimation. The proposed approach advances operational optical remote sensing of soil moisture by bridging physically consistent spectral simulations and scalable multispectral observations, providing a transferable methodology for precision irrigation, drought early warning, and sustainable agricultural water management in semiarid environments.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.25-00204r2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-028-2026v92i9-003">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · FORMAL_ISSUE</p>
+<h3>FastPro-Gaussian: Accelerated True Digital Orthophoto Map Generation with Progressive Densification and Spherical-to-Ellipsoidal Gaussian Transformation</h3>
+<p>Chao Yang; Yapeng Li; Feiyang Liu; Shihong Yao; Maoteng Zheng; Zhiyan Xiao; Guancheng Li; Qichen Zhang; Kui Ma</p>
+<dl>
+<div><dt>卷期</dt><dd>V92 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.25-00202r3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.25-00202r3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>FastPro-Gaussian: Accelerated True Digital Orthophoto Map Generation with Progressive Densification and Spherical-to-Ellipsoidal Gaussian Transformation</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.25-00202r3 · 摘要来源：账本已存摘要</p><p class="abstract-body">True digital orthophoto maps (TDOMs) serve as foundational geospatial products for applications in land surveying, urban planning, and emergency management. Conventional TDOM generation relies on differential correction, often resulting in cartographic artifacts such as geometric discontinuities, radiometric inconsistencies, and linear feature misalignments. Although recent methods leverage 3D Gaussian splatting to bypass differential correction, their computational demands hinder real-world deployment. To address these limitations, we propose FastPro-Gaussian, a novel framework enabling rapid high-quality TDOM generation on consumer-grade GPUs. Our contributions are threefold: block-based processing ensuring scalability for large-scale scenes; progressive densification stabilizing model optimization and reducing training iterations; and spherical-to-ellipsoidal Gaussian transformation, accelerating early-stage optimization of structural features (e.g., building edges). Experiments demonstrate that FastPro-Gaussian surpasses commercial solutions (ContextCapture, Metashape, and Pix4Dmapper) in rendering quality for building facades, edges, and roads. Compared to state-of-the-art methods, it achieves comparable TDOM fidelity with over two-fold acceleration in training time (notably more than two times faster than Tortho-GS). These gains in efficiency and efficacy confirm its strong potential for practical deployment in geospatial production pipelines.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.25-00202r3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-028-2026v92i9-004">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · FORMAL_ISSUE</p>
+<h3>UAV Lidar vs. Structure-from-Motion (SfM) Photogrammetry for Coastal Dune Monitoring: A Two-Year Multi-Temporal Case Study from the Southern Baltic Sea</h3>
+<p>Jakub Śledziowski</p>
+<dl>
+<div><dt>卷期</dt><dd>V92 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.26-00015r2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.26-00015r2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>UAV Lidar vs. Structure-from-Motion (SfM) Photogrammetry for Coastal Dune Monitoring: A Two-Year Multi-Temporal Case Study from the Southern Baltic Sea</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.26-00015r2 · 摘要来源：账本已存摘要</p><p class="abstract-body">Unmanned aerial vehicles (UAVs) are increasingly used for high-resolution coastal monitoring. This study compares two widely used approaches for deriving digital elevation models (DEMs) from eight repeat UAV surveys (coacquired lidar + red–green–blue [RGB] in the same flight): (1) UAV lidar and (2) structure-from-motion photogrammetry (SfM) based on RGB imagery. A total of 16 DEMs (8 field campaigns in both 2022 and 2023) acquired with a DJI Matrice 300 real-time kinematic drone equipped with a Zenmuse L1 sensor over a 1-km dune–beach system in Mrzeżyno, southern Baltic coast (Poland). Using an automated transect-based workflow (895 cross-shore profiles), shoreline position, beach and dune widths, elevations, slopes, and volumetric change were extracted and related to tide-gauge–based hydrometeorological conditions using deep neural networks and complementary driver-consistency analyses. Both approaches captured consistent temporal trends and converged on the same dominant environmental drivers, with storm activity (event count and duration) together with wave and sea-level conditions explaining most of the observed variability. Differences were largest over water surfaces and locally within vegetation-affected dune areas, where lidar produced fewer artifacts. Despite these local deviations, the net beach + dune volume change between the first and last survey differed by only 0.48% between lidar and SfM, indicating that SfM can provide comparable coastal-change information for many monitoring tasks when survey geometry and quality control are carefully managed.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.26-00015r2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-028-2026v92i9-005">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · FORMAL_ISSUE</p>
+<h3>Terrain Variation Aware Surface Height Estimation Network for High-Precision Multi-view Satellite Stereo</h3>
+<p>Wei Guo; Min Chen; Tong Fang; Junqi Zhao; Jinbo Zhang; Zhanhao Zhang; Kai Liu; Han Hu; Xuming Ge; Qing Zhu; Bo Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V92 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.26-00005r4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.26-00005r4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Terrain Variation Aware Surface Height Estimation Network for High-Precision Multi-view Satellite Stereo</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.26-00005r4 · 摘要来源：账本已存摘要</p><p class="abstract-body">Deep learning–based multi-view stereo (MVS) has shown great potential for large-scale 3D reconstruction from satellite imagery. However, existing methods struggle with the large depth ranges and complex scenes inherent to this domain. By relying on rigid range-guided sampling and local consistency assumptions, these approaches often neglect specific terrain variations. This leads to misallocated hypothesis budgets and excessive smoothing across discontinuities in complex terrain. To address these limitations, we propose a terrain variation–aware multi-view satellite imagery surface height estimation network that introduces surface normal information to construct an end-to-end terrain-guided height estimation framework. To effectively capture terrain variation, the network computes normal maps from height maps and measures local terrain variation within the neighborhood of reference pixels based on height and normal information. The network further incorporates a local terrain-guided height hypothesis module and a terrain variation–aware feature enhancement module that optimize height hypothesis sampling precision and enhance the terrain-aware features in regions with significant terrain variation, respectively. Additionally, we propose a joint height-normal loss to implicitly optimize height estimation. Extensive experiments conducted on the WHU-TLC and MVS3D data sets demonstrate that our method achieves state-of-the-art performance across all evaluation metrics. Notably, in urban areas and mixed scenes, the proposed approach achieves a significant improvement in the proportion of high-precision pixels compared to existing methods, with the maximum improvement reaching 30.25%.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.26-00005r4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-028-2026v92i9-006">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · FORMAL_ISSUE</p>
+<h3>Comparative Evaluation of Deep-Learning Models for Point Cloud Upsampling: Insights from Indoor Parking Lot Data Set</h3>
+<p>Sarah Narges Fatholahi; Shunde Yin; Kristie Hu; Hongjie He; Kevin Yikai Yao; Dedong Zhang; Dening Lu; Jing Teng; Jonathan Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V92 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.25-00083r3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.25-00083r3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Comparative Evaluation of Deep-Learning Models for Point Cloud Upsampling: Insights from Indoor Parking Lot Data Set</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.25-00083r3 · 摘要来源：账本已存摘要</p><p class="abstract-body">Upsampling of point clouds is a critical process in three-dimensional data processing, aimed at enhancing the resolution, uniformity, and overall quality of sparse and irregular point cloud data. This task becomes especially necessary in underground parking lots, where factors such as occlusions, reflective surfaces, and limited sensor coverage often result in incomplete or uneven point distributions. Accurate upsampling in these environments can significantly improve downstream tasks such as semantic segmentation, object detection, and spatial mapping by providing denser and more geometrically consistent reconstructions. In this paper, a comprehensive evaluation of four state-of-the-art deep-learning algorithms for point cloud upsampling is presented. Leveraging a novel, high-quality data set captured in a real-world indoor parking lot environment, the performance of these models is systematically assessed under conditions characterized by structural complexity and varying point densities. This comparative study evaluates each model’s ability to address sparsity and non-uniformity while preserving geometric fidelity and achieving uniform distribution in challenging indoor scenarios.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.25-00083r3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-058-2026-v56-i14"><h3>Applied Intelligence · 2026-V56-I14</h3><p>官方 TOC September 2026，27 篇；下一期 I15（October）已出现，按规则 claim I14。</p><p><span class="evidence"><a href="https://link.springer.com/journal/10489/volumes-and-issues/56-14" rel="noopener noreferrer">官方期次目录</a><small>link.springer.com · 2026-09-28 12:05 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>27</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-058-2026v56i14-001">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>A spatio-temporal context-aware LLM-centric framework for autonomous vehicle scheduling</h3>
+<p>Jiaxin Tan; Xiaohui Huang; Nan Jiang; Xuebo Cheng; Liyan Xiong; Ni Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07451-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07451-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A spatio-temporal context-aware LLM-centric framework for autonomous vehicle scheduling</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07451-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07451-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-002">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>A systematic review of the crested porcupine optimizer: variants and applications</h3>
+<p>Haiyu Yu; Azizan As’arry; Haohao Ma; Nor Mohd Haziq Norsahperi; Saihong Tang; Zulkifli Mohd Yusop; Eris Elianddy Bin Supeni</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07453-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07453-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A systematic review of the crested porcupine optimizer: variants and applications</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07453-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07453-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-003">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Deep learning-based diagnostic report generation for low-resolution functional medical images via cross-modal visual and textual alignment</h3>
+<p>Tao Song; Qiang Lin; Tongtong Li; Xianwu Zeng; Yongchun Cao; Zhengxing Man; Caihong Liu; Zhengqi Cai; Xiaodi Huang</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07456-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07456-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Deep learning-based diagnostic report generation for low-resolution functional medical images via cross-modal visual and textual alignment</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07456-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07456-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-004">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Adversarial fine-tuning in offline-to-online reinforcement learning for robust robot control</h3>
+<p>Shingo Ayabe; Hiroshi Kera; Kazuhiko Kawamoto</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07455-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07455-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Adversarial fine-tuning in offline-to-online reinforcement learning for robust robot control</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07455-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07455-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-005">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>GenPot: A generative honeypot architecture for adaptive web and API interaction</h3>
+<p>Antonio Lara-Gutierrez; Juan Zamorano; Jose A. Onieva</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07442-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07442-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>GenPot: A generative honeypot architecture for adaptive web and API interaction</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07442-4 · 摘要来源：账本已存摘要</p><p class="abstract-body">Honeypots are widely used as cyber-deception tools to study adversarial behaviour, yet their effectiveness is limited by a trade-off between realism and security risk. Low-interaction honeypots are easily detected, while high-interaction honeypots provide realistic data at the cost of network exposure. Recent advances suggest that Large Language Models (LLMs) can mitigate this trade-off by dynamically generating convincing outputs without requiring a vulnerable backend. In this paper, we present GenPot, a fine-tuned LLM-powered honeypot that integrates command-line, API, and dynamic web interaction to deliver realistic yet non-compromisable environments. Our approach combines supervised fine-tuning with prompt engineering, cybersecurity safeguards, and state management to simulate consistent and realistic system responses. As a proof-of-concept use case, we implement the system on top of an OpenCanary baseline simulating a Synology NAS device. To rigorously assess the framework, we conducted an exhaustive multi-dimensional evaluation encompassing deep semantic fidelity, inference latency, high-concurrency scalability, and operational energy efficiency (RPS/W). Technical results demonstrate that the optimized architecture sustains over 1,000 requests per second with near-perfect structural validity, while token-level guardrails ensure high resilience against prompt injection attacks. Crucially, we validate the system’s practical deception efficacy through a 14-day in-the-wild deployment and a human-in-the-loop credibility assessment, where experts were unable to distinguish the honeypot from a physical device (45% accuracy). Furthermore, the framework’s generalizability is proven via a rapid adaptation to a medical Fast Healthcare Interoperability Resources (FHIR) API. This work advances the current state of LLM-powered honeypots by demonstrating a reproducible, highly scalable, energy-aware, and credible approach for adaptive cyber deception.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07442-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-006">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>A hybrid method integrating information clustering and one-class support vector machine for industrial anomaly detection</h3>
+<p>Zhongmin Wang; Zhongjian Yuan; Cong Gao; Yanping Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07447-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07447-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A hybrid method integrating information clustering and one-class support vector machine for industrial anomaly detection</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07447-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07447-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-007">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Multi-tree and multi-strategy iterative genetic programming algorithm for feature subset construction in high-dimensional data classification</h3>
+<p>Chen Zhang; Zezhong Zhang; Youping Tu; Honghao Zhu; Xiaofeng Wang; Xuhui Zhu</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07406-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07406-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multi-tree and multi-strategy iterative genetic programming algorithm for feature subset construction in high-dimensional data classification</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07406-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07406-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-008">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>BFA-HARF: Robust RGB-T tracking via bidirectional feature adapter and hybrid attention with receptive fields</h3>
+<p>Can Xu; Weidai Xia; Lingmin Fan; Yue Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07466-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07466-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>BFA-HARF: Robust RGB-T tracking via bidirectional feature adapter and hybrid attention with receptive fields</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07466-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07466-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-009">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Integrated yard crane scheduling and vehicle positioning considering gantry startup and energy consumption</h3>
+<p>Rui Hu; Xuan He; Hongtao Hu; Jiangang Jin; Yan Liang</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07463-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07463-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Integrated yard crane scheduling and vehicle positioning considering gantry startup and energy consumption</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07463-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07463-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-010">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Performance-interpretability trade-offs and generalization in deep learning for pneumonia detection: A benchmarking study</h3>
+<p>Francisco Gómez-Vela; Aurelio López-Fernandez; Federico Divina; Miguel García-Torres</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07398-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07398-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Performance-interpretability trade-offs and generalization in deep learning for pneumonia detection: A benchmarking study</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07398-5 · 摘要来源：账本已存摘要</p><p class="abstract-body">Chest X-ray imaging remains the most widely used radiological modality for pneumonia screening. While recent advances in deep learning have demonstrated strong diagnostic performance, the deployment of such models in real-world settings requires not only high accuracy but also robustness and interpretability across different model designs and populations. In this work, we present a comprehensive benchmarking study of multiple deep learning architectures for pneumonia detection. A distinctive methodological feature of this study is the use of two demographically distinct datasets: a pediatric chest X-ray dataset for training, and an independent adult population dataset for external validation. All models were evaluated under a standardized cross-validated protocol. Beyond predictive metrics, we conduct an extensive eXplainable Artificial Intelligence (XAI) analysis assessing both qualitative and quantitative properties, including explanation stability and localization fidelity. Results show that model design choices significantly influence both predictive performance and explanation behavior. In particular, certain architectures consistently achieved superior performance while producing more focused and stable explanations. The performance-interpretability ranking is preserved under external validation on a demographically distinct adult cohort, providing evidence that performance-interpretability coupling is robust to population shift and supports the generalizability of the proposed framework beyond the pediatric training distribution. This work contributes a reproducible, end-to-end methodology that jointly optimizes performance and interpretability, offering practical guidance for selecting and deploying explainable deep learning models in clinical pneumonia screening. All code and data are publicly available at: https://github.com/SynergIA-Lab/pneumoniacnn</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07398-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-011">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Cryptanalysis on a chaos-based cryptosystem with dynamic key</h3>
+<p>Rong Zhou; Simin Yu</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07446-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07446-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Cryptanalysis on a chaos-based cryptosystem with dynamic key</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07446-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07446-0" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-012">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>A multiobject tracking method based on dynamic adaptation and collaborative enhancement</h3>
+<p>Yuang Ji; Ying Guo; Zeyu Liu; Hui Li; Zhiyu Liu; Hongyi Fang</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07438-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07438-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A multiobject tracking method based on dynamic adaptation and collaborative enhancement</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07438-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07438-0" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-013">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Light-wDEF: lightweight deepfake evaluation framework for efficient and reliable visual detection</h3>
+<p>Muhammad Yousaf; Sarwar Shah Khan; Babar Shah; Muhammad Shehzad Khan; Muhammad Awais Bacha; Mian Saeed Akbar; Ijaz Ali; Fernando Moreira</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07460-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07460-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Light-wDEF: lightweight deepfake evaluation framework for efficient and reliable visual detection</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07460-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07460-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-014">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Dual-view multi-scale feature enhancement and fusion for fine-grained visual classification</h3>
+<p>Ke Zhang; Junkai Zhong; Peng Gao; Qianhao Zhao; Jianlei Liu; Zhanhua Dong</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07465-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07465-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dual-view multi-scale feature enhancement and fusion for fine-grained visual classification</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07465-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07465-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-015">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>H-PLE: hierarchical progressive layered extraction with raw-input-aware gating for multi-task recommendation under extreme label imbalance</h3>
+<p>Jinghao Xue; Tianxiang Yang; Hideo Suzuki</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07441-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07441-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>H-PLE: hierarchical progressive layered extraction with raw-input-aware gating for multi-task recommendation under extreme label imbalance</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07441-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07441-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-016">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Enhancing NWP precipitation forecasting with Rain-PostEFNet: A multi-scale deep learning approach</h3>
+<p>Farah Naz; Lei She; Xincan Sui; Chenghong Zhang; Jie Shao</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07457-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07457-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Enhancing NWP precipitation forecasting with Rain-PostEFNet: A multi-scale deep learning approach</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07457-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07457-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-017">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Trustworthy LLM–GNN systems: a systematic review and multi-axis taxonomy</h3>
+<p>Ruizhan Xue; Fang He; Huimin Deng; Maojun Wang; Zeyu Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07458-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07458-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Trustworthy LLM–GNN systems: a systematic review and multi-axis taxonomy</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07458-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07458-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-018">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Signature-enhanced graph spectral HAR for multivariate realized volatility forecasting</h3>
+<p>Zeyu Guo; Andi Han; Chao Wang; Junbin Gao</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07445-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07445-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Signature-enhanced graph spectral HAR for multivariate realized volatility forecasting</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07445-1 · 摘要来源：账本已存摘要</p><p class="abstract-body">This paper examines multivariate realized-volatility forecasting in globally connected equity markets. Heterogeneous AutoRegressive (HAR) models and graph signal processing (GSP)-based extensions such as the graph signal processing HAR model (GSPHAR) embed spillover structure via the magnetic Laplacian and graph Fourier transform. However, they still summarize each market’s recent history mainly through multi-scale lag averages, which can miss nonlinear within-window path information. To address this limitation, we develop a signature-enhanced graph spectral HAR framework, Sig-GSPHAR, which incorporates path-signature features extracted from each market’s 22-day volatility window and fuses them with HAR lags in the directed graph spectral domain. An empirical study on 29 stock markets and five realized-volatility proxies shows that, for one-step-ahead forecasting ( $$\varvec{h = 1}$$ h = 1 ), Sig-GSPHAR outperforms econometric and deep learning benchmarks and delivers consistent gains over GSPHAR, with paired one-sided Wilcoxon signed-rank tests (Holm-adjusted) indicating significance across multiple proxies. For long-horizon forecasting ( $$\varvec{h = 22}$$ h = 22 ), direct comparisons against GSPHAR indicate that the advantage of Sig-GSPHAR becomes more pronounced. We further show that the static spillover graph is structurally stable over the sample, equip the point forecasts with distribution-free conformal prediction intervals, and provide a detailed diagnostic of when signature features help.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07445-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-019">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Efficient and robust DNN model fingerprint with decision difference regions identification</h3>
+<p>Tianxiang Luo; Zi Yang; Xiaorui Dai; Bo Wang; Wei Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07440-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07440-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Efficient and robust DNN model fingerprint with decision difference regions identification</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07440-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07440-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-020">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>RCGELM-AE: an efficient graph embedding deep model without gradient descent</h3>
+<p>Xinyi Lin; Xiaoyun Chen; Shulan Zheng; Wenjian Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07437-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07437-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>RCGELM-AE: an efficient graph embedding deep model without gradient descent</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07437-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07437-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-021">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Micro-expression recognition via optical strain and spectral-spatial gating networks</h3>
+<p>Siyu Xiong; Jun Wang; Xuan Huang; Kiminori Sato; Bo Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07464-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07464-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Micro-expression recognition via optical strain and spectral-spatial gating networks</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07464-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07464-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-022">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Traffic flow prediction using multiscale diffusion model guided by wavelet transform</h3>
+<p>Wenjing Wang; Deqian Fu</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07408-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07408-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Traffic flow prediction using multiscale diffusion model guided by wavelet transform</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07408-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07408-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-023">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Remaining useful life prediction of electric vehicle drive system using physics-informed machine learning methods with uncertainty quantification</h3>
+<p>Zhen Wang; Zhengquan Chen; Wenqing Sun; Yadong Li; Yandong Hou; Lihui Zhao</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07429-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07429-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Remaining useful life prediction of electric vehicle drive system using physics-informed machine learning methods with uncertainty quantification</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07429-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07429-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-024">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>Optimal fault feature learning for machinery fault diagnosis by using recurrent attentional reinforcement learning</h3>
+<p>Zhenhui Tang; Jingcheng Wang; Shunyu Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07434-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07434-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Optimal fault feature learning for machinery fault diagnosis by using recurrent attentional reinforcement learning</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07434-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07434-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-025">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>ADPOD: An outlier detection algorithm based on affinity density peak clustering</h3>
+<p>Zhongping Zhang; Haoyu Tian; Xinlei Zhao; Guangxu Sun</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07430-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07430-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>ADPOD: An outlier detection algorithm based on affinity density peak clustering</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07430-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07430-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-026">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>DiffKT: a diffusion model for fine-grained knowledge tracing</h3>
+<p>Ruidi Liu; Yong Niu; Hu Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07459-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07459-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>DiffKT: a diffusion model for fine-grained knowledge tracing</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07459-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07459-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-058-2026v56i14-027">
+<p class="kicker">Applied Intelligence · FORMAL_ISSUE</p>
+<h3>ITCD: implicit trajectory-constrained diffusion for consistent time series imputation</h3>
+<p>Siyuan Ma; Ziwei Xu; Ryutaro Ichise</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07427-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07427-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>ITCD: implicit trajectory-constrained diffusion for consistent time series imputation</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07427-3 · 摘要来源：账本已存摘要</p><p class="abstract-body">Diffusion has recently attracted attention in time series imputation for its potential to model the uncertainty that deterministic methods often fail to capture. However, diffusion-based approaches often exhibit suboptimal imputation performance, as they overlook the distribution shift introduced by padding and rely on noise-driven optimization that ignores direct supervision signals from observed values. This causes the models to train on biased samples and struggle to approximate the observations, ultimately leading to inconsistent imputations. To address these limitations, we propose the I mplicit T rajectory- C onstrained D iffusion network (ITCD), which employs a two-stage diffusion architecture to mitigate the distribution shift caused by padding, thereby enabling better adaptation to realistic data. It also implicitly guides the diffusion sampling along a coherent denoising trajectory through intermediate and terminal constraints that consider both distribution and numerical accuracy, thereby achieving more consistent imputations. Extensive experiments illustrate that ITCD outperforms baselines across various scenarios with an average improvement of 13%, showing that it achieves more consistent time series imputation.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07427-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在编登记</h2>
+<p>本批登记网络优先/在编/Latest Articles 发现 <strong>179</strong> 条（REG-028 In Press/无卷期、REG-058 I15 在编与 Articles 页、REG-088 Latest Articles）。上述条目不作为完整期次证据。</p><article class="paper" id="of-reg-028-001">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · ONLINE_FIRST</p>
+<h3>DepthCNet: Advancing Coral Health Status Identification through Multi-Modal Semantic Segmentation using Underwater Imagery</h3>
+<p>Ming Li; Jiangying Qin; Armin Gruen; Konrad Schindler; Xiaotian Pan</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.25-00106r3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.25-00106r3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>DepthCNet: Advancing Coral Health Status Identification through Multi-Modal Semantic Segmentation using Underwater Imagery</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.25-00106r3 · 摘要来源：账本已存摘要</p><p class="abstract-body">Coral reefs are highly diverse and dynamic ecosystems that necessitate accurate assessment through timely understanding of their growth rates and health status in the face of global warming. This study introduces an innovative multi-modal deep learning network called DepthCNet, specifically designed to tackle the challenge of coral health assessment. By using pixel-level semantic segmentation and incorporating data inputs such as orthophotos and depth images, this network enables the identification and classification of the health status of corals (live, dead, and bleached) in underwater seabed images at the millimeter scale. In our study, we conducted performance and generalization experiments to evaluate the effectiveness of DepthCNet in comparison to alternative state-of-the-art (SOTA) network structures with potential for coral segmentation transferred from other domains. Our DepthCNet achieved an mean intersection over union (mIoU) of 65.3% in the coral segmentation task, with a notable 24.2% intersection over union (IoU) for bleached corals, representing a 5.9% improvement over other SOTA methods.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.25-00106r3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-028-002">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · ONLINE_FIRST</p>
+<h3>An Anchor Point–Assisted Image-Matching Method for Weakly Textured Scenes Using Structured Features</h3>
+<p>Ming Chen; Jiangong Shi; Zhenling Ma; Hong Xie; Zhengjie Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.26-00014r2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.26-00014r2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>An Anchor Point–Assisted Image-Matching Method for Weakly Textured Scenes Using Structured Features</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.26-00014r2 · 摘要来源：账本已存摘要</p><p class="abstract-body">Photogrammetric mapping missions using robots or unmanned aerial vehicles (UAVs) often encounter environments where sparse strong-texture structures are found alongside extensive weak-texture surfaces, such as indoor corridors with frames and aerial views of shorelines. Establishing accurate correspondences under such circumstances remains a major technical challenge. Traditional methods can only match a few or no correspondences. Deep learning algorithms can yield stable matches in weak-texture regions. However, they rely on large-scale annotated data and computational resources, limiting their real-time application and generalization capability. This article proposes an anchor point–assisted image-matching method, using Euclidean distances and angular relationships between corner points in the weak-texture area and anchor points in the strong-texture area to establish structured features, enhancing the distinctiveness of the corner points in the weak-texture area. Meanwhile, epipolar geometry constraints are applied to restrict the candidate corner points search to a one-dimensional range, thereby improving the accuracy, efficiency, and reliability of the corner point matching. Comparative experiments on indoor, outdoor, and UAV data sets demonstrate that the proposed method achieves a greater number of correct matches than scale-invariant feature transform (SIFT), oriented FAST and rotated BRIEF (ORB), KAZE, AKAZE, grid-based motion statistics (GMS), SuperGlue, and LightGlue with a conventional CPU configuration. The presented method, SuperGlue, and LightGlue achieve a success rate (SR) of 100% on three data sets and secure sufficient correspondences in weak-texture regions. In contrast, the SR obtained by traditional methods ranges from 70% to 80%. In addition, our method runs in under 3 seconds, whereas the deep learning methods still require over 10 seconds even on a lightweight CPU. The effects of anchor point numbers, dual threshold settings, and epipolar search range on matching performance are analyzed to identify the optimal parameter configuration. The proposed method provides potential for robot and UAV photogrammetric mapping applications in sparsely textured environments based on resource-constrained platforms.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.26-00014r2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-028-003">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · ONLINE_FIRST</p>
+<h3>Interferometric Synthetic Aperture Radar Deformation Datum Unification with a Fixed Line-of-Sight Direction: A Bayesian Inference and the Markov Random Field Model Integration</h3>
+<p>Weiwei Bian; Hongyu Liang; Lei Zhang; Jicang Wu; Mahdi Motagh</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.26-00026r2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.26-00026r2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Interferometric Synthetic Aperture Radar Deformation Datum Unification with a Fixed Line-of-Sight Direction: A Bayesian Inference and the Markov Random Field Model Integration</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.26-00026r2 · 摘要来源：账本已存摘要</p><p class="abstract-body">Monitoring large-scale surface deformation using satellite radar data is crucial for advancing regional and continental-scale geodynamic observations. However, challenges arise when unifying deformation data from different tracks of the same satellite, primarily due to inconsistencies in reference baselines and variations in radar viewing angles. This study proposes an interferometric synthetic aperture radar (InSAR) deformation datum connection method with a fixed line-of-sight (LOS) direction. The method combines Bayesian inference with a Markov random field model and integrates InSAR and global navigation satellite system deformation measurements to unify deformation datums across multi-track SAR interferometric results using only a single orbit direction (ascending-only or descending-only), without requiring both ascending and descending data sets. In the simulation experiments, the root mean square error (RMSE) of the LOS displacement rate difference in the overlapping regions of adjacent-track SAR images decreased by 99%. Applying the developed methodology for InSAR observations of the 2023 Mw 7.8 Kahramanmaraş earthquake in Türkiye, the RMSE of displacement differences in the overlapping regions of adjacent tracks was reduced from 98 to 34 mm, demonstrating the effectiveness of the proposed unified datum approach.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.26-00026r2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-028-004">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · ONLINE_FIRST</p>
+<h3>Reference-free Evaluation of Geometric–Textural Consistency for Photogrammetric Meshes</h3>
+<p>Wenxiang Wang; Yihang Liu; Yang Zhou; Yuying Jiang; Fan Yang; Zhongwen Hu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.26-00004r2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.26-00004r2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Reference-free Evaluation of Geometric–Textural Consistency for Photogrammetric Meshes</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.26-00004r2 · 摘要来源：账本已存摘要</p><p class="abstract-body">Photogrammetric mesh has emerged as a novel type of remote sensing data, finding wide application in diverse remote sensing scenarios, such as urban management, forestry monitoring, and agricultural surveillance. Semantic analysis of photogrammetric meshes serves as the foundation for numerous applications, in which the quality of triangular facets exerts a significant effect on the accuracy of face-wise mesh segmentation. Specifically, the inconsistency between geometric edges and textural edges often gives rise to faces with mixed semantic labels, which substantially undermines the reliability and precision of subsequent semantic analysis. Thus, the evaluation of such quality is essential for ensuring the high quality of photogrammetric meshes for semantic analysis. However, current mesh quality assessment methods predominantly focus solely on geometric and visual fidelity, lacking dedicated metrics for assessing the intrinsic consistency between geometric edges and textural boundaries. To address this limitation, we propose a reference-free approach for photogrammetric meshes based on assessing the consistency between geometric edges and texture-derived boundaries. The proposed approach projects 3D mesh faces onto the 2D texture space and compares their geometric edges with texture-derived object contours. We quantify this consistency using a novel buffer-zone–matching strategy combined with an area-weighted intersection over union (AIoU) metric. The experiments were carried on a multi-resolution data set and the public SUM Parts benchmark data set. The results indicate that the metric exhibits high sensitivity to quality variations across different levels of detail. Furthermore, a statistically significant correlation between AIoU and upper-bound semantic purity is observed, validating its reliability in reflecting intrinsic semantic segmentation potential. The proposed method also provides new insight into 3D reconstruction and mesh quality evaluation. The code is available at https://github.com/zwhoo/geometric-textural-consistency-evaluation.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.26-00004r2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-028-005">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · ONLINE_FIRST</p>
+<h3>Incorporating Directional Relationship Modelling for Building Change Detection from Very-High-Resolution Satellite Images</h3>
+<p>Ying Zha; Mengmeng Li; Xuanguang Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.25-00114r2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.25-00114r2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Incorporating Directional Relationship Modelling for Building Change Detection from Very-High-Resolution Satellite Images</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.25-00114r2 · 摘要来源：账本已存摘要</p><p class="abstract-body">Detecting building changes from bitemporal very-high-resolution satellite images is often hindered by false positives, especially for tall structures, due to variations in sun azimuth and satellite viewing angles. To address this issue, we propose MDR-Net, a novel change detection network that models the directional relationship between buildings and their shadows. Unlike existing methods that rely on handcrafted rules and metadata (e.g., solar angles), MDR-Net automatically learns directional features from images using a customized directional modeling module (DMM). To further enhance feature representation, we introduce an adaptive feature fusion module (AFFM), which uses adaptive selection and dynamic adjustment strategies to emphasize critical features and effectively fuse directional information with bitemporal semantics. We evaluated MDR-Net on three building change detection data sets, i.e., Fuzhou (FZ), Wuhan (WH), and Guangzhou (GZ), and compared it with seven state-of-the-art methods: SMCD-Net-m, ChangeFormer, BIT, FC-Siam-diff, SNUNet, DGMA2-Net, and MSPSNet. The results showed that MDR-Net achieved the highest F1 scores of 93.84% and 82.22% on the FZ and WH data sets, respectively, evidently reducing false detections, particularly under large viewing-angle differences. In addition, our method, with fixed DMM weights and without sun azimuth information, successfully learns the directional relationship when retrained from the FZ to GZ data sets, demonstrating strong generalization to the public data set.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.25-00114r2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-028-006">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · ONLINE_FIRST</p>
+<h3>Revealing Feature Contribution Mechanisms for Remote Sensing Scene Understanding</h3>
+<p>He Chen; Xianwei Zheng; Jianya Gong</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.26-00007r3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.26-00007r3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Revealing Feature Contribution Mechanisms for Remote Sensing Scene Understanding</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.26-00007r3 · 摘要来源：账本已存摘要</p><p class="abstract-body">Deep learning plays a central role in remote sensing scene understanding, making interpretability essential for analyzing and trusting model decisions. Feature contribution analysis is a key interpretability tool, yet existing methods often rely on artificial feature conflicts or feature suppression, which are easily confounded by strong semantic correlations in remote sensing imagery. (In particular, the fixed overhead viewing geometry tightly couples object shape with semantic category, which biases feature contribution estimation and misleads the interpretation of intrinsic model preferences, thus obscuring the genuine feature utilization patterns of models.) To address these limitations, we propose a systematic feature contribution analysis framework that integrates multi-modal feature decoupling with dynamic contribution aggregation. By disentangling shape, texture, and spectrum representations and progressively aggregating them, the proposed method enables unbiased quantification of feature contributions. The framework supports cross-architecture and cross–data set analysis. Extensive experiments reveal clear architectural- and data set–dependent feature preference patterns: convolutional neural networks exhibit an inherent texture bias across remote sensing tasks, while Vision Transformers realize balanced integration of shape, texture, and spectrum in object-level classification and shift to spectral feature dominance in scene-level land cover classification. We further find that the feature preference of remote sensing deep learning models is jointly determined by network inductive biases and data set characteristics rather than a single architectural attribute, offering new insights into remote sensing deep learning models.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.26-00007r3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-028-007">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · ONLINE_FIRST</p>
+<h3>VLGS-SLAM: Visual–Lidar Three-Dimensional Gaussian Splatting Simultaneous Localization and Mapping</h3>
+<p>Diantao Tu; Wenjuan Ma; Shuhan Shen</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.26-00042r2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.26-00042r2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>VLGS-SLAM: Visual–Lidar Three-Dimensional Gaussian Splatting Simultaneous Localization and Mapping</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.26-00042r2 · 摘要来源：账本已存摘要</p><p class="abstract-body">Recent studies highlight the effectiveness of 3D Gaussian splatting (3DGS) in visual simultaneous localization and mapping (SLAM) systems, which work well indoors but struggle in large-scale outdoor environments. Typically, lidar data are used to address this issue; however, current multi-modal SLAM systems use 3DGS mainly for mapping, leaving its potential to enhance tracking unexplored. In this paper, we present VLGS-SLAM, a novel visual–lidar SLAM pipeline that leverages lidar data and 3DGS for both pose estimation and mapping. Our approach integrates lidar points as 3D Gaussian primitives, ensuring precise scene geometry and reducing pose estimation errors caused by floating Gaussians. To enhance tracking performance, we apply regularization to Gaussian scaling, which constrains the shape of each Gaussian ellipsoid. For loop closure, we combine image similarity with lidar cloud distance to effectively detect and close loops. Our experiments demonstrate that VLGS-SLAM achieves state-of-the-art accuracy in the 3DGS-based SLAM field, outperforming many traditional SLAM algorithms</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.26-00042r2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-028-008">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · ONLINE_FIRST</p>
+<h3>IT-Seg: Morphology-Constrained and Spatially Guided Individual Tree Segmentation from Terrestrial and Mobile Point Clouds</h3>
+<p>Maolin Chen; Hanwen Yin; Zhiqing Zhang; Huan Zhang; Liming Bo</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.25-00214r2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.25-00214r2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>IT-Seg: Morphology-Constrained and Spatially Guided Individual Tree Segmentation from Terrestrial and Mobile Point Clouds</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.25-00214r2 · 摘要来源：账本已存摘要</p><p class="abstract-body">Individual trees are essential components of forest ecosystems, and accurate tree-level segmentation provides a crucial foundation for forest ecosystem modeling and biodiversity assessment. We propose a novel point cloud-based individual tree segmentation method guided by morphological prior constraints and single-tree canopy radiative effective extent (SCREE), a metric used to define the canopy boundary for each tree, computed from high-dimensional features output by a network. First, the original point cloud is divided into a central point set and a buffer point set based on morphological prior constraints. On this basis, different strategies are applied for trunk extraction from the central and buffer points: trunks in the central point set are extracted through adaptive density-based filtering, while trunks in the buffer point set are extracted using a semantic segmentation network. Finally, canopy points are assigned to individual trunks to obtain complete tree structures. This assignment is guided by the proposed SCREE, inferred using a diameter at breast height–height generative model to generate a constrained space. Validated on six forest scenes from three public data sets, the proposed method achieves an average instance-level accuracy of 84.71% and an average point-level accuracy of 81.85%, demonstrating strong robustness across diverse forest environments. Moreover, compared with existing methods, our method exhibits higher stability when handling variations in samples and the presence of small trees across different types of scanners.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.25-00214r2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-028-009">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · ONLINE_FIRST</p>
+<h3>Satellite-Based Framework for Detecting Seabed Dynamics from Shoreline Variability along Spit Coasts—A Pilot Study from the Hel Peninsula</h3>
+<p>Patryk Sapiega; Tamara Zalewska</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.26-00037r4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.26-00037r4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Satellite-Based Framework for Detecting Seabed Dynamics from Shoreline Variability along Spit Coasts—A Pilot Study from the Hel Peninsula</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.26-00037r4 · 摘要来源：账本已存摘要</p><p class="abstract-body">This study presents a pilot, data-driven framework for detecting nearshore seabed dynamics based on shoreline variability derived from high-resolution satellite imagery, integrated with in situ bathymetric measurements along the Hel Peninsula in the southern Baltic Sea. The approach focuses on assessing whether satellite-derived shoreline displacement can serve as an indirect indicator of changes in seabed morphology within the sedimentologically active coastal zone. Four cross-shore transects were analyzed using Pléiades satellite imagery and field bathymetric data collected during two monitoring campaigns conducted in 2019 and 2022. Changes in seabed elevation were quantified through cross-sectional profile analysis, while key morphodynamic parameters, including closure depth and the length of the active seabed, were estimated using empirical formulations proposed by Hallermeier, Birkemeier, and Houston. To provide hydrodynamic context, wave and current conditions were characterized using Copernicus Marine Service reanalysis data. The results reveal pronounced spatial variability in seabed response along the Hel Peninsula, with erosion-dominated conditions in high-energy open-coast sectors and limited morphological change in semienclosed, low-energy environments. Among the tested formulations, Birkemeier’s equation showed the closest agreement with field-derived closure depths, while all empirical models systematically overestimated closure depth in low-energy settings. The findings demonstrate the potential of satellite-based shoreline observations as a supporting tool for coastal morphodynamic assessment while highlighting the limitations imposed by measurement uncertainty, short observation windows, and simplified process representation. Overall, the proposed framework should be regarded as a proof-of-concept application requiring longer observational time series, improved uncertainty quantification, and local calibration before operational implementation can be considered</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.26-00037r4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-028-010">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · ONLINE_FIRST</p>
+<h3>Topologically Aware Roof Wireframe Reconstruction from Airborne Laser Scanning Point Clouds Using Persistent Homology and Hybrid Geometric–Topological Constraints</h3>
+<p>Pengpeng Huo; Jinguang Jiang; Gefei Kong; Hongchao Fan</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.25-00215r3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.25-00215r3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Topologically Aware Roof Wireframe Reconstruction from Airborne Laser Scanning Point Clouds Using Persistent Homology and Hybrid Geometric–Topological Constraints</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.25-00215r3 · 摘要来源：账本已存摘要</p><p class="abstract-body">Airborne laser scanning point clouds constitute a primary data source for city-scale 3D building modeling. However, the automated reconstruction of geometrically accurate and topologically consistent roof wireframes persists as a formidable challenge, hindered by data noise, uneven point density, and the topological complexity of urban roofs. Existing data-driven methods exhibit high sensitivity to local fitting errors, frequently leading to topological inconsistencies, whereas model-driven approaches are constrained by predefined primitive libraries, limiting their generalization to complex composite roofs. To address these limitations, this paper proposes a novel framework for roof wireframe reconstruction that fuses topological data analysis (TDA) with hybrid geometric-topological constraints. A core innovation of this framework is the application of persistent homology to extract globally stable topological skeletons from 2.5D height scalar fields, serving as a robust topological prior independent of local geometric noise. Specifically, the method first generates regularized 3D eave lines constrained by 2D building footprints. Subsequently, a “geometry–topology” dual-domain cross-validation mechanism is used to validate geometric hypotheses derived from planar adjacencies against TDA-extracted topological critical points (ridges and valleys), thereby effectively suppressing spurious structure lines. Finally, a global optimization model governed by the minimum description length principle enforces implicit regularization to rectify local geometric distortions and guarantee topological closure. Experiments on the Trondheim dataset demonstrate that the proposed method achieves a root mean square error of 0.443 m, while enhancing the length-weighted completeness and correctness of structure lines to 96.23% and 97.41%, respectively. These results validate the efficacy of integrating height-field–based topological skeletons for reconstructing complex roof wireframes, offering a scalable and robust solution for automated large-scale urban 3D modeling.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.25-00215r3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-028-011">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · ONLINE_FIRST</p>
+<h3>GMSINet for Building Extraction from Very-High-Resolution Remote Sensing Imagery</h3>
+<p>Guobiao Yao; Zeyu Zhang; Qingdong Wang; Xianjun Zhang; Li Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.26-00081r2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.26-00081r2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>GMSINet for Building Extraction from Very-High-Resolution Remote Sensing Imagery</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.26-00081r2 · 摘要来源：账本已存摘要</p><p class="abstract-body">Building extraction from very-high-resolution (VHR) remote sensing imagery remains challenging because buildings exhibit large variations in scale and are often embedded in complex textured backgrounds. These characteristics increase visual similarity and spatial confusion between buildings and their surrounding environments, making it difficult for building extraction models to achieve both multi-scale representation and detail preservation. To address these issues, we propose the gated multi-scale interaction network (GMSINet), a U-shaped encoder–decoder framework with a hierarchical shifted-window self-attention Transformer backbone. To reduce feature redundancy, background-noise propagation, and unstable multi-scale fusion in skip connections, a gated multi-scale interaction module is designed. This module adaptively filters enhanced information through SimAM-based recalibration, multi-receptive-field interaction, and channel-wise gating, thereby improving feature fusion quality in the decoding stage without changing feature resolution. In addition, a hybrid loss function is introduced to balance pixel-level supervision stability and region-level structural consistency. Experiments on the Massachusetts, INRIA, and WHU building data sets show that GMSINet achieves intersection over union scores of 74.50%, 77.35%, and 90.52%, respectively, outperforming the second-best models by 0.95%, 0.17%, and 0.25%, while maintaining stable overall accuracy and F1 score. These results demonstrate the effectiveness of GMSINet for building extraction from VHR remote sensing imagery.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.26-00081r2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-028-012">
+<p class="kicker">Photogrammetric Engineering &amp; Remote Sensing · ONLINE_FIRST</p>
+<h3>A Subpixel Accurate Image-Matching Method Integrating SuperGlue and Local Optimization</h3>
+<p>Zhenling Ma; Zhengjie Wang; Xu Zhong; Jiangong Shi</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.14358/pers.26-00041r3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.14358/pers.26-00041r3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Subpixel Accurate Image-Matching Method Integrating SuperGlue and Local Optimization</strong></p><p class="abstract-meta">期刊：Photogrammetric Engineering &amp; Remote Sensing · DOI：10.14358/pers.26-00041r3 · 摘要来源：账本已存摘要</p><p class="abstract-body">Subpixel accurate image matching is critical for high-precision applications across diverse scenarios, including multi-temporal satellite image registration, underwater inspection, and rigorous photogrammetric processing. Deep learning–based matching methods demonstrate strong robustness. However, applying them to out–of–dataset scenes makes it difficult to achieve subpixel accuracy. They require constructing a new scene-specific dataset and retraining the model, which demands significant human and material resources. Therefore, this paper presents a coarse-to-fine matching strategy that requires no additional scene-specific training data or fine-tuning. SuperGlue first establishes reliable initial correspondences under challenging conditions, which are then refined to subpixel accuracy through iterative gray-level least squares optimization with an adaptive step-size strategy and geometric constraints. This hybrid strategy retains the adaptability of deep learning to diverse imaging conditions while preserving the mathematical rigor of photogrammetric optimization. Experimental validation across four distinct application scenarios demonstrates the effectiveness and cross-scenario applicability of the proposed strategy. On remote sensing imagery, the proposed method achieves a mean root mean square error (RMSE) of 0.83 pixels under the dataset–specific window configuration, compared with 1.36 pixels obtained by SuperGlue. For underwater imagery, RMSE is reduced from 1.30 to 0.90 pixels. On indoor ScanNet, pose estimation accuracy improves consistently across all thresholds. In addition, an image-stitching application experiment shows that the refined correspondences improve geometric alignment and reduce black boundary gaps in stitched images. These results indicate that the proposed hybrid refinement strategy provides practical utility for precision-demanding photogrammetric and remote sensing applications.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.14358/pers.26-00041r3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Photogrammetric Engineering &amp; Remote Sensing 另有 34 条网络优先/在编/Latest Articles 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-058-001">
+<p class="kicker">Applied Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Dynamic risk budgeting via large language models: A context-aware framework for adaptive portfolio allocation</h3>
+<p>Soyeong Lim; Hyoungmin Ahn; Taekyoung Lee; Gayeon Kim; Sunghun Lim; Insu Choi</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07501-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07501-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dynamic risk budgeting via large language models: A context-aware framework for adaptive portfolio allocation</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07501-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07501-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-058-002">
+<p class="kicker">Applied Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Visualized anomaly detection on Bitcoin transaction based on the E-GTNet fusion model and graph database</h3>
+<p>Fan Wu; Wei Yin; Xiaoyan Hu; Xinxin Luo</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07433-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07433-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Visualized anomaly detection on Bitcoin transaction based on the E-GTNet fusion model and graph database</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07433-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07433-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-058-003">
+<p class="kicker">Applied Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>MKMed: Multi-Knowledge alignment framework for medication recommendation</h3>
+<p>Haixu Ma; Guanyong Wu; Shi Mu; Chen Li; Shunpan Liang</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07337-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07337-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>MKMed: Multi-Knowledge alignment framework for medication recommendation</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07337-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07337-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-058-004">
+<p class="kicker">Applied Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Optimization of technical analysis-driven algorithmic trading using deep reinforcement learning</h3>
+<p>Yiqing Wang; Xianchang Wang; Xiaodong Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07478-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07478-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Optimization of technical analysis-driven algorithmic trading using deep reinforcement learning</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07478-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07478-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-058-005">
+<p class="kicker">Applied Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Efficient few-shot visual anomaly detection and localization via prompt tuning</h3>
+<p>Jiwoo Choi; Chang Ouk Kim</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07497-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07497-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Efficient few-shot visual anomaly detection and localization via prompt tuning</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07497-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07497-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-058-006">
+<p class="kicker">Applied Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>MvCConvFormer: The graph convolution transformer network with self-distillation for multi-view graph clustering</h3>
+<p>Jinke Wang; Xuefang Zhang; Chunchun Zhang; Xiangyang Yang; Yaliang Zhao</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07431-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07431-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>MvCConvFormer: The graph convolution transformer network with self-distillation for multi-view graph clustering</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07431-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07431-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-058-007">
+<p class="kicker">Applied Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>POCS: phased optimal client selection for federated learning</h3>
+<p>Xuerui Li; Yangming Zhao; Chunming Qiao</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07462-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07462-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>POCS: phased optimal client selection for federated learning</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07462-0 · 摘要来源：账本已存摘要</p><p class="abstract-body">Traditional federated learning suffers from excessive communication overhead due to iterative model exchanges, long training time caused by data heterogeneity, and vulnerability to adversarial attacks due to gradient leakage risks. But if one strategically selects some specific clients for training during different training rounds, one can reduce the costs and the training time, while defending against the adversarial attacks. In this work, we propose the Phased Optimal Client Selection for Federated Learning (POCS) method, which includes customized optimal Client Selection method for each specific training phase in federated learning. We evaluate POCS’s performance with that of five state-of-the-art baselines, while the results indicate that POCS can improve the accuracy, reduce the training time and the communication costs, and show better defense against the membership inference attacks.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07462-0" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-058-008">
+<p class="kicker">Applied Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Complementarity-aware feature selection via weighted neighborhood probability rough sets for integrated traditional Chinese and Western medicine data in chronic renal failure prediction</h3>
+<p>Xinfang Zhang; Xiaoxiao Chang; Xiaoxia Liu; Bingzhen Sun; Xiaoli Chu</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07482-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07482-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Complementarity-aware feature selection via weighted neighborhood probability rough sets for integrated traditional Chinese and Western medicine data in chronic renal failure prediction</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07482-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07482-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-058-009">
+<p class="kicker">Applied Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>CMAC-Net: a cross-modal alignment and semantic consistency optimization framework for image-text fusion in industrial defect detection</h3>
+<p>Zhuyi Rao; Xiya Li; Wei Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07479-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07479-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>CMAC-Net: a cross-modal alignment and semantic consistency optimization framework for image-text fusion in industrial defect detection</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07479-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07479-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-058-010">
+<p class="kicker">Applied Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>FS-GSR: Graph-based scoring and sparse reconstruction for group streaming feature selection</h3>
+<p>Tianyuan Jia</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07498-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07498-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>FS-GSR: Graph-based scoring and sparse reconstruction for group streaming feature selection</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07498-2 · 摘要来源：账本已存摘要</p><p class="abstract-body">High-dimensional data often presents the core challenge of features arriving dynamically in grouped streams. This paper proposes a novel feature selection algorithm named Feature Selection with Group Streaming via Graph-based Scoring and Sparse Reconstruction (FS-GSR). The method establishes a three-stage framework comprising graph-guided hybrid filtering, intra-group structure preservation, and inter-group sparse reconstruction. This framework effectively leverages both the geometric structure and discriminative information of the data, ensuring high classification performance while significantly eliminating feature redundancy. Numerical experiments on multiple real-world datasets demonstrate that FS-GSR outperforms existing state-of-the-art methods in terms of both classification accuracy and feature compression capability, exhibiting superior overall performance and robustness.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07498-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-058-011">
+<p class="kicker">Applied Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>HALSI: Hierarchical adaptive latent skill inference for temporal abstraction in reinforcement learning</h3>
+<p>Xiaxi Si; Yang Ping; Tao Wang; Kun Chen; Yue Gao</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07485-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07485-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>HALSI: Hierarchical adaptive latent skill inference for temporal abstraction in reinforcement learning</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07485-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07485-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-058-012">
+<p class="kicker">Applied Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Probabilistic satellite collision risk prediction via Monte Carlo ensembles</h3>
+<p>Meriem Ouari; Fella Manel Zerrouki; Seif Eddine Bouziane; Amel Gacem</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10489-026-07494-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07494-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Probabilistic satellite collision risk prediction via Monte Carlo ensembles</strong></p><p class="abstract-meta">期刊：Applied Intelligence · DOI：10.1007/s10489-026-07494-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10489-026-07494-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Applied Intelligence 另有 19 条网络优先/在编/Latest Articles 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-088-001">
+<p class="kicker">Journal of Computational and Graphical Statistics · LATEST_ARTICLES</p>
+<h3>Directional False Discovery Rate Control via Distributed Procedures for Gaussian Graphical Models</h3>
+<p>Eugen Pircalabelu; Ensiyeh Nezakati</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10618600.2026.2719786</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2719786" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Directional False Discovery Rate Control via Distributed Procedures for Gaussian Graphical Models</strong></p><p class="abstract-meta">期刊：Journal of Computational and Graphical Statistics · DOI：10.1080/10618600.2026.2719786</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2719786" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-088-002">
+<p class="kicker">Journal of Computational and Graphical Statistics · LATEST_ARTICLES</p>
+<h3>An Enhanced Projection Pursuit Tree Classifier with Visual Methods for Assessing Algorithmic Improvements</h3>
+<p>Natalia da Silva; Dianne Cook; Eun-Kyung Lee</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10618600.2026.2719812</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2719812" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An Enhanced Projection Pursuit Tree Classifier with Visual Methods for Assessing Algorithmic Improvements</strong></p><p class="abstract-meta">期刊：Journal of Computational and Graphical Statistics · DOI：10.1080/10618600.2026.2719812</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2719812" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-088-003">
+<p class="kicker">Journal of Computational and Graphical Statistics · LATEST_ARTICLES</p>
+<h3>Principal Component Analysis in Bayes Spaces for Sparsely Sampled Density Functions</h3>
+<p>Lisa Steyer; Sonja Greven</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10618600.2026.2709742</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2709742" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Principal Component Analysis in Bayes Spaces for Sparsely Sampled Density Functions</strong></p><p class="abstract-meta">期刊：Journal of Computational and Graphical Statistics · DOI：10.1080/10618600.2026.2709742</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2709742" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-088-004">
+<p class="kicker">Journal of Computational and Graphical Statistics · LATEST_ARTICLES</p>
+<h3>Generalized Bayesian Inference for Dynamic Random Dot Product Graphs</h3>
+<p>Joshua Daniel Loyal</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10618600.2026.2714133</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2714133" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Generalized Bayesian Inference for Dynamic Random Dot Product Graphs</strong></p><p class="abstract-meta">期刊：Journal of Computational and Graphical Statistics · DOI：10.1080/10618600.2026.2714133</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2714133" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-088-005">
+<p class="kicker">Journal of Computational and Graphical Statistics · LATEST_ARTICLES</p>
+<h3>Efficient Log-Rank Updates for Random Survival Forests</h3>
+<p>Erik Sverdrup; James Yang; Michael LeBlanc</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10618600.2026.2709001</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2709001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Efficient Log-Rank Updates for Random Survival Forests</strong></p><p class="abstract-meta">期刊：Journal of Computational and Graphical Statistics · DOI：10.1080/10618600.2026.2709001</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2709001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-088-006">
+<p class="kicker">Journal of Computational and Graphical Statistics · LATEST_ARTICLES</p>
+<h3>Optimal Combination of Composite Likelihoods Using Approximate Bayesian Computation with Application to State-Space Models</h3>
+<p>Wentao Li; Rosabeth White; Dennis Prangle</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10618600.2026.2718766</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2718766" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Optimal Combination of Composite Likelihoods Using Approximate Bayesian Computation with Application to State-Space Models</strong></p><p class="abstract-meta">期刊：Journal of Computational and Graphical Statistics · DOI：10.1080/10618600.2026.2718766</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2718766" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-088-007">
+<p class="kicker">Journal of Computational and Graphical Statistics · LATEST_ARTICLES</p>
+<h3>NBDO: An Autoencoder-Based Algorithm for Efficient Optimal Experimental Design in High-Dimensional Settings</h3>
+<p>Theodoros Ladas; Kalliopi Mylona; Davide Pigoli</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10618600.2026.2703747</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2703747" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>NBDO: An Autoencoder-Based Algorithm for Efficient Optimal Experimental Design in High-Dimensional Settings</strong></p><p class="abstract-meta">期刊：Journal of Computational and Graphical Statistics · DOI：10.1080/10618600.2026.2703747</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2703747" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-088-008">
+<p class="kicker">Journal of Computational and Graphical Statistics · LATEST_ARTICLES</p>
+<h3>A Functional Tensor Model for Dynamic Multilayer Networks with Common Invariant Subspaces and the RKHS Estimation</h3>
+<p>Runshi Tang; Runbing Zheng; Anru R. Zhang; Carey E. Priebe</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10618600.2026.2737261</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2737261" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Functional Tensor Model for Dynamic Multilayer Networks with Common Invariant Subspaces and the RKHS Estimation</strong></p><p class="abstract-meta">期刊：Journal of Computational and Graphical Statistics · DOI：10.1080/10618600.2026.2737261</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2737261" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-088-009">
+<p class="kicker">Journal of Computational and Graphical Statistics · LATEST_ARTICLES</p>
+<h3>Mask-Aware Smoothness-Regularized GANs for Spatio-Temporal Data Imputation</h3>
+<p>Qi Chen; Maozai Tian</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10618600.2026.2709007</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2709007" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mask-Aware Smoothness-Regularized GANs for Spatio-Temporal Data Imputation</strong></p><p class="abstract-meta">期刊：Journal of Computational and Graphical Statistics · DOI：10.1080/10618600.2026.2709007</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2709007" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-088-010">
+<p class="kicker">Journal of Computational and Graphical Statistics · LATEST_ARTICLES</p>
+<h3>Principal Subsimplex Analysis</h3>
+<p>Hyeon Lee; Kassel Liam Hingee; Janice L. Scealy; Andrew T. A. Wood; Eric Grunsky; J. S. Marron</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10618600.2026.2708993</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2708993" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Principal Subsimplex Analysis</strong></p><p class="abstract-meta">期刊：Journal of Computational and Graphical Statistics · DOI：10.1080/10618600.2026.2708993</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2708993" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-088-011">
+<p class="kicker">Journal of Computational and Graphical Statistics · LATEST_ARTICLES</p>
+<h3>Scalable Fitting Methods for Multivariate Gaussian Additive Models with Covariate-dependent Covariance Matrices</h3>
+<p>Vincenzo Gioia; Matteo Fasiolo; Ruggero Bellio; Simon N. Wood</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10618600.2026.2732167</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2732167" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Scalable Fitting Methods for Multivariate Gaussian Additive Models with Covariate-dependent Covariance Matrices</strong></p><p class="abstract-meta">期刊：Journal of Computational and Graphical Statistics · DOI：10.1080/10618600.2026.2732167</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2732167" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-088-012">
+<p class="kicker">Journal of Computational and Graphical Statistics · LATEST_ARTICLES</p>
+<h3>Visualizing Influential Observations in Multivariate Dependent Structures</h3>
+<p>Jerfson Bruno Do Nascimento Honório; Fernanda De Bastiani; Manuel Jesús Galea Rojas; Miguel Angel Uribe-Opazo</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10618600.2026.2734222</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2734222" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-28 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Visualizing Influential Observations in Multivariate Dependent Structures</strong></p><p class="abstract-meta">期刊：Journal of Computational and Graphical Statistics · DOI：10.1080/10618600.2026.2734222</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/10618600.2026.2734222" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Journal of Computational and Graphical Statistics 另有 90 条网络优先/在编/Latest Articles 发现已写入账本，页内从略。</p>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>PERS（ASPRS）：官方首页 OK；镜像 Issue 09 TOC OK；claim I9。</li>
+<li>Applied Intelligence（Springer Nature Link）：Playwright Volumes/I14/I15 OK；claim I14，I15 在编。</li>
+<li>JCGS（Taylor &amp; Francis）：Current/I3 OK；I4 重定向 Latest Articles；OF 仅登记。</li>
+<li>信号源 REG-101 OGC Blog：本批仅登记为信号，不计入正式完成。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>3dd8d240-ca87-4f2d-b3f3-7c616e97de60</code></li>
+<li>Commit ID：<code>DAILY-20260928-115802-3dd8d240</code></li>
+<li>Brief ID：<code>DAILY-20260928</code></li>
+<li>去重抑制：0 · 增量复核：0 · 对账任务：4 · 官方源失败计数：0</li>
+<li>正式期刊：REG-028、REG-058、REG-088 · 信号：REG-101</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/09/index.html">返回 2026-09 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
+</body></html>
