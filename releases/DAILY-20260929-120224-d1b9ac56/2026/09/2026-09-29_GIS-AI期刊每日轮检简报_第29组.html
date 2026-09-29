@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 29 组 · 2026-09-29</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/09/index.html">9 月</a> / 第 29 组
+</nav>
+<p class="meta">逻辑日期 2026-09-29 · 完成时间 2026-09-29 12:05 CST · 任务 ROUTINE-20260929-G29 · Commit <code>DAILY-20260929-120224-d1b9ac56</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 29 组</h1>
+<p class="lede">第 29 组共检查 3 种正式期刊；确认 1 个新完整期次、73 篇正式期次论文、0 篇既有网络优先记录正式归期，以及 329 条新的网络优先/在年卷/在编期发现。Health &amp; Place（ScienceDirect）官方 Cloudflare/403，V100–V102 仅凭 Crossref/RSS 登记不 claim；Applied Artificial Intelligence（T&amp;F）官方 Current 为 2026-V40-I1（开放年卷不 claim），已关闭 2025-V39-I1 TOC 73 篇从未 briefed 并 claim；Computational Statistics（Springer）官方 I6（Oct，17 篇）因无 I7、属未来期提前分配仅登记，I5 已 BRIEFED。其中 1 种期刊因官方源阻断降级完成。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>3</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>1</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>73</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>329</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">降级</span> <strong>Health &amp; Place</strong> — ScienceDirect 官方目录 Cloudflare/403；Crossref/RSS 仅登记，不 claim V100+。 <span class="evidence"><a href="https://www.sciencedirect.com/journal/health-and-place/vol/100/suppl/C" rel="noopener noreferrer">证据</a><small>www.sciencedirect.com · 2026-09-29 12:05 CST · 官方目录</small></span></li><li><span class="tag">新完整期</span> <strong>Applied Artificial Intelligence</strong> — 已关闭年卷 2025-V39-I1 claim（73 篇）；开放年卷 2026-V40-I1 不 claim。 <span class="evidence"><a href="https://www.tandfonline.com/toc/uaai20/39/1" rel="noopener noreferrer">证据</a><small>www.tandfonline.com · 2026-09-29 12:05 CST · 官方目录</small></span></li><li><span class="tag">无新完整期</span> <strong>Computational Statistics</strong> — I5 已 BRIEFED；I6（Oct，17 篇）无 I7，仅登记不 claim。 <span class="evidence"><a href="https://link.springer.com/journal/180/volumes-and-issues/41-6" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-09-29 12:05 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-029<br><strong>Health &amp; Place</strong></td><td>2026-V99</td><td>0</td><td>0</td><td>0</td><td>158</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr><tr><td>REG-059<br><strong>Applied Artificial Intelligence</strong></td><td>2025-V39-I1</td><td>1</td><td>73</td><td>0</td><td>64</td><td><code>OFFICIAL_PAGE_OK</code></td><td>COMPLETED</td></tr><tr><td>REG-089<br><strong>Computational Statistics</strong></td><td>2026-V41-I5</td><td>0</td><td>0</td><td>0</td><td>107</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-09-29_GIS-AI期刊每日摘要_第29组.png" width="1600" height="900" alt="第29组每日摘要图：3刊，新完整期1，正式文73">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-059-2025-v39-i1"><h3>Applied Artificial Intelligence · 2025-V39-I1</h3><p>官方 TOC Vol 39 No 1（2025）已关闭；Current 已转为 Vol 40 No 1；73 DOI 与 Crossref 对齐，从未 briefed，按连续出版年卷规则 claim。</p><p><span class="evidence"><a href="https://www.tandfonline.com/toc/uaai20/39/1" rel="noopener noreferrer">官方期次目录</a><small>www.tandfonline.com · 2026-09-29 12:05 CST · 一级完整性证据</small></span><span class="evidence"><a href="https://www.tandfonline.com/toc/uaai20/current" rel="noopener noreferrer">官方 Current（开放年卷）</a><small>tandfonline.com · 2026-09-29 12:05 CST · 年卷关闭交叉核验</small></span></p><p>本简报收录正式论文 <strong>73</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-059-2025v39i1-001">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Friend Link Prediction Method Based on Heterogeneous Multigraph and Hierarchical Attention</h3>
+<p>Aoxue Liu; Boyu Li; Yong Wang; Ziteng Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2024.2427545</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2427545" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Friend Link Prediction Method Based on Heterogeneous Multigraph and Hierarchical Attention</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2024.2427545</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2427545" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-002">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Evaluating LLMs for Code Generation in HRI: A Comparative Study of ChatGPT, Gemini, and Claude</h3>
+<p>Andrei Sobo; Awes Mubarak; Almas Baimagambetov; Nikolaos Polatidis</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2024.2439610</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2439610" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Evaluating LLMs for Code Generation in HRI: A Comparative Study of ChatGPT, Gemini, and Claude</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2024.2439610</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2439610" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-003">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>System Logs Anomaly Detection. Are we on the right path?</h3>
+<p>Ramona-Georgiana Albert</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2024.2440692</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2440692" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>System Logs Anomaly Detection. Are we on the right path?</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2024.2440692</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2440692" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-004">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Application of Immunological and Swarm Intelligence Learning-Based Algorithm for Industrial Grade Computer Sales Prediction</h3>
+<p>Zhen-Yao Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2024.2440836</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2440836" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Application of Immunological and Swarm Intelligence Learning-Based Algorithm for Industrial Grade Computer Sales Prediction</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2024.2440836</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2440836" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-005">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Image Segmentation Deep Learning Model for Early Detection of Banana Diseases</h3>
+<p>Christian A. Elinisa; Ciira Wa Maina; Anthony Vodacek; Neema Mduma</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2024.2440837</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2440837" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Image Segmentation Deep Learning Model for Early Detection of Banana Diseases</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2024.2440837</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2440837" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-006">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Fractal Neural Network Approach for Analyzing Satellite Images</h3>
+<p>Volodymyr Shymanskyi; Oleh Ratinskiy; Nataliya Shakhovska</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2024.2440839</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2440839" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Fractal Neural Network Approach for Analyzing Satellite Images</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2024.2440839</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2440839" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-007">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>A Blockchain-Integrated Federated Learning Approach for Secure Data Sharing and Privacy Protection in Multi-Device Communication</h3>
+<p>Kejun Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2024.2442770</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2442770" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Blockchain-Integrated Federated Learning Approach for Secure Data Sharing and Privacy Protection in Multi-Device Communication</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2024.2442770</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2442770" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-008">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Discrete Wavelet Transform Sampling for Image Super Resolution</h3>
+<p>Chieh-Li Chen; Heng-Lin Yao; Bo-Lin Jian</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2024.2449296</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2449296" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Discrete Wavelet Transform Sampling for Image Super Resolution</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2024.2449296</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2449296" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-009">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Encrypted Search Method for Cloud Computing Data Under Attack Based on TF-IDF and Apriori Algorithm</h3>
+<p>Demei Mao; Mingzhu Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2024.2449303</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2449303" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Encrypted Search Method for Cloud Computing Data Under Attack Based on TF-IDF and Apriori Algorithm</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2024.2449303</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2024.2449303" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-010">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Personalised Affective Classification Through Enhanced EEG Signal Analysis</h3>
+<p>Joseph Barrowclough; Nonso Nnamoko; Ioannis Korkontzelos</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2450568</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2450568" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Personalised Affective Classification Through Enhanced EEG Signal Analysis</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2450568</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2450568" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-011">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>From Baseline to Best Practice: An Advanced Feature Selection, Feature Resampling and Grid Search Techniques to Improve Injury Severity Prediction</h3>
+<p>Soukaina EL Ferouali; Zouhair Elamrani Abou Elassad; Sara Qassimi; Abdelmounaîm Abdali</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2452675</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2452675" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>From Baseline to Best Practice: An Advanced Feature Selection, Feature Resampling and Grid Search Techniques to Improve Injury Severity Prediction</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2452675</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2452675" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-012">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Artificial Intelligence in Design Process: An Analysis Using Text Mining</h3>
+<p>Younjung Hwang; Seokjun Jeong; Yi Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2453782</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2453782" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Artificial Intelligence in Design Process: An Analysis Using Text Mining</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2453782</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2453782" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-013">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>PegasosQSVM: A Quantum Machine Learning Approach for Accurate Fake News Detection</h3>
+<p>Mehdi Khalil; Chi Zhang; Zhiwei Ye; Peng Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2457207</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2457207" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>PegasosQSVM: A Quantum Machine Learning Approach for Accurate Fake News Detection</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2457207</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2457207" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-014">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Trust-Based Consensus and ABAC for Blockchain Using Deep Learning to Secure Internet of Things</h3>
+<p>Arunkumar Muniswamy; R. Rathi</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2459461</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2459461" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Trust-Based Consensus and ABAC for Blockchain Using Deep Learning to Secure Internet of Things</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2459461</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2459461" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-015">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>A novel RNN architecture to improve the precision of ship trajectory predictions</h3>
+<p>Martha Dais Ferreira; Jessica N. A. Campbell</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2459465</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2459465" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A novel RNN architecture to improve the precision of ship trajectory predictions</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2459465</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2459465" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-016">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Ergonomic road sign evaluation and multi-criteria sorting based on
+                    &lt;i&gt;q&lt;/i&gt;
+                    -rung orthopair fuzzy information embedded in CRITIC and TOPSIS-Sort</h3>
+<p>Maria Gemel Palconit; Dyonne Bernadine Mirasol; Dyanne Brendalyn Mirasol-Cavero; Ferdinand Batayola; Hana Astrid Canseco-Tuñacao; Charldy Wenceslao; Nadine May Atibing; Lanndon Ocampo</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2459470</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2459470" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Ergonomic road sign evaluation and multi-criteria sorting based on
+                    &lt;i&gt;q&lt;/i&gt;
+                    -rung orthopair fuzzy information embedded in CRITIC and TOPSIS-Sort</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2459470</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2459470" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-017">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Spectrogram Features-Based Automatic Speaker Identification For Smart Services</h3>
+<p>Rashid Jahangir; Mohammed Alreshoodi; Fawaz Khaled Alarfaj</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2459476</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2459476" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spectrogram Features-Based Automatic Speaker Identification For Smart Services</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2459476</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2459476" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-018">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Torque Prediction In Deep Hole Drilling: Artificial Neural Networks Versus Nonlinear Regression Model</h3>
+<p>Ngoc Hung- Chu; Hoai Nam- Nguyen; Van Du- Nguyen; Dang Binh- Nguyen</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2459482</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2459482" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Torque Prediction In Deep Hole Drilling: Artificial Neural Networks Versus Nonlinear Regression Model</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2459482</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2459482" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-019">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>DC-BiLSTM-CNN Algorithm for Sentiment Analysis of Chinese Product Reviews</h3>
+<p>Yuanfang Dong; Xiaofei Li; Meiling He; Jun Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2461809</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2461809" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>DC-BiLSTM-CNN Algorithm for Sentiment Analysis of Chinese Product Reviews</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2461809</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2461809" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-020">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>A Composite Recognition Method Based on Multimode Mutual Attention Fusion Network</h3>
+<p>Xing Ding; Xiangrong Zhang; Chao Liang; Bo Liu; Lanjie Niu</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2462371</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2462371" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Composite Recognition Method Based on Multimode Mutual Attention Fusion Network</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2462371</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2462371" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-021">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Variable Selection Algorithm for Explaining Anomalies in Real-World Regenerative Thermal Oxidizers</h3>
+<p>Min-Ji Seo; Myung-Ho Kim</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2462374</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2462374" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Variable Selection Algorithm for Explaining Anomalies in Real-World Regenerative Thermal Oxidizers</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2462374</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2462374" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-022">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Deep Learning-Based Energy Consumption Prediction Model for Green Industrial Parks</h3>
+<p>Chaoan Lai; Yina Wang; Jianhua Zhu; Xuequan Zhou</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2462375</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2462375" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Deep Learning-Based Energy Consumption Prediction Model for Green Industrial Parks</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2462375</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2462375" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-023">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>DHMDL: Dynamically Hashed Multimodal Deep Learning Framework for Racket Video Summarization Using Audio and Visual Markers</h3>
+<p>G. Priyanka; J. Senthil Kumar; M. Prasha Meena</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2462382</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2462382" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>DHMDL: Dynamically Hashed Multimodal Deep Learning Framework for Racket Video Summarization Using Audio and Visual Markers</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2462382</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2462382" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-024">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Metadata Enriched Multi-Instance Contrastive Learning for High-Quality Facial Skin Visual Representations</h3>
+<p>Jihyo Kim; Sungchul Kim; Seungwon Seo; Bumsoo Kim; Daejeong Mun; Hoonjae Lee; Sangheum Hwang</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2462389</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2462389" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Metadata Enriched Multi-Instance Contrastive Learning for High-Quality Facial Skin Visual Representations</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2462389</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2462389" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-025">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>AI Ethics: Integrating Transparency, Fairness, and Privacy in AI Development</h3>
+<p>Petar Radanliev</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2463722</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2463722" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>AI Ethics: Integrating Transparency, Fairness, and Privacy in AI Development</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2463722</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2463722" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-026">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Establishing a Dynamic Recommendation System for E-commerce by Integrating Online Reviews, Product Feature Expansion, and Deep Learning</h3>
+<p>Tsung-Yin Ou; Chun-Hung Chen; Wen-Lung Tsai</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2463723</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2463723" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Establishing a Dynamic Recommendation System for E-commerce by Integrating Online Reviews, Product Feature Expansion, and Deep Learning</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2463723</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2463723" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-027">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Prior Waveform Guided Network (PWGN) for Laser Detection in Fog</h3>
+<p>Haowei Zhu; Long Wu; Xu Yang; Lu Xu; Shuyu Chen; Yong Zhang; Jianlong Zhang; Chenghua Yang; Wei Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2463725</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2463725" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Prior Waveform Guided Network (PWGN) for Laser Detection in Fog</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2463725</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2463725" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-028">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Handling Class Imbalanced Data in Sarcasm Detection with Ensemble Oversampling Techniques</h3>
+<p>Ya-Han Hu; Ting-Hsuan Liu; Chih-Fong Tsai; Yu-Jung Lin</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2468534</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2468534" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Handling Class Imbalanced Data in Sarcasm Detection with Ensemble Oversampling Techniques</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2468534</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2468534" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-029">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>MSNet: A Novel Deep Learning Framework for Efficient Missing Seedling Detection in Maize Fields</h3>
+<p>Yong Shi; Ruijie Xu; Zhiquan Qi</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2469372</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2469372" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>MSNet: A Novel Deep Learning Framework for Efficient Missing Seedling Detection in Maize Fields</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2469372</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2469372" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-030">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>MagneticPillars++: Efficient LiDAR Odometry Via Deep Frame-To-Keyframe Point Cloud Registration</h3>
+<p>Kai Fischer; Martin Simon; Stefan Milz; Patrick Mäder</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2472105</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2472105" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>MagneticPillars++: Efficient LiDAR Odometry Via Deep Frame-To-Keyframe Point Cloud Registration</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2472105</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2472105" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-031">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Few-Shot Learning for Triplet-Based EV Energy Consumption Estimation</h3>
+<p>Alminas Čivilis; Linas Petkevičius; Simonas Šaltenis; Kristian Torp; Ieva Markucevičiūtė-Vinckė</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2474785</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2474785" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Few-Shot Learning for Triplet-Based EV Energy Consumption Estimation</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2474785</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2474785" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-032">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Predicting Trip Duration and Distance in Bike-Sharing Systems Using Dynamic Time Warping</h3>
+<p>Ahmed Ali; Ahmad Salah; Mahmoud Bekhit; Ahmed Fathalla</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2474786</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2474786" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Predicting Trip Duration and Distance in Bike-Sharing Systems Using Dynamic Time Warping</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2474786</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2474786" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-033">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Exploring Healthcare and Public Health Implications via Temporal Analysis of Human–Virus Interactions Leveraging Adversarial Networks and Saliency Maps</h3>
+<p>Nihal Srivastava; Logesh Ravi; Malathi Devarajan; Amal John Kachapilly; Jaisuraj Bantupalli; Sanjukta Roy</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2476237</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2476237" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Exploring Healthcare and Public Health Implications via Temporal Analysis of Human–Virus Interactions Leveraging Adversarial Networks and Saliency Maps</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2476237</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2476237" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-034">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Towards Automated Frequency Response Analysis of Power Transformers with Deep Learning</h3>
+<p>Micah Phillip; Arvind Singh; Craig J. Ramlal</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2479223</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2479223" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Towards Automated Frequency Response Analysis of Power Transformers with Deep Learning</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2479223</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2479223" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-035">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Image Logic and Semantics of User Motion Interaction Language Based on Deep Learning</h3>
+<p>Yanlan Liu; Yixi Zhai; Liqing Chu; Dandan Wang; Yufei Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2482989</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2482989" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Image Logic and Semantics of User Motion Interaction Language Based on Deep Learning</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2482989</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2482989" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-036">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Personalized Recommendation System of E-Commerce in the Digital Economy Era: Enhancing Social Connections with Graph Attention Networks</h3>
+<p>Yuan He; Yonghong Du; Xiaofei Pu</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2487417</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2487417" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Personalized Recommendation System of E-Commerce in the Digital Economy Era: Enhancing Social Connections with Graph Attention Networks</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2487417</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2487417" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-037">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Time Series Forecasting Using Recurrent Neural Networks Based on Recurrent Sigmoid Piecewise Linear Neurons</h3>
+<p>Victor Sineglazov; Vladyslav Horbatiuk</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2490057</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2490057" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Time Series Forecasting Using Recurrent Neural Networks Based on Recurrent Sigmoid Piecewise Linear Neurons</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2490057</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2490057" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-038">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>eXplainable Artificial Intelligence for Hip Fracture Recognition</h3>
+<p>Enrique Queipo-de-Llano; Marius Ciurcau; Alejandro Paz-Olalla; Belén Díaz-Agudo; Juan A. Recio-García</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2502568</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2502568" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>eXplainable Artificial Intelligence for Hip Fracture Recognition</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2502568</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2502568" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-039">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Augmentation of Semantic Processes for Deep Learning Applications</h3>
+<p>Maximilian Hoffmann; Lukas Malburg; Ralph Bergmann</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2506788</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2506788" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Augmentation of Semantic Processes for Deep Learning Applications</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2506788</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2506788" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-040">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Managing Performance of Cyber Forensic Accounting with the Effect of Artificial Intelligence in Legal and Ethical Considerations</h3>
+<p>Pham Quang Huy; Vu Kien Phuc</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2513740</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2513740" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Managing Performance of Cyber Forensic Accounting with the Effect of Artificial Intelligence in Legal and Ethical Considerations</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2513740</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2513740" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-041">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>MSFE-Net: Multi-Scale Feature Enhancement Network for Remote Sensing Object Detection</h3>
+<p>Kai Yuan; Xing Li; Yaoyao Ren; Lianpeng Zhang; Wei Liu; Erzhu Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2514324</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2514324" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>MSFE-Net: Multi-Scale Feature Enhancement Network for Remote Sensing Object Detection</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2514324</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2514324" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-042">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Enhancing Robustness in Feature Importance Methods with NAFIC and CESHAP for Improved Interpretability</h3>
+<p>Grigorios Tzionis; Georgia Kougka; Ilias Gialampoukidis; Stefanos Vrochidis; Ioannis Kompatsiaris; Maro Vlachopoulou</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2515062</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2515062" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Enhancing Robustness in Feature Importance Methods with NAFIC and CESHAP for Improved Interpretability</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2515062</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2515062" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-043">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Detecting and Explaining Postpartum Depression in Real-Time with Generative Artificial Intelligence</h3>
+<p>Silvia García-Méndez; Francisco de Arriba-Pérez</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2515063</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2515063" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Detecting and Explaining Postpartum Depression in Real-Time with Generative Artificial Intelligence</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2515063</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2515063" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-044">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>A Pipeline for Automating Emergency Medicine Documentation Using LLMs with Retrieval-Augmented Text Generation</h3>
+<p>Denis Moser; Matthias Bender; Murat Sariyar</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2519169</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2519169" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Pipeline for Automating Emergency Medicine Documentation Using LLMs with Retrieval-Augmented Text Generation</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2519169</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2519169" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-045">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Detecting Chinese Disinformation with Fine–Tuned BERT and Contextual Techniques</h3>
+<p>Lixin Yun; Sheng Yun; Haoran Xue</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2525127</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2525127" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Detecting Chinese Disinformation with Fine–Tuned BERT and Contextual Techniques</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2525127</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2525127" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-046">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Context-Aware Intrusion Detection in Vehicular Communication Networks: Enhanced Attack Modeling and Dataset</h3>
+<p>Muhammad Danish Khan; Vinh-Thong Ta; Husnain Rafiq; Nonso Nnamoko</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2538453</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2538453" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Context-Aware Intrusion Detection in Vehicular Communication Networks: Enhanced Attack Modeling and Dataset</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2538453</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2538453" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-047">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Detecting Software Anomalies in Robots by Means of One-class Classifiers</h3>
+<p>Héctor Quintián; Esteban Jove; Francisco Zayas-Gato; Nuño Basurto; Carlos Cambra; Álvaro Herrero</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2538459</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2538459" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Detecting Software Anomalies in Robots by Means of One-class Classifiers</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2538459</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2538459" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-048">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Multivariate Time Series Anomaly Detection Using Directed Hypergraph Neural Networks</h3>
+<p>Tae Wook Ha; Myoung Ho Kim</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2538519</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2538519" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multivariate Time Series Anomaly Detection Using Directed Hypergraph Neural Networks</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2538519</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2538519" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-049">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>A novel univariate feature selection with ANOVA F-test-based machine learning model for Intrusion Detection Framework of Robotics system</h3>
+<p>Narinder Verma; Neerendra Kumar; Kuljeet Singh; Abeer Aljohani; Anurag Sinha; Syed Abid Hussain</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2539395</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2539395" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A novel univariate feature selection with ANOVA F-test-based machine learning model for Intrusion Detection Framework of Robotics system</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2539395</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2539395" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-050">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>A Two-Phase Feature Selection Framework for Intrusion Detection System: Balancing Relevance and Computational Efficiency (2P-FSID)</h3>
+<p>C. Rajathi; Rukmani Panjanathan</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2539396</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2539396" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Two-Phase Feature Selection Framework for Intrusion Detection System: Balancing Relevance and Computational Efficiency (2P-FSID)</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2539396</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2539396" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-051">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Attention-Based Framework for Automated Symbol Recognition and Wiring Design in Electrical Diagrams</h3>
+<p>Ikenna Ekeke; Carlos Francisco Moreno-García; Eyad Elyan</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2548834</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2548834" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Attention-Based Framework for Automated Symbol Recognition and Wiring Design in Electrical Diagrams</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2548834</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2548834" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-052">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Forecasting Inland Waterway Container on Barge Volume: A Machine Learning Approach Using Economic Features</h3>
+<p>Fan Bu; Heather Nachtmann</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2550462</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2550462" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Forecasting Inland Waterway Container on Barge Volume: A Machine Learning Approach Using Economic Features</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2550462</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2550462" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-053">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Combining Stochastic Defenses to Resist Gradient Inversion: An Ablation Study</h3>
+<p>Daniel Scheliga; Patrick Mäder; Marco Seeland</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2565165</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2565165" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Combining Stochastic Defenses to Resist Gradient Inversion: An Ablation Study</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2565165</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2565165" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-054">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Automated Machine Learning Approach (AutoML) to Alzheimer’s Disease Diagnosis and Prognosis</h3>
+<p>Pablo Guillén; Enrique Frias-Martinez</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2565166</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2565166" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Automated Machine Learning Approach (AutoML) to Alzheimer’s Disease Diagnosis and Prognosis</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2565166</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2565166" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-055">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Predicting Cycling Performance Before and After Training: Insights From Machine Learning Using Small Samples</h3>
+<p>Luuk Vos; Renske N. Vergeer; Richie P. Goulding; Guido Weide; Jos J. de Koning; Richard T. Jaspers; Stephan van der Zwaard</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2565167</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2565167" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Predicting Cycling Performance Before and After Training: Insights From Machine Learning Using Small Samples</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2565167</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2565167" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-056">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>A Neural Ensemble Architecture with Pseudo-Random Input Sequence for Classifying LADA Diabetes</h3>
+<p>Anthony Miller; John Panneerselvam; Lu Liu; V. Vijaya Baskar; Lauren Miller</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2565168</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2565168" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Neural Ensemble Architecture with Pseudo-Random Input Sequence for Classifying LADA Diabetes</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2565168</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2565168" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-057">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Advancing Wheat Single-Nucleotide Polymorphism Data Analysis with Explainable Deep Learning Models</h3>
+<p>Dario Ruggeri; László Vidács</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2565169</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2565169" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Advancing Wheat Single-Nucleotide Polymorphism Data Analysis with Explainable Deep Learning Models</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2565169</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2565169" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-058">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Sentiment Analysis of Conversational Implicature: A Computational Pragmatics Approach</h3>
+<p>Xianbo Li; Kunpei Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2565173</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2565173" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Sentiment Analysis of Conversational Implicature: A Computational Pragmatics Approach</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2565173</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2565173" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-059">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Assessing the Performance of Pretrained Models for Accurate and Consistent Classification of Argument Structure Constructions</h3>
+<p>Haerim Hwang</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2566798</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2566798" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Assessing the Performance of Pretrained Models for Accurate and Consistent Classification of Argument Structure Constructions</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2566798</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2566798" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-060">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>&lt;i&gt;L&lt;/i&gt;
+                    &lt;sub&gt;1&lt;/sub&gt;
+                    Multiple Flat Projections Clustering</h3>
+<p>Yan Lv; Lan Bai; Zhen Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2567565</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2567565" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>&lt;i&gt;L&lt;/i&gt;
+                    &lt;sub&gt;1&lt;/sub&gt;
+                    Multiple Flat Projections Clustering</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2567565</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2567565" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-061">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Variational Autoencoder-Regulated Data Augmentation for Precise Estimation of Organic Pollutants in Water with Deeplearning Neural Network</h3>
+<p>Akm Ashiquzzaman; Jinsul Kim; Chihoon Kim</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2568609</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2568609" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Variational Autoencoder-Regulated Data Augmentation for Precise Estimation of Organic Pollutants in Water with Deeplearning Neural Network</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2568609</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2568609" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-062">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Automated Tomato Sorting and Counting Using YOLOv11 for Industrial and Precision Agriculture Applications</h3>
+<p>André Cintas Donizette; Cleber Damião Rocco</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2576891</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2576891" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Automated Tomato Sorting and Counting Using YOLOv11 for Industrial and Precision Agriculture Applications</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2576891</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2576891" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-063">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Comparative Analysis of Machine Learning Approaches for Drum Set Component Classification in Music Technology</h3>
+<p>Ulaş Yurtsever; İsmet Emre Yücel</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2581352</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2581352" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Comparative Analysis of Machine Learning Approaches for Drum Set Component Classification in Music Technology</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2581352</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2581352" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-064">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Lessons from the Edges of Interdisciplinarity - Integrating Artificial Intelligence with the Humanities, Social and Economic Sciences</h3>
+<p>Lucy Carter; Samantha Stone-Jovicich; Erin Bohensky; Rebecca Coates; David Douglas; Jonathan Ferrer-Mestres; Ben Harwood; Md Zahidul Islam; Sevvandi Kandanaarachchi; Melanie McGrath; Cheng Soon Ong; Cécile Paris; Andrew Reeson; Mitchell Scovell; Kirsty Wissing; Iadine Chades</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2584380</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2584380" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Lessons from the Edges of Interdisciplinarity - Integrating Artificial Intelligence with the Humanities, Social and Economic Sciences</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2584380</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2584380" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-065">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>GEMMA-SQL: A Novel Text-to-SQL Model Based on Large Language Models</h3>
+<p>Hari Mohan Pandey; Anshul Gupta; Subham Sarkar; Minakshi Tomer; Schneider Johannes; Yan Gong</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2587371</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2587371" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>GEMMA-SQL: A Novel Text-to-SQL Model Based on Large Language Models</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2587371</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2587371" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-066">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Explainable Vehicle Activity Recognition: Qualitative and Quantitative Approaches</h3>
+<p>Rahulan Radhakrishnan; Alaa AlZoubi</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2587505</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2587505" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Explainable Vehicle Activity Recognition: Qualitative and Quantitative Approaches</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2587505</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2587505" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-067">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Re-purposing EEG Artifacts: Eye Blink Artifact Features as Predictors of Drowsiness Using Deep Learning</h3>
+<p>Ashvaany Egambaram; Nasreen Badruddin; Norashikin Yahya</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2587985</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2587985" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Re-purposing EEG Artifacts: Eye Blink Artifact Features as Predictors of Drowsiness Using Deep Learning</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2587985</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2587985" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-068">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Generalized-Metric-Based Pattern Recognition Using Ordered Pair of Normalized Real Numbers</h3>
+<p>Meijun Chen; Yi Zheng; Xiaoqin Pan; Lei Zhou</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2590815</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2590815" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Generalized-Metric-Based Pattern Recognition Using Ordered Pair of Normalized Real Numbers</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2590815</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2590815" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-069">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Design and Implementation of Real-Time Tomato Plant Growth Monitoring System using Deep Learning based YOLO and Raspberry Pi</h3>
+<p>Ruchika Sharma; Brij Bhushan Sharma; Pankaj Vaidya; Sameena Naaz</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2590829</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2590829" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Design and Implementation of Real-Time Tomato Plant Growth Monitoring System using Deep Learning based YOLO and Raspberry Pi</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2590829</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2590829" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-070">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Data-Driven Precision Harvest Planning via Visual Growth Forecasting</h3>
+<p>Junhan Wen; Thomas Abeel; Mathijs de Weerdt</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2725177</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2725177" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Data-Driven Precision Harvest Planning via Visual Growth Forecasting</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2725177</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2725177" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-071">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>p–LSGR: A lightweight post–hoc latent–space resampling framework for imbalanced and complex graph distributions</h3>
+<p>Olumayowa Onabanjo; Gemma Martínez Huerta; Carlos Francisco Moreno-García; Marina Díaz Piloñeta; Joaquín Manuel Villanueva Balsera</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2729370</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2729370" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>p–LSGR: A lightweight post–hoc latent–space resampling framework for imbalanced and complex graph distributions</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2729370</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2729370" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-072">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>Physics-Informed Recurrent Neural Networks for Deterministic Multi-Step Battery Scheduling in Microgrids</h3>
+<p>Roman Levkovych; Lesia Mochurad</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2736297</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2736297" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Physics-Informed Recurrent Neural Networks for Deterministic Multi-Step Battery Scheduling in Microgrids</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2736297</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2736297" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-059-2025v39i1-073">
+<p class="kicker">Applied Artificial Intelligence · FORMAL_ISSUE</p>
+<h3>A Combined Machine Learning and Weighted Gene Co-expression Network Analysis Strategy for Lung Adenocarcinoma Biomarker Discovery</h3>
+<p>Cheng-Hong Yang; Guan-Cheng Lin; Huang-Chih Chang; Hung-Yi Chuang</p>
+<dl>
+<div><dt>卷期</dt><dd>V39 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2738719</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2738719" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Combined Machine Learning and Weighted Gene Co-expression Network Analysis Strategy for Lung Adenocarcinoma Biomarker Discovery</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2738719</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2738719" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在编登记</h2>
+<p>本批登记网络优先/在编/Latest Articles 发现 <strong>329</strong> 条（REG-029 Crossref/RSS、REG-059 开放年卷 V40、REG-089 I6/Articles）。上述条目不作为完整期次证据。</p><article class="paper" id="of-reg-029-001">
+<p class="kicker">Health &amp; Place · ONLINE_FIRST</p>
+<h3>Special issue editorial: Loneliness and the built environment</h3>
+<p>Pauline van den Berg; Nina Goldman; Astrid Kemperman; Eric Schoenmakers</p>
+<dl>
+<div><dt>卷期</dt><dd>V102 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.healthplace.2026.103745</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103745" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Special issue editorial: Loneliness and the built environment</strong></p><p class="abstract-meta">期刊：Health &amp; Place · DOI：10.1016/j.healthplace.2026.103745</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103745" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-029-002">
+<p class="kicker">Health &amp; Place · ONLINE_FIRST</p>
+<h3>Ambient air pollution at home, work and school: Evidence from Ireland</h3>
+<p>Seán Feeney; Anne Nolan</p>
+<dl>
+<div><dt>卷期</dt><dd>V102 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.healthplace.2026.103732</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103732" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Ambient air pollution at home, work and school: Evidence from Ireland</strong></p><p class="abstract-meta">期刊：Health &amp; Place · DOI：10.1016/j.healthplace.2026.103732</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103732" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-029-003">
+<p class="kicker">Health &amp; Place · ONLINE_FIRST</p>
+<h3>Health and access to healthcare among migrant agricultural workers in Spain: A mixed-methods study</h3>
+<p>Lena van Selm; Sarah Williams; Luis Alejandro Rodríguez-Guerrero; Juan Agustín González-Rodríguez; Anna Brugulat-Panés; Daniel Izuzquiza-Regalado; Sebastian Notario-Gallego; Seydou Diop; Caroline Voorhis; Erica Briones-Vozmediano; Ana Requena-Méndez</p>
+<dl>
+<div><dt>卷期</dt><dd>V102 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.healthplace.2026.103738</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103738" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Health and access to healthcare among migrant agricultural workers in Spain: A mixed-methods study</strong></p><p class="abstract-meta">期刊：Health &amp; Place · DOI：10.1016/j.healthplace.2026.103738</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103738" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-029-004">
+<p class="kicker">Health &amp; Place · ONLINE_FIRST</p>
+<h3>“Kinlessness”, friend and family support, and cognitive function by region and urbanicity in the United States</h3>
+<p>Christine A. Mair; Jingwen Liu; Rose Anderson</p>
+<dl>
+<div><dt>卷期</dt><dd>V102 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.healthplace.2026.103723</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103723" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>“Kinlessness”, friend and family support, and cognitive function by region and urbanicity in the United States</strong></p><p class="abstract-meta">期刊：Health &amp; Place · DOI：10.1016/j.healthplace.2026.103723</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103723" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-029-005">
+<p class="kicker">Health &amp; Place · ONLINE_FIRST</p>
+<h3>Open-air drug markets and opioid-related overdose deaths</h3>
+<p>Patrick J. Burke</p>
+<dl>
+<div><dt>卷期</dt><dd>V102 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.healthplace.2026.103733</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103733" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Open-air drug markets and opioid-related overdose deaths</strong></p><p class="abstract-meta">期刊：Health &amp; Place · DOI：10.1016/j.healthplace.2026.103733</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103733" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-029-006">
+<p class="kicker">Health &amp; Place · ONLINE_FIRST</p>
+<h3>Data collection on housing conditions in ageing cohort studies: a meta-research study</h3>
+<p>Saman Khalatbari-Soltani; Anita van Zwieten; M. Florencia Petrelli; Julie E. Byles; Edward Jegasothy; Rafal Chomik; Ying Zhang; Fiona M. Blyth</p>
+<dl>
+<div><dt>卷期</dt><dd>V102 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.healthplace.2026.103741</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103741" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Data collection on housing conditions in ageing cohort studies: a meta-research study</strong></p><p class="abstract-meta">期刊：Health &amp; Place · DOI：10.1016/j.healthplace.2026.103741</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103741" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-029-007">
+<p class="kicker">Health &amp; Place · ONLINE_FIRST</p>
+<h3>Tracing dementia: Reminiscence therapy in and from place</h3>
+<p>Carmen Pocknell; Cassandra Dinius; Ronan Foley; Seán Commins; Joanna McHugh Power; Richard Roche</p>
+<dl>
+<div><dt>卷期</dt><dd>V102 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.healthplace.2026.103744</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103744" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Tracing dementia: Reminiscence therapy in and from place</strong></p><p class="abstract-meta">期刊：Health &amp; Place · DOI：10.1016/j.healthplace.2026.103744</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103744" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-029-008">
+<p class="kicker">Health &amp; Place · ONLINE_FIRST</p>
+<h3>Unpacking pathways to emergency obstetric and newborn care and associated pregnancy outcomes: A cross-sectional spatial analysis in Benin City, Nigeria</h3>
+<p>Kerry LM. Wong; Aduragbemi Banke-Thomas; Michael Ezeanochie; Funmilola Adio; Uchenna Gwacham-Anisiobi; Itohan Osayande; Tope Olubodun; Ameze Osayande; Maradona E. Isikhuemen; Alero Ogbebor; Daniel Achugo; Okikiolu Badejo; Shravya Shetty; Charlotte Stanton</p>
+<dl>
+<div><dt>卷期</dt><dd>V102 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.healthplace.2026.103746</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103746" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Unpacking pathways to emergency obstetric and newborn care and associated pregnancy outcomes: A cross-sectional spatial analysis in Benin City, Nigeria</strong></p><p class="abstract-meta">期刊：Health &amp; Place · DOI：10.1016/j.healthplace.2026.103746</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103746" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-029-009">
+<p class="kicker">Health &amp; Place · ONLINE_FIRST</p>
+<h3>The rise of on-demand grocery delivery and unequal access to fresh food in a high-density city: Evidence from Shenzhen, China</h3>
+<p>Shuyang Chen; Zhizheng Cai; Mengzhu Zhang; Wenyue Li; Zihuang Si</p>
+<dl>
+<div><dt>卷期</dt><dd>V102 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.healthplace.2026.103743</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103743" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The rise of on-demand grocery delivery and unequal access to fresh food in a high-density city: Evidence from Shenzhen, China</strong></p><p class="abstract-meta">期刊：Health &amp; Place · DOI：10.1016/j.healthplace.2026.103743</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103743" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-029-010">
+<p class="kicker">Health &amp; Place · ONLINE_FIRST</p>
+<h3>Urban mobility responses to wildfire smoke-related air quality advisories in Montréal, Canada</h3>
+<p>Daniel Romm; Priyanka Verma; Dan Qiang; Farzaneh Sadeghi; Jenny Zhu; Mackenzie Johnston; Grant McKenzie</p>
+<dl>
+<div><dt>卷期</dt><dd>V101 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.healthplace.2026.103736</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103736" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Urban mobility responses to wildfire smoke-related air quality advisories in Montréal, Canada</strong></p><p class="abstract-meta">期刊：Health &amp; Place · DOI：10.1016/j.healthplace.2026.103736</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103736" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-029-011">
+<p class="kicker">Health &amp; Place · ONLINE_FIRST</p>
+<h3>Walkability in small rural towns: Citizen scientists identify investment in pedestrian infrastructure as key to promoting health and wellbeing</h3>
+<p>Kim Jose; Claire Morley; Georgia McGrath; Melanie Davern; Anna Timperio; Yvonne Laird; Samantha Rowbotham; Kate Garvey; Verity Cleland</p>
+<dl>
+<div><dt>卷期</dt><dd>V101 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.healthplace.2026.103739</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103739" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Walkability in small rural towns: Citizen scientists identify investment in pedestrian infrastructure as key to promoting health and wellbeing</strong></p><p class="abstract-meta">期刊：Health &amp; Place · DOI：10.1016/j.healthplace.2026.103739</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103739" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-029-012">
+<p class="kicker">Health &amp; Place · ONLINE_FIRST</p>
+<h3>Extracting and communicating insights about geographical patterns from spatiotemporal disease models</h3>
+<p>Jessica Cameron; Darren Wraith; Susanna Cramb; Conor Hassan; Kerrie Mengersen; Peter Baade</p>
+<dl>
+<div><dt>卷期</dt><dd>V101 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.healthplace.2026.103715</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103715" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Extracting and communicating insights about geographical patterns from spatiotemporal disease models</strong></p><p class="abstract-meta">期刊：Health &amp; Place · DOI：10.1016/j.healthplace.2026.103715</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.healthplace.2026.103715" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Health &amp; Place 另有 146 条网络优先/在编/Latest Articles 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-059-001">
+<p class="kicker">Applied Artificial Intelligence · LATEST_ARTICLES</p>
+<h3>A Comprehensive Study of Grey Wolf Optimizer Variants for Optimizing Feature Selection in High-Dimensional Data</h3>
+<p>Thompson Stephan; Punitha S; Chia-Chen Lin; Saurabh Agarwal</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2601378</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2601378" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Comprehensive Study of Grey Wolf Optimizer Variants for Optimizing Feature Selection in High-Dimensional Data</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2601378</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2601378" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-059-002">
+<p class="kicker">Applied Artificial Intelligence · LATEST_ARTICLES</p>
+<h3>Relation-Aware Fusion Risk Perception Network for Dynamic Risk Analysis and Anomaly Detection in Supply Chain Networks</h3>
+<p>Fudong Wang; Yuechen Yang; Chunmei Du</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2603024</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2603024" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Relation-Aware Fusion Risk Perception Network for Dynamic Risk Analysis and Anomaly Detection in Supply Chain Networks</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2603024</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2603024" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-059-003">
+<p class="kicker">Applied Artificial Intelligence · LATEST_ARTICLES</p>
+<h3>A Study of AI-Driven Knowledge Distillation for Efficient Geospatial Modeling</h3>
+<p>Shianghau Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2025.2604996</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2604996" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Study of AI-Driven Knowledge Distillation for Efficient Geospatial Modeling</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2025.2604996</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2025.2604996" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-059-004">
+<p class="kicker">Applied Artificial Intelligence · LATEST_ARTICLES</p>
+<h3>A Hybrid SVR-Based Framework for Cryptocurrency Price Forecasting and Strategy Backtesting</h3>
+<p>Sheng-Wen Wang; Chung-Yuan Huang</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I1</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2612793</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2612793" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Hybrid SVR-Based Framework for Cryptocurrency Price Forecasting and Strategy Backtesting</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2612793</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2612793" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-059-005">
+<p class="kicker">Applied Artificial Intelligence · LATEST_ARTICLES</p>
+<h3>A Hybrid RAG-LLaMA Framework for Scalable and Accurate Interpretation of Legal Texts</h3>
+<p>Viswavardhan Reddy Karna; Rajesh R M; B Sathish Babu; Neethu S; Manasa M; Harshitha V</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I1</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2626097</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2626097" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Hybrid RAG-LLaMA Framework for Scalable and Accurate Interpretation of Legal Texts</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2626097</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2626097" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-059-006">
+<p class="kicker">Applied Artificial Intelligence · LATEST_ARTICLES</p>
+<h3>Chronological Review and Performance Analysis of YOLO-Based Deep Learning Frameworks in Complex Geospatial Environments</h3>
+<p>Ali Raza; Fareeha Hanif</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I1</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2626114</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2626114" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Chronological Review and Performance Analysis of YOLO-Based Deep Learning Frameworks in Complex Geospatial Environments</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2626114</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2626114" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-059-007">
+<p class="kicker">Applied Artificial Intelligence · LATEST_ARTICLES</p>
+<h3>SPINE: Segmentation-guided Processing and Integration of Multimodal Spinal MRI for Natural-Language Enhanced Report Generation</h3>
+<p>Hoda Helmy; Abdullah Hosseini; Ahmed Ibrahim; Asfand Baig-Mirza; Ahmed-Ramadan Sadek; Ahmed Serag</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I1</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2626117</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2626117" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>SPINE: Segmentation-guided Processing and Integration of Multimodal Spinal MRI for Natural-Language Enhanced Report Generation</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2626117</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2626117" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-059-008">
+<p class="kicker">Applied Artificial Intelligence · LATEST_ARTICLES</p>
+<h3>Extracting Abstraction Dimensions by Identifying Syntax Patterns from Texts</h3>
+<p>Jian Zhou; Jiazheng Li; Sirui Zhuge; Hai Zhuge</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I1</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2627084</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2627084" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Extracting Abstraction Dimensions by Identifying Syntax Patterns from Texts</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2627084</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2627084" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-059-009">
+<p class="kicker">Applied Artificial Intelligence · LATEST_ARTICLES</p>
+<h3>QBUILD: Quantum-Resistant Blockchain Architecture for Secure and Transparent Construction Supply Chains in the Post-Quantum Era</h3>
+<p>Shirsendu Dutta; Rajesh Bose; Sandip Roy; Arfat Ahmad Khan; Sharabani Sutradhar; Marwan Alabed Abu-Zanona; Mohammed Al-Sarem</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I1</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2630461</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2630461" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>QBUILD: Quantum-Resistant Blockchain Architecture for Secure and Transparent Construction Supply Chains in the Post-Quantum Era</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2630461</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2630461" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-059-010">
+<p class="kicker">Applied Artificial Intelligence · LATEST_ARTICLES</p>
+<h3>Neuroevolution and Neuroswarm with Hooke-Jeeves Local Search Algorithm for Predicting the Construction Effort of Software Projects</h3>
+<p>Ángel J. Sánchez-García; Cuauhtémoc López-Martín; Ali Bou Nassif</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I1</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2630470</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2630470" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Neuroevolution and Neuroswarm with Hooke-Jeeves Local Search Algorithm for Predicting the Construction Effort of Software Projects</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2630470</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2630470" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-059-011">
+<p class="kicker">Applied Artificial Intelligence · LATEST_ARTICLES</p>
+<h3>Next-Generation Hybrid Machine Learning Model for Dual Property Prediction in Sustainable Concrete</h3>
+<p>Christina Elangbam; M. Vignesh; Rabindra Kumar Singh; Vasugi K</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I1</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2630490</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2630490" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Next-Generation Hybrid Machine Learning Model for Dual Property Prediction in Sustainable Concrete</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2630490</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2630490" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-059-012">
+<p class="kicker">Applied Artificial Intelligence · LATEST_ARTICLES</p>
+<h3>A Noise-Score-Based Cleaning Framework for Multi-Class Label Noise</h3>
+<p>Pengfei Fu; Xiaofeng Liu; Mingyu Feng</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I1</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/08839514.2026.2635226</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2635226" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Noise-Score-Based Cleaning Framework for Multi-Class Label Noise</strong></p><p class="abstract-meta">期刊：Applied Artificial Intelligence · DOI：10.1080/08839514.2026.2635226</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/08839514.2026.2635226" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Applied Artificial Intelligence 另有 52 条网络优先/在编/Latest Articles 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-089-001">
+<p class="kicker">Computational Statistics · IN_PROGRESS_ISSUE</p>
+<h3>Online updating and heterogeneity detection for additive hazard models with streaming survival data</h3>
+<p>Lina Wang; Zhanhang Gao; Bing Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00180-026-01803-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01803-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Online updating and heterogeneity detection for additive hazard models with streaming survival data</strong></p><p class="abstract-meta">期刊：Computational Statistics · DOI：10.1007/s00180-026-01803-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01803-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-089-002">
+<p class="kicker">Computational Statistics · IN_PROGRESS_ISSUE</p>
+<h3>Data-informed feature-gated clustering for noisy high-dimensional data</h3>
+<p>Wan Ping Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00180-026-01807-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01807-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Data-informed feature-gated clustering for noisy high-dimensional data</strong></p><p class="abstract-meta">期刊：Computational Statistics · DOI：10.1007/s00180-026-01807-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01807-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-089-003">
+<p class="kicker">Computational Statistics · IN_PROGRESS_ISSUE</p>
+<h3>Regularisation of regression trees by summation of p values</h3>
+<p>Nils Engler; Mathias Lindholm; Filip Lindskog; Taariq Nazar</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00180-026-01805-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01805-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Regularisation of regression trees by summation of p values</strong></p><p class="abstract-meta">期刊：Computational Statistics · DOI：10.1007/s00180-026-01805-8 · 摘要来源：账本已存摘要</p><p class="abstract-body">The standard procedure to decide on the complexity of a CART regression tree is to use cross-validation with the aim of obtaining a predictor that generalises well to unseen data. The randomness in the selection of folds implies that the selected CART regression tree is not a deterministic function of the data. Moreover, the cross-validation procedure may become time consuming and result in inefficient use of training data. We propose a simple deterministic in-sample method that can be used for stopping the growing of a CART regression tree based on node-wise statistical tests. This testing procedure is derived using a connection to change point detection, where the null hypothesis corresponds to no signal. The suggested p value based procedure allows us to consider covariate vectors of arbitrary dimension and allows us to bound the p value of an entire tree from above. Further, we show that the test detects a not too weak signal with a high probability, given a not too small sample size. We illustrate our methodology and the asymptotic results on both simulated and real world data. Additionally, we illustrate how the p value based method can be used to construct a deterministic piece-wise constant auto-calibrated predictor based on a given black-box predictor.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01805-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-089-004">
+<p class="kicker">Computational Statistics · IN_PROGRESS_ISSUE</p>
+<h3>Cooperative multi-agent reinforcement learning with entangled state representations and copula-based action coordination for urban navigation</h3>
+<p>Jong-Min Kim</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00180-026-01806-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01806-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Cooperative multi-agent reinforcement learning with entangled state representations and copula-based action coordination for urban navigation</strong></p><p class="abstract-meta">期刊：Computational Statistics · DOI：10.1007/s00180-026-01806-7 · 摘要来源：账本已存摘要</p><p class="abstract-body">Cooperative multi-agent reinforcement learning (MARL) enables autonomous agents to coordinate in complex spatial environments. This study proposes a MARL framework for goal-directed navigation that integrates entangled state embeddings, copula-based joint action transformations, and a shared reward mechanism. Entangled representations enhance cooperative awareness by incorporating peer-agent information, while copula transformations model dependence among actions to stabilize joint decision-making. A shared reward structure further aligns agent objectives toward collective performance. The framework is evaluated in synthetic continuous navigation environments and a Chicago crime-based real-data setting. Simulation studies compare three configurations: a full Copula Model, a No Copula model, and a Baseline model without cooperative enhancements. Results show that the Copula Model achieves the highest cumulative reward and the most stable coordination, whereas the Baseline model consistently underperforms. Sensitivity analysis indicates that intermediate actor learning rates provide the most stable convergence. Trajectory analyses reveal emergent cooperative behaviors such as spatial dispersion, obstacle avoidance, and coordinated movement toward target regions. In the Chicago crime experiment, agents exhibit risk-aware navigation and non-redundant exploration despite environmental complexity and sparse rewards. Overall, the findings demonstrate that combining relational state representations, copula-based dependence modeling, and shared rewards improves coordination, robustness, and stability in multi-agent navigation tasks.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01806-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-089-005">
+<p class="kicker">Computational Statistics · IN_PROGRESS_ISSUE</p>
+<h3>The impact of weakness and recovery time on recurrent injuries in NBA: a dynamic event-count model with transient carryover effect</h3>
+<p>Ambra Macis; Marica Manisera; Marco Sandri; Paola Zuccolotto</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00180-026-01784-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01784-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>The impact of weakness and recovery time on recurrent injuries in NBA: a dynamic event-count model with transient carryover effect</strong></p><p class="abstract-meta">期刊：Computational Statistics · DOI：10.1007/s00180-026-01784-w · 摘要来源：账本已存摘要</p><p class="abstract-body">The recurrence of injuries represents a major challenge in professional sports, with relevant financial implications for teams and considerable psychological impact on athletes, highlighting the importance of adopting sustainable risk management strategies. This paper aims to evaluate the main factors affecting repeated injuries among National Basketball Association (NBA) players within a recurrent-event analysis framework based on a dynamic event-count model. For this purpose, the study relies on three big datasets regarding players and games over a ten-year period, each characterized by complex structures. A key contribution of this work is the introduction of the Weakness , a variable designed to model the momentary vulnerability of players due to previous injuries and to capture a carryover effect of past injuries on future risk. This measure reflects the increased vulnerability of a player when multiple injuries occur within a short period, with the effect gradually decreasing as the time without new injuries increases. Beyond Weakness , both recovery time and player-specific attributes were investigated as potential factors determining the risk of relapse. Empirical results show that Weakness and recovery time significantly affect the risk of injury recurrence. Furthermore, age and playing position emerge as additional risk factors. The evidence highlights the potential of data-driven models to inform decision making in sports management, supporting sustainable strategies to reduce injury risk and enhance athlete availability, ultimately contributing to the long-term sustainability of their performances.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01784-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-089-006">
+<p class="kicker">Computational Statistics · IN_PROGRESS_ISSUE</p>
+<h3>Statistical graph empirical mode decomposition by graph denoising and boundary treatment</h3>
+<p>Hyeonglae Cho; Kyusoon Kim; Hee-Seok Oh</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00180-026-01804-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01804-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Statistical graph empirical mode decomposition by graph denoising and boundary treatment</strong></p><p class="abstract-meta">期刊：Computational Statistics · DOI：10.1007/s00180-026-01804-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01804-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-089-007">
+<p class="kicker">Computational Statistics · IN_PROGRESS_ISSUE</p>
+<h3>A real options model for harvesting</h3>
+<p>João Brazão; Nuno M. Brites; Miguel Reis</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00180-026-01801-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01801-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A real options model for harvesting</strong></p><p class="abstract-meta">期刊：Computational Statistics · DOI：10.1007/s00180-026-01801-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01801-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-089-008">
+<p class="kicker">Computational Statistics · IN_PROGRESS_ISSUE</p>
+<h3>A novel model-based biclustering for ordinal data via a URV approach</h3>
+<p>Monia Ranalli; Francesca Martella</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00180-026-01793-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01793-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A novel model-based biclustering for ordinal data via a URV approach</strong></p><p class="abstract-meta">期刊：Computational Statistics · DOI：10.1007/s00180-026-01793-9 · 摘要来源：账本已存摘要</p><p class="abstract-body">We introduce a novel finite mixture model for biclustering ordinal data matrices, simultaneously clustering rows and columns within the Underlying Response Variable (URV) framework. Ordinal responses are modeled as discretizations of latent Gaussian variables, while component-specific covariance matrices are parsimoniously parameterized via a factor analytic structure to capture complex dependence patterns efficiently. To address computational challenges arising from the high-dimensional likelihood evaluation inherent to ordinal data, model parameters are estimated using a Composite Likelihood (CL) approach, which offers significant computational advantages with negligible loss of efficiency. Extensive simulation studies demonstrate the effectiveness of the proposed method in terms of accurate cluster recovery and reliable parameter estimation. We further illustrate the applicability of the methodology through an empirical analysis of two real-world ordinal datasets, highlighting its potential for uncovering meaningful latent bicluster structures.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01793-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-089-009">
+<p class="kicker">Computational Statistics · IN_PROGRESS_ISSUE</p>
+<h3>A multi-stage machine learning approach to portfolio selection and weight optimization for pairs trading</h3>
+<p>Pınar Kaya Soylu</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00180-026-01797-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01797-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A multi-stage machine learning approach to portfolio selection and weight optimization for pairs trading</strong></p><p class="abstract-meta">期刊：Computational Statistics · DOI：10.1007/s00180-026-01797-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01797-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-089-010">
+<p class="kicker">Computational Statistics · IN_PROGRESS_ISSUE</p>
+<h3>Quantile ratio regression for panel data</h3>
+<p>Alessandro Fulci; Alessio Farcomeni</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00180-026-01799-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01799-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Quantile ratio regression for panel data</strong></p><p class="abstract-meta">期刊：Computational Statistics · DOI：10.1007/s00180-026-01799-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01799-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-089-011">
+<p class="kicker">Computational Statistics · IN_PROGRESS_ISSUE</p>
+<h3>Augmenting the Bayes estimator to find more matches in bipartite record linkage</h3>
+<p>Ziyan Fang; Jerome P. Reiter</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00180-026-01800-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01800-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Augmenting the Bayes estimator to find more matches in bipartite record linkage</strong></p><p class="abstract-meta">期刊：Computational Statistics · DOI：10.1007/s00180-026-01800-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01800-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-089-012">
+<p class="kicker">Computational Statistics · IN_PROGRESS_ISSUE</p>
+<h3>Sequential monitoring of linear profiles using mixed memory recursions and stochastic approximation</h3>
+<p>Nasir Abbas; Muhammad Ali; Shabbir Ahmad; Muhammad Riaz</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00180-026-01798-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01798-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-29 12:05 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Sequential monitoring of linear profiles using mixed memory recursions and stochastic approximation</strong></p><p class="abstract-meta">期刊：Computational Statistics · DOI：10.1007/s00180-026-01798-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00180-026-01798-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Computational Statistics 另有 95 条网络优先/在编/Latest Articles 发现已写入账本，页内从略。</p>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>Health &amp; Place（ScienceDirect）：Playwright Issues/V99–V102/AIP 均 HTTP 403；DEGRADED，仅登记。</li>
+<li>Applied Artificial Intelligence（Taylor &amp; Francis）：Current/V39/V40 OK；claim 关闭年卷 V39，V40 开放不 claim。</li>
+<li>Computational Statistics（Springer Nature Link）：Playwright Volumes/I5/I6 OK；I6 在编不 claim。</li>
+<li>信号源 REG-102 PKUVis：本批仅登记为信号（DNS 失败），不计入正式完成。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>d1b9ac56-80a3-4775-a6cc-49d0c2f0d6c7</code></li>
+<li>Commit ID：<code>DAILY-20260929-120224-d1b9ac56</code></li>
+<li>Brief ID：<code>DAILY-20260929</code></li>
+<li>去重抑制：0 · 增量复核：0 · 对账任务：4 · 官方源失败计数：1</li>
+<li>正式期刊：REG-029、REG-059、REG-089 · 信号：REG-102</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/09/index.html">返回 2026-09 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
+</body></html>
