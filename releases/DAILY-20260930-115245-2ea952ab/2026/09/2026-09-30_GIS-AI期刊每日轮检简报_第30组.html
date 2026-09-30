@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 30 组 · 2026-09-30</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/09/index.html">9 月</a> / 第 30 组
+</nav>
+<p class="meta">逻辑日期 2026-09-30 · 完成时间 2026-09-30 12:02 CST · 任务 ROUTINE-20260930-G30 · Commit <code>DAILY-20260930-115245-2ea952ab</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 30 组</h1>
+<p class="lede">第 30 组共检查 3 种正式期刊；确认 1 个新完整期次、16 篇正式期次论文、0 篇既有网络优先记录正式归期，以及 586 条新的网络优先/在年卷/在编期发现。Spatial and Spatio-temporal Epidemiology（ScienceDirect）官方 Cloudflare/403，V58–V59 仅凭 Crossref/RSS 登记不 claim；Artificial Intelligence Review（Springer）官方 September 2026-V59-I9 TOC 16 篇完整且已有 I10，已 claim；I8 已 BRIEFED（目录哈希差异仅记 DELTA，不重印）；I10/I11 未来期仅登记；Computational Statistics &amp; Data Analysis（ScienceDirect）官方 Cloudflare/403，V218+ 仅登记不 claim。其中 2 种期刊因官方源阻断降级完成。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>3</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>1</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>16</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>586</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">降级</span> <strong>Spatial and Spatio-temporal Epidemiology</strong> — ScienceDirect 官方目录 Cloudflare/403；Crossref/RSS 仅登记，不 claim V58/V59。 <span class="evidence"><a href="https://www.sciencedirect.com/journal/spatial-and-spatio-temporal-epidemiology/issues" rel="noopener noreferrer">证据</a><small>www.sciencedirect.com · 2026-09-30 12:02 CST · 官方目录</small></span></li><li><span class="tag">新完整期</span> <strong>Artificial Intelligence Review</strong> — 2026-V59-I9（Sep，16 篇）官方 TOC 完整并 claim；I10/I11 未来期仅登记；I8 已 BRIEFED。 <span class="evidence"><a href="https://link.springer.com/journal/10462/volumes-and-issues/59-9" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-09-30 12:02 CST · 官方目录</small></span></li><li><span class="tag">降级</span> <strong>Computational Statistics &amp; Data Analysis</strong> — ScienceDirect 官方目录 Cloudflare/403；V218+ 仅登记不 claim。 <span class="evidence"><a href="https://www.sciencedirect.com/journal/computational-statistics-and-data-analysis/issues" rel="noopener noreferrer">证据</a><small>www.sciencedirect.com · 2026-09-30 12:02 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-030<br><strong>Spatial and Spatio-temporal Epidemiology</strong></td><td>2026-V58</td><td>0</td><td>0</td><td>0</td><td>118</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr><tr><td>REG-060<br><strong>Artificial Intelligence Review</strong></td><td>2026-V59-I9</td><td>1</td><td>16</td><td>0</td><td>252</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-090<br><strong>Computational Statistics &amp; Data Analysis</strong></td><td>2026-V217</td><td>0</td><td>0</td><td>0</td><td>216</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-09-30_GIS-AI期刊每日摘要_第30组.png" width="1600" height="900" alt="第30组每日摘要图：3刊，新完整期1，正式文16">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-060-2026-v59-i9"><h3>Artificial Intelligence Review · 2026-V59-I9</h3><p>官方 TOC Volume 59 Issue 9（September 2026）16 篇与页面声明一致；Volumes 页已列出 I10（October），按月刊规则确认完整并 claim。I8 已 BRIEFED；I10/I11 属未来月提前分配，仅登记。</p><p><span class="evidence"><a href="https://link.springer.com/journal/10462/volumes-and-issues/59-9" rel="noopener noreferrer">官方期次目录</a><small>link.springer.com · 2026-09-30 12:02 CST · 一级完整性证据</small></span><span class="evidence"><a href="https://link.springer.com/journal/10462/volumes-and-issues" rel="noopener noreferrer">Volumes &amp; Issues</a><small>link.springer.com · 2026-09-30 12:02 CST · 期次关闭交叉核验（I10 已存在）</small></span></p><p>本简报收录正式论文 <strong>16</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-060-2026v59i9-001">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>Multi-agent task and motion planning trends analysis: a survey</h3>
+<p>Xi Tao; José-Fernán Martínez-Ortega; Mario San-Emeterio-de-la-Parte</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11588-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11588-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Multi-agent task and motion planning trends analysis: a survey</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11588-5 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Multi-agent Task and Motion Planning (TAMP) has become a key research frontier in autonomous agents, supported by the rapid evolution of Embodied AI and the increasing deployment of robot teams in real-world environments. Unlike single-agent planning, multi-agent TAMP must jointly reason about discrete task allocation, continuous motion feasibility, communication constraints, and execution uncertainties. This survey provides a systematic analysis of recent advances in multi-agent TAMP from 2021 to 2025. We first integrate and refine existing taxonomies, and propose a unified classification framework based on three dimensions. A total of 60 representative works are reviewed under this taxonomy, revealing dominant solution strategies. Furthermore, this survey summarizes emerging research trends, including LLM-based TAMP, decentralized adaptive planning frameworks, and reinforcement learning based TAMP solutions. Finally, we highlight key future directions, such as VLM-based planning, Theory-based planning, data privacy and long-horizon task planning.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11588-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-002">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>Addressing data scarcity with Few-Shot Learning: a systematic literature review</h3>
+<p>Inas Lamtaai; Basma Ben Jilali; Abdelouahid Lyhyaoui</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11584-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11584-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Addressing data scarcity with Few-Shot Learning: a systematic literature review</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11584-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11584-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-003">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ASSIGNMENT</p>
+<h3>Embedding learning on multiplex networks for link prediction</h3>
+<p>Orell Trautmann; Olaf Wolkenhauer; Clémence Réda</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11656-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11656-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Embedding learning on multiplex networks for link prediction</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11656-w · 摘要来源：账本已存摘要</p><p class="abstract-body">Over the past years, embedding learning on networks has shown tremendous results in link prediction tasks for complex systems, with a wide range of real-life applications. Learning a representation for each node in a knowledge graph allows us to capture topological and semantic information, which can be processed in downstream analyses later. In the link prediction task, high-dimensional network information is encoded into low-dimensional vectors, which are then fed to a predictor to infer new connections between nodes in the network. As the network complexity (that is, the numbers of connections and types of interactions) grows, embedding learning turns out increasingly challenging. This review covers published models on embedding learning on multiplex networks for link prediction. First, we propose refined taxonomies to classify and compare 38 models (in 36 papers) across five methodological categories and three embedding classes. Second, we review and address the problem of reproducible and fair evaluation of embedding learning on multiplex networks for the link prediction task. Finally, we highlight challenges specific to performance evaluation on directed multiplex networks, and address them by introducing a novel and fair testing procedure. This review constitutes a crucial step towards the development of more performant and tractable embedding learning approaches for multiplex networks and their fair evaluation for the link prediction task. We also suggest guidelines on the evaluation of models, and provide an informed perspective on the challenges and tools currently available to address downstream analyses applied to multiplex networks.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11656-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-004">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>Recent advances in music generation: methods, evaluation, and challenges</h3>
+<p>Wei Duan; Yi Yu; Jean-Pierre Briot</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11582-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11582-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Recent advances in music generation: methods, evaluation, and challenges</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11582-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11582-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-005">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>AI in cardiovascular disease classification—a systematic literature review</h3>
+<p>Manali Karandikar; Suraj Sawant; Ranjeet Bidwe</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11592-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11592-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>AI in cardiovascular disease classification—a systematic literature review</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11592-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11592-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-006">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>Generative anomaly detection: a comprehensive review of modeling principles, advances, and future opportunities</h3>
+<p>Jiaqi Zhu; Yunfeng Fan; Jie Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11591-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11591-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Generative anomaly detection: a comprehensive review of modeling principles, advances, and future opportunities</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11591-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11591-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-007">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>Retrieval-augmented generation for natural language processing: a survey</h3>
+<p>Shangyu Wu; Ying Xiong; Chun Jason Xue</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11605-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11605-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Retrieval-augmented generation for natural language processing: a survey</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11605-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11605-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-008">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>On-device large language models: a survey of model compression and system optimization</h3>
+<p>Wanyi Chen; Junhao Wang; Yike Guo</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11538-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11538-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>On-device large language models: a survey of model compression and system optimization</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11538-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11538-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-009">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>AI-driven household electricity load forecasting: challenges, methods, and future directions</h3>
+<p>Elmar Ibrahimov; Xuefei Yin; Alan Wee-Chung Liew</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11583-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11583-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>AI-driven household electricity load forecasting: challenges, methods, and future directions</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11583-w · 摘要来源：账本已存摘要</p><p class="abstract-body">Accurate household electricity load forecasting is becoming increasingly vital with the continued growth of smart grids, household renewable energy systems, and smart meter deployment. Unlike regional or grid load forecasting, household-level forecasting presents unique challenges due to highly irregular consumption patterns, data scarcity, privacy concerns, and behavioral variability. In recent years, artificial intelligence (AI) methods have demonstrated strong potential to address these complexities, enabling more accurate, robust, and adaptive forecasting systems. This survey presents a comprehensive and up-to-date review, with a focus on AI-based techniques specifically tailored to household-level forecasting. A key contribution of this work is the development of a challenge-centered taxonomy that categorizes methods based on four critical problem domains: methodological limitations, data-related constraints, behavioral complexity, and privacy and security concerns. By aligning representative AI approaches with these core challenges, the survey offers a structured and insightful understanding of the current research landscape. It also provides a comparative analysis with prior surveys, identifies gaps in the literature, and highlights promising research directions, including multimodal learning, adaptive modeling, integration of large language models, and privacy-preserving forecasting. This work could serve as a valuable resource for researchers and practitioners aiming to advance intelligent and trustworthy forecasting solutions in household energy systems.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11583-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-010">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>A comprehensive comparison of constrained multi-objective evolutionary algorithms</h3>
+<p>Mengjun Ming; Rui Wang; Carlos A. Coello Coello</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11576-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11576-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A comprehensive comparison of constrained multi-objective evolutionary algorithms</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11576-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11576-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-011">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>Empowering healthcare 5.0 with deep learning: techniques, trends, and future directions</h3>
+<p>Paramita Kundu Maji; Sanjay Chakraborty; Krishnendu Ghosh</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11593-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11593-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Empowering healthcare 5.0 with deep learning: techniques, trends, and future directions</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11593-8 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The rapid advancement of intelligent technologies has driven a transformative shift in healthcare, giving rise to Healthcare 5.0, a new paradigm centered on patient-focused, digitally empowered medical services. This study presents a comprehensive review of cutting-edge Deep Learning (DL) techniques that are redefining Healthcare 5.0 through applications in disease prediction and early diagnosis, medical image analysis and radiology, and multimodal deep learning (MMDL). We analyze a broad spectrum of DL architectures, including Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTMs), Gated Recurrent Units (GRUs), Generative Adversarial Network (GANs), transformers, autoencoders, transfer learning, and MMDL, highlighting the unique features that make them particularly suited for healthcare tasks. Using bibliometric analysis of 1,342 Scopus-indexed publications (2018-2025) via VOSviewer, we uncover key research trends, thematic clusters, and emerging focus areas. Furthermore, we assess DL models across diverse real-world healthcare datasets and discuss critical challenges, including data privacy, model interpretability, and system integration. Following the PRISMA methodology, this review also synthesizes recent research on advanced DL architectures for disease diagnosis and Healthcare 5.0, alongside widely used medical imaging and multimodal datasets. The manuscript has been substantially strengthened by incorporating a comparative analysis, quantitative aggregation of reported results, an explicit novelty and contribution statement, and a systematic comparison of DL survey studies across Healthcare 4.0 and Healthcare 5.0, thereby providing a more critical, data-driven, and clearly differentiated perspective beyond prior reviews. Finally, we address significant issues, including ethical considerations, privacy concerns, and model limitations, while outlining promising directions for future research. This work serves as a valuable resource for researchers and practitioners, offering both a broad overview and deep insights into the latest developments in DL for Healthcare 5.0 systems.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11593-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-012">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>All too perfect: bias and aspiration in persona generation with LLMs</h3>
+<p>Nicholas Kluge Corrêa; Rafaela Weber Mallmann; Julia Maria Mönig</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11641-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11641-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>All too perfect: bias and aspiration in persona generation with LLMs</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11641-3 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Synthetic data generated by large language models plays a central role in the training and alignment process of other AI systems. However, this process also risks inheriting the structural biases of organic corpora and embedding new biases that stem from the design choices underlying the data creation process. This paper examines the systematic biases that emerge when large language models (LLMs) are tasked with generating synthetic personas. We introduce a reproducible, minimally conditioned pipeline that produced 40,000 personas, in four different languages, using two instruction-tuned open-weight generators (Llama−3.3-70B-Instruct and Qwen2.5-72B-Instruct), followed by a battery of quantitative analyses: name match-rates, KL divergence/skew for gender, age-pyramid comparisons, profession-gender intersectionals, adjective/sentiment profiling, and Proppian role classification. Our main findings reveal that persona generations are far from neutral. Models tend to focus on middle-aged, aspirational, and overwhelmingly positive (i.e., upbeat/optimistic) characters, while non-binary identities and many real-world occupations remain underrepresented. We conclude that contemporary training and alignment regimes produce a form of narrative sanitization that both flattens representational diversity and embeds normative assumptions, and propose that persona-based evaluation can serve as a scalable diagnostic of what generative systems value and prioritize when depicting humanity.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11641-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-013">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>Ethical explainable artificial intelligence for green innovation: a systematic review and meta-analysis of transparency, fairness, and accountability in sustainable technologies</h3>
+<p>Kashif Mazhar; Syed Shahid Mazhar; Aseel Smerat</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11566-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11566-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Ethical explainable artificial intelligence for green innovation: a systematic review and meta-analysis of transparency, fairness, and accountability in sustainable technologies</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11566-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11566-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-014">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>Deep learning techniques for otologic imaging: a systematic review of segmentation methods</h3>
+<p>Zainab Ghazanfar; Haill An; Younhyun Jung</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11586-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11586-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Deep learning techniques for otologic imaging: a systematic review of segmentation methods</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11586-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11586-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-015">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>Evaluating large language model compression: a comparative analysis on state-of-the-art models across diverse hardware platforms</h3>
+<p>Dominik Hildebrand; Benjamin Kiefer; Andreas Zell</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11614-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11614-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Evaluating large language model compression: a comparative analysis on state-of-the-art models across diverse hardware platforms</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11614-6 · 摘要来源：账本已存摘要</p><p class="abstract-body">This work presents a systematic, empirical comparison of contemporary compression techniques for large language models (LLMs), namely quantization, pruning, and parameter-efficient fine-tuning (PEFT) using a representative set of open-source model families (Llama, Mistral, Phi and Qwen) and model scales (1.7 Billion to 70 Billion). Evaluation combined benchmarks (MMLU, SQuAD v2, TinyBenchmarks and WikiText), deployment metrics (peak memory, time-to-first-token, tokens/sec and maximum sequence lengths) and settings (multi-GPU clusters, single-GPU PC, laptop, and smartphone) to capture real-world trade-offs. Quantization often delivered the best wins for deployment feasibility—enabling single-device and mobile inference—but required careful per-model tuning and backend support to avoid throughput regressions. Pruning reduced parameter counts substantially but frequently incured large, even catastrophic, performance loss beyond moderate sparsity levels. Retraining partially mitigated this but did not uniformly close the gap to quantization. Finally, PEFT methods enabled models to match or outperform models with up to 18 times the parameters on SQuAD v2 while reducing storage as well as optimizer overhead and often improved task performance even when full fine-tuning failed.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11614-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-060-2026v59i9-016">
+<p class="kicker">Artificial Intelligence Review · FORMAL_ISSUE</p>
+<h3>Mitigating cyberattacks on autonomous vehicles: a comprehensive review of Generative Artificial Intelligence defense techniques</h3>
+<p>May Phyu Phyu Thaw; Doreen Sebastian Sarwatt; Jianguo Ding</p>
+<dl>
+<div><dt>卷期</dt><dd>V59 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11636-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11636-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Mitigating cyberattacks on autonomous vehicles: a comprehensive review of Generative Artificial Intelligence defense techniques</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11636-0 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Autonomous vehicles (AVs) are rapidly becoming foundational components of intelligent transportation systems (ITS), yet their complex cyber-physical architectures expose them to a broad and continuously evolving threat landscape. Existing cybersecurity solutions struggle to keep pace with the dynamic, data-intensive nature of AV ecosystems, leaving critical vulnerabilities unaddressed across perception, communication, and decision-making subsystems. Generative Artificial Intelligence (GAI), encompassing Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and Diffusion Models (DMs), has emerged as a powerful paradigm for both offensive simulation and defensive reinforcement, enabling synthetic data generation, adversarial attack emulation, and enhanced anomaly and intrusion detection. Yet despite growing interest in GAI for general cybersecurity, its systematic application to AV-specific security remains fragmented and underexplored. This paper addresses that gap through a PRISMA-guided systematic review of GAI-driven defense mechanisms for AV cybersecurity, synthesizing 216 peer-reviewed studies drawn from major scientific databases and published between January 2020 and February 2026. Three principal contributions are made. First, we introduce an AV-centric, three-dimensional taxonomy that classifies defenses along generative architecture, defensive function, and AV-relevant attack surface, explicitly anchoring each study to AV subsystems and operational contexts. Second, we provide a disciplined synthesis that separates study-specific performance findings from broader design insights, exposing fundamental gaps between conventional and GAI-based approaches in scalability, adaptability, and resilience. Third, we identify critical open challenges—including training instability, the absence of standardized AV security benchmarks, real-time deployment constraints, and limited explainability—and propose targeted research directions for safety-critical environments. By grounding GAI defenses within AV system layers and cyber-physical threat models, this review serves as a practitioner- and researcher-oriented reference for building robust, scalable, and trustworthy cybersecurity solutions for next-generation autonomous vehicles.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11636-0" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在编登记</h2>
+<p>本批登记网络优先/在编/未来期发现 <strong>586</strong> 条（REG-030/REG-090 Crossref/RSS；REG-060 Online First + I10/I11 预分配）。上述条目不作为完整期次证据。</p><article class="paper" id="of-reg-030-001">
+<p class="kicker">Spatial and Spatio-temporal Epidemiology · IN_PROGRESS_ISSUE</p>
+<h3>Spatiotemporal Patterns of Leprosy in Southern Thailand: Identifying High-burden Districts Over 25 Years</h3>
+<p>Dasseema Muwannasing; Benjamin Atta Owusu; Phattrawan Tongkumchum; Nitinun Pongsiri; Lumpoo Ammatawiyanon; Penpicha Poolsawat</p>
+<dl>
+<div><dt>卷期</dt><dd>V55 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.sste.2025.100766</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.sste.2025.100766" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spatiotemporal Patterns of Leprosy in Southern Thailand: Identifying High-burden Districts Over 25 Years</strong></p><p class="abstract-meta">期刊：Spatial and Spatio-temporal Epidemiology · DOI：10.1016/j.sste.2025.100766</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.sste.2025.100766" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-030-002">
+<p class="kicker">Spatial and Spatio-temporal Epidemiology · IN_PROGRESS_ISSUE</p>
+<h3>Intra-urban inequalities in the community food environment of a Brazilian metropolitan region: An analysis of food deserts, swamps, and oases</h3>
+<p>Emília Chagas Costa; Vanessa Sá Leal; Juliana Souza Oliveira; Nathalia Paula de Souza; Emerson Iago Garcia e Silva; Marco Aurélio de Valois Correia Júnior; Risia Cristina Egito de Menezes; Pedro Israel Cabral de Lira; Paula Santana; Ricardo Almendra</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.sste.2025.100768</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.sste.2025.100768" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Intra-urban inequalities in the community food environment of a Brazilian metropolitan region: An analysis of food deserts, swamps, and oases</strong></p><p class="abstract-meta">期刊：Spatial and Spatio-temporal Epidemiology · DOI：10.1016/j.sste.2025.100768</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.sste.2025.100768" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-030-003">
+<p class="kicker">Spatial and Spatio-temporal Epidemiology · IN_PROGRESS_ISSUE</p>
+<h3>Association between urban green space and transmission of COVID-19 in Oslo, Norway: A Bayesian SIR modeling approach</h3>
+<p>Halvor Kjellesvig; Suleman Atique; Lars Böcker; Geir Aamodt</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.sste.2024.100699</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.sste.2024.100699" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Association between urban green space and transmission of COVID-19 in Oslo, Norway: A Bayesian SIR modeling approach</strong></p><p class="abstract-meta">期刊：Spatial and Spatio-temporal Epidemiology · DOI：10.1016/j.sste.2024.100699</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.sste.2024.100699" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-030-004">
+<p class="kicker">Spatial and Spatio-temporal Epidemiology · IN_PROGRESS_ISSUE</p>
+<h3>Exploratory topological data analysis for spatio-temporal knowledge discovery in epidemiology</h3>
+<p>Cheng Jie Ooi; Nur Fariha Syaqina Zulkepli; R.U. Gobithaasan; Mohd Shareduwan Mohd Kasihmuddin; Nurul Syafiah Abd Naeeim; Mohd Salmi Md Noorani; Kamarul Imran Musa</p>
+<dl>
+<div><dt>卷期</dt><dd>V57 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.sste.2026.100811</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.sste.2026.100811" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Exploratory topological data analysis for spatio-temporal knowledge discovery in epidemiology</strong></p><p class="abstract-meta">期刊：Spatial and Spatio-temporal Epidemiology · DOI：10.1016/j.sste.2026.100811</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.sste.2026.100811" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-030-005">
+<p class="kicker">Spatial and Spatio-temporal Epidemiology · IN_PROGRESS_ISSUE</p>
+<h3>Environmental health factors and dengue risk mapping using spatial-AHP: A case study in Nakhon Nayok Province, Thailand</h3>
+<p>Jitjira Chaiyarit; Prat Intarasaksit</p>
+<dl>
+<div><dt>卷期</dt><dd>V57 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.sste.2026.100808</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.sste.2026.100808" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Environmental health factors and dengue risk mapping using spatial-AHP: A case study in Nakhon Nayok Province, Thailand</strong></p><p class="abstract-meta">期刊：Spatial and Spatio-temporal Epidemiology · DOI：10.1016/j.sste.2026.100808</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.sste.2026.100808" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-030-006">
+<p class="kicker">Spatial and Spatio-temporal Epidemiology · IN_PROGRESS_ISSUE</p>
+<h3>Integrating data at multiple spatial scales to estimate the local burden of the opioid syndemic</h3>
+<p>Eva Murphy; David Kline; Erin McKnight; Andrea Bonny; William C. Miller; Lance Waller; Staci A. Hepler</p>
+<dl>
+<div><dt>卷期</dt><dd>V53 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.sste.2025.100720</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.sste.2025.100720" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Integrating data at multiple spatial scales to estimate the local burden of the opioid syndemic</strong></p><p class="abstract-meta">期刊：Spatial and Spatio-temporal Epidemiology · DOI：10.1016/j.sste.2025.100720</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.sste.2025.100720" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-030-007">
+<p class="kicker">Spatial and Spatio-temporal Epidemiology · IN_PROGRESS_ISSUE</p>
+<h3>Climatic and social health determinants of malaria incidence in Tete, Mozambique: Bayesian spatio-temporal modeling of routine data (2016–2022)</h3>
+<p>Abrantes João Afonso Mussafo; Renato Ferreira da Cruz; Liciana Vaz de Arruda Silveira; José Sílvio Govone</p>
+<dl>
+<div><dt>卷期</dt><dd>V57 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.sste.2026.100802</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.sste.2026.100802" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Climatic and social health determinants of malaria incidence in Tete, Mozambique: Bayesian spatio-temporal modeling of routine data (2016–2022)</strong></p><p class="abstract-meta">期刊：Spatial and Spatio-temporal Epidemiology · DOI：10.1016/j.sste.2026.100802</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.sste.2026.100802" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-030-008">
+<p class="kicker">Spatial and Spatio-temporal Epidemiology · IN_PROGRESS_ISSUE</p>
+<h3>Investigating the impact of precipitation and temperature on snakebite mortality in India: A spatial case-crossover study</h3>
+<p>Guowen Huang; Patrick E. Brown; Marta Blangiardo</p>
+<dl>
+<div><dt>卷期</dt><dd>V54 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.sste.2025.100738</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.sste.2025.100738" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Investigating the impact of precipitation and temperature on snakebite mortality in India: A spatial case-crossover study</strong></p><p class="abstract-meta">期刊：Spatial and Spatio-temporal Epidemiology · DOI：10.1016/j.sste.2025.100738</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.sste.2025.100738" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-030-009">
+<p class="kicker">Spatial and Spatio-temporal Epidemiology · IN_PROGRESS_ISSUE</p>
+<h3>Spatial disparities in access to Hepatitis C treatment providers in Los Angeles County: An enhanced two-step floating catchment area analysis</h3>
+<p>Jacob Mugoya Gizamba; Darren Ruddell; Jeffrey D Klausner</p>
+<dl>
+<div><dt>卷期</dt><dd>V57 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.sste.2026.100809</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.sste.2026.100809" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spatial disparities in access to Hepatitis C treatment providers in Los Angeles County: An enhanced two-step floating catchment area analysis</strong></p><p class="abstract-meta">期刊：Spatial and Spatio-temporal Epidemiology · DOI：10.1016/j.sste.2026.100809</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.sste.2026.100809" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-030-010">
+<p class="kicker">Spatial and Spatio-temporal Epidemiology · IN_PROGRESS_ISSUE</p>
+<h3>County-level temporal changes and correlates of six categories of alcohol-attributable mortality before and during the early phases of the COVID-19 pandemic</h3>
+<p>Natalie Sumetsky; Jeanine Buchanich; Brooke Molina; Maria Mori Brooks; Christina Mair</p>
+<dl>
+<div><dt>卷期</dt><dd>V57 · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.sste.2026.100799</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.sste.2026.100799" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>County-level temporal changes and correlates of six categories of alcohol-attributable mortality before and during the early phases of the COVID-19 pandemic</strong></p><p class="abstract-meta">期刊：Spatial and Spatio-temporal Epidemiology · DOI：10.1016/j.sste.2026.100799</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.sste.2026.100799" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-030-011">
+<p class="kicker">Spatial and Spatio-temporal Epidemiology · IN_PROGRESS_ISSUE</p>
+<h3>Employment industry and opioid overdose risk: A pre- and post-COVID-19 comparison in Kentucky and Massachusetts 2018–2021</h3>
+<p>Sumeeta Srinivasan; Shikhar Shrestha; Daniel R. Harris; Olivia Lewis; Peter Rock; Anita Silwal; Jennifer Pustz; Sehun Oh; Gia Barboza-Salerno; Thomas J. Stopka</p>
+<dl>
+<div><dt>卷期</dt><dd>V52 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.sste.2024.100701</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.sste.2024.100701" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Employment industry and opioid overdose risk: A pre- and post-COVID-19 comparison in Kentucky and Massachusetts 2018–2021</strong></p><p class="abstract-meta">期刊：Spatial and Spatio-temporal Epidemiology · DOI：10.1016/j.sste.2024.100701</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.sste.2024.100701" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-030-012">
+<p class="kicker">Spatial and Spatio-temporal Epidemiology · IN_PROGRESS_ISSUE</p>
+<h3>Exploring the relationship between cancer incidence, social deprivation, and territorial typology: An ecological analysis at the sub-municipal level of three cancer types</h3>
+<p>Franck Golliot; Amandine Cochet; Pierre Schalkwijk; Olivier Catelinois; Brigitte Tretarre; Damien Mouly; Cyrille Delpierre</p>
+<dl>
+<div><dt>卷期</dt><dd>V58 · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.sste.2026.100814</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.sste.2026.100814" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Exploring the relationship between cancer incidence, social deprivation, and territorial typology: An ecological analysis at the sub-municipal level of three cancer types</strong></p><p class="abstract-meta">期刊：Spatial and Spatio-temporal Epidemiology · DOI：10.1016/j.sste.2026.100814</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.sste.2026.100814" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Spatial and Spatio-temporal Epidemiology 另有 106 条网络优先/在编/未来期发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-060-001">
+<p class="kicker">Artificial Intelligence Review · FUTURE_ISSUE_PREASSIGNED</p>
+<h3>Recent advances in the Horse herd optimization algorithm, its versions, and applications</h3>
+<p>Mohammed A. Awadallah; Soud Asaad Alhazba; Mirna Nachouki</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11688-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11688-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Recent advances in the Horse herd optimization algorithm, its versions, and applications</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11688-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11688-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-060-002">
+<p class="kicker">Artificial Intelligence Review · FUTURE_ISSUE_PREASSIGNED</p>
+<h3>Artificial Intelligence (AI) assurance: challenges, gaps, and the path forward</h3>
+<p>Anita Khadka; Carsten Maple</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11719-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11719-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Artificial Intelligence (AI) assurance: challenges, gaps, and the path forward</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11719-y · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The integration of Artificial Intelligence (AI)/Machine Learning (ML) into high-impact domains such as finance and autonomous systems offers significant benefits, but also introduces complex risks and regulatory challenges. These systems exhibit properties including non-determinism, data dependence, and evolving vulnerabilities that are difficult to address through largely static assurance approaches. This paper provides a critical review of AI assurance initiatives, examining established frameworks such as the NIST AI Risk Management Framework (NIST AI RMF), global guidance including the OECD and G7 AI toolkits, practitioner-facing resources, and representative research-led approaches. Rather than treating safety, fairness, robustness, privacy, explainability and accountability as separate assurance frameworks, we treat them as assurance goals that require operationalisation through five cross-cutting commitments. They are testable claims, evidence obligations, lifecycle validity, accountability and recourse, and interoperability. Using these commitments, we compare how existing initiatives translate high-level governance objectives into auditable and maintainable assurance practices. Our analysis shows that, despite growing activity, AI assurance remains fragmented and often under-specifies deployment-facing practices needed for credible assurance in real-world settings. We highlight challenges in translating regulatory intent into operational requirements and evidence, and we emphasise the need for coherent, context-sensitive, and adaptive assurance strategies. The paper concludes with reflections on emerging directions and practical considerations for policymakers, developers, and regulators seeking to advance trustworthy AI.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11719-y" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-060-003">
+<p class="kicker">Artificial Intelligence Review · FUTURE_ISSUE_PREASSIGNED</p>
+<h3>Artificial intelligence in litigation: a systematic review of applications, challenges, and future directions</h3>
+<p>Zehui Zhao; Mohammed Abdulazeez Jebur; Laith Alzubaidi</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11697-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11697-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Artificial intelligence in litigation: a systematic review of applications, challenges, and future directions</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11697-1 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The integration of artificial intelligence (AI) into litigation has accelerated in recent years, driven by advances in natural language processing, deep learning, and large language models. While AI promises to enhance judicial efficiency, decision consistency, and access to justice, its deployment in litigation raises substantial technical, institutional, and trust-related challenges. This paper presents a systematic review of AI applications in litigation, analyzing 90 peer-reviewed studies published from January 2020 to 3rd of December 2025 and following the PRISMA 2020 guidelines. We categorize existing legal AI systems into five key application domains, including AI-based online dispute resolution systems, legal information and knowledge retrieval systems, document analysis and text-mining systems, expert and consultation systems, and judgment and outcome prediction systems. The review synthesizes dominant model architectures, datasets, and evaluation practices, highlighting a clear transition from rule-based approaches to transformer-based and large language models. Despite these advances, we identify persistent challenges related to data scarcity, limited generalizability, explainability, regulatory uncertainty, cybersecurity, and the risk of hallucination in legal AI systems. Based on the evidence reviewed, we argue that future progress in AI-assisted litigation depends on the development of domain-specific, multimodal models; robust explainability mechanisms; privacy-preserving learning frameworks; and clearer regulatory guidance. This review provides a structured reference for researchers, legal practitioners, and policymakers seeking to design, evaluate, and govern trustworthy AI systems for litigation. The limitations of the review are mainly about the search bias in the search, retrieval, and selection strategy, and potential bias in database and language selection.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11697-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-060-004">
+<p class="kicker">Artificial Intelligence Review · FUTURE_ISSUE_PREASSIGNED</p>
+<h3>Mapping the RAG landscape: a four-axis taxonomy of efficiency, defense, interactivity, and reasoning</h3>
+<p>Meghana Sunil; V. Shravya; P. R. Joe Dhanith</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11715-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11715-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mapping the RAG landscape: a four-axis taxonomy of efficiency, defense, interactivity, and reasoning</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11715-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11715-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-060-005">
+<p class="kicker">Artificial Intelligence Review · FUTURE_ISSUE_PREASSIGNED</p>
+<h3>Out-of-distribution challenges in intelligent fault diagnosis: a survey of generalization and detection</h3>
+<p>Fanwei Lin; Longfei Zhang; Xuefeng Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11722-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11722-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Out-of-distribution challenges in intelligent fault diagnosis: a survey of generalization and detection</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11722-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11722-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-060-006">
+<p class="kicker">Artificial Intelligence Review · FUTURE_ISSUE_PREASSIGNED</p>
+<h3>Artificial intelligence for forecasting, optimization, and energy storage in energy communities: a review</h3>
+<p>Fernando Lezama; Tayenne Dias de Lima; Zita Vale</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11681-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11681-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Artificial intelligence for forecasting, optimization, and energy storage in energy communities: a review</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11681-9 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Energy communities (ECs) are emerging as a key paradigm for decentralized, consumer-centric energy systems, yet their operation is challenged by uncertainty, asset heterogeneity, and the need for coordinated decision-making. Artificial intelligence (AI) has been widely applied to forecasting, optimization, and management of energy storage systems (ESSs) in ECs, but existing studies remain fragmented across decision layers. This paper presents a comprehensive and systematic review of 130 peer-reviewed studies on AI-based forecasting, optimization, and ESS management in ECs. By jointly analyzing these three pillars, the review highlights how predictive, prescriptive, and adaptive components interact, and where current approaches fall short in supporting end-to-end, deployable decision pipelines. The analysis reveals that forecasting acts as a foundational layer shaping downstream decisions, while optimization and ESS control increasingly rely on learning-based and hybrid AI frameworks to manage uncertainty and multi-objective trade-offs. However, tight coupling between forecasting, optimization, and physical execution remains limited, with implications for robustness, scalability, fairness, and real-world deployment. Based on these findings, the paper synthesizes key integration challenges and outlines future research directions toward decision-centric forecasting, asset-aware control, and market-compatible AI. The review provides a unified perspective to support the design of intelligent, robust, and socio-technical EC management frameworks.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11681-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-060-007">
+<p class="kicker">Artificial Intelligence Review · FUTURE_ISSUE_PREASSIGNED</p>
+<h3>Multi-objective optimization algorithms for intrusion detection systems in IoT: a systematic review and future research directions</h3>
+<p>Mohammed Azmi Al-Betar; Elfadil A. Mohamed; Malik Braik</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11724-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11724-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multi-objective optimization algorithms for intrusion detection systems in IoT: a systematic review and future research directions</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11724-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11724-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-060-008">
+<p class="kicker">Artificial Intelligence Review · FUTURE_ISSUE_PREASSIGNED</p>
+<h3>A comparative evaluation of outlier detection in categorical and mixed data</h3>
+<p>Felippe Pires Ferreira; Robson L. F. Cordeiro</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11687-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11687-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A comparative evaluation of outlier detection in categorical and mixed data</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11687-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11687-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-060-009">
+<p class="kicker">Artificial Intelligence Review · FUTURE_ISSUE_PREASSIGNED</p>
+<h3>Automated graph construction and graph neural network search: a survey</h3>
+<p>Yufeng Wang; Xinyi Wang; Qun Jin</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11710-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11710-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Automated graph construction and graph neural network search: a survey</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11710-7 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Graphs are widely used to describe objects and their interactions in physically-informed real-world networking scenario including transportation, networking and energy, etc. Graph neural network (GNN) is the latest deep learning (DL) model for processing graph-structured data, widely applied in various tasks, e.g., prediction, classification/fault detection, and decision-making problems. However, GNNs based tasks still face two major challenges. First, GNN’s powerful ability in learning expressive graph representations relies on the availability and quality of graph structures, which practically, are often noisy, incomplete, or even unavailable. Second, various GNN architectures are typically designed in a manually heuristic manner, which not only requires specified knowledge of domain expert, but inevitably leads to sub-optimal performance due to insufficient exploration. To address the above issues, this survey presents a unified view of automated graph neural network design, integrating graph structure learning and graph neural architecture search (GNAS) into a common pipeline for downstream tasks. Specifically, our work first systematically categorizes the graph structure learning paradigms from the perspective of task-agnostic heuristic based strategy and task-aware (end-to-end) learning based strategy. Then, GNAS steps are comprehensively synthesized from the following aspects: micro and macro search spaces, architecture embedding, search strategies, and performance evaluation methodologies. Their applicability and limitations are thoroughly analyzed. Moreover, the interaction paradigms between graph structure learning and GNAS architecture search are conceptually outlined. Finally, open issues in automated GNAS are summarized. This survey aims to provide a thoughtful insight for the automated representation learning of graph neural networks from both perspectives of data i.e., graph structure, and models i.e., automatic GNN architectures.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11710-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-060-010">
+<p class="kicker">Artificial Intelligence Review · FUTURE_ISSUE_PREASSIGNED</p>
+<h3>A survey of threats against voice authentication and anti-spoofing systems</h3>
+<p>Kamel Kamel; Keshav Sood; Sunil Aryal</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11709-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11709-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A survey of threats against voice authentication and anti-spoofing systems</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11709-0 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Voice authentication has evolved from traditional systems based on hand-engineered acoustic features to deep learning models that learn speaker representations directly from audio. This progress has improved accuracy, but it has also opened new attack surfaces. Prior surveys treat these threats in isolation; we instead provide a unified analysis of the four primary attack vectors against voice authentication: data poisoning, adversarial perturbations, audio deepfakes, and adversarial spoofing. We organize them along three axes: what the attacker knows, how the attack is delivered, and how broadly it generalizes across speakers and inputs. Comparing these vectors reveals a clear gap in threat maturity. Adversarial perturbations are effective when the attacker has full model access, but often fail once the audio is played over the air. Deepfakes, by contrast, scale easily, succeed without model access, and routinely fool both machines and human listeners. Existing Anti-Spoofing Countermeasures (CMs) remain largely reactive and can themselves be bypassed by adaptive attacks. We close by mapping open challenges and arguing for standardized threat models and defenses that act proactively, in real time.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11709-0" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-060-011">
+<p class="kicker">Artificial Intelligence Review · FUTURE_ISSUE_PREASSIGNED</p>
+<h3>Partial differential equations in the age of machine learning: a critical synthesis of classical, machine learning, and hybrid methods</h3>
+<p>Mohammad Nooraiepour; Jakub Wiktor Both; Saeid Sadeghnejad</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11677-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11677-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Partial differential equations in the age of machine learning: a critical synthesis of classical, machine learning, and hybrid methods</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11677-5 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Partial differential equations (PDEs) govern physical phenomena across the full range of scientific scales, yet their computational solution remains one of the defining challenges of modern science. This critical review examines two mature but epistemologically distinct paradigms for PDE solution, classical numerical methods and machine learning approaches, through a unified evaluative framework structured around six fundamental computational challenges: high dimensionality, nonlinearity, geometric complexity, discontinuities, multiscale phenomena, and multiphysics coupling. Classical methods, including finite difference, finite element, finite volume, and spectral discretizations, are assessed for their structure-preserving properties, rigorous convergence theory, and scalable solver design; their persistent limitations in high-dimensional and geometrically complex settings are characterized in detail. Machine learning approaches, including physics-informed neural networks, neural operators, graph architectures, transformers, generative models, and hybrid frameworks, are evaluated under a taxonomy organized by the degree to which physical knowledge is incorporated, and subjected to the same critical assessment applied to classical methods. The central finding is that classical methods are deductive: errors are bounded by quantities derivable from PDE structure and discretization parameters. Machine learning methods are inductive: accuracy depends on statistical proximity to the training distribution. This distinction determines not which paradigm is superior, but what each can certify, and therefore where each should be deployed. Epistemological character, rather than computational speed, is the primary criterion governing responsible method selection. We identify three genuine complementarities between the paradigms and develop principles for hybrid design, including a framework for the structure inheritance problem and an error budget decomposition that separates discretization, neural approximation, and coupling contributions. We further assess emerging frontiers, including foundation models for scientific computing, differentiable programming for inverse design, quantum algorithms, and exascale co-design, evaluating each against the structural constraints that determine whether current barriers are fundamental or contingent on engineering progress. The conclusion is not that one paradigm supersedes the other, but that their principled integration, grounded in the complementary strengths each provides, offers the most credible path toward computationally tractable solutions to the most consequential open problems that neither can address alone.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11677-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-060-012">
+<p class="kicker">Artificial Intelligence Review · FUTURE_ISSUE_PREASSIGNED</p>
+<h3>Reinforcement learning in recommender systems: a comprehensive review</h3>
+<p>Nikhil Parkar; M. Marimuthu; Aditi Agale</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10462-026-11706-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11706-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Reinforcement learning in recommender systems: a comprehensive review</strong></p><p class="abstract-meta">期刊：Artificial Intelligence Review · DOI：10.1007/s10462-026-11706-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10462-026-11706-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Artificial Intelligence Review 另有 240 条网络优先/在编/未来期发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-090-001">
+<p class="kicker">Computational Statistics &amp; Data Analysis · IN_PROGRESS_ISSUE</p>
+<h3>Latent-class trajectory modeling with a heterogeneous mean-variance relation</h3>
+<p>Niek G.P. Den Teuling; Francesco Ungolo; Steffen C. Pauws; Edwin R. van den Heuvel</p>
+<dl>
+<div><dt>卷期</dt><dd>V210 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.csda.2025.108199</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108199" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Latent-class trajectory modeling with a heterogeneous mean-variance relation</strong></p><p class="abstract-meta">期刊：Computational Statistics &amp; Data Analysis · DOI：10.1016/j.csda.2025.108199</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108199" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-090-002">
+<p class="kicker">Computational Statistics &amp; Data Analysis · IN_PROGRESS_ISSUE</p>
+<h3>Minimax rates of convergence for sliced inverse regression with differential privacy</h3>
+<p>Wenbiao Zhao; Xuehu Zhu; Lixing Zhu</p>
+<dl>
+<div><dt>卷期</dt><dd>V201 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.csda.2024.108041</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.csda.2024.108041" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Minimax rates of convergence for sliced inverse regression with differential privacy</strong></p><p class="abstract-meta">期刊：Computational Statistics &amp; Data Analysis · DOI：10.1016/j.csda.2024.108041</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.csda.2024.108041" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-090-003">
+<p class="kicker">Computational Statistics &amp; Data Analysis · IN_PROGRESS_ISSUE</p>
+<h3>GMM estimation and variable selection of semiparametric model with increasing dimension and high-order spatial dependence</h3>
+<p>Fang Lu; Hao Pan; Jing Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V205 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.csda.2024.108113</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.csda.2024.108113" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>GMM estimation and variable selection of semiparametric model with increasing dimension and high-order spatial dependence</strong></p><p class="abstract-meta">期刊：Computational Statistics &amp; Data Analysis · DOI：10.1016/j.csda.2024.108113</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.csda.2024.108113" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-090-004">
+<p class="kicker">Computational Statistics &amp; Data Analysis · IN_PROGRESS_ISSUE</p>
+<h3>Fully nonparametric inverse probability weighting estimation with nonignorable missing data and its extension to missing quantile regression</h3>
+<p>Lingnan Tai; Li Tao; Jianxin Pan; Man-lai Tang; Keming Yu; Wolfgang Karl Härdle; Maozai Tian</p>
+<dl>
+<div><dt>卷期</dt><dd>V206 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.csda.2025.108127</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108127" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Fully nonparametric inverse probability weighting estimation with nonignorable missing data and its extension to missing quantile regression</strong></p><p class="abstract-meta">期刊：Computational Statistics &amp; Data Analysis · DOI：10.1016/j.csda.2025.108127</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108127" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-090-005">
+<p class="kicker">Computational Statistics &amp; Data Analysis · IN_PROGRESS_ISSUE</p>
+<h3>Multiply robust estimation of causal effects using linked data</h3>
+<p>Shanshan Luo; Yechi Zhang; Wei Li; Zhi Geng</p>
+<dl>
+<div><dt>卷期</dt><dd>V209 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.csda.2025.108175</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108175" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multiply robust estimation of causal effects using linked data</strong></p><p class="abstract-meta">期刊：Computational Statistics &amp; Data Analysis · DOI：10.1016/j.csda.2025.108175</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108175" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-090-006">
+<p class="kicker">Computational Statistics &amp; Data Analysis · IN_PROGRESS_ISSUE</p>
+<h3>Extremal local linear quantile regression for nonlinear dependent processes</h3>
+<p>Fengyang He; Huixia Judy Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V206 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.csda.2025.108128</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108128" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Extremal local linear quantile regression for nonlinear dependent processes</strong></p><p class="abstract-meta">期刊：Computational Statistics &amp; Data Analysis · DOI：10.1016/j.csda.2025.108128</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108128" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-090-007">
+<p class="kicker">Computational Statistics &amp; Data Analysis · IN_PROGRESS_ISSUE</p>
+<h3>A semi-parametric approach to receiver operating characteristic analysis with semi-continuous biomarker</h3>
+<p>Baohao Wei; Dongsheng Tu; Chunlin Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V216 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.csda.2025.108305</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108305" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A semi-parametric approach to receiver operating characteristic analysis with semi-continuous biomarker</strong></p><p class="abstract-meta">期刊：Computational Statistics &amp; Data Analysis · DOI：10.1016/j.csda.2025.108305</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108305" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-090-008">
+<p class="kicker">Computational Statistics &amp; Data Analysis · IN_PROGRESS_ISSUE</p>
+<h3>Recursive nonparametric predictive for a discrete regression model</h3>
+<p>Lorenzo Cappello; Stephen G. Walker</p>
+<dl>
+<div><dt>卷期</dt><dd>V215 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.csda.2025.108275</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108275" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Recursive nonparametric predictive for a discrete regression model</strong></p><p class="abstract-meta">期刊：Computational Statistics &amp; Data Analysis · DOI：10.1016/j.csda.2025.108275</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108275" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-090-009">
+<p class="kicker">Computational Statistics &amp; Data Analysis · IN_PROGRESS_ISSUE</p>
+<h3>Linear covariance selection model via ℓ1-penalization</h3>
+<p>Kwan-Young Bak; Seongoh Park</p>
+<dl>
+<div><dt>卷期</dt><dd>V209 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.csda.2025.108176</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108176" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Linear covariance selection model via ℓ1-penalization</strong></p><p class="abstract-meta">期刊：Computational Statistics &amp; Data Analysis · DOI：10.1016/j.csda.2025.108176</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108176" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-090-010">
+<p class="kicker">Computational Statistics &amp; Data Analysis · IN_PROGRESS_ISSUE</p>
+<h3>A debiasing phylogenetic tree-assisted regression model for microbiome data</h3>
+<p>Yanhui Li; Luqing Zhao; Jinjuan Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V205 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.csda.2024.108111</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.csda.2024.108111" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A debiasing phylogenetic tree-assisted regression model for microbiome data</strong></p><p class="abstract-meta">期刊：Computational Statistics &amp; Data Analysis · DOI：10.1016/j.csda.2024.108111</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.csda.2024.108111" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-090-011">
+<p class="kicker">Computational Statistics &amp; Data Analysis · IN_PROGRESS_ISSUE</p>
+<h3>Editorial Board</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V214 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/s0167-9473(25)00172-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/s0167-9473(25)00172-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Editorial Board</strong></p><p class="abstract-meta">期刊：Computational Statistics &amp; Data Analysis · DOI：10.1016/s0167-9473(25)00172-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/s0167-9473(25)00172-0" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-090-012">
+<p class="kicker">Computational Statistics &amp; Data Analysis · IN_PROGRESS_ISSUE</p>
+<h3>Certifiably optimal direction estimation in sparse single-index model</h3>
+<p>Yangzhou Chen; Lei Yan; Xin Chen; Shuaida He</p>
+<dl>
+<div><dt>卷期</dt><dd>V219 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.csda.2025.108307</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108307" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-09-30 12:02 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Certifiably optimal direction estimation in sparse single-index model</strong></p><p class="abstract-meta">期刊：Computational Statistics &amp; Data Analysis · DOI：10.1016/j.csda.2025.108307</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.csda.2025.108307" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Computational Statistics &amp; Data Analysis 另有 204 条网络优先/在编/未来期发现已写入账本，页内从略。</p>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>Spatial and Spatio-temporal Epidemiology（ScienceDirect）：Playwright Issues/V57–V59/AIP 均 HTTP 403；DEGRADED，仅登记。</li>
+<li>Artificial Intelligence Review（Springer Nature Link）：Playwright Volumes/I8–I11 OK；claim I9，I10/I11 未来期不 claim。</li>
+<li>Computational Statistics &amp; Data Analysis（ScienceDirect）：Playwright Issues/V217–V225/AIP 均 HTTP 403；DEGRADED，仅登记。</li>
+<li>信号源 REG-103 PNAS Computer Sciences：Cloudflare challenge/403，仅信号，不计入正式完成。pnas.org topic page Cloudflare/403 Just a moment; signal only no claim</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>2ea952ab-59aa-4a49-acf6-84167fb6ca39</code></li>
+<li>Commit ID：<code>DAILY-20260930-115245-2ea952ab</code></li>
+<li>Brief ID：<code>DAILY-20260930</code></li>
+<li>去重抑制：0 · 增量复核：1 · 对账任务：4 · 官方源失败计数：2</li>
+<li>正式期刊：REG-030、REG-060、REG-090 · 信号：REG-103</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+<li>月末：2026-09 最后计划扫描日；成功后 next_group=1</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/09/index.html">返回 2026-09 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
+</body></html>
