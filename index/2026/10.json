@@ -1,0 +1,69 @@
+{
+  "brief_count": 1,
+  "briefs": [
+    {
+      "brief_id": "DAILY-20261001",
+      "commit_id": "DAILY-20261001-115743-098d7dc8",
+      "completed_run_date": "2026-10-01",
+      "counts": {
+        "changed_journals": 4,
+        "complete_issues": 7,
+        "degraded_sources": 0,
+        "formal_articles": 156,
+        "formal_assignments": 0,
+        "journals": 4,
+        "online_first_updates": 110
+      },
+      "format": "HTML",
+      "group_id": 1,
+      "html_sha256": "cbf90d02582692ed65d6d60b65fed0194b302d0bc21c7fb942bf9400404b0ca8",
+      "index_anchor": "brief-DAILY-20261001",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-10-01",
+      "release_report": "releases/DAILY-20261001-115743-098d7dc8/2026/10/2026-10-01_GIS-AI期刊每日轮检简报_第1组.html",
+      "release_summary_image": "releases/DAILY-20261001-115743-098d7dc8/2026/10/assets/2026-10-01_GIS-AI期刊每日摘要_第1组.png",
+      "report": "2026/10/2026-10-01_GIS-AI期刊每日轮检简报_第1组.html",
+      "scheduled_date": "2026-10-01",
+      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
+      "summary": "第 1 组共检查 4 种正式期刊；确认 7 个新完整期次、156 篇正式期次论文、0 篇既有网络优先记录正式归期，以及 110 条新的网络优先/在年卷/在编期发现。地球信息科学学报官方 TOC claim 2026-V28-I8/I9（刊出日期已到），I10（2026-10-25）未来期仅登记；International Journal of Health Geographics 连续出版开放年卷 2026-V25-I1 不 claim，Online First 仅登记；Computational Intelligence（Wiley）Playwright 官方 TOC claim 2026-V42-I3/I4，I5 官方 Cloudflare/403 仅登记；Statistics in Medicine（Wiley）官方 TOC claim 2026-V45-I15-17/I18-19/I20-22，I23-24 当前未完整仅登记。无期刊级扫描失败。",
+      "summary_image": "2026/10/assets/2026-10-01_GIS-AI期刊每日摘要_第1组.png",
+      "summary_image_sha256": "9172c7df839491764806c8bd4278d9324a1b8fc3d8d8a86b28447d6d41d12c41",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20261001-G01",
+          "coverage_month": "2026-10",
+          "group": 1,
+          "scheduled_date": "2026-10-01",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20261001-G01",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 1 组",
+      "updated_at": "2026-10-01T12:12:31.461874+08:00"
+    }
+  ],
+  "level": "MONTH",
+  "month": "10",
+  "month_key": "2026-10",
+  "scheduled_date_index": {
+    "2026-10-01": [
+      "ROUTINE-20261001-G01"
+    ]
+  },
+  "schema_version": "2.1",
+  "task_index": {
+    "ROUTINE-20261001-G01": {
+      "anchor": "brief-DAILY-20261001",
+      "brief_id": "DAILY-20261001",
+      "completed_run_date": "2026-10-01",
+      "logical_date": "2026-10-01",
+      "report": "2026/10/2026-10-01_GIS-AI期刊每日轮检简报_第1组.html",
+      "scheduled_date": "2026-10-01"
+    }
+  },
+  "timezone": "Asia/Shanghai",
+  "updated_date": "2026-10-01",
+  "year": 2026
+}
