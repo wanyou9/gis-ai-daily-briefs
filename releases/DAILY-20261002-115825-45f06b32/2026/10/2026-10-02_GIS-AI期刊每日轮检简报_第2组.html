@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 2 组 · 2026-10-02</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+
+img, figure img { max-width: 100%; height: auto; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+code, pre, a { overflow-wrap: anywhere; word-break: break-word; }
+.paper, .issue, main, header, footer { max-width: 100%; overflow-x: clip; }
+body { overflow-x: hidden; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/10/index.html">10 月</a> / 第 2 组
+</nav>
+<p class="meta">逻辑日期 2026-10-02 · 完成时间 2026-10-02 12:08 CST · 任务 ROUTINE-20261002-G02 · Commit <code>DAILY-20261002-115825-45f06b32</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 2 组</h1>
+<p class="lede">第 2 组共检查 4 种正式期刊；确认 7 个新完整期次、26 篇正式期次论文、0 篇既有网络优先记录正式归期，以及 7 条新的网络优先/Early Access 发现。Annals of GIS 官方 TOC claim 2026-V32-I3（Current）；IEEE Intelligent Systems CSDL 官方 TOC claim 2026-V41-I4（Jul-Aug 2026 Current）；Journal of Statistical Software 官方 Vol.117 逐期 claim I1–I5（单文一期）；测绘学报因 Sinomaps/CNKI 连接关闭且 rhhz 壳页无 TOC 降级，基线 2026-V55-I6 保持。其中 1 种期刊因官方源阻断降级完成。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>4</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>4</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>7</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>26</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>7</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">源阻断</span> <strong>测绘学报</strong> — Sinomaps/CNKI ERR_CONNECTION_CLOSED；rhhz 壳页无 TOC；基线 2026-V55-I6 保持，降级完成。 <span class="evidence"><a href="https://html.rhhz.net/chxb/html/top.htm" rel="noopener noreferrer">证据</a><small>html.rhhz.net · 2026-10-02 12:08 CST · 官方目录</small></span></li><li><span class="tag">新完整期</span> <strong>Annals of GIS</strong> — claim 2026-V32-I3（官方 Current Vol 32 No 3）。 <span class="evidence"><a href="https://www.tandfonline.com/toc/tagi20/32/3" rel="noopener noreferrer">证据</a><small>www.tandfonline.com · 2026-10-02 12:08 CST · 官方目录</small></span></li><li><span class="tag">新完整期</span> <strong>IEEE Intelligent Systems</strong> — claim 2026-V41-I4（CSDL Current Jul-Aug 2026）；EA 仅登记。 <span class="evidence"><a href="https://www.computer.org/csdl/magazine/ex/2026/04" rel="noopener noreferrer">证据</a><small>www.computer.org · 2026-10-02 12:08 CST · 官方目录</small></span></li><li><span class="tag">新完整期</span> <strong>Journal of Statistical Software</strong> — claim 2026-V117-I1…I5（官方单文一期）。 <span class="evidence"><a href="https://www.jstatsoft.org/issue/view/v117" rel="noopener noreferrer">证据</a><small>www.jstatsoft.org · 2026-10-02 12:08 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-002<br><strong>测绘学报</strong></td><td>2026-V55-I6</td><td>0</td><td>0</td><td>0</td><td>0</td><td><code>OFFICIAL_CONNECTION_CLOSED</code></td><td>DEGRADED</td></tr><tr><td>REG-032<br><strong>Annals of GIS</strong></td><td>2026-V32-I3</td><td>1</td><td>11</td><td>0</td><td>0</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-062<br><strong>IEEE Intelligent Systems</strong></td><td>2026-V41-I4</td><td>1</td><td>10</td><td>0</td><td>7</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-092<br><strong>Journal of Statistical Software</strong></td><td>2026-V117-I5</td><td>5</td><td>5</td><td>0</td><td>0</td><td><code>OFFICIAL_PAGE_OK</code></td><td>COMPLETED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-10-02_GIS-AI期刊每日摘要_第2组.png" width="1600" height="900" alt="第2组每日摘要图：4刊，新完整期7，正式文26">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-032-2026-v32-i3"><h3>Annals of GIS · 2026-V32-I3</h3><p>Playwright 官方 TOC 确认 Current=Vol 32 No 3；基线 V32-I2 之后 NEW_ISSUE claim。</p><p><span class="evidence"><a href="https://www.tandfonline.com/toc/tagi20/32/3" rel="noopener noreferrer">官方期次目录</a><small>www.tandfonline.com · 2026-10-02 12:08 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>11</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-032-2026v32i3-001">
+<p class="kicker">Annals of GIS · FORMAL_ISSUE</p>
+<h3>The role of open-source LLMs in shaping the future of GeoAI</h3>
+<p>Xiao Huang; Zhengzhong Tu; Xinyue Ye; Michael Goodchild</p>
+<dl>
+<div><dt>卷期</dt><dd>V32 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/19475683.2026.2630753</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2630753" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The role of open-source LLMs in shaping the future of GeoAI</strong></p><p class="abstract-meta">期刊：Annals of GIS · DOI：10.1080/19475683.2026.2630753</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2630753" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-032-2026v32i3-002">
+<p class="kicker">Annals of GIS · FORMAL_ASSIGNMENT</p>
+<h3>Bibliometrical analysis of 3D real scene modelling based on Web of Science</h3>
+<p>Jiahui Hu; Chun Wang; Wen Dai; Jiangbing Sun; Ling Jiang</p>
+<dl>
+<div><dt>卷期</dt><dd>V32 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/19475683.2026.2685056</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2685056" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Bibliometrical analysis of 3D real scene modelling based on Web of Science</strong></p><p class="abstract-meta">期刊：Annals of GIS · DOI：10.1080/19475683.2026.2685056</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2685056" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-032-2026v32i3-003">
+<p class="kicker">Annals of GIS · FORMAL_ISSUE</p>
+<h3>Digital soil mapping in the era of big data and artificial Intelligence</h3>
+<p>Lin Yang; Xiang Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V32 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/19475683.2026.2665149</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2665149" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Digital soil mapping in the era of big data and artificial Intelligence</strong></p><p class="abstract-meta">期刊：Annals of GIS · DOI：10.1080/19475683.2026.2665149</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2665149" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-032-2026v32i3-004">
+<p class="kicker">Annals of GIS · FORMAL_ASSIGNMENT</p>
+<h3>The influence of dynamic changes on POI validity evaluation: a case study of Changzhou, China</h3>
+<p>Xiaoqian Qiu; Zhenjie Chen; Samuel Zhu; Manchun Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V32 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/19475683.2026.2692714</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2692714" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The influence of dynamic changes on POI validity evaluation: a case study of Changzhou, China</strong></p><p class="abstract-meta">期刊：Annals of GIS · DOI：10.1080/19475683.2026.2692714</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2692714" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-032-2026v32i3-005">
+<p class="kicker">Annals of GIS · FORMAL_ASSIGNMENT</p>
+<h3>Cropland’s northward shift widened the mismatch between cropland distribution and natural geographic conditions in China from 1980–2020</h3>
+<p>Juan Tian; Bingbo Gao; Jianfei Wu; Leina Zhang; Yuxue Wang; Jianyu Yang; Feng Cheng; Xiaochuang Yao; Huaizhi Tang; Wenju Yun; Ziyue Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V32 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/19475683.2026.2682200</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2682200" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Cropland’s northward shift widened the mismatch between cropland distribution and natural geographic conditions in China from 1980–2020</strong></p><p class="abstract-meta">期刊：Annals of GIS · DOI：10.1080/19475683.2026.2682200</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2682200" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-032-2026v32i3-006">
+<p class="kicker">Annals of GIS · FORMAL_ASSIGNMENT</p>
+<h3>Spatio-temporal analysis of land use change, RSEI dynamics, and ecosystem responses in Hubei Province, China</h3>
+<p>Nijad Emer; Lanzhou Chen; Haijun Wang; Youcheng Song; Yaotao Liang</p>
+<dl>
+<div><dt>卷期</dt><dd>V32 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/19475683.2026.2677500</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2677500" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spatio-temporal analysis of land use change, RSEI dynamics, and ecosystem responses in Hubei Province, China</strong></p><p class="abstract-meta">期刊：Annals of GIS · DOI：10.1080/19475683.2026.2677500</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2677500" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-032-2026v32i3-007">
+<p class="kicker">Annals of GIS · FORMAL_ASSIGNMENT</p>
+<h3>Evaluating surface water quality dynamics in the Coastal Delta of Tamil Nadu through an integrated irrigation hazard and GIS approach</h3>
+<p>Sai Saraswathi Vijayaraghavalu; Mohamed Tharik; Kumaraguru Arumugam</p>
+<dl>
+<div><dt>卷期</dt><dd>V32 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/19475683.2026.2688240</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2688240" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Evaluating surface water quality dynamics in the Coastal Delta of Tamil Nadu through an integrated irrigation hazard and GIS approach</strong></p><p class="abstract-meta">期刊：Annals of GIS · DOI：10.1080/19475683.2026.2688240</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2688240" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-032-2026v32i3-008">
+<p class="kicker">Annals of GIS · FORMAL_ASSIGNMENT</p>
+<h3>An integrated approach to groundwater vulnerability to drought mapping of the Upper Zambezi River Basin with physical-climatic factors, fuzzy-logic and GIS</h3>
+<p>Christopher Mtonga; Kawawa Banda; Christopher Shilengwe</p>
+<dl>
+<div><dt>卷期</dt><dd>V32 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/19475683.2026.2693182</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2693182" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An integrated approach to groundwater vulnerability to drought mapping of the Upper Zambezi River Basin with physical-climatic factors, fuzzy-logic and GIS</strong></p><p class="abstract-meta">期刊：Annals of GIS · DOI：10.1080/19475683.2026.2693182</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2693182" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-032-2026v32i3-009">
+<p class="kicker">Annals of GIS · FORMAL_ISSUE</p>
+<h3>Geospatial Agentic Services: a framework for interoperable geospatial intelligence</h3>
+<p>Zhenlong Li; Ali Khosravi Kazazi; Ruixiang Liu; Temitope Akinboyewa; Huan Ning; Xiao Huang; Xinyue Ye; Samantha T. Arundel; Wenwen Li; Chaowei Yang; Shaowen Wang; Ingo Simonis</p>
+<dl>
+<div><dt>卷期</dt><dd>V32 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/19475683.2026.2738374</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2738374" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Geospatial Agentic Services: a framework for interoperable geospatial intelligence</strong></p><p class="abstract-meta">期刊：Annals of GIS · DOI：10.1080/19475683.2026.2738374</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2738374" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-032-2026v32i3-010">
+<p class="kicker">Annals of GIS · FORMAL_ISSUE</p>
+<h3>A comprehensive review of spatially varying coefficient models: methods, challenges, and guidance for model selection</h3>
+<p>M. Naser Lessani; Zhenlong Li; Manzhu Yu; Helen Greatrex; Chan Shen</p>
+<dl>
+<div><dt>卷期</dt><dd>V32 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/19475683.2026.2714765</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2714765" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A comprehensive review of spatially varying coefficient models: methods, challenges, and guidance for model selection</strong></p><p class="abstract-meta">期刊：Annals of GIS · DOI：10.1080/19475683.2026.2714765</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2714765" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-032-2026v32i3-011">
+<p class="kicker">Annals of GIS · FORMAL_ASSIGNMENT</p>
+<h3>Assessing thermal comfort dynamics through the urban fragmentation approach: a case study of the hot and arid metropolitan of Tabriz</h3>
+<p>Mahsa Asadzadeh Akbari; Akbar Rahimi; Firouz Aghazadeh; Nader Habibzadeh; Mohammad Karimi Firozjaei</p>
+<dl>
+<div><dt>卷期</dt><dd>V32 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1080/19475683.2026.2696858</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2696858" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Assessing thermal comfort dynamics through the urban fragmentation approach: a case study of the hot and arid metropolitan of Tabriz</strong></p><p class="abstract-meta">期刊：Annals of GIS · DOI：10.1080/19475683.2026.2696858</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1080/19475683.2026.2696858" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-062-2026-v41-i4"><h3>IEEE Intelligent Systems · 2026-V41-I4</h3><p>CSDL 官方 TOC Volume 41 Issue 4 (Jul-Aug 2026) 为 Current；基线 V41-I3 之后 NEW_ISSUE claim。</p><p><span class="evidence"><a href="https://www.computer.org/csdl/magazine/ex/2026/04" rel="noopener noreferrer">官方期次目录</a><small>www.computer.org · 2026-10-02 12:08 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>10</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-062-2026v41i4-001">
+<p class="kicker">IEEE Intelligent Systems · FORMAL_ISSUE</p>
+<h3>Transition From the Attention Economy to the Relationship Economy in the Age of Large Language Models</h3>
+<p>Wiktoria Mieleszczenko-Kowszewicz; Grzegorz Chodak; Erik Cambria; Przemyslaw Kazienko; Erik Cambria</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3704804</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3704804" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Transition From the Attention Economy to the Relationship Economy in the Age of Large Language Models</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3704804</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3704804" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-062-2026v41i4-002">
+<p class="kicker">IEEE Intelligent Systems · FORMAL_ASSIGNMENT</p>
+<h3>Metacognitive Artificial Intelligence in Vision Foundation Models: Research Challenges</h3>
+<p>Shahriar Rifat; A.Q.M. Sazzad Sayyed; Nathaniel D. Bastian; Francesco Restuccia</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I4</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3684015</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3684015" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Metacognitive Artificial Intelligence in Vision Foundation Models: Research Challenges</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3684015</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3684015" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-062-2026v41i4-003">
+<p class="kicker">IEEE Intelligent Systems · FORMAL_ASSIGNMENT</p>
+<h3>Ethical Artificial Intelligence in Business</h3>
+<p>Shahab Saquib Sohail; Dag Oivind Madsen; Mohammad Nadeem; Erik Cambria</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I4</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3688455</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3688455" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Ethical Artificial Intelligence in Business</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3688455</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3688455" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-062-2026v41i4-004">
+<p class="kicker">IEEE Intelligent Systems · FORMAL_ASSIGNMENT</p>
+<h3>InteFL Framework: Optimizing Federated Learning With Metacognition for Application Design and Deployment</h3>
+<p>Dmitrii Korobeinikov; Raman Zatsarenko; Sergei Chuprov; Arnaldo Barea; Leon Reznik</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I4</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3658072</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3658072" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>InteFL Framework: Optimizing Federated Learning With Metacognition for Application Design and Deployment</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3658072</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3658072" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-062-2026v41i4-005">
+<p class="kicker">IEEE Intelligent Systems · FORMAL_ISSUE</p>
+<h3>Metacognitive Prediction of AI Behavior</h3>
+<p>Paulo Shakarian; Nathaniel Bastian; Gerardo I. Simari; Andrea Pugliese</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3707723</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3707723" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Metacognitive Prediction of AI Behavior</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3707723</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3707723" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-062-2026v41i4-006">
+<p class="kicker">IEEE Intelligent Systems · FORMAL_ISSUE</p>
+<h3>Beyond VisionMask: Explaining Reinforcement Learning Via Contrastive-State Masking</h3>
+<p>Rui Zuo; Simon Khan; Zifan Wang; Garrett Ethan Katz; Qinru Qiu</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3683960</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3683960" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Beyond VisionMask: Explaining Reinforcement Learning Via Contrastive-State Masking</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3683960</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3683960" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-062-2026v41i4-007">
+<p class="kicker">IEEE Intelligent Systems · FORMAL_ASSIGNMENT</p>
+<h3>Cross-Species Behavioral Analysis via Multidimensional Knowledge Transfer</h3>
+<p>Yang Liu; Luke Shaw; Haotian Liu; Kuan Hong Wang; Feng Vankee-Lin; Guoying Zhao</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I4</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3692032</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3692032" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Cross-Species Behavioral Analysis via Multidimensional Knowledge Transfer</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3692032</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3692032" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-062-2026v41i4-008">
+<p class="kicker">IEEE Intelligent Systems · FORMAL_ASSIGNMENT</p>
+<h3>Robot Metacognition: Decision Making With Confidence for Tool Invention</h3>
+<p>Ajith Anil Meera; Poppy Collis; Polina Arbuzova; Abian Torres; Paul F. Kinghorn; Ricardo Sanz; Pablo Lanillos</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I4</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3663064</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3663064" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Robot Metacognition: Decision Making With Confidence for Tool Invention</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3663064</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3663064" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-062-2026v41i4-009">
+<p class="kicker">IEEE Intelligent Systems · FORMAL_ASSIGNMENT</p>
+<h3>Relevance Structures Are a Necessary Prerequisite for Artificial Metacognition</h3>
+<p>Alexander M. Berenbeim; Ramneet Kaur; Adam Cobb; Brian Matejek; Anirban Roy; Susmit Jha; Nathaniel D. Bastian</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I4</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3683332</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3683332" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Relevance Structures Are a Necessary Prerequisite for Artificial Metacognition</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3683332</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3683332" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-062-2026v41i4-010">
+<p class="kicker">IEEE Intelligent Systems · FORMAL_ASSIGNMENT</p>
+<h3>Multiple Choice Questions: Reasoning Makes Large Language Models More Self-Confident, Especially When They Are Wrong</h3>
+<p>Tairan Fu; Javier Conde; Gonzalo Martinez; Maria Grandury; Pedro Reviriego</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I4</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3660833</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3660833" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multiple Choice Questions: Reasoning Makes Large Language Models More Self-Confident, Especially When They Are Wrong</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3660833</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3660833" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-092-2026-v117-i1"><h3>Journal of Statistical Software · 2026-V117-I1</h3><p>官方单文一期 Issue 页面；基线 V116-I8 之后 NEW_ISSUE claim。</p><p><span class="evidence"><a href="https://www.jstatsoft.org/article/view/v117i01" rel="noopener noreferrer">官方期次目录</a><small>www.jstatsoft.org · 2026-10-02 12:08 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>1</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-092-2026v117i1-001">
+<p class="kicker">Journal of Statistical Software · FORMAL_ISSUE</p>
+<h3>Making, Updating, and Querying Causal Models with CausalQueries</h3>
+<p>Till Tietz; Lily Medina; Georgiy Syunyaev; Macartan Humphreys</p>
+<dl>
+<div><dt>卷期</dt><dd>V117 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18637/jss.v117.i01</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.18637/jss.v117.i01" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Making, Updating, and Querying Causal Models with CausalQueries</strong></p><p class="abstract-meta">期刊：Journal of Statistical Software · DOI：10.18637/jss.v117.i01 · 摘要来源：账本已存摘要</p><p class="abstract-body">The R package CausalQueries can be used to make, update, and query causal models defined on binary nodes. Users provide a causal statement of the form X -&amp;gt; M &amp;lt;- Y; M &amp;lt;-&amp;gt; Y which is interpreted as a structural causal model over a collection of binary nodes. Then CausalQueries allows users to (1) identify the set of principal strata - causal types - required to characterize all possible causal relations between nodes that are consistent with the causal statement (2) determine a set of parameters needed to characterize distributions over these causal types (3) update beliefs over distributions of causal types, using a Stan model plus data, and (4) pose a wide range of causal queries of the model, using either the prior distribution, the posterior distribution, or a user-specified candidate vector of parameters.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.18637/jss.v117.i01" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-092-2026-v117-i2"><h3>Journal of Statistical Software · 2026-V117-I2</h3><p>官方单文一期 Issue 页面；NEW_ISSUE claim。</p><p><span class="evidence"><a href="https://www.jstatsoft.org/article/view/v117i02" rel="noopener noreferrer">官方期次目录</a><small>www.jstatsoft.org · 2026-10-02 12:08 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>1</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-092-2026v117i2-001">
+<p class="kicker">Journal of Statistical Software · FORMAL_ISSUE</p>
+<h3>nonprobsvy : An R Package for Modern Methods for Non-Probability Surveys</h3>
+<p>ukasz Chrostowski; Piotr Chlebicki; Maciej Ber e</p>
+<dl>
+<div><dt>卷期</dt><dd>V117 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18637/jss.v117.i02</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.18637/jss.v117.i02" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>nonprobsvy : An R Package for Modern Methods for Non-Probability Surveys</strong></p><p class="abstract-meta">期刊：Journal of Statistical Software · DOI：10.18637/jss.v117.i02 · 摘要来源：账本已存摘要</p><p class="abstract-body">The paper presents nonprobsvy - an R package for inference based on non-probability samples. The package implements various approaches that can be categorized into three groups: model-based prediction approach, inverse probability weighting and doubly robust estimation. We assume the existence of either population-level data or probability-based population information and leverage the survey package for inference. The package implements both analytical and bootstrap variance estimation for the proposed estimators. We present the theory behind the package, its functionalities and a case study that showcases the usage of the package. The package is aimed at scientists and researchers who would like to use non-probability samples (e.g., big data, opt-in web panels, social media) to accurately estimate population characteristics.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.18637/jss.v117.i02" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-092-2026-v117-i3"><h3>Journal of Statistical Software · 2026-V117-I3</h3><p>官方单文一期 Issue 页面；NEW_ISSUE claim。</p><p><span class="evidence"><a href="https://www.jstatsoft.org/article/view/v117i03" rel="noopener noreferrer">官方期次目录</a><small>www.jstatsoft.org · 2026-10-02 12:08 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>1</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-092-2026v117i3-001">
+<p class="kicker">Journal of Statistical Software · FORMAL_ISSUE</p>
+<h3>asgl : A Python Package for Penalized Quantile, Linear, and Logistic Regression</h3>
+<p>Alvaro Mendez-Civieta; M. Carmen Aguilera-Morillo; Rosa E. Lillo</p>
+<dl>
+<div><dt>卷期</dt><dd>V117 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18637/jss.v117.i03</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.18637/jss.v117.i03" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>asgl : A Python Package for Penalized Quantile, Linear, and Logistic Regression</strong></p><p class="abstract-meta">期刊：Journal of Statistical Software · DOI：10.18637/jss.v117.i03 · 摘要来源：账本已存摘要</p><p class="abstract-body">asgl is an open-source Python package that offers a robust and versatile framework for fitting a variety of regression models including linear, logistic, and, notably, quantile regression. It implements a comprehensive suite of penalization techniques such as LASSO, ridge, group LASSO, sparse group LASSO, elastic net, and their adaptive variants. A key contribution of asgl is its extensive support for adaptive penalizations, critically offering a range of built-in methodologies for estimating the necessary adaptive weights as proposed by Mendez-Civieta, Aguilera-Morillo, and Lillo (2021). This feature addresses a significant practical challenge - the weight estimation process - in applying advanced adaptive methods, especially in high-dimensional settings, and is largely absent from other packages. Furthermore, asgl offers penalized quantile regression, a less commonly available feature in statistical software. The primary class, Regressor, ensures seamless integration with the scikit-learn ecosystem, facilitating straightforward model evaluation and hyperparameter optimization. asgl has demonstrated utility in variable selection and prediction tasks across both low- and high-dimensional data, positioning it as a comprehensive tool for modern statistical modeling.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.18637/jss.v117.i03" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-092-2026-v117-i4"><h3>Journal of Statistical Software · 2026-V117-I4</h3><p>官方单文一期 Issue 页面；NEW_ISSUE claim。</p><p><span class="evidence"><a href="https://www.jstatsoft.org/article/view/v117i04" rel="noopener noreferrer">官方期次目录</a><small>www.jstatsoft.org · 2026-10-02 12:08 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>1</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-092-2026v117i4-001">
+<p class="kicker">Journal of Statistical Software · FORMAL_ISSUE</p>
+<h3>BACE : A gretl Package for Model Averaging in Bounded Dependent Variable Models</h3>
+<p>Marcin Bażejowski; Jacek Kwiatkowski</p>
+<dl>
+<div><dt>卷期</dt><dd>V117 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18637/jss.v117.i04</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.18637/jss.v117.i04" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>BACE : A gretl Package for Model Averaging in Bounded Dependent Variable Models</strong></p><p class="abstract-meta">期刊：Journal of Statistical Software · DOI：10.18637/jss.v117.i04 · 摘要来源：账本已存摘要</p><p class="abstract-body">This study presents a fast and consistent software package called BACE (i.e., Bayesian averaging of classical estimates) that offers a model-building strategy for various bounded dependent variable models, including - logit and probit models, ordered logit and probit models, multinomial logistic regression, Poisson regression, Tobit model, interval regression - as well as linear regression. The BACE approach, originally associated with normal linear regression, is a model selection method that combines classical estimation and Bayesian techniques. It solves the problem of computational speed and model uncertainty that arise when dealing with numerous competing advanced statistical models. Our package also provides an implementation of the well-established Bayesian information criterion variants and the latest measures of jointness. We use gretl, a popular, free, and open-source software for econometric analysis that features an easy-to-use graphical user interface.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.18637/jss.v117.i04" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-092-2026-v117-i5"><h3>Journal of Statistical Software · 2026-V117-I5</h3><p>官方单文一期 Issue 页面；NEW_ISSUE claim。</p><p><span class="evidence"><a href="https://www.jstatsoft.org/article/view/v117i05" rel="noopener noreferrer">官方期次目录</a><small>www.jstatsoft.org · 2026-10-02 12:08 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>1</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-092-2026v117i5-001">
+<p class="kicker">Journal of Statistical Software · FORMAL_ISSUE</p>
+<h3>OGBoost : A Python Package for Ordinal Regression Gradient Boosting</h3>
+<p>Mansour T. A. Sharabiani; Alex Bottle; Alireza S. Mahani</p>
+<dl>
+<div><dt>卷期</dt><dd>V117 · I5</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18637/jss.v117.i05</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.18637/jss.v117.i05" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>OGBoost : A Python Package for Ordinal Regression Gradient Boosting</strong></p><p class="abstract-meta">期刊：Journal of Statistical Software · DOI：10.18637/jss.v117.i05 · 摘要来源：账本已存摘要</p><p class="abstract-body">This paper introduces OGBoost, a scikit-learn-compatible Python package for ordinal regression gradient boosting. Ordinal variables (e.g., rating scales, quality assessments) lie between nominal and continuous data, requiring specialized methods that respect their inherent ordering. OGBoost employs a novel coordinate-descent optimization approach within the cumulative link framework, jointly optimizing a continuous regression function via functional gradient descent and a threshold vector via standard gradient descent. Key features include: (i) latent score predictions via decision_function for enhanced ranking performance; (ii) heterogeneous boosting ensembles by enabling any combination of scikit-learn regressors as base learners; and (iii) cross-validation-based early stopping for improved robustness. We provide a comprehensive review of existing ordinal regression software and present empirical comparisons across 17 public datasets, demonstrating that OGBoost significantly outperforms representative methods including OrdinalGBT, scikit-learn&#x27;s gradient boosting classifier, and scikit-lego&#x27;s ordinal classifier. Formal statistical tests confirm OGBoost&#x27;s superiority on concordance index (achieving best performance on all 17 datasets), with consistent performance advantages across classification accuracy, mean absolute error, and Spearman correlation. The package integrates seamlessly with scikit-learn machine learning workflows and is available via pip install ogboost.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.18637/jss.v117.i05" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在编登记</h2>
+<p>本批登记网络优先/Early Access 发现 <strong>7</strong> 条（主要为 IEEE Intelligent Systems 无卷期 Early Access）。上述条目不作为完整期次证据。</p><article class="paper" id="of-reg-062-001">
+<p class="kicker">IEEE Intelligent Systems · EARLY_ACCESS</p>
+<h3>LLM-Powered Swarms: A New Frontier or a Conceptual Stretch?</h3>
+<p>Muhammad Atta Ur Rahman; Melanie Schranz; Samira Hayat</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3728883</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3728883" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>LLM-Powered Swarms: A New Frontier or a Conceptual Stretch?</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3728883</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3728883" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-062-002">
+<p class="kicker">IEEE Intelligent Systems · EARLY_ACCESS</p>
+<h3>From AGI-Native 6G Networks to Active Inference: Are Psychoactives the New Frontier of AGI?</h3>
+<p>Martin Maier; Nika Hosseini; Osman Tugay Basaran</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3704903</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3704903" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>From AGI-Native 6G Networks to Active Inference: Are Psychoactives the New Frontier of AGI?</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3704903</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3704903" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-062-003">
+<p class="kicker">IEEE Intelligent Systems · EARLY_ACCESS</p>
+<h3>Knowledge Graph-Empowered AI Digital Twin Networks</h3>
+<p>Chenhan Zhang; Xin Hao; Madhushi Bandara; Ali Braytee; Senthoorkumaran Punniamoorthy; Raymond Owen; Massimo Piccardi</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3707184</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3707184" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Knowledge Graph-Empowered AI Digital Twin Networks</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3707184</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3707184" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-062-004">
+<p class="kicker">IEEE Intelligent Systems · EARLY_ACCESS</p>
+<h3>Integrating Trust and QoS for IoT Service Composition</h3>
+<p>Lidia Fotia; Fabrizio Messina; Domenico Rosaci; Giuseppe M.L. Sarne</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3728837</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3728837" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Integrating Trust and QoS for IoT Service Composition</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3728837</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3728837" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-062-005">
+<p class="kicker">IEEE Intelligent Systems · EARLY_ACCESS</p>
+<h3>Understanding Cognition-Induced Risks in Agentic AI Systems</h3>
+<p>Guanchu Wang; Qinuo Li; Mengnan Du; Xia Hu; Bowen Zhou</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3721766</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3721766" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Understanding Cognition-Induced Risks in Agentic AI Systems</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3721766</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3721766" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-062-006">
+<p class="kicker">IEEE Intelligent Systems · EARLY_ACCESS</p>
+<h3>Learning to Advise Human-Multi-Drone Teams</h3>
+<p>Hodaya Barr; Dror Levy; Oleg Maksimov; Sarit Kraus</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3724308</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3724308" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Learning to Advise Human-Multi-Drone Teams</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3724308</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3724308" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-062-007">
+<p class="kicker">IEEE Intelligent Systems · EARLY_ACCESS</p>
+<h3>STATE: Safe and Threatening Adversarial Trajectory Engine</h3>
+<p>Tonmoay Deb; Natalia Denisenko; Chongyang Gao; Valerio La Gatta; Sven de Laaf; Afke Neeleman; Lirika Sola; V.S. Subrahmanian</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mis.2026.3694239</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3694239" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-02 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>STATE: Safe and Threatening Adversarial Trajectory Engine</strong></p><p class="abstract-meta">期刊：IEEE Intelligent Systems · DOI：10.1109/mis.2026.3694239</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mis.2026.3694239" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>测绘学报（Sinomaps/rhhz）：Sinomaps/CNKI ERR_CONNECTION_CLOSED；rhhz top.htm 壳页无 TOC → DEGRADED。</li>
+<li>Annals of GIS（Taylor &amp; Francis）：Playwright 官方 Current/Vol32 No3/OF OK；HTTP 裸抓曾 403。</li>
+<li>IEEE Intelligent Systems（CSDL/Xplore）：Playwright CSDL 2026/03–04 与 Issues 列表 OK；RSS/Crossref 交叉核验。</li>
+<li>Journal of Statistical Software（OJS）：官方 Vol.116/117/Archive/Atom HTTP 200；逐期 Issue 页 OK。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>45f06b32-974e-47e1-b8fe-ad4d6f3b9f21</code></li>
+<li>Commit ID：<code>DAILY-20261002-115825-45f06b32</code></li>
+<li>Brief ID：<code>DAILY-20261002</code></li>
+<li>去重抑制：0 · 增量复核：0 · 对账任务：4 · 官方源失败计数：1</li>
+<li>正式期刊：REG-002、REG-032、REG-062、REG-092 · 本组无附加信号源</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/10/index.html">返回 2026-10 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
+</body></html>
