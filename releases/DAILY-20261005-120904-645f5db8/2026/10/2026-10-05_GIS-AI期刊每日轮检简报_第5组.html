@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 5 组 · 2026-10-05</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+
+img, figure img { max-width: 100%; height: auto; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+code, pre, a { overflow-wrap: anywhere; word-break: break-word; }
+.paper, .issue, main, header, footer { max-width: 100%; overflow-x: clip; }
+body { overflow-x: hidden; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/10/index.html">10 月</a> / 第 5 组
+</nav>
+<p class="meta">逻辑日期 2026-10-05 · 完成时间 2026-10-05 12:12 CST · 任务 ROUTINE-20261005-G05 · Commit <code>DAILY-20261005-120904-645f5db8</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 5 组</h1>
+<p class="lede">第 5 组共检查 4 种正式期刊；确认 2 个新完整期次、17 篇正式期次论文（其中 17 篇为既有网络首发记录正式归期，新论文记录 0 篇），以及 17 条新的网络首发/未来期登记。Journal of Geographical Systems 官方目录 claim 2026-V28-I3；Geosciences Journal 官方目录 claim 2026-V30-I5（October 2026）；New Generation Computing 最新 V44-I4 为 November 2026 未来期，仅登记；测绘通报官方站与镜像连接失败，降级并保持基线 2026-I6。其中 1 种期刊因官方源阻断降级完成；未发现撤稿或勘误。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>4</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>4</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>2</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>17</strong><span>正式期次论文（含归期）</span></a>
+<a class="card" href="#online-first"><strong>17</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">源阻断</span> <strong>测绘通报</strong> — 官方站 tb.sinomaps.com 超时、镜像仅导航壳；DEGRADED，基线 2026-I6 保持。 <span class="evidence"><a href="https://html.rhhz.net/chtb/html/top.htm" rel="noopener noreferrer">证据</a><small>html.rhhz.net · 2026-10-05 12:12 CST · 官方目录</small></span></li><li><span class="tag">新完整期</span> <strong>Journal of Geographical Systems</strong> — claim 2026-V28-I3（July 2026，官方目录 7 篇，两遍一致，均为网络首发归期）。 <span class="evidence"><a href="https://link.springer.com/journal/10109/volumes-and-issues/28-3" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-10-05 12:12 CST · 官方目录</small></span></li><li><span class="tag">新完整期</span> <strong>Geosciences Journal</strong> — claim 2026-V30-I5（October 2026，官方目录 10 篇，两遍一致，均为网络首发归期）。 <span class="evidence"><a href="https://link.springer.com/journal/12303/volumes-and-issues/30-5" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-10-05 12:12 CST · 官方目录</small></span></li><li><span class="tag">未来期</span> <strong>New Generation Computing</strong> — V44-I4 标注 November 2026，当前 4 篇，仅登记为候选，不 claim。 <span class="evidence"><a href="https://link.springer.com/journal/354/volumes-and-issues/44-4" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-10-05 12:12 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-005<br><strong>测绘通报</strong></td><td>2026-I6</td><td>0</td><td>0</td><td>0</td><td>0</td><td><code>OFFICIAL_CONNECTION_TIMEOUT_MIRROR_SHELL_ONLY</code></td><td>DEGRADED</td></tr><tr><td>REG-035<br><strong>Journal of Geographical Systems</strong></td><td>2026-V28-I3</td><td>1</td><td>7</td><td>7</td><td>9</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-065<br><strong>New Generation Computing</strong></td><td>2026-V44-I3</td><td>0</td><td>0</td><td>0</td><td>2</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-095<br><strong>Geosciences Journal</strong></td><td>2026-V30-I5</td><td>1</td><td>10</td><td>10</td><td>6</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-10-05_GIS-AI期刊每日摘要_第5组.png" width="1600" height="900" alt="第5组每日摘要图：4刊，新完整期2，正式文17">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-035-2026-v28-i3"><h3>Journal of Geographical Systems · 2026-V28-I3</h3><p>Springer 官方 Volumes &amp; Issues：Volume 28（January–July 2026）列 I1–I3，Issue 3（July 2026）“7 articles in this issue”，两遍目录集合一致，claim 2026-V28-I3；7 篇均为既有网络首发记录正式归期（不新增论文）。I4 尚未出现，Online first 页 22 条（新登记见计数）。</p><p><span class="evidence"><a href="https://link.springer.com/journal/10109/volumes-and-issues/28-3" rel="noopener noreferrer">官方期次目录</a><small>link.springer.com · 2026-10-05 12:12 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>7</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-035-2026v28i3-001">
+<p class="kicker">Journal of Geographical Systems · FORMAL_ASSIGNMENT</p>
+<h3>JGS Editors’ choice article</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00518-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00518-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>JGS Editors’ choice article</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00518-2 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">The JGS Editors’ Choice Article is one article from each issue that the editors recognize as providing an especially significant contribution to the field. The selected articles are announced through Mastodon @JGeoSys@mapstodon.space, Twitter @JGeoSys and @Springernomics, and listed on the JGS Editors’ Choice Article website. The recognized papers will be made free access for a certain period of time.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00518-2" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-035-2026v28i3-002">
+<p class="kicker">Journal of Geographical Systems · FORMAL_ASSIGNMENT</p>
+<h3>Spatial panel models with heterogeneous coefficients: a scalable, integrated hamiltonian monte carlo estimation framework</h3>
+<p>Yuheng Ling; Peiyi Wu; Lei Jiang</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00508-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00508-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Spatial panel models with heterogeneous coefficients: a scalable, integrated hamiltonian monte carlo estimation framework</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00508-4 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Spatial panel models with heterogeneous coefficients provide a flexible framework for capturing region-specific spillovers, but their practical use is often constrained by two challenges: (i) existing estimators primarily justified under large-\:T asymptotics, leaving unit-specific effects imprecisely estimated in the short panels common in regional science; and (ii) allowing spatial dependence and slopes to vary across units yields a high-dimensional parameter space that is difficult to estimate efficiently. This paper proposes a hierarchical Bayesian spatial model with heterogeneous coefficients that addresses both issues through hierarchical priors and an integrated Hamiltonian Monte Carlo estimation framework. The hierarchical prior induces partial pooling across units, shifting inference toward low-dimensional population hyperparameters while stabilizing unit-level estimates in finite samples, particularly when \:N&gt;T. Furthermore, we develop scalable evaluation of the log-determinant term using a power-series expansion and Hutchinson stochastic trace estimation, and we exploit sparse matrix-vector multiplication and parallel computing to improve computational efficiency. Comprehensive simulation experiments demonstrate that the proposed Bayesian framework delivers reliable finite-sample inference and improved estimation accuracy relative to maximum likelihood in short panels. The results also show that the heterogeneous spatial dependence is more sensitive to the density of the spatial weights matrix than slope coefficients, offering practical guidance for applied research.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00508-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-035-2026v28i3-003">
+<p class="kicker">Journal of Geographical Systems · FORMAL_ASSIGNMENT</p>
+<h3>Multi-weight coupled geographically weighted regression</h3>
+<p>Shifeng Yu; Xiaoyu Hu; Yehua Sheng; Lin Yang; Kaixuan Zhang; Xiangqiang Min</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00509-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00509-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Multi-weight coupled geographically weighted regression</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00509-3 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Geographically weighted regression (GWR) is a widely used spatial statistical modeling technique that assigns greater weights to more similar samples during local modeling. However, contemporary GWR primarily relies on prior knowledge to determine the optimal distance metric, an approach that is inherently subjective and incapable of quantifying the influence of different distance metrics on spatial process variation. To address this limitation, this study proposes the multi-weight coupled geographically weighted regression (MCGWR) method, which introduces a novel perspective for spatial statistical modeling by quantifying the impact of different metric spaces on sample similarity. MCGWR first integrates multiple distance metrics, incorporating them into the total weight function as additive components. Subsequently, MCGWR employs specially designed influencing factors (hyperparameters) to quantify the contribution of each distance metric to the variation in spatial processes. This paper derives the gradient of the MCGWR objective function and estimates the model parameters using a gradient descent algorithm. Simulations and real-data experiments demonstrate that MCGWR outperforms ordinary least squares, GWR, and geographical and temporal density regression in terms of accuracy and local fitting. More importantly, the influencing factor parameters constructed by MCGWR correctly reflect the intensity of different distance metrics’ effects on spatial heterogeneity. This approach provides a new lens for exploring the fundamental question—“What determines similarity between samples?”—and yields interpretable insights from within the GWR framework.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00509-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-035-2026v28i3-004">
+<p class="kicker">Journal of Geographical Systems · FORMAL_ASSIGNMENT</p>
+<h3>Radial variability in assessing shape compactness</h3>
+<p>Alan T. Murray</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00502-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00502-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Radial variability in assessing shape compactness</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00509-3 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Geographically weighted regression (GWR) is a widely used spatial statistical modeling technique that assigns greater weights to more similar samples during local modeling. However, contemporary GWR primarily relies on prior knowledge to determine the optimal distance metric, an approach that is inherently subjective and incapable of quantifying the influence of different distance metrics on spatial process variation. To address this limitation, this study proposes the multi-weight coupled geographically weighted regression (MCGWR) method, which introduces a novel perspective for spatial statistical modeling by quantifying the impact of different metric spaces on sample similarity. MCGWR first integrates multiple distance metrics, incorporating them into the total weight function as additive components. Subsequently, MCGWR employs specially designed influencing factors (hyperparameters) to quantify the contribution of each distance metric to the variation in spatial processes. This paper derives the gradient of the MCGWR objective function and estimates the model parameters using a gradient descent algorithm. Simulations and real-data experiments demonstrate that MCGWR outperforms ordinary least squares, GWR, and geographical and temporal density regression in terms of accuracy and local fitting. More importantly, the influencing factor parameters constructed by MCGWR correctly reflect the intensity of different distance metrics’ effects on spatial heterogeneity. This approach provides a new lens for exploring the fundamental question—“What determines similarity between samples?”—and yields interpretable insights from within the GWR framework.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00509-3" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-035-2026v28i3-005">
+<p class="kicker">Journal of Geographical Systems · FORMAL_ASSIGNMENT</p>
+<h3>Beyond administrative boundaries: implications of the uncertain geographic context problem for neighborhood research and policy</h3>
+<p>Seul Lee; Taegeon Kim; Kabsung Kim; Junghwan Kim</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00503-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00503-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Beyond administrative boundaries: implications of the uncertain geographic context problem for neighborhood research and policy</strong></p><p class="abstract-meta">期刊：Journal of Geographical Systems · DOI：10.1007/s10109-026-00503-9 · 摘要来源：账本已存摘要</p><p class="abstract-body">The debate over administrative and experiential definitions of neighborhood boundaries has been a longstanding concern in urban geography and planning. While a substantial body of empirical work has examined administrative, behavioral, and perceptual representations of neighborhoods, these approaches have often been studied separately, limiting understanding of how they differ and relate to one another, particularly among underrepresented groups such as young adults. This study examines how administrative boundaries diverge from individuals’ perceived neighborhoods and activity spaces, based on spatial behavior data from 231 young adults in the Sinchon area of Seoul, South Korea. Results show that administratively defined neighborhoods average about 2.8 km², while perceived neighborhoods average 1.7 km², and activity-based neighborhoods remain below 1.0 km², indicating systematic overestimation by administrative units. These discrepancies are significantly associated with sociodemographic characteristics such as income level, housing type, and student status. The findings suggest the presence of the Uncertain Geographic Context Problem (UGCoP), whereby failure to account for how individuals perceive and interact with space can lead to mismatches between the provision of public services and actual spatial demand. To mitigate this limitation, urban planning practice should incorporate behaviorally relevant spatial data to better align policy interventions with actual spatial behaviors and service demands.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00503-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-035-2026v28i3-006">
+<p class="kicker">Journal of Geographical Systems · FORMAL_ASSIGNMENT</p>
+<h3>Divergence-driven co-evolution between spatial regulation and urban development in complex urban systems</h3>
+<p>Weixuan Fang; Wenbin Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00511-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00511-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Divergence-driven co-evolution between spatial regulation and urban development in complex urban systems</strong></p><p class="abstract-meta">期刊：Journal of Geographical Systems · DOI：10.1007/s10109-026-00511-9 · 摘要来源：账本已存摘要</p><p class="abstract-body">Complex urban systems are shaped by the ongoing interaction between regulatory rules and emergent spatial dynamics. In planning theory and urban modelling, regulation is often conceptualized as an external instrument designed to steer or correct self-organizing processes. This paper challenges that separation by reconceptualizing regulation as an endogenous process generated within the dynamics it seeks to govern. The paper introduces a divergence-driven framework in which regulation evolves through the persistent gap between regulatory intentions and realized spatial outcomes. Rather than being treated only as policy failure, divergence is understood as a generative condition that produces recursive feedback between regulation and urban development. By developing a formal representation of this process, the paper shows how regulatory adjustment and urban dynamics may co-evolve through ongoing interaction. The contribution is primarily theoretical and methodological, offering a formal account of regulation as endogenous feedback and reframing divergence as a structural driver of adaptive governance in complex urban systems. This perspective shifts the focus from the pursuit of control and equilibrium toward the management of uncertainty and persistent misalignment.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00511-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-035-2026v28i3-007">
+<p class="kicker">Journal of Geographical Systems · FORMAL_ASSIGNMENT</p>
+<h3>A novel transport and urban corridor identification, characterisation and ranking framework for the identification of investment priorities</h3>
+<p>Andrius Kučas; Katalin Tóth; Patrizia Sulis; Mert Kompil; Paola Proietti; Antigoni Maistrali; Sergio Oliete Josa; Lénaïc Georgelin; Boyan Kavalov</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I3</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00491-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00491-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A novel transport and urban corridor identification, characterisation and ranking framework for the identification of investment priorities</strong></p><p class="abstract-meta">期刊：Journal of Geographical Systems · DOI：10.1007/s10109-026-00491-w · 摘要来源：账本已存摘要</p><p class="abstract-body">In the context of territorial development, we introduce a novel decision support framework aimed at identifying, characterising, and prioritising spatially explicit strategic corridors, with a focus on their developmental processes. These corridors offer opportunities for directing investments into transport and urban systems from a &#x27;policy-first&#x27; perspective. We outline the development process and structure of a domain model for strategic corridors, which is constructed based on both conceptual and behavioural models documented in Unified Modelling Language. This domain model, driven by standards, is designed to translate requirements into technical components, ensuring interoperability while allowing for flexible extensions. Unified Modelling Language models facilitate adherence to standards of the International Organisation for Standartisation’s Technical Commitee 211 and the Infrastructure for Spatial Information in Europe, and leverage best practices in integrating data from diverse stakeholders across various spatial scales. Beginning with policy scenarios, we streamline the required data to a minimum, derive and merge numerous quantitative indicators and utilise spatial data to rank strategic corridors across different policy scenarios. We apply this integrated framework across the entire African continent, identifying, characterising, and ranking 55 terrestrial corridors using policy-driven utility functions and indicator weights. For selected strategic corridors, incorporate feedback from local stakeholders, refine scenarios based on investment priorities, propose subcorridors and conduct recursive characterisation and ranking of them, focusing on areas ripe for intervention and development. This innovative framework serves as a systematic foundation for developing diverse applications, fostering interoperability across domains. It enables the transferability of the decision support framework to assess potential investment opportunities at various spatial scales across different regions of the world.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00491-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-095-2026-v30-i5"><h3>Geosciences Journal · 2026-V30-I5</h3><p>Springer 官方 Volumes &amp; Issues：Volume 30 Issue 5 标注 October 2026（已到正式月份），“10 articles in this issue”、页码 675 起连续，与 I4 规模（10 篇）一致，两遍目录集合一致，claim 2026-V30-I5；10 篇均为既有网络首发记录正式归期。Online first 页 10 条（新登记见计数）。</p><p><span class="evidence"><a href="https://link.springer.com/journal/12303/volumes-and-issues/30-5" rel="noopener noreferrer">官方期次目录</a><small>link.springer.com · 2026-10-05 12:12 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>10</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-095-2026v30i5-001">
+<p class="kicker">Geosciences Journal · FORMAL_ASSIGNMENT</p>
+<h3>Mantle-derived helium in methane hydrates from offshore Japan: evidence for mantle fluid migration in a back-arc basin</h3>
+<p>Donghwan Kim; Naoto Takahata; Glen T. Snyder; Hitoshi Tomaru</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00121-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00121-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Mantle-derived helium in methane hydrates from offshore Japan: evidence for mantle fluid migration in a back-arc basin</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00121-z · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Methane hydrate samples were collected during the KS-25-8 cruise from three sites in the back-arc basin located offshore western Honshu, Japan: NW Torigakubi Spur (TRKB), NE Rokko-Oki Uplift Zone (ROUZ), and SW Oki Ridge (OR). Massive methane hydrates recovered from piston cores were analyzed for gas compositions and isotope ratios (δ13C-CH4 and 3He/4He) to investigate methane origin and contributions of mantle and crustal fluids. Gas compositions are dominated by methane with contributions from ethane and higher hydrocarbons. Carbon isotope compositions of methane (δ13C-CH4 = − 69.8‰ to − 37.5‰) indicate that thermogenic methane occurs at the NW TRKB, whereas microbial methane predominates in the NE ROUZ and SW OR. Methane is predominantly derived from shallow microbial and thermogenic sources, whereas mantle-derived methane contributes less than 0.1% of the total methane. Measured 3He/4He ratios range from 0.95 to 1.34 Ra (Ra is the 3He/4He ratio of air; 1.39 × 10− 6), and 4He/20Ne ratios range from 0.41 to 1.13, exceeding the atmospheric value (4He/20Ne = 0.318). No clear evidence of degassing-related depletion of light noble gases (He and Ne) is observed. After correction for atmospheric contamination, the corrected 3He/4He ratios (Rc) range from 0.93 to 1.51 Ra. The elevated 3He/4He and high 4He/20Ne ratios indicate the presence of a mantle-derived helium component contributing 10–20% of the non-atmospheric helium (crust and mantle). The mantle-derived helium implies the presence of permeable fault systems through which mantle fluids may migrate toward the shallow subseafloor sediments. These results provide geochemical evidence for mantle fluid migration in an extinct back-arc basin.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00121-z" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-095-2026v30i5-002">
+<p class="kicker">Geosciences Journal · FORMAL_ASSIGNMENT</p>
+<h3>Along-strike seismicity heterogeneity and catalog-scale low-density sectors in the Nepal Himalaya</h3>
+<p>Suchita Shrestha; Tae-Seob Kang; Hyun Jae Yoo</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00120-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00120-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Along-strike seismicity heterogeneity and catalog-scale low-density sectors in the Nepal Himalaya</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00120-0 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">The Main Himalayan Thrust (MHT) is the principal seismogenic structure beneath Nepal, yet the extent to which catalog-scale seismicity reflects along-strike segmentation remains uncertain. We analyze an International Seismological Centre (ISC) earthquake catalog, queried through FDSN services, covering 1990–2025 within 80–89°E and 26–31°N, retaining events with reported depths of 0–50 km and preferred magnitudes of M ≥ 3.0. The filtered catalog contains 3,864 events. Frequency-magnitude diagnostics indicate Mc ≈ 3.55 from the maximum-curvature method and Mc ≈ 3.70 from the 95% goodness-of-fit criterion; we therefore use M ≥ 3.7 for completeness-limited robustness tests. Normalized along-strike density curves are calculated using a 0.5° moving-window baseline and are tested against alternative window widths and Gaussian smoothing parameters for the full catalog, the M ≥ 3.7 catalog, and a Gardner-Knopoff aftershock-reduced M ≥ 3.7 catalog. Two low-density sectors near 82.6°E and 84.1–84.2°E persist after completeness thresholding, declustering, and exclusion of the 2015 Gorkha sequence window. A third low-density sector near 86.7°E weakens and shifts eastward after declustering, indicating sensitivity to sequence clustering. These results support first-order along-strike heterogeneity in Nepal Himalayan seismicity, but they do not directly resolve the geometry of the MHT. The inferred sectors are therefore interpreted as empirical candidate transitions that can be independently evaluated using relocated hypocenters, focal mechanisms, velocity models, and geodetic coupling constraints.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00120-0" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-095-2026v30i5-003">
+<p class="kicker">Geosciences Journal · FORMAL_ASSIGNMENT</p>
+<h3>2025 stratigraphic manual of the Korean South Sea</h3>
+<p>Jae-Hyuk Lee; Jae-Ho Lee; Yun-Hui Je; Seok-Hoon Yoon; Seik Paik; Seung-Rok Han; Ahreum Woo; Jae-Ho Jeon; Donghyun Lim; Seonmi Lim; Jaewon Choi; Eunjung Kim; Gi-Bom Kim</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00116-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00116-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>2025 stratigraphic manual of the Korean South Sea</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00116-w · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">The Korean South Sea, referring to the southern shelf area of the Korean Peninsula, contains five rift basins: the Jeju, Ieodo, Geomun, Hansan, and Halla basins. This article provides an instructive manual for the stratigraphic chart made through 3 years of collaborative research between the Geological Society of Korea and Korea National Oil Corporation. The sedimentary succession of the Korean South Sea is divided into five chronostratigraphic series. The depositional ages of each series are constrained to the Paleocene, Eocene, Oligocene, Miocene, and post-Miocene, respectively, based mainly on biostratigraphic ages, together with the U-Pb ages of zircons and Ar-Ar isotope ages of the igneous rock. The chronostratigraphic series are subdivided into the stratigraphic units based on stratal termination patterns. The number of those units included in each chronostratigraphic series is varied among the rift basins. A systematic nomenclature for these stratigraphic sequences and their bounding surfaces was applied based on the timing of deposition. To create the stratigraphic chart, approximately 30,000 line-km of 2D and 500 km² of 3D seismic reflection datasets acquired since the 1970s were examined with multiple absolute age proxies recovered from the offshore exploratory wells. The newly proposed stratigraphy is expected to provide a better understanding of the evolution of the rift basins and potential hydrocarbon system of the Korean South Sea.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00116-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-095-2026v30i5-004">
+<p class="kicker">Geosciences Journal · FORMAL_ASSIGNMENT</p>
+<h3>Morphosedimentary characteristics of the Ilha do Amor barrier: from a siliciclastic to a mixed siliciclastic-carbonate system on the semi-arid coast of Brazil</h3>
+<p>Antonio Rodrigues Ximenes Neto; Paulo Roberto Silva Pessoa; Yan Vasconcelos; Eduardo Lacerda Barros; Lidriana Pinheiro; Jáder Onofre de Morais</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00114-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00114-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Morphosedimentary characteristics of the Ilha do Amor barrier: from a siliciclastic to a mixed siliciclastic-carbonate system on the semi-arid coast of Brazil</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00116-w · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">The Korean South Sea, referring to the southern shelf area of the Korean Peninsula, contains five rift basins: the Jeju, Ieodo, Geomun, Hansan, and Halla basins. This article provides an instructive manual for the stratigraphic chart made through 3 years of collaborative research between the Geological Society of Korea and Korea National Oil Corporation. The sedimentary succession of the Korean South Sea is divided into five chronostratigraphic series. The depositional ages of each series are constrained to the Paleocene, Eocene, Oligocene, Miocene, and post-Miocene, respectively, based mainly on biostratigraphic ages, together with the U-Pb ages of zircons and Ar-Ar isotope ages of the igneous rock. The chronostratigraphic series are subdivided into the stratigraphic units based on stratal termination patterns. The number of those units included in each chronostratigraphic series is varied among the rift basins. A systematic nomenclature for these stratigraphic sequences and their bounding surfaces was applied based on the timing of deposition. To create the stratigraphic chart, approximately 30,000 line-km of 2D and 500 km² of 3D seismic reflection datasets acquired since the 1970s were examined with multiple absolute age proxies recovered from the offshore exploratory wells. The newly proposed stratigraphy is expected to provide a better understanding of the evolution of the rift basins and potential hydrocarbon system of the Korean South Sea.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00116-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-095-2026v30i5-005">
+<p class="kicker">Geosciences Journal · FORMAL_ASSIGNMENT</p>
+<h3>Formation of diagenetic berthierine and chamosite associated with hydrocarbon-sandstone interactions: a case study from the Mugrosa Formation, Middle Magdalena Basin (MMB), Colombia</h3>
+<p>Tania S. Palmera-Henao; Mario García-González; María I. Marín-Cerón</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00103-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00103-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Formation of diagenetic berthierine and chamosite associated with hydrocarbon-sandstone interactions: a case study from the Mugrosa Formation, Middle Magdalena Basin (MMB), Colombia</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00103-1 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">This study presents the first documented occurrence of the Fe-rich clay minerals berthierine and chamosite in continental siliciclastic sandstones of the Oligocene Mugrosa Formation, within the Nuevo Mundo Syncline of the Middle Magdalena Basin (MMB), Colombia. These hydrocarbon-saturated sandstones, comprising over 70% of the rock volume, were analyzed using an integrated geochemical and mineralogical approach that included optical petrography, X-ray diffraction (clay fraction), Raman spectroscopy, and SEM-EDS (scanning electron microscopy with an energy-dispersive X-ray spectrometer). Berthierine was identified as an early authigenic phase formed under reducing conditions, which then transformed into chamosite during mesogenetic burial. This mineralogical change indicates a complex interaction of diagenetic and catagenetic processes, including compaction, cementation, dissolution, replacement, hydrocarbon biodegradation, and secondary migration. Additional factors, such as redox reaction-controlled fluid-rock interactions, mixing with meteoric and chemically undersaturated waters, and regional burial-exhumation events in the study area, further supported the formation and transformation of these Fe-rich phyllosilicates. These features are observable at both macroscopic and microscopic scales. The berthierine-to-chamosite ratio shows potential as a quantitative indicator for paleotemperature reconstruction and reservoir diagenetic evolution in petroleum systems, supported by geochemical trends and 1D thermal modeling. These findings improve understanding of authigenic clay mineralization in continental depositional systems and its impact on reservoir quality in petroleum basins.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00103-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-095-2026v30i5-006">
+<p class="kicker">Geosciences Journal · FORMAL_ASSIGNMENT</p>
+<h3>Development characteristics and distribution prediction of natural fractures within deep shale gas reservoirs of Luzhou area, southern Sichuan Basin</h3>
+<p>Weike Ning; Wei Ju; Yuyang Liu; Yu Wang; Wei Guo</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00108-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00108-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Development characteristics and distribution prediction of natural fractures within deep shale gas reservoirs of Luzhou area, southern Sichuan Basin</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00108-w · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Natural fractures play a crucial role in controlling shale reservoir productivity, emphasizing the need for thorough characterization and predictive modeling to improve hydrocarbon extraction efficiency. In this study, a comprehensive workflow integrating borehole core observations, imaging logging interpretations, and data-driven predictive modeling was employed to investigate natural fracture systems in the Longmaxi Formation shale gas reservoir located in the Luzhou area of the southern Sichuan Basin. First, the mechanical types, filling degree, and occurrence characteristics of natural fractures were quantitatively characterized. Subsequently, leveraging these insights, a neural network model trained on conventional logging data was developed to predict fracture intensity in individual wells, demonstrating broad applicability where imaging log data are limited. Furthermore, correlation analysis identified tectonic activity, curvature attributes, and rock mineral composition as the primary factors influencing fracture development. Finally, by integrating multi-attribute fracture intensity probability volumes (with spatial constraints) and statistical analyses of dip-azimuth data, a 3D multiscale fracture model was constructed, which achieved a prediction error rate of 7.32–18.18% against observed fracture networks. These findings clarify the development characteristics of natural fractures in the Longmaxi Formation and establish a predictive framework for fracture modeling in deep, structurally complex shale reservoirs.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00108-w" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-095-2026v30i5-007">
+<p class="kicker">Geosciences Journal · FORMAL_ASSIGNMENT</p>
+<h3>A mathematical formulation of logic-tree representation for epistemic uncertainties in PSHA</h3>
+<p>Myunghyun Noh</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00117-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00117-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A mathematical formulation of logic-tree representation for epistemic uncertainties in PSHA</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00117-9 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">In recent probabilistic seismic hazard analyses (PSHA), the logic-tree framework has become a widely used approach to systematically represent epistemic uncertainties associated with the input models and parameters. While numerous studies have examined the fundamental principles behind constructing and organizing logic trees, none have provided a detailed and explicit formulation for the computation of end-branch weights and seismic hazards within the overall framework. This limitation becomes particularly important when multiple seismic sources contribute to the total hazard at a site, making the aggregation of epistemic uncertainties more complex. To address this gap, the present study introduces a clear and mathematically rigorous formulation for the calculation of end branch weights, the evaluation of hazard contributions from multiple sources, and the derivation of the combined seismic hazard at a given site. The proposed formulation aims to provide both transparency and consistency in the representation and computation of epistemic uncertainties in PSHA studies.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00117-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-095-2026v30i5-008">
+<p class="kicker">Geosciences Journal · FORMAL_ASSIGNMENT</p>
+<h3>Identification and location of the altered rock-type Nb-Ta mineralization associated with iron deposits in the Anshan–Benxi area, China, using integrated geophysical techniques</h3>
+<p>Xin Du; Sanshi Jia; Guohui Fu; Jianfei Fu; Yuxiao Fu; Xiaofeng Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00119-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00119-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Identification and location of the altered rock-type Nb-Ta mineralization associated with iron deposits in the Anshan–Benxi area, China, using integrated geophysical techniques</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00119-7 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">The accurate detection of co-occurring metal resources in known deposits has long been a technical challenge. This is particularly true for the evaluation of a newly identified type of altered rock-type Nb-Ta mineralization within Banded Iron Formation (BIF)-type iron deposits, which represents a critical research gap that must be addressed. In view of this, this study selects the altered rock-type Nb-Ta mineralization in Qidashan iron deposit as the research object. The physical properties of the iron ore bodies, host rocks, greisenized altered rock-type Nb-Ta ore, and chloritized altered rock-type Nb-Ta ore were measured and analyzed. An integrated geophysical approach, combining ground high-precision magnetic and electrical resistivity tomography (ERT) methods, was employed to identify and locate the altered rock-type Nb-Ta mineralization within the BIF-type iron deposits. The results demonstrate that the integrated geophysical method, combining magnetic and ERT methods, can not only accurately delineate the lateral extent of the altered rock-type Nb-Ta mineralization but also effectively characterize its vertical extension and variation at depth. The altered rock-type Nb-Ta mineralized zone in the Qidashan iron deposit measures over 200 m in length, approximately 150 m in thickness, and extends over 60 m in depth. This geophysical methodology establishes a viable strategy for detecting and assessing altered rock-type Nb-Ta mineralization in BIF-type iron deposits, thereby facilitating the concurrent exploitation of both the iron ore and the altered rock-type Nb-Ta ore.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00119-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-095-2026v30i5-009">
+<p class="kicker">Geosciences Journal · FORMAL_ASSIGNMENT</p>
+<h3>Mechanism analysis and mitigation measures for a large-scale Lishi loess landslide in Henan, China</h3>
+<p>Jing Zhang; Yun Tian; Yong Wu; Hongtao Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00115-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00115-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Mechanism analysis and mitigation measures for a large-scale Lishi loess landslide in Henan, China</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00115-x · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">This study focuses on a large rainfall-induced Lishi loess landslide in the Yuwa area of Lingbao City, Henan Province. A three-dimensional PFC (Particle Flow Code) 3D discrete element model was used to simulate the entire process from landslide initiation to failure, taking into account the reduction of loess shear strength due to heavy rainfall and the coupling effects at the soil-rock interface. The simulation results show that the slip of the underlying bedrock provides traction and dynamically amplifies the motion of the overlying loess slide mass. The slip zone cuts through the soil-rock contact, forming a composite slip surface. The landslide’s failure mode is characterized by a combined process: the crest of the slope slides first, the moving bedrock exerts a traction force, and the front (toe) of the slide is pushed forward. The displacement evolution of the landslide progresses through four stages—initial slight movement, accelerated sliding, rapid (catastrophic) sliding, and deceleration to stabilization. In the x-direction (horizontal), the slope crest experienced about 35 m of displacement and the toe about 30 m. The y-direction displacement was small; movement was first toward the right then toward the left, eventually becoming synchronized. Vertical deformation (z-direction) included up to 12.5 m of subsidence at the slope crest and about 5 m of uplift at the toe, exhibiting a typical “shovel-shaped” deformation pattern. At the microscale, the coordination number of the granular soil structure fluctuated between 4.05 and 6.38. The coordination number at the slope crest dropped to as low as 4.05, indicating a loose particle structure prone to instability, whereas at the slope toe it remained higher (up to 6.38), reflecting a dense, load-bearing structure. The simulated deformations agree closely with field-monitored deformations (R² &gt; 0.85), confirming the reliability of the model. Based on these findings, a comprehensive mitigation approach combining anti-slide reinforcement with improved drainage is proposed, along with prevention and control measures that integrate monitoring feedback to inform early warning and adaptive management.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00115-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-095-2026v30i5-010">
+<p class="kicker">Geosciences Journal · FORMAL_ASSIGNMENT</p>
+<h3>Hydrogen isotope systematics of basaltic magmas: implications for the deep water cycle in the Earth’s mantle</h3>
+<p>Soyeon Kim</p>
+<dl>
+<div><dt>卷期</dt><dd>V30 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00118-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00118-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Hydrogen isotope systematics of basaltic magmas: implications for the deep water cycle in the Earth’s mantle</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00118-8 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Hydrogen isotopes (δD) in basaltic magmas record a wide range of processes controlling the distribution and cycling of water in the Earth’s interior, from planetary accretion and core formation to subduction recycling and shallow modification. This review synthesizes the hydrogen isotope systematics of glasses and olivine-hosted melt inclusions from mid-ocean ridges, ocean islands, back-arc basins, and arc settings, evaluating the processes that govern δD variability. Compilation of global datasets shows that regional δD variability reflects isotopically distinct source components: the depleted mantle is characterized by low despite heterogeneous δD values, while slab-derived fluids shift mantle domains toward higher δD values. The δD values of deeply subducted materials depend strongly on the extent of dehydration, with incompletely dehydrated slabs retaining elevated δD and extensively dehydrated residues developing anomalously low δD values. Extremely low δD values observed in some ocean island basalts further suggest the presence of highly D-depleted hydrogen in deep mantle sources, possibly involving core–mantle boundary exchange. In addition, shallow processes including magmatic degassing, secondary hydration, assimilation, and diffusive hydrogen exchange in melt inclusions can significantly modify primary δD values and produce trends that overlap with source-driven variability. Robust interpretation of mantle hydrogen isotopes therefore requires integration with complementary geochemical tracers such as radiogenic isotopes, noble gas systematics, and other volatile proxies. Comprehensively, these observations indicate that the Earth’s mantle is considerably heterogeneous in hydrogen isotope composition, reflecting the sensitivity of δD to processes operating across Earth’s history, from planetary accretion to present-day deep water cycle.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00118-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在编登记</h2>
+<p>本批登记网络优先/Early Access 发现 <strong>17</strong> 条（含 JGS 与 Geosciences Journal 官方 Online first 页新条目、New Generation Computing 未来期 V44-I4 新条目；Crossref 仅补元数据/摘要）。上述条目不作为完整期次证据。</p><article class="paper" id="of-reg-035-001">
+<p class="kicker">Journal of Geographical Systems · ONLINE_FIRST</p>
+<h3>Methodological framework for the development of a PPGIS questionnaire</h3>
+<p>Martina Kičić; Sebastian Scheuer; Silviya Korpilo; Ante Seletković; Dijana Vuletić; Dagmar Haase; Silvija Krajter Ostoić</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00523-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00523-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Methodological framework for the development of a PPGIS questionnaire</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00523-5 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Nowadays, local place-based subjective spatial data comes as essential information in various environmental management decision-making processes. In this regard, PPGIS (Public Participation Geographic Information System) questionnaires have proved useful and reliable in collecting spatial data from citizens. The use of PPGIS questionnaires for data collection is established within the scientific field as well as in the professional domain. Scientific literature covers substantial amount of information about different aspects related to PPGIS studies. However, the description of the standard process of designing a PPGIS questionnaire is still partly explained in existing literature. This paper fills this gap by providing step-by-step guidance on the process of designing and implementing PPGIS questionnaire for data collection. The presented framework consists of four stages: Exploration, Conceptualization, Implementation and Deployment. Empirical evidence on testing the framework is also presented through development a PPGIS questionnaire used to spatially explore perception and use of urban green spaces in the city of Zagreb, Croatia. By presenting the process in such detail, we aim to enhance the applicability of the method in diverse socio-ecological contexts.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00523-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-035-002">
+<p class="kicker">Journal of Geographical Systems · ONLINE_FIRST</p>
+<h3>Graph-based machine learning in urban form characterization: a critical methodological review with structured taxonomy and methodological framework</h3>
+<p>Mansoor Ali; Abdulrazzaq Shaamala; Junyan Yang; Tan Yigitcanlar</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00524-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00524-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Graph-based machine learning in urban form characterization: a critical methodological review with structured taxonomy and methodological framework</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00523-5 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Nowadays, local place-based subjective spatial data comes as essential information in various environmental management decision-making processes. In this regard, PPGIS (Public Participation Geographic Information System) questionnaires have proved useful and reliable in collecting spatial data from citizens. The use of PPGIS questionnaires for data collection is established within the scientific field as well as in the professional domain. Scientific literature covers substantial amount of information about different aspects related to PPGIS studies. However, the description of the standard process of designing a PPGIS questionnaire is still partly explained in existing literature. This paper fills this gap by providing step-by-step guidance on the process of designing and implementing PPGIS questionnaire for data collection. The presented framework consists of four stages: Exploration, Conceptualization, Implementation and Deployment. Empirical evidence on testing the framework is also presented through development a PPGIS questionnaire used to spatially explore perception and use of urban green spaces in the city of Zagreb, Croatia. By presenting the process in such detail, we aim to enhance the applicability of the method in diverse socio-ecological contexts.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00523-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-035-003">
+<p class="kicker">Journal of Geographical Systems · ONLINE_FIRST</p>
+<h3>Integrating spatial lag and heterogeneity into double machine learning</h3>
+<p>Yichuan Tian</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00521-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00521-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Integrating spatial lag and heterogeneity into double machine learning</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00521-7 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Micro-level spatial empirical research has long faced the dual challenges of nonlinear confounding and spatial non-stationarity. To address this dilemma, this study innovatively proposes a spatial double machine learning (SDML) framework. The first-stage estimator of this framework employs tree-based models to orthogonalize confounding factors and their spatial lag terms, upon which the second-stage multiscale geographically weighted regression (MGWR) modeling is conducted to obtain local direct effect (LDE) and local spillover effect (LSE). Simulation experiments demonstrate that SDML achieves the best overall performance compared with baseline models, and exhibits strong robustness against interference. Furthermore, applying the framework to a micro-level dataset from Hong Kong’s short-term rental market reveals that SDML achieves both superior predictive performance and estimation stability, while further corroborating the role of neighborhood interference mechanisms in property pricing. In conclusion, the present study contributes a fresh perspective on unifying spatial econometrics, causal inference, and machine learning.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00521-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-035-004">
+<p class="kicker">Journal of Geographical Systems · ONLINE_FIRST</p>
+<h3>Agricultural drone use, pesticide reduction, and biodiversity restoration: evidence from China</h3>
+<p>Jianjun Tang; Jingru Chen; Jingyang Yan; Fei Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00522-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00522-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Agricultural drone use, pesticide reduction, and biodiversity restoration: evidence from China</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00522-6 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Recent advances in smart agriculture offer a promising pathway to reconcile production efficiency with environmental sustainability, yet their ecological effects remain insufficiently understood at large-scale. This paper examines the impact of agricultural drone use on biodiversity in China using a prefecture-level panel from 2018 to 2023. By constructing a rich dataset composed of micro-level subsidy records for drone purchase, remote sensing data, and citizen science bird observations, we find that drone use significantly increases both biological abundance and species richness. A one-standard-deviation increase in agricultural drone density raises biological abundance by 19.7% and species richness by 9.4%. Mechanism analysis shows that drones improve biodiversity through a pesticide-reduction channel, which reduces pesticide use by 1.11 kg/ha (7.6% of the mean). Heterogeneity analyses show that the biodiversity gains are concentrated among bird groups whose habitats and diets are closely tied to farmland ecosystems and are more evident in southeastern China, while the effects remain limited for rare and environmentally sensitive species, like China-endemic birds. We find no evidence of cross-prefecture spillover effects. These findings provide the first macro-level evidence that agricultural drones generate biodiversity restoration effects through pesticide reduction, supporting the role of directed technological change in reconciling agricultural modernization with biodiversity restoration.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00522-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-035-005">
+<p class="kicker">Journal of Geographical Systems · ONLINE_FIRST</p>
+<h3>Continuous multi-facility location problem with inter-facility separation and obstacle-constrained overlapping service coverage</h3>
+<p>Bikram Parajuli; Xin Feng</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00520-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00520-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Continuous multi-facility location problem with inter-facility separation and obstacle-constrained overlapping service coverage</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00520-8 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Observation-based sensor deployment problems require facility configurations to satisfy geometric, topographic, and redundancy constraints in addition to the coverage objectives that directly influence the quality of the observations. In many real-world monitoring systems, effective service areas are shaped by terrain-constrained visibility, distance-dependent signal attenuation, overlapping coverage requirements, and separation between facilities. These characteristics are not explicitly considered in widely used continuous maximal covering formulations, which commonly assume simplified circular service regions, homogeneous demand distribution, and uniform coverage strength. This study develops the Obstacle- and Geometry-Constrained Continuous Coverage Model (OG-CCM), an extension of the continuous maximal coverage problem that incorporates distance-decay coverage attenuation, obstacle-constrained visibility, redundant coverage requirements, admissible beam intersection geometry, and inter-facility separation constraints within a unified optimization framework. The proposed model is solved using heuristic methods based on swarm and evolutionary intelligence, and we demonstrate the applicability of the proposed model through a case study on optimizing dual-Doppler mobile radar configuration to observe severe weather events in Central Oklahoma. The results demonstrate that the proposed model effectively captures coverage attenuation, redundant coverage requirements, geometric constraints, and topography-dependent service areas within a unified optimization framework. By doing so, it provides a flexible and robust methodology for sensor facility deployment planning where conventional models fall short, enabling more reliable and operationally feasible deployment decisions.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00520-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-035-006">
+<p class="kicker">Journal of Geographical Systems · ONLINE_FIRST</p>
+<h3>Maritime hub-corridors: examining the spatial structure in global maritime networks</h3>
+<p>Wanhee Kim; Hyun Kim; Paul Jung</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00519-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00519-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Maritime hub-corridors: examining the spatial structure in global maritime networks</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00519-1 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Global maritime networks are highly complex and dynamic systems, organized around hubs and corridors that form hierarchical structures essential to international trade. Hubs and corridors are conceptually interconnected; however, their identification has often relied on distinct analytical approaches, with hubs typically defined by connectivity-based metrics and corridors by patterns of spatial interaction and flow concentration. Although resilience studies recognize the interdependence of hubs and corridors, existing approaches often rely primarily on hub-centered data, offering limited empirical insight into how corridor-level flow dynamics evolve under external disruptions such as pandemics or economic shocks. To bridge this gap, this study introduces a Maritime Hub–Corridor framework that integrates hubs and their inter-hub linkages into a hierarchical network system, developed through a structured, sequential analytic procedure. Applying this framework to Port-of-Call data, we use three complementary indices—connectivity, freight capacity, and spatial interaction—to capture distinct dimensions of hub functionality. Rather than treating these as isolated computed measures, we use them to screen candidate hubs, evaluate them against a Cumulative Flow Contribution Curve (CFCC) criterion across all dimensions, identify the resulting hub set and hierarchy, and grouped interconnected hubs into corridor clusters. Findings reveal that maritime networks organize as differentiated hub-corridor systems across four spatial types, exhibiting multi-scale hierarchies. Additionally temporal analysis reveals the adaptability and contrasting resilience mechanisms of hub-corridors to socio-economic disruptions: Suez consolidation versus Panama fragmentation. This research contributes a novel analytical approach for identifying hub-corridors structures systematically, characterizing multi-scale maritime network organization, and understanding resilience mechanisms under major disruptions.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00519-1" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-035-007">
+<p class="kicker">Journal of Geographical Systems · ONLINE_FIRST</p>
+<h3>How inter-city differences affect cross-city crime spatiotemporal prediction performance under few-shot scenarios: evidence from 12 U.S. cities</h3>
+<p>Miaoxuan Shan; Jinguang Sui; Peng Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00516-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00516-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>How inter-city differences affect cross-city crime spatiotemporal prediction performance under few-shot scenarios: evidence from 12 U.S. cities</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00516-4 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Transfer learning has been recognized as an effective approach to enhance model performance in urban spatiotemporal prediction under few-shot conditions. However, how inter-city structural characteristics influence its effectiveness in cross-city crime prediction remains underexplored. To address this issue, we conducted a systematic evaluation across 12 major U.S. cities at two spatial resolutions, covering property and violent crime types over multiple time periods. The results were interpreted from the perspectives of Routine Activity Theory and Crime Pattern Theory to understand cross-city transferability. Findings suggest substantial heterogeneity in cross-city crime spatiotemporal prediction performance across crime types and spatial scales. Overall, transfer learning consistently improves predictive performance for both property and violent crime, with significant improvements observed in most evaluated scenarios. However, the magnitude of improvement varies considerably across cities and spatial resolutions. For property crime, transfer performance is relatively stable across scales and is associated with urban functional organization and spatial opportunity structures in the source city. This pattern is broadly consistent with the opportunity-based mechanisms and stable routine activity patterns described by these theoretical frameworks. In contrast, violent crime prediction exhibits scale dependency, with transfer performance more strongly associated with local urban characteristics at the 1 km scale, while exhibiting different association patterns at the 2 km scale. In summary, this research uncovers the complex interactions among urban environments, spatial scales, and the transferability of crime spatiotemporal prediction models, highlighting the roles of spatial scale and urban structural heterogeneity in shaping the generalizability of crime spatiotemporal patterns across cities.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00516-4" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-035-008">
+<p class="kicker">Journal of Geographical Systems · ONLINE_FIRST</p>
+<h3>Expanding the 15-minute city through e-micromobility services</h3>
+<p>Priyanka Verma; Dan Qiang; Grant McKenzie</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00513-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00513-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Expanding the 15-minute city through e-micromobility services</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00513-7 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Urban planners are increasingly tasked with strengthening neighborhood economies and encouraging more connected communities. Central to this objective is ensuring equitable access to essential amenities such as grocery stores, parks, and hospitals. In recent years, shared e-micromobility services such as publicly available e-bikes and e-scooters have gained popularity as a means of local transport, offering potential to extend access. However, their contribution to the 15-Minute City framework across cities is not well understood. In this study, we assess if shared e-micromobility services expand access to essential amenities (i.e., supermarkets, schools, hospitals, parks, and entertainment venues), across five international cities. Observed e-micromobility trips are used to generate city-level travel time surfaces, which are compared with counterfactual walking times for the same trips. Results suggest access gains from e-micromobility are uneven, largely determined by urban form, distribution of amenities, and distance from city center. Cities and neighborhoods with less compact urban form and more dispersed land use tend to experience the largest gains in access with e-micromobility, increasing the proportion of the city reachable within 15 min by up to threefold in some cities. This work provides evidence to inform policies to better integrate new forms of local-scale transport (i.e., e-micromobility services), to improve access to essential services within the 15-Minute City framework.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00513-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-035-009">
+<p class="kicker">Journal of Geographical Systems · ONLINE_FIRST</p>
+<h3>Correction: Divergence-driven co-evolution between spatial regulation and urban development in complex urban systems</h3>
+<p>Weixuan Fang; Wenbin Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00515-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00515-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Correction: Divergence-driven co-evolution between spatial regulation and urban development in complex urban systems</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00515-5 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Correction: Journal of Geographical Systems</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00515-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-065-001">
+<p class="kicker">New Generation Computing · ONLINE_FIRST</p>
+<h3>Empirical Analysis of Goal Hijacking in Large Vision-Language Models via Visual Prompt Injection</h3>
+<p>Subaru Kimura; Ryota Tanaka; Shumpei Miyawaki; Jun Suzuki; Keisuke Sakaguchi</p>
+<dl>
+<div><dt>卷期</dt><dd>V44 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00354-026-00334-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00354-026-00334-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Empirical Analysis of Goal Hijacking in Large Vision-Language Models via Visual Prompt Injection</strong></p><p class="abstract-meta">DOI：10.1007/s10109-026-00515-5 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Correction: Journal of Geographical Systems</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00515-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-065-002">
+<p class="kicker">New Generation Computing · ONLINE_FIRST</p>
+<h3>Feature Learning by Induction</h3>
+<p>Hien D. Nguyen; Chiaki Sakama</p>
+<dl>
+<div><dt>卷期</dt><dd>V44 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00354-026-00333-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s00354-026-00333-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Feature Learning by Induction</strong></p><p class="abstract-meta">DOI：10.1007/s00354-026-00333-9 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">This paper provides an empirical study of feature learning based on induction, presented as a foundational proof-of-concept for bridging raw sensory input and symbolic reasoning. We first encode image data into first-order expression. We then compute their least generalization to extract a common pattern of input data. Next, we introduce two different methods for feature learning. The frequency method extracts pixel values that appear most frequently in each location. The average method computes the average values of the pixels in each location. They are also applied to convolutional methods for data with random location. We perform experiments using the MNIST and CIFAR-10 datasets and show that the proposed methods successfully capture features from training data and classify test data in about 90% accuracies with the MNIST datasets and more than 80% with the CIFAR-10 dataset. Moreover, we show that the proposed method outperforms the convolutional neural network approach with LeNet-5 architecture on small data. The results of this paper show potential for induction in feature learning or pattern recognition from raw data. In particular, we verify the utility of inductive learning on small data. While these results demonstrate the potential for inductive learning to capture human-readable features, they are positioned as a preliminary validation of symbolic properties. The current study serves to identify the prerequisites for interpretable machine learning; however, transitioning to high-risk or safety-critical XAI domains will require future integration of higher-fidelity representations and domain-specific knowledge to meet rigorous real-world demands.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s00354-026-00333-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-095-001">
+<p class="kicker">Geosciences Journal · ONLINE_FIRST</p>
+<h3>Geomorphic and radar-based analyses of ground deformation in the tectonically active belt of schuppen of NE India</h3>
+<p>Sentisenla Jamir; Girish Ch. Kothyari; Khayingshing Luirei; Anand Kumar Gupta; Temsulemba Walling; Glenn T. Thong</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00129-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00129-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Geomorphic and radar-based analyses of ground deformation in the tectonically active belt of schuppen of NE India</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00129-5 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">The Assam-Arakan Fold Belt of NE India is marked by a prominent zone of imbricate thrusts along its western margin. This linear zone, the Belt of Schuppen, is tectonically active. This NE-SW-trending linear belt owes its origin to the complex interplay of tectono-climatic, geologic, and structural elements. Vertical displacement analysis points to tectonic uplift along thrust fronts, with subsidence in the adjacent foreland regions. Stream migration, folded mountain fronts, structurally controlled streams and rivers, and abandoned channels imply neotectonic activity in the region. Geomorphic, seismic, and stratigraphic studies point to episodic deformation since Late Miocene. Radar interferometry and geodetic measurements indicate significant spatial variability in deformation rates, with uplift of up to ± 15 mm/year and line-of-sight displacement varying from −0.11 to +0.2 m/year. Morphometric analysis indicates uplift in the hinterland, while the frontal part of the basin is characterised by erosion. The imbricate thrust systems of this belt, including Disang, Chongliyimsen, and Naga thrusts, portray a complex tectonic architecture. Here, compressional forces have created anticlines, relict mountain fronts, and intermontane valleys. The integration of high-resolution radar interferometry with classical structural observations highlights a highly dynamic tectonic environment driven by ongoing thrust propagation and the absence of a uniform mid-crustal ramp. The findings offer a precise temporal snapshot of active deformation, providing essential data for regional geotectonic models and the identification of contemporary geological instabilities.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00129-5" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-095-002">
+<p class="kicker">Geosciences Journal · ONLINE_FIRST</p>
+<h3>Episodic magma recharge and sequential evacuation of a vertically stratified shallow reservoir beneath the Baengnokdam Crater, Hallasan</h3>
+<p>Ung San Ahn; Jong Ok Jeong; Hyeoncheol Kim; Sei-Sun Hong</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00131-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00131-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Episodic magma recharge and sequential evacuation of a vertically stratified shallow reservoir beneath the Baengnokdam Crater, Hallasan</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00131-x · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">At the Baengnokdam summit of Hallasan, sequential eruptions produced crystal-poor rhyolite (1–6 vol% phenocrysts) followed by crystal-rich trachyte (25–29 vol%). This study investigates the shallow crustal plumbing system of these felsic products based on detailed petrography, mineral chemistry, and thermometry/hygrometry. In contrast to conventional models of continuous evacuation from a single static magma body, the documented geochemical “jump” and contrasting lithological patterns are best explained by an episodic, multi-stage reservoir evolution involving pulsed recharge and short intervening repose intervals. The early-erupted rhyolite formed in the upper portion of a vertically stratified reservoir via protracted fractional crystallization and melt extraction, with its eruption facilitated by an initial mafic recharge-related perturbation (R1). During the inferred repose interval, the underlying crystal mush experienced thermal and volatile-driven remobilization and partial physical re-organization, while preserving vertical reservoir heterogeneity. A subsequent recharge pulse (R2) may then have acted as a mechanical trigger, initiating the sequential tapping of the stratified trachytic mush to construct the present-day Baengnokdam trachyte dome. Systematic spatial variations in lithology and mineralogy from the outer to the inner zones of the dome, coupled with complex phenocryst resorption and zoning features, are consistent with sequential tapping of a vertically stratified and incompletely homogenized reservoir. A compact to vertically organized shallow storage–feeder system provides a plausible framework for explaining the limited homogenization recorded in the dome. Mineral-melt equilibrium calculations applied to the rhyolite constrain pre-eruptive storage conditions of ~ 815–834 °C and ~ 8 wt% H₂O. Collectively, these results indicate that episodic, multi-stage magma recharge played an important role in evolved summit volcanism at Hallasan. Unraveling these time-dependent reservoir replenishment and evacuation dynamics provides critical insights into the architecture of shallow crustal plumbing systems in small intraplate volcanoes, ultimately offering a vital framework for improving the forecasting of future volcanic activity and hazards.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00131-x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-095-003">
+<p class="kicker">Geosciences Journal · ONLINE_FIRST</p>
+<h3>A review of quality assurance frameworks in deep geological disposal of HLW: comparative analysis from international regulators and implementers</h3>
+<p>Taeyoo Na; Byung-Gon Chae</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00128-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00128-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A review of quality assurance frameworks in deep geological disposal of HLW: comparative analysis from international regulators and implementers</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00128-6 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Deep geological disposal is widely recognized as a representative method for the long-term isolation of high-level radioactive waste, and its implementation requires the demonstration of geological safety over extended timescales. In such disposal systems, the required safety functions must be maintained throughout all stages, including site investigation, design, construction, operation, and closure, under geological, mechanical, hydrogeological, and geochemical conditions. Accordingly, clearly defined quality assurance and quality control frameworks are essential to support the demonstration of long-term safety. This study conducted a comparative analysis of quality assurance frameworks established by the IAEA and the regulatory authorities of Finland, the United States, and Switzerland, together with implementer practices for quality assurance of site investigation data in Sweden, Finland, and Switzerland. The analysis examined the procedures and requirements applied in each national regulatory and implementation system to ensure the reliability and representativeness of site investigation data, and identified both common features and country-specific characteristics. In addition, this study analyzed how regulatory quality assurance requirements are linked to the implementers’ actual processes of investigation, interpretation, and safety assessment, and discussed the role of quality assurance for site investigation data in the development of the final safety case. Based on these international case studies, this study proposes future directions for establishing a regulatory quality assurance framework and supporting long-term safety demonstration in Korea’s high-level radioactive waste disposal program, thereby contributing to the development of an institutional basis for its implementation.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00128-6" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-095-004">
+<p class="kicker">Geosciences Journal · ONLINE_FIRST</p>
+<h3>Application of the 3D electrical resistivity survey to secure critical minerals – case study of graphite ore deposits in Gapyeong, South Korea</h3>
+<p>Soocheol Jeong; Myeong-Jong Yi; Minkyu Bang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00127-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00127-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Application of the 3D electrical resistivity survey to secure critical minerals – case study of graphite ore deposits in Gapyeong, South Korea</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00127-7 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">This paper presents a case study on the application of an electrical resistivity survey to detect a graphite ore body and identify its distribution in the Gapyeong area, Gyeonggi Province, South Korea. As securing a stable supply chain for graphite, a key material for the Fourth Industrial Revolution, has become crucial, the need for domestic resource exploration is growing. Graphite’s physical property of having much higher electrical conductivity than its surrounding host rock allows for the effective use of electrical/electromagnetic survey methods as exploration tools. In this study, a 3D electrical resistivity survey was conducted over a conductive anomaly in the Gapyeong area, which had been previously surveyed through a fixed-loop time-domain electromagnetic (FLTEM) survey. The acquired data was processed through 3D inversion to visualize the subsurface electrical resistivity distribution, revealing a distinct low-resistivity anomaly developing in a north-south direction. Drilling results from the previous survey confirmed that this low-resistivity zone corresponds to a high-grade graphite ore body, thus demonstrating that electrical resistivity surveys are highly effective for exploring domestic graphite deposits.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00127-7" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-095-005">
+<p class="kicker">Geosciences Journal · ONLINE_FIRST</p>
+<h3>Geochemical controls on surficial uranium mineralization in carbonate-hosted systems: evidence from central Jordan</h3>
+<p>Belal Almrayat; Jie Yan; Jiayong Pan; Fujun Zhong; Jianjun Wan; Haotong Dai</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00126-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00126-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Geochemical controls on surficial uranium mineralization in carbonate-hosted systems: evidence from central Jordan</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00126-8 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Surficial uranium mineralization in central Jordan was investigated using an integrated trench-scale study approach that combines geological observations with petrographic, mineralogical, and whole-rock geochemical analyses from the Siwaqa North (SN) and Khan Al-Zabib (KZ) prospects. Uranium mineralization is hosted by carbonate-dominated sediments of the Muwaqqar Chalk Marl (MCM) Formation and occurs as shallow, stratabound zones preferentially developed at the saprolite–MCM interface. Whole-rock geochemical data indicate a uniformly carbonate-rich host in which uranium enrichment is commonly associated with P₂O₅-bearing intervals, whereas CaO, Fe₂O₃, and SiO₂ show no systematic control. Elevated U/Th ratios are further consistent with secondary uranium enrichment and near-surface uranium remobilization processes. X-ray diffraction patterns are dominated by calcite and show no discrete uranium-bearing phases, consistent with uranium occurring predominantly in adsorbed, amorphous, or poorly crystalline forms associated with reactive phosphate- and clay-bearing carbonate matrices. Comparison with previously published gamma-ray anomaly data indicates that mineralized zones are spatially associated with major strike-slip faults, consistent with fault-controlled migration of oxidized near-surface fluids. However, uranium accumulation was governed primarily by low-temperature geochemical trapping at shallow lithological and permeability contrasts rather than by structural localization alone. These findings support a supergene model in which structurally controlled fluid transport and localized geochemical fixation operated as complementary, yet partially decoupled processes. By integrating trench-scale geological, mineralogical, and geochemical evidence with regional structural relationships, this study provides a process-based genetic framework and practical exploration criteria for identifying comparable surficial uranium systems in arid to semi-arid carbonate settings.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00126-8" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-095-006">
+<p class="kicker">Geosciences Journal · ONLINE_FIRST</p>
+<h3>Equation of state controls on pressure relaxation during hypervelocity impact cratering: insights from smoothed particle hydrodynamics simulations</h3>
+<p>Inyup Kim; Byung-Dal So; Hyo-Im Kim; Hyun Na Kim; Jaesoo Lim</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00125-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00125-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-05 12:12 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Equation of state controls on pressure relaxation during hypervelocity impact cratering: insights from smoothed particle hydrodynamics simulations</strong></p><p class="abstract-meta">DOI：10.1007/s12303-026-00125-9 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Hypervelocity impacts of asteroids and comets generate pressures of several hundred gigapascals, producing extreme pressure-temperature conditions responsible for shock metamorphism and high-pressure mineral formation. Numerical modeling of impact processes commonly employs different equations of state (EOS), with peak pressure and pressure-time evolution serving as primary metrics for interpreting shock conditions. However, systematic comparisons of pressure relaxation behavior and decompression pathways across different EOS under identical impact conditions remain limited. Moreover, the temporal development of pressure under varying impact angles requires further quantitative evaluation. In this study, we performed smoothed particle hydrodynamics simulations of a 1-km-diameter dunite projectile impacting a granite target at 18 km/s. Vertical (90°) and oblique (45°) impacts were modeled using the Tillotson, Mie-Grüneisen, and Stiffened Gas EOS. Across both impact angles, peak pressures remained on the order of several hundred gigapascals in the target (~ 330–480 GPa) and projectile (~ 280–520 GPa). In contrast, pressure relaxation patterns during decompression differed substantially. The Tillotson EOS exhibited the most rapid pressure relaxation, whereas the Mie-Grüneisen EOS sustained elevated pressures longest. The Stiffened Gas EOS showed intermediate relaxation behavior. In oblique impacts, downrange migration of the contact zone resulted in sustained compressive loading and delayed peak-pressure formation, independent of EOS selection. High-pressure conditions persisted longer than in vertical impacts, resulting in prolonged pressure residence times. These results demonstrate that EOS selection and impact angle jointly control pressure-time trajectories rather than peak pressure alone. Our approach provides a reference for considering EOS-dependent pressure-temperature-time histories in future studies of natural impact craters.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00125-9" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>测绘通报（REG-005）：官方站 tb.sinomaps.com HTTP 连接超时 / HTTPS TLS EOF；tb.chinasmp.com 超时；html.rhhz.net/chtb/ 403，top.htm 仅导航壳；CNKI 连接关闭 → DEGRADED。</li>
+<li>Journal of Geographical Systems（Springer）：Playwright 官方 Volumes &amp; Issues / 期次目录 OK；claim V28-I3；Online first 页 OK。Springer RSS 被 Client Challenge 拦截，未使用。</li>
+<li>New Generation Computing（Springer）：官方 Volumes &amp; Issues OK；V44-I4 为 November 2026 未来期，仅登记；online-first 路径 404，Articles 列表 OK。</li>
+<li>Geosciences Journal（Springer）：官方期次目录 OK；claim V30-I5（October 2026）；Online first 页 OK。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE：Wiley TOC 2026/30/4 HTTP 403（Cloudflare 请稍候）；无官方目录证据。</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE：T&amp;F TOC current（V29-I4）与 29/3 本次 HTTP 200 可访问，但单页上限 50 条且含侧栏 DOI，页面 DOI 集合与账本各差 4 条，无法稳定确认集合一致；不改写已简报期次，待下次分页解析复核。</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE：T&amp;F TOC current（V53-I5）与 53/4 本次 HTTP 200 可访问；V53-I5 页面 DOI 13 条 vs 账本 11 条（差异含侧栏噪声，未经二次核验），不判定 DELTA，待下次复核。</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE：ScienceDirect vol/340 HTTP 403（请稍候）；无官方目录证据。</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>645f5db8-932d-4120-ad24-b5e7cbe3c17e</code></li>
+<li>Commit ID：<code>DAILY-20261005-120904-645f5db8</code></li>
+<li>Brief ID：<code>DAILY-20261005</code></li>
+<li>去重抑制：19 · 增量复核：0 · 对账任务：4 · 官方源失败计数：3</li>
+<li>正式期刊：REG-005、REG-035、REG-065、REG-095 · 本组无附加信号源</li>
+<li>两遍目录核验：JGS V28-I3 7/7、Geosciences Journal V30-I5 10/10 集合一致</li>
+<li>任务：ROUTINE-20261005-G05（CURRENT，执行顺序 1）；补扫任务 0；开放发布队列 0；下一计划扫描 2026-10-06 第 6 组</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/10/index.html">返回 2026-10 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
+</body></html>
