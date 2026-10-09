@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 9 组 · 2026-10-09</title>
+<style>
+:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;font-size:16px;line-height:1.65;overflow-wrap:anywhere}
+a{color:var(--brand);text-decoration:underline;text-underline-offset:.18em;display:inline-block;min-height:44px;line-height:44px}
+a:visited{color:#4b3f72}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:2px}
+.skip{position:absolute;left:12px;top:-80px;background:#fff;padding:0 14px;z-index:9}.skip:focus{top:8px}
+.hero{background:linear-gradient(135deg,#073d58,#08737a);color:#fff;padding:18px max(18px,calc((100vw - 1180px)/2)) 22px}
+.hero a{color:#fff}.crumb{font-size:14px}.meta{font-size:14px;color:#cfe7e6;margin:.2rem 0}
+.hero h1{font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.15;margin:.3rem 0 .6rem}
+.lede{font-size:clamp(1rem,2vw,1.15rem);max-width:72em;margin:0 0 14px}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.card{display:block;line-height:1.3;background:#ffffff1f;border:1px solid #ffffff55;border-radius:12px;padding:10px 12px;color:#fff;text-decoration:none;min-height:44px}
+.card strong{display:block;font-size:1.7rem}.card span{font-size:14px}
+main{max-width:1180px;margin:0 auto;padding:0 18px 40px}
+section{margin-top:26px}h2{font-size:1.45rem;margin:0 0 10px;border-left:5px solid var(--brand);padding-left:10px}h3{font-size:1.12rem;margin:.6rem 0}
+.attention{list-style:none;padding:0;margin:0}.attention li{background:#fff;border:1px solid var(--line);border-left:5px solid #e1a62b;border-radius:10px;padding:8px 14px;margin:8px 0}
+.tag{display:inline-block;font-size:14px;font-weight:700;border:2px solid currentColor;border-radius:6px;padding:0 6px;line-height:1.6}
+.tag.ok{color:var(--ok)}.tag.warn{color:var(--warn)}.tag.bad{color:var(--bad)}.when{font-size:14px;color:var(--muted)}
+.toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 14px;margin-top:18px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%}caption{text-align:left;padding:10px 12px;font-weight:700}
+th,td{border-top:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;font-size:15px}thead th{background:#e3efed}
+figure{margin:16px 0}figure img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}figcaption{font-size:14px;color:var(--muted)}
+.issue,.of-journal{background:#ffffffa8;border:1px solid var(--line);border-radius:12px;padding:6px 16px 12px;margin:16px 0}
+.issue-meta,.paper dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:4px 14px;margin:6px 0}
+.issue-meta div,.paper dl div{font-size:14px}dt{color:var(--muted);font-size:14px}dd{margin:0}
+.paper{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px;margin:12px 0}
+.paper h3{font-size:1.05rem}.kicker{font-size:14px;color:var(--muted);margin:.2rem 0}
+.evidence{display:inline-flex;flex-direction:column;margin-right:14px}.evidence small{font-size:14px;color:var(--muted);line-height:1.3}
+.back{font-size:14px;margin:4px 0}.more{font-size:15px}code{font-size:14px;word-break:break-all}
+details summary{cursor:pointer;min-height:44px;display:flex;align-items:center}
+footer{max-width:1180px;margin:0 auto;padding:10px 18px 40px;font-size:15px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.cards{grid-template-columns:repeat(2,1fr)}.card strong{font-size:1.4rem}
+ table.stack thead{position:absolute;left:-9999px}table.stack,table.stack tbody,table.stack tr,table.stack th,table.stack td{display:block;width:100%}
+ table.stack tr{border-top:2px solid var(--line);padding:6px 0}table.stack th,table.stack td{border:0;padding:3px 10px}
+ table.stack td::before,table.stack th::before{content:attr(data-label)"：";color:var(--muted);font-size:14px}}
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到主要内容</a>
+<header class="hero">
+<nav class="crumb" aria-label="面包屑"><a href="../../../../index.html">站点首页</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/10/index.html">10 月</a> / 2026-10-09 第 9 组</nav>
+<p class="meta">逻辑日期 2026-10-09（北京时间）· 实际完成 2026-10-09 12:13 CST · 任务类型 ROUTINE · 第 09 组</p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 9 组</h1>
+<p class="lede" id="conclusion">第 09 组共检查 3 种正式期刊；确认 1 个新完整期次、57 篇正式论文（新论文记录 6 篇、网络首发正式归期 51 篇），登记网络首发/在编/未来期 23 条；1 种期刊因官方源受限降级完成，0 种扫描失败，未发现撤稿或勘误。</p>
+<div class="cards" aria-label="关键计数">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>2</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>1</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>57</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>23</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复（已核查，0 项）</span></a>
+</div>
+</header>
+<main id="main">
+<section id="attention" aria-labelledby="attention-h"><h2 id="attention-h">需要关注</h2>
+<ul class="attention"><li><span class="tag ok">新期次</span> <strong>IEEE Transactions on Knowledge and Data Engineering</strong> — 确认 2026-V38-I10 完整，57 篇正式论文均已出卡。 <span class="when">核查 2026-10-09 12:13 CST</span> <span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10" rel="noopener noreferrer">官方期次目录</a><small>www.computer.org · 2026-10-09 12:13 CST · 一级证据</small></span></li><li><span class="tag warn">降级</span> <strong>地理科学</strong> — 官网 HTTP 超时 / HTTPS 错误页，无目录证据；最近已简报 2026-V46-I9。 <span class="when">核查 2026-10-09 12:13 CST</span> <span class="evidence"><a href="http://geoscien.neigae.ac.cn/CN/current" rel="noopener noreferrer">官方期次目录</a><small>geoscien.neigae.ac.cn · 2026-10-09 12:13 CST · 失败核查对象</small></span></li></ul></section>
+<nav class="toc" aria-label="页内快速导航"><strong>快速导航</strong>
+<a href="#conclusion">今日结论</a><a href="#tasks">扫描任务</a><a href="#overview">期刊总览</a><a href="#formal">新完整期次</a><a href="#online-first">网络首发</a><a href="#errata">勘误撤稿</a><a href="#topics">主题与阅读路线</a><a href="#health">数据源健康</a><a href="#audit">审计与状态</a></nav>
+
+<section id="tasks" aria-labelledby="tasks-h"><h2 id="tasks-h">扫描任务</h2>
+<p>本次为常规当日任务；补扫任务 0 项、二月尾组 0 项、开放发布队列 0 项（发布重试 0 项）；仍待补扫 0 项。</p>
+<div class="table-wrap"><table class="stack"><caption>任务清单（按执行顺序）</caption>
+<thead><tr><th scope="col">Task_ID</th><th scope="col">Task_Type</th><th scope="col">Coverage_Month</th><th scope="col">Scheduled_Date</th><th scope="col">组号</th><th scope="col">执行顺序</th><th scope="col">Run_Mode</th><th scope="col">实际执行时间</th><th scope="col">状态</th><th scope="col">失败原因</th></tr></thead>
+<tbody><tr id="task-ROUTINE-20261009-G09"><td data-label="Task_ID"><code>ROUTINE-20261009-G09</code></td><td data-label="类型">ROUTINE</td><td data-label="覆盖月份">2026-10</td><td data-label="计划日期">2026-10-09</td><td data-label="组号">第 09 组</td><td data-label="顺序">1</td><td data-label="Run_Mode">CURRENT</td><td data-label="实际执行">2026-10-09 12:13 CST</td><td data-label="状态">COMPLETED（1 刊降级）</td><td data-label="失败原因">无期刊级失败</td></tr></tbody></table></div>
+<p>扫描范围：月度轮检分组第 09 组正式期刊 REG-009 地理科学、REG-039 Earth Science Informatics、REG-069 IEEE Transactions on Knowledge and Data Engineering；本组无附加信号源。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="overview" aria-labelledby="overview-h"><h2 id="overview-h">期刊更新总览</h2>
+<div class="table-wrap"><table class="stack"><caption>逐刊状态（排序：失败/待修复 → 降级 → 有更新 → 零更新）</caption>
+<thead><tr><th scope="col">期刊</th><th scope="col">本次状态</th><th scope="col">最新确认完整期次</th><th scope="col">新完整期次</th><th scope="col">新增正式论文</th><th scope="col">Online First</th><th scope="col">源健康</th><th scope="col">官方目录</th></tr></thead>
+<tbody><tr><th scope="row" data-label="期刊">REG-009<br><strong>地理科学</strong></th><td data-label="本次状态"><span class="tag warn">降级完成</span></td><td data-label="最新确认完整期">2026-V46-I9</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">0</td><td data-label="源健康"><code>OFFICIAL_TIMEOUT_HTTPS_ERROR</code></td><td data-label="官方目录"><a href="http://geoscien.neigae.ac.cn/CN/current" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-039<br><strong>Earth Science Informatics</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-V19-I10</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">23</td><td data-label="源健康"><code>OFFICIAL_PAGE_OK_BROWSER</code></td><td data-label="官方目录"><a href="https://link.springer.com/journal/12145/volumes-and-issues/19-10" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-069<br><strong>IEEE Transactions on Knowledge and Data Engineering</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-V38-I10</td><td data-label="新完整期">1</td><td data-label="新增正式论文">57</td><td data-label="网络首发">0</td><td data-label="源健康"><code>OFFICIAL_CSDL_OK_Xplore_EA_404</code></td><td data-label="官方目录"><a href="https://www.computer.org/csdl/journal/tk/2026/10" rel="noopener noreferrer">官方期次目录</a></td></tr></tbody></table></div>
+<figure><img src="assets/2026-10-09_GIS-AI期刊每日摘要_第9组.png" width="1600" height="900" alt="第09组每日摘要图：检查正式期刊3种，有更新2种，新完整期次1个，新增正式论文57篇，网络首发与在编登记23条，失败或待修复0；降级1种"><figcaption>每日摘要图（1600×900，期刊级聚合）；等价文字计数见下表。</figcaption></figure>
+<div class="table-wrap"><table><caption>摘要图等价文字计数</caption><thead><tr><th scope="col">指标</th><th scope="col">数值</th></tr></thead><tbody><tr><th scope="row">已检查正式期刊</th><td>3</td></tr><tr><th scope="row">有更新期刊</th><td>2</td></tr><tr><th scope="row">新完整期次</th><td>1</td></tr><tr><th scope="row">新增正式论文</th><td>57</td></tr><tr><th scope="row">网络首发/在编</th><td>23</td></tr><tr><th scope="row">失败或待修复</th><td>0</td></tr><tr><th scope="row">降级期刊</th><td>1</td></tr><tr><th scope="row">去重抑制</th><td>8</td></tr><tr><th scope="row">增量复核</th><td>0</td></tr><tr><th scope="row">有界对账任务</th><td>4</td></tr></tbody></table></div>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="formal" aria-labelledby="formal-h"><h2 id="formal-h">新完整期次与逐篇卡片</h2>
+<nav aria-label="期次目录"><ol><li><a href="#issue-reg-069-3661c7c6dc42">IEEE Transactions on Knowledge and Data Engineering · 2026-V38-I10（57 篇）</a></li></ol></nav>
+<section class="issue" id="issue-reg-069-3661c7c6dc42" aria-labelledby="issue-reg-069-3661c7c6dc42-h"><h3 id="issue-reg-069-3661c7c6dc42-h">IEEE Transactions on Knowledge and Data Engineering · Volume 38, Issue 10</h3><dl class="issue-meta"><div><dt>期次</dt><dd>2026-V38-I10</dd></div><div><dt>出版日期</dt><dd>Oct. 2026（CSDL 官方标注）</dd></div><div><dt>正式论文</dt><dd>57 篇</dd></div><div><dt>范围</dt><dd>57 篇（CSDL TOC ↔ Crossref DOI 全匹配）</dd></div><div><dt>完整性证据</dt><dd>官方目录多遍集合一致（pass2_hash=1958c3faeae56843563f477c20005b3a75c686d53ca77460b6d2d8ea2d16913e）；issue gate=NEW_ISSUE</dd></div></dl><p>Computer Society CSDL 官方当期 Volume 38, Issue 10 · Oct. 2026：目录 57 篇，两遍 Playwright 集合一致，与 Crossref 57 条 DOI 完全匹配；刊出月份 Oct. 2026 不晚于扫描日，claim 2026-V38-I10（新论文 6，网络首发归期 51）。IEEE Xplore Early Access 页 HTTP 404，无额外 OF 登记。</p><p><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10" rel="noopener noreferrer">官方期次目录</a><small>www.computer.org · 2026-10-09 12:13 CST · 一级完整性证据</small></span></p><details class="issue-toc"><summary>本期目录（57 篇，点击跳转论文卡片）</summary><ol><li><a href="#article-doi-15659271450f3fb6">A Robustness Enhancement Strategy for Structure-Sensitive Tasks via Diverse Adversarial Pe</a></li><li><a href="#article-doi-d5b2c77f8c1db601">A Survey on Foundation Models for Structured Data: Tabular, Time Series, and Graphs</a></li><li><a href="#article-doi-d6d018a8414b24b2">Adaptive Progressive Optimization Ensemble Approach for High-Dimensional Imbalanced Data C</a></li><li><a href="#article-doi-7b4e3c966d3ec0b5">An Efficient Feature Selection Method Using the Granular-Ball Divergence-Based Fuzzy Rough</a></li><li><a href="#article-doi-0c8013cf75825c57">Auction-Aware Crowdsourced Parcel Assignment for Cooperative Urban Logistics</a></li><li><a href="#article-doi-560f5cc3e5c32cd4">Beyond Time as Context: Joint Item-Time Prediction for Sequential Recommendation</a></li><li><a href="#article-doi-323369eda87019b9">BPO: Backdoor Purification via Overwriting</a></li><li><a href="#article-doi-8b6ab124ff429a50">CAA-TDI: Confidence-Aware Attention for Trustworthy Data Inference in Sparse Mobile Crowds</a></li><li><a href="#article-doi-cc8f45afe2e538da">Capturing Context-Aware Route Choice Semantics for Trajectory Representation Learning</a></li><li><a href="#article-doi-3d2820154ae9700d">CausalDX: Diagnosing Long-Tail and Cascading Cloud Incidents With LLM-Guided Causal Reason</a></li><li><a href="#article-doi-ed1bdfa202baf876">Coalition-Based Knowledge Graph Learning for Actual Controller Disclosure</a></li><li><a href="#article-doi-76b8de7d27ca5ca5">Consistency-Enhanced Multi-Granularity Knowledge Modeling for Semi-Supervised Feature Sele</a></li><li><a href="#article-doi-a1327a64a0c7b26f">Counterfactual Fairness Prediction on Missing Data</a></li><li><a href="#article-doi-5e40779a58943de9">Data and Knowledge Dual-Driven Text Embedding Approaches: A Survey</a></li><li><a href="#article-doi-cbe22011f76c90f1">Doubly Constrained Fair Clustering for General $p$-Norms</a></li><li><a href="#article-doi-04864e651b139da7">DSCAN: Structural Clustering on Directed Graphs</a></li><li><a href="#article-doi-360b232c7abc7277">Dual-Granularity Labeling for Multi-Instance Multi-Label Data With Skewed Annotation</a></li><li><a href="#article-doi-24bfafe150e8a1e4">DyG-Pred: Spatial-Temporal Dynamic Graph Replay for Event Prediction With Gated Explicit-I</a></li><li><a href="#article-doi-5a3d8bdfd0ae0d02">Efficient Maximal Directed Plex Enumeration With Worst-Case Time Guarantee</a></li><li><a href="#article-doi-dd1c3c224e37d7e4">Enhancing Graph Neural Network Explainers Using a Distribution Shift Consistency-Guided Ge</a></li><li><a href="#article-doi-bbe5f10798cf26aa">Fairness in Augmented Graph Learning: A Survey</a></li><li><a href="#article-doi-a19c5d015819f3cb">FastTrick: Socially-Engineered Phishing E-mail Detection Using Hashing Trick</a></li><li><a href="#article-doi-84bc445cd012db7a">FedCAMD: Cross-Attention Driven Misleading Knowledge Filtering via Proxy Outlier Detection</a></li><li><a href="#article-doi-aad6d44459d8d81d">FOND: Fine-Grained Boundary Mining With Dual Bridging for Fair Graph Anomaly Detection</a></li><li><a href="#article-doi-8595df29472feebf">Forecasting Realized Volatility of Stock Market: A Novel Model Based on VMD and Local-Glob</a></li><li><a href="#article-doi-486bbdbabc8bd0dc">GEM-Distill: Graph Ensemble Multi-Level Distillation for MLP-Based Graph Classification</a></li><li><a href="#article-doi-eb36c01cb325eb76">Graph Convolutional Networks Combining Dynamic Aggregation of Adjacency Information for Tr</a></li><li><a href="#article-doi-bdb42d04ff11227b">IFCDR: A Cross-Domain Information Fusion-Based Architecture for Cross Domain Recommendatio</a></li><li><a href="#article-doi-341215ea43d2b7bf">Impute On-Demand: Adaptive Correlated Time Series Imputation for Changing Environments</a></li><li><a href="#article-doi-b0c2cefb8b6205e5">Incomplete Multi-View Clustering via Cross-View Diversity Enhanced Fine-Grained Tensor Com</a></li><li><a href="#article-doi-afbb3b0296100f34">IntComplex for High-Order Interactions</a></li><li><a href="#article-doi-a62637c98af9bc98">Investigating Mask-Aware Prototype Learning for Tabular Anomaly Detection</a></li><li><a href="#article-doi-da55ae9a60ebc768">KGFR: A Foundation Retriever for Generalized Knowledge Graph Question Answering</a></li><li><a href="#article-doi-dbba97c420a05bf5">Large Language Model Empowered Recommendation Meets All-Domain Continual Pre-Training</a></li><li><a href="#article-doi-34c53225db7d90be">Learning Transaction Embedding From Multi-Level High Utility ItemSets</a></li><li><a href="#article-doi-664bbb27569cb13e">LFAMLedger: Account Migration Across Blockchain Shards Using a Lock-Free Mechanism</a></li><li><a href="#article-doi-a84bdb30c18917d3">LLM-Powered KG Utility Evaluation Framework</a></li><li><a href="#article-doi-91e7b0db438bcd77">Multiplex Network Unsupervised Representation With Adaptive Multi-View Tensor Graph Learni</a></li><li><a href="#article-doi-8adf68cb56bc8210">MVDG++: A Unified Multi-View Framework for Domain Generalization</a></li><li><a href="#article-doi-7ed096ec7c28decf">Online Learning From Capricious Feature Data Streams</a></li><li><a href="#article-doi-357f787e7b87ad7e">Pandora: Leveraging Code-Driven Knowledge Transfer for Unified Structured Knowledge Reason</a></li><li><a href="#article-doi-927fdfe22fa81aaa">PGMiner: A Load-Aware Dynamic Graph Pattern Matching Approach on GPUs</a></li><li><a href="#article-doi-5217962d871072fb">Plan of Knowledge: Retrieval-Augmented Large Language Models for Temporal Knowledge Graph </a></li><li><a href="#article-doi-d69e6893c2eeba36">PMatch: A Secure Framework for Querying Private Localized Graph Patterns</a></li><li><a href="#article-doi-bc58373e958b83c9">Privacy Budgeting for Spatio-Temporal Trajectories</a></li><li><a href="#article-doi-08c512f187e8b18f">ReG-Net: Retrieval-Enhanced Graph Networks for Robust Multimodal Missing Data Recovery</a></li><li><a href="#article-doi-9e50693e451862bb">Resolving Knowledge Conflicts in Domain-Specific Data Selection: A Case Study on Medical I</a></li><li><a href="#article-doi-3ca2ff767b429b85">Rethinking Activation Function: A Simple Path to Efficient and Accurate Time Series Foreca</a></li><li><a href="#article-doi-0ac39e5a07016dfd">Robust Variance-Gradient Subsampling for Logistic Regression With Corrupted Large-Scale Da</a></li><li><a href="#article-doi-e741f7b16f5c3c92">Robustly Grounding LLM-Derived Meta-Causality for Causal Discovery</a></li><li><a href="#article-doi-8039df5ee5e55776">RWKV-TS+: Adaptive Long-Range Prompt for Multiple Time Series Tasks</a></li><li><a href="#article-doi-0846234da15e54fe">SimCFT: Trajectory Similarity Computation via Dynamic Status Features and Noisy Point Mini</a></li><li><a href="#article-doi-f63848ff07f0cdc1">Stochastic Process Mining: Characteristics and Challenges</a></li><li><a href="#article-doi-214f2a887f476c50">Tabular Data Wrangling in the Era of Large Language Model: A Survey</a></li><li><a href="#article-doi-3061a297e96e72e9">Text-to-SQL via Model Context Protocol: Structured Context Orchestration for Reliable Data</a></li><li><a href="#article-doi-221fabde64e930d4">TOE: Tackling Distribution Shifts in Time Series via Three-Perspective Online Ensemble</a></li><li><a href="#article-doi-417e9c2ccc8f3caa">Why is Repeated Padding Effective for Sequential Recommendation</a></li></ol></details><article class="paper" id="article-doi-15659271450f3fb6">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>A Robustness Enhancement Strategy for Structure-Sensitive Tasks via Diverse Adversarial Perturbations</h3>
+<p>Xinyi Zhang; Weimin Li; Qunpeng Hu; Jingchao Wang; Fangfang Liu; Quanke Pan; Weiren Yu; Qun Jin</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3708861</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11592600/2hLQw18Q6ha" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3708861" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Robustness Enhancement Strategy for Structure-Sensitive Tasks via Diverse Adversarial Perturbations</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3708861</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11592600/2hLQw18Q6ha" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-d5b2c77f8c1db601">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>A Survey on Foundation Models for Structured Data: Tabular, Time Series, and Graphs</h3>
+<p>Qingyun Sun; Haonan Yuan; Yi Huang; Ziwei Zhang; Xingcheng Fu; Ruijie Wang; Haoyi Zhou; Jianxin Li; Jia Wu; Philip S. Yu</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717198</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11623733/2isEC106I0w" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717198" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Survey on Foundation Models for Structured Data: Tabular, Time Series, and Graphs</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717198</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11623733/2isEC106I0w" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-d6d018a8414b24b2">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Adaptive Progressive Optimization Ensemble Approach for High-Dimensional Imbalanced Data Classification</h3>
+<p>Yuyang Deng; Yuhong Xu; Peijie Huang; Zhiwen Yu; C. L. Philip Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718697</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11629605/2ixYNB2foys" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718697" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Adaptive Progressive Optimization Ensemble Approach for High-Dimensional Imbalanced Data Classification</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718697</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11629605/2ixYNB2foys" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-7b4e3c966d3ec0b5">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>An Efficient Feature Selection Method Using the Granular-Ball Divergence-Based Fuzzy Rough Hypergraph</h3>
+<p>Ye Li; Lei Yang; Binbin Sang; Guoyin Wang; Shuyin Xia; Weihua Xu; Jianhang Yu</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3716345</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626581/2iuEYiL0RqM" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3716345" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An Efficient Feature Selection Method Using the Granular-Ball Divergence-Based Fuzzy Rough Hypergraph</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3716345</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626581/2iuEYiL0RqM" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-0c8013cf75825c57">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Auction-Aware Crowdsourced Parcel Assignment for Cooperative Urban Logistics</h3>
+<p>Guanglei Zhu; Jiawen Zhang; Xuhui Song; Shuo He; Yafei Li; Jianliang Xu; Mingliang Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717808</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626570/2iuEYwzXR7y" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717808" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Auction-Aware Crowdsourced Parcel Assignment for Cooperative Urban Logistics</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717808</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626570/2iuEYwzXR7y" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-560f5cc3e5c32cd4">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Beyond Time as Context: Joint Item-Time Prediction for Sequential Recommendation</h3>
+<p>Yifei Huang; Peng Wang; Leilei Sun; Chuanren Liu; Tongyu Zhu; Weifeng Lv</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717641</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626509/2iuEY8T1GZG" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717641" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Beyond Time as Context: Joint Item-Time Prediction for Sequential Recommendation</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717641</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626509/2iuEY8T1GZG" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-323369eda87019b9">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>BPO: Backdoor Purification via Overwriting</h3>
+<p>Lin Huang; Tinghua Wang; Leo Yu Zhang; Chuan Qin; Xinpeng Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717987</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627433/2iwjV4SfOBq" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717987" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>BPO: Backdoor Purification via Overwriting</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717987</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627433/2iwjV4SfOBq" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8b6ab124ff429a50">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>CAA-TDI: Confidence-Aware Attention for Trustworthy Data Inference in Sparse Mobile Crowdsensing</h3>
+<p>Xiangwan Fu; Houbing Herbert Song; Tian Wang; Mianxiong Dong; Anfeng Liu; Mande Xie</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3716452</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11618969/2ikHycDADvi" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3716452" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>CAA-TDI: Confidence-Aware Attention for Trustworthy Data Inference in Sparse Mobile Crowdsensing</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3716452</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11618969/2ikHycDADvi" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-cc8f45afe2e538da">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Capturing Context-Aware Route Choice Semantics for Trajectory Representation Learning</h3>
+<p>Ji Cao; Yu Wang; Tongya Zheng; Jie Song; Qinghong Guo; Zujie Ren; Canghong Jin; Gang Chen; Mingli Song</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3708608</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11592601/2hLQwJJz7by" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3708608" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Capturing Context-Aware Route Choice Semantics for Trajectory Representation Learning</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3708608</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11592601/2hLQwJJz7by" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3d2820154ae9700d">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ISSUE</p>
+<h3>CausalDX: Diagnosing Long-Tail and Cascading Cloud Incidents With LLM-Guided Causal Reasoning</h3>
+<p>Zhuo Chang; Yinjun Wu; Haozhe Feng; Yang Li; Yide Fang; Liangzu Liu; Zhenglong Jin; Danqing Huang; Xiaofeng Yang; Peng Chen; Bin Cui</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3722256</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11646974/2iQeUD6ZnJC" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3722256" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>CausalDX: Diagnosing Long-Tail and Cascading Cloud Incidents With LLM-Guided Causal Reasoning</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3722256</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11646974/2iQeUD6ZnJC" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-ed1bdfa202baf876">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Coalition-Based Knowledge Graph Learning for Actual Controller Disclosure</h3>
+<p>Qingying Xu; Liang Hong; Mingxuan Shen</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3721243</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11643517/2iHAJCJyu9q" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3721243" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Coalition-Based Knowledge Graph Learning for Actual Controller Disclosure</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3721243</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11643517/2iHAJCJyu9q" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-76b8de7d27ca5ca5">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Consistency-Enhanced Multi-Granularity Knowledge Modeling for Semi-Supervised Feature Selection</h3>
+<p>Kehua Yuan; Duoqian Miao; Weiping Ding; Witold Pedrycz; Hongyun Zhang; Yiyu Yao</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3719432</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11636264/2izDEq9O3fi" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3719432" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Consistency-Enhanced Multi-Granularity Knowledge Modeling for Semi-Supervised Feature Selection</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3719432</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11636264/2izDEq9O3fi" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a1327a64a0c7b26f">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Counterfactual Fairness Prediction on Missing Data</h3>
+<p>Cong Su; Dong Wu; Dong Zhang; Jun Wang; Alysa Ziying Tan; Han Yu; Lizhen Cui; Guoxian Yu</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717344</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11625989/2isECnNH5LO" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717344" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Counterfactual Fairness Prediction on Missing Data</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717344</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11625989/2isECnNH5LO" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-5e40779a58943de9">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ISSUE</p>
+<h3>Data and Knowledge Dual-Driven Text Embedding Approaches: A Survey</h3>
+<p>Xiaoyin Chen; Jiaqing Zhan; Jiayi Lin; Han Liu; Qin Zhang; Junyang Chen; Hao Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3721883</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11646471/2iRTAaFhb2g" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3721883" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Data and Knowledge Dual-Driven Text Embedding Approaches: A Survey</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3721883</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11646471/2iRTAaFhb2g" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-cbe22011f76c90f1">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Doubly Constrained Fair Clustering for General $p$-Norms</h3>
+<p>Lunhao Zhang; Pengzhi Gao; Peng Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3720825</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11642574/2iJfE4nP1Sg" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3720825" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Doubly Constrained Fair Clustering for General $p$-Norms</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3720825</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11642574/2iJfE4nP1Sg" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-04864e651b139da7">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>DSCAN: Structural Clustering on Directed Graphs</h3>
+<p>Lingkai Meng; Long Yuan; Xuemin Lin; Zi Chen; Shiyu Yang; Kai Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717285</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626021/2isED8dG3zW" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717285" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>DSCAN: Structural Clustering on Directed Graphs</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717285</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626021/2isED8dG3zW" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-360b232c7abc7277">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Dual-Granularity Labeling for Multi-Instance Multi-Label Data With Skewed Annotation</h3>
+<p>Xinyue Zhang; Tingjin Luo; Chenping Hou</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3705259</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11570004/2hqgOq2XNvO" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3705259" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dual-Granularity Labeling for Multi-Instance Multi-Label Data With Skewed Annotation</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3705259</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11570004/2hqgOq2XNvO" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-24bfafe150e8a1e4">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>DyG-Pred: Spatial-Temporal Dynamic Graph Replay for Event Prediction With Gated Explicit-Implicit Graph Dependency Fusion</h3>
+<p>Zhongfeng Chen; Huan Rong; Zhenyu Lu; Li Jin; Quanbo Ge; Anouar Imel; Jie Sun</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3715213</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11614754/2ihnJ6mClqM" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3715213" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>DyG-Pred: Spatial-Temporal Dynamic Graph Replay for Event Prediction With Gated Explicit-Implicit Graph Dependency Fusion</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3715213</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11614754/2ihnJ6mClqM" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-5a3d8bdfd0ae0d02">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Efficient Maximal Directed Plex Enumeration With Worst-Case Time Guarantee</h3>
+<p>Yukai Sun; Shuohao Gao; Kaiqiang Yu; Shengxin Liu; Cheng Long; Xun Zhou; Raymond Chi-Wing Wong</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3701661</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11555025/2hbkDOgj3t6" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3701661" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Efficient Maximal Directed Plex Enumeration With Worst-Case Time Guarantee</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3701661</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11555025/2hbkDOgj3t6" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-dd1c3c224e37d7e4">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Enhancing Graph Neural Network Explainers Using a Distribution Shift Consistency-Guided Generator</h3>
+<p>Guangyong He; Li Liu; Youmin Zhang; Ye Wang; Qun Liu; Guoyin Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717880</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627428/2iwjUV2xrcQ" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717880" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Enhancing Graph Neural Network Explainers Using a Distribution Shift Consistency-Guided Generator</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717880</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627428/2iwjUV2xrcQ" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-bbe5f10798cf26aa">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Fairness in Augmented Graph Learning: A Survey</h3>
+<p>Renqiang Luo; Huafei Huang; Ziqi Xu; Xikun Zhang; Enyan Dai; Bo Yang; Feng Xia</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3719932</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11640954/2iGherRQNAQ" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3719932" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Fairness in Augmented Graph Learning: A Survey</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3719932</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11640954/2iGherRQNAQ" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a19c5d015819f3cb">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>FastTrick: Socially-Engineered Phishing E-mail Detection Using Hashing Trick</h3>
+<p>Fatimah Aloraini; Neetesh Saxena; Elisa Bertino; Ashok Kumar Das; Kim-Kwang Raymond Choo</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3705635</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11571003/2hrVIV68iSA" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3705635" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>FastTrick: Socially-Engineered Phishing E-mail Detection Using Hashing Trick</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3705635</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11571003/2hrVIV68iSA" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-84bc445cd012db7a">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>FedCAMD: Cross-Attention Driven Misleading Knowledge Filtering via Proxy Outlier Detection in Federated Distillation</h3>
+<p>Fenhua Bai; Xingwen Fang; Bin Cao; Kai Zeng; Tao Shen</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3716682</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11622667/2im0Ym4uDZe" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3716682" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>FedCAMD: Cross-Attention Driven Misleading Knowledge Filtering via Proxy Outlier Detection in Federated Distillation</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3716682</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11622667/2im0Ym4uDZe" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-aad6d44459d8d81d">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>FOND: Fine-Grained Boundary Mining With Dual Bridging for Fair Graph Anomaly Detection</h3>
+<p>Caiyang Yu; Wei Ju; Wenrui Wu; Yifan Wang; Ziyue Qiao; Chong Chen; Xian-Sheng Hua; Xiao Luo</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3719286</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11636210/2izDFzMGpeE" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3719286" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>FOND: Fine-Grained Boundary Mining With Dual Bridging for Fair Graph Anomaly Detection</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3719286</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11636210/2izDFzMGpeE" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8595df29472feebf">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Forecasting Realized Volatility of Stock Market: A Novel Model Based on VMD and Local-Global Fusion Mechanism</h3>
+<p>Mengxin Ou; Siyuan Zhang; Bart Baesens; Yuejin Tan; Xin Lu</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718370</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11631688/2ixYMFPdTag" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718370" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Forecasting Realized Volatility of Stock Market: A Novel Model Based on VMD and Local-Global Fusion Mechanism</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718370</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11631688/2ixYMFPdTag" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-486bbdbabc8bd0dc">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ISSUE</p>
+<h3>GEM-Distill: Graph Ensemble Multi-Level Distillation for MLP-Based Graph Classification</h3>
+<p>Minghao Qin; Donghai Guan; Weiwei Yuan; Shuai Xu; Cetin Kaya Koc</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3722236</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11646973/2iQeV2R5Q8o" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3722236" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>GEM-Distill: Graph Ensemble Multi-Level Distillation for MLP-Based Graph Classification</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3722236</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11646973/2iQeV2R5Q8o" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-eb36c01cb325eb76">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Graph Convolutional Networks Combining Dynamic Aggregation of Adjacency Information for Traffic Flow Prediction</h3>
+<p>Linglong Zhu; Xingyu Feng; Yonghong Zhang; Xi Kan; Quan Wang; Haixiao Cao; Qi Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718528</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11629610/2ixYMnPoIQE" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718528" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Graph Convolutional Networks Combining Dynamic Aggregation of Adjacency Information for Traffic Flow Prediction</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718528</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11629610/2ixYMnPoIQE" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-bdb42d04ff11227b">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>IFCDR: A Cross-Domain Information Fusion-Based Architecture for Cross Domain Recommendation</h3>
+<p>Cheng Wang; Jiaming Li; Haozhao Wang; Rui Zhang; Ruixuan Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3708751</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11592622/2hLQwrdWSiI" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3708751" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>IFCDR: A Cross-Domain Information Fusion-Based Architecture for Cross Domain Recommendation</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3708751</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11592622/2hLQwrdWSiI" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-341215ea43d2b7bf">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Impute On-Demand: Adaptive Correlated Time Series Imputation for Changing Environments</h3>
+<p>Zhichen Lai; Huan Li; Dalin Zhang; Dong Gong; Lina Yao; Christian S. Jensen</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717792</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626553/2iuEYEUicIU" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717792" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Impute On-Demand: Adaptive Correlated Time Series Imputation for Changing Environments</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717792</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626553/2iuEYEUicIU" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-b0c2cefb8b6205e5">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Incomplete Multi-View Clustering via Cross-View Diversity Enhanced Fine-Grained Tensor Completion</h3>
+<p>Chundan Liu; Yongyong Chen; Zhao Kang; Junyu Dong; Panpan Zheng; Chong Peng; Qiang Cheng</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3710602</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11603318/2i0MOnzuPT2" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3710602" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Incomplete Multi-View Clustering via Cross-View Diversity Enhanced Fine-Grained Tensor Completion</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3710602</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11603318/2i0MOnzuPT2" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-afbb3b0296100f34">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>IntComplex for High-Order Interactions</h3>
+<p>Ran Liu; Xiang Liu; Jingyan Li; Rongling Wu; Jie Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717266</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626001/2isEC8jZiZG" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717266" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>IntComplex for High-Order Interactions</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717266</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626001/2isEC8jZiZG" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a62637c98af9bc98">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Investigating Mask-Aware Prototype Learning for Tabular Anomaly Detection</h3>
+<p>Ruiying Lu; Jinhan Liu; Chuan Du; Dandan Guo</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718023</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627649/2iwjVnqI2MU" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718023" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Investigating Mask-Aware Prototype Learning for Tabular Anomaly Detection</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718023</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627649/2iwjVnqI2MU" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-da55ae9a60ebc768">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>KGFR: A Foundation Retriever for Generalized Knowledge Graph Question Answering</h3>
+<p>Yuanning Cui; Zequn Sun; Wei Hu; Zhangjie Fu</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3712877</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11606447/2i5q0N12yDC" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3712877" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>KGFR: A Foundation Retriever for Generalized Knowledge Graph Question Answering</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3712877</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11606447/2i5q0N12yDC" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-dbba97c420a05bf5">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Large Language Model Empowered Recommendation Meets All-Domain Continual Pre-Training</h3>
+<p>Haokai Ma; Yunshan Ma; Ruobing Xie; Lei Meng; Jialie Shen; Xingwu Sun; Zhanhui Kang; Tat-Seng Chua</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717059</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11623729/2isEBT52EYU" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717059" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Large Language Model Empowered Recommendation Meets All-Domain Continual Pre-Training</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717059</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11623729/2isEBT52EYU" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-34c53225db7d90be">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Learning Transaction Embedding From Multi-Level High Utility ItemSets</h3>
+<p>Le V. Nguyen; Loan T. T. Nguyen; Trinh D. D. Nguyen; Dang Nguyen; Philippe Fournier-Viger; Bay Vo</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718935</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11631108/2ixYMZu5rHi" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718935" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Learning Transaction Embedding From Multi-Level High Utility ItemSets</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718935</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11631108/2ixYMZu5rHi" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-664bbb27569cb13e">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>LFAMLedger: Account Migration Across Blockchain Shards Using a Lock-Free Mechanism</h3>
+<p>Shuai Zhao; Zhiwei Zhang; Junkai Wang; Ye Yuan; Meihui Zhang; Lizhong Ding; Guoren Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718061</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627422/2iwjUrm2lOw" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718061" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>LFAMLedger: Account Migration Across Blockchain Shards Using a Lock-Free Mechanism</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718061</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627422/2iwjUrm2lOw" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a84bdb30c18917d3">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ISSUE</p>
+<h3>LLM-Powered KG Utility Evaluation Framework</h3>
+<p>Pangjing Wu; Xiaodong Li; Wenqi Fan; Qing Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718940</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11651462/2iRTzIurIze" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718940" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>LLM-Powered KG Utility Evaluation Framework</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718940</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11651462/2iRTzIurIze" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-91e7b0db438bcd77">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ISSUE</p>
+<h3>Multiplex Network Unsupervised Representation With Adaptive Multi-View Tensor Graph Learning</h3>
+<p>Yongqiang Tang; Ruiwen Yuan; Yuan Xie; Wensheng Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717911</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11655878/2iWShbE2FW0" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717911" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multiplex Network Unsupervised Representation With Adaptive Multi-View Tensor Graph Learning</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717911</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11655878/2iWShbE2FW0" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8adf68cb56bc8210">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>MVDG++: A Unified Multi-View Framework for Domain Generalization</h3>
+<p>Jian Zhang; Lei Qi; Yinghuan Shi; Yang Gao</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3710993</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11596575/2hVNWFSbNyo" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3710993" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>MVDG++: A Unified Multi-View Framework for Domain Generalization</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3710993</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11596575/2hVNWFSbNyo" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-7ed096ec7c28decf">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Online Learning From Capricious Feature Data Streams</h3>
+<p>Han Zhou; Shin Matsushima</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3704763</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11569320/2hoBS8MTf20" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3704763" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Online Learning From Capricious Feature Data Streams</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3704763</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11569320/2hoBS8MTf20" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-357f787e7b87ad7e">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Pandora: Leveraging Code-Driven Knowledge Transfer for Unified Structured Knowledge Reasoning</h3>
+<p>Yongrui Chen; Junhao He; Linbo Fu; Shenyu Zhang; Rihui Jin; Xinbang Dai; Jiaqi Li; Dehai Min; Nan Hu; Yuxin Zhang; Guilin Qi; Yi Huang; Tongtong Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718049</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627196/2iwjUAxa5BS" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718049" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Pandora: Leveraging Code-Driven Knowledge Transfer for Unified Structured Knowledge Reasoning</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718049</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627196/2iwjUAxa5BS" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-927fdfe22fa81aaa">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>PGMiner: A Load-Aware Dynamic Graph Pattern Matching Approach on GPUs</h3>
+<p>Yu Zhang; Yuluo Guo; Fubing Mao; Yongchao Liu; Chuntao Hong; Haikun Liu; Xiaofei Liao; Hai Jin</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718204</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627412/2iwjVd6UbBu" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718204" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>PGMiner: A Load-Aware Dynamic Graph Pattern Matching Approach on GPUs</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718204</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627412/2iwjVd6UbBu" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-5217962d871072fb">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ISSUE</p>
+<h3>Plan of Knowledge: Retrieval-Augmented Large Language Models for Temporal Knowledge Graph Question Answering</h3>
+<p>Ying Zhang; Xinying Qian; Yu Zhao; Baohang Zhou; Xuhui Sui; Xiaojie Yuan</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718295</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11656337/2iWShiBuXE4" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718295" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Plan of Knowledge: Retrieval-Augmented Large Language Models for Temporal Knowledge Graph Question Answering</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718295</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11656337/2iWShiBuXE4" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-d69e6893c2eeba36">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>PMatch: A Secure Framework for Querying Private Localized Graph Patterns</h3>
+<p>Lyu Xu; Haibo Hu; Yifeng Zheng; Jiaxin Jiang; Qingqing Ye; Byron Choi; Jianliang Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718737</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11630583/2ixYNtJvc5y" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718737" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>PMatch: A Secure Framework for Querying Private Localized Graph Patterns</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718737</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11630583/2ixYNtJvc5y" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-bc58373e958b83c9">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Privacy Budgeting for Spatio-Temporal Trajectories</h3>
+<p>Suirui Zhu; Chao Sun; Xin Yuan; Conggai Li; Wei Ni; Wenjie Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718033</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627169/2iwjVLTkOLC" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718033" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Privacy Budgeting for Spatio-Temporal Trajectories</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718033</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627169/2iwjVLTkOLC" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-08c512f187e8b18f">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>ReG-Net: Retrieval-Enhanced Graph Networks for Robust Multimodal Missing Data Recovery</h3>
+<p>Khadija Shaheen; Marta Bucelli; Apoorva Chawla; Gianluca Tabella</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717320</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11625988/2isECfTLrgs" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717320" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>ReG-Net: Retrieval-Enhanced Graph Networks for Robust Multimodal Missing Data Recovery</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717320</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11625988/2isECfTLrgs" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-9e50693e451862bb">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Resolving Knowledge Conflicts in Domain-Specific Data Selection: A Case Study on Medical Instruction-Tuning</h3>
+<p>Qihuang Zhong; Liang Ding; Fei Liao; Juhua Liu; Bo Du; Dacheng Tao</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3720785</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11641842/2iHAJgEx7Og" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3720785" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Resolving Knowledge Conflicts in Domain-Specific Data Selection: A Case Study on Medical Instruction-Tuning</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3720785</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11641842/2iHAJgEx7Og" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3ca2ff767b429b85">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Rethinking Activation Function: A Simple Path to Efficient and Accurate Time Series Forecasting</h3>
+<p>Fan Zhang; Shiming Fan; Hua Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3716656</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11622841/2im0YseyJ44" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3716656" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Rethinking Activation Function: A Simple Path to Efficient and Accurate Time Series Forecasting</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3716656</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11622841/2im0YseyJ44" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-0ac39e5a07016dfd">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Robust Variance-Gradient Subsampling for Logistic Regression With Corrupted Large-Scale Data</h3>
+<p>Xuanjia Zuo; Jianqing Shi; Niansheng Tang; Zongben Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718313</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11631690/2ixYNb4NN2E" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718313" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Robust Variance-Gradient Subsampling for Logistic Regression With Corrupted Large-Scale Data</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718313</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11631690/2ixYNb4NN2E" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-e741f7b16f5c3c92">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Robustly Grounding LLM-Derived Meta-Causality for Causal Discovery</h3>
+<p>Xiangyu Wang; Taiyu Ban; Lyuzhou Chen; Yanze Gao; Xingjian Lin; Xiren Zhou; Derui Lyu; Huanhuan Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3718207</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627415/2iwjU21tN7y" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3718207" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Robustly Grounding LLM-Derived Meta-Causality for Causal Discovery</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3718207</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11627415/2iwjU21tN7y" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8039df5ee5e55776">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>RWKV-TS+: Adaptive Long-Range Prompt for Multiple Time Series Tasks</h3>
+<p>Huaxin Pang; Xiaoxia Xie; Yu Li; Zhuobin Jiang; Xiaoping Zhang; Huaqi Zhang; Shikui Wei; Yao Zhao; Yufeng Zhao</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717305</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11625994/2isECvVfuwg" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717305" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>RWKV-TS+: Adaptive Long-Range Prompt for Multiple Time Series Tasks</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717305</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11625994/2isECvVfuwg" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-0846234da15e54fe">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>SimCFT: Trajectory Similarity Computation via Dynamic Status Features and Noisy Point Mining</h3>
+<p>Hongzhen Xiang; Chenxu Wang; Tianyi Li; Shuyan Liu; Peng Han; Yushuai Li; Wei Wang; Christian S. Jensen</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717759</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626504/2iuEXApCbxS" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717759" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>SimCFT: Trajectory Similarity Computation via Dynamic Status Features and Noisy Point Mining</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717759</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626504/2iuEXApCbxS" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-f63848ff07f0cdc1">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Stochastic Process Mining: Characteristics and Challenges</h3>
+<p>Sander J. J. Leemans; Xixi Lu; David Chapela-Campa; Claudio Di Ciccio; Izack Cohen; Benoit Depaire; Stephan Fahrenkrog-Petersen; Avigdor Gal; Massimiliano de Leoni; Henrik Leopold; Orlenys Lopez-Pintado; Felix Mannhardt; Fabrizio Maria Maggi; Niels Martin; Marco Montali; Marco Pegoraro; Artem Polyvyanyy; Arik Senderovich; Sam Verboven; Akio Watanabe; Matthias Weidlich; Jan-Martijn E. M. van der Werf</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3715402</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11614747/2ihnIZuyrbW" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3715402" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Stochastic Process Mining: Characteristics and Challenges</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3715402</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11614747/2ihnIZuyrbW" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-214f2a887f476c50">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Tabular Data Wrangling in the Era of Large Language Model: A Survey</h3>
+<p>Ying He; Qiang Yang; Yuxiao Yang; Yubo Zhou; Zhecheng Hu; Sheng Yuan; Yanghua Xiao; Zhixu Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3716977</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11623415/2inFSWVAwhO" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3716977" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Tabular Data Wrangling in the Era of Large Language Model: A Survey</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3716977</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11623415/2inFSWVAwhO" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3061a297e96e72e9">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Text-to-SQL via Model Context Protocol: Structured Context Orchestration for Reliable Database Query Generation</h3>
+<p>Guocang Yang; Victor Junqiu Wei; Yinggang Ling; Tao Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3716724</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11622876/2inFT5o9eF2" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3716724" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Text-to-SQL via Model Context Protocol: Structured Context Orchestration for Reliable Database Query Generation</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3716724</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11622876/2inFT5o9eF2" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-221fabde64e930d4">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>TOE: Tackling Distribution Shifts in Time Series via Three-Perspective Online Ensemble</h3>
+<p>Yujue Zhou; Jiarong Liu; Hong Peng; Shuanghua Yang; Bowen Du</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3717828</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626574/2iuEXP93m7u" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3717828" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>TOE: Tackling Distribution Shifts in Time Series via Three-Perspective Online Ensemble</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3717828</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11626574/2iuEXP93m7u" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-417e9c2ccc8f3caa">
+<p class="kicker">IEEE Transactions on Knowledge and Data Engineering · FORMAL_ASSIGNMENT</p>
+<h3>Why is Repeated Padding Effective for Sequential Recommendation</h3>
+<p>Yizhou Dang; Enneng Yang; Chuang Zhao; Lianbo Ma; Guibing Guo; Xingwei Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V38 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1109/tkde.2026.3715453</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC+CROSSREF</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11614908/2ihnJd2bTWM" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/tkde.2026.3715453" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Why is Repeated Padding Effective for Sequential Recommendation</strong></p><p class="abstract-meta">期刊：IEEE Transactions on Knowledge and Data Engineering · DOI：10.1109/tkde.2026.3715453</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.computer.org/csdl/journal/tk/2026/10/11614908/2ihnJd2bTWM" rel="noopener noreferrer">官方论文页面</a><small>www.computer.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-069-3661c7c6dc42">返回本期目录</a> · <a href="#top">返回页首</a></p></article></section>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="online-first" aria-labelledby="of-h"><h2 id="of-h">网络首发 / 在编 / 未来期登记</h2>
+<p>本批新登记 <strong>23</strong> 条（地理研究第 10 期未来期 18、Journal of Maps 在编期 5、ESWA RSS 100、SCTS 未来期/Articles 9）。以下条目只作登记，不作为完整期次证据；正式归期后按 DOI（ScienceDirect 按 PII）合并，不重复计数。</p>
+<section class="of-journal" id="of-reg-039" aria-labelledby="of-reg-039-h"><h3 id="of-reg-039-h">Earth Science Informatics · 新登记 23 条</h3><p>Springer Issue 11（November 2026）为未来期，TOC 尚未两遍稳定；Articles/未来期条目仅作发现源登记；部分摘要经 Crossref 补全。</p><article class="paper" id="article-doi-23a082678913ce2f">
+<p class="kicker">Earth Science Informatics · ONLINE_FIRST</p>
+<h3>GEDIMetrics: a QGIS plugin for accessing and integrating multi-product GEDI spaceborne LiDAR data</h3>
+<p>Alexander Cotrina-Sanchez; Michele Torresani; Leonel Corado</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12145-026-02254-z</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02254-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12145-026-02254-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>GEDIMetrics: a QGIS plugin for accessing and integrating multi-product GEDI spaceborne LiDAR data</strong></p><p class="abstract-meta">期刊：Earth Science Informatics · DOI：10.1007/s12145-026-02254-z · 摘要来源：Crossref 元数据</p><p class="abstract-body">NASA’s Global Ecosystem Dynamics Investigation (GEDI) provides near-global, high-resolution 3D LiDAR observations of forest vertical structure. However, GEDI products are distributed as independent HDF5 files organised by beam, requiring ad-hoc workflows for data discovery, quality filtering, spatial subsetting, and footprint-level alignment across products. Existing tools either target a single product, require programming expertise, or operate outside common GIS environments. Here, GEDIMetrics is presented as an open-source QGIS plugin that integrates the full GEDI processing chain for four products focused on forest vertical structure: canopy height (L2A), vertical canopy structure (L2B), aboveground biomass density (L4A), and waveform structural complexity (L4C). The plugin implements a five-stage pipeline: granule discovery via the NASA CMR API, authenticated download, variable extraction with quality filtering, spatial subsetting, and multi-product merging using the shot number identifier, with export to GeoPackage and GeoParquet. Its core contribution is the automated footprint-level fusion of these products into a single analysis-ready dataset through a graphical interface, without scripting. GEDIMetrics was tested across two contrasting forest ecosystems (~ 100 km² each): a temperate mixed forest in northeastern France and a humid tropical rainforest in Madre de Dios, Peru. The plugin is freely available through the QGIS Plugin Repository and on GitHub.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02254-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-0cd46bbcbc88c7a2">
+<p class="kicker">Earth Science Informatics · ONLINE_FIRST</p>
+<h3>Assessing the relative importance of machine learning modeling components for precipitation prediction using ANOVA</h3>
+<p>Ali Dalir Gabrabad; Mehrad Hosseinpour; Afshin Ashrafzadeh</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12145-026-02260-1</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02260-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12145-026-02260-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Assessing the relative importance of machine learning modeling components for precipitation prediction using ANOVA</strong></p><p class="abstract-meta">期刊：Earth Science Informatics · DOI：10.1007/s12145-026-02260-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02260-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-35e6353276779bba">
+<p class="kicker">Earth Science Informatics · ONLINE_FIRST</p>
+<h3>Structural and tectonic analysis of the Moroccan Central anti-atlas using predictive targeting with machine learning and inversion of aeromagnetic data: geodynamic and mining implications</h3>
+<p>Ayoub Soulaimani; Saâd Soulaimani; Abdelhalim Miftah</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12145-026-02257-w</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02257-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12145-026-02257-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Structural and tectonic analysis of the Moroccan Central anti-atlas using predictive targeting with machine learning and inversion of aeromagnetic data: geodynamic and mining implications</strong></p><p class="abstract-meta">期刊：Earth Science Informatics · DOI：10.1007/s12145-026-02257-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02257-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-7c61d6d246b97bda">
+<p class="kicker">Earth Science Informatics · ONLINE_FIRST</p>
+<h3>An ontology-guided LightRAG framework for knowledge-graph construction and question answering on precarious rock hazards</h3>
+<p>Ke Li; Yanwu Pan; Zongwang Yi; Shengbao Guo; Pengfei Liu; Li Dong; Linfeng Wang; Yanlei Wang; Wuyang Qin; Xiao Cheng; Na She; Jieling Yuan</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12145-026-02258-9</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02258-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12145-026-02258-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An ontology-guided LightRAG framework for knowledge-graph construction and question answering on precarious rock hazards</strong></p><p class="abstract-meta">期刊：Earth Science Informatics · DOI：10.1007/s12145-026-02258-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02258-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-9efedc957dc8bf8a">
+<p class="kicker">Earth Science Informatics · ONLINE_FIRST</p>
+<h3>Spatially explicit modeling of future land use and land cover dynamics in the São Francisco River Basin, Brazil</h3>
+<p>Gabriel Vasco; Suzana Maria Gico Lima Montenegro; Rodrigo de Queiroga Miranda; Jussara Freire de Souza Viana; Danielle Bressiani; Eduardo Mario Mendiondo; Gilney Bezerra; Josiclêda Domiciano Galvíncio; Celso Augusto Guimarães Santos; Richarde Marques da Silva</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12145-026-02250-3</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02250-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12145-026-02250-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spatially explicit modeling of future land use and land cover dynamics in the São Francisco River Basin, Brazil</strong></p><p class="abstract-meta">期刊：Earth Science Informatics · DOI：10.1007/s12145-026-02250-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02250-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a6037ce6248d8301">
+<p class="kicker">Earth Science Informatics · ONLINE_FIRST</p>
+<h3>Physics-Guided multi-scale graph sLSTM for long-term runoff forecasting</h3>
+<p>Hairong Jiang; Zehui Mu; Jumin Zhao; Dengao Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12145-026-02249-w</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02249-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12145-026-02249-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Physics-Guided multi-scale graph sLSTM for long-term runoff forecasting</strong></p><p class="abstract-meta">期刊：Earth Science Informatics · DOI：10.1007/s12145-026-02249-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02249-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-01fadefe77fd82c2">
+<p class="kicker">Earth Science Informatics · ONLINE_FIRST</p>
+<h3>Machine learning-based discrimination of granite tectonic settings: Integrating global geochemical datasets, feature engineering and SHAP interpretation</h3>
+<p>Huanbao Zhang; Haiyang He; Yi Shi; Yuxing He; Tao Zeng; Yang Tao; Zhengqing Wang; Yanshi Xie; Xiangyao Huang; Xiangcheng Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12145-026-02256-x</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02256-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12145-026-02256-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Machine learning-based discrimination of granite tectonic settings: Integrating global geochemical datasets, feature engineering and SHAP interpretation</strong></p><p class="abstract-meta">期刊：Earth Science Informatics · DOI：10.1007/s12145-026-02256-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02256-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3d3decfae0528dac">
+<p class="kicker">Earth Science Informatics · ONLINE_FIRST</p>
+<h3>A few-shot UATR Model integrating attention mechanism-based meta-learning with class incremental learning approaches</h3>
+<p>Gang Hu; Yifei Song; Mohamad Farhan Mohamad Mohsin</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12145-026-02247-y</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02247-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12145-026-02247-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A few-shot UATR Model integrating attention mechanism-based meta-learning with class incremental learning approaches</strong></p><p class="abstract-meta">期刊：Earth Science Informatics · DOI：10.1007/s12145-026-02247-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02247-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-1827ddde66190fa4">
+<p class="kicker">Earth Science Informatics · ONLINE_FIRST</p>
+<h3>Fifty years of geomorphology research: a topic modeling analysis of global trends (1975–2025)</h3>
+<p>Mustafa Utlu; Mesut Şimşek; Abdulkadir Özkaya; Eray Selçuk</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12145-026-02253-0</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02253-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12145-026-02253-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Fifty years of geomorphology research: a topic modeling analysis of global trends (1975–2025)</strong></p><p class="abstract-meta">期刊：Earth Science Informatics · DOI：10.1007/s12145-026-02253-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02253-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6dd6d4632a92c8bd">
+<p class="kicker">Earth Science Informatics · ONLINE_FIRST</p>
+<h3>Mineral prospectivity mapping driven by multi-source data fusion: application of convolutional neural networks in the Jinchang gold deposit, NE China</h3>
+<p>Ming Lei; Wenyan Cai; Jian Li; Xuyan Bian; Wanruo Xing; Chao Zhang; Xiao Liu; Yufan Kang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12145-026-02252-1</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02252-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12145-026-02252-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mineral prospectivity mapping driven by multi-source data fusion: application of convolutional neural networks in the Jinchang gold deposit, NE China</strong></p><p class="abstract-meta">期刊：Earth Science Informatics · DOI：10.1007/s12145-026-02252-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02252-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-068a3f2fb3e64df3">
+<p class="kicker">Earth Science Informatics · ONLINE_FIRST</p>
+<h3>An information-theoretic and explainable hybrid extreme learning machine framework for seismic soil liquefaction assessment</h3>
+<p>Furquan Ahmad; Warit Wipulanusat</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12145-026-02248-x</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02248-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12145-026-02248-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An information-theoretic and explainable hybrid extreme learning machine framework for seismic soil liquefaction assessment</strong></p><p class="abstract-meta">期刊：Earth Science Informatics · DOI：10.1007/s12145-026-02248-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02248-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-b28c2aaaf3e58be5">
+<p class="kicker">Earth Science Informatics · ONLINE_FIRST</p>
+<h3>Feasibility assessment of watershed conservation structure site selection using machine learning models in a semi-arid area, Iran</h3>
+<p>Omid Asadi Nalivan; Saleh Yousefi; Ali Shahbazi; Naveen R Shahi</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12145-026-02251-2</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02251-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-09 12:13 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12145-026-02251-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-09 12:13 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Feasibility assessment of watershed conservation structure site selection using machine learning models in a semi-arid area, Iran</strong></p><p class="abstract-meta">期刊：Earth Science Informatics · DOI：10.1007/s12145-026-02251-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12145-026-02251-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><p class="more">Earth Science Informatics 另有 11 条已写入账本，页内从略。<span class="evidence"><a href="https://link.springer.com/journal/12145/volumes-and-issues/19-10" rel="noopener noreferrer">官方 Articles / 未来期目录</a><small>link.springer.com · 2026-10-09 12:13 CST · 发现信号，不证明完整性</small></span></p></section>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="errata" aria-labelledby="errata-h"><h2 id="errata-h">勘误与撤稿</h2>
+<p>已核查，0 项：本批 4 刊官方目录、RSS 与 Articles 列表中未发现撤稿、勘误或更正声明条目（ESWA 一篇题名含 “correction” 的研究论文已人工排除，非更正声明）。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="topics" aria-labelledby="topics-h"><h2 id="topics-h">主题与阅读路线</h2><ul><li>IEEE TKDE 2026-V38-I10：CSDL 官方目录 57 篇，Crossref DOI 全匹配；文章类型元数据（若有）：未统一标注。建议先浏览摘要抽屉中的 Survey/综述类条目，再按主题进入方法与应用论文。</li><li>Earth Science Informatics 未来期 Issue 11（November 2026）仅登记，不进入正式期次阅读路线。</li><li>以上为元数据级分组，不构成对论文研究结论的判断。</li></ul><p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="health" aria-labelledby="health-h"><h2 id="health-h">数据源健康</h2><ul><li>地理科学（REG-009）：官方当期/优先出版 HTTP 超时，HTTPS 返回错误页；RSS 超时 → 降级；最近已简报期次 2026-V46-I9。</li><li>Earth Science Informatics（REG-039，Springer）：浏览器取得 Volumes &amp; Issues；I10 已简报；I11（November 2026）未来期且 TOC 两遍 22→23 未稳定，仅登记；Articles 页作发现源。</li><li>IEEE TKDE（REG-069）：CSDL 官方当期 2026/10 两遍 57/57 一致并 claim；IEEE Xplore Early Access 404（次要发现源失败，不影响正式期次）。</li><li>有界对账：处理 4 个到期任务（上限 4），目录侧证据不足均保持 FAILED_RETRYABLE。</li></ul><ul><li>job 54 · REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE：Wiley TOC 浏览器仍受 Cloudflare 拦截；无新官方目录证据，维持 FAILED_RETRYABLE。</li><li>job 58 · REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE：T&amp;F TOC 分页/集合一致性仍无法确认；不改写已简报期次。</li><li>job 59 · REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE：T&amp;F TOC 浏览器挑战页；无官方目录证据。</li><li>job 65 · REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE：ScienceDirect Issues 页 HTTP 403；无官方目录证据。</li></ul>
+<p>失败或待修复：已核查，0 项。降级路径：ScienceDirect 403 → 官方 RSS 发现登记；T&amp;F HTTP 403 → 浏览器取官方当期目录。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="audit" aria-labelledby="audit-h"><h2 id="audit-h">证据与审计信息</h2>
+<details><summary>运行标识、证据层级与提交状态</summary>
+<ul>
+<li>Brief_ID：<code>DAILY-20261009</code> · Commit_ID：<code>DAILY-20261009-121213-4d45e899</code> · Run_ID：<code>4d45e899-beae-4c21-ab9f-f880c3c346f5</code></li>
+<li>逻辑日期 2026-10-09 · 实际完成 2026-10-09 12:13 CST · Recovery_Batch_ID：<code>4d45e899-beae-4c21-ab9f-f880c3c346f5</code></li>
+<li>任务：ROUTINE-20261009-G09（ROUTINE · CURRENT · 执行顺序 1 · COMPLETED）；补扫 0、仍待补扫 0；下一计划扫描 2026-10-10 第 10 组。</li>
+<li>证据层级：官方期次目录 = 一级完整性证据；官方论文页 = 题名/作者/摘要证据；DOI = 身份证据；Crossref = 二级补全；RSS / API = 发现信号（不证明完整性）。</li>
+<li>多遍目录核验：地理研究 V45-I9 17/17/17、SCTS V69-I10 24/24 集合一致；地理研究 V45-I10 刊出日期晚于扫描日，保持候选。</li>
+<li>门控统计：issue gate NEW_ISSUE 2；article gate 新论文记录 6、网络首发新登记 23、去重抑制 8、增量复核 0、门控错误 0。</li>
+<li>摘要校验：所有摘要经参考文献块识别校验；ScienceDirect PII 不标为 DOI；每张卡片保留官方论文页面链接。</li>
+<li>摘要图 SHA-256：<code>3a97f66fac83e8c3fcf1a092d70e3546cbefde12037ebfe72d508aa4f8916729</code>；HTML SHA-256 见提交回执（避免自引用哈希）。</li>
+<li>PostgreSQL 严格健康：PASS（7/7 迁移一致，健康问题 0）。</li>
+</ul></details>
+<p class="back"><a href="#top">返回页首</a></p></section>
+</main>
+<footer><nav aria-label="日报导航"><a href="../../../../2026/10/index.html">返回 2026 年 10 月索引</a> · <a href="../../../../2026/10/2026-10-07_GIS-AI期刊每日轮检简报_第7组.html">上一篇：2026-10-07 第 7 组</a> · <a href="#top">返回页首</a></nav></footer>
+</body></html>
