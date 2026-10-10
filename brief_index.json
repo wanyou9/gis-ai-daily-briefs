@@ -1278,7 +1278,7 @@
     },
     {
       "brief_id": "DAILY-20261010",
-      "commit_id": "DAILY-20261010-121448-43478d9c",
+      "commit_id": "DAILY-20261010-134324-6b383c80",
       "completed_run_date": "2026-10-10",
       "counts": {
         "changed_journals": 2,
@@ -1291,19 +1291,19 @@
       },
       "format": "HTML",
       "group_id": 10,
-      "html_sha256": "0c114e05abc17fa1856e3d7ace735afa6f7f49b84de630a67fe207c619816d3b",
+      "html_sha256": "f04f815c9b83196fe73eaba69049b2280c34726bef7957b44f8c046f92e1919e",
       "index_anchor": "brief-DAILY-20261010",
       "kind": "DAILY_ROTATION",
       "logical_date": "2026-10-10",
       "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/10/2026-10-10_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC10%E7%BB%84.html",
-      "release_report": "releases/DAILY-20261010-121448-43478d9c/2026/10/2026-10-10_GIS-AI期刊每日轮检简报_第10组.html",
-      "release_summary_image": "releases/DAILY-20261010-121448-43478d9c/2026/10/assets/2026-10-10_GIS-AI期刊每日摘要_第10组.png",
+      "release_report": "releases/DAILY-20261010-134324-6b383c80/2026/10/2026-10-10_GIS-AI期刊每日轮检简报_第10组.html",
+      "release_summary_image": "releases/DAILY-20261010-134324-6b383c80/2026/10/assets/2026-10-10_GIS-AI期刊每日摘要_第10组.png",
       "report": "2026/10/2026-10-10_GIS-AI期刊每日轮检简报_第10组.html",
       "scheduled_date": "2026-10-10",
       "status": "LOCAL_COMMITTED",
       "summary": "第 10 组共检查 3 种正式期刊；确认 1 个新完整期次、15 篇正式论文（新论文记录 15 篇、网络首发正式归期 0 篇），登记网络首发/在编/未来期 46 条；1 种期刊因官方源受限降级完成，0 种扫描失败，未发现撤稿或勘误。",
       "summary_image": "2026/10/assets/2026-10-10_GIS-AI期刊每日摘要_第10组.png",
-      "summary_image_sha256": "c29781c7443d7bd770d67ef08d66b411ffb63da263ee732903521f10e31a9555",
+      "summary_image_sha256": "f5cfba2035458f520cac46bf9af9c30d5d33a20a1c29fb30e9aecdc475905f73",
       "task_type": "ROUTINE",
       "tasks": [
         {
@@ -1317,7 +1317,7 @@
         }
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 10 组",
-      "updated_at": "2026-10-10T12:16:37.976889+08:00"
+      "updated_at": "2026-10-10T13:45:45.670143+08:00"
     }
   ],
   "retention": {
@@ -1336,7 +1336,7 @@
     "title": "GIS-AI 期刊每日轮检简报"
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-10-09",
+  "updated_date": "2026-10-10",
   "years": [
     {
       "brief_count": 60,

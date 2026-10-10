@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 10 组 · 2026-10-10</title>
+<style>
+:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;font-size:16px;line-height:1.65;overflow-wrap:anywhere}
+a{color:var(--brand);text-decoration:underline;text-underline-offset:.18em;display:inline-block;min-height:44px;line-height:44px}
+a:visited{color:#4b3f72}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:2px}
+.skip{position:absolute;left:12px;top:-80px;background:#fff;padding:0 14px;z-index:9}.skip:focus{top:8px}
+.hero{background:linear-gradient(135deg,#073d58,#08737a);color:#fff;padding:18px max(18px,calc((100vw - 1180px)/2)) 22px}
+.hero a{color:#fff}.crumb{font-size:14px}.meta{font-size:14px;color:#cfe7e6;margin:.2rem 0}
+.hero h1{font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.15;margin:.3rem 0 .6rem}
+.lede{font-size:clamp(1rem,2vw,1.15rem);max-width:72em;margin:0 0 14px}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.card{display:block;line-height:1.3;background:#ffffff1f;border:1px solid #ffffff55;border-radius:12px;padding:10px 12px;color:#fff;text-decoration:none;min-height:44px}
+.card strong{display:block;font-size:1.7rem}.card span{font-size:14px}
+main{max-width:1180px;margin:0 auto;padding:0 18px 40px}
+section{margin-top:26px}h2{font-size:1.45rem;margin:0 0 10px;border-left:5px solid var(--brand);padding-left:10px}h3{font-size:1.12rem;margin:.6rem 0}
+.attention{list-style:none;padding:0;margin:0}.attention li{background:#fff;border:1px solid var(--line);border-left:5px solid #e1a62b;border-radius:10px;padding:8px 14px;margin:8px 0}
+.tag{display:inline-block;font-size:14px;font-weight:700;border:2px solid currentColor;border-radius:6px;padding:0 6px;line-height:1.6}
+.tag.ok{color:var(--ok)}.tag.warn{color:var(--warn)}.tag.bad{color:var(--bad)}.when{font-size:14px;color:var(--muted)}
+.toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 14px;margin-top:18px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%}caption{text-align:left;padding:10px 12px;font-weight:700}
+th,td{border-top:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;font-size:15px}thead th{background:#e3efed}
+figure{margin:16px 0}figure img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}figcaption{font-size:14px;color:var(--muted)}
+.issue,.of-journal{background:#ffffffa8;border:1px solid var(--line);border-radius:12px;padding:6px 16px 12px;margin:16px 0}
+.issue-meta,.paper dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:4px 14px;margin:6px 0}
+.issue-meta div,.paper dl div{font-size:14px}dt{color:var(--muted);font-size:14px}dd{margin:0}
+.paper{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px;margin:12px 0}
+.paper h3{font-size:1.05rem}.kicker{font-size:14px;color:var(--muted);margin:.2rem 0}
+.evidence{display:inline-flex;flex-direction:column;margin-right:14px}.evidence small{font-size:14px;color:var(--muted);line-height:1.3}
+.back{font-size:14px;margin:4px 0}.more{font-size:15px}code{font-size:14px;word-break:break-all}
+details summary{cursor:pointer;min-height:44px;display:flex;align-items:center}
+footer{max-width:1180px;margin:0 auto;padding:10px 18px 40px;font-size:15px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.cards{grid-template-columns:repeat(2,1fr)}.card strong{font-size:1.4rem}
+ table.stack thead{position:absolute;left:-9999px}table.stack,table.stack tbody,table.stack tr,table.stack th,table.stack td{display:block;width:100%}
+ table.stack tr{border-top:2px solid var(--line);padding:6px 0}table.stack th,table.stack td{border:0;padding:3px 10px}
+ table.stack td::before,table.stack th::before{content:attr(data-label)"：";color:var(--muted);font-size:14px}}
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到主要内容</a>
+<header class="hero">
+<nav class="crumb" aria-label="面包屑"><a href="../../../../index.html">站点首页</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/10/index.html">10 月</a> / 2026-10-10 第 10 组</nav>
+<p class="meta">逻辑日期 2026-10-10（北京时间）· 实际完成 2026-10-10 13:43 CST · 任务类型 ROUTINE · 第 10 组</p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 10 组</h1>
+<p class="lede" id="conclusion">第 10 组共检查 3 种正式期刊；确认 1 个新完整期次、15 篇正式论文（新论文记录 15 篇、网络首发正式归期 0 篇），登记网络首发/在编/未来期 46 条；1 种期刊因官方源受限降级完成，0 种扫描失败，未发现撤稿或勘误。</p>
+<div class="cards" aria-label="关键计数">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>2</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>1</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>15</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>46</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复（已核查，0 项）</span></a>
+</div>
+</header>
+<main id="main">
+<section id="attention" aria-labelledby="attention-h"><h2 id="attention-h">需要关注</h2>
+<ul class="attention"><li><span class="tag ok">新期次</span> <strong>地理科学进展</strong> — 确认 2026-V45-I9 完整，15 篇正式论文均已出卡。 <span class="when">核查 2026-10-10 13:43 CST</span> <span class="evidence"><a href="https://www.progressingeography.com/CN/current" rel="noopener noreferrer">官方期次目录</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 一级证据</small></span></li><li><span class="tag warn">降级</span> <strong>ACM Transactions on Knowledge Discovery from Data</strong> — ACM Digital Library 官方 TOC/JA/LOI 均返回 Cloudflare Just a moment（HTTP 403）；无官方目录完整性证据，不得确认新完整期次。Crossref/OpenAlex 发现源显示 V20-I6..I9 可能已有条目，仅作发现提示。最近已简报期次仍为 2026-V20-I5。 <span class="when">核查 2026-10-10 13:43 CST</span> <span class="evidence"><a href="https://dl.acm.org/toc/tkdd/2026/20/5" rel="noopener noreferrer">官方期次目录</a><small>dl.acm.org · 2026-10-10 13:43 CST · 失败核查对象</small></span></li></ul></section>
+<nav class="toc" aria-label="页内快速导航"><strong>快速导航</strong>
+<a href="#conclusion">今日结论</a><a href="#tasks">扫描任务</a><a href="#overview">期刊总览</a><a href="#formal">新完整期次</a><a href="#online-first">网络首发</a><a href="#errata">勘误撤稿</a><a href="#topics">主题与阅读路线</a><a href="#health">数据源健康</a><a href="#audit">审计与状态</a></nav>
+
+<section id="tasks" aria-labelledby="tasks-h"><h2 id="tasks-h">扫描任务</h2>
+<p>本次为常规当日任务；补扫任务 0 项、二月尾组 0 项、开放发布队列 0 项（发布重试 0 项）；仍待补扫 0 项。</p>
+<div class="table-wrap"><table class="stack"><caption>任务清单（按执行顺序）</caption>
+<thead><tr><th scope="col">Task_ID</th><th scope="col">Task_Type</th><th scope="col">Coverage_Month</th><th scope="col">Scheduled_Date</th><th scope="col">组号</th><th scope="col">执行顺序</th><th scope="col">Run_Mode</th><th scope="col">实际执行时间</th><th scope="col">状态</th><th scope="col">失败原因</th></tr></thead>
+<tbody><tr id="task-ROUTINE-20261010-G10"><td data-label="Task_ID"><code>ROUTINE-20261010-G10</code></td><td data-label="类型">ROUTINE</td><td data-label="覆盖月份">2026-10</td><td data-label="计划日期">2026-10-10</td><td data-label="组号">第 10 组</td><td data-label="顺序">1</td><td data-label="Run_Mode">CURRENT</td><td data-label="实际执行">2026-10-10 13:43 CST</td><td data-label="状态">COMPLETED（1 刊降级）</td><td data-label="失败原因">无期刊级失败</td></tr></tbody></table></div>
+<p>扫描范围：月度轮检分组第 10 组正式期刊 REG-010 地理科学进展、REG-040 Geocarto International、REG-070 ACM Transactions on Knowledge Discovery from Data；本组无附加信号源。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="overview" aria-labelledby="overview-h"><h2 id="overview-h">期刊更新总览</h2>
+<div class="table-wrap"><table class="stack"><caption>逐刊状态（排序：失败/待修复 → 降级 → 有更新 → 零更新）</caption>
+<thead><tr><th scope="col">期刊</th><th scope="col">本次状态</th><th scope="col">最新确认完整期次</th><th scope="col">新完整期次</th><th scope="col">新增正式论文</th><th scope="col">Online First</th><th scope="col">源健康</th><th scope="col">官方目录</th></tr></thead>
+<tbody><tr><th scope="row" data-label="期刊">REG-070<br><strong>ACM Transactions on Knowledge Discovery from Data</strong></th><td data-label="本次状态"><span class="tag warn">降级完成</span></td><td data-label="最新确认完整期">2026-V20-I5</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">0</td><td data-label="源健康"><code>OFFICIAL_CF_CHALLENGE</code></td><td data-label="官方目录"><a href="https://dl.acm.org/toc/tkdd/2026/20/5" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-010<br><strong>地理科学进展</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-V45-I9</td><td data-label="新完整期">1</td><td data-label="新增正式论文">15</td><td data-label="网络首发">0</td><td data-label="源健康"><code>OFFICIAL_PAGE_OK</code></td><td data-label="官方目录"><a href="https://www.progressingeography.com/CN/current" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-040<br><strong>Geocarto International</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2025-V40-I1</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">46</td><td data-label="源健康"><code>OFFICIAL_CURRENT_OK_AXA_LOI_CF</code></td><td data-label="官方目录"><a href="https://www.tandfonline.com/toc/tgei20/current" rel="noopener noreferrer">官方期次目录</a></td></tr></tbody></table></div>
+<figure><img src="assets/2026-10-10_GIS-AI期刊每日摘要_第10组.png" width="1600" height="900" alt="第10组每日摘要图：检查正式期刊3种，有更新2种，新完整期次1个，新增正式论文15篇，网络首发与在编登记46条，失败或待修复0；降级1种"><figcaption>每日摘要图（1600×900，期刊级聚合）；等价文字计数见下表。</figcaption></figure>
+<div class="table-wrap"><table><caption>摘要图等价文字计数</caption><thead><tr><th scope="col">指标</th><th scope="col">数值</th></tr></thead><tbody><tr><th scope="row">已检查正式期刊</th><td>3</td></tr><tr><th scope="row">有更新期刊</th><td>2</td></tr><tr><th scope="row">新完整期次</th><td>1</td></tr><tr><th scope="row">新增正式论文</th><td>15</td></tr><tr><th scope="row">网络首发/在编</th><td>46</td></tr><tr><th scope="row">失败或待修复</th><td>0</td></tr><tr><th scope="row">降级期刊</th><td>1</td></tr><tr><th scope="row">去重抑制</th><td>113</td></tr><tr><th scope="row">增量复核</th><td>0</td></tr><tr><th scope="row">有界对账任务</th><td>4</td></tr></tbody></table></div>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="formal" aria-labelledby="formal-h"><h2 id="formal-h">新完整期次与逐篇卡片</h2>
+<nav aria-label="期次目录"><ol><li><a href="#issue-reg-010-e604b72ad115">地理科学进展 · 2026-V45-I9（15 篇）</a></li></ol></nav>
+<section class="issue" id="issue-reg-010-e604b72ad115" aria-labelledby="issue-reg-010-e604b72ad115-h"><h3 id="issue-reg-010-e604b72ad115-h">地理科学进展 · 2026年45卷第9期</h3><dl class="issue-meta"><div><dt>期次</dt><dd>2026-V45-I9</dd></div><div><dt>出版日期</dt><dd>2026-09-28（官方刊出日期）</dd></div><div><dt>正式论文</dt><dd>15 篇</dd></div><div><dt>范围</dt><dd>15 篇（官方 Current 目录两遍 15/15 DOI 一致）</dd></div><div><dt>完整性证据</dt><dd>官方目录多遍集合一致（pass1=15 / pass2=15）；issue gate=NEW_ISSUE</dd></div></dl><p>Magtech 官方 Current：2026年45卷第9期，刊出日期 2026-09-28；目录 15 DOI 两遍集合一致，gate-issue=NEW_ISSUE，claim 2026-V45-I9（新论文 15）。Just Accepted 本轮 0 条；RSS 端点返回 404，不影响官方目录完整性证据。相对 last_briefed 2026-V45-I8。</p><p><span class="evidence"><a href="https://www.progressingeography.com/CN/current" rel="noopener noreferrer">官方期次目录</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 一级完整性证据</small></span></p><details class="issue-toc"><summary>本期目录（15 篇，点击跳转论文卡片）</summary><ol><li><a href="#article-doi-7a40a69904a0d327">迈向城市时代的城市化理论：星球城市化的研究进展与中国反思</a></li><li><a href="#article-doi-3dcae8a6cb804d6b">ESG视角下中国国家公园可持续发展：理论、实践和启示</a></li><li><a href="#article-doi-ac4a45e2687f7cfd">2005—2025年灾害间接经济影响研究综述：方法、进展与前沿</a></li><li><a href="#article-doi-49a5d4176298fd3e">中国城市多中心开发的发生逻辑与精细识别：管理—形态—功能的集成视角</a></li><li><a href="#article-doi-ad7f2fb003793bf4">演化博弈视角下城市科创空间集聚机制及布局研究——以北京市域为例</a></li><li><a href="#article-doi-8fbb2fc5e6dd393c">城市空间发展的气候变化情景模拟与格局解析——以北京为例</a></li><li><a href="#article-doi-8449c10d67627f12">全球白色家电贸易网络演化及其驱动因素</a></li><li><a href="#article-doi-fcfe57199f956a4c">珠三角城市群芯片产业“双链”协同演化格局及影响因素分析</a></li><li><a href="#article-doi-d149c94bf2372de8">中国耕地多功能供需匹配的驱动机制及优化策略</a></li><li><a href="#article-doi-c9016a7ce820be0f">1982—2020年中国耕地绿度时空演变特征</a></li><li><a href="#article-doi-0e03bd3e351bb90e">从旅游通道到线性旅游地：“交旅”融合背景下道路的功能演变与意义重构</a></li><li><a href="#article-doi-3029a5ab8484d87e">大学生就业地域选择意愿的演变趋势及影响因素分析</a></li><li><a href="#article-doi-1b990a142f1afda6">基于SPHY模型与多源数据协同约束的拉萨河径流模拟</a></li><li><a href="#article-doi-a9c69365fa08f56a">基于深度学习的青海湖流域古城遥感识别</a></li><li><a href="#article-doi-8712b5085e4a6335">黄国璋先生的地理学思想与学术成就</a></li></ol></details><article class="paper" id="article-doi-7a40a69904a0d327">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>迈向城市时代的城市化理论：星球城市化的研究进展与中国反思</h3>
+<p>施德浩; 沈建法; 张京祥; 于涛</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.001</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.001" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>迈向城市时代的城市化理论：星球城市化的研究进展与中国反思</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.001 · 摘要来源：已核验来源</p><p class="abstract-body">当人类进入城市时代，城市化的主要空间表现已不再局限于人口与要素在建成区内的集聚或城市边界的持续扩张，而逐渐过渡到城市活动、关系与权力向乡村、自然及其他传统“非城市”空间的系统性延伸。在这一背景下，星球城市化理论成为近年来国际城市研究中重构“城市”概念与理解城市化总体过程的重要理论前沿。论文以综述与批判相结合的方式，系统回顾近半个世纪以来城市化研究的主要理论演进，梳理从空间生产理论、城市政治生态学到星球城市化的思想脉络，揭示当代城市研究由城市中心主义向城市化过程导向的认识论转向。在此基础上，综合水资源、生态空间与乡村地区等实证领域的研究进展，评述星球城市化理论的分析效力与内在张力，指出其以资本积累为核心的本体论预设在中国国家深度嵌入的制度环境中面临系统性的解释局限。通过中西城市化政治经济结构的比较分析，从目的、过程与机制等维度探讨中国城市化有别于资本中心主义的理论路径，为理解中国城镇化下半场的动力转型及推进全球城市理论对话提供了替代性的分析框架。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.001" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3dcae8a6cb804d6b">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>ESG视角下中国国家公园可持续发展：理论、实践和启示</h3>
+<p>郑耀洲; 许昌斌; 褚鑫颖; 吴智勇</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.002</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.002" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.002" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>ESG视角下中国国家公园可持续发展：理论、实践和启示</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.002 · 摘要来源：已核验来源</p><p class="abstract-body">建立以国家公园为主体的自然保护地体系，是践行习近平生态文明思想的重要举措与推进美丽中国战略的重要任务。中国国家公园的可持续发展既是践行绿水青山就是金山银山理念的最佳途径，也是促进形成人与自然和谐共生格局的有效实践。而ESG (environmental，social，governance)作为落实可持续发展要求的完整方案，与国家公园的深度结合具有重要意义。为系统论证ESG得以引入国家公园领域的内在逻辑，探讨ESG在国家公园可持续发展中的理论价值与实践路径，论文通过文献回顾和归纳演绎，基于ESG三个维度系统梳理了国家公园相关研究，并立足中国国家公园本土特色构建了ESG视角下的中国国家公园可持续发展研究模型：理论层面，从ESG的理论内涵与支撑理论两方面，论证其嵌入中国国家公园可持续发展的合理性；实践层面，系统归纳国家公园在ESG三维度的可持续发展实践，验证ESG驱动中国国家公园可持续发展的可行性；启示层面，结合理论与实际，提出ESG应用于中国国家公园的启示与建议。研究为中国的生态文明建设提供了新的理论视角，有助于拓宽ESG的应用边界，对于推进国家公园可持续发展具有重要的理论价值与现实意义。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.002" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-ac4a45e2687f7cfd">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>2005—2025年灾害间接经济影响研究综述：方法、进展与前沿</h3>
+<p>丁薇; 吴吉东</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.003</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.003" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.003" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>2005—2025年灾害间接经济影响研究综述：方法、进展与前沿</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.003 · 摘要来源：已核验来源</p><p class="abstract-body">全球变化背景下极端灾害的经济损失可能显著增加，尤其是间接损失。近年来，许多研究揭示了灾害间接损失的量级和波及效应。论文对2005—2025年国内外新兴研究的方法和进展进行系统综述。根据202篇文献计量分析结果，中文和英文文献发表数量呈现逐年上升趋势，尤其是在巨灾年份后数量明显增多。目前，灾害间接经济影响评估方法包括比例系数法、计量经济模型、投入产出(input-output，IO)模型和可计算一般均衡(computable general equilibrium，CGE)模型，以及近几年新兴的基于主体的模型和混合模型等。不过，IO和CGE模型仍是最主要的评估方法。此外，灾害间接经济影响研究逐渐从灾区内停减产、产业关联损失向灾害经济波及影响、供应链损失演变，同时考虑灾害导致交通、电力等关键基础设施中断的经济影响。由于产业链的空间分散性、基础设施的网状分布特征等，灾害影响在地理空间和时间上扩散，造成明显经济溢出效应。现有研究仍存在一些不足，如主要关注灾后中短期影响，忽视灾后恢复重建带来的正面影响，对复杂且相互依赖的基础设施网络中断的经济影响考虑较少，亟需进一步深度耦合经济模型与物理网络模型。未来，灾害链、复合灾害经济影响及韧性提升等领域或将成为新的研究热点，而气候变化经济影响与适应策略预计仍将是主流研究方向之一。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.003" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-49a5d4176298fd3e">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>中国城市多中心开发的发生逻辑与精细识别：管理—形态—功能的集成视角</h3>
+<p>汤冰冰; 王田雨; 陈阳</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.004</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.004" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.004" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>中国城市多中心开发的发生逻辑与精细识别：管理—形态—功能的集成视角</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.004 · 摘要来源：已核验来源</p><p class="abstract-body">城市多中心开发作为引导城市宏观结构的规划途径，在全国范围内广泛推行，引起各界对中国是否已形成“形流相生”多中心结构这一问题的关注。然而，中国与西方城市多中心开发的发端背景与形成过程截然不同，若机械地沿用西方解构多中心的思路，则会忽视中国城市多中心开发的制度嵌入和特殊过程。对此，论文深入探讨中国城市多中心开发的发生逻辑，建构“管理—形态—功能”多中心的概念框架，运用投影寻踪模型、社区发现算法和耦合协调度模型，精细识别上海的多中心开发与多维耦合特征。结果表明，多中心空间框架基本成型，但功能网络仍以主城区为主导，新城功能尚未成熟；多维耦合协调度呈现“内高外低”的非均衡特征；反映为上海市多中心开发存在雏形培育型、规划主导型、形态扩张型、管理形态协同型与功能演进型5种模式，显示功能整合未完全匹配空间布局。研究立足中国制度背景，系统阐释多中心开发的本土发生逻辑，为优化城市空间治理提供了理论与实践依据。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.004" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-ad7f2fb003793bf4">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>演化博弈视角下城市科创空间集聚机制及布局研究——以北京市域为例</h3>
+<p>刘昱杉; 蒋志阳; 戎卿文; 任帅</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.005</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.005" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.005" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>演化博弈视角下城市科创空间集聚机制及布局研究——以北京市域为例</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.005 · 摘要来源：已核验来源</p><p class="abstract-body">面向城市高质量发展的创新空间治理，亟需厘清科技创新空间的集聚机理与布局演化规律。论文基于“演化博弈—空间实证”一体化框架，以北京市域为例，构建“政府—园区—小微企业”三方演化博弈模型，结合空间自相关分析、共定位商检验与参数化情景模拟等方法，从不同主体策略互动与空间效应两层面揭示科创空间的集聚规律。研究发现：① 科创空间呈现“多核协同、圈层扩散”的梯度格局、多层联动的布局特征；② 科创园区对小微科创空间的吸附集聚存在显著的距离衰减与外溢效应，政策扶持可显著放大该效应；③ 协同带动、外溢扩散与成本约束之间的动态平衡共同塑造多层级集聚格局。研究结果为优化城市科创空间布局与协同治理提供了理论支撑与实证依据。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.005" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8fbb2fc5e6dd393c">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>城市空间发展的气候变化情景模拟与格局解析——以北京为例</h3>
+<p>宗珊珊; 柯钦华; 安丰平; 徐姗</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.006</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.006" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.006" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>城市空间发展的气候变化情景模拟与格局解析——以北京为例</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.006 · 摘要来源：已核验来源</p><p class="abstract-body">在气候变化与城镇化双重背景下，探讨不同社会经济发展路径下超大城市空间演化特征，对优化城市土地利用结构和提升空间治理能力具有重要意义。论文以北京市为例，基于CMIP6框架下融合共享社会经济路径(shared socioeconomic pathways，SSPs)与典型浓度路径(representative concentration pathway，RCPs)的气候变化情景，耦合SD-PLUS模型模拟了不同情景下2020—2050年的土地利用变化。并从城市扩张速度、空间形态、扩张模式、发展方向等维度探究城市空间扩展的时空演化特征。研究发现：① 2020—2050年，城市建设用地在SSP1-2.6、SSP2-4.5和SSP5-8.5情景均呈扩张趋势，其中SSP5-8.5情景的扩张面积最大，约为SSP1-2.6情景的4倍，并对耕地、草地形成明显挤压。揭示了高排放路径以牺牲生态空间为代价换取城市扩张的不可持续性。② 不同情景下的城市建设用地扩张速度和强度始终是SSP5-8.5&gt;SSP2-4.5&gt;SSP1-2.6，且SSP5-8.5情景下城市扩张呈显著加速趋势，城市边界复杂度增强、紧凑度下降，而SSP1-2.6情景下城市形态趋于紧凑稳定。说明严格的城市增长管理是遏制空间失序的重要抓手。③ 未来城市建设用地扩张以飞地式和边缘式模式并存为主，东北与西南是主要扩张方向。其中，SSP5-8.5情景下重心整体向东迁移，SSP1-2.6情景下向西南方向迁移。④ 未来城市发展应以SSP1-2.6情景为规划目标导向，通过强化“红线”约束、差异化分区管控实现城市空间精明增长，规避高排放情景下的空间失序风险。研究从多情景比较视角揭示了不同社会经济与气候路径下超大城市空间扩张特征的差异性，为城市空间演化研究提供了新的情景分析框架。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.006" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8449c10d67627f12">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>全球白色家电贸易网络演化及其驱动因素</h3>
+<p>戴亦杨; 宋周莺</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.007</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.007" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.007" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>全球白色家电贸易网络演化及其驱动因素</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.007 · 摘要来源：已核验来源</p><p class="abstract-body">随着全球贸易摩擦加剧，家电产业逐渐成为大国博弈的重要领域之一。在此背景下，研究全球家电贸易网络演化及其驱动因素，对中国应对贸易摩擦、优化家电贸易海外布局具有重要意义。论文首先刻画1995—2023年全球白色家电贸易网络的演化特征，然后采用引力模型解析白色家电贸易的关键因素动态变化。主要结论如下：① 全球白色家电贸易发展可划分为产业转移期、高速增长期、转型升级期、产业链再分工和后疫情时期5个阶段。② 白色家电贸易网络格局呈现从“西欧—北美”两极转向“东亚—北美—西欧”三极，再逐渐转向以中国为出口辐射核心、美国为进口核心的特征。③ 从全局看，白色家电贸易网络从全球化转向区域化。整体连通水平和效率增强，局部联系先弱后强；出口核心由欧美日转向中墨泰，进口核心稳定在欧美日；美国是核心枢纽，中国枢纽地位不断增强，但中国在网络结构中的重要性先升后降。④ 制造业水平、城镇人口规模和消费水平构成白色家电贸易的核心驱动因素，自由贸易协定和共同语言是关键促进因素，劳动力成本与地理距离为主要阻碍因素。制造业水平、信息化水平、自由贸易协定促进作用增强，劳动力成本、进口国环境规制的抑制作用增强，技术专利规模作用先增强后减弱，语言邻近性作用显著减弱。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.007" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-fcfe57199f956a4c">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>珠三角城市群芯片产业“双链”协同演化格局及影响因素分析</h3>
+<p>林佳蕾; 方远平; 游小珺</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.008</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.008" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.008" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>珠三角城市群芯片产业“双链”协同演化格局及影响因素分析</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.008 · 摘要来源：已核验来源</p><p class="abstract-body">芯片产业是抢占全球科技制高点、实现科技自强的战略性新兴产业，其产业链与创新链的空间协同格局深刻影响着产业升级与竞争优势形成。论文基于珠三角芯片产业2010—2023年的专利数据与企业数据，采用区位商识别珠三角芯片产业创新中心与生产中心并刻画其分布格局演化特征，运用地理探测器分析驱动分布格局演化的主要因素，结果显示：① 整体演化上，深圳始终是珠三角芯片产业的创新中心，深圳、广州、东莞形成生产集聚的发展轴；② 从产业链与创新链协同发展的空间格局看，上游和中游均尚未形成持续稳定的协同分布格局，下游正逐步形成核心城市创新、周边城市承接生产的协同格局；③ 地理探测器结果表明，产业链空间演化的主导因素由早期R&amp;D经费投入、高等院校数量，转向地区生产总值、交通通达度，并进一步转变为国家级工业园区数量等。创新链空间演化由高新技术产业增加值主导转变为以高等院校和R&amp;D人员为核心的人才驱动。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.008" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-d149c94bf2372de8">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>中国耕地多功能供需匹配的驱动机制及优化策略</h3>
+<p>莫钧雄; 朱红波; 丁未来; 周瑞彤; 王颜青</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.009</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.009" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.009" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>中国耕地多功能供需匹配的驱动机制及优化策略</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.009 · 摘要来源：已核验来源</p><p class="abstract-body">耕地多功能供需匹配对于中国耕地资源管理与推进农业现代化进程至关重要，全国地市层面的相关研究受数据限制进展缓慢。论文基于人地关系地域系统理论解析耕地多功能内涵、演变与分类的基础上，综合利用层次分析法、加权求和模型、Spearman秩相关系数和空间计量模型等方法，揭示2012—2022年中国地市层面耕地多功能供需匹配的演变格局、相互关系以及驱动机制，并提出相应分区优化策略。结果表明：① 中国耕地多功能的供给与需求水平呈东南高—西北低格局，高功能供给区表现下降趋势，而生产和生态功能的中高需求区有所上升；耕地多功能供需匹配关系正逐渐被打破，东南部的生产、生态和文化功能供需相对平衡，西北和西南部生活功能失衡明显。② 耕地多功能之间供给关系均表现出明显的协同关系；在需求和供需方面，仅有生活—文化功能表现出权衡关系，其余功能交互则呈现协同关系。③ 耕地多功能供需匹配受自然资源、经济社会和政策的共同影响，从变化规律来看，自然因素的重要性相对低于社会经济因素的影响作用。④ 依据耕地多功能供需组合关系划分了6类分区，提出的赤字区补短板、平衡区保稳定、盈余区优质量的差异化策略，可实现耕地资源供需匹配与可持续利用。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.009" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-c9016a7ce820be0f">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>1982—2020年中国耕地绿度时空演变特征</h3>
+<p>杨家一; 胡琼; 朱娜娜; 许闽莉; 魏晨希; 李沛峰</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.010</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.010" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.010" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>1982—2020年中国耕地绿度时空演变特征</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.010 · 摘要来源：已核验来源</p><p class="abstract-body">耕地绿度是评估农业生态健康状况与生产潜力的关键指标，对中国耕地资源保护、农业可持续发展和粮食安全保护具有重要意义。论文基于1982—2020年长时间序列GIMMS LAI4g叶面积指数数据，结合中国九大农业区区划，综合运用分段线性回归、Theil-Sen median趋势分析、Mann-Kendall显著性检验、稳定性分析方法和重心迁移模型，定量揭示了中国耕地绿度的时序变化、空间分异及重心迁移特征。结果表明：① 1982—2020年中国耕地绿度整体维持上升趋势(0.0057/a)，并在2004年前后出现明显阶段性变化，转折后增速约为前期的7倍，其中长江中下游平原区、四川盆地及周边地区的趋势转折点延后至2013年，青藏高原区延迟至2015年，大部分农业区在转折后增幅提升显著，而长江中下游平原区则由上升转为下降。② 空间上，中国耕地绿度呈“东南高、西北低”分布格局，显著变绿区域主要集中于黄土高原区(67.6%)、四川盆地及周边地区(63.4%)和北方干旱半干旱区(58.7%)，而华南区和长江中下游平原区变褐比例较高。③ 中国耕地绿度重心总体向西北方向迁移，南北向的累计位移距离和平均移动速度均高于东西向，其中北方干旱半干旱区和青藏高原区的迁移距离较大，分别达到108 km和48 km。研究结果系统刻画了1982—2020年中国耕地绿度的时空演变特征，可为耕地资源保护的分区施策、农业生态系统可持续管理与粮食安全战略的制定提供科学依据。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.010" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-0e03bd3e351bb90e">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>从旅游通道到线性旅游地：“交旅”融合背景下道路的功能演变与意义重构</h3>
+<p>李磊; 陆林; 陶卓民; 李冬花; 郭强</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.011</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.011" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.011" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>从旅游通道到线性旅游地：“交旅”融合背景下道路的功能演变与意义重构</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.011 · 摘要来源：已核验来源</p><p class="abstract-body">道路是交通与旅游融合发展的核心载体，重新审视道路的功能内涵与价值意义，对于推动“交旅”融合发展，助力交通强国、旅游强国建设具有重要意义。论文以路学、风景道、遗产廊道等理论为基础，以新疆独库公路为案例地，运用网络民族志等研究方法，分析“交旅”融合背景下道路的功能演变与意义重构过程。研究发现，“交旅”融合并非交通与旅游的简单叠加或单向耦合，而是打破二者的理论边界实现深度共生，最终形成兼具多重功能的复合空间。作为“交旅”融合的核心载体，道路在通勤的基础之上，衍生出景观、游憩、文化、精神等多元功能，推动其由单一旅游通道向复合型旅游廊道转型发展。道路功能演变契合了流动性时代旅游者“行游一体”的核心需求，使其成为旅游行为发生与意义建构的新场域，从而由机械的物理空间转变为具有复杂含义的线性旅游地。研究的理论贡献在于引入“线性旅游地”概念，整合了工程、景观、遗产等不同学派的理论观点，构建了“交旅”融合背景下旅行道路研究的理论分析框架。同时，通过重新阐释交通与旅游的关系，实现了从旅游通道到线性旅游地的理论拓展，对于完善旅游地理学的理论体系具有启示意义。此外，研究提出加快线性旅游地建设、挖掘道路多元价值、关注旅游者情感体验、构建跨界协同机制等政策建议，为推动“交旅”融合发展提供了实践参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.011" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3029a5ab8484d87e">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>大学生就业地域选择意愿的演变趋势及影响因素分析</h3>
+<p>刘保中; 臧小森</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.012</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.012" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.012" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>大学生就业地域选择意愿的演变趋势及影响因素分析</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.012 · 摘要来源：已核验来源</p><p class="abstract-body">大学生就业地域选择是高素质劳动力空间配置的关键环节，其流向与结构不仅直接决定人力资本在区域间的分布效率，亦深刻影响着城市与区域经济增长的路径与格局。论文基于“中国大学生追踪调查”2015—2024年10期混合截面数据，利用多项Logit模型与Shapley值分解方法，分析10年间大学生就业地域选择意愿的演变趋势及其影响因素。研究发现：① 大学生就业地域选择偏好呈现空间分布多元化趋势。选择一线城市的比例由2015年的37.7%下降至2024年的31.8%；选择二线城市的比例虽亦有下降，但仍居主导地位(46.3%)；选择三、四线及以下城市的比例由9.3%显著上升至21.9%。② 大学生人力资本、家庭背景、院校专业背景及个体人口学特征对就业地域选择意愿均具有显著影响，其中家庭背景因素的贡献度呈明显上升趋势，成为影响一线城市就业选择的首要因素，院校专业背景的贡献度有所下降，而人力资本与个体人口学特征因素的贡献度维持在较低水平且相对稳定。③ 人力资本筛选机制、家庭资源传递机制、院校分层传导机制和时期效应机制是驱动大学生就业地域选择意愿变迁的主要机制。研究结论为理解中国区域协调发展战略下高素质劳动力的空间再配置提供了微观证据，也为地方政府优化人才政策、提升人才吸引力提供了针对性的决策参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.012" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-1b990a142f1afda6">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>基于SPHY模型与多源数据协同约束的拉萨河径流模拟</h3>
+<p>贾少航; 桑燕芳; 赵雪花; 薛龙雨; 武茜茜; 江玉吉</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.013</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.013" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.013" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于SPHY模型与多源数据协同约束的拉萨河径流模拟</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.013 · 摘要来源：已核验来源</p><p class="abstract-body">受冰冻圈过程影响，高寒区径流得到多源补给且过程复杂，但由于资料稀缺，仅依靠径流观测数据进行模型校准时难以克服异参同效问题，因此无法达到理想的径流模拟效果。为提高高寒区径流模拟精度与合理性，论文选择拉萨河流域为研究区，构建了基于SPHY(spatial processes in hydrology)模型的三阶段参数校准框架(SPHY-three-stage calibration，SPHY-TSC)：首先利用MODIS积雪覆盖数据校准融雪模块参数，然后利用GRACE陆地水储量数据校准冰川模块参数，最后利用实测径流数据对汇流模块参数进行校准。结果表明：① 相较于已有研究结果和直接利用SPHY模型，SPHY-TSC模拟方案得到的该径流模拟结果的Nash-Sutcliffe效率系数提高到0.87，Kling-Gupta效率系数提高到0.92；② 划分为三个子流域分别进行参数率定时，因存在误差累积现象，径流模拟结果精度低于以流域为整体单元的径流模拟结果；③ 流域多年平均径流组分中，降雨径流占比54.83%，融雪径流次之(19.64%)，基流比例居第三(14.94%)，冰川径流比例仅为10.59%；④ 受气温逐年持续升高的影响，1982—2010年间流域降雨径流、融雪径流、冰川径流呈增长趋势，而基流保持稳定。综上，SPHY-TSC模拟方案通过递进式校准模型融雪、冰川和汇流模块，使得径流模拟结果更加准确、合理，在高寒区径流模拟中具有良好的适用性和应用优势。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.013" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a9c69365fa08f56a">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>基于深度学习的青海湖流域古城遥感识别</h3>
+<p>桑英; 侯光良; 石轩; 王倩倩; 赵健赟; 杜雨; 何家豪</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.014</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.014" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.014" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于深度学习的青海湖流域古城遥感识别</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.014 · 摘要来源：已核验来源</p><p class="abstract-body">青海湖流域位于青藏高原东北缘，是多民族交流融合与古代交通活动的重要区域，广泛分布有丰富的古城。针对高原古城在遥感影像中存在尺度差异大、边界模糊、形态残损及背景干扰强等问题，论文基于高分二号(GF-2)高分辨率遥感影像，构建古城样本数据集，并在YOLOv11深层语义特征与检测头之间嵌入Vision Transformer (ViT)全局增强模块，结合考古综合判读与实地调查，提出YOLOv11-ViT遥感考古融合识别方法。实验结果表明：① 该模型在精确率、召回率、mAP@50、mAP@50-95和F1值上分别达到0.995、0.962、0.982、0.847和0.970，综合检测性能总体优于Faster R-CNN、RT-DETR及多种YOLO系列模型；② 利用该模型识别出209处疑似古城，经面积约束、形态特征判读、地貌区位分析综合筛选后，得到74处可能的古城；③ 对74处可能古城开展实地调查，确认达赖嘛呢三号、达赖嘛呢四号两处为新发现的古城遗存。该研究可提升极端高原环境下弱特征古城识别精度与可信度，可为青藏高原古城普查、文化遗产保护和遥感考古研究提供依据和参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.014" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8712b5085e4a6335">
+<p class="kicker">地理科学进展 · FORMAL_ISSUE</p>
+<h3>黄国璋先生的地理学思想与学术成就</h3>
+<p>王金伟; 吴贞萱; 赵庆玺</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I9</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.18306/dlkxjz.2026.09.015</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ARTICLE_PAGE_ABSTRACT</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.015" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.18306/dlkxjz.2026.09.015" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>黄国璋先生的地理学思想与学术成就</strong></p><p class="abstract-meta">期刊：地理科学进展 · DOI：10.18306/dlkxjz.2026.09.015 · 摘要来源：已核验来源</p><p class="abstract-body">黄国璋先生是推动中国地理学由传统地志学向现代学科转型的重要代表人物。论文基于黄国璋先生的著述及学术活动资料，结合相关研究，运用文献分析和历史考察方法，探讨其地理学思想、实践及贡献。研究发现，黄国璋先生通过课程与教材建设、刊物创办、研究机构建设和学术组织振兴，推动了中国地理学的制度化与专业化发展；以实地调查为基础，结合区域综合研究与人地关系分析，促进了传统记述性地理向现代科学地理的转型。其知识生产与理论建构过程可归纳为“引入—在地化—再创造”，在引进现代地理的观念、方式、制度后加以运用，并将中国区域环境、地理教育和现实问题纳入研究范畴，逐步形成面向本土问题的地理学表达。同时，他强调地理学的经世致用价值，重视地理学与边疆治理、国防安全、区域开发和社会现实之间的联系，使地理学成为一门兼具理论性与应用性，科学性与实践性的综合性学科。黄国璋先生的贡献不仅在于传播现代地理学知识，更在于推动外来知识的选择性吸收与本土化重构，为中国地理学自主知识体系建构提供了重要启示。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.progressingeography.com/CN/10.18306/dlkxjz.2026.09.015" rel="noopener noreferrer">官方论文页面</a><small>www.progressingeography.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-010-e604b72ad115">返回本期目录</a> · <a href="#top">返回页首</a></p></article></section>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="online-first" aria-labelledby="of-h"><h2 id="of-h">网络首发 / 在编 / 未来期登记</h2>
+<p>本批新登记 <strong>46</strong> 条（Geocarto International 46）。以下条目只作登记，不作为完整期次证据；正式归期后按 DOI（ScienceDirect 按 PII）合并，不重复计数。</p>
+<section class="of-journal" id="of-reg-040" aria-labelledby="of-reg-040-h"><h3 id="of-reg-040-h">Geocarto International · 新登记 46 条</h3><p>官方 Current Vol 41 No 1 标注 Issue In Progress；159 篇 TOC 两遍稳定，仅作在编期/网络首发发现登记，不得确认完整期。页内展示前 12 条，其余已写入账本。</p><article class="paper" id="article-doi-0221c737ba6b7a04">
+<p class="kicker">Geocarto International · ONLINE_FIRST</p>
+<h3>DAS-Unet for building extraction from high-resolution remote sensing images</h3>
+<p>Ziyang Pan; Lei Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10106049.2025.2598177</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_IN_PROGRESS</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2598177" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10106049.2025.2598177" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>DAS-Unet for building extraction from high-resolution remote sensing images</strong></p><p class="abstract-meta">期刊：Geocarto International · DOI：10.1080/10106049.2025.2598177 · 摘要来源：出版方摘要</p><p class="abstract-body">Building extraction from high-resolution remote sensing images is critical for urban planning and disaster management but remains challenging due to complex boundaries and dense distributions. This paper proposes DAS-Unet, an enhanced U-Net–based model designed to improve segmentation accuracy. The model incorporates a strengthened backbone for multi-scale and edge feature learning, an optimized pooling module with multi-directional pooling and dilated convolution to capture fine details and global context, and an A2 attention module to refine local features while enhancing computational efficiency. Experiments on the Massachusetts dataset and a self-built Kunshan City dataset demonstrate the superior performance of DAS-Unet over U-Net and other state-of-the-art models. DAS-Unet achieves F1-scores of 91.45% and 91.08% and mIoUs of 84.72% and 84.36% on the respective datasets, confirming its effectiveness and robustness in building extraction tasks.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2598177" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-aaa78a8bda3a63f6">
+<p class="kicker">Geocarto International · ONLINE_FIRST</p>
+<h3>The approach of automatic drainage anomalies extraction for active tectonic detection: Jizan coastal plain (Southwestern of Saudi Arabia)</h3>
+<p>Sarra Ouerghi; Abdulaziz Ali M. Al-Mannai</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10106049.2025.2600181</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_IN_PROGRESS</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2600181" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10106049.2025.2600181" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>The approach of automatic drainage anomalies extraction for active tectonic detection: Jizan coastal plain (Southwestern of Saudi Arabia)</strong></p><p class="abstract-meta">期刊：Geocarto International · DOI：10.1080/10106049.2025.2600181 · 摘要来源：出版方摘要</p><p class="abstract-body">This study addresses the challenge of identifying active faults concealed beneath thick Quaternary sediments in the Jizan coastal plain, a region of moderate seismicity. It introduces a novel, automated ArcGIS Model Builder tool that utilizes (DEMs) and drainage network analysis to detect drainage anomalies as neotectonic indicators. The analysis reveals that 27% of the studied drainage segments are anomalous, demonstrating a strong spatial correlation with known subsurface fault systems, particularly the NE–SW to WNW–ESE trends. These findings are tectonically coherent with seismic analyses of regional earthquakes, which consistently show dextral strike-slip mechanisms along ENE-WSW to NE-SW oriented faults. These structures represent the reactivation of Precambrian basement faults under the contemporary stress regime driven by Arabian Plate motion and Red Sea rifting. The automated methodology provides an alternative to expensive geophysical surveys for morphostructural mapping in sediment-obscured terrains, offering a significant advancement for neotectonic studies and seismic hazard assessment.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2600181" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-9412d03a5f408fcb">
+<p class="kicker">Geocarto International · ONLINE_FIRST</p>
+<h3>Vegetation dynamics and dominant driving factors in a semi-arid coal mining area under a disturbance–restoration zoning framework</h3>
+<p>Li Yuanyuan; Shaogang Lei; Zhao Yibo; Cao Ruochen; Josep Penuelas</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10106049.2025.2603053</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_IN_PROGRESS</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2603053" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10106049.2025.2603053" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Vegetation dynamics and dominant driving factors in a semi-arid coal mining area under a disturbance–restoration zoning framework</strong></p><p class="abstract-meta">期刊：Geocarto International · DOI：10.1080/10106049.2025.2603053 · 摘要来源：出版方摘要</p><p class="abstract-body">Understanding vegetation dynamics in arid mining ecosystems remains limited, despite the extensive disturbances imposed by mining activities. Integrating remote sensing and field observations, we applied the Mann–Kendall test, Theil–Sen slope, the BFAST01 algorithm, Boosted Regression Trees, and Partial Least Squares Structural Equation Modeling to quantify vegetation trajectories and their drivers across four disturbance–restoration zones in the Shendong mining area. Between 2000 and 2022, 88.4% of the region experienced significant vegetation improvement (p &lt; 0.01), accompanied by pronounced spatial heterogeneity in transition patterns. Zone 1 exhibited the fewest interruption-related declines, zone 2 showed the highest frequency of transitions from increase to decrease, zone 3 displayed the lowest transition frequency, and zone 4 experienced more frequent interruptions. Non-climatic factors accounted for 86.6% of vegetation improvement, with dominant drivers varying among zones. These findings underpin a zoning–grading–customized restoration framework that provides targeted guidance for ecological rehabilitation in arid mining landscapes.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2603053" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-ac0a9527308f26ee">
+<p class="kicker">Geocarto International · ONLINE_FIRST</p>
+<h3>Incorporating spatial heterogeneity of environmental variables into landslide susceptibility prediction</h3>
+<p>Xin Zhao; Zhifang Zhao; Zemin Xu; Zhiquan Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10106049.2025.2603057</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_IN_PROGRESS</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2603057" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10106049.2025.2603057" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Incorporating spatial heterogeneity of environmental variables into landslide susceptibility prediction</strong></p><p class="abstract-meta">期刊：Geocarto International · DOI：10.1080/10106049.2025.2603057 · 摘要来源：出版方摘要</p><p class="abstract-body">Environmental variables, characterized by spatial heterogeneity, exert a significant impact on landslide susceptibility prediction (LSP). Previous studies generally assume that within the entire study area, the impact of each environmental variable on landslide distribution is spatially homogeneous—a perspective that essentially represents a global prediction mode. Herein, we incorporated the spatial heterogeneity of environmental variables into LSP modeling. Building upon the identification of dominant variable combinations of heterogeneous regions using geographically weighted regression, we proposed a zonal prediction method by leveraging random forest and support vector regression. The accuracy of our method (with an average Area Under the Curve (AUC) of 0.818 across all heterogeneous regions) was higher than that of the global prediction mode (AUC = 0.7). Furthermore, we found that the inter-regional distribution of dominant variables may be associated with landslide distribution. Our findings provide insights for LSP research in areas with variations in internal environmental characteristics.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2603057" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-1df90ec20f263dca">
+<p class="kicker">Geocarto International · ONLINE_FIRST</p>
+<h3>Curvature-aware urban terrain earthwork volume estimation: a multi-city remote sensing framework</h3>
+<p>Sakiru Olarewaju Olagunju; Huseyin Atakan Varol; Ferhat Karaca</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10106049.2025.2609371</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_IN_PROGRESS</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2609371" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10106049.2025.2609371" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Curvature-aware urban terrain earthwork volume estimation: a multi-city remote sensing framework</strong></p><p class="abstract-meta">期刊：Geocarto International · DOI：10.1080/10106049.2025.2609371 · 摘要来源：出版方摘要</p><p class="abstract-body">Accurate estimation of earthwork material volume is essential for achieving circular and resource-efficient urban development, enabling material reuse in construction planning. Traditional survey techniques cannot efficiently cover large areas, while grid-based approaches often overlook terrain curvature. This study presents a novel and scalable framework for earthwork volume estimation across five cities over eleven years. We introduce a curvature-aware methodology using sub-meter digital terrain models (DTMs) derived from Maxar stereo imagery. DTMs were validated against commercial datasets (RMSE 1.12–2.10 m) and literature benchmarks. Our approach combines adaptive grid refinement with spline-based volume integration, yielding 20.6% lower error than grid-based methods. Pre-earthwork terrain surfaces were reconstructed using Natural Neighbor Interpolation (RMSE 0.06 m in Astana). Temporal analysis reveals diverse urban development trajectories, including volume decline in Astana, stable growth in Almaty and Porto, and seasonal drops in Prague. These findings support sustainable construction strategies through precise city-scale earthwork volume estimation.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2609371" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a3d75ce500558230">
+<p class="kicker">Geocarto International · ONLINE_FIRST</p>
+<h3>Integrated analysis of water storage variability using GRACE and SHETRAN modelling system in the Central Rift Valley basin of Ethiopia</h3>
+<p>Tsedenya Tafesse; Greg O&#x27;Donnell; Claire Walsh; Jaime Amezaga</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10106049.2025.2609391</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_IN_PROGRESS</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2609391" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10106049.2025.2609391" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Integrated analysis of water storage variability using GRACE and SHETRAN modelling system in the Central Rift Valley basin of Ethiopia</strong></p><p class="abstract-meta">期刊：Geocarto International · DOI：10.1080/10106049.2025.2609391 · 摘要来源：出版方摘要</p><p class="abstract-body">The Central Rift Valley (CRV) basin in Ethiopia has undergone significant hydrological changes driven by climate variability, population growth, and agricultural intensification. However, the understanding of long-term water storage dynamics remains limited due to a lack of in-situ data, which continues to hinder effective water resource management. GRACE satellite observations combined with physically based hydrological modelling were used to assess Total Water Storage Anomalies (TWSA), Groundwater Storage Anomalies (GWSA), and the often-neglected surface water storage component of the hydrological mass balance. Results reveal an increase in TWSA after 2010, which is attributed to enhanced rainfall from an unusual clustering of ENSO and IOD events and to limited groundwater abstraction. Integration of satellite data and modelling provides insight into the temporal dynamics of groundwater storage. This study highlights the need for integrated water resources management strategies that account for climatic variability and increasing anthropogenic pressures in vulnerable basins like the CRV.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2609391" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6e98f3618abee54f">
+<p class="kicker">Geocarto International · ONLINE_FIRST</p>
+<h3>A phenology-weighted cross-correlation method for long-term monitoring of non-grain cultivation expansion in the Guanzhong Plain, China</h3>
+<p>Ruolan Jia; Jianhong Liu; Jing Wang; Wei Li; Ziqi Wang; Xi Wang; Peijun Sun</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10106049.2025.2610042</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_IN_PROGRESS</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2610042" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10106049.2025.2610042" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A phenology-weighted cross-correlation method for long-term monitoring of non-grain cultivation expansion in the Guanzhong Plain, China</strong></p><p class="abstract-meta">期刊：Geocarto International · DOI：10.1080/10106049.2025.2610042 · 摘要来源：出版方摘要</p><p class="abstract-body">Mapping spatio-temporal patterns of non-grain cultivation is critical for understanding agricultural land-use transitions and their implications for regional food security. This study developed a phenology-enhanced classification method integrating the Cross-Correlogram Spectral Matching (CCSM) algorithm with a weighted absolute value distance to distinguish grain and non-grain crops in China’s Guanzhong Plain from 2000 to 2023. Using MODIS EVI time series, we identified six key phenological stages to improve classification accuracy. The method achieved an overall accuracy of 93% and a Kappa coefficient of 0.90. Results revealed that non-grain cultivation expanded significantly, covering 9,142 km² (54% of cropland) by 2023. Spatiotemporal analysis identified clear core agglomeration zones and a stable spatial structure, with limited directional expansion but intensified local clustering. This study provides a robust tool for monitoring non-grain dynamics and highlights the need for spatially targeted land-use governance to ensure sustainable agricultural development.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2610042" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-898d00dc825fadc7">
+<p class="kicker">Geocarto International · ONLINE_FIRST</p>
+<h3>A3TGCN: attention temporal graph convolutional network for enhanced PM 2.5 spatiotemporal modeling</h3>
+<p>Sara Haghbayan</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10106049.2025.2610935</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_IN_PROGRESS</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2610935" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10106049.2025.2610935" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A3TGCN: attention temporal graph convolutional network for enhanced PM 2.5 spatiotemporal modeling</strong></p><p class="abstract-meta">期刊：Geocarto International · DOI：10.1080/10106049.2025.2610935 · 摘要来源：出版方摘要</p><p class="abstract-body">Accurate spatiotemporal modeling of PM2.5 is crucial for protecting public health, but remains challenging due to the non-Euclidean distribution of AQM stations and the spatiotemporal dependencies. Existing approaches often ignore the simultaneous extraction of spatiotemporal dependencies and tend to model only local, Euclidean spatial dependencies between AQM stations, overlooking global and non-Euclidean dependencies. To address these limitations, an attention-based temporal graph convolutional network (A3TGCN) is developed to simultaneously extract the spatiotemporal dependencies of PM2.5 across urban AQM stations. Temporal dependencies are extracted using gated recurrent units (GRUs), spatial dependencies are modeled using a graph convolutional network (GCN) built on a non-Euclidean graph. An attention mechanism adaptively weights different time steps to extract global temporal dependencies. Experiments on Tehran AQM data show that A3TGCN reduces RMSE by 11% and MAE by 13% at T + 1 compared to GRU, maintaining 3–5% RMSE improvements up to 24 hours and outperforming state-of-the-art baselines.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2025.2610935" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-b5f7e5348d6c534e">
+<p class="kicker">Geocarto International · ONLINE_FIRST</p>
+<h3>Satellite observation-based indicative evidence of anthropogenic heating in the Brahmani–Baitarani River Basin, Eastern India</h3>
+<p>Dibya Jyoti Mohanty; Jajnaseni Rout</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10106049.2026.2677307</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_IN_PROGRESS</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2026.2677307" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10106049.2026.2677307" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Satellite observation-based indicative evidence of anthropogenic heating in the Brahmani–Baitarani River Basin, Eastern India</strong></p><p class="abstract-meta">期刊：Geocarto International · DOI：10.1080/10106049.2026.2677307 · 摘要来源：出版方摘要</p><p class="abstract-body">This study examines temperature patterns in the highly altered Brahman–Baitarani River Basin in eastern India, to identify anthropogenic heat signatures. Results show a rise in the average maximum temperature by +0.35°C during 2000–2022 compared to 1970–1999, with seasonal anomalies up to +0.56°C, particularly from late monsoon to early winter. A significant warming trend (+0.012°C/year; Sen’s slope +0.013 °C/year) is confirmed by the Mann–Kendall test. Between 2000 and 2020, population density increased by 26%, and LULC changed by 7%–8%, mainly in urban-industrial regions, with built-up areas increased by 74% and cropland increased by 3%. The observed minus reanalysis approach reveals a mean surface heating of +2.6°C, strongly correlated with LULC change (r = 0.55). Spatial clustering identified heating hotspots in developed areas. Rising evapotranspiration and declining discharge may indicate increasing thermal stress. Overall, the findings provide strong evidence of anthropogenic heating, emphasizing the need for integrated land–water management strategies.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2026.2677307" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a67b41900316e107">
+<p class="kicker">Geocarto International · ONLINE_FIRST</p>
+<h3>Application of remote sensing and geospatial techniques for forest fire monitoring and air quality impact assessment</h3>
+<p>Isamar Alvarez; David Aguiar; Mauricio A. Correa; Jeiser Rendón Giraldo; Henry A. Colorado</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10106049.2026.2684384</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_IN_PROGRESS</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2026.2684384" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10106049.2026.2684384" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Application of remote sensing and geospatial techniques for forest fire monitoring and air quality impact assessment</strong></p><p class="abstract-meta">期刊：Geocarto International · DOI：10.1080/10106049.2026.2684384 · 摘要来源：出版方摘要</p><p class="abstract-body">Wildfires are among the most significant environmental disturbances worldwide, with substantial impacts on ecosystems and air quality. Remote sensing techniques have advanced considerably on detection, characterization, and monitoring of wildfire and their atmospheric effects. This study presents a structured literature review between 2019 and 2026 using the ProKnow-C methodology, resulting in a portfolio of 154 peer-reviewed articles. The results reveal growing research on emission estimation and air quality assessment, particularly on atmospheric impacts, burned area, fire severity, and fire detection. Machine and deep learning approaches emerge as dominant techniques, reflecting a shift toward data-driven methodologies. Additionally, integrated multisensor data improve detection accuracy and reduce uncertainties associated with atmospheric interference. This review proposes a coherent analytical chain that integrates fire detection, burned area mapping, fire severity assessment, emission estimation, and air quality evaluation. This study provides an understanding and monitoring of wildfire impacts, their current limitations and future research directions.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2026.2684384" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-24efcb5e0c993c8a">
+<p class="kicker">Geocarto International · ONLINE_FIRST</p>
+<h3>A new vegetation–thermal integrated approach (NNL-SM) for high-resolution soil moisture estimation</h3>
+<p>Bharatkumar S. Prajapati; Rajendra Prasad; Jyoti Sharma; Prashant Kumar Srivastava; Sonu Kumar; Dileep Kumar Gupta; Varun Narayan Mishra</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10106049.2026.2689867</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_IN_PROGRESS</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2026.2689867" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10106049.2026.2689867" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A new vegetation–thermal integrated approach (NNL-SM) for high-resolution soil moisture estimation</strong></p><p class="abstract-meta">期刊：Geocarto International · DOI：10.1080/10106049.2026.2689867 · 摘要来源：出版方摘要</p><p class="abstract-body">High-resolution soil moisture (SM) information is essential for hydrological, agricultural and climate studies. This paper presents an NDMI–NDVI–LST-based downscaling technique, termed the NNL-SM model, to downscale SMAP SM from 9 to 1 km resolution. The model was validated in Varanasi, India, using ground SM measurements collected on fifteen dates and compared with the VMSMI and triangle optical-based models. By integrating the normalized NDMI, NDVI and LST while minimizing vegetation effects, the NNL-SM model achieved the best performance, with the lowest RMSE (0.028 m3/m3), ubRMSE (0.023 m3/m3), smallest bias (0.001 m3/m3) and highest correlation (R = 0.700). VMSMI showed moderate accuracy, whereas the Triangle model had weaker correlation. Seasonal analysis indicated better winter performance and reduced pre-monsoon accuracy due to vegetation and temperature variability. Overall, the NNL-SM approach showed promising performance for the selected heterogeneous agricultural region and can be further evaluated using hybrid indices and multi-region validation.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2026.2689867" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-024c0eaf86f8e6e0">
+<p class="kicker">Geocarto International · ONLINE_FIRST</p>
+<h3>Spatiotemporal evolution and multi-scenario simulation of land use in townships surrounding a world natural heritage site: a case study of the Yancheng Yellow Sea Wetlands</h3>
+<p>Wenyu Wu; Chuanwu Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V41 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10106049.2026.2692152</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_IN_PROGRESS</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2026.2692152" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10106049.2026.2692152" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-10 13:43 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Spatiotemporal evolution and multi-scenario simulation of land use in townships surrounding a world natural heritage site: a case study of the Yancheng Yellow Sea Wetlands</strong></p><p class="abstract-meta">期刊：Geocarto International · DOI：10.1080/10106049.2026.2692152 · 摘要来源：出版方摘要</p><p class="abstract-body">The Yancheng Yellow Sea Wetlands is the world&#x27;s second intertidal wetland heritage and China&#x27;s first coastal World Natural Heritage site in a densely populated, developed region. Inscribed in 2019, it imposed new land-use demands on eight surrounding townships. Using a transition matrix and the PLUS model, this study analyzed land-use evolution from 2010 to 2023 and simulated three scenarios for 2035. Results showed that after 2019, net loss of ecological conservation land reversed to net replenishment. Conversion from ecological conservation land to total construction land contracted to 27.99 ha. Conversion intensity was highest in townships adjacent to the wetlands. Under the synergistic optimization scenario, ecological conservation land increased by 331.20 ha. Rural construction land grew by 140.40 ha, sourced from agricultural production land. This provides a feasible pathway for land allocation in similar ecologically constrained regions.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10106049.2026.2692152" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><p class="more">Geocarto International 另有 34 条已写入账本，页内从略。<span class="evidence"><a href="https://www.tandfonline.com/toc/tgei20/current" rel="noopener noreferrer">官方 Articles / 未来期目录</a><small>www.tandfonline.com · 2026-10-10 13:43 CST · 发现信号，不证明完整性</small></span></p></section>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="errata" aria-labelledby="errata-h"><h2 id="errata-h">勘误与撤稿</h2>
+<p>已核查，0 项：本批 3 刊（地理科学进展、Geocarto International、ACM Transactions on Knowledge Discovery from Data）已取得的官方目录与发现源列表中未发现撤稿、勘误或更正声明条目；降级期刊 ACM Transactions on Knowledge Discovery from Data 官方目录不可达，相关勘误/撤稿无法本轮核验，已登记为待重试。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="topics" aria-labelledby="topics-h"><h2 id="topics-h">主题与阅读路线</h2><ul><li>地理科学进展 2026-V45-I9：官方目录 15 篇；文章类型元数据（若有）：journal-article 15 篇。建议先打开摘要抽屉浏览综述/方法类条目，再按主题深入。</li><li>Geocarto International 候选/在编期 2026-V41-I1 仅登记，不进入正式期次阅读路线。</li><li>ACM TKDD 本轮因官方目录不可达降级，暂无新正式期次阅读路线；恢复可达后优先复核 Crossref 提示的后续期次。</li><li>以上为元数据级分组，不构成对论文研究结论的判断。</li></ul><p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="health" aria-labelledby="health-h"><h2 id="health-h">数据源健康</h2><ul><li>ACM Transactions on Knowledge Discovery from Data（REG-070）：源健康 <code>OFFICIAL_CF_CHALLENGE</code>；状态 DEGRADED；ACM DL 本轮不可达（Cloudflare 挑战），无法核验 I5 之后是否出现已完成正式期；按 fail-soft 降级完成，不推进该刊期次 claim。。</li><li>地理科学进展（REG-010）：源健康 <code>OFFICIAL_PAGE_OK</code>；状态 COMPLETED；Magtech 官方 Current：2026年45卷第9期，刊出日期 2026-09-28；目录 15 DOI 两遍集合一致，gate-issue=NEW_ISSUE，claim 2026-V45-I9（新论文 15）。Just Accepted 本轮 0 条；RSS 端点返回 404，不影响官方目录完整性证据。相对 last_briefed 2026-V45-I8。。</li><li>Geocarto International（REG-040）：源健康 <code>OFFICIAL_CURRENT_OK_AXA_LOI_CF</code>；状态 COMPLETED；T&amp;F 官方 Current：Vol 41, No 1（Current issue）标注 Issue In Progress，两遍 TOC 各 159 DOI 集合一致，按连续出版规则保持 ISSUE_CANDIDATE，不得 claim。新登记在编/网络首发 46 条（去重抑制 113，多与已简报 2025-V40-I1 或历史 OF 重合）。AXA/LOI 页遇 Cloudflare 挑战（次要源失败）。最近已简报完整期仍为 2025-V40-I1。。</li><li>有界对账：处理 4 个到期任务（上限 4），目录侧证据不足均保持 FAILED_RETRYABLE。</li></ul><ul><li>job 54 · REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE：Wiley TOC 浏览器仍受 Cloudflare 拦截；无新官方目录证据，维持 FAILED_RETRYABLE。</li><li>job 58 · REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE：T&amp;F TOC 分页/集合一致性仍无法确认；不改写已简报期次。</li><li>job 59 · REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE：T&amp;F TOC 浏览器挑战页；无官方目录证据。</li><li>job 65 · REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE：ScienceDirect Issues 页 HTTP 403；无官方目录证据。</li></ul>
+<p>失败或待修复：已核查，0 项。降级路径：ACM Transactions on Knowledge Discovery from Data：ACM Digital Library 官方 TOC/JA/LOI 均返回 Cloudflare Just a moment（HTTP 403）；无官方目录完整性证据，不得确认新完整期次。Crossref/OpenAlex 发现源显示 V20-I6..I9 可能已有条目，仅作发现提示。最近已简报期次仍为 2026-V20-I5。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="audit" aria-labelledby="audit-h"><h2 id="audit-h">证据与审计信息</h2>
+<details><summary>运行标识、证据层级与提交状态</summary>
+<ul>
+<li>Brief_ID：<code>DAILY-20261010</code> · Commit_ID：<code>DAILY-20261010-134324-6b383c80</code> · Run_ID：<code>43478d9c-6ce8-4544-bda6-7d6b8e8628e0</code></li>
+<li>逻辑日期 2026-10-10 · 实际完成 2026-10-10 13:43 CST · Recovery_Batch_ID：<code>43478d9c-6ce8-4544-bda6-7d6b8e8628e0</code></li>
+<li>任务：ROUTINE-20261010-G10（ROUTINE · CURRENT · 执行顺序 1 · COMPLETED）；补扫 0、仍待补扫 0；下一计划扫描 2026-10-11 第 11 组。</li>
+<li>证据层级：官方期次目录 = 一级完整性证据；官方论文页 = 题名/作者/摘要证据；DOI = 身份证据；Crossref = 二级补全；RSS / API = 发现信号（不证明完整性）。</li>
+<li>多遍目录核验：地理科学进展 2026-V45-I9 两遍 15/15 集合一致；Geocarto International 2026-V41-I1 两遍 159/159 集合一致但 Issue In Progress，仅候选；ACM Transactions on Knowledge Discovery from Data ACM_DL_CLOUDFLARE_CHALLENGE</li>
+<li>门控统计：issue gate NEW_ISSUE 1；article gate 新论文记录 15、网络首发新登记 46、去重抑制 113、增量复核 0、门控错误 0。</li>
+<li>摘要校验：所有摘要经参考文献块识别校验；ScienceDirect PII 不标为 DOI；每张卡片保留官方论文页面链接。</li>
+<li>摘要图 SHA-256：<code>f5cfba2035458f520cac46bf9af9c30d5d33a20a1c29fb30e9aecdc475905f73</code>；HTML SHA-256 见提交回执（避免自引用哈希）。</li>
+<li>PostgreSQL 严格健康：PASS（7/7 迁移一致，健康问题 0）。</li>
+</ul></details>
+<p class="back"><a href="#top">返回页首</a></p></section>
+</main>
+<footer><nav aria-label="日报导航"><a href="../../../../2026/10/index.html">返回 2026 年 10 月索引</a> · <a href="../../../../2026/10/2026-10-09_GIS-AI期刊每日轮检简报_第9组.html">上一篇：2026-10-09 第 9 组</a> · <a href="#top">返回页首</a></nav></footer>
+</body></html>
