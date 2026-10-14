@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 14 组 · 2026-10-14</title>
+<style>
+:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;font-size:16px;line-height:1.65;overflow-wrap:anywhere}
+a{color:var(--brand);text-decoration:underline;text-underline-offset:.18em;display:inline-block;min-height:44px;line-height:44px}
+a:visited{color:#4b3f72}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:2px}
+.skip{position:absolute;left:12px;top:-80px;background:#fff;padding:0 14px;z-index:9}.skip:focus{top:8px}
+.hero{background:linear-gradient(135deg,#073d58,#08737a);color:#fff;padding:18px max(18px,calc((100vw - 1180px)/2)) 22px}
+.hero a{color:#fff}.crumb{font-size:14px}.meta{font-size:14px;color:#cfe7e6;margin:.2rem 0}
+.hero h1{font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.15;margin:.3rem 0 .6rem}
+.lede{font-size:clamp(1rem,2vw,1.15rem);max-width:72em;margin:0 0 14px}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.card{display:block;line-height:1.3;background:#ffffff1f;border:1px solid #ffffff55;border-radius:12px;padding:10px 12px;color:#fff;text-decoration:none;min-height:44px}
+.card strong{display:block;font-size:1.7rem}.card span{font-size:14px}
+main{max-width:1180px;margin:0 auto;padding:0 18px 40px}
+section{margin-top:26px}h2{font-size:1.45rem;margin:0 0 10px;border-left:5px solid var(--brand);padding-left:10px}h3{font-size:1.12rem;margin:.6rem 0}
+.attention{list-style:none;padding:0;margin:0}.attention li{background:#fff;border:1px solid var(--line);border-left:5px solid #e1a62b;border-radius:10px;padding:8px 14px;margin:8px 0}
+.tag{display:inline-block;font-size:14px;font-weight:700;border:2px solid currentColor;border-radius:6px;padding:0 6px;line-height:1.6}
+.tag.ok{color:var(--ok)}.tag.warn{color:var(--warn)}.tag.bad{color:var(--bad)}.when{font-size:14px;color:var(--muted)}
+.toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 14px;margin-top:18px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%}caption{text-align:left;padding:10px 12px;font-weight:700}
+th,td{border-top:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;font-size:15px}thead th{background:#e3efed}
+figure{margin:16px 0}figure img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}figcaption{font-size:14px;color:var(--muted)}
+.issue,.of-journal{background:#ffffffa8;border:1px solid var(--line);border-radius:12px;padding:6px 16px 12px;margin:16px 0}
+.issue-meta,.paper dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:4px 14px;margin:6px 0}
+.issue-meta div,.paper dl div{font-size:14px}dt{color:var(--muted);font-size:14px}dd{margin:0}
+.paper{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px;margin:12px 0}
+.paper h3{font-size:1.05rem}.kicker{font-size:14px;color:var(--muted);margin:.2rem 0}
+.evidence{display:inline-flex;flex-direction:column;margin-right:14px}.evidence small{font-size:14px;color:var(--muted);line-height:1.3}
+.back{font-size:14px;margin:4px 0}.more{font-size:15px}code{font-size:14px;word-break:break-all}
+details summary{cursor:pointer;min-height:44px;display:flex;align-items:center}
+footer{max-width:1180px;margin:0 auto;padding:10px 18px 40px;font-size:15px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.cards{grid-template-columns:repeat(2,1fr)}.card strong{font-size:1.4rem}
+ table.stack thead{position:absolute;left:-9999px}table.stack,table.stack tbody,table.stack tr,table.stack th,table.stack td{display:block;width:100%}
+ table.stack tr{border-top:2px solid var(--line);padding:6px 0}table.stack th,table.stack td{border:0;padding:3px 10px}
+ table.stack td::before,table.stack th::before{content:attr(data-label)"：";color:var(--muted);font-size:14px}}
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到主要内容</a>
+<header class="hero">
+<nav class="crumb" aria-label="面包屑"><a href="../../../../index.html">站点首页</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/10/index.html">10 月</a> / 2026-10-14 第 14 组</nav>
+<p class="meta">逻辑日期 2026-10-14（北京时间）· 实际完成 2026-10-14 12:09 CST · 任务类型 ROUTINE · 第 14 组</p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 14 组</h1>
+<p class="lede" id="conclusion">第 14 组共检查 3 种正式期刊；确认 1 个新完整期次、6 篇正式论文（新论文记录 4 篇、网络首发正式归期 2 篇），登记网络首发/在编/未来期 0 条；无降级期刊，0 种扫描失败，未发现撤稿或勘误。</p>
+<div class="cards" aria-label="关键计数">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>1</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>1</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>6</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>0</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复（已核查，0 项）</span></a>
+</div>
+</header>
+<main id="main">
+<section id="attention" aria-labelledby="attention-h"><h2 id="attention-h">需要关注</h2>
+<ul class="attention"><li><span class="tag ok">新期次</span> <strong>Statistical Analysis and Data Mining: The ASA Data Science Journal</strong> — 确认 2026-V19-I5 完整，6 篇正式论文均已出卡。 <span class="when">核查 2026-10-14 12:09 CST</span> <span class="evidence"><a href="https://onlinelibrary.wiley.com/toc/19321872a/2026/19/5" rel="noopener noreferrer">官方期次目录</a><small>onlinelibrary.wiley.com · 2026-10-14 12:09 CST · 一级证据</small></span></li></ul></section>
+<nav class="toc" aria-label="页内快速导航"><strong>快速导航</strong>
+<a href="#conclusion">今日结论</a><a href="#tasks">扫描任务</a><a href="#overview">期刊总览</a><a href="#formal">新完整期次</a><a href="#online-first">网络首发</a><a href="#errata">勘误撤稿</a><a href="#topics">主题与阅读路线</a><a href="#health">数据源健康</a><a href="#audit">审计与状态</a></nav>
+
+<section id="tasks" aria-labelledby="tasks-h"><h2 id="tasks-h">扫描任务</h2>
+<p>本次为常规当日任务；补扫任务 0 项、二月尾组 0 项、开放发布队列 0 项（发布重试 0 项）；仍待补扫 0 项。</p>
+<div class="table-wrap"><table class="stack"><caption>任务清单（按执行顺序）</caption>
+<thead><tr><th scope="col">Task_ID</th><th scope="col">Task_Type</th><th scope="col">Coverage_Month</th><th scope="col">Scheduled_Date</th><th scope="col">组号</th><th scope="col">执行顺序</th><th scope="col">Run_Mode</th><th scope="col">实际执行时间</th><th scope="col">状态</th><th scope="col">失败原因</th></tr></thead>
+<tbody><tr id="task-ROUTINE-20261014-G14"><td data-label="Task_ID"><code>ROUTINE-20261014-G14</code></td><td data-label="类型">ROUTINE</td><td data-label="覆盖月份">2026-10</td><td data-label="计划日期">2026-10-14</td><td data-label="组号">第 14 组</td><td data-label="顺序">1</td><td data-label="Run_Mode">CURRENT</td><td data-label="实际执行">2026-10-14 12:09 CST</td><td data-label="状态">COMPLETED</td><td data-label="失败原因">无期刊级失败</td></tr></tbody></table></div>
+<p>扫描范围：月度轮检分组第 14 组正式期刊 REG-014 Journal of Spatial Information Science、REG-044 计算机科学与探索、REG-074 Statistical Analysis and Data Mining: The ASA Data Science Journal；本组无附加信号源。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="overview" aria-labelledby="overview-h"><h2 id="overview-h">期刊更新总览</h2>
+<div class="table-wrap"><table class="stack"><caption>逐刊状态（排序：失败/待修复 → 降级 → 有更新 → 零更新）</caption>
+<thead><tr><th scope="col">期刊</th><th scope="col">本次状态</th><th scope="col">最新确认完整期次</th><th scope="col">新完整期次</th><th scope="col">新增正式论文</th><th scope="col">Online First</th><th scope="col">源健康</th><th scope="col">官方目录</th></tr></thead>
+<tbody><tr><th scope="row" data-label="期刊">REG-074<br><strong>Statistical Analysis and Data Mining: The ASA Data Science Journal</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-V19-I5</td><td data-label="新完整期">1</td><td data-label="新增正式论文">6</td><td data-label="网络首发">0</td><td data-label="源健康"><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td data-label="官方目录"><a href="https://onlinelibrary.wiley.com/toc/19321872a/2026/19/5" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-014<br><strong>Journal of Spatial Information Science</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-NO32</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">0</td><td data-label="源健康"><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td data-label="官方目录"><a href="https://josis.org/index.php/josis/issue/current" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-044<br><strong>计算机科学与探索</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-V20-I9</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">0</td><td data-label="源健康"><code>OFFICIAL_PAGE_OK_VIA_CNKI_PLAYWRIGHT</code></td><td data-label="官方目录"><a href="https://kxts.cbpt.cnki.net/" rel="noopener noreferrer">官方期次目录</a></td></tr></tbody></table></div>
+<figure><img src="assets/2026-10-14_GIS-AI期刊每日摘要_第14组.png" width="1600" height="900" alt="第14组每日摘要图：检查正式期刊3种，有更新1种，新完整期次1个，新增正式论文6篇，网络首发与在编登记0条，失败或待修复0；降级0种"><figcaption>每日摘要图（1600×900，期刊级聚合）；等价文字计数见下表。</figcaption></figure>
+<div class="table-wrap"><table><caption>摘要图等价文字计数</caption><thead><tr><th scope="col">指标</th><th scope="col">数值</th></tr></thead><tbody><tr><th scope="row">已检查正式期刊</th><td>3</td></tr><tr><th scope="row">有更新期刊</th><td>1</td></tr><tr><th scope="row">新完整期次</th><td>1</td></tr><tr><th scope="row">新增正式论文</th><td>6</td></tr><tr><th scope="row">网络首发/在编</th><td>0</td></tr><tr><th scope="row">失败或待修复</th><td>0</td></tr><tr><th scope="row">降级期刊</th><td>0</td></tr><tr><th scope="row">去重抑制</th><td>0</td></tr><tr><th scope="row">增量复核</th><td>0</td></tr><tr><th scope="row">有界对账任务</th><td>4</td></tr></tbody></table></div>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="formal" aria-labelledby="formal-h"><h2 id="formal-h">新完整期次与逐篇卡片</h2>
+<nav aria-label="期次目录"><ol><li><a href="#issue-reg-074-08cdf38d20b5">Statistical Analysis and Data Mining: The ASA Data Science Journal · 2026-V19-I5（6 篇）</a></li></ol></nav>
+<section class="issue" id="issue-reg-074-08cdf38d20b5" aria-labelledby="issue-reg-074-08cdf38d20b5-h"><h3 id="issue-reg-074-08cdf38d20b5-h">Statistical Analysis and Data Mining: The ASA Data Science Journal · Volume 19, Issue 5</h3><dl class="issue-meta"><div><dt>期次</dt><dd>2026-V19-I5</dd></div><div><dt>出版日期</dt><dd>October 2026（官方 Current Issue）</dd></div><div><dt>正式论文</dt><dd>6 篇</dd></div><div><dt>范围</dt><dd>6 篇（官方 TOC 两遍 DOI 集合一致；不含 Issue Information）</dd></div><div><dt>完整性证据</dt><dd>官方目录多遍集合一致（pass1=6 / pass2=6）；issue gate=NEW_ISSUE</dd></div></dl><p>相对已简报 I4 新确认完整期 I5（两遍 TOC 6 正式 DOI 稳定，Current=I5，无 In Progress）。gate-issue=NEW_ISSUE。4 篇 NEW_ARTICLE，2 篇（sam.70102、sam.70107）由网络首发正式归期。</p><p><span class="evidence"><a href="https://onlinelibrary.wiley.com/toc/19321872a/2026/19/5" rel="noopener noreferrer">官方期次目录</a><small>onlinelibrary.wiley.com · 2026-10-14 12:09 CST · 一级完整性证据</small></span></p><details class="issue-toc"><summary>本期目录（6 篇，点击跳转论文卡片）</summary><ol><li><a href="#article-doi-d9e665ba004b8b4b">A Landmark‐Turnbull Estimator for Non‐Markovian Illness‐Death Models With Interval‐Censore</a></li><li><a href="#article-doi-deb192416a3d4bca">Rapid High Utility Sequential Pattern Mining With Negative and Positive Values</a></li><li><a href="#article-doi-693e516fb4645d8d">Robust Functional Basis Neural Network Method With the Normalization</a></li><li><a href="#article-doi-98f93cc3ad2f28f2">Integrative Analysis of Heterogeneous Multisource Partly Interval‐Censored Data</a></li><li><a href="#article-doi-24861b06f8e73517">An Integrated Gradient Boosting Machine Approach With Fisher&#x27;s Discriminant Analysis: Empi</a></li><li><a href="#article-doi-c3d13c5449387983">Large Covariance Matrix Estimation by Penalized Log‐Det Heuristics</a></li></ol></details><article class="paper" id="article-doi-d9e665ba004b8b4b">
+<p class="kicker">Statistical Analysis and Data Mining: The ASA Data Science Journal · FORMAL_ASSIGNMENT</p>
+<h3>A Landmark‐Turnbull Estimator for Non‐Markovian Illness‐Death Models With Interval‐Censored Observations</h3>
+<p>Gustavo Soutinho; Marta Azevedo; Luís Meira‐Machado</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sam.70102</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70102" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 2026-10-14 12:09 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sam.70102" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-14 12:09 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Landmark‐Turnbull Estimator for Non‐Markovian Illness‐Death Models With Interval‐Censored Observations</strong></p><p class="abstract-meta">期刊：Statistical Analysis and Data Mining: The ASA Data Science Journal · DOI：10.1002/sam.70102 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Handling interval‐censored data poses significant challenges, particularly in multi‐state models where transition times are uncertain and computational complexity is high. This study investigates the use of landmark‐based estimators tailored for interval‐censored settings, with a particular focus on three‐state illness–death models. We propose two estimators: the Landmark‐Turnbull (LMTB) estimator, which integrates the Turnbull method for nonparametric survival estimation, and the Interval Landmark (ILM) estimator, a simplified alternative that uses midpoint imputation within the landmarking framework. Both approaches allow the estimation of transition probabilities without imposing the Markov assumption, thereby offering greater flexibility and interpretability in realistic clinical settings. The performance of the proposed estimators is compared with the standard Interval Aalen–Johansen (IAJ) estimator. Simulation studies and an application to synthetic data inspired by colon cancer patient trajectories demonstrate that LMTB yields more accurate estimates for long‐term transitions, while ILM is preferable for short‐term predictions due to its lower variance and computational simplicity.</p><p class="abstract-meta"><span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70102" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-074-08cdf38d20b5">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-deb192416a3d4bca">
+<p class="kicker">Statistical Analysis and Data Mining: The ASA Data Science Journal · FORMAL_ASSIGNMENT</p>
+<h3>Rapid High Utility Sequential Pattern Mining With Negative and Positive Values</h3>
+<p>Meng Han; Yikai Li; Cuicui Ma; Yajie Xue; Jian Ding; Juan Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sam.70107</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70107" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 2026-10-14 12:09 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sam.70107" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-14 12:09 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Rapid High Utility Sequential Pattern Mining With Negative and Positive Values</strong></p><p class="abstract-meta">期刊：Statistical Analysis and Data Mining: The ASA Data Science Journal · DOI：10.1002/sam.70107 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">High Utility Sequential Pattern Mining (HUSPM) can evaluate the practical value of patterns while capturing temporal relationships. However, negative utility items (such as discounts, returns, and wastage) prevalent in real‐world applications pose two major challenges to existing methods: Firstly, negative utility items complicate the construction of projection databases and utility calculations. Traditional structures often require multiple accesses to the original sequence, incurring high time and memory costs; secondly, existing upper bounds often prove insufficiently compact when both positive and negative utilities coexist, thereby diminishing pruning effectiveness and inducing candidate explosion. To address these issues, this paper proposes the Rapid mining High Utility Sequential Pattern with Negative items (RHUSN) algorithm. This algorithm designs a compact data structure, Neg‐Seq‐Pro, which employs a shared negative sequence array and explicit projection lists to achieve unified modeling and rapid computation of both positive and negative utilities. Concurrently, it introduces a tighter utility upper bound, NTRSU, alongside a corresponding two‐tier pruning strategy comprising ‘prefix‐level pruning’ and ‘item‐level pruning’. This approach significantly reduces candidate expansion and redundant computation while ensuring result completeness. Extensive experimental results demonstrate that RHUSN achieves notable advantages over existing representative methods in terms of runtime, memory consumption, and the number of candidate patterns. This validates the effectiveness and scalability of the proposed data structure and upper bound pruning strategy in negative utility scenarios.</p><p class="abstract-meta"><span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70107" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-074-08cdf38d20b5">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-693e516fb4645d8d">
+<p class="kicker">Statistical Analysis and Data Mining: The ASA Data Science Journal · FORMAL_ISSUE</p>
+<h3>Robust Functional Basis Neural Network Method With the Normalization</h3>
+<p>Wooseok Jeong; Donghyuk Lee; Jeffrey S. Morris; Hojin Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I5</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sam.70110</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70110" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 2026-10-14 12:09 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sam.70110" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-14 12:09 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Robust Functional Basis Neural Network Method With the Normalization</strong></p><p class="abstract-meta">期刊：Statistical Analysis and Data Mining: The ASA Data Science Journal · DOI：10.1002/sam.70110 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">This paper aims to develop a robust nonlinear model utilizing neural networks for function‐on‐function regression problems. The proposed framework is designed to enhance robustness in regression modeling by minimizing the impact of outliers in the response variable during model training. To achieve this, we introduce a robust loss function tailored to handle outliers effectively applied within a neural network based on basis expansion, and propose a novel functional normalization technique that normalizes the input function values of hidden layers with respect to time points. This approach demonstrates faster convergence as compared to existing neural network models and is less sensitive to hyperparameter settings. It also achieves high performance regression results even with outliers in the response variable. The effectiveness and superiority of the proposed method are validated through extensive simulation studies and real‐world applications using COVID‐19 excess mortality data.</p><p class="abstract-meta"><span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70110" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-074-08cdf38d20b5">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-98f93cc3ad2f28f2">
+<p class="kicker">Statistical Analysis and Data Mining: The ASA Data Science Journal · FORMAL_ISSUE</p>
+<h3>Integrative Analysis of Heterogeneous Multisource Partly Interval‐Censored Data</h3>
+<p>Li Jin; Tao Hu</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I5</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sam.70113</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70113" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 2026-10-14 12:09 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sam.70113" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-14 12:09 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Integrative Analysis of Heterogeneous Multisource Partly Interval‐Censored Data</strong></p><p class="abstract-meta">期刊：Statistical Analysis and Data Mining: The ASA Data Science Journal · DOI：10.1002/sam.70113 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Modern biomedical and epidemiological studies increasingly combine data from multiple institutions, where differences in study populations and designs can induce cross‐source heterogeneity. To address this issue, we propose an integrative analysis framework for multisource partly interval‐censored data. The proposed method adopts a decomposition strategy to share information across studies while distinguishing common homogeneous effects from source‐specific heterogeneous effects. It also incorporates an MIC‐based ‐penalized procedure for tuning‐free variable selection, thereby enhancing selection stability and computational efficiency. In particular, this MIC‐based implementation avoids the joint tuning parameter search required by conventional penalties in the proposed two‐penalty framework. The estimation consistency, selection consistency, and asymptotic normality of the proposed estimators are established. Simulation studies and an application to the Alzheimer&#x27;s Disease Neuroimaging Initiative and the National Alzheimer&#x27;s Coordinating Center databases demonstrate the effectiveness and practical utility of the proposed method.</p><p class="abstract-meta"><span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70113" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-074-08cdf38d20b5">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-24861b06f8e73517">
+<p class="kicker">Statistical Analysis and Data Mining: The ASA Data Science Journal · FORMAL_ISSUE</p>
+<h3>An Integrated Gradient Boosting Machine Approach With Fisher&#x27;s Discriminant Analysis: Empirical Assessment on Five Benchmark Datasets and Simulations</h3>
+<p>Giulio Enzo Donninelli; Pietro Giorgio Lovaglio</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I5</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sam.70114</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70114" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 2026-10-14 12:09 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sam.70114" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-14 12:09 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>An Integrated Gradient Boosting Machine Approach With Fisher&#x27;s Discriminant Analysis: Empirical Assessment on Five Benchmark Datasets and Simulations</strong></p><p class="abstract-meta">期刊：Statistical Analysis and Data Mining: The ASA Data Science Journal · DOI：10.1002/sam.70114 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The aim of this study is to assess the impact of different dimensionality reduction techniques—specifically Principal Component Analysis (PCA) and Fisher&#x27;s Linear Discriminant Analysis (LDA)—on the classification performance of Gradient Boosting Machines (GBM). While PCA is commonly employed to reduce feature dimensionality, often to speed up training or lower memory usage, its application is not standard in boosting pipelines. Moreover, to the best of our knowledge, no previous work has systematically explored whether LDA can enhance performance or is compatible with gradient boosting frameworks. In addition to evaluating the effects of PCA and LDA on the predictive performance of GBM, we introduce a novel integrated iterative algorithm that incorporates LDA‐based feature transformation at each boosting step. Our analysis spans five classical benchmark datasets, representing diverse scenarios in terms of sample size, number of features, for both binary and multiclass targets. Results show that applying LDA to extract features—and especially using the proposed LDA‐integrated GBM—improves classification accuracy compared to standard GBM, particularly in multiclass settings or in binary problems with high feature dimensionality. Finally, through a set of controlled simulations, we investigate how the performance of the integrated approach evolves with increasing feature dimensionality and varying levels of feature correlation and sample size.</p><p class="abstract-meta"><span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70114" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-074-08cdf38d20b5">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-c3d13c5449387983">
+<p class="kicker">Statistical Analysis and Data Mining: The ASA Data Science Journal · FORMAL_ISSUE</p>
+<h3>Large Covariance Matrix Estimation by Penalized Log‐Det Heuristics</h3>
+<p>Enrico Bernardi; Matteo Farnè</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I5</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sam.70115</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70115" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 2026-10-14 12:09 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sam.70115" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-14 12:09 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Large Covariance Matrix Estimation by Penalized Log‐Det Heuristics</strong></p><p class="abstract-meta">期刊：Statistical Analysis and Data Mining: The ASA Data Science Journal · DOI：10.1002/sam.70115 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">We study covariance estimation in high‐dimensional approximate factor models with a sparse residual covariance. The estimator combines a log‐det loss with nuclear‐norm and off‐diagonal penalties on a sample‐normalized covariance scale. Under light‐tailed sampling, pervasive factors and factor‐space incoherence, we establish local curvature and characterize a local fixed point of the associated threshold iteration. Its low‐rank component consistently recovers the latent rank; exact signed residual‐support recovery additionally requires a minimum‐signal condition. We derive componentwise estimation rates and sufficient conditions for positive definiteness. The analysis separates the spectral requirements for rank recovery from the entrywise requirements for residual‐support recovery. A boundary‐adaptive search identifies the two thresholds by extending an initial grid when its selected solution lies on a boundary. Simulations examine structural recovery and covariance accuracy, and compare log‐det and Frobenius losses with covariance shrinkage methods. An application to European bank supervisory indicators illustrates the resulting decomposition into latent factors and sparse residual relationships.</p><p class="abstract-meta"><span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70115" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-074-08cdf38d20b5">返回本期目录</a> · <a href="#top">返回页首</a></p></article></section>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="online-first" aria-labelledby="of-h"><h2 id="of-h">网络首发 / 在编 / 未来期登记</h2>
+<p>本批新登记 <strong>0</strong> 条（无）。以下条目只作登记，不作为完整期次证据；正式归期后按 DOI 合并，不重复计数。</p>
+
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="errata" aria-labelledby="errata-h"><h2 id="errata-h">勘误与撤稿</h2>
+<p>已核查，0 项：本批 3 刊（Journal of Spatial Information Science、计算机科学与探索、Statistical Analysis and Data Mining: The ASA Data Science Journal）已取得的官方目录与发现源列表中未发现撤稿、勘误或更正声明条目；无降级期刊。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="topics" aria-labelledby="topics-h"><h2 id="topics-h">主题与阅读路线</h2><ul><li>Statistical Analysis and Data Mining: The ASA Data Science Journal 2026-V19-I5：官方目录 6 篇；文章类型元数据（若有）：未统一标注。建议先打开摘要抽屉浏览综述/方法类条目，再按主题深入。</li><li>以上为元数据级分组，不构成对论文研究结论的判断。</li></ul><p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="health" aria-labelledby="health-h"><h2 id="health-h">数据源健康</h2><ul><li>Statistical Analysis and Data Mining: The ASA Data Science Journal（REG-074）：源健康 <code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code>；状态 COMPLETED；相对已简报 I4 新确认完整期 I5（两遍 TOC 6 正式 DOI 稳定，Current=I5，无 In Progress）。gate-issue=NEW_ISSUE。4 篇 NEW_ARTICLE，2 篇（sam.70102、sam.70107）由网络首发正式归期。。</li><li>Journal of Spatial Information Science（REG-014）：源健康 <code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code>；状态 COMPLETED；Current 仍为 No. 32 (2026)，等于注册基线 2026-NO32；两遍 TOC 4 篇稳定、无 In Progress；不 claim 基线。RSS 4 条均为当期正式文，不作网络优先重登记。。</li><li>计算机科学与探索（REG-044）：源健康 <code>OFFICIAL_PAGE_OK_VIA_CNKI_PLAYWRIGHT</code>；状态 COMPLETED；CNKI 门户当期仍为 2026年09期 v.20（I9），与已简报 2026-V20-I9 一致；两遍 TOC publisher_id 集合 20 篇稳定；无 I10；官方 fcst.ceaj.org 超时。不重印 I9。。</li><li>有界对账：处理 4 个到期任务（上限 4），目录侧证据不足均保持 FAILED_RETRYABLE。</li></ul><ul><li>job 54 · REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE：有界对账：本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 58 · REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE：有界对账：本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 59 · REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE：有界对账：本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 65 · REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE：有界对账：本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li></ul>
+<p>失败或待修复：已核查，0 项。降级路径：本批无降级。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="audit" aria-labelledby="audit-h"><h2 id="audit-h">证据与审计信息</h2>
+<details><summary>运行标识、证据层级与提交状态</summary>
+<ul>
+<li>Brief_ID：<code>DAILY-20261014</code> · Commit_ID：<code>DAILY-20261014-120805-8e0219c5</code> · Run_ID：<code>8e0219c5-276e-4aef-b6e2-fabae962d938</code></li>
+<li>逻辑日期 2026-10-14 · 实际完成 2026-10-14 12:09 CST · Recovery_Batch_ID：<code>8e0219c5-276e-4aef-b6e2-fabae962d938</code></li>
+<li>任务：ROUTINE-20261014-G14（ROUTINE · CURRENT · 执行顺序 1 · COMPLETED）；补扫 0、仍待补扫 0；下一计划扫描 2026-10-15 第 15 组。</li>
+<li>证据层级：官方期次目录 = 一级完整性证据；官方论文页 = 题名/作者/摘要证据；DOI = 身份证据；Crossref = 二级补全；RSS / API = 发现信号（不证明完整性）。</li>
+<li>多遍目录核验：Journal of Spatial Information Science 2026-NO32 两遍 4/4 集合一致但 Issue In Progress，仅候选；计算机科学与探索 2026-V20-I9 两遍 20/20 集合一致但 Issue In Progress，仅候选；Statistical Analysis and Data Mining: The ASA Data Science Journal 2026-V19-I5 两遍 6/6 集合一致</li>
+<li>门控统计：issue gate NEW_ISSUE 1；article gate 新论文记录 4、网络首发新登记 0、去重抑制 0、增量复核 0、门控错误 0。</li>
+<li>摘要校验：所有摘要经 text_sanitize 清洗与参考文献块识别校验；本页 6 篇论文附可展开官方摘要，0 篇暂无摘要；每张卡片保留官方论文页面链接。</li>
+<li>摘要图 SHA-256：<code>5587fd76f03bac2da9f2ce800d1bdb73c2b2909849b20d4f890201f65bbd9677</code>；HTML SHA-256 见提交回执（避免自引用哈希）。</li>
+<li>PostgreSQL 严格健康：PASS（7/7 迁移一致，健康问题 0）。</li>
+</ul></details>
+<p class="back"><a href="#top">返回页首</a></p></section>
+</main>
+<footer><nav aria-label="日报导航"><a href="../../../../2026/10/index.html">返回 2026 年 10 月索引</a> · <a href="../../../../2026/10/2026-10-13_GIS-AI期刊每日轮检简报_第13组.html">上一篇：2026-10-13 第 13 组</a> · <a href="#top">返回页首</a></nav></footer>
+</body></html>
