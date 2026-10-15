@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 15 组 · 2026-10-15</title>
+<style>
+:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;font-size:16px;line-height:1.65;overflow-wrap:anywhere}
+a{color:var(--brand);text-decoration:underline;text-underline-offset:.18em;display:inline-block;min-height:44px;line-height:44px}
+a:visited{color:#4b3f72}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:2px}
+.skip{position:absolute;left:12px;top:-80px;background:#fff;padding:0 14px;z-index:9}.skip:focus{top:8px}
+.hero{background:linear-gradient(135deg,#073d58,#08737a);color:#fff;padding:18px max(18px,calc((100vw - 1180px)/2)) 22px}
+.hero a{color:#fff}.crumb{font-size:14px}.meta{font-size:14px;color:#cfe7e6;margin:.2rem 0}
+.hero h1{font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.15;margin:.3rem 0 .6rem}
+.lede{font-size:clamp(1rem,2vw,1.15rem);max-width:72em;margin:0 0 14px}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.card{display:block;line-height:1.3;background:#ffffff1f;border:1px solid #ffffff55;border-radius:12px;padding:10px 12px;color:#fff;text-decoration:none;min-height:44px}
+.card strong{display:block;font-size:1.7rem}.card span{font-size:14px}
+main{max-width:1180px;margin:0 auto;padding:0 18px 40px}
+section{margin-top:26px}h2{font-size:1.45rem;margin:0 0 10px;border-left:5px solid var(--brand);padding-left:10px}h3{font-size:1.12rem;margin:.6rem 0}
+.attention{list-style:none;padding:0;margin:0}.attention li{background:#fff;border:1px solid var(--line);border-left:5px solid #e1a62b;border-radius:10px;padding:8px 14px;margin:8px 0}
+.tag{display:inline-block;font-size:14px;font-weight:700;border:2px solid currentColor;border-radius:6px;padding:0 6px;line-height:1.6}
+.tag.ok{color:var(--ok)}.tag.warn{color:var(--warn)}.tag.bad{color:var(--bad)}.when{font-size:14px;color:var(--muted)}
+.toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 14px;margin-top:18px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%}caption{text-align:left;padding:10px 12px;font-weight:700}
+th,td{border-top:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;font-size:15px}thead th{background:#e3efed}
+figure{margin:16px 0}figure img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}figcaption{font-size:14px;color:var(--muted)}
+.issue,.of-journal{background:#ffffffa8;border:1px solid var(--line);border-radius:12px;padding:6px 16px 12px;margin:16px 0}
+.issue-meta,.paper dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:4px 14px;margin:6px 0}
+.issue-meta div,.paper dl div{font-size:14px}dt{color:var(--muted);font-size:14px}dd{margin:0}
+.paper{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px;margin:12px 0}
+.paper h3{font-size:1.05rem}.kicker{font-size:14px;color:var(--muted);margin:.2rem 0}
+.evidence{display:inline-flex;flex-direction:column;margin-right:14px}.evidence small{font-size:14px;color:var(--muted);line-height:1.3}
+.back{font-size:14px;margin:4px 0}.more{font-size:15px}code{font-size:14px;word-break:break-all}
+details summary{cursor:pointer;min-height:44px;display:flex;align-items:center}
+footer{max-width:1180px;margin:0 auto;padding:10px 18px 40px;font-size:15px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.cards{grid-template-columns:repeat(2,1fr)}.card strong{font-size:1.4rem}
+ table.stack thead{position:absolute;left:-9999px}table.stack,table.stack tbody,table.stack tr,table.stack th,table.stack td{display:block;width:100%}
+ table.stack tr{border-top:2px solid var(--line);padding:6px 0}table.stack th,table.stack td{border:0;padding:3px 10px}
+ table.stack td::before,table.stack th::before{content:attr(data-label)"：";color:var(--muted);font-size:14px}}
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到主要内容</a>
+<header class="hero">
+<nav class="crumb" aria-label="面包屑"><a href="../../../../index.html">站点首页</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/10/index.html">10 月</a> / 2026-10-15 第 15 组</nav>
+<p class="meta">逻辑日期 2026-10-15（北京时间）· 实际完成 2026-10-15 12:07 CST · 任务类型 ROUTINE · 第 15 组</p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 15 组</h1>
+<p class="lede" id="conclusion">第 15 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式论文（新论文记录 0 篇、网络首发正式归期 0 篇），登记网络首发/在编/未来期 34 条；1 种期刊因官方源受限降级完成，0 种扫描失败，未发现撤稿或勘误。</p>
+<div class="cards" aria-label="关键计数">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>2</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>0</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>0</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>34</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复（已核查，0 项）</span></a>
+</div>
+</header>
+<main id="main">
+<section id="attention" aria-labelledby="attention-h"><h2 id="attention-h">需要关注</h2>
+<ul class="attention"><li><span class="tag warn">降级</span> <strong>计算机学报</strong> — 官方站点 cjc.ict.ac.cn 本轮 HTTPS/HTTP/检索接口全部超时或连接失败；无法核验 I8+。已简报 I7 不重印。 <span class="when">核查 2026-10-15 12:07 CST</span> <span class="evidence"><a href="http://cjc.ict.ac.cn/qwjs/view2.asp" rel="noopener noreferrer">官方期次目录</a><small>cjc.ict.ac.cn · 2026-10-15 12:07 CST · 失败核查对象</small></span></li></ul></section>
+<nav class="toc" aria-label="页内快速导航"><strong>快速导航</strong>
+<a href="#conclusion">今日结论</a><a href="#tasks">扫描任务</a><a href="#overview">期刊总览</a><a href="#formal">新完整期次</a><a href="#online-first">网络首发</a><a href="#errata">勘误撤稿</a><a href="#topics">主题与阅读路线</a><a href="#health">数据源健康</a><a href="#audit">审计与状态</a></nav>
+
+<section id="tasks" aria-labelledby="tasks-h"><h2 id="tasks-h">扫描任务</h2>
+<p>本次为常规当日任务；补扫任务 0 项、二月尾组 0 项、开放发布队列 0 项（发布重试 0 项）；仍待补扫 0 项。</p>
+<div class="table-wrap"><table class="stack"><caption>任务清单（按执行顺序）</caption>
+<thead><tr><th scope="col">Task_ID</th><th scope="col">Task_Type</th><th scope="col">Coverage_Month</th><th scope="col">Scheduled_Date</th><th scope="col">组号</th><th scope="col">执行顺序</th><th scope="col">Run_Mode</th><th scope="col">实际执行时间</th><th scope="col">状态</th><th scope="col">失败原因</th></tr></thead>
+<tbody><tr id="task-ROUTINE-20261015-G15"><td data-label="Task_ID"><code>ROUTINE-20261015-G15</code></td><td data-label="类型">ROUTINE</td><td data-label="覆盖月份">2026-10</td><td data-label="计划日期">2026-10-15</td><td data-label="组号">第 15 组</td><td data-label="顺序">1</td><td data-label="Run_Mode">CURRENT</td><td data-label="实际执行">2026-10-15 12:07 CST</td><td data-label="状态">COMPLETED（1 刊降级）</td><td data-label="失败原因">无期刊级失败</td></tr></tbody></table></div>
+<p>扫描范围：月度轮检分组第 15 组正式期刊 REG-015 GIScience &amp; Remote Sensing、REG-045 计算机学报、REG-075 The VLDB Journal；本组无附加信号源。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="overview" aria-labelledby="overview-h"><h2 id="overview-h">期刊更新总览</h2>
+<div class="table-wrap"><table class="stack"><caption>逐刊状态（排序：失败/待修复 → 降级 → 有更新 → 零更新）</caption>
+<thead><tr><th scope="col">期刊</th><th scope="col">本次状态</th><th scope="col">最新确认完整期次</th><th scope="col">新完整期次</th><th scope="col">新增正式论文</th><th scope="col">Online First</th><th scope="col">源健康</th><th scope="col">官方目录</th></tr></thead>
+<tbody><tr><th scope="row" data-label="期刊">REG-045<br><strong>计算机学报</strong></th><td data-label="本次状态"><span class="tag warn">降级完成</span></td><td data-label="最新确认完整期">2026-V49-I7</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">0</td><td data-label="源健康"><code>OFFICIAL_SITE_UNREACHABLE_TIMEOUT</code></td><td data-label="官方目录"><a href="http://cjc.ict.ac.cn/qwjs/view2.asp" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-015<br><strong>GIScience &amp; Remote Sensing</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-V63-I1</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">31</td><td data-label="源健康"><code>OFFICIAL_RSS_OK_TOC_CLOUDFLARE_BLOCKED</code></td><td data-label="官方目录"><a href="https://www.tandfonline.com/toc/tgrs20/current" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-075<br><strong>The VLDB Journal</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-V35-I5</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">3</td><td data-label="源健康"><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td data-label="官方目录"><a href="https://link.springer.com/journal/778/volumes-and-issues/35-5" rel="noopener noreferrer">官方期次目录</a></td></tr></tbody></table></div>
+<figure><img src="assets/2026-10-15_GIS-AI期刊每日摘要_第15组.png" width="1600" height="900" alt="第15组每日摘要图：检查正式期刊3种，有更新2种，新完整期次0个，新增正式论文0篇，网络首发与在编登记34条，失败或待修复0；降级1种"><figcaption>每日摘要图（1600×900，期刊级聚合）；等价文字计数见下表。</figcaption></figure>
+<div class="table-wrap"><table><caption>摘要图等价文字计数</caption><thead><tr><th scope="col">指标</th><th scope="col">数值</th></tr></thead><tbody><tr><th scope="row">已检查正式期刊</th><td>3</td></tr><tr><th scope="row">有更新期刊</th><td>2</td></tr><tr><th scope="row">新完整期次</th><td>0</td></tr><tr><th scope="row">新增正式论文</th><td>0</td></tr><tr><th scope="row">网络首发/在编</th><td>34</td></tr><tr><th scope="row">失败或待修复</th><td>0</td></tr><tr><th scope="row">降级期刊</th><td>1</td></tr><tr><th scope="row">去重抑制</th><td>3</td></tr><tr><th scope="row">增量复核</th><td>0</td></tr><tr><th scope="row">有界对账任务</th><td>4</td></tr></tbody></table></div>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="formal" aria-labelledby="formal-h"><h2 id="formal-h">新完整期次与逐篇卡片</h2>
+<nav aria-label="期次目录"><ol></ol></nav>
+<p>已核查，本批无新完整期次。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="online-first" aria-labelledby="of-h"><h2 id="of-h">网络首发 / 在编 / 未来期登记</h2>
+<p>本批新登记 <strong>34</strong> 条（GIScience &amp; Remote Sensing 31、The VLDB Journal 3）。以下条目只作登记，不作为完整期次证据；正式归期后按 DOI 合并，不重复计数。</p>
+<section class="of-journal" id="of-reg-015" aria-labelledby="of-reg-015-h"><h3 id="of-reg-015-h">GIScience &amp; Remote Sensing · 新登记 31 条</h3><p>连续出版年度卷 Current=Vol 63 No 1（开放中）。官方 TOC 遇 Cloudflare 403；官方 etoc RSS 两遍 202 DOI 指纹稳定且全部落在 V63-I1。基线 2025-V62-I1 不 claim；开放卷不标 ISSUE_COMPLETE。相对账本在年新增仅登记。 在年新增登记 31 篇 NEW_ARTICLE（相对账本 171→RSS 202）。</p><article class="paper" id="article-doi-5f3d5a6f82cb665f">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>High-resolution land cover mapping from coarse labels via a noisy label learning-guided cross-scale framework</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2726002</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2726002?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2726002" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>High-resolution land cover mapping from coarse labels via a noisy label learning-guided cross-scale framework</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2726002</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2726002?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-798998e28dc3ed8a">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Reliable Sar oil-spill segmentation for marine monitoring Via self-supervised denoising and lightweight wavelet–state-space modeling</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2727781</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2727781?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2727781" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Reliable Sar oil-spill segmentation for marine monitoring Via self-supervised denoising and lightweight wavelet–state-space modeling</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2727781</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2727781?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-e7943f283ca976d3">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Assessing heat dome effects on forest dynamics in the Pacific Northwest using Planet imagery</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2728824</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2728824?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2728824" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Assessing heat dome effects on forest dynamics in the Pacific Northwest using Planet imagery</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2728824</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2728824?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-845caa5a8d0e3fd1">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Thinking on maps: how foundation model agents explore, remember, and reason in map environments</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2730755</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2730755?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2730755" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Thinking on maps: how foundation model agents explore, remember, and reason in map environments</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2730755</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2730755?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-239b7389bca65f57">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Multi-task learning for simultaneous surface water and burned area mapping from earth observation data</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2737497</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2737497?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2737497" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multi-task learning for simultaneous surface water and burned area mapping from earth observation data</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2737497</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2737497?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-65d8a704440d02e1">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Hydroclimatic signatures of flash drought heterogeneity and rice-yield responses in China</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2741471</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2741471?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2741471" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Hydroclimatic signatures of flash drought heterogeneity and rice-yield responses in China</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2741471</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2741471?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-ee6cdf4dc367e814">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Improved estimation of lake storage variation via DEM reconstruction integrating elevation and morphological constraints</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2739663</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2739663?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2739663" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Improved estimation of lake storage variation via DEM reconstruction integrating elevation and morphological constraints</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2739663</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2739663?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-386c67c461ed4d14">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Automated camera parameters estimation and occlusion-aware visibility mapping of urban CCTV using asynchronously acquired MMS LiDAR</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2741481</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2741481?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2741481" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Automated camera parameters estimation and occlusion-aware visibility mapping of urban CCTV using asynchronously acquired MMS LiDAR</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2741481</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2741481?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-5fe9bc1bf771f78d">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>RSFF: a reconciliation-sparse fusion framework for semantic segmentation of rocky desertification land in multimodal time series</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2739002</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2739002?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2739002" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>RSFF: a reconciliation-sparse fusion framework for semantic segmentation of rocky desertification land in multimodal time series</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2739002</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2739002?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-03668bed85441f13">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>PGD-Net: Prompt-Guided Hybrid Transformer Decoder for building extraction from remote sensing images</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2741472</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2741472?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2741472" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>PGD-Net: Prompt-Guided Hybrid Transformer Decoder for building extraction from remote sensing images</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2741472</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2741472?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3190d0508ffad81a">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>A large-scale spatiotemporal NDVI prediction method coupling multivariable constraints and structured modeling</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2747435</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2747435?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2747435" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A large-scale spatiotemporal NDVI prediction method coupling multivariable constraints and structured modeling</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2747435</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2747435?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-2fa83f28eaef3663">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Shifting pathways of post-earthquake vegetation structural and functional recovery under varying earthquake disturbance intensities</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2728759</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2728759?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2728759" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Shifting pathways of post-earthquake vegetation structural and functional recovery under varying earthquake disturbance intensities</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2728759</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2728759?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-dcfd468e7e1dca26">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>A source–medium–receiver framework for modeling wind-driven vegetation cooling in urban landscapes</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2733792</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2733792?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2733792" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A source–medium–receiver framework for modeling wind-driven vegetation cooling in urban landscapes</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2733792</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2733792?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6fd3ef61c6ce8448">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Audio-visual fusion for near-surface wind speed estimation using surveillance cameras</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2731700</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2731700?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2731700" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Audio-visual fusion for near-surface wind speed estimation using surveillance cameras</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2731700</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2731700?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6e34680e4b147b0a">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Improving automatic glacier mapping accuracy, robustness, and reliability across the Third Pole Region</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2737501</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2737501?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2737501" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Improving automatic glacier mapping accuracy, robustness, and reliability across the Third Pole Region</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2737501</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2737501?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-e7401f51f3f702dd">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Global daily joint reconstruction of TROPOMI tropospheric NO2 columns and averaging kernels with temporally aware deep learning</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2732650</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2732650?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2732650" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Global daily joint reconstruction of TROPOMI tropospheric NO2 columns and averaging kernels with temporally aware deep learning</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2732650</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2732650?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-2c3974e0ad601043">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>A method for identifying urban flood inundation based on single-temporal remote sensing imagery</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2736379</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2736379?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2736379" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A method for identifying urban flood inundation based on single-temporal remote sensing imagery</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2736379</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2736379?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-7f8dcf10e1168bb2">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Global asymmetric mangrove-edge shifts reveal coastal squeeze under sea-level rise</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2741774</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2741774?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2741774" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Global asymmetric mangrove-edge shifts reveal coastal squeeze under sea-level rise</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2741774</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2741774?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-2479b6074edcc1bf">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Stage-integrated fire resilience assessment of forest vegetation and its driving factors</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2742614</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2742614?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2742614" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Stage-integrated fire resilience assessment of forest vegetation and its driving factors</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2742614</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2742614?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-7e06b6c75a2adc1b">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Spaceborne multi-sensor tracking reveals hydrologic decoupling during the record-breaking Sahara flood</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2740867</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2740867?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2740867" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spaceborne multi-sensor tracking reveals hydrologic decoupling during the record-breaking Sahara flood</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2740867</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2740867?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-b2c25934f7083f6f">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Spatiotemporal characteristics of vegetation responses to compound drought and heatwave events in Central Asia</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2741443</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2741443?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2741443" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spatiotemporal characteristics of vegetation responses to compound drought and heatwave events in Central Asia</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2741443</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2741443?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-91b63e2321b0e806">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>How does hillside urban expansion affect the surface urban heat island effect? empirical evidence from China</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2742570</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2742570?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2742570" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>How does hillside urban expansion affect the surface urban heat island effect? empirical evidence from China</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2742570</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2742570?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-f20a9a315bd86a9f">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Seasonal asymmetric changes between photosynthesis and canopy structure phenology across the northern hemisphere</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2740866</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2740866?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2740866" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Seasonal asymmetric changes between photosynthesis and canopy structure phenology across the northern hemisphere</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2740866</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2740866?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6e6d8eaaf81b2819">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Beyond accuracy: environment-dependent performance and threshold robustness of spectral water indices across regions and seasons</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2742629</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2742629?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2742629" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Beyond accuracy: environment-dependent performance and threshold robustness of spectral water indices across regions and seasons</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2742629</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2742629?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-4b2a0cb5774bfd7c">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Tracking vegetation disturbance, recovery, and sustainability in open-pit mining areas of Beijing–Tianjin–Hebei Region from 2000 to 2024</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2744076</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2744076?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2744076" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Tracking vegetation disturbance, recovery, and sustainability in open-pit mining areas of Beijing–Tianjin–Hebei Region from 2000 to 2024</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2744076</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2744076?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-4539c14c1ec3622a">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Hillslope-scale daily snow cover reconstruction in complex mountains: a novel framework integrating long-term snow persistence</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2745218</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2745218?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2745218" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Hillslope-scale daily snow cover reconstruction in complex mountains: a novel framework integrating long-term snow persistence</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2745218</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2745218?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a006c338bcc34035">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Integrating multi-source physical knowledge into deep learning for satellite soil moisture downscaling</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2745215</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2745215?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2745215" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Integrating multi-source physical knowledge into deep learning for satellite soil moisture downscaling</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2745215</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2745215?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-05cb6f56214b7b91">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>A review of remote sensing for agricultural drought: technologies, indices, modelling advances and future prospects</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2738981</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2738981?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2738981" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A review of remote sensing for agricultural drought: technologies, indices, modelling advances and future prospects</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2738981</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2738981?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-c6bf050744360a77">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Correction</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2736374</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2736374?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2736374" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Correction</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2736374</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2736374?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-7179eaef9a6bd584">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>SAMWater: a prompt-guided multimodal framework for transferable water mapping with the segment anything model</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2745243</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2745243?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2745243" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>SAMWater: a prompt-guided multimodal framework for transferable water mapping with the segment anything model</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2745243</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2745243?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-55d46ccf8e4726a3">
+<p class="kicker">GIScience &amp; Remote Sensing · IN_YEAR_CONTINUOUS</p>
+<h3>Adaptive smooth constrained stereo matching and disparity refinement for satellite DSM generation</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V63 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15481603.2026.2745213</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2745213?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15481603.2026.2745213" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Adaptive smooth constrained stereo matching and disparity refinement for satellite DSM generation</strong></p><p class="abstract-meta">期刊：GIScience &amp; Remote Sensing · DOI：10.1080/15481603.2026.2745213</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2026.2745213?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section><section class="of-journal" id="of-reg-075" aria-labelledby="of-reg-075-h"><h3 id="of-reg-075-h">The VLDB Journal · 新登记 3 条</h3><p>已简报 2026-V35-I5（September，15 篇）两遍 TOC 稳定不重印。I6=November 2026 官方 TOC 两遍 6 DOI 稳定，但正式月份未到（今日 2026-10-15），未来期只登记网络首发/提前在线，不 claim。 I6 新提前在线登记 3 篇（已知 ONLINE_FIRST 抑制 3）。</p><article class="paper" id="article-doi-a5096f10732d68f1">
+<p class="kicker">The VLDB Journal · FUTURE_ISSUE_PREPUBLICATION</p>
+<h3>LLM-powered clustering for entity resolution</h3>
+<p>Jiajie Fu; Haitong Tang; Yunjun Gao</p>
+<dl>
+<div><dt>卷期</dt><dd>V35 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00778-026-01006-1</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_FUTURE_ISSUE</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-01006-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01006-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>LLM-powered clustering for entity resolution</strong></p><p class="abstract-meta">期刊：The VLDB Journal · DOI：10.1007/s00778-026-01006-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-01006-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-7969917de5a7ff6d">
+<p class="kicker">The VLDB Journal · FUTURE_ISSUE_PREPUBLICATION</p>
+<h3>TFB-2: benchmarking and automated ensemble for time series forecasting</h3>
+<p>Zhengyu Li; Xingjian Wu; Bin Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V35 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00778-026-01007-0</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_FUTURE_ISSUE</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-01007-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01007-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>TFB-2: benchmarking and automated ensemble for time series forecasting</strong></p><p class="abstract-meta">期刊：The VLDB Journal · DOI：10.1007/s00778-026-01007-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-01007-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-b007fd2386d9d3ff">
+<p class="kicker">The VLDB Journal · FUTURE_ISSUE_PREPUBLICATION</p>
+<h3>VLDB S.I.: harnessing the power of foundation models for data management</h3>
+<p>Melisachew Wudage Chekol; Çağatay Demiralp; Yannis Velegrakis</p>
+<dl>
+<div><dt>卷期</dt><dd>V35 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00778-026-01009-y</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_FUTURE_ISSUE</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-01009-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-15 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s00778-026-01009-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-15 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>VLDB S.I.: harnessing the power of foundation models for data management</strong></p><p class="abstract-meta">期刊：The VLDB Journal · DOI：10.1007/s00778-026-01009-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s00778-026-01009-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="errata" aria-labelledby="errata-h"><h2 id="errata-h">勘误与撤稿</h2>
+<p>已核查，0 项：本批 3 刊（GIScience &amp; Remote Sensing、计算机学报、The VLDB Journal）已取得的官方目录与发现源列表中未发现撤稿、勘误或更正声明条目；降级期刊 计算机学报 官方目录不可达，相关勘误/撤稿无法本轮核验，已登记为待重试。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="topics" aria-labelledby="topics-h"><h2 id="topics-h">主题与阅读路线</h2><ul><li>The VLDB Journal 候选/在编期 2026-V35-I6 仅登记，不进入正式期次阅读路线。</li><li>计算机学报 本轮因官方目录不可达降级，暂无新正式期次阅读路线。</li><li>GIScience &amp; Remote Sensing：31 条未来期/在年登记均附官方摘要抽屉，可按摘要筛选后再进入官方论文页面。</li><li>The VLDB Journal：3 条未来期/在年登记均附官方摘要抽屉，可按摘要筛选后再进入官方论文页面。</li><li>以上为元数据级分组，不构成对论文研究结论的判断。</li></ul><p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="health" aria-labelledby="health-h"><h2 id="health-h">数据源健康</h2><ul><li>计算机学报（REG-045）：源健康 <code>OFFICIAL_SITE_UNREACHABLE_TIMEOUT</code>；状态 DEGRADED；官方站点 cjc.ict.ac.cn（含 HTTPS/HTTP 首页、onlinepaper、qwjs/view2.asp）本轮全部超时/连接失败（DNS 解析至 198.18.0.1）。已简报 2026-V49-I7 不重印；无法核验 I8+，不作 claim。降级完成。。</li><li>GIScience &amp; Remote Sensing（REG-015）：源健康 <code>OFFICIAL_RSS_OK_TOC_CLOUDFLARE_BLOCKED</code>；状态 COMPLETED；连续出版年度卷 Current=Vol 63 No 1（开放中）。官方 TOC 遇 Cloudflare 403；官方 etoc RSS 两遍 202 DOI 指纹稳定且全部落在 V63-I1。基线 2025-V62-I1 不 claim；开放卷不标 ISSUE_COMPLETE。相对账本在年新增仅登记。 在年新增登记 31 篇 NEW_ARTICLE（相对账本 171→RSS 202）。。</li><li>The VLDB Journal（REG-075）：源健康 <code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code>；状态 COMPLETED；已简报 2026-V35-I5（September，15 篇）两遍 TOC 稳定不重印。I6=November 2026 官方 TOC 两遍 6 DOI 稳定，但正式月份未到（今日 2026-10-15），未来期只登记网络首发/提前在线，不 claim。 I6 新提前在线登记 3 篇（已知 ONLINE_FIRST 抑制 3）。。</li><li>有界对账：处理 4 个到期任务（上限 4），目录侧证据不足均保持 FAILED_RETRYABLE。</li></ul><ul><li>job 54 · REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE：有界对账：本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 58 · REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE：有界对账：本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 59 · REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE：有界对账：本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 65 · REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE：有界对账：本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li></ul>
+<p>失败或待修复：已核查，0 项。降级路径：计算机学报：官方站点 cjc.ict.ac.cn 本轮 HTTPS/HTTP/检索接口全部超时或连接失败；无法核验 I8+。已简报 I7 不重印。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="audit" aria-labelledby="audit-h"><h2 id="audit-h">证据与审计信息</h2>
+<details><summary>运行标识、证据层级与提交状态</summary>
+<ul>
+<li>Brief_ID：<code>DAILY-20261015</code> · Commit_ID：<code>DAILY-20261015-120641-10375cf7</code> · Run_ID：<code>10375cf7-53b0-4f79-83d2-734a8cc5bbbc</code></li>
+<li>逻辑日期 2026-10-15 · 实际完成 2026-10-15 12:07 CST · Recovery_Batch_ID：<code>10375cf7-53b0-4f79-83d2-734a8cc5bbbc</code></li>
+<li>任务：ROUTINE-20261015-G15（ROUTINE · CURRENT · 执行顺序 1 · COMPLETED）；补扫 0、仍待补扫 0；下一计划扫描 2026-10-16 第 16 组。</li>
+<li>证据层级：官方期次目录 = 一级完整性证据；官方论文页 = 题名/作者/摘要证据；DOI = 身份证据；Crossref = 二级补全；RSS / API = 发现信号（不证明完整性）。</li>
+<li>多遍目录核验：GIScience &amp; Remote Sensing etoc RSS 两遍 202/202 DOI 集合一致；官方 TOC Cloudflare 403；计算机学报 官方目录不可达（timeout/ERR_CONNECTION）；The VLDB Journal 2026-V35-I5 两遍 15/15 集合一致但 Issue In Progress，仅候选；The VLDB Journal 2026-V35-I6 两遍 6/6 集合一致但 Issue In Progress，仅候选</li>
+<li>门控统计：issue gate NEW_ISSUE 0；article gate 新论文记录 0、网络首发新登记 34、去重抑制 3、增量复核 0、门控错误 0。</li>
+<li>摘要校验：所有摘要经 text_sanitize 清洗与参考文献块识别校验；本页 0 篇论文附可展开官方摘要，34 篇暂无摘要；每张卡片保留官方论文页面链接。</li>
+<li>摘要图 SHA-256：<code>482f07e976d9d739e961ab2c70404d11197d41d0debbdbe5e36cbd44a013d6fc</code>；HTML SHA-256 见提交回执（避免自引用哈希）。</li>
+<li>PostgreSQL 严格健康：PASS（7/7 迁移一致，健康问题 0）。</li>
+</ul></details>
+<p class="back"><a href="#top">返回页首</a></p></section>
+</main>
+<footer><nav aria-label="日报导航"><a href="../../../../2026/10/index.html">返回 2026 年 10 月索引</a> · <a href="../../../../2026/10/2026-10-14_GIS-AI期刊每日轮检简报_第14组.html">上一篇：2026-10-14 第 14 组</a> · <a href="#top">返回页首</a></nav></footer>
+</body></html>
