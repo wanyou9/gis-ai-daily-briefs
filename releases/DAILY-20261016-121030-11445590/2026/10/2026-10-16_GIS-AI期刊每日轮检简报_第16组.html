@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 16 组 · 2026-10-16</title>
+<style>
+:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;font-size:16px;line-height:1.65;overflow-wrap:anywhere}
+a{color:var(--brand);text-decoration:underline;text-underline-offset:.18em;display:inline-block;min-height:44px;line-height:44px}
+a:visited{color:#4b3f72}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:2px}
+.skip{position:absolute;left:12px;top:-80px;background:#fff;padding:0 14px;z-index:9}.skip:focus{top:8px}
+.hero{background:linear-gradient(135deg,#073d58,#08737a);color:#fff;padding:18px max(18px,calc((100vw - 1180px)/2)) 22px}
+.hero a{color:#fff}.crumb{font-size:14px}.meta{font-size:14px;color:#cfe7e6;margin:.2rem 0}
+.hero h1{font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.15;margin:.3rem 0 .6rem}
+.lede{font-size:clamp(1rem,2vw,1.15rem);max-width:72em;margin:0 0 14px}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.card{display:block;line-height:1.3;background:#ffffff1f;border:1px solid #ffffff55;border-radius:12px;padding:10px 12px;color:#fff;text-decoration:none;min-height:44px}
+.card strong{display:block;font-size:1.7rem}.card span{font-size:14px}
+main{max-width:1180px;margin:0 auto;padding:0 18px 40px}
+section{margin-top:26px}h2{font-size:1.45rem;margin:0 0 10px;border-left:5px solid var(--brand);padding-left:10px}h3{font-size:1.12rem;margin:.6rem 0}
+.attention{list-style:none;padding:0;margin:0}.attention li{background:#fff;border:1px solid var(--line);border-left:5px solid #e1a62b;border-radius:10px;padding:8px 14px;margin:8px 0}
+.tag{display:inline-block;font-size:14px;font-weight:700;border:2px solid currentColor;border-radius:6px;padding:0 6px;line-height:1.6}
+.tag.ok{color:var(--ok)}.tag.warn{color:var(--warn)}.tag.bad{color:var(--bad)}.when{font-size:14px;color:var(--muted)}
+.toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 14px;margin-top:18px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%}caption{text-align:left;padding:10px 12px;font-weight:700}
+th,td{border-top:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;font-size:15px}thead th{background:#e3efed}
+figure{margin:16px 0}figure img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}figcaption{font-size:14px;color:var(--muted)}
+.issue,.of-journal{background:#ffffffa8;border:1px solid var(--line);border-radius:12px;padding:6px 16px 12px;margin:16px 0}
+.issue-meta,.paper dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:4px 14px;margin:6px 0}
+.issue-meta div,.paper dl div{font-size:14px}dt{color:var(--muted);font-size:14px}dd{margin:0}
+.paper{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px;margin:12px 0}
+.paper h3{font-size:1.05rem}.kicker{font-size:14px;color:var(--muted);margin:.2rem 0}
+.evidence{display:inline-flex;flex-direction:column;margin-right:14px}.evidence small{font-size:14px;color:var(--muted);line-height:1.3}
+.back{font-size:14px;margin:4px 0}.more{font-size:15px}code{font-size:14px;word-break:break-all}
+details summary{cursor:pointer;min-height:44px;display:flex;align-items:center}
+footer{max-width:1180px;margin:0 auto;padding:10px 18px 40px;font-size:15px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.cards{grid-template-columns:repeat(2,1fr)}.card strong{font-size:1.4rem}
+ table.stack thead{position:absolute;left:-9999px}table.stack,table.stack tbody,table.stack tr,table.stack th,table.stack td{display:block;width:100%}
+ table.stack tr{border-top:2px solid var(--line);padding:6px 0}table.stack th,table.stack td{border:0;padding:3px 10px}
+ table.stack td::before,table.stack th::before{content:attr(data-label)"：";color:var(--muted);font-size:14px}}
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到主要内容</a>
+<header class="hero">
+<nav class="crumb" aria-label="面包屑"><a href="../../../../index.html">站点首页</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/10/index.html">10 月</a> / 2026-10-16 第 16 组</nav>
+<p class="meta">逻辑日期 2026-10-16（北京时间）· 实际完成 2026-10-16 12:10 CST · 任务类型 ROUTINE · 第 16 组</p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 16 组</h1>
+<p class="lede" id="conclusion">第 16 组共检查 3 种正式期刊；确认 1 个新完整期次、14 篇正式论文（新论文记录 14 篇、网络首发正式归期 0 篇），登记网络首发/在编/未来期 72 条；无降级期刊，0 种扫描失败，未发现撤稿或勘误。</p>
+<div class="cards" aria-label="关键计数">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>3</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>1</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>14</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>72</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复（已核查，0 项）</span></a>
+</div>
+</header>
+<main id="main">
+<section id="attention" aria-labelledby="attention-h"><h2 id="attention-h">需要关注</h2>
+<ul class="attention"><li><span class="tag ok">新期次</span> <strong>软件学报</strong> — 确认 2026-V37-I10 完整，14 篇正式论文均已出卡。 <span class="when">核查 2026-10-16 12:10 CST</span> <span class="evidence"><a href="https://www.jos.org.cn/jos/article/issue/2026_37_10" rel="noopener noreferrer">官方期次目录</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 一级证据</small></span></li></ul></section>
+<nav class="toc" aria-label="页内快速导航"><strong>快速导航</strong>
+<a href="#conclusion">今日结论</a><a href="#tasks">扫描任务</a><a href="#overview">期刊总览</a><a href="#formal">新完整期次</a><a href="#online-first">网络首发</a><a href="#errata">勘误撤稿</a><a href="#topics">主题与阅读路线</a><a href="#health">数据源健康</a><a href="#audit">审计与状态</a></nav>
+
+<section id="tasks" aria-labelledby="tasks-h"><h2 id="tasks-h">扫描任务</h2>
+<p>本次为常规当日任务；补扫任务 0 项、二月尾组 0 项、开放发布队列 0 项（发布重试 0 项）；仍待补扫 0 项。</p>
+<div class="table-wrap"><table class="stack"><caption>任务清单（按执行顺序）</caption>
+<thead><tr><th scope="col">Task_ID</th><th scope="col">Task_Type</th><th scope="col">Coverage_Month</th><th scope="col">Scheduled_Date</th><th scope="col">组号</th><th scope="col">执行顺序</th><th scope="col">Run_Mode</th><th scope="col">实际执行时间</th><th scope="col">状态</th><th scope="col">失败原因</th></tr></thead>
+<tbody><tr id="task-ROUTINE-20261016-G16"><td data-label="Task_ID"><code>ROUTINE-20261016-G16</code></td><td data-label="类型">ROUTINE</td><td data-label="覆盖月份">2026-10</td><td data-label="计划日期">2026-10-16</td><td data-label="组号">第 16 组</td><td data-label="顺序">1</td><td data-label="Run_Mode">CURRENT</td><td data-label="实际执行">2026-10-16 12:10 CST</td><td data-label="状态">COMPLETED</td><td data-label="失败原因">无期刊级失败</td></tr></tbody></table></div>
+<p>扫描范围：月度轮检分组第 16 组正式期刊 REG-016 International Journal of Digital Earth、REG-046 软件学报、REG-076 Discover Computing；本组无附加信号源。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="overview" aria-labelledby="overview-h"><h2 id="overview-h">期刊更新总览</h2>
+<div class="table-wrap"><table class="stack"><caption>逐刊状态（排序：失败/待修复 → 降级 → 有更新 → 零更新）</caption>
+<thead><tr><th scope="col">期刊</th><th scope="col">本次状态</th><th scope="col">最新确认完整期次</th><th scope="col">新完整期次</th><th scope="col">新增正式论文</th><th scope="col">Online First</th><th scope="col">源健康</th><th scope="col">官方目录</th></tr></thead>
+<tbody><tr><th scope="row" data-label="期刊">REG-016<br><strong>International Journal of Digital Earth</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-V19-I2</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">22</td><td data-label="源健康"><code>OFFICIAL_RSS_OK_TOC_CLOUDFLARE_BLOCKED</code></td><td data-label="官方目录"><a href="https://www.tandfonline.com/toc/tjde20/current" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-046<br><strong>软件学报</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-V37-I10</td><td data-label="新完整期">1</td><td data-label="新增正式论文">14</td><td data-label="网络首发">0</td><td data-label="源健康"><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT_RSS8081_TIMEOUT</code></td><td data-label="官方目录"><a href="https://www.jos.org.cn/jos/article/issue/2026_37_10" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-076<br><strong>Discover Computing</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2025-V28-I1</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">50</td><td data-label="源健康"><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td data-label="官方目录"><a href="https://link.springer.com/journal/10791/volumes-and-issues/29-1" rel="noopener noreferrer">官方期次目录</a></td></tr></tbody></table></div>
+<figure><img src="assets/2026-10-16_GIS-AI期刊每日摘要_第16组.png" width="1600" height="900" alt="第16组每日摘要图：检查正式期刊3种，有更新3种，新完整期次1个，新增正式论文14篇，网络首发与在编登记72条，失败或待修复0；降级0种"><figcaption>每日摘要图（1600×900，期刊级聚合）；等价文字计数见下表。</figcaption></figure>
+<div class="table-wrap"><table><caption>摘要图等价文字计数</caption><thead><tr><th scope="col">指标</th><th scope="col">数值</th></tr></thead><tbody><tr><th scope="row">已检查正式期刊</th><td>3</td></tr><tr><th scope="row">有更新期刊</th><td>3</td></tr><tr><th scope="row">新完整期次</th><td>1</td></tr><tr><th scope="row">新增正式论文</th><td>14</td></tr><tr><th scope="row">网络首发/在编</th><td>72</td></tr><tr><th scope="row">失败或待修复</th><td>0</td></tr><tr><th scope="row">降级期刊</th><td>0</td></tr><tr><th scope="row">去重抑制</th><td>0</td></tr><tr><th scope="row">增量复核</th><td>0</td></tr><tr><th scope="row">有界对账任务</th><td>4</td></tr></tbody></table></div>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="formal" aria-labelledby="formal-h"><h2 id="formal-h">新完整期次与逐篇卡片</h2>
+<nav aria-label="期次目录"><ol><li><a href="#issue-reg-046-df16069daa14">软件学报 · 2026-V37-I10（14 篇）</a></li></ol></nav>
+<section class="issue" id="issue-reg-046-df16069daa14" aria-labelledby="issue-reg-046-df16069daa14-h"><h3 id="issue-reg-046-df16069daa14-h">软件学报 · 2026年第37卷第10期</h3><dl class="issue-meta"><div><dt>期次</dt><dd>2026-V37-I10</dd></div><div><dt>出版日期</dt><dd>2026（官方期次目录）</dd></div><div><dt>正式论文</dt><dd>14 篇</dd></div><div><dt>范围</dt><dd>14 篇（官方 TOC 两遍 DOI 集合一致）</dd></div><div><dt>完整性证据</dt><dd>官方目录多遍集合一致（）；issue gate=NEW_ISSUE</dd></div></dl><p>官方期次目录 https://www.jos.org.cn/jos/article/issue/2026_37_10 两遍 14 DOI 指纹稳定；I11/I12 空。相对已简报 I9。gate-issue=NEW_ISSUE。:8081 RSS 超时不影响官方完整性。 正式期次首登 14 篇 NEW_ARTICLE。</p><p><span class="evidence"><a href="https://www.jos.org.cn/jos/article/issue/2026_37_10" rel="noopener noreferrer">官方期次目录</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 一级完整性证据</small></span></p><details class="issue-toc"><summary>本期目录（14 篇，点击跳转论文卡片）</summary><ol><li><a href="#article-doi-1022efb55f1bfa97">面向位图的K-团枚举问题GPU优化算法</a></li><li><a href="#article-doi-a23c3164ab8b797c">结合K-means与SVR的多路径覆盖测试用例约简与生成</a></li><li><a href="#article-doi-471b43c995aeeddb">基于JavaScript代码分析的漏洞扫描器增强框架</a></li><li><a href="#article-doi-cb8f5496e8e366a3">HarmonyFlow: 基于方舟Panda IR的HarmonyOS应用静态分析框架</a></li><li><a href="#article-doi-09e2efc4e8dcf155">形式化验证的类Scade时态算子编译</a></li><li><a href="#article-doi-f41f99cc50ed7822">真实开源软件仓库开发者交流网络的社区检测基准研究</a></li><li><a href="#article-doi-4bf0c58a4c918d27">结合模糊测试的安全攸关车辆配置搜索</a></li><li><a href="#article-doi-76d1ce69916a7c65">基于图表示学习的在线服务系统告警聚类方法</a></li><li><a href="#article-doi-fabe42671a3e8b53">用于图像去噪的特征空间上下文Transformer</a></li><li><a href="#article-doi-bbaa4baeec6dfd78">个体多样性自适应的多模态多目标差分进化算法</a></li><li><a href="#article-doi-a9f55e016142ebe9">基于安全多方计算的隐私保护异构联邦学习参与方选择</a></li><li><a href="#article-doi-199f6898c93b9614">混合特征编码的HTAP工作负载识别方法</a></li><li><a href="#article-doi-034afaecdf084d45">基于隐私保护分组生成的高效联邦学习</a></li><li><a href="#article-doi-5c08c12773d6099c">基于博弈论的可信动态访问控制方案</a></li></ol></details><article class="paper" id="article-doi-1022efb55f1bfa97">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>面向位图的K-团枚举问题GPU优化算法</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007558</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7558" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007558" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>面向位图的K-团枚举问题GPU优化算法</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007558</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7558" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a23c3164ab8b797c">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>结合K-means与SVR的多路径覆盖测试用例约简与生成</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007472</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7472" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007472" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>结合K-means与SVR的多路径覆盖测试用例约简与生成</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007472</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7472" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-471b43c995aeeddb">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>基于JavaScript代码分析的漏洞扫描器增强框架</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007476</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7476" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007476" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于JavaScript代码分析的漏洞扫描器增强框架</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007476</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7476" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-cb8f5496e8e366a3">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>HarmonyFlow: 基于方舟Panda IR的HarmonyOS应用静态分析框架</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007477</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7477" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007477" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>HarmonyFlow: 基于方舟Panda IR的HarmonyOS应用静态分析框架</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007477</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7477" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-09e2efc4e8dcf155">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>形式化验证的类Scade时态算子编译</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007536</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7536" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007536" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>形式化验证的类Scade时态算子编译</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007536</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7536" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-f41f99cc50ed7822">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>真实开源软件仓库开发者交流网络的社区检测基准研究</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007555</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7555" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007555" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>真实开源软件仓库开发者交流网络的社区检测基准研究</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007555</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7555" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-4bf0c58a4c918d27">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>结合模糊测试的安全攸关车辆配置搜索</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007566</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7566" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007566" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>结合模糊测试的安全攸关车辆配置搜索</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007566</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7566" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-76d1ce69916a7c65">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>基于图表示学习的在线服务系统告警聚类方法</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007612</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7612" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007612" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于图表示学习的在线服务系统告警聚类方法</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007612</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7612" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-fabe42671a3e8b53">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>用于图像去噪的特征空间上下文Transformer</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007569</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7569" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007569" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>用于图像去噪的特征空间上下文Transformer</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007569</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7569" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-bbaa4baeec6dfd78">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>个体多样性自适应的多模态多目标差分进化算法</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007578</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7578" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007578" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>个体多样性自适应的多模态多目标差分进化算法</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007578</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7578" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a9f55e016142ebe9">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>基于安全多方计算的隐私保护异构联邦学习参与方选择</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007622</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7622" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007622" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于安全多方计算的隐私保护异构联邦学习参与方选择</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007622</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7622" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-199f6898c93b9614">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>混合特征编码的HTAP工作负载识别方法</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007505</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7505" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007505" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>混合特征编码的HTAP工作负载识别方法</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007505</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7505" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-034afaecdf084d45">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>基于隐私保护分组生成的高效联邦学习</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007636</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7636" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007636" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于隐私保护分组生成的高效联邦学习</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007636</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7636" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-5c08c12773d6099c">
+<p class="kicker">软件学报 · FORMAL_ISSUE</p>
+<h3>基于博弈论的可信动态访问控制方案</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V37 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13328/j.cnki.jos.007571</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7571" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13328/j.cnki.jos.007571" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于博弈论的可信动态访问控制方案</strong></p><p class="abstract-meta">期刊：软件学报 · DOI：10.13328/j.cnki.jos.007571</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.jos.org.cn/jos/article/abstract/7571" rel="noopener noreferrer">官方论文页面</a><small>www.jos.org.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#issue-reg-046-df16069daa14">返回本期目录</a> · <a href="#top">返回页首</a></p></article></section>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="online-first" aria-labelledby="of-h"><h2 id="of-h">网络首发 / 在编 / 未来期登记</h2>
+<p>本批新登记 <strong>72</strong> 条（International Journal of Digital Earth 22、Discover Computing 50）。以下条目只作登记，不作为完整期次证据；正式归期后按 DOI 合并，不重复计数。</p>
+<section class="of-journal" id="of-reg-016" aria-labelledby="of-reg-016-h"><h3 id="of-reg-016-h">International Journal of Digital Earth · 新登记 22 条</h3><p>已简报 2026-V19-I2（BRIEFED）。官方 TOC 遇 Cloudflare 403；官方 etoc RSS 两遍 82 DOI 指纹稳定且全部落在 V19-I2。开放累积卷不重印；相对账本在年新增仅登记。 在年新增登记 22 篇 NEW_ARTICLE（相对账本 60→RSS 82）。</p><article class="paper" id="article-doi-41bc857830d2534d">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Detection of linear deformation features in arctic landfast ice using InSAR and deep learning</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2731665</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2731665?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2731665" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Detection of linear deformation features in arctic landfast ice using InSAR and deep learning</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2731665 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2731665?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-c42b8fd74149bbd3">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Multimodal spatial co-occurrence knowledge representation for virtual trajectory classification</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2738310</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738310?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2738310" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Multimodal spatial co-occurrence knowledge representation for virtual trajectory classification</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2738310 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738310?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-c6bc023763800c6f">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Towards a new multi-representation LOD model for high-definition maps in automated driving</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2738250</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738250?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2738250" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Towards a new multi-representation LOD model for high-definition maps in automated driving</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2738250 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738250?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-39aad176ffee4a47">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Land surface dynamics modeling and prediction with dual latent space embeddings</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2738280</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738280?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2738280" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Land surface dynamics modeling and prediction with dual latent space embeddings</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2738280 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738280?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-104630ecc81ed15c">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Tokenization matters for GEE code generation: a multidimensional tokenization benchmark</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2739679</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2739679?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2739679" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Tokenization matters for GEE code generation: a multidimensional tokenization benchmark</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2739679 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2739679?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-bbe6b4e0cc2de75c">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Parameter-efficient fine-tuning of SAM for SAR flood mapping: comparative performance and encoder–decoder representation analysis</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2744033</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2744033?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2744033" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Parameter-efficient fine-tuning of SAM for SAR flood mapping: comparative performance and encoder–decoder representation analysis</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2744033 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2744033?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-0827934e419da90b">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Tail-aware spatiotemporal diffusion for probabilistic forecasting of extreme traffic congestion</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2738486</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738486?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2738486" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Tail-aware spatiotemporal diffusion for probabilistic forecasting of extreme traffic congestion</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2738486 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738486?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-78e94f45fec7c297">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Integrating PlanetScope time-series and deep learning for monitoring of shrub encroachment in semi-arid steppes</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2724759</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2724759?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2724759" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Integrating PlanetScope time-series and deep learning for monitoring of shrub encroachment in semi-arid steppes</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2724759 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2724759?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-70a76142cc5c9bb9">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Spatiotemporal evolution and drivers of eco-environmental quality for sustainable rural tourism in China’s Yangtze River Basin: an explainable AI approach</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2735566</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2735566?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2735566" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Spatiotemporal evolution and drivers of eco-environmental quality for sustainable rural tourism in China’s Yangtze River Basin: an explainable AI approach</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2735566 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2735566?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6da581e4e98bb89f">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>A global daily AVHRR true-color image record since 1981 derived from the XBAER-RGB reconstruction framework</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2721042</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2721042?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2721042" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A global daily AVHRR true-color image record since 1981 derived from the XBAER-RGB reconstruction framework</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2721042 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2721042?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3c25339d997f24c0">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>High-resolution assessment of spatiotemporal changes in China’s multiple cropping potential under future climate scenarios</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2728194</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2728194?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2728194" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>High-resolution assessment of spatiotemporal changes in China’s multiple cropping potential under future climate scenarios</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2728194 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2728194?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-33f4431fe3129269">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Dynamic probabilistic dependency pathways of ecological risk in arid landscapes: a Bayesian network–GMM analysis of multiple disturbances in Kazakhstan</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2738483</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738483?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2738483" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Dynamic probabilistic dependency pathways of ecological risk in arid landscapes: a Bayesian network–GMM analysis of multiple disturbances in Kazakhstan</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2738483 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738483?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6bd04811c5d58121">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Satellite‑observed recent flow acceleration of glaciers and model‑based environmental associations in Victoria Land, East Antarctica</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2738329</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738329?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2738329" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Satellite‑observed recent flow acceleration of glaciers and model‑based environmental associations in Victoria Land, East Antarctica</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2738329 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738329?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-642a040b5d0c3809">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>A rapid-updating method for anthropogenic NOx emissions based on convolutional neural networks and TROPOMI NO₂ observations</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2739773</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2739773?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2739773" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A rapid-updating method for anthropogenic NOx emissions based on convolutional neural networks and TROPOMI NO₂ observations</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2739773 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2739773?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-fba25c369f080fc8">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>GeoCaseRec: a knowledge graph semantics-driven framework for sustainable urban renewal recommendation</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2738331</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738331?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2738331" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>GeoCaseRec: a knowledge graph semantics-driven framework for sustainable urban renewal recommendation</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2738331 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738331?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-32bd3cd4aa01ec03">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Lightweight geometry-guided automated 3D indoor reconstruction from point clouds</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2741454</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2741454?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2741454" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Lightweight geometry-guided automated 3D indoor reconstruction from point clouds</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2741454 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2741454?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6c1e4a3ec8166cce">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>A novel spatiotemporal-enhanced aerosol retrieval model based on GNSS-derived PWV</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2738481</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738481?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2738481" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A novel spatiotemporal-enhanced aerosol retrieval model based on GNSS-derived PWV</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2738481 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738481?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a18ff65ca5aa6bba">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Intercensal building‑based population estimation</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2738267</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738267?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2738267" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Intercensal building‑based population estimation</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2738267 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738267?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-cc900ca37754bb24">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>High-resolution SAR imaging with nonconvex sparse regularization and orientation-adaptive relative total variation</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2742072</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2742072?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2742072" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>High-resolution SAR imaging with nonconvex sparse regularization and orientation-adaptive relative total variation</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2742072 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2742072?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-f589556df3742be9">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Wildfire digital twins: a paradigm shift from monitoring systems to intelligent decision infrastructures</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2738488</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738488?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2738488" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Wildfire digital twins: a paradigm shift from monitoring systems to intelligent decision infrastructures</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2738488 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738488?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-2e4b4dd140ccb195">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>A physics-informed spatiotemporal downscaling model for kilometer-scale hourly humid heat stress indices</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2731676</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2731676?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2731676" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A physics-informed spatiotemporal downscaling model for kilometer-scale hourly humid heat stress indices</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2731676 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2731676?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-2cf2a7876e9a185e">
+<p class="kicker">International Journal of Digital Earth · IN_YEAR_CONTINUOUS</p>
+<h3>Data scarcity to strategic insight: monitoring global SDG progress using big earth data and AI</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I2</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/17538947.2026.2738295</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738295?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/17538947.2026.2738295" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Data scarcity to strategic insight: monitoring global SDG progress using big earth data and AI</strong></p><p class="abstract-meta">期刊：International Journal of Digital Earth · DOI：10.1080/17538947.2026.2738295 · 摘要来源：出版方摘要</p><p class="abstract-body">Volume 19, Issue 2, December 2026 .</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2026.2738295?af=R" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section><section class="of-journal" id="of-reg-076" aria-labelledby="of-reg-076-h"><h3 id="of-reg-076-h">Discover Computing · 新登记 50 条</h3><p>基线 2025-V28-I1 不 claim。开放年度卷 2026-V29-I1 官方 TOC 声明 766 篇、首页 50 DOI 两遍稳定；年度卷关闭前不 claim 整卷，年内新增只登记。 开放卷首页新登记 50 篇 NEW_ARTICLE（账本既有 137 ONLINE_FIRST）。</p><article class="paper" id="article-doi-766733face358967">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A metadata deduplication framework associated with metadata placement and retrieval in edge-cloud using Adaptive Capsule Neural Network (A-CNet)</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10680-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10680-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10680-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A metadata deduplication framework associated with metadata placement and retrieval in edge-cloud using Adaptive Capsule Neural Network (A-CNet)</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10680-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10680-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-cef9301e89e04ff4">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Institutional readiness for generative artificial intelligence is linked to resource constraints and governance capability in Ghanaian higher education</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10678-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10678-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10678-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Institutional readiness for generative artificial intelligence is linked to resource constraints and governance capability in Ghanaian higher education</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10678-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10678-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-73b97ada7ef11030">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Three-tier Stackelberg game framework with evolutionary stability and blockchain incentives for collaborative governance of college digital aesthetic education platforms</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10696-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10696-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10696-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Three-tier Stackelberg game framework with evolutionary stability and blockchain incentives for collaborative governance of college digital aesthetic education platforms</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10696-8</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10696-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-154f853c1a81b1c2">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>AI-driven early warning of psychological crisis in college students using network theory and few-shot learning through survey-parameterized simulation</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10721-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10721-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10721-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>AI-driven early warning of psychological crisis in college students using network theory and few-shot learning through survey-parameterized simulation</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10721-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10721-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-5473cae544ad77a5">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>The analysis of intelligent university performance cost accounting driven by big data</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10598-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10598-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10598-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The analysis of intelligent university performance cost accounting driven by big data</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10598-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10598-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-94c64350a3fd6919">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>An explainable machine learning framework with trend-sensitive features for predicting high-potential merchants in mobile payment ecosystems</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10593-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10593-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10593-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An explainable machine learning framework with trend-sensitive features for predicting high-potential merchants in mobile payment ecosystems</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10593-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10593-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-de0dc6885542f65d">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Human behavior recognition based on graph neural network and cross-modal collaborative attention mechanism</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10690-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10690-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10690-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Human behavior recognition based on graph neural network and cross-modal collaborative attention mechanism</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10690-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10690-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-bcd40ae80155300d">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Gated bidirectional cross-modal attention framework with domain generalization for multimodal fake news detection</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10737-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10737-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10737-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Gated bidirectional cross-modal attention framework with domain generalization for multimodal fake news detection</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10737-2 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The rapid proliferation of multimodal misinformation on social media necessitates systems that identify fake news across domains. Existing studies rely on simple concatenation-based fusion, exhibiting poor generalization across heterogeneous platforms with varied content patterns and visual semantics. To address this, this study presents Gated Cross Balanced Attention Network (GCBA-Net), a novel framework that enhances fake news detection, robustness and domain adaptability. GCBA-Net employs an adaptive gating to independently weight textual and visual inputs. To assess architectural design choices on detection performance, four variants of GCBA-Net were developed varying in dimensionality, projection strategy, gating function, feed-forward activation, attention head count, and attention type. Domain generalization is achieved through Gradient Reversal Layer (GRL) and Maximum Mean Discrepancy (MMD) techniques. Evaluation on Weibo and Fakeddit datasets demonstrates GCBA-Net variants consistently outperform state-of-the-art baselines. The best variant on the Weibo achieved nearly 0.99 accuracy, improving over the EANN baseline. Performance improved from 0.77 for the existing fusion model to over 0.98 accuracy on Fakeddit, with precision, recall, and F1-score exceeding 0.97. GCBA-Net v1, v3 and v4 showed strong performance, while GCBA-Net v2 yielded moderate results. These findings demonstrate that GCBA-Net is an adaptable, effective framework for detecting multilingual fake news in real-world scenarios.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10737-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-eeb672261303eb8b">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>DeepCommerceRec: a graph- and sequence-aware deep learning recommender system with cold-start adaptation for large-scale e-commerce platforms</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10672-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10672-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10672-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>DeepCommerceRec: a graph- and sequence-aware deep learning recommender system with cold-start adaptation for large-scale e-commerce platforms</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10672-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10672-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-2a3a0550cc3f37d2">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Examining lumbar spine MRI images of humans using finite element method and transfer learning approaches</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10586-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10586-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10586-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Examining lumbar spine MRI images of humans using finite element method and transfer learning approaches</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10586-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10586-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-29a46dc8e827ab7e">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>DeepLabV3+_KBSS for lightweight pavement crack segmentation and quantification in complex scenarios</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10730-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10730-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10730-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>DeepLabV3+_KBSS for lightweight pavement crack segmentation and quantification in complex scenarios</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10730-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10730-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-4b6463581fac97fb">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Comparing SGLD and a fixed-noise predictor-corrector adaptation in canonical joint energy-based models on CIFAR-10</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10679-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10679-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10679-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Comparing SGLD and a fixed-noise predictor-corrector adaptation in canonical joint energy-based models on CIFAR-10</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10679-9 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Joint Energy-Based Models (JEM) unify classification and generation within a single network and support out-of-distribution (OOD) detection. Canonical JEM training relies on stochastic gradient Langevin dynamics (SGLD); a theoretically motivated alternative, the Predictor-Corrector (PC) sampler, has not previously undergone a systematic replication test on the canonical model. We reproduce canonical JEM on WideResNet-28-10 without normalisation layers on two independent runs and test a fixed-noise PC adaptation – with the degenerate annealed-noise predictor replaced by a deterministic gradient step – across three protocols: the adapted sampler replacing SGLD throughout the full training trajectories (115–132 epochs); cold-start generation (FID); and refinement-style multi-OOD detection (AUROC). The reconstruction reaches 92.88% test accuracy and buffer-FID 44.46 (canonical: 92.90% and 38.40). We document two failure modes: catastrophic late-training divergence with the signature of the canonical outlier-buffer mechanism (all four runs), and run-dependent SVHN OOD-discrimination dynamics. No consistent method-level advantage of the adaptation over SGLD is observed on any protocol: refinement AUROC differences stay below 0.007 across ten checkpoint–OOD pairs; seeded cold-start generation favours SGLD by about five FID points; on the training protocol a hierarchical seed-by-image bootstrap gives a 95% confidence interval on the macro-averaged AUROC difference that contains zero, while a seed-level equivalence test with two runs per method cannot establish formal equivalence. The training-protocol data are consistent both with equivalence and with a small directional effect. This outcome is consistent with theory: the guarantees of the annealed-noise PC framework do not transfer to the constant-noise regime of canonical JEM.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10679-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8883d9bbb78e2496">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Hybrid deep ensemble learning for crop disease prediction and climate-resilient disaster management in smart agriculture</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10579-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10579-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10579-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Hybrid deep ensemble learning for crop disease prediction and climate-resilient disaster management in smart agriculture</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10579-y · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Accurate crop disease prediction and climate-resilient disaster management are essential for improving agricultural productivity and ensuring food security under increasingly dynamic environmental conditions. Existing deep learning approaches typically perform crop disease detection and climate forecasting independently and often rely on deterministic CNN–LSTM architectures without effective multimodal feature fusion, predictive uncertainty estimation, or comprehensive statistical validation. Consequently, their ability to provide reliable decision support under changing climatic conditions remains limited. To address these challenges, this paper proposes a novel hybrid deep ensemble learning framework for integrated crop disease prediction and climate-resilient disaster management in smart agriculture. The proposed framework combines convolutional neural networks (CNNs) for spatial crop image feature extraction with long short-term memory (LSTM) networks for temporal climate forecasting. An attention-based multimodal feature fusion mechanism is employed to integrate heterogeneous crop and climate information, while Bayesian uncertainty estimation and deep ensemble learning are incorporated to improve prediction reliability, robustness, and confidence-aware decision support. Experimental evaluation is performed using multimodal datasets comprising crop images and climate observations collected from the PlantVillage, NOAA, and NASA EOS datasets. The dataset is divided into training, validation, and testing subsets using a 70:15:15 ratio. The proposed framework is evaluated using classification and regression metrics, including Accuracy, Precision, Recall, F1-score, RMSE, MAE, MAPE, and AUC-ROC. To ensure reproducibility, all experiments are repeated five times using different random seeds, and the results are reported with mean ± standard deviation, 95% confidence intervals, and paired Student’s t -tests. Experimental results demonstrate that the proposed framework consistently outperforms conventional CNN, LSTM, and CNN–LSTM hybrid models by achieving higher classification accuracy, lower climate forecasting error, improved robustness under varying climate conditions, and statistically significant performance improvements. The proposed framework provides a reliable, scalable, and uncertainty-aware solution for intelligent climate-resilient smart agriculture and early agricultural disaster management.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10579-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6f43f03f3f739309">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Dense Channel Spatial Semantic Guidance Attention U-Net for robust road lane detection in autonomous vehicles</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10689-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10689-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10689-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dense Channel Spatial Semantic Guidance Attention U-Net for robust road lane detection in autonomous vehicles</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10689-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10689-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-2224871587dd8aeb">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Abnormal behavior perception in elderly care scenarios based on multimodal generative adversarial networks</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10722-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10722-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10722-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Abnormal behavior perception in elderly care scenarios based on multimodal generative adversarial networks</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10722-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10722-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-0769bdd3dcd8e125">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A machine learning-based intelligent decision supporting model for E-commerce operations</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10620-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10620-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10620-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A machine learning-based intelligent decision supporting model for E-commerce operations</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10620-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10620-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-f50c4f33c97b195a">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A hierarchical dual-stream POMDP–IPSO framework for multi-UAV cooperative inspection scheduling and control</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10675-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10675-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10675-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A hierarchical dual-stream POMDP–IPSO framework for multi-UAV cooperative inspection scheduling and control</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10675-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10675-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-173d3886680893f4">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>AI-based smart energy consumption prediction for sustainable buildings using IoT data</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10590-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10590-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10590-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>AI-based smart energy consumption prediction for sustainable buildings using IoT data</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10590-3 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Two complementary evidence layers are investigated for this study to look at next-hour building electricity forecasting. The first is a commercial building case study showing a 14 month monitoring experience of a 12,400 square metre office building in Bengaluru, India. The statistics revealed in the past include an RMSE of 3.27 kWh, a MAE of 2.41 kWh, a MAPE of 4.83%, a CoD of 0.971, and a median edge inference time of 38 ms. Unfortunately, the original telemetry, feature dictionary, checkpoints and residuals at the time stamp level were not available, and therefore these values are not reproduced independently but rather site records from the past. The second evidence layer is a fully executable external validation based on 19,735 ten-minute observations from public Appliances Energy Prediction dataset. Following these steps, 469 held-out hours were used for testing 11 forecasting approaches. Eleven forecasting approaches were compared on 469 held-out hours after a series of steps of hourly aggregation, causal lag construction, training-only mutual-information selection and chronological partitioning. Random Forest produced the lowest root mean square error of 324.71 W-hours, Ridge regression produced the lowest mean absolute error of 183.58 W-hours, and the convolutional bidirectional recurrent model produced 330.96 W-hours root mean square error. The attention augmented hybrid, on the other hand, proved unstable for three random seeds (with a mean RMSE of 425.51± 59.91 Wh). A daily dependence adjusted Diebold-Mariano test failed to find superiority of the three-seed attention forecast. The results demonstrate that the sensor-to-edge-to-control paradigm is promising at the original application site but that the attention mechanism is not inherently the best and should not be the focus of the innovation.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10590-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-ab0b0d758e7c8fa4">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Automated grading of renal cell carcinoma using an efficient deep learning approach on histopathology images</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10616-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10616-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10616-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Automated grading of renal cell carcinoma using an efficient deep learning approach on histopathology images</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10616-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10616-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3566ee4c44b40fef">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>K-Medoids guided cell reduction and Node2Vec based complementary graph fusion for gene regulatory network inference from single-cell expression data</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10713-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10713-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10713-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>K-Medoids guided cell reduction and Node2Vec based complementary graph fusion for gene regulatory network inference from single-cell expression data</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10713-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10713-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-4aa5dbde8a9de01c">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Sparsity-aware social recommendation via information graph bottleneck</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10640-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10640-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10640-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Sparsity-aware social recommendation via information graph bottleneck</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10640-w · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">With the widespread adoption of online social networks, social recommender systems have become a key paradigm for mitigating data sparsity and cold-start issues in traditional collaborative filtering. However, existing graph neural network (GNN) based recommendation models face two fundamental structural bottlenecks when dealing with real-world social data: social noise and over-smoothing. Invalid or weak social connections dilute preference signals, while representation homogenization induced by deep graph convolution undermines personalized recommendation. To address these challenges, this report proposes a new framework named SRIGB (Social Recommendation via Information Graph Bottleneck). SRIGB introduces the Information Bottleneck principle as a principled denoising mechanism by maximizing the mutual information between the denoised graph and interaction labels while minimizing redundant information with respect to the original noisy graph, thereby extracting task-relevant social structure more precisely. In addition, SRIGB incorporates a contrastive learning paradigm to counteract the smoothing effect of graph convolution, enabling the model to preserve high-order social influence while maintaining discriminative and independent user representations. This report presents the theoretical foundations, model architecture, and experimental design of SRIGB, aiming to provide both theoretical support and a practical technical pathway for building the next generation of robust social recommender systems.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10640-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-bb28e9571586b580">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Performance evaluation and interpretability of a Qwen LangGraph agent for AI written and AI rewritten text detection</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10710-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10710-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10710-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Performance evaluation and interpretability of a Qwen LangGraph agent for AI written and AI rewritten text detection</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10710-z · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">The widespread adoption of large language models has increased the need to distinguish human-authored text from AI-generated content, including cases in which generated text is subsequently rewritten or paraphrased. In practice, many detectors output only a single AI-likelihood score or percentage, offering limited transparency and little indication of whether a passage appears directly AI-written (AIW) or AI-rewritten (AIR). This study presents an agentic detection framework for two connected tasks: binary provenance detection (Human versus AI) and conditional subtype detection (AIW versus AIR). The dataset combined the Human-ChatGPT Comparison Corpus (HC3) and the ai-text-detection-pile with 4,348 pre-generated AIR records produced by a single GPT-based rewriting workflow. The proposed Qwen–LangGraph AI agent was compared to a HashingVectorizer–TF-IDF–SGD classifier, DeBERTa-v3-xsmall, and ELECTRA-small. On the binary test set, DeBERTa-v3-xsmall achieved the best discrimination (99.4995% accuracy and 99.9911% AUROC), whereas the agent achieved 98.8816% accuracy and 99.9187% AUROC. On the AI-only test set (10,769 AIW; 1,274 AIR), the agent obtained the highest threshold-based accuracy (96.7367%), macro-F1 (90.0357%), and AIR F1 (81.8643%), but its AUROC (83.2507%) and AUPR (79.7336%) were lower than those of the DeBERTa-v3-xsmall and ELECTRA-small transformers. Paired DeLong and McNemar analyses with Holm correction showed that the agent improved threshold-based AIR performance over the lexical baseline. Interpretability was operationalised through lexical weights, linguistic and out-of-distribution diagnostics, sentence-level indicators, and route traces. The findings support the use of AI as decision support, not as automated proof of plagiarism or misconduct.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10710-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6c7dc74186ea6c0a">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Supplemental generative AI tutoring improves financial modeling scores in a two class quasi experimental study</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10706-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10706-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10706-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Supplemental generative AI tutoring improves financial modeling scores in a two class quasi experimental study</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10706-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10706-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8068caa1418a996a">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Open-set encrypted traffic recognition via contrastively-optimized multi-modal gating and extreme value theory</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10712-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10712-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10712-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Open-set encrypted traffic recognition via contrastively-optimized multi-modal gating and extreme value theory</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10712-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10712-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-38d62eb360d6fd8c">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A web development method for transmission line O&amp;M components based on multi-source data sensing and deep reinforcement learning algorithms</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10726-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10726-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10726-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A web development method for transmission line O&amp;M components based on multi-source data sensing and deep reinforcement learning algorithms</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10726-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10726-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-1d4f02280b0bfae7">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Personalized dialogue generation based on social game data collection and two-stage response generation model</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10687-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10687-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10687-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Personalized dialogue generation based on social game data collection and two-stage response generation model</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10687-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10687-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-7f2877596f6f45f4">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A game-theoretic deep learning framework for secure image encryption and steganography</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10711-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10711-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10711-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A game-theoretic deep learning framework for secure image encryption and steganography</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10711-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10711-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3cc23365bd2fd6d2">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Explainability guided relational attention regularization for graph transformer based sentiment analysis</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10716-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10716-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10716-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Explainability guided relational attention regularization for graph transformer based sentiment analysis</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10716-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10716-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-540ec9d3c9234360">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Reinforcement-learning co-adaptation analysis of thruster-based wearable robotic assistance for running training in musculoskeletal simulation</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10700-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10700-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10700-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Reinforcement-learning co-adaptation analysis of thruster-based wearable robotic assistance for running training in musculoskeletal simulation</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10700-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10700-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-891964422bcc62fc">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>EHL-YOLO: hierarchical multi-scale feature extraction and efficient cross-level fusion for UAV object detection</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10705-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10705-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10705-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>EHL-YOLO: hierarchical multi-scale feature extraction and efficient cross-level fusion for UAV object detection</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10705-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10705-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-079b39d50ba852aa">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Adaptive multi-agent optimization in intelligent-connected vehicles based on deep reinforcement learning</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10693-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10693-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10693-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Adaptive multi-agent optimization in intelligent-connected vehicles based on deep reinforcement learning</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10693-x</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10693-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3d0ccc6141fde689">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>SMOTE extensions for abnormal minority instances in imbalanced time series classification</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10520-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10520-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10520-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>SMOTE extensions for abnormal minority instances in imbalanced time series classification</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10520-3 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Class imbalance remains a significant challenge in time series classification, especially when the minority samples include abnormal or outlier instances. This study proposes four extensions of the Synthetic Minority Oversampling Technique (SMOTE): Distance Extended SMOTE, Dirichlet Extended SMOTE, Feature-Correlation and Random-Perturbation SMOTE, and Bayesian Gaussian Mixture Model (BGMM) SMOTE. These methods use weighted neighbor selection, probabilistic modeling, and clustering to generate synthetic samples. Augmentation was applied only to the training data after train–test splitting and within the validation process, while the test data remained unseen. The proposed methods were integrated with a Bayesian Deep Bidirectional LSTM classifier using Monte Carlo dropout-based variational inference to enable both robust classification and uncertainty quantification. Experiments on five benchmark time-series datasets showed that based on stratified 10-fold cross-validation, the proposed SMOTE extensions consistently surpassed baseline methods and standard SMOTE. BGMM-SMOTE and Dirichlet Extended SMOTE achieved the best performance. The present study gives a detailed analysis of SMOTE enhancements specifically designed for abnormal class distributions, providing an appropriate method to handle imbalanced time series classification. The framework combines advanced resampling methods with Bayesian deep learning to make more reliable predictions, with applications in healthcare monitoring, fault detection, and other safety-critical fields.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10520-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-97498b2ed1e8122b">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Context aware multimodal plant disease diagnosis using agro ecological metadata and explainable inference</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10536-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10536-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10536-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Context aware multimodal plant disease diagnosis using agro ecological metadata and explainable inference</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10536-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10536-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-1a44985245017cc3">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Predicting corporate culture using machine learning</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10686-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10686-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10686-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Predicting corporate culture using machine learning</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10686-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10686-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-04783804b40bda2a">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Systematic review of machine learning models for plant and leaf disease detection and classification</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10691-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10691-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10691-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Systematic review of machine learning models for plant and leaf disease detection and classification</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10691-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10691-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-caf23ac317ce7d96">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>An empirical performance comparison of deep learning models for apple leaf disease recognition</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10573-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10573-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10573-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An empirical performance comparison of deep learning models for apple leaf disease recognition</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10573-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10573-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-db06d8ea0050341a">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Multi-robot path planning with obstacle avoidance using hybrid optimization and deep learning approaches</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10628-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10628-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10628-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multi-robot path planning with obstacle avoidance using hybrid optimization and deep learning approaches</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10628-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10628-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-e4574ee18871e22e">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Construction of high-precision satellite positioning model and research on fault feedback mechanism based on improved FP-Growth algorithm</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10574-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10574-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10574-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Construction of high-precision satellite positioning model and research on fault feedback mechanism based on improved FP-Growth algorithm</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10574-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10574-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-0b5cebe5d9779401">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A convex-Feynman hybrid optimization paradigm for energy-efficient scheduling in large-scale multi-tier cloud data centers</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10589-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10589-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10589-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A convex-Feynman hybrid optimization paradigm for energy-efficient scheduling in large-scale multi-tier cloud data centers</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10589-w</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10589-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-03e588481db52418">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A multi-objective framework for railway corridor screening and candidate corridor generation using adaptive hybrid optimization</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10676-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10676-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10676-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A multi-objective framework for railway corridor screening and candidate corridor generation using adaptive hybrid optimization</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10676-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10676-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-82bde254117fc0e6">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Lifecycle-evolving recommendation with adaptive strategy transition for smart learning</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10681-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10681-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10681-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Lifecycle-evolving recommendation with adaptive strategy transition for smart learning</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10681-1</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10681-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-add668f5ca6be7aa">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Motion guided Channel wise Hypergraph convolutional network for skeleton action recognition</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10702-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10702-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10702-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Motion guided Channel wise Hypergraph convolutional network for skeleton action recognition</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10702-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10702-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-fe405a31fee7d2ba">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Policy separated learning assisted COPRAS based leader election for dynamic clustered distributed systems</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10563-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10563-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10563-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Policy separated learning assisted COPRAS based leader election for dynamic clustered distributed systems</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10563-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10563-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-87f4575d3e8add76">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Explainable automated classification of cervical cancer cells using SE-LGANet with squeeze and excitation blocks and local and global attention mechanisms</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10692-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10692-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10692-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Explainable automated classification of cervical cancer cells using SE-LGANet with squeeze and excitation blocks and local and global attention mechanisms</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10692-y</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10692-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-406c69d0a6763e17">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Deep Kronecker hashing generative adversarial network for intrusion detection in IoT against adversarial attacks</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10617-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10617-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10617-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Deep Kronecker hashing generative adversarial network for intrusion detection in IoT against adversarial attacks</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10617-9</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10617-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-eafa7fb945e97e53">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A scoping review of human-governed agentic AI for SCADA cybersecurity in water and wastewater treatment systems</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10697-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10697-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10697-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A scoping review of human-governed agentic AI for SCADA cybersecurity in water and wastewater treatment systems</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10697-7 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Water and wastewater utilities increasingly depend on Supervisory Control and Data Acquisition (SCADA) systems, operational technology, sensors, programmable controllers, and data analytics to maintain safe treatment and reliable service. This scoping review synthesises evidence on vulnerabilities, threat pathways, mitigation strategies, and human-governed agentic artificial intelligence (AI) for SCADA-based water and wastewater systems. Searches in Scopus and Web of Science covered literature published from 2020 to 2026. The searches identified 2346 records, comprising 2257 from Web of Science and 89 from Scopus. Five duplicates were removed before screening, leaving 2341 records for screening against the review questions. Twenty-five studies were included in the thematic synthesis. The evidence indicates that water-sector cyber risk is not only a network-security problem but a cyber-physical resilience problem involving exposed human-machine interfaces, insecure remote access, weak segmentation, limited asset visibility, sensor manipulation, ransomware, scarce labelled attack data, and insufficient validation of AI-based detection models. The synthesis further shows that supervised, semi-supervised, unsupervised, graph-based, digital-twin, and reinforcement-learning approaches each have value under specific data and deployment conditions, but none should be treated as a complete substitute for operator judgement. The review contributes a structured synthesis, a mapping of threats to controls, a phased implementation approach for resource-constrained utilities, and a conceptual safety-constrained agentic AI framework in which intelligent systems observe, detect, learn, and recommend while final operational approval remains with qualified human personnel.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10697-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-26cf0a9e2f96fdfa">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Lightweight seizure detection with channel attention and multilayer gated recurrent unit for cross-patient EEG analysis</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10594-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10594-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10594-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Lightweight seizure detection with channel attention and multilayer gated recurrent unit for cross-patient EEG analysis</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10594-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10594-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-c456f12c312e32ec">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>C2ST-Bandit for collaborative multi-category retail dynamic pricing with causal contrastive learning and contextual bandit</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10701-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10701-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10701-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>C2ST-Bandit for collaborative multi-category retail dynamic pricing with causal contrastive learning and contextual bandit</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10701-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10701-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-7f3d13b5a6cc8d02">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>Multiscale attention guided historical prompt tracking for industrial particles</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10656-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10656-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10656-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multiscale attention guided historical prompt tracking for industrial particles</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10656-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10656-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-d84ceb550ff742b6">
+<p class="kicker">Discover Computing · IN_YEAR_CONTINUOUS</p>
+<h3>A hybrid SARIMAX–Exponential Smoothing framework for New Zealand food price forecasting</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10791-026-10637-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10637-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-16 12:10 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10791-026-10637-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-16 12:10 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A hybrid SARIMAX–Exponential Smoothing framework for New Zealand food price forecasting</strong></p><p class="abstract-meta">期刊：Discover Computing · DOI：10.1007/s10791-026-10637-5</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10791-026-10637-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="errata" aria-labelledby="errata-h"><h2 id="errata-h">勘误与撤稿</h2>
+<p>已核查，0 项：本批 3 刊（International Journal of Digital Earth、软件学报、Discover Computing）已取得的官方目录与发现源列表中未发现撤稿、勘误或更正声明条目；无降级期刊。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="topics" aria-labelledby="topics-h"><h2 id="topics-h">主题与阅读路线</h2><ul><li>软件学报 2026-V37-I10：官方目录 14 篇；文章类型元数据（若有）：未统一标注。建议先打开摘要抽屉浏览综述/方法类条目，再按主题深入。</li><li>Discover Computing 候选/在编期 2026-V29-I1 仅登记，不进入正式期次阅读路线。</li><li>International Journal of Digital Earth：22 条未来期/在年登记均附官方摘要抽屉，可按摘要筛选后再进入官方论文页面。</li><li>Discover Computing：50 条未来期/在年登记均附官方摘要抽屉，可按摘要筛选后再进入官方论文页面。</li><li>以上为元数据级分组，不构成对论文研究结论的判断。</li></ul><p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="health" aria-labelledby="health-h"><h2 id="health-h">数据源健康</h2><ul><li>International Journal of Digital Earth（REG-016）：源健康 <code>OFFICIAL_RSS_OK_TOC_CLOUDFLARE_BLOCKED</code>；状态 COMPLETED；已简报 2026-V19-I2（BRIEFED）。官方 TOC 遇 Cloudflare 403；官方 etoc RSS 两遍 82 DOI 指纹稳定且全部落在 V19-I2。开放累积卷不重印；相对账本在年新增仅登记。 在年新增登记 22 篇 NEW_ARTICLE（相对账本 60→RSS 82）。。</li><li>软件学报（REG-046）：源健康 <code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT_RSS8081_TIMEOUT</code>；状态 COMPLETED；官方期次目录 https://www.jos.org.cn/jos/article/issue/2026_37_10 两遍 14 DOI 指纹稳定；I11/I12 空。相对已简报 I9。gate-issue=NEW_ISSUE。:8081 RSS 超时不影响官方完整性。 正式期次首登 14 篇 NEW_ARTICLE。。</li><li>Discover Computing（REG-076）：源健康 <code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code>；状态 COMPLETED；基线 2025-V28-I1 不 claim。开放年度卷 2026-V29-I1 官方 TOC 声明 766 篇、首页 50 DOI 两遍稳定；年度卷关闭前不 claim 整卷，年内新增只登记。 开放卷首页新登记 50 篇 NEW_ARTICLE（账本既有 137 ONLINE_FIRST）。。</li><li>有界对账：处理 4 个到期任务（上限 4），目录侧证据不足均保持 FAILED_RETRYABLE。</li></ul><ul><li>job 54 · REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE：有界对账：本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 58 · REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE：有界对账：本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 59 · REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE：有界对账：本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 65 · REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE：有界对账：本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li></ul>
+<p>失败或待修复：已核查，0 项。降级路径：本批无降级。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="audit" aria-labelledby="audit-h"><h2 id="audit-h">证据与审计信息</h2>
+<details><summary>运行标识、证据层级与提交状态</summary>
+<ul>
+<li>Brief_ID：<code>DAILY-20261016</code> · Commit_ID：<code>DAILY-20261016-121030-11445590</code> · Run_ID：<code>11445590-a10a-4c76-a27f-9d44badf8d04</code></li>
+<li>逻辑日期 2026-10-16 · 实际完成 2026-10-16 12:10 CST · Recovery_Batch_ID：<code>11445590-a10a-4c76-a27f-9d44badf8d04</code></li>
+<li>任务：ROUTINE-20261016-G16（ROUTINE · CURRENT · 执行顺序 1 · COMPLETED）；补扫 0、仍待补扫 0；下一计划扫描 2026-10-17 第 17 组。</li>
+<li>证据层级：官方期次目录 = 一级完整性证据；官方论文页 = 题名/作者/摘要证据；DOI = 身份证据；Crossref = 二级补全；RSS / API = 发现信号（不证明完整性）。</li>
+<li>多遍目录核验：International Journal of Digital Earth 2026-V19-I2 两遍 82/82 集合一致但 Issue In Progress，仅候选；软件学报 2026-V37-I10 两遍 14/14 集合一致；软件学报 2026-V37-I11 两遍 0/0 集合一致但 Issue In Progress，仅候选；Discover Computing 2026-V29-I1 两遍 766/766 集合一致但 Issue In Progress，仅候选</li>
+<li>门控统计：issue gate NEW_ISSUE 1；article gate 新论文记录 14、网络首发新登记 72、去重抑制 0、增量复核 0、门控错误 0。</li>
+<li>摘要校验：所有摘要经 text_sanitize 清洗与参考文献块识别校验；本页 30 篇论文附可展开官方摘要，56 篇暂无摘要；每张卡片保留官方论文页面链接。</li>
+<li>摘要图 SHA-256：<code>bbbd395524bfa66db156d07bf60663e5acb17e8a9ed88e13168b269bfe10455f</code>；HTML SHA-256 见提交回执（避免自引用哈希）。</li>
+<li>PostgreSQL 严格健康：PASS（7/7 迁移一致，健康问题 0）。</li>
+</ul></details>
+<p class="back"><a href="#top">返回页首</a></p></section>
+</main>
+<footer><nav aria-label="日报导航"><a href="../../../../2026/10/index.html">返回 2026 年 10 月索引</a> · <a href="../../../../2026/10/2026-10-15_GIS-AI期刊每日轮检简报_第15组.html">上一篇：2026-10-15 第 15 组</a> · <a href="#top">返回页首</a></nav></footer>
+</body></html>
