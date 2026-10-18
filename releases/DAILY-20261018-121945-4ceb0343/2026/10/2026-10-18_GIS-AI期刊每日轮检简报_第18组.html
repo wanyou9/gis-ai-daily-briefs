@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 18 组 · 2026-10-18</title>
+<style>
+:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;font-size:16px;line-height:1.65;overflow-wrap:anywhere}
+a{color:var(--brand);text-decoration:underline;text-underline-offset:.18em;display:inline-block;min-height:44px;line-height:44px}
+a:visited{color:#4b3f72}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:2px}
+.skip{position:absolute;left:12px;top:-80px;background:#fff;padding:0 14px;z-index:9}.skip:focus{top:8px}
+.hero{background:linear-gradient(135deg,#073d58,#08737a);color:#fff;padding:18px max(18px,calc((100vw - 1180px)/2)) 22px}
+.hero a{color:#fff}.crumb{font-size:14px}.meta{font-size:14px;color:#cfe7e6;margin:.2rem 0}
+.hero h1{font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.15;margin:.3rem 0 .6rem}
+.lede{font-size:clamp(1rem,2vw,1.15rem);max-width:72em;margin:0 0 14px}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.card{display:block;line-height:1.3;background:#ffffff1f;border:1px solid #ffffff55;border-radius:12px;padding:10px 12px;color:#fff;text-decoration:none;min-height:44px}
+.card strong{display:block;font-size:1.7rem}.card span{font-size:14px}
+main{max-width:1180px;margin:0 auto;padding:0 18px 40px}
+section{margin-top:26px}h2{font-size:1.45rem;margin:0 0 10px;border-left:5px solid var(--brand);padding-left:10px}h3{font-size:1.12rem;margin:.6rem 0}
+.attention{list-style:none;padding:0;margin:0}.attention li{background:#fff;border:1px solid var(--line);border-left:5px solid #e1a62b;border-radius:10px;padding:8px 14px;margin:8px 0}
+.tag{display:inline-block;font-size:14px;font-weight:700;border:2px solid currentColor;border-radius:6px;padding:0 6px;line-height:1.6}
+.tag.ok{color:var(--ok)}.tag.warn{color:var(--warn)}.tag.bad{color:var(--bad)}.when{font-size:14px;color:var(--muted)}
+.toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 14px;margin-top:18px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%}caption{text-align:left;padding:10px 12px;font-weight:700}
+th,td{border-top:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;font-size:15px}thead th{background:#e3efed}
+figure{margin:16px 0}figure img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}figcaption{font-size:14px;color:var(--muted)}
+.issue,.of-journal{background:#ffffffa8;border:1px solid var(--line);border-radius:12px;padding:6px 16px 12px;margin:16px 0}
+.issue-meta,.paper dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:4px 14px;margin:6px 0}
+.issue-meta div,.paper dl div{font-size:14px}dt{color:var(--muted);font-size:14px}dd{margin:0}
+.paper{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px;margin:12px 0}
+.paper h3{font-size:1.05rem}.kicker{font-size:14px;color:var(--muted);margin:.2rem 0}
+.evidence{display:inline-flex;flex-direction:column;margin-right:14px}.evidence small{font-size:14px;color:var(--muted);line-height:1.3}
+.back{font-size:14px;margin:4px 0}.more{font-size:15px}code{font-size:14px;word-break:break-all}
+details summary{cursor:pointer;min-height:44px;display:flex;align-items:center}
+footer{max-width:1180px;margin:0 auto;padding:10px 18px 40px;font-size:15px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.cards{grid-template-columns:repeat(2,1fr)}.card strong{font-size:1.4rem}
+ table.stack thead{position:absolute;left:-9999px}table.stack,table.stack tbody,table.stack tr,table.stack th,table.stack td{display:block;width:100%}
+ table.stack tr{border-top:2px solid var(--line);padding:6px 0}table.stack th,table.stack td{border:0;padding:3px 10px}
+ table.stack td::before,table.stack th::before{content:attr(data-label)"：";color:var(--muted);font-size:14px}}
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到主要内容</a>
+<header class="hero">
+<nav class="crumb" aria-label="面包屑"><a href="../../../../index.html">站点首页</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/10/index.html">10 月</a> / 2026-10-18 第 18 组</nav>
+<p class="meta">逻辑日期 2026-10-18（北京时间）· 实际完成 2026-10-18 12:22 CST · 任务类型 ROUTINE · 第 18 组</p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 18 组</h1>
+<p class="lede" id="conclusion">第 18 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式论文（新论文记录 0 篇、网络首发正式归期 0 篇），登记网络首发/在编/未来期 33 条；2 个已简报期次需差异复核（只列差异、不重印），无降级期刊，0 种扫描失败；发现 1 条更正声明（Correction），未发现撤稿。</p>
+<div class="cards" aria-label="关键计数">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>3</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>0</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>0</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>33</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复（已核查，0 项）</span></a>
+</div>
+</header>
+<main id="main">
+<section id="attention" aria-labelledby="attention-h"><h2 id="attention-h">需要关注</h2>
+<ul class="attention"><li><span class="tag bad">勘误</span> <strong>Social Network Analysis and Mining</strong> — 新登记更正声明（Article 85，14 October 2026 上线），已出卡；原文不在本账本。 <span class="when">核查 2026-10-18 12:22 CST</span> <span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01648-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-18 12:22 CST · 一级证据</small></span></li><li><span class="tag bad">差异复核</span> <strong>Cartography and Geographic Information Science</strong> — 已简报 2026-V53-I5 官方主目录 9 篇，账本 11 篇；差异 2 篇（疑侧栏误并入），只列差异不重印。 <span class="when">核查 2026-10-18 12:22 CST</span> <span class="evidence"><a href="https://www.tandfonline.com/toc/tcag19/current" rel="noopener noreferrer">官方期次目录</a><small>www.tandfonline.com · 2026-10-18 12:22 CST · 失败核查对象</small></span></li></ul></section>
+<nav class="toc" aria-label="页内快速导航"><strong>快速导航</strong>
+<a href="#conclusion">今日结论</a><a href="#tasks">扫描任务</a><a href="#overview">期刊总览</a><a href="#formal">新完整期次</a><a href="#delta">差异复核</a><a href="#online-first">网络首发</a><a href="#errata">勘误撤稿</a><a href="#topics">主题与阅读路线</a><a href="#health">数据源健康</a><a href="#audit">审计与状态</a></nav>
+
+<section id="tasks" aria-labelledby="tasks-h"><h2 id="tasks-h">扫描任务</h2>
+<p>本次为常规当日任务；补扫任务 0 项、二月尾组 0 项、开放发布队列 0 项（发布重试 0 项）；仍待补扫 0 项。</p>
+<div class="table-wrap"><table class="stack"><caption>任务清单（按执行顺序）</caption>
+<thead><tr><th scope="col">Task_ID</th><th scope="col">Task_Type</th><th scope="col">Coverage_Month</th><th scope="col">Scheduled_Date</th><th scope="col">组号</th><th scope="col">执行顺序</th><th scope="col">Run_Mode</th><th scope="col">实际执行时间</th><th scope="col">状态</th><th scope="col">失败原因</th></tr></thead>
+<tbody><tr id="task-ROUTINE-20261018-G18"><td data-label="Task_ID"><code>ROUTINE-20261018-G18</code></td><td data-label="类型">ROUTINE</td><td data-label="覆盖月份">2026-10</td><td data-label="计划日期">2026-10-18</td><td data-label="组号">第 18 组</td><td data-label="顺序">1</td><td data-label="Run_Mode">CURRENT</td><td data-label="实际执行">2026-10-18 12:22 CST</td><td data-label="状态">COMPLETED</td><td data-label="失败原因">无期刊级失败</td></tr></tbody></table></div>
+<p>扫描范围：月度轮检分组第 18 组正式期刊 REG-018 Cartography and Geographic Information Science、REG-048 中国图象图形学报、REG-078 Social Network Analysis and Mining；本组无附加信号源。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="overview" aria-labelledby="overview-h"><h2 id="overview-h">期刊更新总览</h2>
+<div class="table-wrap"><table class="stack"><caption>逐刊状态（排序：失败/待修复 → 降级 → 有更新 → 零更新）</caption>
+<thead><tr><th scope="col">期刊</th><th scope="col">本次状态</th><th scope="col">最新确认完整期次</th><th scope="col">新完整期次</th><th scope="col">新增正式论文</th><th scope="col">Online First</th><th scope="col">源健康</th><th scope="col">官方目录</th></tr></thead>
+<tbody><tr><th scope="row" data-label="期刊">REG-018<br><strong>Cartography and Geographic Information Science</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-V53-I5</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">7</td><td data-label="源健康"><code>OFFICIAL_CURRENT_TOC_OK_SECONDARY_CF403</code></td><td data-label="官方目录"><a href="https://www.tandfonline.com/toc/tcag19/current" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-048<br><strong>中国图象图形学报</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-V31-I9</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">20</td><td data-label="源健康"><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT_ISSUE10_TIMEOUT</code></td><td data-label="官方目录"><a href="https://www.cjig.cn/zh/issue/2026/9/" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-078<br><strong>Social Network Analysis and Mining</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2025-V15-I1</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">6</td><td data-label="源健康"><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td data-label="官方目录"><a href="https://link.springer.com/journal/13278/volumes-and-issues/16-1" rel="noopener noreferrer">官方期次目录</a></td></tr></tbody></table></div>
+<figure><img src="assets/2026-10-18_GIS-AI期刊每日摘要_第18组.png" width="1600" height="900" alt="第18组每日摘要图：检查正式期刊3种，有更新3种，新完整期次0个，新增正式论文0篇，网络首发与在编登记33条，失败或待修复0；降级0种"><figcaption>每日摘要图（1600×900，期刊级聚合）；等价文字计数见下表。</figcaption></figure>
+<div class="table-wrap"><table><caption>摘要图等价文字计数</caption><thead><tr><th scope="col">指标</th><th scope="col">数值</th></tr></thead><tbody><tr><th scope="row">已检查正式期刊</th><td>3</td></tr><tr><th scope="row">有更新期刊</th><td>3</td></tr><tr><th scope="row">新完整期次</th><td>0</td></tr><tr><th scope="row">新增正式论文</th><td>0</td></tr><tr><th scope="row">网络首发/在编</th><td>33</td></tr><tr><th scope="row">失败或待修复</th><td>0</td></tr><tr><th scope="row">降级期刊</th><td>0</td></tr><tr><th scope="row">去重抑制</th><td>135</td></tr><tr><th scope="row">增量复核（差异复核）</th><td>2</td></tr><tr><th scope="row">更正声明</th><td>1</td></tr><tr><th scope="row">有界对账任务</th><td>4</td></tr></tbody></table></div>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="formal" aria-labelledby="formal-h"><h2 id="formal-h">新完整期次与逐篇卡片</h2>
+
+<p>已核查，本批无新完整期次。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="delta" aria-labelledby="delta-h"><h2 id="delta-h">已简报期次差异复核</h2>
+<section class="issue" id="delta-reg-018-924c67f506a7" aria-labelledby="delta-reg-018-h"><h3 id="delta-reg-018-h">Cartography and Geographic Information Science · 2026-V53-I5 差异复核</h3><p>gate-issue = <code>DELTA_REVIEW_REQUIRED</code>（Issue key was briefed but the article-set hash changed）。官方目录 9 篇（两遍稳定），账本 11 篇；本页只列差异，不重印整期。</p><p>官方 Vol 53 No 5 当期主目录两遍均为 9 篇；账本记为 11 篇。多出的 2 篇在本次官方主目录中不存在，Crossref 元数据亦显示未分配卷期（早期版本页码 1-xx），推断为 2026-09-18 抓取时把页面侧栏“最新发表文章”误并入。只输出差异、不重印整期；账本关系修复待人工确认。</p><ul><li><a href="https://doi.org/10.1080/15230406.2026.2710916" rel="noopener noreferrer">DOI 10.1080/15230406.2026.2710916</a> — 账本记为本期正式论文；本次官方主目录未列入，Crossref 元数据显示未分配卷期（移除候选）</li><li><a href="https://doi.org/10.1080/15230406.2026.2714985" rel="noopener noreferrer">DOI 10.1080/15230406.2026.2714985</a> — 账本记为本期正式论文；本次官方主目录未列入，Crossref 元数据显示未分配卷期（移除候选）</li><li>迟到新增：0 篇</li></ul><p><span class="evidence"><a href="https://www.tandfonline.com/toc/tcag19/current" rel="noopener noreferrer">官方期次目录</a><small>www.tandfonline.com · 2026-10-18 12:22 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://wanyou9.github.io/gis-ai-daily-briefs/releases/DAILY-20260918-120723-2ee4fddb/2026/09/2026-09-18_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC18%E7%BB%84.html" rel="noopener noreferrer">原简报</a><small>wanyou9.github.io · 2026-10-18 12:22 CST · 历史审计</small></span></p></section><section class="issue" id="delta-reg-048-13215c8b40f6" aria-labelledby="delta-reg-048-h"><h3 id="delta-reg-048-h">中国图象图形学报 · 2026-V31-I9 差异复核</h3><p>gate-issue = <code>DELTA_REVIEW_REQUIRED</code>（Issue key was briefed but the article-set hash changed）。官方目录 22 篇（两遍稳定），账本 22 篇；本页只列差异，不重印整期。</p><p>官方第9期目录两遍均为 22 篇，DOI 集合与账本 22 篇完全一致（新增 0、移除 0）。gate-issue 报告哈希变化，原因是 2026-09-18 写入的 article_set_hash 沿用了目录指纹口径，而非标准文章集合哈希；内容无差异，不重印、不改账本。</p><ul><li>移除候选：0 篇</li><li>迟到新增：0 篇</li></ul><p><span class="evidence"><a href="https://www.cjig.cn/zh/issue/2026/9/" rel="noopener noreferrer">官方期次目录</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://wanyou9.github.io/gis-ai-daily-briefs/releases/DAILY-20260918-120723-2ee4fddb/2026/09/2026-09-18_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC18%E7%BB%84.html" rel="noopener noreferrer">原简报</a><small>wanyou9.github.io · 2026-10-18 12:22 CST · 历史审计</small></span></p></section>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="online-first" aria-labelledby="of-h"><h2 id="of-h">网络首发 / 在编 / 未来期登记</h2>
+<p>本批新登记 <strong>33</strong> 条（Cartography and Geographic Information Science 7、中国图象图形学报 20、Social Network Analysis and Mining 6）。以下条目只作登记，不作为完整期次证据；正式归期后按 DOI 合并，不重复计数。</p>
+<section class="of-journal" id="of-reg-018" aria-labelledby="of-reg-018-h"><h3 id="of-reg-018-h">Cartography and Geographic Information Science · 新登记 7 条</h3><p>官方 Current = Vol 53 No 5（已简报），无 In Progress 标记，未见 No 6；当期主目录两遍 9 篇 DOI 指纹稳定，gate-issue=DELTA_REVIEW_REQUIRED（账本 11 篇，差异 2 篇为侧栏误并入），只列差异、不重印。官方 Articles（网络首发）页、LOI 及 53/4–53/6 期次页 Cloudflare 403，官方 eTOC RSS 仅返回 1998 年旧条目；改用 Crossref 未分配卷期元数据 + 官方当期页侧栏发现（两遍集合稳定），登记 7 篇 NEW_ARTICLE，已知 32 条抑制。</p><article class="paper" id="article-doi-2831b6f312226405">
+<p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>The construction of expressive space: exploring the relationship between social media expression and the spatial practices of heritage towns</h3>
+<p>Qianqian Li; Man Zhang; Yongqi Lou</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15230406.2026.2738726</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_UNASSIGNED_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2738726" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2738726" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>The construction of expressive space: exploring the relationship between social media expression and the spatial practices of heritage towns</strong></p><p class="abstract-meta">期刊：Cartography and Geographic Information Science · DOI：10.1080/15230406.2026.2738726 · 摘要来源：出版方摘要</p><p class="abstract-body">The rise of social media has reshaped how people perceive and engage with cultural heritage spaces. This study examines the impact of social media expressions on the spatial practices and evolution of heritage towns in China. Taking three historic towns as cases, the research integrates Weibo User-generated Content (UGC) with Point of Interest (POI) data to examine the spatial correspondence, thematic structures, and predictive potential of digital expressions. Combining spatial matching, BERTopic-based image topic modeling, and logistic regression, the study identifies three findings. First, social media expressions form a platform-mediated expressive space that diverges from official POI distributions, revealing an uneven reconfiguration of spatial visibility and heritage boundaries. Second, while social expressions across historic towns exhibit synchronized rhythms shaped by national festivals, they also display significant local differentiation reflecting cultural and governance models. Third, the concentration of thematic expressions and the influence of opinion leaders significantly increase the potential of spatial renewal, implying that digital expression may serve as an indicative signal of potential physical transformation. These findings highlight a shift from institutionally defined representations of heritage space toward platform-mediated expressive spaces, suggesting that social expressions can serve as dynamic indicators for micro-renewal and cultural planning in historic towns.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2738726" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-67a2b2ab740723ec">
+<p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>A new framework for global 3D data organization: sphere octal hexahedron mesh</h3>
+<p>Mengyun Zhou; Aijun Zhong; Yapeng Wang; Weiyi Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15230406.2026.2736830</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_UNASSIGNED_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2736830" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2736830" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A new framework for global 3D data organization: sphere octal hexahedron mesh</strong></p><p class="abstract-meta">期刊：Cartography and Geographic Information Science · DOI：10.1080/15230406.2026.2736830 · 摘要来源：出版方摘要</p><p class="abstract-body">Research on three-dimensional (3D) discrete global grid systems (DGGSs) is important for applications requiring simulation or analysis on a sphere. Existing 3D DGGSs face challenges in data integration, uneven shape and size of cells, and complex subdivision rules. In this paper, we propose a new 3D global grid called sphere octal hexahedron mesh (SOHM) by extending the quaternary quadrangle mesh along the radial direction and designing encoding and decoding algorithms for SOHM. SOHM has simple subdivision rules, cells of analogous shapes and sizes, and simple relationships between a grid address and its geographic coordinates. SOHM is suitable to serve as a fundamental framework for organizing global 3D data across all latitudes, from deep subsurface to high altitudes. We apply SOHM to satellite orbit tracking and temperature field visualization. Experimental results demonstrate that SOHM achieves smaller convergence values, more analogous shapes, and better encoding and decoding efficiency than the sphere degenerated octree grid, which facilitates efficient management and manipulation of spatial data.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2736830" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-e75c31b747712fb8">
+<p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Roots &amp; Migrants: a user-centered design of an interactive mapping platform for teaching and learning historical population dynamics in the U.S.</h3>
+<p>Chiamaka Nwajiaku; Caglar Koylu; Jinyi Cai</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15230406.2026.2729303</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_UNASSIGNED_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2729303" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2729303" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Roots &amp; Migrants: a user-centered design of an interactive mapping platform for teaching and learning historical population dynamics in the U.S.</strong></p><p class="abstract-meta">期刊：Cartography and Geographic Information Science · DOI：10.1080/15230406.2026.2729303 · 摘要来源：出版方摘要</p><p class="abstract-body">Interactive maps offer a powerful way to represent spatiotemporal processes such as population change by linking events across space and time but designing them for education requires balancing exploration with curriculum goals, addressing challenges of interpretation arising from uneven data coverage, and accommodating constraints such as limited instructional time and map literacy. Because many existing tools are not built around classroom workflows, they may fail to sustain inquiry or support effective instruction. This article shows how a user-centered design (UCD) approach can improve educational mapping through the collaborative development of Roots &amp; Migrants, a web-based map platform for teaching and learning about U.S. historical population dynamics. We implemented UCD through two participatory workshops with high school teachers and students, using feedback to iteratively design the system, and co-develop classroom lesson activities, drawing on collaborative geovisualization to support spatial knowledge construction. The study identifies cartographic representation and interaction strategies that support spatiotemporal inquiry for novice map users. It also shows how interface and content design can help students interpret population maps as partial historical records shaped by uneven data coverage. Findings further suggest that students benefit from opportunities for open exploration rather than strictly linear storytelling when exploration anchored to specific inquiry tasks and classroom workflows. We argue that educational interactive maps should be designed as instructional systems grounded in classroom practice, pedagogical goals, and data limitations, with implications beyond history education.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2729303" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-1660e034b7da8b85">
+<p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Evaluating intent-driven color generation: a framework for assessing LLM-assisted cartographic design</h3>
+<p>Roar Gauslå Engell; Ida Maria Bonnevie; Henning Sten Hansen</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15230406.2026.2727154</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_UNASSIGNED_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2727154" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2727154" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Evaluating intent-driven color generation: a framework for assessing LLM-assisted cartographic design</strong></p><p class="abstract-meta">期刊：Cartography and Geographic Information Science · DOI：10.1080/15230406.2026.2727154 · 摘要来源：出版方摘要</p><p class="abstract-body">Large language models (LLMs) offer new possibilities for adaptive cartographic design, yet how they interpret user intent remains unclear. This study evaluates how stated analytical goals influence LLM-generated color schemes for thematic maps, assessing three perceptual dimensions: whether colors form a clear sequence matching the data hierarchy (order), whether categories are visually distinct from one another (differentiation), and whether related values share similar or thematically cohesive colors (association). Using a synthetic dataset of 20 lakes classified by pollution level (Low, Medium, High), we tested three LLMs across 12 prompt conditions varying in task framing and analytical emphasis. GPT-5 demonstrated systematic intent sensitivity: order prompts produced cohesive color schemes, differentiation prompts generated multi-hue palettes with greater separation, and lightness encoding reversed depending on whether users emphasized high or low pollution. DeepSeekV3.2 produced perceptually valid schemes but showed no adaptation to user intent, generating fixed red-yellow-green palettes regardless of prompting. Llama3.2 did not produce complete outputs. These findings suggest intent-sensitive color generation requires reasoning capabilities not uniformly present across models. We propose an evaluation framework linking user intent to measurable color properties and discuss implications for exploratory mapping systems where analytical goals shift dynamically.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2727154" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-2bc4804e775b3df6">
+<p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>XFlowMap: cross-scale generalization and mapping of massive origin-destination data</h3>
+<p>Diansheng Guo; Hai Jin</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15230406.2026.2738731</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_UNASSIGNED_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2738731" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2738731" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>XFlowMap: cross-scale generalization and mapping of massive origin-destination data</strong></p><p class="abstract-meta">期刊：Cartography and Geographic Information Science · DOI：10.1080/15230406.2026.2738731 · 摘要来源：出版方摘要</p><p class="abstract-body">Mapping large origin-destination (OD) datasets remains challenging because flow maps quickly become cluttered, salient flow patterns often emerge at different spatial scales, and existing methods frequently depend on predefined aggregation units or manual generalization. This paper presents XFlowMap, a methodology for the cross-scale generalization and mapping of massive OD data. Specifically, it integrates cross-scale flow pattern (cluster) detection, automated flow map generalization, and a new cartographic representation for analyzing and visualizing complex origin-destination flow structures. The approach detects salient flow patterns at their appropriate origin and destination scales respectively, extracts high-level structures, and generates a new flow map representation that supports holistic interpretation of complex origin-destination flow patterns. A scan-statistic-based procedure is developed to evaluate and generalize cross-scale flow clusters. The detected clusters are then visualized using a flow symbol that integrates location, direction, strength, and OD scales in a single representation. The method is robust to sparse and noisy datasets, and enables comparative mapping of stratified flow data. Experiments with synthetic data, U.S. migration data, and taxi OD trips data demonstrate that the method effectively extracts meaningful cross-scale flow patterns and produces clear, information-rich flow maps for large mobility datasets, supporting both static presentation and interactive exploration.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2738731" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-528bdc5c2ceb85aa">
+<p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Development and user experience evaluation of an interactive application for temporal analysis of historical maps</h3>
+<p>Stanislav Popelka; Ondřej Růžička; Michael Viktořík; Tomáš Vaníček; Oldřich Bittner; Jakub Žejdlík; Jaroslav Burian</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15230406.2026.2727157</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_UNASSIGNED_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2727157" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2727157" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Development and user experience evaluation of an interactive application for temporal analysis of historical maps</strong></p><p class="abstract-meta">期刊：Cartography and Geographic Information Science · DOI：10.1080/15230406.2026.2727157 · 摘要来源：出版方摘要</p><p class="abstract-body">Despite the growing availability of digitized historical maps, users still face a key bottleneck: interfaces rarely support efficient comparison across time periods and map types. This paper presents the development and evaluation of web-based application designed for exploring and comparing historical maps and aerial imagery. The platform integrates 72 sources and implements four comparison modes: single, swipe, multiview, and overlay. User experience was evaluated in a laboratory study with 54 participants using User Experience Questionnaire, eye-tracking, and interaction logging. Results indicate a highly positive overall user experience, with strong ratings for perspicuity, efficiency, and attractiveness. Eye-tracking and log data further showed that participants primarily focused on map content, consulted interface elements only briefly, and used comparison modes adaptively depending on task demands. The evaluation also identified several interaction issues relevant to interface refinement, particularly concerning control discoverability, spatial orientation, and feedback during missing-data or loading states. The evaluation is framed as a diagnostic user experience assessment with behavioral observation, used to identify usability-relevant issues and support design improvement. A case study demonstrates the application’s potential for analyzing long-term urban transformation. More broadly, the study shows how empirical UX evaluation can inform the refinement of publicly accessible historical map portals.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2727157" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6acca67ea6b46abc">
+<p class="kicker">Cartography and Geographic Information Science · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Adaptive graph construction and graph contrastive learning for geospatial feature embedding</h3>
+<p>Yongbin Tan; Jun Wu; Rongfeng Cai; Hong Wang; Longmei Duan</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/15230406.2026.2738733</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_UNASSIGNED_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2738733" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/15230406.2026.2738733" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Adaptive graph construction and graph contrastive learning for geospatial feature embedding</strong></p><p class="abstract-meta">期刊：Cartography and Geographic Information Science · DOI：10.1080/15230406.2026.2738733 · 摘要来源：出版方摘要</p><p class="abstract-body">Geospatial features serve as a cornerstone in urban planning and location-based services. Effective geospatial feature embedding is crucial for downstream geospatial Deep Neural Networks (DNN) applications. Currently, geospatial feature representation learning approaches rely on image or textual data to implicitly encode specific geospatial features, such as Points of Interest (POIs), roads, and urban areas, and struggle to effectively model spatial proximity relationships between imbalanced-distribution geospatial features. Moreover, the difficulty in effectively selecting appropriate geographic feature negative samples during model training poses a challenge to traditional representation learning methods. To address these limitations, we propose a novel Geospatial Adaptive Contrastive Embedding approach to extract neighboring features in an imbalanced-distribution space using Delaunay triangulation. It can effectively capture the natural proximity relationship through analysis the distribution characteristics of the geospatial features without setting a threshold. Graph contrastive learning is employed to encode geospatial features into low-dimensional feature vectors through self-supervised spatial similarity preservation. Finally, a comprehensive evaluation of the generated spatial proximity graphs and the learned representation are performed by using through three real-world geospatial datasets. The results demonstrate that our approach successfully learns an invariant and discriminative representation of geospatial features by constructing an effective spatial proximity graph.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/15230406.2026.2738733" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section><section class="of-journal" id="of-reg-048" aria-labelledby="of-reg-048-h"><h3 id="of-reg-048-h">中国图象图形学报 · 新登记 20 条</h3><p>官网首页“当期目录”两遍均指向 2026 年第 9 期（已简报）；第 9 期目录两遍 22 篇与账本集合一致。第 10 期目录页两遍均 302 后连接超时、过刊浏览页超时，无官方完整期证据，不 claim、不预设候选。官方“在线出版”页两遍 20 篇集合稳定，登记 20 篇 NEW_ARTICLE（附官方摘要），已知 0 条抑制。</p><article class="paper" id="article-doi-d455252b33d026ae">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>双域特征增强与目标感知引导的浮游动物分割</h3>
+<p>李忠伟; 鲍君龙; 乔钲; 许向阳; 齐衍萍; 刘昕; 袁德坤</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260408</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260408/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260408" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>双域特征增强与目标感知引导的浮游动物分割</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260408 · 摘要来源：出版方摘要</p><p class="abstract-body">目的浮游动物显微图像实例分割是实现种类识别、数量统计和形态分析的重要基础。传统人工镜检效率低且主观性强，难以满足大规模监测需求，自动化分析需求日益迫切。然而，图像中存在弱边界目标、背景干扰和目标密集分布等问题，导致现有模型分割精度受限。此外，该领域缺乏大规模像素级实例分割数据集。方法为解决上述问题，构建浮游动物显微图像实例分割数据集（zooplankton microscopic image instance segmentation dataset，ZooMIIS5K），包含 5332 张图像和48类浮游动物的精细像素级标注。在此基础上，提出一种基于分割一切模型（Segment Anything Model，SAM）的浮游动物显微图像实例分割模型（zooplankton microscopic image instance segmentation model，ZooMIIS-SAM）。首先，设计双域融合视觉Transformer（dual-domain fusion vision transformer，DDF-ViT），缓解预训练自然图像域与显微图像域之间的特征偏移；接着设计多尺度融合提示模块（multi-scale fusion prompt module，MSFPM），自动生成视觉提示，引导SAM自动理解海洋浮游动物图像；最后，设计目标感知模块（target-aware perception module，TAPM），利用候选区域信息增强全局特征的实例感知能力，提高密集场景下相邻目标的区分效果。结果在 ZooMIIS5K 数据集上，ZooMIIS-SAM 在所比较的卷积神经网络方法和视觉基础模型方法中取得最佳性能，其掩码平均精度均值（mask mean average precision， m A P m a s k ）达到77.4%。消融实验验证了各模块的有效性，可视化分析表明该方法能够更稳定地聚焦于浮游动物区域。ZooMIIS-SAM 具有应用于实际浮游动物监测场景的潜力。所构建的数据集和提出的方法可为浮游动物目标计数及形态分析提供技术参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260408/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-e0d8f0c6fbc8cac8">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>3D数字人舞蹈运镜的轨迹与风格可控合成</h3>
+<p>黄霄蓥; 张三义; 王玺瑞; 郭晓璇; 张勤; 叶龙</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260441</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260441/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260441" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>3D数字人舞蹈运镜的轨迹与风格可控合成</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260441 · 摘要来源：出版方摘要</p><p class="abstract-body">目的现有音乐与舞蹈驱动的自动运镜合成方法主要关注生成与节奏和动作匹配的相机轨迹，缺乏对运镜风格与空间轨迹的显式控制，难以满足专业创作中的精细化编辑需求。方法针对该问题，本文提出多风格舞蹈运镜可控合成框架（controllable dance camera movement synthesis framework，CtrlDanceCam），将风格标签和关键帧相机参数作为用户控制条件。框架包含关键帧预测模块（keyframe prediction module，KPM）和可控轨迹合成模块（controllable trajectory synthesis module，CTSM）：KPM基于音乐、舞蹈与风格条件预测符合目标风格的关键帧分布；CTSM以关键帧为锚点，通过风格条件化的可学习插值函数生成完整相机运动轨迹，并支持用户指定关键帧参数进行轨迹控制。进一步设计风格感知对抗训练策略（style-aware adversarial training，SAAT），增强不同运镜风格的区分能力与生成一致性。结果在公开舞蹈-运镜配对数据集上的实验表明，CtrlDanceCam的基于运动学特征的弗雷歇起始距离（Fréchet inception distance，FID k ）为3.022，平均欧氏距离（average Euclidean distance，Dist k ）为3.101，在提升生成质量的同时保持了良好的轨迹多样性。消融实验和可视化结果进一步验证了各模块及双重控制机制的有效性。结论CtrlDanceCam实现了舞蹈运镜的风格与轨迹双重可控合成，在保证生成质量与轨迹多样性的同时增强了用户编辑能力，可为虚拟制作和数字表演中的自动运镜提供技术支撑。代码开源地址为：https：//www.scidb.cn/s/vUr2Av。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260441/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-f532cbc7d5305ce7">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>语义动态边界增强的遥感图像指代分割方法：SDM-SAM2</h3>
+<p>王一飞; 赵联; 李雷; 游书航; 刘帆</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260290</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260290/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260290" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>语义动态边界增强的遥感图像指代分割方法：SDM-SAM2</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260290 · 摘要来源：出版方摘要</p><p class="abstract-body">目的遥感图像指代分割旨在根据自然语言指令生成目标区域的像素级掩码。然而，通用分割基础模型迁移至遥感场景时，仍面临深层跨模态交互过程中语义约束逐渐衰减、解码阶段层级查询信息利用不充分以及复杂目标边界监督不充分等问题。方法针对上述问题，提出一种用于遥感图像指代分割的语义动态边界增强方法—SDM-SAM2。该框架以SAM2（Segment Anything Model 2）为基础，在图像编码阶段构建阶段感知文本记忆，通过保存并检索不同阶段的文本信息，以维持指代表达约束，从而缓解深层语义传播中的语义衰减问题；在Mask Decoder中引入任务自适应多层查询融合模块，通过可学习层级权重对初始查询和不同解码层查询进行融合，使浅层定位信息与深层语义表征共同参与掩码预测，提升模型对复杂目标的定位与分割能力；同时设计文本加权Sobel边界损失，在连续前景概率图上提取可反向传播的边界响应，并结合文本指定目标对目标轮廓施加显式约束。结果在RefSegRS和RRSIS-D两个数据集上开展实验。完整模型在RefSegRS测试集上取得78.05%的平均交并比（Mean Intersection over Union，mIoU）和84.16%的总体交并比（Overall Intersection over Union，oIoU），在RRSIS-D测试集上取得68.49%的mIoU和78.59%的oIoU。两个数据集上的消融结果表明，阶段感知文本记忆、任务自适应多层查询融合和文本加权Sobel边界损失均能从不同环节改善基础模型；其中，阶段感知文本记忆在两个数据集上均取得最高的单模块mIoU。不同边界算子对比结果表明，Sobel算子取得了三种候选算子中最高的mIoU。结论SDM-SAM2从语义保持、动态解码和边界建模三个方面增强了SAM2对遥感图像指代分割任务的适配能力，能够改善复杂遥感场景下文本指定目标的定位和掩码预测效果。代码链接：https：//github.com/3038794185-cloud/SDM-SAM2。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260290/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-0efd067630467508">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>多维度混合框架的牙颌实例分割</h3>
+<p>吴镇; 陈胜; 程晔</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260131</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260131/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260131" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>多维度混合框架的牙颌实例分割</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260131 · 摘要来源：出版方摘要</p><p class="abstract-body">目的精准分割牙齿与牙龈对于牙齿正畸及隐形矫治器的设计至关重要，同时可视化的模拟也能显著提升诊断效率，加强医患沟通。然而，现有研究对缺牙和重叠情况下的分割问题关注较少。为此，本文提出一种名为HaTransTooth的混合深度学习框架。方法总体采用“由粗到细”的策略：首先，通过平行投影将三维扫描模型转换为二维深度图像，并利用改进的YOLOv8（you only look once version 8）检测算法实现牙齿的快速检测和编号，有效解决了三维空间中牙齿实例分离的难题，提升了牙位识别的准确率和效率；随后，通过建立的映射关系，将二维检测区反向投影至三维空间，提取出包含单个牙齿及其周边牙龈的三维感兴趣区域（3D regions of interest， 3D ROI）；最后，针对每个3D ROI，引入了分层自适应注意力机制的点云转换网络（point cloud transformer，PCT）进行精细分割，同时使用了Focal Loss和Dice Loss的组合损失函数和梯度累积训练策略。结果实验在自行采集的真实病例数据上与经典的7种方法进行了比较，仅是平均准确率（mean accuracy，mACC）位列第二，达到了96.74%，与第一几乎持平，而平均交并比（mean intersection over union，mIoU）和Dice相似系数（the dice similarity coefficient ，DSC）分别比第二名高出4.86%和2.41%。此外还验证了平均表面距离（average symmetric surface distance，ASSD）、召回率（recall，R值）和F1分数（F1 score），均达到了较高水平，具有较高的临床价值。在公开数据集Teeth3DS（teeth 3D scan dataset）上的交叉验证进一步证明了模型的泛化能力。结论本文提出的框架显著提升了对牙齿-牙龈模糊边界的分割精度，并能准确分割具有缺牙和牙齿重叠情况的牙颌，通过实验表明，此框架在多项指标上优于现有主流方法。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260131/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8de596a1a228c702">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>文本语义协同筛选与区域感知的场景文字视频问答</h3>
+<p>方承炀; 章楠; 姜文晖; 刘学林; 方玉明</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260072</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260072/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260072" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>文本语义协同筛选与区域感知的场景文字视频问答</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260072 · 摘要来源：出版方摘要</p><p class="abstract-body">目的场景文字视频问答是多模态理解领域的关键任务，现有多模态大语言模型在处理长视频时受输入帧数限制，直接输入全部视频帧会导致计算开销大，而均匀采样减少视频帧会导致关键文本信息丢失。为了解决以上问题，本文提出一种文本语义协同筛选与区域感知的场景文字视频问答方法，以提升场景文字视频问答的准确性和效率。方法首先，提出基于文本-语义协同的关键帧选择方法，利用多模态大语言模型生成的候选答案作为语义锚点，通过计算其与场景文本的Levenshtein编辑距离精准选择关键帧，并辅以对比语言-图像预训练（contrastive language–image pre-training，CLIP）补充视觉语义相关帧，以解决视频中细粒度文本信息稀疏容易丢失的问题；同时，设计文字区域感知方法，通过基于掩膜的亮度衰减策略构建视觉“聚光灯”效应，抑制无关背景噪声使模型聚焦文本区域，结合推理的置信度差异动态优选答案，从而提升场景文字视频问答的准确率。结果在M4-ViteVQA（multi-category multi-frame multi-resolution multi-modal benchmark for video text visual question answering）、RoadTextVQA（road text video question answering）和NewsVideoQA（news video question answering）三个公开场景文字视频问答数据集上进行充分实验，所提方法在准确率（accuracy，Acc）指标上分别取得 65.55%、72.03% 和 75.54% 的得分，相比均匀采样基线分别提升了 3.04%、0.76% 和 1.08%，优于现有方法。消融实验进一步验证了关键帧选择模块和文字区域感知模块的有效性。结论本文提出的方法有效解决了场景文字视频问答中计算效率与信息完整性的矛盾，通过文本-语义协同选帧策略增强了对细粒度文本的捕获能力，并通过视觉引导抑制背景噪声，从而提升了场景文字视频问答的准确性与鲁棒性。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260072/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-adfb027bb8b801ad">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>DGSeg-YOLO：一种面向食道病理图像细胞检测与实例分割的协同多任务模型</h3>
+<p>吴一键; 刘铁; 陈楠; 丁辉; 邵珠宏</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260263</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260263/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260263" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>DGSeg-YOLO：一种面向食道病理图像细胞检测与实例分割的协同多任务模型</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260263 · 摘要来源：出版方摘要</p><p class="abstract-body">目的针对食道病理图像中细胞密集分布、重叠严重及形态复杂等特点，现有检测与实例分割方法难以兼顾目标定位精度与边界表达能力，多任务学习过程中检测与分割分支之间的特征协同不足，影响复杂病理场景下的识别性能。方法提出一种面向食道病理图像细胞检测与实例分割的协同多任务模型DGSeg-YOLO。在统一网络框架下联合完成细胞检测与实例分割任务，设计双向特征交互模块（bidirectional feature interaction module，BFIM），实现检测与分割分支间的跨任务特征融合；设计自适应检测感知分割模块（adaptive detection-aware segmentation module，ADGS），利用BFIM输出的跨任务交互特征生成目标感知权重，并对分割特征进行自适应加权增强；结合难度感知联合损失函数（difficulty-aware joint loss，DAL），动态协调检测与分割任务优化过程，提高模型对复杂样本的学习能力。结果在自建食道病理细胞数据集上的实验结果表明，DGSeg-YOLO在边界框平均精度均值（box mean average precision，Box mAP）@0.5、掩码平均精度均值（mask mean average precision，Mask mAP）@0.5和Dice指标上分别达到0.900、0.909和0.8351，在细胞密集分布及重叠区域具有较好的检测与实例分割性能。消融实验验证了BFIM、ADGS及DAL各模块对模型性能提升的有效性。同时，所提出模型已集成至食道病理智能分析系统，可实现病理细胞的自动检测、实例分割及统计分析，验证了方法在实际应用中的可行性。结论DGSeg-YOLO通过检测与分割任务间的协同特征学习，增强了复杂病理图像中细胞目标的结构表达与边界刻画能力，在保持模型规模适中的同时兼顾检测性能与工程应用需求，可为食道病理细胞自动分析提供一种有效的技术方案。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260263/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a0d3e921391dca36">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>空频联合多尺度稀疏注意力的单幅图像去雨</h3>
+<p>林晓; 董大腾; 李岩; 洪璇; 杨启哲</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260323</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260323/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260323" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>空频联合多尺度稀疏注意力的单幅图像去雨</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260323 · 摘要来源：出版方摘要</p><p class="abstract-body">目的针对图像修复中空间异质性退化（同时包含中心区域均匀模糊与边缘区域复杂折射）的难题，现有方法因缺乏退化属性先验与频域建模，难以兼顾两类退化属性的修复需求。为此，提出一种基于空间和频域联合处理与不确定性引导的多尺度稀疏变换器。方法首先设计多尺度物理解耦模块，利用不同膨胀率与核大小的并行卷积分支分别侧重提取全局模糊、过渡细节与高频折射特征；进而引入空间-频域联合处理模块，通过空域深度可分离卷积与频域幅度相位调制互补增强特征表示；在此基础上构建不确定性估计模块，生成空间不确定性图以量化各区域修复难度，并据此设计不确定性引导的稀疏注意力机制，使模型在高不确定性区域保持精细纹理，在低不确定性区域抑制冗余计算。同时，采用融合重建损失与不确定性图正则化的复合损失函数，约束不确定性图聚焦于退化区域。结果在SPAD雨纹数据集和AGAN‑Data雨滴数据集上，所提方法的峰值信噪比（peak signal-to-noise ratio，PSNR）和结构相似性（structural similarity index，SSIM）均优于现有基线模型；在Dense‑Haze真实雾霾数据集上，PSNR达到最优。在雨滴去除任务中，相比对比方法中的最优方法，PSNR指标提升了0.30 dB。消融实验验证了多尺度解耦、空间-频域联合处理及不确定性引导机制对性能的贡献。结论本文提出的空频联合与不确定性引导的多尺度稀疏变换器，能够有效应对空间异质性退化，在雨滴、雨纹和雾霾去除任务上均取得优越的修复效果。实验代码与数据已开源发布（https：//doi.org/10.57760/sciencedb.j00240.00269）。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260323/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-bbb76320675c3554">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>面向虚拟现实内容的用户体验质量评价综述</h3>
+<p>刘学林; 鄢杰斌; 方玉明; 侯敬文; 诸汉炜; 眭相杰</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260101</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260101/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260101" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向虚拟现实内容的用户体验质量评价综述</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260101 · 摘要来源：出版方摘要</p><p class="abstract-body">随着多媒体技术的飞速发展，虚拟现实（virtual reality，VR）技术以及沉浸式媒体日益受到重视，已逐渐成为一个重要的研究和开发领域。由360°相机捕获的VR内容，如全景图像和全景视频，相比传统2D视频图像能够提供更为丰富和完整的周围环境细节。凭借其全方位视角与沉浸式的观看体验，全景图像和全景视频能够增强用户的真实性、互动性和沉浸感，因此已在众多领域中得到广泛应用。然而，VR内容的固有球形特性对其存储与传输提出了巨大挑战。此外，在内容采集到终端显示的复杂处理流程中，VR内容都可能引入导致质量下降的潜在因素，这些因素共同影响用户的最终体验。因此，准确描述和量化整个处理流程中感知损伤，并提出有效评价用户体验质量的方法至关重要。早期用户体验质量评价主要依赖吞吐量、带宽、延迟、抖动和丢包率等网络性能参数，但难以全面反映多媒体服务中网络波动对用户体验的影响。为弥补这一不足，体验质量作为关键方案被提出，通常指用户使用应用或服务时的满意程度，受用户期望、个性特征以及当前状态影响。体验质量强调以用户为中心，能更准确地反映整体体验。其量化过程将系统性能与人类感知转化为可测指标，并可通过主观和客观两种方式进行测量。尽管已有不少研究致力于面向VR内容的用户体验质量评价，但目前仍缺乏对这一领域现有方法的系统综述，这一定程度上制约了对该领域的深入理解与分析。本文对面向虚拟现实内容的用户体验质量的最新研究进行全面梳理，旨在推动对该领域的统一认识。首先，通过识别并归类当前虚拟现实内容体验质量评价方法的关键特征，建立了一套分类体系与特征描述，从而构建出用于组织现有方法的结构化框架。进一步地，本文将虚拟现实内容体验质量评价技术划分为两个主要阶段，即主观评价与客观评价。一方面。本文对各类VR内容主观数据集的特点及其构建流程进行了分析，并探讨了影响因素、测试方法、环境设置及评分步骤等关键要素。另一方面，本文根据VR内容的不同表达形式，将面向VR内容的客观体验质量评价方法划分为基于二维平面、基于球面和基于视口的方法三类。其中，基于2D平面的方法主要补偿投影伪影，分为启发式方法和数据驱动方法。基于球面的方法直接在球域操作，采用全局或局部采样策略。基于视口的方法从多视角评价内容质量，按采样策略分为基于规则、关键点和扫视路径三类。在完成各类模型的分类阐述后，还深入剖析了不同方法的优缺点。此外，本文对面向VR内容体验质量评价模型性能的评价指标进行了归纳，并探讨了客观评价模型的实际应用场景。最后，本文对当前面向VR内容的用户体验质量主客观评价研究进行总结，剖析该领域尚未解决的研究局限以及当前面临的障碍，并指出未来可能的发展方向。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260101/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-06c8aaa100a25925">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>基于通用智能的RGB-X融合技术研究综述</h3>
+<p>陈瑜; 卢嘉亮; 励雪巍; 李玺</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260229</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260229/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260229" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于通用智能的RGB-X融合技术研究综述</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260229 · 摘要来源：出版方摘要</p><p class="abstract-body">在自动驾驶、机器人和医疗检测等应用中，单一RGB模态在夜间、低照度以及遮挡等环境下存在显著性能瓶颈，限制其在实际场景中的鲁棒性。红外、深度、激光雷达等异源信息的引入有效缓解了这一问题，但如何高效集成RGB与异源成分，同时滤除无关信息，成为限制RGB-X跨模态交互的关键。现有融合技术主要采用显式交互的方式，即通过元素加、桥接或外接复杂融合模块的方式进行异构模态集成。近年来，视觉基础模型（Vision Foundation Models， VFMs）和视觉语言模型（Vision Language Models， VLMs）等基础模型的出现，为RGB-X融合技术提供了新的研究思路。相较于现有融合方法，这类基础模型凭借较强的通用表征、跨模态理解与知识迁移能力，为专用融合模型提供了新的设计策略与能力增强方式，进一步拓展了RGB-X跨模态融合的研究路径。本文围绕这一前沿方向，对基础模型驱动下的RGB-X跨模态交互技术进行系统综述。首先，梳理RGB-X感知与融合技术的基本原理；其次，基于融合过程中信息交互所处的表示层级，分别从模态级融合、特征级融合及表征级融合三个层面出发，深入剖析现有通专结合的融合方法及各自技术特点；随后，在公开数据集上对代表性方法进行性能对比分析，并讨论上述融合技术在自动驾驶、智能机器人、医疗影像等核心下游感知领域中的应用进展；最后，总结当前技术面临的挑战并展望未来发展方向。区别于现有综述主要关注传统显式融合策略，本文聚焦通用智能驱动的RGB-X融合新范式，系统梳理相关技术路线、代表方法及应用进展，旨在为大模型时代的RGB-X跨模态交互研究提供技术参考与发展思路。本文的参考文献及文中涉及的算法、数据集与评估指标，已整理汇总于https：//github.com/yuyuxiazhu-pixel/RGB-X-fusion-technologies。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260229/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-1bdd717f55b94f23">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>生成式网络的水下图像增强方法综述</h3>
+<p>张琦; 吴子昂; 薛万利; 朱旗; 田春伟; 左旺孟</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260516</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260516/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260516" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>生成式网络的水下图像增强方法综述</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260516 · 摘要来源：出版方摘要</p><p class="abstract-body">水下图像增强（underwater image enhancement，UIE）旨在从受吸收、散射、悬浮颗粒及非均匀照明影响的退化图像中恢复清晰、自然的场景图像，以满足下游视觉任务需求。近年来，生成式网络已成为 UIE 研究的重要范式，但现有方法在生成主干、监督方式、物理约束、推理效率及评测口径上差异显著，造成各方法间缺乏可比性。本文围绕基于生成式网络的 UIE 方法开展系统性综述：从水下成像退化机理出发，分析传统物理先验、数据驱动学习与生成式建模之间的演进关系；将现有方法归纳为 生成对抗网络（generative adversarial network，GAN）、Transformer 与 Diffusion 三类范式，并从监督方式、生成机制、物理/语义约束及部署成本等维度进行跨方法对比；结合 水下图像增强基准数据集（underwater image enhancement benchmark dataset，UIEB）、U45与TEST-U90等数据集的定量结果，探讨 峰值信噪比（peak signal-to-noise ratio，PSNR）、结构相似性指数（structural similarity index measure，SSIM）、水下彩色图像质量评价（underwater color image quality evaluation，UCIQE）、水下图像质量评价（underwater image quality measure，UIQM） 等指标之间的分离现象及其对方法选择的影响。实验结果表明，GAN、Transformer 与 Diffusion 分别适用于实时增强、全局一致性建模与高保真恢复等不同需求。未来 UIE 研究应进一步关注复杂退化耦合、跨域泛化、评价协议标准化、轻量化部署及可信可控生成等关键问题。本文可为生成式 UIE 方法的分类理解、实验设计与工程部署提供理论依据与实践指导。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260516/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-d55e854dd7e09047">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>利用视觉和深度学习的低空无人机检测和跟踪方法综述</h3>
+<p>吕品; 吴一全</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260151</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260151/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260151" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>利用视觉和深度学习的低空无人机检测和跟踪方法综述</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260151 · 摘要来源：出版方摘要</p><p class="abstract-body">低空无人机的“黑飞”“乱飞”对公共安全构成严峻挑战，基于视觉与深度学习的检测跟踪技术因此成为研究焦点。本文系统综述了近5年该领域进展。首先概述无人机类型及其视觉探测特点，接着归纳检测跟踪任务面临的核心挑战。在检测方法部分，重点从改进小目标检测、轻量化网络设计、抗恶劣天气及多模态融合四个方向，梳理了深度学习技术的提升路径；在跟踪方法部分，则从鲁棒性增强、轻量化与实时性、长期跟踪与重识别、多目标跟踪四个维度总结了关键进展。此外，整理了常用数据集与评价指标，并评估了代表性方法性能。最后对未来研究方向进行了展望。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260151/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-84c6fcf4915a5709">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>面向RT-DETR的权重激活协同自适应量化方法</h3>
+<p>霍瑛; 谢心怡; 陈晶晶; 封文清</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260161</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260161/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260161" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向RT-DETR的权重激活协同自适应量化方法</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260161 · 摘要来源：出版方摘要</p><p class="abstract-body">目的针对实时检测Transformer（real-time detection transformer，RT-DETR）在极低比特后训练量化下因权重与激活联合离散化而导致检测精度显著退化的问题，研究一种无需重新训练、适用于边缘部署的低比特量化方法。方法提出权重激活协同自适应量化（weight-activation co-adaptive quantization，WCAQ）框架。该方法构建端到端、无需重新训练的后训练量化流程：权重侧采用分组伪量化以抑制静态离散误差，激活侧将量化置于算子输出端并引入样本自适应尺度调节，结合敏感分支保护和轻量级逐层重构，对双侧量化引起的联合误差进行补偿。结果在COCO 2017（Common Objects in Context）上，WCAQ在8位和6位量化下平均精度（average precision，AP）分别达到46.2%和44.8%，与全精度基线高度相当；在4位极低比特下仍保持28.0%的AP，较最优方法QRT-DETR提高5.4%，克服了传统分离量化导致的精度坍塌。整个量化流程仅需19分钟，较QRT-DETR的110分钟降低约82.7%。结论WCAQ在无需重新训练的前提下实现了接近无损的8位量化和稳定的6位量化，并显著改善了4位量化下RT-DETR的部署可用性，为检测Transformer的边缘低比特部署提供了高效可靠的后训练量化方案。本文方法已发布于ScienceDB，访问链接为：https：//doi.org/10.57760/sciencedb.j00240.00092。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260161/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-e855a00c8293bb9c">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>大语言模型策略优化方法：分类、进展与展望</h3>
+<p>缪济远; 王适雨; 齐洪钢; 赵地</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260027</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260027/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260027" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>大语言模型策略优化方法：分类、进展与展望</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260027 · 摘要来源：出版方摘要</p><p class="abstract-body">策略优化（Policy Optimization， PolOpt）是增强大语言模型推理能力的核心技术，广泛应用于从RLHF到DeepSeek-R1等主流模型中。然而，随着PolOpt算法的快速演进，该领域缺乏系统性的梳理与分类，研究人员难以从零散文献中把握技术全貌与发展脉络。本文对PolOpt领域的最新进展进行了系统性综述，覆盖从基础PolOpt（PPO、GRPO）到GRPO变体，再到扩展PolOpt的完整发展谱系。我们提出了一个分层分类框架（B1–B3、C1–C7、D1–D19），从优化范式演进的角度对现有算法进行了有机组织。基于该框架，本文总结了不同算法类别的核心改进维度、适用场景与性能特点，并揭示了当前PolOpt研究面临的三大瓶颈：奖励稀疏性与噪声放大、多目标权重冲突、计算资源与扩展性限制。最后，本文展望了未来在奖励密集化、多目标自适应优化及分布式训练架构等方向的研究机遇。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260027/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-b41f99ecf2254030">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>面向多卫星协同观测的多目标跟踪基准数据集BatonTrack1.0</h3>
+<p>徐芳; 徐健; 杨文; 夏桂松</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260390</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260390/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260390" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向多卫星协同观测的多目标跟踪基准数据集BatonTrack1.0</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260390 · 摘要来源：出版方摘要</p><p class="abstract-body">目的现有遥感卫星视频目标跟踪数据集主要面向单星连续观测，受单星短时凝视观测限制，难以支撑长时间目标持续跟踪研究。针对上述问题，本文构建了首个面向多卫星协同观测的多目标跟踪基准数据集BatonTrack1.0。方法基于吉林一号GF03C01、GF03C02和GF03C03三颗视频卫星对同一区域的真实接续成像数据，构建跨卫星多目标跟踪序列。通过动态裁剪方式保留目标在不同卫星观测片段中的运动延续关系，并为每个序列提供标准多目标跟踪标注和跨片段时空关系标注，包括目标位置、身份编号、帧时间戳及片段间投影变换关系。在此基础上，构建仿真多卫星观测数据作为训练数据，并选取12种主流多目标跟踪算法在BatonTrack1.0上进行统一评测，涵盖基于运动建模、外观表征以及运动-外观联合关联的代表性方法。结果BatonTrack1.0共构建8个多目标跟踪序列，标注192架飞机目标，包括静止、起飞、降落、进出港滑行和避让等多种典型运行状态；相邻跨卫星观测片段之间存在明显时间空窗，目标在未观测期间持续运动，跨片段位置和运动状态可能发生显著变化。实验结果表明，现有方法在单个卫星观测片段内能够取得较好的目标定位与短时跟踪效果，但在跨卫星片段切换时难以保持目标身份一致性。结论BatonTrack1.0能够为真实多卫星协同观测条件下的跨卫星目标关联、身份保持和长时间持续跟踪研究提供数据支撑与统一评测基准，推动相关算法的设计、验证与创新，对于支持广域目标持续感知能力建设具有重要意义。数据集获取链接：https：//doi.org/10.57760/sciencedb.46325。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260390/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-9e1bb1316fa3c674">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>并行编解码架构的轻量级广域车牌识别网络</h3>
+<p>徐光柱; 吴昀其; 柯志; 雷帮军</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260305</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260305/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260305" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>并行编解码架构的轻量级广域车牌识别网络</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260305 · 摘要来源：出版方摘要</p><p class="abstract-body">目的开放场景中，待识别车牌版式多样、字符位数不统一，现有车牌识别算法在通用性、识别精度与推理速度方面通常难以兼顾。另外，双行及复杂背景车牌数据集的匮乏，限制了多类型车牌识别技术的发展。针对上述问题本文提出基于并行编解码架构的广域车牌识别网络，同时提出基于冗余回收策略的多类型车牌数据生成方案。方法首先通过专用轻量级卷积网络，实现车牌字符的多尺度特征高效提取。随后，将骨干网特征送入局部-全局交互模块，通过并行分组Transformer实现局部与全局特征的高效交互建模。接着，经过模态适配器聚合后送入并行查询式非自回归双层解码器，实现先粗后精的递进式匹配识别。数据生成方案通过回收单行测试数据集中的冗余样本，利用其背景及车牌区域的位置参数，结合程序化生成的虚拟目标车牌进行几何贴合，构建虚实结合的多类型车牌实验数据。结果实验在CCPD数据集及通过冗余回收策略构建的混合数据集上开展，并与18种有代表性的开源及闭源算法进行对比，同时在两个公开数据集上进行跨数据集测试。结果表明，所提算法在通用性、识别精度和推理速度上均显著优于对比算法，在CCPD数据集上平均车牌识别准确率为99.05%，模型参数量为1.44 M，推理帧率为208.6 FPS。结论基于冗余回收的数据生成方案有效缓解了多类型车牌样本不足的问题；基于并行编解码架构的轻量级车牌识别网络实现了通用性、准确性与实时性的协同优化，具有良好的理论研究与工程应用价值。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260305/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-d102bd4518586b20">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>半监督医学图像分割方法综述</h3>
+<p>王晨绮; 喻迟槿; 翟明玮; 谭欢; 徐梦文; 黄凯雯; 周涛</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260242</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260242/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260242" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>半监督医学图像分割方法综述</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260242 · 摘要来源：出版方摘要</p><p class="abstract-body">半监督学习为缓解医学图像分割中高质量标注数据稀缺的难题提供了重要途径。近年来，伪标签生成、一致性正则化与协同训练等技术在充分挖掘未标注数据潜力、提升模型泛化能力方面取得显著进展。本文系统综述了半监督医学图像分割的关键方法，重点回顾了基于伪标签的方法在高置信度伪监督信号生成、边界感知增强等方面的技术创新；探讨了一致性方法在多域异构性与复杂解剖结构下的改进策略，如多层次特征对齐和不确定性对抗训练；分析了协同训练方法通过多模型协作提升分割稳健性的研究进展。随后，本文深入讨论了当前面临的核心挑战，包括伪标签质量控制、类别不平衡以及数据隐私保护，并展望了未来结合医学知识驱动、自适应阈值策略与隐私保护机器学习的新方向。通过全面梳理现有研究，本文旨在为半监督医学图像分割的持续发展提供系统性参考和研究启示。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260242/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-e529ce9de5d7feeb">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>雾密度引导的真实场景军用车辆遥感图像检测</h3>
+<p>于英; 柏栋; 张珂; 李凯; 李磊; 李力; 冯新月</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260239</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260239/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260239" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>雾密度引导的真实场景军用车辆遥感图像检测</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260239 · 摘要来源：出版方摘要</p><p class="abstract-body">目的真实场景下，由于目标自身特性、环境交互及成像条件共同作用，导致军用车辆目标在可见光遥感成像条件下的可分辨性、可分离性显著降低。尽管基于深度学习的遥感图像目标检测技术近年来取得了显著进展，但现有研究对遥感图像特殊性的充分适应、效率与精度的平衡、以及真实场景下的泛化能力等方面，仍有待进一步突破。针对真实场景目标检测的难点，基于YOLOv11（you only look once）算法提出一种雾密度引导的真实场景军用车辆遥感图像检测算法（YOLO for military vehicle detection under foggy conditions， MVF-YOLO）。方法在网络输入端增加一个基于雾密度权重的边缘特征恢复模块（fog density-driven edge restoration， FDER），自适应恢复被雾衰减的边缘信息；在网络颈部设计了空间注意力引导的频域信息选择模块（spatial attention-based frequency selection， SFS），增强高频判别特征并抑制低频噪声，并且利用遥感车辆刚性目标特性和目标长宽比先验知识，使用基于目标长宽比先验的分类损失函数（aspect ratio binary cross-entropy Loss， ar_BCELoss）优化分类精度。结果在MVRSD-V2.0数据集上，所提方法在IoU阈值为0.5时的平均准确率达到87.6%，较基线模型提升4.4%。结论试验结果表明，该方法在真实场景下具有强鲁棒性和军用车辆检测能力。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260239/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-246b405b4fe9e36e">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>空频域一致性驱动的半监督语义分割 SF-Match</h3>
+<p>胡静; 吕晓鹏; 王芳; 张睿</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260246</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260246/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260246" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>空频域一致性驱动的半监督语义分割 SF-Match</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260246 · 摘要来源：出版方摘要</p><p class="abstract-body">目的针对现有半监督语义分割方法特征表达不足，以及全图统一一致性约束易造成语义边界模糊和目标内部预测不连贯的问题，提出空频一致性驱动的半监督语义分割框架SF-Match（Spatial-Frequency Match）。方法以自监督预训练DINOv2为编码器、DPT（Dense Prediction Transformer）为解码器，构建兼顾全局语义与局部细节的密集预测网络；在教师—学生框架中，对CutMix后的强增强图像构造高频和低频视图，并依据教师伪标签的形态学梯度动态生成边界与内部掩膜；分别在边界区域施加高频一致性约束、在内部区域施加低频一致性约束，与RGB全局一致性和监督损失联合优化，实现频域信息与空间语义区域的解耦对齐。结果在Pascal VOC 2012和Cityscapes数据集上开展多标注比例对比、消融、困难类别、复杂度及定性实验。Pascal VOC 2012上，SF-Match的平均交并比（mean Intersection over Union，mIoU）为86.4%～90.6%，较semiVL提高1.9～3.6个百分点，较UniMatch提高9.4～11.2个百分点；Cityscapes上，mIoU为83.6%～85.0%，较各划分下最佳外部对比方法提高3.7～5.1个百分点。消融实验中，Pascal VOC 2012的1/4标注划分下，mIoU由传统基线的77.8%提高至89.6%，表明网络重构与区域化空频对齐具有协同作用。结论目前的实验结果支持SF-Match用于少量像素级标注、较多同域未标注图像且重视边界细节的自然场景和城市街景分割。其区域化空频对齐思想具有扩展至其他教师—学生式分割框架的潜力，但尚需进一步验证；对于高度遮挡、远距离小目标、复杂高频背景和跨领域数据，其有效性仍有限或未得到充分验证，且多视角训练会增加计算量与显存开销。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260246/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-eb25b42db20f24dd">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>面向医学图像识别的去偏见方法综述</h3>
+<p>周涛; 陈铮; 沈飞宇; 万之瑜; 吕科; 周涛; 胡伏原; 许铮铧; 李晨</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260378</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260378/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260378" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向医学图像识别的去偏见方法综述</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260378 · 摘要来源：出版方摘要</p><p class="abstract-body">医学图像识别是医学人工智能的重要研究方向，已广泛应用于病灶检测、疾病分类、器官分割和辅助诊断等任务。然而，在医学图像识别中，病灶区域占比小、疾病类别分布不均、跨机构成像差异和标注标准不一致等因素，可能使模型对小病灶、罕见疾病、特定患者群体或特定医疗中心的识别性能下降，并使模型依赖背景、设备和人群属性等与诊断目标无直接关系的信息。针对上述问题，本文围绕医学图像识别中的去偏见方法进行总结。首先，从偏见出现的位置出发，将相关问题归纳为像素级偏见、样本级偏见、特征级偏见和算法级偏见；然后，针对如何提升小病灶的权重的问题，像素级去偏归纳为像素重加权去偏，边界重加权去偏和区域重加权去偏；针对如何提高少数类样本的训练贡献，样本级去偏归纳为样本重平衡去偏和样本扩充与生成去偏；针对如何解决跨域特征分布不均的问题，特征级去偏归纳为特征对齐去偏，特征解耦去偏和知识蒸馏去偏；针对如何解决模型对非目标属性的依赖的问题，算法级去偏归纳为因果约束去偏；最后，本文总结医学图像识别的公平性问题研究在偏见来源、去偏与诊断信息的平衡、生成的医学图像的真实性、跨中心公平性评价体系等方面面临的挑战。本文为医学图像识别中偏见缓解方法的研究与应用提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260378/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-053ea38632168452">
+<p class="kicker">中国图象图形学报 · ONLINE_FIRST</p>
+<h3>风格解偏与局部语义聚焦的组合零样本学习</h3>
+<p>林泽辉; 沈忠伟</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.11834/jig.260280</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260280/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.11834/jig.260280" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>风格解偏与局部语义聚焦的组合零样本学习</strong></p><p class="abstract-meta">期刊：中国图象图形学报 · DOI：10.11834/jig.260280 · 摘要来源：出版方摘要</p><p class="abstract-body">目的组合零样本学习旨在利用训练阶段已见的状态与物体原语识别测试阶段未见的状态—物体组合。现有基于视觉语言预训练模型的方法主要关注组合语义建模和全局跨模态对齐，但仍存在对训练图像风格分布依赖较强、局部判别区域利用不足等问题，导致模型在未见组合场景下泛化能力受限。方法针对上述问题，提出一种风格解偏与局部语义聚焦相结合的组合零样本学习方法。在视觉编码前端，引入风格解偏模块，通过对中间卷积特征的通道均值和标准差进行随机混合，降低模型对颜色、纹理和背景统计模式的依赖；在跨模态交互阶段，设计文本锚引导的局部语义聚焦模块，利用组合、属性和物体分支的文本原型构造语义锚点，对视觉 patch token 进行相似度计算、Top-K 稀疏筛选和重加权，从而突出与当前语义相关的关键局部区域。在此基础上，结合三分支关系建模框架完成属性、物体和组合的联合匹配预测。结果在 MIT-States、UT-Zappos 和 C-GQA 3个基准数据集上进行闭世界和开放世界实验。闭世界设定下，本文方法在 MIT-States、UT-Zappos 和 C-GQA 上的 AUC 分别达到 22.9%、42.8% 和 13.1%；开放世界设定下，AUC 分别达到 7.8%、33.8% 和 3.24%，均优于基线模型。消融实验表明，风格解偏模块和局部语义聚焦模块均能带来稳定性能提升，二者结合后取得最优结果。结论所提方法能够有效缓解视觉风格偏移对组合识别的影响，并增强模型对局部关键语义证据的关注能力，从而提升组合零样本学习中未见状态—物体组合的识别性能和泛化能力。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260280/" rel="noopener noreferrer">官方论文页面</a><small>www.cjig.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section><section class="of-journal" id="of-reg-078" aria-labelledby="of-reg-078-h"><h3 id="of-reg-078-h">Social Network Analysis and Mining · 新登记 6 条</h3><p>年度单卷连续出版：2026 年 Volume 16, Issue 1 官方目录声明 87 篇、两遍解析 87 篇集合稳定；年卷未关闭，不 claim。官方卷目录 + Online first + Articles 列表 + RSS 合并后 article gate：NEW_ARTICLE 6（其中更正声明 1 篇）、已知 103 条抑制。</p><article class="paper" id="article-doi-80c79b8e3aba57c1">
+<p class="kicker">Social Network Analysis and Mining · CORRECTION_NOTICE</p>
+<h3>Correction: Deciphering terrorist attributions: a global terrorism data-driven comparison of machine learning models</h3>
+<p>Gideon Mwendwa; Lokesh Chouhan; Yogini Prabhu</p>
+<dl>
+<div><dt>卷期</dt><dd>V16 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s13278-026-01648-7</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_TOC_CONTINUOUS_VOLUME</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01648-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01648-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Correction: Deciphering terrorist attributions: a global terrorism data-driven comparison of machine learning models</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01648-7</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01648-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-ae1eba9f6da572ab">
+<p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
+<h3>Evaluating ensemble ranking fusion for multi-source localization in propagation graphs</h3>
+<p>Damian Frąszczak</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s13278-026-01652-x</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01652-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01652-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Evaluating ensemble ranking fusion for multi-source localization in propagation graphs</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01652-x · 摘要来源：出版方摘要</p><p class="abstract-body">Source identification in propagation graphs is an inverse problem that aims to recover the initial infected or activated nodes from an observed propagation snapshot. This paper studies a static, structure-driven setting in which temporal traces, observer timestamps, and large labeled diffusion histories are unavailable. Voting and ranking-fusion methods are often motivated by the ensemble-learning intuition that several imperfect signals can be more useful after aggregation than any single signal alone. The study tests whether this intuition also helps multi-source localization on propagation graphs, where the individual signals are structural node heuristics rather than learned classifiers. The evaluation covers ten structural heuristics, four ensemble aggregation families, and four implemented source-localization baselines across 22 network-by-propagation cases and 198 saved propagation instances. The analysis separates fixed-method comparisons from diagnostic headroom, compares structural ensembles with non-structural source-localization baselines, and examines whether source counts can be estimated from score gaps or score thresholds rather than supplied as an oracle k. The results support a qualified conclusion. Structural ensembles expose a statistically reliable direction of improvement over selected single-heuristic references, but practical fixed-method gains are modest and depend on how member weights or configurations are chosen. Average-distance and topological centrality are the strongest recurring structural signals, suggesting that future methods should model proximity and graph-position evidence more explicitly rather than enumerate more voting combinations. Adaptive epsilon-gap and threshold rules partially control source-count error, but they do not remove the source-count problem under static snapshots. Overall, ensemble ranking fusion is useful as a calibrated diagnostic and sometimes as a practical aggregation layer, while richer temporal information, validation data, or more principled source-count estimators are still needed for robust deployment.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01652-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-d134c617744cc908">
+<p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
+<h3>Rethinking information propagation: an attention-based perspective</h3>
+<p>Francisco Jurado</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s13278-026-01650-z</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01650-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01650-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Rethinking information propagation: an attention-based perspective</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01650-z · 摘要来源：出版方摘要</p><p class="abstract-body">Information propagation in Online Social Networks (OSNs) is commonly modeled as a diffusion process based on fixed interaction rules. However, such models are limited in their ability to capture adaptive and context-dependent interactions. In this work, we propose an attention-based formulation of information propagation in which influence emerges from dynamic interactions between node representations. Rather than following predefined transmission rules, propagation is governed by compatibility between node states and evolves over time. Experiments on synthetic networks show that the proposed model exhibits non-monotonic activation dynamics, in contrast to classical cascade processes. A key result is the emergence of distinct propagation regimes controlled by a structural parameter, which governs a transition from globally distributed, high-entropy interactions to localized, low-entropy dynamics. These findings indicate that propagation can be understood as a process of dynamic attention redistribution rather than cumulative transmission. As a result, the proposed approach provides a unified and flexible approach to modeling information propagation, generalizing classical diffusion models and capturing a broader range of behaviors.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01650-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-4b05e315c35f15ab">
+<p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
+<h3>Eating disorder-related content in Reddit suicidal ideation posts: an LLM-assisted analysis of mental health comorbidities, substance use, and demographic patterns</h3>
+<p>Salim Sazzed</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s13278-026-01647-8</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01647-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01647-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Eating disorder-related content in Reddit suicidal ideation posts: an LLM-assisted analysis of mental health comorbidities, substance use, and demographic patterns</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01647-8 · 摘要来源：出版方摘要</p><p class="abstract-body">Eating disorders are severe psychiatric conditions characterized by a markedly elevated risk of suicidal ideation and behavior. Although prior research has documented these associations in clinical settings, the underlying psychosocial and behavioral dynamics of such co-occurrence remain underexplored in non-clinical contexts, such as social media health narratives. This cross-sectional study examines the prevalence, demographic characteristics, and patterns of co-occurring mental health conditions and substance use among individuals who self-identify as having eating disorders and express suicidal ideation on Reddit’s r/SuicideWatch community. Using a validated keyword-based filtering framework informed by large language model–generated keyword expansion, we identified 688 eating disorder–related posts from a corpus of 27,434 suicidal ideation posts, representing a co-occurrence prevalence of 2.5% (95% CI: 2.33%–2.70%). Among posts with self-reported gender (n=75), females were the largest group (42.7%); among posts with self-reported age (n=170), individuals aged 18–20 were most represented (28.8%). Co-occurring mental health conditions were referenced in 79.0% of posts (95% CI: 75.8%–81.9%), particularly depression (43.9%) and anxiety (31.5%), alongside alcohol as the most prominent substance. These findings illustrate how social media discourse can complement clinical research in characterizing high-risk populations, with potential implications for the design of targeted digital mental health interventions for adolescents and young adults at the intersection of eating disorders and suicide risk.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01647-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3aa67a6cc6a6e905">
+<p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
+<h3>Deep learning for evolving threat detection in online social networks: a PRISMA-based systematic review</h3>
+<p>Khouloud Alouani; Khaoula Bouazzi; Sadok Bouamama</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s13278-026-01649-6</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01649-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01649-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Deep learning for evolving threat detection in online social networks: a PRISMA-based systematic review</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01649-6 · 摘要来源：出版方摘要</p><p class="abstract-body">Social media platforms have become prime targets for disinformation, fake accounts, and cyberbullying. Deep learning approaches (CNN, RNN, LSTM, BERT) have demonstrated high performance in detecting these OSN threats, achieving over 90% accuracy on benchmark datasets. However, this performance is based on static, outdated data (2015–2018), while malicious actors may continuously modify their behaviors, tactics, and content in response to detection mechanisms. However, the extent to which these models remain robust under temporally evolving threat patterns is less systematically investigated. This systematic review follows the PRISMA 2020 guidelines to analyze how deep learning approaches handle (or ignore) evolving OSN threats on social media. A search of five databases (IEEE, ACM, Scopus, Springer, Google Scholar) identified 450 records. After removing duplicates and screening titles, abstracts, and full texts, 35 studies published between 2020 and 2026 were selected for in-depth qualitative analysis. The results reveal three major findings. First, hybrid and transformer-based architectures are frequently represented among the reviewed approaches, with some studies reporting accuracy values above 90% on their respective benchmark datasets. Second, the distribution of the reviewed studies is concentrated on a limited number of OSN threat types. Fake news represents 31.43% of the corpus (11/35 studies), followed by cyberbullying (25.71%, 9/35) and social bots (14.29%, 5/35). Fake accounts account for 5.71% (2/35), while the remaining threat categories each represent 2.86% of the corpus. This distribution indicates that research attention is unevenly distributed across OSN threat types. Third, and most critically, explicit temporal validation and adaptation mechanisms remain limited and heterogeneous across the reviewed studies. None of the 35 studies explicitly reported a systematic chronological train/test validation protocol. Some studies nevertheless used newer datasets or considered evolutionary characteristics, which we coded separately from temporal validation. Overall, the extent to which researchers account for threat evolution varies considerably, ranging from indirect or partial consideration to more explicit evolutionary modelling. Similarly, mechanisms that enable models to adapt to changes over time remain limited and are not consistently reported. These findings highlight a methodological gap between conventional benchmark-based evaluation and the need to assess model robustness in OSN environments that continuously evolve. We refer to this gap as the Evolution Optimization Paradox (EOP), which is used in this review as a synthesis framework rather than as a machine-learning theory. To address this gap, we propose a research agenda structured around five directions: (1) collecting recent datasets (2024–2026), (2) systematically adopting temporal validation, (3) developing adaptive models (including concept drift detection and online learning), (4) evaluating cross-platform generalization, and (5) standardizing metrics for reproducibility. This review contributes to the literature by offering a novel critical analysis of existing approaches, identifying a fundamental gap that has been overlooked, and providing a roadmap for developing robust detection systems to address the rapid evolution of online OSN threats.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01649-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-cc1bfd47ff9b6199">
+<p class="kicker">Social Network Analysis and Mining · ONLINE_FIRST</p>
+<h3>An unsupervised multidimensional data drift framework for measuring multilingual and cross-national political discourse shifts</h3>
+<p>Ibai Guillén-Pacho; Carlos Badenes-Olmedo; Oscar Corcho</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s13278-026-01646-9</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_ONLINE_FIRST</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01646-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-18 12:22 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01646-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>An unsupervised multidimensional data drift framework for measuring multilingual and cross-national political discourse shifts</strong></p><p class="abstract-meta">期刊：Social Network Analysis and Mining · DOI：10.1007/s13278-026-01646-9 · 摘要来源：出版方摘要</p><p class="abstract-body">Political discourse on social networks continuously evolves across electoral cycles and communicative contexts, producing measurable changes in discourse distributions over time. This work introduces an unsupervised framework for detecting and quantifying these changes through multidimensional drift analysis. The approach models discourse evolution across semantic, lexical, thematic, and syntactic dimensions by combining complementary drift detection techniques over text, enabling systematic and reproducible analyses of discourse change. The framework is applied to multilingual political discourse published on party manifestos and Facebook between 2014 and 2023 across multiple electoral cycles and institutional levels in Spain and France. Results show that the proposed framework is able to detect, in a fully unsupervised manner, structural patterns consistent with known dynamics of political communication, including stable distinctions between campaign and routine discourse. At the same time, the framework provides measurable and objective indicators that enable more systematic analyses of discourse evolution across comparable political scenarios.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01646-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="errata" aria-labelledby="errata-h"><h2 id="errata-h">勘误与撤稿</h2>
+<p>本批发现更正声明 <strong>1</strong> 条（来自官方目录，已作为登记条目出卡）；被更正原文不在本账本，未改动任何既有论文记录。撤稿：已核查，0 项。</p><ul><li><strong>Social Network Analysis and Mining</strong> — Correction: Deciphering terrorist attributions: a global terrorism data-driven comparison of machine learning models（Article 85，14 October 2026） <span class="evidence"><a href="https://link.springer.com/article/10.1007/s13278-026-01648-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-10-18 12:22 CST · 一级证据</small></span> <span class="evidence"><a href="https://doi.org/10.1007/s13278-026-01648-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-18 12:22 CST · 规范化论文身份</small></span></li></ul>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="topics" aria-labelledby="topics-h"><h2 id="topics-h">主题与阅读路线</h2><ul><li>Social Network Analysis and Mining 年度连续出版卷 2026-V16-I1 未关闭，仅登记，不进入正式期次阅读路线。</li><li>Cartography and Geographic Information Science：7 条网络首发/在年登记，其中 7 条附官方摘要抽屉，可按摘要筛选后再进入官方论文页面。</li><li>中国图象图形学报：20 条网络首发/在年登记，其中 20 条附官方摘要抽屉，可按摘要筛选后再进入官方论文页面。</li><li>Social Network Analysis and Mining：6 条网络首发/在年登记，其中 5 条附官方摘要抽屉，可按摘要筛选后再进入官方论文页面。</li><li>以上为元数据级分组，不构成对论文研究结论的判断。</li></ul><p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="health" aria-labelledby="health-h"><h2 id="health-h">数据源健康</h2><ul><li>Cartography and Geographic Information Science（REG-018）：源健康 <code>OFFICIAL_CURRENT_TOC_OK_SECONDARY_CF403</code>；状态 COMPLETED；官方 Current = Vol 53 No 5（已简报），无 In Progress 标记，未见 No 6；当期主目录两遍 9 篇 DOI 指纹稳定，gate-issue=DELTA_REVIEW_REQUIRED（账本 11 篇，差异 2 篇为侧栏误并入），只列差异、不重印。官方 Articles（网络首发）页、LOI 及 53/4–53/6 期次页 Cloudflare 403，官方 eTOC RSS 仅返回 1998 年旧条目；改用 Crossref 未分配卷期元数据 + 官方当期页侧栏发现（两遍集合稳定），登记 7 篇 NEW_ARTICLE，已知 32 条抑制。。</li><li>中国图象图形学报（REG-048）：源健康 <code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT_ISSUE10_TIMEOUT</code>；状态 COMPLETED；官网首页“当期目录”两遍均指向 2026 年第 9 期（已简报）；第 9 期目录两遍 22 篇与账本集合一致。第 10 期目录页两遍均 302 后连接超时、过刊浏览页超时，无官方完整期证据，不 claim、不预设候选。官方“在线出版”页两遍 20 篇集合稳定，登记 20 篇 NEW_ARTICLE（附官方摘要），已知 0 条抑制。。</li><li>Social Network Analysis and Mining（REG-078）：源健康 <code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code>；状态 COMPLETED；年度单卷连续出版：2026 年 Volume 16, Issue 1 官方目录声明 87 篇、两遍解析 87 篇集合稳定；年卷未关闭，不 claim。官方卷目录 + Online first + Articles 列表 + RSS 合并后 article gate：NEW_ARTICLE 6（其中更正声明 1 篇）、已知 103 条抑制。。</li><li>有界对账：处理 4 个到期任务（上限 4），均保持 FAILED_RETRYABLE（见下列明细）。</li></ul><ul><li>job 54 · REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE：有界对账：本组未扫描该刊，本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 58 · REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE：有界对账：本组未扫描该刊，本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 59 · REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE：有界对账：本轮取得 Vol 53 No 5 官方主目录（9 篇，两遍稳定），发现与账本差异并转差异复核；Vol 53 No 4 目录页 Cloudflare 403 未能复核，维持 FAILED_RETRYABLE。</li><li>job 65 · REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE：有界对账：本组未扫描该刊，本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li></ul>
+<p>失败或待修复：已核查，0 项。降级路径：本批无降级。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="audit" aria-labelledby="audit-h"><h2 id="audit-h">证据与审计信息</h2>
+<details><summary>运行标识、证据层级与提交状态</summary>
+<ul>
+<li>Brief_ID：<code>DAILY-20261018</code> · Commit_ID：<code>DAILY-20261018-121945-4ceb0343</code> · Run_ID：<code>4ceb0343-bf7a-4c40-9ddc-500d0cd7b46b</code></li>
+<li>逻辑日期 2026-10-18 · 实际完成 2026-10-18 12:22 CST · Recovery_Batch_ID：<code>4ceb0343-bf7a-4c40-9ddc-500d0cd7b46b</code></li>
+<li>任务：ROUTINE-20261018-G18（ROUTINE · CURRENT · 执行顺序 1 · COMPLETED）；补扫 0、仍待补扫 0；下一计划扫描 2026-10-19 第 19 组。</li>
+<li>证据层级：官方期次目录 = 一级完整性证据；官方论文页 = 题名/作者/摘要证据；DOI = 身份证据；Crossref = 二级补全；RSS / API = 发现信号（不证明完整性）。</li>
+<li>多遍目录核验：Cartography and Geographic Information Science 2026-V53-I5 两遍 9/9 集合一致（已 BRIEFED；官方主目录 9 篇 vs 账本 11 篇 → DELTA_REVIEW_REQUIRED，仅输出差异）；Cartography and Geographic Information Science OF 两遍 39/39 集合一致（官方 Articles 页 Cloudflare 403；Crossref 未归期 + 官方当期页侧栏仅作发现）；中国图象图形学报 2026-V31-I9 两遍 22/22 集合一致（已 BRIEFED；DOI 集合与账本 22 篇完全一致，仅 article_set_hash 口径差异）；中国图象图形学报 2026-V31-I10 两遍 0/0 集合一致（官方“当期目录”两遍均指向第9期；第10期目录页 302 后连接超时，无官方完整期证据）；中国图象图形学报 OF 两遍 20/20 集合一致（在线出版仅登记）；Social Network Analysis and Mining 2026-V16-I1 两遍 87/87 集合一致（年度单卷连续出版，2026 年卷未关闭，不 claim；仅登记在年发现）</li>
+<li>门控统计：issue gate NEW_ISSUE 0；article gate 新论文记录 0、网络首发新登记 33、去重抑制 135、增量复核 2、门控错误 0。</li>
+<li>摘要校验：所有摘要经 text_sanitize 清洗与参考文献块识别校验；本页 32 篇论文附可展开官方摘要，1 篇暂无摘要；每张卡片保留官方论文页面链接。</li>
+<li>摘要图 SHA-256：<code>60eab1496aa1275e701ff1689de8865781ce598243cd476547fe947cd947fd85</code>；HTML SHA-256 见提交回执（避免自引用哈希）。</li>
+<li>PostgreSQL 严格健康：PASS（7/7 迁移一致，健康问题 0）。</li>
+</ul></details>
+<p class="back"><a href="#top">返回页首</a></p></section>
+</main>
+<footer><nav aria-label="日报导航"><a href="../../../../2026/10/index.html">返回 2026 年 10 月索引</a> · <a href="../../../../2026/10/2026-10-17_GIS-AI期刊每日轮检简报_第17组.html">上一篇：2026-10-17 第 17 组</a> · <a href="#top">返回页首</a></nav></footer>
+</body></html>
