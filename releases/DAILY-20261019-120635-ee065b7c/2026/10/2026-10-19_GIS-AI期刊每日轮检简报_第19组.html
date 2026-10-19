@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 19 组 · 2026-10-19</title>
+<style>
+:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;font-size:16px;line-height:1.65;overflow-wrap:anywhere}
+a{color:var(--brand);text-decoration:underline;text-underline-offset:.18em;display:inline-block;min-height:44px;line-height:44px}
+a:visited{color:#4b3f72}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:2px}
+.skip{position:absolute;left:12px;top:-80px;background:#fff;padding:0 14px;z-index:9}.skip:focus{top:8px}
+.hero{background:linear-gradient(135deg,#073d58,#08737a);color:#fff;padding:18px max(18px,calc((100vw - 1180px)/2)) 22px}
+.hero a{color:#fff}.crumb{font-size:14px}.meta{font-size:14px;color:#cfe7e6;margin:.2rem 0}
+.hero h1{font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.15;margin:.3rem 0 .6rem}
+.lede{font-size:clamp(1rem,2vw,1.15rem);max-width:72em;margin:0 0 14px}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.card{display:block;line-height:1.3;background:#ffffff1f;border:1px solid #ffffff55;border-radius:12px;padding:10px 12px;color:#fff;text-decoration:none;min-height:44px}
+.card strong{display:block;font-size:1.7rem}.card span{font-size:14px}
+main{max-width:1180px;margin:0 auto;padding:0 18px 40px}
+section{margin-top:26px}h2{font-size:1.45rem;margin:0 0 10px;border-left:5px solid var(--brand);padding-left:10px}h3{font-size:1.12rem;margin:.6rem 0}
+.attention{list-style:none;padding:0;margin:0}.attention li{background:#fff;border:1px solid var(--line);border-left:5px solid #e1a62b;border-radius:10px;padding:8px 14px;margin:8px 0}
+.tag{display:inline-block;font-size:14px;font-weight:700;border:2px solid currentColor;border-radius:6px;padding:0 6px;line-height:1.6}
+.tag.ok{color:var(--ok)}.tag.warn{color:var(--warn)}.tag.bad{color:var(--bad)}.when{font-size:14px;color:var(--muted)}
+.toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 14px;margin-top:18px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%}caption{text-align:left;padding:10px 12px;font-weight:700}
+th,td{border-top:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;font-size:15px}thead th{background:#e3efed}
+figure{margin:16px 0}figure img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}figcaption{font-size:14px;color:var(--muted)}
+.issue,.of-journal{background:#ffffffa8;border:1px solid var(--line);border-radius:12px;padding:6px 16px 12px;margin:16px 0}
+.issue-meta,.paper dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:4px 14px;margin:6px 0}
+.issue-meta div,.paper dl div{font-size:14px}dt{color:var(--muted);font-size:14px}dd{margin:0}
+.paper{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px;margin:12px 0}
+.paper h3{font-size:1.05rem}.kicker{font-size:14px;color:var(--muted);margin:.2rem 0}
+.evidence{display:inline-flex;flex-direction:column;margin-right:14px}.evidence small{font-size:14px;color:var(--muted);line-height:1.3}
+.back{font-size:14px;margin:4px 0}.more{font-size:15px}code{font-size:14px;word-break:break-all}
+details summary{cursor:pointer;min-height:44px;display:flex;align-items:center}
+footer{max-width:1180px;margin:0 auto;padding:10px 18px 40px;font-size:15px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.cards{grid-template-columns:repeat(2,1fr)}.card strong{font-size:1.4rem}
+ table.stack thead{position:absolute;left:-9999px}table.stack,table.stack tbody,table.stack tr,table.stack th,table.stack td{display:block;width:100%}
+ table.stack tr{border-top:2px solid var(--line);padding:6px 0}table.stack th,table.stack td{border:0;padding:3px 10px}
+ table.stack td::before,table.stack th::before{content:attr(data-label)"：";color:var(--muted);font-size:14px}}
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到主要内容</a>
+<header class="hero">
+<nav class="crumb" aria-label="面包屑"><a href="../../../../index.html">站点首页</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/10/index.html">10 月</a> / 2026-10-19 第 19 组</nav>
+<p class="meta">逻辑日期 2026-10-19（北京时间）· 实际完成 2026-10-19 12:07 CST · 任务类型 ROUTINE · 第 19 组</p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 19 组</h1>
+<p class="lede" id="conclusion">第 19 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式论文（新论文记录 0 篇、网络首发正式归期 0 篇），登记网络首发/在编/未来期 84 条；2 种期刊因官方源受限降级完成，0 种扫描失败；未发现勘误，未发现撤稿。</p>
+<div class="cards" aria-label="关键计数">
+<a class="card" href="#overview"><strong>3</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>2</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>0</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>0</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>84</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复（已核查，0 项）</span></a>
+</div>
+</header>
+<main id="main">
+<section id="attention" aria-labelledby="attention-h"><h2 id="attention-h">需要关注</h2>
+<ul class="attention"><li><span class="tag warn">降级</span> <strong>Computers, Environment and Urban Systems</strong> — ScienceDirect 官方 TOC/AIP Playwright 持续 HTTP 403，无法取得卷完整性证据 <span class="when">核查 2026-10-19 12:07 CST</span> <span class="evidence"><a href="https://www.sciencedirect.com/journal/computers-environment-and-urban-systems/vol/127/suppl/C" rel="noopener noreferrer">官方期次目录</a><small>www.sciencedirect.com · 2026-10-19 12:07 CST · 失败核查对象</small></span></li><li><span class="tag warn">降级</span> <strong>Social Networks</strong> — ScienceDirect 官方 TOC/AIP Playwright 持续 HTTP 403，无法确认在编卷关闭 <span class="when">核查 2026-10-19 12:07 CST</span> <span class="evidence"><a href="https://www.sciencedirect.com/journal/social-networks/vol/85/suppl/C" rel="noopener noreferrer">官方期次目录</a><small>www.sciencedirect.com · 2026-10-19 12:07 CST · 失败核查对象</small></span></li></ul></section>
+<nav class="toc" aria-label="页内快速导航"><strong>快速导航</strong>
+<a href="#conclusion">今日结论</a><a href="#tasks">扫描任务</a><a href="#overview">期刊总览</a><a href="#formal">新完整期次</a><a href="#delta">差异复核</a><a href="#online-first">网络首发</a><a href="#errata">勘误撤稿</a><a href="#topics">主题与阅读路线</a><a href="#health">数据源健康</a><a href="#audit">审计与状态</a></nav>
+
+<section id="tasks" aria-labelledby="tasks-h"><h2 id="tasks-h">扫描任务</h2>
+<p>本次为常规当日任务；补扫任务 0 项、二月尾组 0 项、开放发布队列 0 项（发布重试 0 项）；仍待补扫 0 项。</p>
+<div class="table-wrap"><table class="stack"><caption>任务清单（按执行顺序）</caption>
+<thead><tr><th scope="col">Task_ID</th><th scope="col">Task_Type</th><th scope="col">Coverage_Month</th><th scope="col">Scheduled_Date</th><th scope="col">组号</th><th scope="col">执行顺序</th><th scope="col">Run_Mode</th><th scope="col">实际执行时间</th><th scope="col">状态</th><th scope="col">失败原因</th></tr></thead>
+<tbody><tr id="task-ROUTINE-20261019-G19"><td data-label="Task_ID"><code>ROUTINE-20261019-G19</code></td><td data-label="类型">ROUTINE</td><td data-label="覆盖月份">2026-10</td><td data-label="计划日期">2026-10-19</td><td data-label="组号">第 19 组</td><td data-label="顺序">1</td><td data-label="Run_Mode">CURRENT</td><td data-label="实际执行">2026-10-19 12:07 CST</td><td data-label="状态">COMPLETED（2 刊降级）</td><td data-label="失败原因">无期刊级失败</td></tr></tbody></table></div>
+<p>扫描范围：月度轮检分组第 19 组正式期刊 REG-019 Computers, Environment and Urban Systems、REG-049 中国卫生统计、REG-079 Social Networks；本组无附加信号源。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="overview" aria-labelledby="overview-h"><h2 id="overview-h">期刊更新总览</h2>
+<div class="table-wrap"><table class="stack"><caption>逐刊状态（排序：失败/待修复 → 降级 → 有更新 → 零更新）</caption>
+<thead><tr><th scope="col">期刊</th><th scope="col">本次状态</th><th scope="col">最新确认完整期次</th><th scope="col">新完整期次</th><th scope="col">新增正式论文</th><th scope="col">Online First</th><th scope="col">源健康</th><th scope="col">官方目录</th></tr></thead>
+<tbody><tr><th scope="row" data-label="期刊">REG-019<br><strong>Computers, Environment and Urban Systems</strong></th><td data-label="本次状态"><span class="tag warn">降级完成</span></td><td data-label="最新确认完整期">2026-V127</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">44</td><td data-label="源健康"><code>OFFICIAL_403_SCIENCEDIRECT</code></td><td data-label="官方目录"><a href="https://www.sciencedirect.com/journal/computers-environment-and-urban-systems/vol/127/suppl/C" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-079<br><strong>Social Networks</strong></th><td data-label="本次状态"><span class="tag warn">降级完成</span></td><td data-label="最新确认完整期">2026-V85</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">40</td><td data-label="源健康"><code>OFFICIAL_403_SCIENCEDIRECT</code></td><td data-label="官方目录"><a href="https://www.sciencedirect.com/journal/social-networks/vol/85/suppl/C" rel="noopener noreferrer">官方期次目录</a></td></tr><tr><th scope="row" data-label="期刊">REG-049<br><strong>中国卫生统计</strong></th><td data-label="本次状态"><span class="tag ok">已完成</span></td><td data-label="最新确认完整期">2026-V43-I2</td><td data-label="新完整期">0</td><td data-label="新增正式论文">0</td><td data-label="网络首发">0</td><td data-label="源健康"><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td data-label="官方目录"><a href="https://cjournal.hep.com.cn/1002-3674/CN/current" rel="noopener noreferrer">官方期次目录</a></td></tr></tbody></table></div>
+<figure><img src="assets/2026-10-19_GIS-AI期刊每日摘要_第19组.png" width="1600" height="900" alt="第19组每日摘要图：检查正式期刊3种，有更新2种，新完整期次0个，新增正式论文0篇，网络首发与在编登记84条，失败或待修复0；降级2种"><figcaption>每日摘要图（1600×900，期刊级聚合）；等价文字计数见下表。</figcaption></figure>
+<div class="table-wrap"><table><caption>摘要图等价文字计数</caption><thead><tr><th scope="col">指标</th><th scope="col">数值</th></tr></thead><tbody><tr><th scope="row">已检查正式期刊</th><td>3</td></tr><tr><th scope="row">有更新期刊</th><td>2</td></tr><tr><th scope="row">新完整期次</th><td>0</td></tr><tr><th scope="row">新增正式论文</th><td>0</td></tr><tr><th scope="row">网络首发/在编</th><td>84</td></tr><tr><th scope="row">失败或待修复</th><td>0</td></tr><tr><th scope="row">降级期刊</th><td>2</td></tr><tr><th scope="row">去重抑制</th><td>47</td></tr><tr><th scope="row">增量复核（差异复核）</th><td>0</td></tr><tr><th scope="row">更正声明</th><td>0</td></tr><tr><th scope="row">有界对账任务</th><td>4</td></tr></tbody></table></div>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="formal" aria-labelledby="formal-h"><h2 id="formal-h">新完整期次与逐篇卡片</h2>
+
+<p>已核查，本批无新完整期次。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="delta" aria-labelledby="delta-h"><h2 id="delta-h">已简报期次差异复核</h2>
+<p>已核查，0 项。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="online-first" aria-labelledby="of-h"><h2 id="of-h">网络首发 / 在编 / 未来期登记</h2>
+<p>本批新登记 <strong>84</strong> 条（Computers, Environment and Urban Systems 44、Social Networks 40）。以下条目只作登记，不作为完整期次证据；正式归期后按 DOI 合并，不重复计数。</p>
+<section class="of-journal" id="of-reg-019" aria-labelledby="of-reg-019-h"><h3 id="of-reg-019-h">Computers, Environment and Urban Systems · 新登记 44 条</h3><p>官方 TOC/AIP Playwright 两遍均 403，无法取得卷完整性证据，不 claim V128+（Crossref 见 V128,V129,V130,V131）。RSS(curl 200, 37 条两遍稳定)+Crossref(2026–2027, 127 条两遍稳定)作发现：登记 44 篇 NEW 网络优先/在年发现，已知抑制 24。保持基线 2026-V127；候选提示 2026-V131。</p><article class="paper" id="article-doi-feaeaa9b748ffcf1">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>City function matters: Identifying influential factors of urban thermal comfort</h3>
+<p>Lu Zhang; Yihao Cao; Chunhong Zhao; Shuang Wei; Yichen Wang; Pengyuan Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102482</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102482" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102482" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>City function matters: Identifying influential factors of urban thermal comfort</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102482</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102482" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-f3a0edea1410331c">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Explaining the urban mechanisms behind OpenStreetMap updates: Evidence from 88 German cities</h3>
+<p>Chuan Chen; Yuhan Jiang; Yu Feng; Yiding Liu; Liqiu Meng</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102456</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102456" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102456" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Explaining the urban mechanisms behind OpenStreetMap updates: Evidence from 88 German cities</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102456</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102456" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-537bbe3729e6681c">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>A mobility-based framework for measuring socio-spatial segregation in 30 U.S. metropolitan areas</h3>
+<p>Jinlin Shi; Xiao Li; Si Qiao; Xiao Huang; Yang Xu; Siqin Wang; Liangchen Zhou; Guonian Lü</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102462</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102462" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102462" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A mobility-based framework for measuring socio-spatial segregation in 30 U.S. metropolitan areas</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102462</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102462" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-f7d012af9a348d8b">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>The geometry of loss: Spatial hierarchies and multiscale predictions of hurricane damage via urban form and water networks</h3>
+<p>Caitlín Mc Shane; Stefan Leyk</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102487</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102487" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102487" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The geometry of loss: Spatial hierarchies and multiscale predictions of hurricane damage via urban form and water networks</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102487</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102487" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-0dc2afe3f8d7c4a3">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Incorporating spatio-temporal population dynamics into deep learning models for small-area population forecasting</h3>
+<p>Hyeyun Kang; Hyeongmo Koo; Daeheon Cho; Sang-Il Lee</p>
+<dl>
+<div><dt>卷期</dt><dd>V131 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102533</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102533" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102533" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Incorporating spatio-temporal population dynamics into deep learning models for small-area population forecasting</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102533</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102533" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-76f400286d81012b">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Neighborhood-scale barrier-free accessibility assessment using handheld LiDAR point cloud</h3>
+<p>Maolin Chen; Jianwei Ding; Mei Xue; Xudong Lai; Mingwei Wang; Cuicui Ji</p>
+<dl>
+<div><dt>卷期</dt><dd>V131 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102538</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102538" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102538" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Neighborhood-scale barrier-free accessibility assessment using handheld LiDAR point cloud</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102538</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102538" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-c20b64be80aec8dd">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>A hierarchical network approach for analyzing scale-dependent coupling among policy-relevant dimensions of disaster governance</h3>
+<p>Zhang Chen; Hanlin Zhou</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102461</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102461" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102461" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A hierarchical network approach for analyzing scale-dependent coupling among policy-relevant dimensions of disaster governance</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102461</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102461" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a8bdac51f233d882">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Beyond global metrics: A geographically weighted framework for exploring multi-source spatial data validation</h3>
+<p>Binbin Lu; Siao Luo; Peng Yue; Guanpeng Dong; Lex Comber</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102450</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102450" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102450" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Beyond global metrics: A geographically weighted framework for exploring multi-source spatial data validation</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102450</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102450" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-34b9a8e60911bbc8">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>CASTED: Calibrated anomaly-based spatial-temporal event detection framework for anomaly detection in resilience curves</h3>
+<p>Zhang Chen; Hanlin Zhou</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102465</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102465" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102465" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>CASTED: Calibrated anomaly-based spatial-temporal event detection framework for anomaly detection in resilience curves</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102465</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102465" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6baee5e6207964e5">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>The effect of digital rideshare on urban periphery development</h3>
+<p>Joshua Rosen; Daniel T. O&#x27;Brien</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102486</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102486" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102486" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The effect of digital rideshare on urban periphery development</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102486</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102486" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-62fb67357863bc1e">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Sensitivity-driven parameter optimization for the G2SFCA using response surface methodology</h3>
+<p>Yiliang Wan; Yang Zhao; Wenzhong Shi; Pengfei Chen; Feng Xu; Rui Jin</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102460</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102460" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102460" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Sensitivity-driven parameter optimization for the G2SFCA using response surface methodology</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102460</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102460" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-cbf674e8e7f7e24d">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Rainfall reshapes intra-urban activity patterns: Multi-level insights from human mobility in China</h3>
+<p>Nan Wang; Yunyan Du; Jiawei Yi; Wenna Tu; Sheng Huang; Peixian Luo; Xiaoyue Wang; Dingchen Hu; Rui Xu; Fuyuan Liang</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102483</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102483" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102483" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Rainfall reshapes intra-urban activity patterns: Multi-level insights from human mobility in China</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102483</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102483" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-166f04e003a557ce">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>From heuristics to data: A parcel-level representation of site planning layouts from multimodal urban evidence</h3>
+<p>Qian Cao; Jielin Chen; Junchao Zhao; Rudi Stouffs</p>
+<dl>
+<div><dt>卷期</dt><dd>V131 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102530</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102530" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102530" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>From heuristics to data: A parcel-level representation of site planning layouts from multimodal urban evidence</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102530</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102530" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-cb72d39cae382976">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Corrigendum to “Leveraging sidewalk robots for walkability-related analyses Computers, Environment and Urban Systems” [Volume 124, March 2026, 102381]</h3>
+<p>Xing Tong; Michele D. Simoni; Kaj Munhoz Arfvidsson; Jonas Mårtensson</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102442</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102442" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102442" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Corrigendum to “Leveraging sidewalk robots for walkability-related analyses Computers, Environment and Urban Systems” [Volume 124, March 2026, 102381]</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102442</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102442" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-dc56908958c8fca1">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>A computational framework for measuring dynamic vehicular exposure and equity in the 15-min city</h3>
+<p>Yitao Yang; Shifen Cheng; Yan Chen; Weiming Huang</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102480</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102480" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102480" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A computational framework for measuring dynamic vehicular exposure and equity in the 15-min city</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102480</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102480" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-c294363e6c064824">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Spatiotemporal machine learning for building demolition risk modelling</h3>
+<p>Han Gao; Corentin Fivet</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102481</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102481" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102481" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spatiotemporal machine learning for building demolition risk modelling</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102481</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102481" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-525f08f70df1c8ef">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Customized decision-making support per location&#x27;s characteristics of spatial accessibility: A case study of emergency healthcare in New York City</h3>
+<p>Jinwoo Park; Fangzheng Lyu; Alexander Michels; Ian Zhang; Shaowen Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102458</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102458" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102458" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Customized decision-making support per location&#x27;s characteristics of spatial accessibility: A case study of emergency healthcare in New York City</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102458</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102458" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-11415b41ae651972">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>An integrated simulation-optimisation framework for future public electric vehicle charger deployment</h3>
+<p>Zixin Feng; Qunshan Zhao; Alison Heppenstall</p>
+<dl>
+<div><dt>卷期</dt><dd>V131 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102539</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102539" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102539" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An integrated simulation-optimisation framework for future public electric vehicle charger deployment</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102539</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102539" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-194d4ad35eaecb7c">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Modeling adolescents’ perception of cycling safety: A new approach using graph neural networks and street view imagery</h3>
+<p>Xiaobing Wei; Filip Biljecki; Pengyuan Liu; Binyu Lei; Nico Van de Weghe; Haosheng Huang</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102454</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102454" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102454" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Modeling adolescents’ perception of cycling safety: A new approach using graph neural networks and street view imagery</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102454</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102454" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3cacf8b79105edde">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Inferring urban functions from Google Maps reviews: A multi-scale, multi-modal and cross-city approach</h3>
+<p>Haixiao Liu; Sijie Yang; Mahmoud Abdelrahman; Yihan Zhu; Xiaobing Wei; Filip Biljecki</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102475</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102475" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102475" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Inferring urban functions from Google Maps reviews: A multi-scale, multi-modal and cross-city approach</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102475</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102475" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-109a0260da2955ba">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>A benchmark of large language models for spatially informed proposal generation in local search for the p-median problem</h3>
+<p>Xin Feng; Yuanpei Cao</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102467</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102467" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102467" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A benchmark of large language models for spatially informed proposal generation in local search for the p-median problem</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102467</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102467" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8727b6ffdf596b9c">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Spatio-temporal sensitivity of healthcare accessibility: Insights from a system dynamics model</h3>
+<p>Patrick Danso; Liang Mao</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102491</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102491" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102491" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spatio-temporal sensitivity of healthcare accessibility: Insights from a system dynamics model</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102491</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102491" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-19141b97c7e1cb01">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>A multi-scale analysis of spatiotemporal variability and environmental influences on urban noise</h3>
+<p>Junhyeon Kweon; Sugie Lee</p>
+<dl>
+<div><dt>卷期</dt><dd>V131 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102537</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102537" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102537" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A multi-scale analysis of spatiotemporal variability and environmental influences on urban noise</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102537</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102537" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8a6c68a56e002885">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>TransGM: Transferable gravity models for cross-city policy transfer</h3>
+<p>Adham Enaya; Chen Zhong; Michael Batty; Robin Morphet; Fulvio D. Lopane</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102455</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102455" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102455" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>TransGM: Transferable gravity models for cross-city policy transfer</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102455</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102455" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-c8390b95827b09cf">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Estimating visible deprivation through the analysis of street view image embeddings</h3>
+<p>Molly Asher; Alexis Comber; Naieme Golzari Osguie; Thanh Bui Quang; Minh Kieu; Nick Malleson</p>
+<dl>
+<div><dt>卷期</dt><dd>V131 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102526</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102526" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102526" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Estimating visible deprivation through the analysis of street view image embeddings</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102526</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102526" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-346aecf75041232f">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Physics-informed graph learning for spatially contiguous and capacity-constrained hospital service area delineation</h3>
+<p>Lingbo Liu; Fahui Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102459</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102459" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102459" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Physics-informed graph learning for spatially contiguous and capacity-constrained hospital service area delineation</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102459</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102459" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-26ad474f16235347">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Mapping public disability-inclusive awareness in Chinese cities: Insights from geotagged social media data</h3>
+<p>Jian Liu; Xiaohang Li; Bin Meng; Dongshen Zhan; Xintao Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V131 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102536</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102536" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102536" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mapping public disability-inclusive awareness in Chinese cities: Insights from geotagged social media data</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102536</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102536" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6080b157f590f1a3">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Towards fully automated city operations: Integrating agentic AI with urban digital twins</h3>
+<p>Haowen Xu; Sisi Zlatanova; Xueping Li; Monica Wachowicz; Michael Batty</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102449</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102449" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102449" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Towards fully automated city operations: Integrating agentic AI with urban digital twins</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102449</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102449" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-66dd118cfd7d0fee">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Estimating maximum acceptable positional errors for crime distribution pattern</h3>
+<p>Zengli Wang; Xuanlin Zhu; Jingjing Li; Yutian Shen</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102464</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102464" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102464" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Estimating maximum acceptable positional errors for crime distribution pattern</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102464</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102464" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-68e9a0a1cc393556">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Budgeting urban tree canopy expansion for cooling-benefit equality: A graph neural network-based multi-objective framework</h3>
+<p>Jiaxing Ye; Zhidian Jiang; Ruibin Li; Sihong Du; Feng Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V131 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102532</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102532" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102532" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Budgeting urban tree canopy expansion for cooling-benefit equality: A graph neural network-based multi-objective framework</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102532</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102532" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-340dcd06082a73c7">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>The Urban Model Platform: a public backbone for modeling and simulation in urban digital twins</h3>
+<p>Rico H. Herzog; Till Degkwitz; Trivik Verma</p>
+<dl>
+<div><dt>卷期</dt><dd>V131 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102534</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102534" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102534" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The Urban Model Platform: a public backbone for modeling and simulation in urban digital twins</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102534</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102534" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-d8bc43df1e701a0e">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>UST-GNN: A unified spatial–topological graph neural network framework for urban analytics demonstrated through a case study on urban health prediction</h3>
+<p>Minwei Zhao; Sanja Šćepanović; Stephen Law; Ivica Obadić; Cai Wu; Daniele Quercia</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102466</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102466" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102466" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>UST-GNN: A unified spatial–topological graph neural network framework for urban analytics demonstrated through a case study on urban health prediction</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102466</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102466" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-9cd16b2a16924391">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>System optimality versus self-organization in metro networks: An optimal transport analysis</h3>
+<p>Tianyu Dong; Jiazu Zhou; Markus Schläpfer</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102479</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102479" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102479" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>System optimality versus self-organization in metro networks: An optimal transport analysis</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102479</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102479" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-c71d441c851ddab3">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Urban housing markets under flood risk: Modeling demand pressure, risk perception bias, and public interventions</h3>
+<p>Asli Mutlu; Tatiana Filatova</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102440</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102440" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102440" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Urban housing markets under flood risk: Modeling demand pressure, risk perception bias, and public interventions</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102440</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102440" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8d4c599f6789cc3a">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Assessment of individualised dynamic environmental exposures within The World Avatar</h3>
+<p>Jiying Chen; Jethro Akroyd; Sebastian Mosbach; Feroz Farazi; Xinhong Deng; Kok Foong Lee; Mei Qi Lim; George Brownbridge; Tom Bishop; Will Cuningham; Tomas Gonzales; Thomas Burgoine; Jenna Panter; Louise Foley; Søren Brage; Nicholas J. Wareham; Markus Kraft</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102476</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102476" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102476" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Assessment of individualised dynamic environmental exposures within The World Avatar</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102476</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102476" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-9b2b33dd32583bd5">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Beyond urban form: Introducing dynamic factors in agent-based simulations of pedestrian movement</h3>
+<p>Marcin Wozniak; Gabriele Filomena</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102439</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102439" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102439" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Beyond urban form: Introducing dynamic factors in agent-based simulations of pedestrian movement</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102439</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102439" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-5255460842b43f2c">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Supporting wildfire mitigation investment prioritization</h3>
+<p>Thelonious Funk; Alan T. Murray; Rob Hazard; Anne-Marie Parkinson</p>
+<dl>
+<div><dt>卷期</dt><dd>V131 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102535</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102535" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102535" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Supporting wildfire mitigation investment prioritization</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102535</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102535" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-40cb88832ff9dcfa">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Buildings.city: Scalable urban building energy modeling and carbon emissions mapping using open archetype templates</h3>
+<p>Pengdi Lyu; Hongyao Wong; Royden Soh; Tao Wang; Yu Qian Ang</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102453</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102453" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102453" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Buildings.city: Scalable urban building energy modeling and carbon emissions mapping using open archetype templates</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102453</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102453" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-2e79a2d0537d9a4c">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>A GIS MILP framework for electric vehicle charging station placement and optimization: A Case Study in Eindhoven, Netherlands</h3>
+<p>Moses Katontoka; Argyris Kanellopoulos; Francesco Orsi; Igor Sirnik</p>
+<dl>
+<div><dt>卷期</dt><dd>V128 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102457</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102457" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102457" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A GIS MILP framework for electric vehicle charging station placement and optimization: A Case Study in Eindhoven, Netherlands</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102457</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102457" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8f82ad72c1e15019">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Addressing the missing activity location problem in trip chais: A POI-based probabilistic method using open data</h3>
+<p>Peiling Wu; Fariya Sharmeen; Emma Engström</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102484</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102484" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102484" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Addressing the missing activity location problem in trip chais: A POI-based probabilistic method using open data</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102484</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102484" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-4ac75f15df6471dd">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Spotting rat-runs: A network-based method for identifying potential cut-through routes in Bogotá, Colombia</h3>
+<p>Juan P. Fonseca-Zamora; Roger Beecham; James Tate; Robin Lovelace</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102488</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102488" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102488" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spotting rat-runs: A network-based method for identifying potential cut-through routes in Bogotá, Colombia</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102488</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102488" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-60abae91ea6c3a08">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Residential heating emissions tool in the Climate Action Navigator: High-resolution estimation based on open data</h3>
+<p>Gefei Kong; Veit Ulrich; Steffen Knoblauch; Maria Martin; Moritz Schott; Kirsten von Elverfeldt; Alexander Zipf; Sebastián Block</p>
+<dl>
+<div><dt>卷期</dt><dd>V131 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102525</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102525" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102525" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Residential heating emissions tool in the Climate Action Navigator: High-resolution estimation based on open data</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102525</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102525" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-12047e240822e027">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>A local Shapley metric for spatial validation of urban infrastructure deterioration</h3>
+<p>Pengcheng Zhang; Wen Yi; Yongze Song; Haiyang Liu; Kai Ren; Ning Yang; Jiao Hu; Peng Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V131 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102513</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102513" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102513" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A local Shapley metric for spatial validation of urban infrastructure deterioration</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102513</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102513" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-335e0c9830e6b60d">
+<p class="kicker">Computers, Environment and Urban Systems · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Presolving for spatially large general backup covering location problem with applications to urban security monitoring</h3>
+<p>Ya-Xuan Liu; Yun-Tian Zhang; Tong-Yu Wu; Chang-Hao Miao; Chen Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V129 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.compenvurbsys.2026.102463</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102463" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102463" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Presolving for spatially large general backup covering location problem with applications to urban security monitoring</strong></p><p class="abstract-meta">期刊：Computers, Environment and Urban Systems · DOI：10.1016/j.compenvurbsys.2026.102463</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.compenvurbsys.2026.102463" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section><section class="of-journal" id="of-reg-079" aria-labelledby="of-reg-079-h"><h3 id="of-reg-079-h">Social Networks · 新登记 40 条</h3><p>官方 TOC/AIP Playwright 两遍均 403，无法确认卷关闭，不 claim V86+（Crossref 见 V86,V87,V88）。RSS(curl 200, 29 条两遍稳定)+Crossref 作发现：登记 40 篇 NEW，已知抑制 23。保持基线 2026-V85；候选提示 2026-V88。</p><article class="paper" id="article-doi-4b1e3b5ba4b17812">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>If all friends are perfectly reliable, then one friend always suffices: How non-reciprocity creates the Dunbar circles</h3>
+<p>Alexander V. Gubanov; Ivan V. Kozitsin</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.05.001</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.05.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.05.001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>If all friends are perfectly reliable, then one friend always suffices: How non-reciprocity creates the Dunbar circles</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.05.001</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.05.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-c53f7089e8fa6eb7">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>A personal network analysis of remote workers</h3>
+<p>Mattia Vacchiano; Guillaume Fernandez; Eric D. Widmer</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.010</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.010" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.010" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A personal network analysis of remote workers</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.010</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.010" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-6f27c5b889373c1e">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Understanding the personal networks of people experiencing homelessness in King County, WA with aggregate relational data</h3>
+<p>Zack W. Almquist; Ihsan Kahveci; Owen Kajfasz; Janelle Rothfolk; Amy Hagopian</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.02.003</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.003" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Understanding the personal networks of people experiencing homelessness in King County, WA with aggregate relational data</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.02.003</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-d2ba49a4889b4f46">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Network threats to causal inference: Variations in network position by participation in randomized controlled trials</h3>
+<p>Cassie McMillan; Mark C. Pachucki; Jiaao Yu; A. James O’Malley; Anne N. Thorndike; Douglas E. Levy</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.03.004</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.004" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Network threats to causal inference: Variations in network position by participation in randomized controlled trials</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.03.004</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a5035ed1f86edc49">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Who benefits most? Intervention-induced changes in the social networks of people living with dementia</h3>
+<p>Doris Gebhard; Jan Ellinger</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.01.006</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.006" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.006" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Who benefits most? Intervention-induced changes in the social networks of people living with dementia</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.01.006</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.006" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-17640dcdb7774a00">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Two-mode network autoregressive model for network analysis with core nodes</h3>
+<p>Huiyun Tang; Moxuan Mi; Yingying Ma; Haisheng Yang; Feifei Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.01.004</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.004" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Two-mode network autoregressive model for network analysis with core nodes</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.01.004</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-bf2d014de1b665f0">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Network scale-up methods on aggregated relational data to estimate the outcome of elections</h3>
+<p>Jorge M. Arevalillo; Juan Marcos Ramírez; Sergio Díaz-Aranda; Jose Aguilar; Antonio Fernández Anta; Rosa E. Lillo</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.006</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.006" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.006" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Network scale-up methods on aggregated relational data to estimate the outcome of elections</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.006</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.006" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-29bcd2c54ac93be5">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Working together through the storm: The role of task performance in a collaborative emergent multiorganizational disaster response network</h3>
+<p>Sabrina Mai; Carter T. Butts</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.02.006</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.006" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.006" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Working together through the storm: The role of task performance in a collaborative emergent multiorganizational disaster response network</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.02.006</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.006" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-54b6ff7e28b17680">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Networked philanthropy during COVID-19: A case study of community brokerage in Hong Kong</h3>
+<p>Ka Yi Fung; Wing Sun Chan; Miranda Mi Wa Chan</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.02.004</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.004" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Networked philanthropy during COVID-19: A case study of community brokerage in Hong Kong</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.02.004</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-4f99f5b9d5b8fd18">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>An intersectoral structural network intervention to expand social care in-and-with community: Key mechanisms of an intersectoral dementia community investment initiative</h3>
+<p>Melissa Park; Keven Lee; Sarah Piombo; Marie Christine Le Bourdais; Seiyan Yang; Arnaud Francioni; Thomas W. Valente</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.004</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.004" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>An intersectoral structural network intervention to expand social care in-and-with community: Key mechanisms of an intersectoral dementia community investment initiative</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.004</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-e9409c65a879ee01">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Social influences in network and households’ e-commerce entrepreneurship in rural China</h3>
+<p>Tianyu Qiao; Zeqi Qiu</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.001</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Social influences in network and households’ e-commerce entrepreneurship in rural China</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.001</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-ba7166fa57591efd">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Estimating unknown populations from informant reports using scale-up reference groups and capture-recapture inference</h3>
+<p>Scott Feld; Alec McGail</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.01.003</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.003" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Estimating unknown populations from informant reports using scale-up reference groups and capture-recapture inference</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.01.003</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-8ec4a77147a43134">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Corrigendum to “Unlinked: Why alters reported in name generators cannot be used to estimate personal network size” [Soc. Netw. 88 (2027) 1–7]</h3>
+<p>Alejandro Dinkelberg; Christopher McCarty; Miguel A. González-Casado; Miroslav Pulgar; Anxo Sánchez; José Luis Molina</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.09.004</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.004" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Corrigendum to “Unlinked: Why alters reported in name generators cannot be used to estimate personal network size” [Soc. Netw. 88 (2027) 1–7]</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.09.004</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.004" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-b86aa97a77952925">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Centrality in directed networks</h3>
+<p>Gordana Marmulla; Ulrik Brandes</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.01.001</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Centrality in directed networks</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.01.001</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-b7e8eddb3dae6de2">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Beyond linearity and time-homogeneity: Relational hyper event models with time-varying non-linear effects</h3>
+<p>Martina Boschi; Jürgen Lerner; Ernst C. Wit</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.02.001</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Beyond linearity and time-homogeneity: Relational hyper event models with time-varying non-linear effects</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.02.001</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-89e0b1e243035187">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>The relational structure of corporate ignorance production</h3>
+<p>Gabriel V. Lévesque</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.09.001</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The relational structure of corporate ignorance production</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.09.001</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-a3d614cb4a7cec96">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>The decay of impact with network distance in linear diffusion processes</h3>
+<p>Alexander Murray-Watters; Cheng Wang; John R. Hipp; Cynthia Lakon; Carter T. Butts</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.09.003</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.003" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The decay of impact with network distance in linear diffusion processes</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.09.003</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-d7fcfa845baba604">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Causal inference for intervention spillover in a stepped wedge cluster-randomized trial: Lessons from a physician network</h3>
+<p>A. James O’Malley; Carly A. Bobak; Amber E. Barnato</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.017</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.017" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.017" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Causal inference for intervention spillover in a stepped wedge cluster-randomized trial: Lessons from a physician network</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.017</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.017" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-9f4144c4f6b545d7">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>From hidden populations to social structure: Evolution of the Network Scale-Up Method, Aggregated Relational Data, and their applications</h3>
+<p>Miranda J. Lubbers; Beate Völker; Michał Bojanowski</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.002</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.002" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>From hidden populations to social structure: Evolution of the Network Scale-Up Method, Aggregated Relational Data, and their applications</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.002</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-db0a01e0d6e733f1">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>The sociability space: Putting social networks into geographical space</h3>
+<p>Giovanna Fancello; Basile Chaix; Philippe Gerber; Yan Kestens; Alexandre Naud; Cédric Sueur; Julie Vallée</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.03.005</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.005" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The sociability space: Putting social networks into geographical space</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.03.005</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-d9cc030697708f96">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>From survey data to social multiplex models: Incorporating interlayer correlation from multiple data sources</h3>
+<p>Alec Fluer; Ian Laga; Logan Graham; Ellen Almirol; Makenna Meyer; John A. Schneider; Breschine Cummins</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.01.005</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.005" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>From survey data to social multiplex models: Incorporating interlayer correlation from multiple data sources</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.01.005</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-9beb6c279c81c547">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Using LASSO for variable selection in exponential random graph models</h3>
+<p>Sergio Buttazzo; Göran Kauermann</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2025.12.007</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2025.12.007" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2025.12.007" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Using LASSO for variable selection in exponential random graph models</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2025.12.007</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2025.12.007" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-017ad8e3c4b60e90">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Socioeconomic homogeneity in acquaintance networks: Occupational prestige, education, and intergenerational mobility</h3>
+<p>Alejandro Espinosa-Rada; Matías Bargsted; Francisca Ortiz Ruiz</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.012</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.012" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.012" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Socioeconomic homogeneity in acquaintance networks: Occupational prestige, education, and intergenerational mobility</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.012</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.012" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-de714d63083e894a">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Network members can hide from group centrality measures</h3>
+<p>Marcin Waniek; Andrzej Nagórko; Talal Rahwan</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.09.005</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.005" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Network members can hide from group centrality measures</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.09.005</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-dadd0cf7c56c7e51">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Local signals, global stakes: Groups with aligned interests struggle to coordinate when information is noisy and shared locally</h3>
+<p>Isabelle Brocas; Juan D. Carrillo</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.011</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.011" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.011" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Local signals, global stakes: Groups with aligned interests struggle to coordinate when information is noisy and shared locally</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.011</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.011" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-e602810a9b13e109">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Rigid boundaries, selective salience: How classroom gender composition shapes adolescent friendships</h3>
+<p>Eszter Vit; Isabel J. Raabe</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.013</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.013" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.013" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Rigid boundaries, selective salience: How classroom gender composition shapes adolescent friendships</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.013</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.013" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-7a3ce7e730dc3b55">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>A hybrid mixed methods design for understanding decision making, social structure, and network dynamics of life course transitions</h3>
+<p>Derek A. Kreager; David R. Schaefer; Kristina Brant; Nicolette Bardele; Brandy F. Henry</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.02.005</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.005" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A hybrid mixed methods design for understanding decision making, social structure, and network dynamics of life course transitions</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.02.005</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-3cd98fdfadcac4c5">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Mapping the relational ecology of multi-organizational coalitions and collaboratives: Considerations in the conceptualization and design of social network analysis studies</h3>
+<p>Krista A. Haapanen; Megan S. Patterson; Brian D. Christens</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.005</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.005" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mapping the relational ecology of multi-organizational coalitions and collaboratives: Considerations in the conceptualization and design of social network analysis studies</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.005</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.005" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-5d9929f0d64e63cc">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Micro–macro analysis of network change</h3>
+<p>Peng Huang</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.009</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.009" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.009" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Micro–macro analysis of network change</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.009</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.009" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-03474c17a7b04dd4">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Understanding the formation of interdisciplinary collaboration networks with an ERGM approach</h3>
+<p>Jinqing Yang; Xingyu Luo; Siyu Yao; Yuhan Wei</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.014</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.014" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.014" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Understanding the formation of interdisciplinary collaboration networks with an ERGM approach</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.014</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.014" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-c32e09f9e6376ba4">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Introduction to the Network Scale-up Method</h3>
+<p>Christopher McCarty; H. Russell Bernard</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.003</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.003" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Introduction to the Network Scale-up Method</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.003</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-9123807c8859830d">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Embedding-based synthetic control for causal inference in dynamic networks</h3>
+<p>Eunsung Yoon; Zhuofan Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.008</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.008" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.008" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Embedding-based synthetic control for causal inference in dynamic networks</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.008</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.008" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-9968a1bf766c5ed2">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>The influence of social network on consumers’ negative reactions toward corporate social advocacy: An egocentric network analysis</h3>
+<p>Xueying Zhang; Ting Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2025.12.008</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2025.12.008" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2025.12.008" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The influence of social network on consumers’ negative reactions toward corporate social advocacy: An egocentric network analysis</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2025.12.008</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2025.12.008" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-f4e3bc5d749ec4be">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Investigating the impacts of missing data mechanims and treatments with latent space models</h3>
+<p>Tracy M. Sweet; Xin Qiao; Ashani Jayasekera; Yishan Ding</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.01.002</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.002" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Investigating the impacts of missing data mechanims and treatments with latent space models</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.01.002</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.01.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-397af3a747183512">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Closing the loop: Design, implementation, and evaluation of a regular-feedback network intervention for social connectedness and mental health</h3>
+<p>Mohammad Khalilian; Anthony R. Bardo; Claire M. Reardon; Amy Kostelic; Susie Thiel; Robert W. Krause</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.02.002</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.002" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Closing the loop: Design, implementation, and evaluation of a regular-feedback network intervention for social connectedness and mental health</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.02.002</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.02.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-4e90b893fdb5545a">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Multi-layer network analysis of deliberation in an online discussion platform: The case of Reddit</h3>
+<p>Tianshu Gao; Mengbin Ye; Robert Ackland</p>
+<dl>
+<div><dt>卷期</dt><dd>V88 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.09.002</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.002" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multi-layer network analysis of deliberation in an online discussion platform: The case of Reddit</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.09.002</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.09.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-54d074236cc1e2dd">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Estimating peer influence in multilayer networks</h3>
+<p>Weihua An; Pablo Estrada; Juan Estrada; David Jacho-Chavez</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.03.003</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.003" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Estimating peer influence in multilayer networks</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.03.003</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.003" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-9989be5d9d72c6fe">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Ownership networks, financing and firm growth</h3>
+<p>Robert Petrunia; Linh Phan; Leonardo Sánchez-Aragón</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.04.007</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.007" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.007" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Ownership networks, financing and firm growth</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.04.007</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.04.007" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-81ca6121496c1b61">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>Making the peers’ subjective well-being visible impairs cooperator-centered experimental social networks</h3>
+<p>Akihiro Nishi; Hiroyasu Ando; Meaghan Woody; Kamal Nayan Reddy Challa</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.03.002</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.002" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Making the peers’ subjective well-being visible impairs cooperator-centered experimental social networks</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.03.002</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.002" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="article-doi-5f1e135876308bd8">
+<p class="kicker">Social Networks · ONLINE_FIRST_CROSSREF_DISCOVERY</p>
+<h3>What accompanies companionship? Reassessing personal networks and loneliness among young and older adults</h3>
+<p>Markus H. Schafer; James S. Malo; Brandon M. Brown; Meagan L. McGourty</p>
+<dl>
+<div><dt>卷期</dt><dd>V86 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.socnet.2026.03.001</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-10-19 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.001" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-10-19 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>What accompanies companionship? Reassessing personal networks and loneliness among young and older adults</strong></p><p class="abstract-meta">期刊：Social Networks · DOI：10.1016/j.socnet.2026.03.001</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.socnet.2026.03.001" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="errata" aria-labelledby="errata-h"><h2 id="errata-h">勘误与撤稿</h2>
+<p>已核查，0 项：本批 3 刊（Computers, Environment and Urban Systems、中国卫生统计、Social Networks）已取得的官方目录与发现源列表中未发现撤稿、勘误或更正声明条目。</p><p>降级期刊 Computers, Environment and Urban Systems、Social Networks 官方目录不可达，相关勘误/撤稿无法本轮核验，已登记为待重试。</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="topics" aria-labelledby="topics-h"><h2 id="topics-h">主题与阅读路线</h2><ul><li>Computers, Environment and Urban Systems 年度连续出版卷 2026-V131 未关闭，仅登记，不进入正式期次阅读路线。</li><li>Social Networks 年度连续出版卷 2026-V88 未关闭，仅登记，不进入正式期次阅读路线。</li><li>Computers, Environment and Urban Systems 本轮因官方目录不可达降级，暂无新正式期次阅读路线。</li><li>Social Networks 本轮因官方目录不可达降级，暂无新正式期次阅读路线。</li><li>Computers, Environment and Urban Systems：44 条网络首发/在年登记，其中 0 条附官方摘要抽屉，可按摘要筛选后再进入官方论文页面。</li><li>Social Networks：40 条网络首发/在年登记，其中 0 条附官方摘要抽屉，可按摘要筛选后再进入官方论文页面。</li><li>以上为元数据级分组，不构成对论文研究结论的判断。</li></ul><p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="health" aria-labelledby="health-h"><h2 id="health-h">数据源健康</h2><ul><li>Computers, Environment and Urban Systems（REG-019）：源健康 <code>OFFICIAL_403_SCIENCEDIRECT</code>；状态 DEGRADED；官方 TOC/AIP Playwright 两遍均 403，无法取得卷完整性证据，不 claim V128+（Crossref 见 V128,V129,V130,V131）。RSS(curl 200, 37 条两遍稳定)+Crossref(2026–2027, 127 条两遍稳定)作发现：登记 44 篇 NEW 网络优先/在年发现，已知抑制 24。保持基线 2026-V127；候选提示 2026-V131。。</li><li>Social Networks（REG-079）：源健康 <code>OFFICIAL_403_SCIENCEDIRECT</code>；状态 DEGRADED；官方 TOC/AIP Playwright 两遍均 403，无法确认卷关闭，不 claim V86+（Crossref 见 V86,V87,V88）。RSS(curl 200, 29 条两遍稳定)+Crossref 作发现：登记 40 篇 NEW，已知抑制 23。保持基线 2026-V85；候选提示 2026-V88。。</li><li>中国卫生统计（REG-049）：源健康 <code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code>；状态 COMPLETED；官方当期仍为 2026年 第43卷 第2期（刊出 2026-04-25）=注册基线；TOC 两遍 30 篇集合稳定，无新期。gate-issue 回报 NEW_ISSUE（账本无历史 issue_key），但等于基线且无 DOI 目录，按规则不 claim 基线、不重印。最新录用页为空；过刊/年卷页 403/中断（次要源失败 1），不影响当期完整性证据。。</li><li>有界对账：处理 4 个到期任务（上限 4），均保持 FAILED_RETRYABLE（见下列明细）。</li></ul><ul><li>job 54 · REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE：有界对账：本组未扫描该刊，本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 58 · REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE：有界对账：本组未扫描该刊，本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 59 · REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE：有界对账：本组未扫描该刊，本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li><li>job 65 · REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE：有界对账：本组未扫描该刊，本轮未获得新的官方 TOC 完整性证据；维持 FAILED_RETRYABLE。</li></ul>
+<p>失败或待修复：已核查，0 项。降级路径：Computers, Environment and Urban Systems：ScienceDirect 官方 TOC/AIP Playwright 持续 HTTP 403，无法取得卷完整性证据；Social Networks：ScienceDirect 官方 TOC/AIP Playwright 持续 HTTP 403，无法确认在编卷关闭</p>
+<p class="back"><a href="#top">返回页首</a></p></section>
+
+<section id="audit" aria-labelledby="audit-h"><h2 id="audit-h">证据与审计信息</h2>
+<details><summary>运行标识、证据层级与提交状态</summary>
+<ul>
+<li>Brief_ID：<code>DAILY-20261019</code> · Commit_ID：<code>DAILY-20261019-120635-ee065b7c</code> · Run_ID：<code>ee065b7c-2264-4bf5-969f-15db8e7e5655</code></li>
+<li>逻辑日期 2026-10-19 · 实际完成 2026-10-19 12:07 CST · Recovery_Batch_ID：<code>ee065b7c-2264-4bf5-969f-15db8e7e5655</code></li>
+<li>任务：ROUTINE-20261019-G19（ROUTINE · CURRENT · 执行顺序 1 · COMPLETED）；补扫 0、仍待补扫 0；下一计划扫描 2026-10-20 第 20 组。</li>
+<li>证据层级：官方期次目录 = 一级完整性证据；官方论文页 = 题名/作者/摘要证据；DOI = 身份证据；Crossref = 二级补全；RSS / API = 发现信号（不证明完整性）。</li>
+<li>多遍目录核验：Computers, Environment and Urban Systems OF 两遍 68/68 集合一致（ScienceDirect 官方 TOC/AIP 两遍 HTTP 403；RSS+Crossref 仅作发现，不 claim V128+）；Computers, Environment and Urban Systems official 两遍 0/0 集合一致（官方目录持续 403，无卷完整性证据）；中国卫生统计 2026-V43-I2 两遍 30/30 集合一致（等于注册基线 2026-V43-I2，不 claim 基线；TOC 30 篇两遍稳定）；中国卫生统计 OF 两遍 0/0 集合一致（最新录用页为空）；Social Networks OF 两遍 63/63 集合一致（ScienceDirect 官方 TOC/AIP 两遍 HTTP 403；RSS+Crossref 仅作发现，不 claim V86+）；Social Networks official 两遍 0/0 集合一致（官方目录持续 403，无法确认在编卷关闭）</li>
+<li>门控统计：issue gate NEW_ISSUE 0；article gate 新论文记录 0、网络首发新登记 84、去重抑制 47、增量复核 0、门控错误 0。</li>
+<li>摘要校验：所有摘要经 text_sanitize 清洗与参考文献块识别校验；本页 0 篇论文附可展开官方摘要，84 篇暂无摘要；每张卡片保留官方论文页面链接。</li>
+<li>摘要图 SHA-256：<code>f8b1983d4396c9bdcf09b195e9aedadf660231f88e636ef5154ad3da12a17f4e</code>；HTML SHA-256 见提交回执（避免自引用哈希）。</li>
+<li>PostgreSQL 严格健康：PASS（7/7 迁移一致，健康问题 0）。</li>
+</ul></details>
+<p class="back"><a href="#top">返回页首</a></p></section>
+</main>
+<footer><nav aria-label="日报导航"><a href="../../../../2026/10/index.html">返回 2026 年 10 月索引</a> · <a href="../../../../2026/10/2026-10-18_GIS-AI期刊每日轮检简报_第18组.html">上一篇：2026-10-18 第 18 组</a> · <a href="#top">返回页首</a></nav></footer>
+</body></html>
