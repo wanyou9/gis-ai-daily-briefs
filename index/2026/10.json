@@ -1,5 +1,5 @@
 {
-  "brief_count": 21,
+  "brief_count": 22,
   "briefs": [
     {
       "brief_id": "DAILY-20261001",
@@ -902,6 +902,49 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 21 组",
       "updated_at": "2026-10-21T12:14:57.998453+08:00"
+    },
+    {
+      "brief_id": "DAILY-20261022",
+      "commit_id": "DAILY-20261022-120352-ae6c87a4",
+      "completed_run_date": "2026-10-22",
+      "counts": {
+        "changed_journals": 2,
+        "complete_issues": 0,
+        "degraded_sources": 2,
+        "formal_articles": 0,
+        "formal_assignments": 0,
+        "journals": 3,
+        "online_first_updates": 208
+      },
+      "format": "HTML",
+      "group_id": 22,
+      "html_sha256": "bbe3ebe9aa32ded4ef0864bd34913ecfa8c9a9f9e954cf1100fffdeb2128e0ca",
+      "index_anchor": "brief-DAILY-20261022",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-10-22",
+      "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/10/2026-10-22_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC22%E7%BB%84.html",
+      "release_report": "releases/DAILY-20261022-120352-ae6c87a4/2026/10/2026-10-22_GIS-AI期刊每日轮检简报_第22组.html",
+      "release_summary_image": "releases/DAILY-20261022-120352-ae6c87a4/2026/10/assets/2026-10-22_GIS-AI期刊每日摘要_第22组.png",
+      "report": "2026/10/2026-10-22_GIS-AI期刊每日轮检简报_第22组.html",
+      "scheduled_date": "2026-10-22",
+      "status": "LOCAL_COMMITTED",
+      "summary": "第 22 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式论文（新论文记录 0 篇、网络首发正式归期 0 篇），登记网络首发/在编/未来期 208 条；2 种期刊因官方源受限降级完成，0 种扫描失败；未发现勘误，未发现撤稿。",
+      "summary_image": "2026/10/assets/2026-10-22_GIS-AI期刊每日摘要_第22组.png",
+      "summary_image_sha256": "4b848f9a8b9e6d73ecd4887fbc023f49df4ca58881c820cf85b28a044b995348",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20261022-G22",
+          "coverage_month": "2026-10",
+          "group": 22,
+          "scheduled_date": "2026-10-22",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20261022-G22",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 22 组",
+      "updated_at": "2026-10-22T12:07:37.332578+08:00"
     }
   ],
   "level": "MONTH",
@@ -970,6 +1013,9 @@
     ],
     "2026-10-21": [
       "ROUTINE-20261021-G21"
+    ],
+    "2026-10-22": [
+      "ROUTINE-20261022-G22"
     ]
   },
   "schema_version": "2.1",
@@ -1156,9 +1202,18 @@
       "logical_date": "2026-10-21",
       "report": "2026/10/2026-10-21_GIS-AI期刊每日轮检简报_第21组.html",
       "scheduled_date": "2026-10-21"
+    },
+    "ROUTINE-20261022-G22": {
+      "anchor": "brief-DAILY-20261022",
+      "brief_id": "DAILY-20261022",
+      "commit_id": "DAILY-20261022-120352-ae6c87a4",
+      "completed_run_date": "2026-10-22",
+      "logical_date": "2026-10-22",
+      "report": "2026/10/2026-10-22_GIS-AI期刊每日轮检简报_第22组.html",
+      "scheduled_date": "2026-10-22"
     }
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-10-21",
+  "updated_date": "2026-10-22",
   "year": 2026
 }
