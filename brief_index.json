@@ -1,49 +1,7 @@
 {
-  "brief_count": 76,
+  "brief_count": 77,
   "level": "ROOT",
   "recent_briefs": [
-    {
-      "brief_id": "DAILY-20260926",
-      "commit_id": "DAILY-20260926-115245-3c50cd11",
-      "completed_run_date": "2026-09-26",
-      "counts": {
-        "changed_journals": 3,
-        "complete_issues": 0,
-        "degraded_sources": 1,
-        "formal_articles": 0,
-        "formal_assignments": 0,
-        "journals": 3,
-        "online_first_updates": 2456
-      },
-      "format": "HTML",
-      "group_id": 26,
-      "html_sha256": "0e1074ec2d35609d291255b2456514c6037c203e4380cad71c8a31b182fc88e4",
-      "index_anchor": "brief-DAILY-20260926",
-      "kind": "DAILY_ROTATION",
-      "logical_date": "2026-09-26",
-      "release_report": "releases/DAILY-20260926-115245-3c50cd11/2026/09/2026-09-26_GIS-AI期刊每日轮检简报_第26组.html",
-      "release_summary_image": "releases/DAILY-20260926-115245-3c50cd11/2026/09/assets/2026-09-26_GIS-AI期刊每日摘要_第26组.png",
-      "report": "2026/09/2026-09-26_GIS-AI期刊每日轮检简报_第26组.html",
-      "scheduled_date": "2026-09-26",
-      "status": "COMPLETED_LOCAL_PENDING_PUBLICATION",
-      "summary": "第 26 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式期次论文、0 篇既有网络优先记录正式归期，以及 2456 条新的网络优先/在年卷/Advance Articles 发现。IEEE TGRS 官方确认 Volume 64-2026 连续卷开放中（2,128 篇）不 claim；IJIS 官方 Wiley Cloudflare 403，降级并以 Crossref 仅登记；JRSS Series A 官方仍为 V189-I3，I4 404，Advance Articles 仅登记。其中 1 种期刊因官方源阻断降级完成。",
-      "summary_image": "2026/09/assets/2026-09-26_GIS-AI期刊每日摘要_第26组.png",
-      "summary_image_sha256": "a84cf743d1f47851961b6a0ff70bc94b2245a36b1cec08db17aede89db89836f",
-      "task_type": "ROUTINE",
-      "tasks": [
-        {
-          "anchor": "task-ROUTINE-20260926-G26",
-          "coverage_month": "2026-09",
-          "group": 26,
-          "scheduled_date": "2026-09-26",
-          "status": "COMPLETED",
-          "task_id": "ROUTINE-20260926-G26",
-          "task_type": "ROUTINE"
-        }
-      ],
-      "title": "GIS-AI 期刊每日轮检简报 · 第 26 组",
-      "updated_at": "2026-09-26T12:14:04.636359+08:00"
-    },
     {
       "brief_id": "DAILY-20260927",
       "commit_id": "DAILY-20260927-115920-7ea59e78",
@@ -1328,6 +1286,49 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 26 组",
       "updated_at": "2026-10-26T12:07:40.413971+08:00"
+    },
+    {
+      "brief_id": "DAILY-20261027",
+      "commit_id": "DAILY-20261027-115800-a0363f55",
+      "completed_run_date": "2026-10-27",
+      "counts": {
+        "changed_journals": 3,
+        "complete_issues": 0,
+        "degraded_sources": 3,
+        "formal_articles": 0,
+        "formal_assignments": 0,
+        "journals": 3,
+        "online_first_updates": 540
+      },
+      "format": "HTML",
+      "group_id": 27,
+      "html_sha256": "a812bc1ca6eb5b1edb9926ec0c8c1f4e27ac158e0262507c5c0fe8548bf4d90b",
+      "index_anchor": "brief-DAILY-20261027",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-10-27",
+      "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/10/2026-10-27_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC27%E7%BB%84.html",
+      "release_report": "releases/DAILY-20261027-115800-a0363f55/2026/10/2026-10-27_GIS-AI期刊每日轮检简报_第27组.html",
+      "release_summary_image": "releases/DAILY-20261027-115800-a0363f55/2026/10/assets/2026-10-27_GIS-AI期刊每日摘要_第27组.png",
+      "report": "2026/10/2026-10-27_GIS-AI期刊每日轮检简报_第27组.html",
+      "scheduled_date": "2026-10-27",
+      "status": "LOCAL_COMMITTED",
+      "summary": "第 27 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式论文（新论文记录 0 篇、网络首发正式归期 0 篇），登记网络首发/在编/未来期 540 条；3 种期刊因官方源受限降级完成，0 种扫描失败；未发现勘误，未发现撤稿。",
+      "summary_image": "2026/10/assets/2026-10-27_GIS-AI期刊每日摘要_第27组.png",
+      "summary_image_sha256": "5eb5615139390f828e9ef9c6146db284e8774983bf3c48a712130995794cd118",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20261027-G27",
+          "coverage_month": "2026-10",
+          "group": 27,
+          "scheduled_date": "2026-10-27",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20261027-G27",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 27 组",
+      "updated_at": "2026-10-27T12:16:09.470855+08:00"
     }
   ],
   "retention": {
@@ -1346,10 +1347,10 @@
     "title": "GIS-AI 期刊每日轮检简报"
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-10-26",
+  "updated_date": "2026-10-27",
   "years": [
     {
-      "brief_count": 76,
+      "brief_count": 77,
       "index": "2026/index.html",
       "manifest": "index/2026.json",
       "month_count": 4,
