@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 1 组 · 2026-11-01</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/11/index.html">11 月</a> / 第 1 组
+</nav>
+<p class="meta">逻辑日期 2026-11-01 · 完成时间 2026-11-01 12:11 CST · 任务 ROUTINE-20261101-G01 · Commit <code>DAILY-20261101-120853-003bfc7b</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 1 组</h1>
+<p class="lede">第 1 组共检查 4 种正式期刊；确认 1 个新完整期次、21 篇正式期次论文、21 篇既有网络优先记录正式归期，以及 145 条网络优先/在年卷/在编/Crossref 发现。地球信息科学学报官方 TOC claim 2026-V28-I10（刊出日期 2026-10-25≤扫描日）；I7/I8/I9 已 BRIEFED；International Journal of Health Geographics 连续出版开放年卷 2026-V25-I1 不 claim，Online First/在年文章仅登记；Computational Intelligence 与 Statistics in Medicine（Wiley）官方 TOC/LOI/EV 均 Cloudflare/403，Crossref/RSS 仅登记、不 claim。其中 2 种期刊因官方源阻断降级完成。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>4</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>4</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>1</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>21</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>145</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">新完整期</span> <strong>地球信息科学学报</strong> — claim 2026-V28-I10；I7/I8/I9 已 BRIEFED；just_accepted 无新文。 <span class="evidence"><a href="https://www.dqxxkx.cn/CN/Y2026/V28/I10" rel="noopener noreferrer">证据</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 官方目录</small></span></li><li><span class="tag">开放年卷</span> <strong>International Journal of Health Geographics</strong> — 2026-V25-I1 连续出版开放年卷不 claim；OF/在年/Latest 仅登记。 <span class="evidence"><a href="https://link.springer.com/journal/12942/volumes-and-issues/25-1" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-11-01 12:11 CST · 官方目录</small></span></li><li><span class="tag">官方阻断</span> <strong>Computational Intelligence</strong> — Wiley Cloudflare/403；I5/I6 Crossref/RSS 仅登记，不 claim。 <span class="evidence"><a href="https://onlinelibrary.wiley.com/toc/14678640/current" rel="noopener noreferrer">证据</a><small>onlinelibrary.wiley.com · 2026-11-01 12:11 CST · 官方目录</small></span></li><li><span class="tag">官方阻断</span> <strong>Statistics in Medicine</strong> — Wiley Cloudflare/403；I23-24/I25-27 Crossref/RSS 仅登记，不 claim。 <span class="evidence"><a href="https://onlinelibrary.wiley.com/toc/10970258/current" rel="noopener noreferrer">证据</a><small>onlinelibrary.wiley.com · 2026-11-01 12:11 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-001<br><strong>地球信息科学学报</strong></td><td>2026-V28-I10</td><td>1</td><td>21</td><td>21</td><td>0</td><td><code>OFFICIAL_PAGE_OK</code></td><td>COMPLETED</td></tr><tr><td>REG-031<br><strong>International Journal of Health Geographics</strong></td><td>2025-V24-I1</td><td>0</td><td>0</td><td>0</td><td>70</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-061<br><strong>Computational Intelligence</strong></td><td>2026-V42-I4</td><td>0</td><td>0</td><td>0</td><td>19</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr><tr><td>REG-091<br><strong>Statistics in Medicine</strong></td><td>2026-V45-I20-22</td><td>0</td><td>0</td><td>0</td><td>56</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-11-01_GIS-AI期刊每日摘要_第1组.png" width="1600" height="900" alt="第1组每日摘要图：4刊，新完整期1，正式文21">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-001-2026-v28-i10"><h3>地球信息科学学报 · 2026-V28-I10</h3><p>官方 TOC 刊出日期 2026-10-25≤扫描日；21 DOI 完整，NEW_ISSUE claim；先前 I10 未来期登记今日正式归期。</p><p><span class="evidence"><a href="https://www.dqxxkx.cn/CN/Y2026/V28/I10" rel="noopener noreferrer">官方期次目录</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>21</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-001-2026v28i10-001">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>基于可解释图神经网络的横断山区山洪孕育分型与因素贡献评价</h3>
+<p>李怡帆; 刘昌军; 张晨笛; 姚舜禹; 李青</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260268</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260268" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260268" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于可解释图神经网络的横断山区山洪孕育分型与因素贡献评价</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260268 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 针对传统聚类方法难以兼顾地理单元空间拓扑关联，以及图神经网络（GNN）分型结果物理可解释性不足的问题，本文旨在构建一种融合“分型-解释”双重架构的山洪孕育背景识别框架，以量化揭示复杂山区山洪孕育背景的空间异质性与主导驱动机制。 【方法】 以横断山区为研究区，通过构建包含36个环境因子的指标体系，利用Dink-Net无监督图神经网络模型捕捉空间邻域特征并识别空间分型，引入DeepLIFT解释模型量化单因素贡献的强度与方向，并通过指标归并解析复合因素对不同产流模式分型的驱动差异。 【结果】 ① Dink-Net有效识别出12类具有空间连续性的二级分型，并可进一步提炼为超渗产流型、蓄满产流型、复合产流型及滞蓄缓释产流型4类一级分型； ② DeepLIFT解释结果表明，极端降雨、海拔、气温及土壤含水量是全局尺度上区分分型边界的关键因子，且同一因子在不同分型中的贡献方向具有显著的空间差异； ③ 复合因素量化解析证实了横断山区山洪孕育受极端降雨、水热本底及大梯度地形的共同约束。其中，超渗产流型由气象因素主导，蓄满产流型受前期水文条件控制，复合产流型表现为地形驱动下显著的壤中暴流过程与强水沙耦合特征，而滞蓄缓释产流型则受高寒气候与缓慢水文响应共同限制。 【结论】 本文构建的“分型-解释”框架实现了数据驱动分型与物理意义解析的有机融合，能够将复杂的黑箱模型输出转化为直观的孕育机制认识，为复杂山区山洪差异化防治与风险管控提供了科学依据。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260268" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-002">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>顾及样本均衡与权重优化的深度学习降水预测模型CWBiLSTMNets</h3>
+<p>王瑞峰; 伍云霞; 张海兰; 徐倩; 刘纪馨; 张瀚; 王知翰; 曾家琛</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260056</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260056" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260056" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>顾及样本均衡与权重优化的深度学习降水预测模型CWBiLSTMNets</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260056 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 针对现有降水预测模型在极端降水事件预报精度的不足，本研究提出了一种基于一维卷积神经网络与双向长短期记忆网络（1D-CNN-BiLSTM）的复合模型——CWBiLSTMNets，旨在提高日降水预测的准确性。 【方法】 本研究设计了一种复合损失函数，通过对极端降水样本赋予更高权重、对常规降水样本赋予较低权重的动态加权策略，实现训练样本的隐式均衡，增强模型对极端降水事件的预测敏感性。同时，引入了自适应权重分配模块，根据不同时期的气象特征动态调整输入要素权重，使模型能够适应不同气候区域的降水模式。实验采用了4个地区（上海、深圳、台北和天津）的气象数据，评估指标包括均方根误差（ RMSE ）、平均绝对误差（ MAE ）以及极端降水预报指标临界成功指数（ CSI ）和命中率（ POD ）。 【结果】 在与CNN-BiLSTM、CNN-LSTM、LSTM和Transformer模型的对比实验中，CWBiLSTMNets在极端降水预报指标上全面领先，平均 CSI 达到0.139 6，平均 POD 达到0.409 2，相较于CNN-BiLSTM、CNN-LSTM、LSTM和Transformer等对比模型，平均 CSI 提升110%~421%，平均 POD 提升424%~495%。各地区均有显著提升，其中模型在深圳市表现最优， CSI 达到0.296 3、 POD 达到0.571 4，较次优模型CNN-BiLSTM分别提升56.0%和152.6%。在整体误差指标上，平均 RMSE 为13.97 mm、 MAE 为7.25 mm，与对比模型处于相近水平。 【结论】 该模型在保持常规降水预测精度的同时，显著提升了对极端降水事件的捕捉能力，为极端降水预报提供了新的解决思路，更好地满足了防灾减灾的实际需求。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260056" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-003">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>顾及地理约束的山洪灾害风险对抗迁移学习模型GCDANN</h3>
+<p>王嘉伟; 王轲; 陈跃红; 李云强; 张晓祥; 马强</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260233</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260233" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260233" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>顾及地理约束的山洪灾害风险对抗迁移学习模型GCDANN</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260233 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 当前数据驱动型山洪灾害风险评估高度依赖大量高质量历史样本，导致其在数据稀缺的偏远山区精度有限。尽管对抗迁移学习为其提供了解决途径，但现有方法在特征对齐过程中往往忽视了山洪灾害的地理空间异质性，不仅易导致负迁移，也未对地理空间结构进行有效表征，制约了山洪灾害风险评估精度的提升。 【方法】 本文提出一种顾及地理约束的山洪灾害风险对抗迁移学习模型（GCDANN），通过引入地理约束增强跨域适应能力和评估精度。首先，基于山洪孕灾环境对源域进行划分，并构建相应的多域判别器。其次，通过计算目标域与源域样本间的地理相似性，作为权重对各域判别器进行动态加权，以强化同质环境对齐，同时抑制异质环境干扰。此外，引入图神经网络提取空间特征，并结合梯度反转层实现对抗训练。 【结果】 将该模型应用于横断山区的六大流域（怒江、金沙江、澜沧江、雅砻江、大渡河、岷江），构建6组跨域迁移场景，并与直接迁移模型、现有对抗迁移学习模型（DANN和MADA）以及监督学习模型进行对比分析。结果表明，GCDANN在所有跨域迁移场景中均表现出最优的迁移效果，其精度逼近监督学习型模型。以大渡河至岷江的迁移场景为例，相比于直接迁移模型、DANN和MADA，GCDANN的精度分别提升了8.5%、5.4%和4.7%，与监督学习模型的差距仅0.8%。此外，在空间分布上，GCDANN评估出的山洪高风险区与历史山洪灾害事件具有更高的一致性。 【结论】 GCDANN通过在对抗迁移学习中考虑地理约束，有效引导模型增强同质环境的特征对齐学习和地理空间结构的显式刻画，显著提升了模型在复杂地理异质场景下的跨域迁移能力，为缺资料地区的山洪灾害风险评估提供了可靠的技术和决策支持。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260233" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-004">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>高寒山区洪水敏感性评估及时空预测：以喀什噶尔—叶尔羌河流域为例</h3>
+<p>石多源; 刘英; 郑宏伟; 黄粤; 辛成龙; 李均力; 古丽·加帕尔; 包安明</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260083</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260083" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260083" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>高寒山区洪水敏感性评估及时空预测：以喀什噶尔—叶尔羌河流域为例</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260083 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 中国西昆仑山腹地的喀什噶尔—叶尔羌河流域是典型高寒山区流域，该区域洪水突发性强破坏性大。然而，因当地水文数据及反映区域环境特征对洪水致灾过程响应能力的洪水敏感性数据匮乏，洪水风险评估和预测挑战尤为突出。 现有模型难以在预测精度与模型结果的物理可解释性之间实现有效平衡。 【方法】 本研究提出一种新型的SHAP引导扩展长短期记忆网络（SHAP-xLSTM）框架。该框架整合了上下文特征构建模块（CFC）以捕捉局部空间信息，引入xLSTM模型以增强对时间序列的处理能力，并设计了SHAP引导的特征加权策略以实现输入特征的动态优化筛选。研究以喀什噶尔—叶尔羌河流域为研究区，将所提模型框架与CFC-LSTM、CFC-BiLSTM、CNN、CNN-LSTM及CFC-xLSTM等5种主流深度学习模型进行对比分析，并将叶尔羌河的沿岸的典型洪水易发区作为验证案例，全面评估SHAP-xLSTM模型的性能。 【结果】 ① 极高与高洪水敏感性区域主要集中在研究区中部和北部的山区平原过渡带以及主要河流沿岸地区，极低与低敏感性区域则多分布于远离河道且地势较高的区域。② 相较于性能次优的CFC-xLSTM基准模型，SHAP-xLSTM的洪水敏感性预测性能得到系统性提升： AUC 值提高了0.71%， F 1分数提升了6.33%， Kappa 系数提升了15.08%，同时 MSE 与 RMSE 分别降低了21.74%和11.68%，③ SHAP可解释性分析发现最高气温、距河流距离和降雨量是研究区洪水敏感性的主导驱动因子，定量支持了高寒山区“冰雪积累-融雪-洪水”这一典型灾害形成机制。基于2024年季节尺度的时空验证也显示，研究区洪水敏感性随气候变暖呈加剧趋势，与区域实际观测规律一致。 【结论】 本文提出的SHAP-xLSTM模型有效解决了复杂冰冻圈环境下洪水敏感性预测精度与机理可解释性难以兼顾的问题，对区域洪水风险预警与适应性管理具有重要的方法参考价值，且具有一定普适性和可推广性。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260083" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-005">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>基于耦合优化深度学习-非线性回归模型的极端枯水变化归因与枯水资源预估</h3>
+<p>马煜斐; 阮俞理; 刘翠善; 金君良; 王国庆; 贺瑞敏; 谭舒婵</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260303</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260303" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260303" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于耦合优化深度学习-非线性回归模型的极端枯水变化归因与枯水资源预估</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260303 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 长江中下游干流频繁发生极端枯水事件，对区域水安全及可持续发展构成持续威胁。为剖析其成因并预估未来枯水资源量，论文针对该区域极端枯水开展系统的归因分析与未来枯水资源预估。 【方法】 首先，依托径流深栅格数据，运用非参数核密度估计方法，识别1961—2018年长江中下游干流区域在75%、90%及95%保证率条件下的极端枯水典型年份。其次，引入优化深度学习方法对非线性回归模型进行改进，在有效排除无关因子干扰的同时，精确识别极端枯水空间分异驱动因子。最后，驱动耦合优化深度学习的非线性回归模型，预估未来极端枯水年的枯水资源量。 【结果】 1966年（75%保证率）、1978年（90%保证率）和2011年（95%保证率）为该区域的极端枯水典型年份。基于耦合优化深度学习的非线性回归模型对因子进行优选，得到降水量、气温、潜在蒸发、叶面积指数（LAI）及气象干旱指数（SPEI）构成影响极端枯水空间分异的核心驱动因子组合。优化后的非线性回归模型模拟的 NSE 提高了0.2，验证期纳什效率系数（ NSE ）为0.841。SSP1-2.6、SSP2-4.5、SSP5-8.5情景下，未来极端枯水年的平均枯水资源量依次为753.23、741.29、766.51 mm。 【结论】 研究揭示了变化环境下极端枯水对影响因子的响应机制及未来枯水资源量，可为区域水资源适应性管理提供科学支撑。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260303" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-006">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>基于可微分动态参数学习的SIMHYD径流模拟及其可解释性研究</h3>
+<p>刘俊; 陈纪俊; 熊俊楠; 叶冲冲; 程维明</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260394</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260394" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260394" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于可微分动态参数学习的SIMHYD径流模拟及其可解释性研究</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260394 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 径流模拟是流域水资源管理与洪水预报的重要基础，但传统概念水文模型采用固定参数，难以表征流域水文响应的时变特征。 【方法】 本研究以SIMHYD（Simplified Hydrology Model）概念降雨径流模型为物理骨架，基于PyTorch对其进行可微分重构，构建可微分动态参数学习框架（Dynamic Parameter Learning，DPL）。利用长短期记忆网络（Long Short-Term Memory，LSTM）学习水文气象驱动与模型参数之间的动态映射关系，实现模型参数随时间连续更新，并通过径流模拟误差反向传播优化参数学习网络，同时从整体径流过程和代表性洪水事件2个尺度评价不同参数学习方法的模拟性能。 【结果】 在昌江流域2007—2022年逐日径流模拟中，将DPL与协方差矩阵自适应进化策略（Covariance Matrix Adaptation Evolution Strategy，CMA-ES）自动率定方法和可微分静态参数学习方法（Static Parameter Learning，SPL）进行对比。结果表明，DPL取得最佳模拟效果，验证期纳什效率系数（Nash-Sutcliffe efficiency，NSE）和Kling-Gupta效率系数（KGE）分别为0.82和0.91，全时段分别达到0.88和0.94。在4场代表性洪水事件中，DPL平均绝对洪峰误差为5.24%，优于CMA-ES和SPL，对洪水过程和洪峰幅值均有较好的模拟能力，尤其在高流量条件下，对洪峰幅值和过程变化的刻画更加稳定。动态参数分析表明，模型参数具有明显的季节变化特征，能够反映产流与汇流过程随流域水文状态变化的动态调整。归因分析进一步表明，降水和土壤湿度是驱动动态参数变化的主要因素，其中降水贡献随前期时滞增加较快衰减，而土壤湿度的影响持续时间相对更长，体现流域水分记忆效应，说明动态参数既能够响应近期降雨事件，也保留了前期土壤水分条件对当前径流形成过程的影响。 【结论】 研究提出的基于SIMHYD模型的可微分动态参数学习框架，能够增强模型对变化水文条件的适应能力，并阐明动态参数变化与产汇流过程响应之间的联系，为解析概念模型内部水文过程提供了新的研究视角。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260394" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-007">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>融合多视觉参照的城市内涝涉水目标受淹状态识别方法</h3>
+<p>薛丰昌; 仲国阳; 成沿年; 汤建忠</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260367</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260367" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260367" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>融合多视觉参照的城市内涝涉水目标受淹状态识别方法</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260367 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 针对单一视觉参照物难以适应城市内涝场景中多目标、多尺度及复杂环境下涉水目标视觉受淹状态判别的问题，本文提出一种融合多视觉参照的城市内涝涉水目标视觉受淹状态识别模型。 【方法】 基于社交媒体图像和交通监控视频帧构建包含行人、机动车和非机动车的3 600张城市内涝图像数据集，依据水线与行人、机动车和非机动车类型特异性关键部位的相对位置定义S1—S4视觉受淹状态，形成12类“参照物类别-视觉受淹状态”联合标签。在YOLO11n基础上引入动态蛇形卷积（DySnakeConv）、尺度内注意力交互模块（Attention-based Intra-scale Feature Interaction）和DetectAux辅助检测分支，构建DAD-YOLO模型。 【结果】 DAD-YOLO的 mAP @50达到64.1%，较YOLO11n提高3.1%，计算量为7.2 G FLOPs。S3/S4高受淹状态目标召回率由61.2%提高至68.4%。 【结论】 融合多视觉参照的方法能够在统一检测框架下利用行人、机动车和非机动车等多类目标的受淹视觉证据，提高城市内涝图像中多类型涉水目标视觉受淹状态识别能力，可为城市内涝场景下的人工研判和辅助视觉感知提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260367" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-008">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>基于“自然-结构-行为”三维框架的城市洪涝韧性动态评估</h3>
+<p>施慧; 游珍; 王慧慧; 谢军; 梁开</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260223</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260223" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260223" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于“自然-结构-行为”三维框架的城市洪涝韧性动态评估</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260223 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 全球变暖与快速城镇化背景下，城市洪涝已演变为制约城市运行的结构性风险。既有洪涝韧性评估框架多侧重静态结构性指标，未充分考量时段异质性。 【方法】 本研究以深圳市为研究区，依托高德地图开放平台，通过定时自动化程序采集交通流速数据，构建了覆盖全市路网、时间跨度近2个月、时间分辨率为15 min的高频流速数据集，覆盖日间及晚间活动时段（07:00—23:00），并以此构建行为维度的核心数据基础。在此基础上，整合自然暴露（NEI）、结构支撑（SSI）与行为流速（BSI）三维指标体系，分别表征洪涝暴露风险、基础设施支撑能力与实时交通运行效能，以30 m规则栅格为统一空间分析单元，采用等权先验与CRITIC校正相结合的组合赋权法，构建城市洪涝韧性综合评估指数（UFRI），实现对工作日早高峰、平峰、晚高峰及周末4个典型时段的精细化韧性评估。 【结果】 各维度指数均呈现显著空间聚集性：自然暴露指数（NEI）与结构支撑指数（SSI）均表现为“西高东南低”的面状分异格局，行为流速指数（BSI）则呈现“外围优于核心”的空间分异特征，三者叠加形成核心区脆弱性集聚、外围区韧性均衡的复合空间结构；时段动态层面，晚高峰时段综合韧性水平最低，其与平峰时段的UFRI负差值区面积占比达10.87%，高脆弱街道主要集中于产居混合区域。 【结论】 本研究方法适用于高密度城市中出行需求在不同时段存在显著差异、且具备高频交通流速数据的评估情境。所采用的商业地图API流速数据基于众包轨迹实时融合生成，具备高时间分辨率与高路网覆盖率，在主要商业地图服务覆盖的城市中均具有良好的程序化可获取性，为本方法的推广应用奠定了数据基础。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260223" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-009">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>基于可解释机器学习方法的自然红树林低空遥感种间分类研究</h3>
+<p>张一飞; 杨骥; 尹小玲; 柏敬文; 李勇; 洪佳怡; 邓丽明; 肖一博</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260117</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260117" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260117" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于可解释机器学习方法的自然红树林低空遥感种间分类研究</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260117 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 针对自然演替红树林树种混生、光谱特征趋同导致遥感精细分类困难且机理不明的问题，本研究建立一种适应复杂群落结构与不均衡样本的高精度、可解释机器学习分类方法，并明确红树林多光谱特征响应机理。 【方法】 通过面向对象影像分析（OBIA）提取光谱、纹理及植被指数特征，使用去相关与置换重要性相结合的策略进行特征优选；随后，引入包括极限梯度提升树（eXtreme Gradient Boosting，XGBoost）与局部级联集成（Local Cascade Ensemble，LCE）等多种机器学习模型，重点考察模型在样本不均衡与复杂特征下的综合表现；最终使用SHAP（SHapley Additive exPlanations）方法解释不同树种的敏感特征。 【结果】 在4种分类器对应的最佳特征配置下，LCE模型取得了0.917的总体精度（ OA ），与XGBoost（0.918）基本相当，高于SVM（0.900）和RF（0.914）；LCE的宏 F 1分数（Macro F 1）达到0.918，为4种模型最高，高于RF（0.915）、XGBoost（0.913）和SVM（0.901），表明其在类别不均衡条件下具有更均衡的类别识别能力。LCE使用由10个关键特征构成的特征组合时达到精度峰值，说明剔除冗余特征有助于改善模型表现。SHAP分析进一步显示，红海榄对水体指数（NDWI）存在强响应，推测与其生理构造与冠层下残留水体信号有关；幼龄桐花树在红光波段的高反射率可能与其生理发育阶段特性以及潜在的盐胁迫有关。 【结论】 本研究证实了LCE结合特征优选策略能够在保持较高总体精度的同时改善类别间识别的均衡性，适用于样本不均衡条件下复杂自然演替红树林的精细分类，可为红树林生态系统的精准监测与保护提供方法支撑。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260117" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-010">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>叙事地图设计的工程路径与应用实践</h3>
+<p>苏世亮; 周雨佳; 邵爱坦; 向娟; 亢孟军; 翁敏</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260369</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260369" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260369" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>叙事地图设计的工程路径与应用实践</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260369 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【背景】 叙事地图是多学科交汇的领域，无论理论视野如何宽广，它最终必须被设计出来，设计因而是理论与实践的铰合点。然而，正是在这一铰合点上，当前存在着不容忽视的断裂：学术界长期聚焦于制图理论与方法，不强调地图的产品属性与设计逻辑；产业界虽不乏优秀作品，但整体仍停留于数据罗列与表层可视化，实践经验也未能系统总结以反哺理论。这种双向隔阂使得理论与实践的互动远未充分展开。 【方法】 本文以理论演绎与经验归纳为基本方法，从叙事地图设计的本体特征与内在逻辑出发，提出具体的工程路径。在此基础上，以《中国大运河》叙事地图为实证对象，在真实项目进程中剖析各阶段的关键决策与迭代过程，以检验该路径的操作可行性。 【结果】 ① 构建了涵盖铭刻与界定、数据工程、原型架构、产品设计和社会介入五个阶段的叙事地图设计工程路径； ② 验证了该路径在《中国大运河》案例中的有效性与适应性，实现了文化遗产空间信息向可感知叙事空间的转化；③ 证明了该路径能够实现理论自觉与产品落地的统一，为叙事地图从个体创作走向系统性实践提供了经验支撑。 【结论】 本文所建立的工程路径有效弥合了理论与实践的断裂，为叙事地图设计提供了兼具操作性与灵活性的方法论工具。该路径在不削弱设计创造性的前提下，提升了设计过程的可控性与成果的可复制性。未来可进一步拓展其在不同类型叙事地图中的应用，并探索与数字交互技术、用户参与机制的深度结合。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260369" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-011">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>融合自适应注意力机制与阴影平衡模块的无人机影像侵蚀沟制图方法</h3>
+<p>李思进; 丁浒; 陈青松; 汤国安</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.250396</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.250396" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.250396" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>融合自适应注意力机制与阴影平衡模块的无人机影像侵蚀沟制图方法</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.250396 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 准确提取侵蚀沟对于揭示土壤侵蚀过程和土地退化机理具有重要意义。高分辨率影像（High Spatial Resolution, HSR）能够提供精细的地表特征信息，是进行地貌对象提取与制图的重要数据源。但是，由于地表特征复杂性，HSR影像存在较强的阴影效应和光谱混淆，给现有方法带来了显著挑战。 【方法】 针对以上问题，本研究提出了自适应注意力机制与阴影平衡模块，用于提升模型对特征空间位置信息的捕捉能力并改善阴影区与非阴影区结果不平衡的问题，并在此基础上构建了面向单景HSR光学影像的侵蚀沟自动制图网络GMNet （Gully Mapping Net）。GMNet在结构上融合了自适应注意力机制与阴影平衡模块，前者提升了模型对特征空间位置信息的捕捉能力，后者则改善了阴影区与非阴影区结果不平衡的问题。 【结果】 本研究在无人机获取的空间分辨率为1 m的影像上进行了实验。结果表明，GMNet在像元尺度和对象尺度评价指标上均表现优秀， F 1得分和交并比较传统方法分别提升约2.3%和22.7%，在准确率和召回率指标上也优于对照模型，展现出在不同地形和光照条件下的稳健性。在黄土高原植被覆盖与地表裸露的区域，以及不同阴影面积的条件下的实验表明， GMNet与参考数据的交并比达到0.92，表明其具有良好的适应性，但在人类活动区仍存在一定错分现象，需通过引入更多样化的训练数据来提升模型的泛化能力。同时，讨论了阴影平衡模块中不同权重对结果的影响，证明了此模块能够通过自主调整优化制图结果。 【结论】 GMNet在大尺度侵蚀沟制图方面具有显著潜力，并在水土流失监测与土地管理中具有广阔应用前景。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.250396" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-012">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>基于大语言模型的三维GIS场景交互框架设计</h3>
+<p>廖茁森; 谢可; 王涛; 钟淑娴; 李晓玉</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260341</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260341" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260341" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于大语言模型的三维GIS场景交互框架设计</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260341 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 三维GIS可以支撑对地理场景进行更加真实、丰富和精细化的建模，具备自然用户界面的三维GIS系统，有助于提升用户与地理场景交互的效率与体验。然而，三维GIS交互涵盖场景状态、对象属性、工具功能和参数约束等多层语义，而自然语言指令又具有表达灵活、语义隐含等特点，使二者之间的准确映射面临较大挑战。大语言模型的发展为复杂指令理解与操作映射提供了新的技术支撑。针对上述问题，本文提出一种面向三维GIS场景的自然语言操作映射框架。 【方法】 首先，在三维空间数据库的基础上构建了三维空间对象知识库。其次，基于数据库、知识库、场景实时状态和功能列表等构建了三维GIS交互三元组，用以表达场景状态、对象属性和工具参数等信息。进而，针对符号样式设计、视图控制、空间分析和参数化空间模拟4类典型三维GIS交互，依据三元组规范设计了结构化的语义描述。接着，针对自然语言向三维GIS交互操作的映射，基于智能体开发平台设计实现了自然语言解析与场景交互工作流。最后，为验证框架有效性，围绕上述4类典型交互构建220条自然语言测试指令，并从意图识别正确率、参数映射符合度、最终效果达成度3个维度进行评价。 【结果】 该框架在 4类典型三维GIS交互任务中取得了较好的操作映射效果。总体上，意图识别正确率为98.64%，参数映射符合度为86.59%，最终效果达成度为85.45%，验证了场景语义抽象与工作流相结合的技术路径在三维GIS自然语言操作映射中的可行性。 【结论】 该框架为三维GIS自然语言交互提供了可复用的语义组织、自然语言解析流程编排和实验评价方案，可为数字孪生、虚拟地理环境和三维空间决策支持系统的人机交互设计提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260341" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-013">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>多模态知识图谱与大语言模型协同的旅游推荐生成方法</h3>
+<p>蒋琪; 韩勇; 杨静远; 王金华; 要志鑫; 刘锦</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260177</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260177" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260177" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>多模态知识图谱与大语言模型协同的旅游推荐生成方法</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260177 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 针对大语言模型（Large Language Models，LLMs）在旅游推荐中存在事实幻觉、复杂约束响应不足，以及现有检索增强生成方法（Retrieval-Augmented Generation，RAG）存在证据碎片化和语义误匹配等问题，提出一种多模态知识图谱与大语言模型协同的旅游推荐生成方法TMKG-LLM。 【方法】 首先，该方法利用提示工程从旅游文本与景点图像中抽取结构化知识，构建以景点为核心的多模态知识图谱，实现异构旅游信息的统一语义表示；其次，引入超图证据组织机制，将景点及其多维属性封装为高阶语义证据单元，并结合拓扑先验筛选与多维评分策略，实现复杂用户意图下的精准证据检索与聚合；最后，将结构化证据作为事实约束注入LLM，生成具有事实一致性和可解释性的旅游推荐结果。 【结果】 在北京市旅游推荐评测集上的实验结果表明，相比最佳基线模型，TMKG-LLM在Context Precision、Context Recall、Faithfulness和Answer Relevance指标上分别提升10.1%、8.1%、9.5%和7.4%，验证了多模态知识图谱与LLM在知识表示、证据约束和推荐生成方面的协同优势。进一步的行程约束评测表明，TMKG-LLM在微观硬约束满足率和宏观硬约束满足率上分别达到81.2%和62.0%，展现了其在多条件旅游规划场景中的适用性。消融实验进一步证明，超图证据组织、拓扑先验筛选和多维评分机制能够协同提升检索与生成性能。 【结论】 TMKG-LLM通过融合多模态知识图谱、高阶证据建模与LLM推理能力，促进旅游推荐从碎片化信息检索向结构化知识驱动生成转变，为复杂旅游需求下可信、可追溯和可解释的智能推荐提供了一种有效技术路径。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260177" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-014">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>矢量地理数据同名实体匹配方法研究进展与展望</h3>
+<p>徐璨; 钱海忠; 巩现勇; 刘呈熠; 熊顺</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260376</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260376" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260376" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>矢量地理数据同名实体匹配方法研究进展与展望</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260376 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【意义】 同名实体指多源地理空间数据中反映现实世界同一地物或地物集的空间实体，通常以对象化形式表达，最为典型的形式就是矢量地理数据。因采集目的、测量误差、比例尺、坐标基准等不同，这些矢量数据集中的同名实体在几何形态、属性描述等方面存在显著差异，给多源、多尺度数据的集成、融合与更新带来极大技术挑战。矢量地理数据同名实体匹配则通过分析空间同名实体的多维特征，并对其进行相似性度量，进而识别出异源数据集中对应的实体，实现精准关联和匹配，是多源数据融合与更新、变化检测与监测等研究的核心支撑技术。 【分析】 本文系统梳理了矢量地理数据同名实体匹配方法的国内外研究进展。首先，从几何特征、拓扑关系结构与语义表达增强3个方面总结空间和语义特征表达的常见方法，分析不同特征在候选匹配生成、相似性度量和结构一致性约束中的作用；然后，归纳多特征融合、全局优化与一致性匹配方法的建模机制，归纳其在复杂对应关系判别中的作用及适用场景；最后，分析基于传统监督学习、深度表示学习、图神经网络和预训练语言模型等智能学习驱动的匹配方法的研究进展，从模型机制、特征输入和适用对象等方面比较分析不同模型的特点，总结其在不同匹配场景中的适用性与局限性。 【目的】 本文旨在通过分析不同类型匹配方法的技术特点与适用场景，并对未来矢量地理数据同名实体匹配技术发展进行展望，以期为国内外相关研究提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260376" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-015">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>基于车辆轨迹数据的OSM立交桥识别与道路错误检测方法</h3>
+<p>李雅丽; 黄桂娥; 张彩丽; 于樱基; 向隆刚</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260277</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260277" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260277" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于车辆轨迹数据的OSM立交桥识别与道路错误检测方法</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260277 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 立交桥是城市路网中实现交通流立体转换的关键枢纽，其数字化表示的准确性对车辆导航的可靠性至关重要。开放街道地图（OSM）作为广泛使用的众源地理数据源，虽具有全球覆盖与低成本的优势，但其在立交桥等复杂路段普遍存在的道路缺失、几何错误及方向错误等拓扑问题，严重制约了其在精准导航中的应用。 【方法】 本文提出一种融合众源轨迹数据聚类筛选与门控双向循环神经网络的OSM立交桥识别与道路错误自动检测方法。首先，通过DBSCAN聚类与滑动窗口联合识别立交桥区域，其中利用轨迹方向熵和交叉节点轨迹密度等多维特征进行精细筛选，以区分立体交叉与平面交叉口；其次，采用允许路径中断的改进隐马尔可夫模型进行部分地图匹配，通过动态回溯优化机制有效应对OSM固有错误（如道路断裂、缺失）对匹配过程的干扰，并将未匹配点作为后续道路缺失检测的关键线索；然后，从局部上下文（轨迹距离、方向、候选集空值、最大转移概率等6种特征）和全局上下文（最佳发射概率、最佳转移概率、最佳方向相似度、链式连接等5种特征）两个维度协同构建11种基础特征，经编码扩展为21维标准化向量；进而采用基于道路表征的主成分分析方法，依据道路语义对核心拓扑特征赋予更高权重，依据特征值≥1且累计方差贡献率≥90%的双重准则保留前12个主成分，在降维的同时有效抑制GPS随机噪声，优化模型训练效率。最后，设计了一种引入双向独立门控机制的双向循环神经网络，该门控模块以单点预测熵作为兴趣点判别信号，动态强化与拓扑错误相关的隐藏特征表达，并结合类别敏感加权损失与特征差异正则项，缓解错误样本类别不均衡及易混淆难题，通过多阶段协同处理流程，实现对道路缺失、拐角缺失、方向性错误及几何错误4类拓扑问题的精准识别与分类。 【结果】 实验采用北京市主城区140余万条众源轨迹及OSM路网数据，结果表明，本方法在立交桥道路错误检测中的准确率达到97.7%、召回率96.3%、 F 1值97.4%，显著优于Logistic Regression（ F 1=65.9%）、CRF（78.5%）、RNN（92.3%）、GNN（89.3%）和Transformer（91.8%）等对比方法。消融实验验证了改进HMM匹配相比标准HMM使 F 1提升2.7%，门控单元在BiRNN基础上进一步将 F 1提升0.7%，且对最稀少、最易混淆的道路几何错误类别的召回率提升最为明显。 【结论】 该方法为提升OSM复杂立交区域的可导航性提供了有效技术途径，证明了物理规则驱动的先验约束（地图匹配、道路语义加权）与数据驱动的深度学习模型深度融合的模块化框架，在错误类别不均衡和轨迹强噪声条件下具有显著优势，可支撑城市复杂路网数据的低成本、高效率质量优化。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260277" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-016">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>基于DEM的黄土沟谷横剖面形态空间差异性研究</h3>
+<p>王一凡; 熊礼阳; 汤国安</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260139</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260139" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260139" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于DEM的黄土沟谷横剖面形态空间差异性研究</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260139 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 黄土沟谷横剖面形态是理解黄土地貌发育过程与机理的核心外在表现，其沟坡倾斜程度、宽度、横剖面面积等特征直接反映了侵蚀强度、发育阶段及区域差异性。然而，目前对黄土高原沟谷横剖面形态的空间差异性及其随沟谷等级变化的分布规律仍缺乏系统认识。 【方法】 本研究基于不同分辨率DEM数据，依据沟谷网络等级特征及其横剖面采样点流向的法向量采样策略，提出了沟谷宽度与等级自适应的自动化方法，提取了17 000余条黄土高原典型区域的不同Strahler等级沟谷横剖面，在此基础上，计算沟壁倾斜程度、沟谷总宽度、横剖面面积、总侵蚀面积及被侵蚀部分均深等指标，分析其相关关系、区域差异、等级变化特征及分辨率影响。 【结果】 ① 黄土高原沟谷形态存在明显的南北空间差异：沟坡倾斜程度由南向北逐渐平缓；沟谷横剖面被侵蚀的总面积和沟谷横剖面面积在中北部部分区域偏大，随沟谷等级升高总体增加但高等级处出现波动；沟谷总宽度在中部地区较宽，随等级扩大；沟谷横剖面被侵蚀部分均深在北部最高，随等级增加呈下降趋势，反映下游纵向侵蚀加剧。② 沟坡倾斜程度与沟谷总宽度呈显著负相关，与深度指标正相关，能有效反映沟谷的发育程度；宽度和面积指标同时映射着沟谷演化阶段。沟底地宽度指标与多数指标相关性弱，与整体侵蚀动力关联有限，可作为独立指标评估沟谷成熟度。③ 粗分辨率DEM显著低估沟壁倾斜程度（平均下降30%~50%， p &lt;0.001），不仅增加了小等级沟谷在提取上的难度，而且降低了提取出沟谷的整体变异性。 【结论】 黄土高原北部地区沟谷发育程度普遍高于南部地区。本研究揭示了黄土高原沟谷形态的空间分异规律及其尺度敏感性，为土壤侵蚀监测、地貌演化研究及区域水土保持提供了科学依据。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260139" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-017">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>基于DEM降尺度三角面连续追踪的地表多流向算法</h3>
+<p>李锦涛; 赵明伟</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260276</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260276" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260276" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于DEM降尺度三角面连续追踪的地表多流向算法</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260276 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 开源DEM数据是地表汇流分析的重要基础，但其分辨率通常较低，难以表达栅格内部地形差异。现有流向算法多基于中心栅格及邻域高程关系确定流向或分流比例，对亚栅格尺度地形控制作用考虑不足。因此，如何引入栅格内部地形信息以提高流向分配精度，是开源DEM水文分析中的关键问题。 【方法】 针对这一问题，本文提出一种基于DEM降尺度三角面连续追踪的地表多流向算法。该方法以原始DEM的栅格中心点为高程控制点构建新格网，并通过三角剖分和局部平面方程获得原始栅格内部的降尺度地形表达；随后以降尺度栅格为起点追踪并统计流向分配比例，突破了传统算法仅依赖栅格间高程关系的局限，有效将亚栅格尺度地形信息融入流向分配过程。 【结果】 为验证方法的有效性，本文基于理论数学曲面和安徽省凤阳县实际样区对方法进行验证，其中人工DEM由凸心坡、凹心坡和鞍形坡数学曲面构建，实际样区采用30 m分辨率ASTER GDEM V3数据，并与D8、MFD-md和D-inf方法进行比较。人工DEM实验表明，本文方法在不同地形条件下整体表现稳定，尤其在包含汇聚、发散和流向转换特征的鞍形坡中误差控制效果较好；低起伏条件下，本文方法在5、10和20 m分辨率下的鞍形坡 RMSE 分别为59.2、32.2和20.7 m，较同条件下表现最好的对比方法MFD-md分别降低约66.4%、78.4%和83.8%。实际样区实验表明，本文方法提取的河道能够较好对应沟谷、坡脚和低洼汇流区域，其低洼区覆盖率、河道—低洼区一致性和综合评价指标分别为0.186、0.725和0.296，综合评价指标较D8和D-inf分别提高约7.6%和1.7%，河道面积较MFD-md减少约15.2%。研究表明，本文方法能够在控制河道范围扩张的同时保持较好的低洼区覆盖能力，适用于需要兼顾河道空间集中性和低洼汇流区覆盖能力的复杂自然地形场景。 【结论】 相较于已有其他方法，三角面连续追踪法综合效果更好，特别是对于开源低分辨率DEM，优势更为明显。因此可以说明：本文方法够将原始栅格内部地形差异对水流去向的影响引入流向分配过程，在一定程度上弥补开源低分辨率DEM难以表达栅格内部亚栅格尺度地形差异的不足，并为该类DEM条件下的汇流累积、SCA计算和河道提取等DEM水文分析提供新的方法思路。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260276" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-018">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>人工智能驱动的耕地遥感监测评估进展与展望</h3>
+<p>葛明明; 孙立坚; 李盼盼; 嵇灵; 刘纪平; 郭庆胜; 江浩; 李宝; 孔浩竹; 廖鑫</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260330</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260330" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260330" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>人工智能驱动的耕地遥感监测评估进展与展望</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260330 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【意义】 耕地作为保障国家粮食安全与农业可持续发展的核心资源，其动态监测与综合评估已成为自然资源管理和农业遥感领域的重要研究方向。在人工智能技术快速迭代的驱动下，耕地监测评估正由传统的土地调查、实地勘测和统计分析，逐步迈向多源融合、端到端建模与智能决策支持的新阶段。在算力提升、海量数据积累以及人工智能与遥感技术深度耦合的背景下，本文总结归纳了“感知-建模-决策”的全链条技术框架，为推动耕地资源多尺度精准识别与动态管控提供了全面的前瞻视角与技术路径。 【进展】 本文基于文献计量分析方法，系统梳理了近四十年来人工智能驱动耕地遥感监测评估的发展历程，深入剖析了耕地面积提取、边界提取、地块分割与综合评估等关键任务的技术进展。分析表明，各任务的技术范式与研究热点总体呈现出由传统机器学习向深度学习，再向大模型与智能体协同演进的趋势，充分展现了人工智能在支撑耕地保护、精细化管理和空间治理向更高效、智能与可持续方向转型中的巨大潜力。 【展望】 尽管研究热度日益提升，人工智能在耕地资源管理中的规模化应用仍面临高质量标注样本匮乏、模型物理可解释性差、复杂场景跨区域泛化性能薄弱以及新兴技术范式与传统业务体系融合困难等现实瓶颈。为此，未来研究亟待构建基于生成式人工智能与多模态大模型的样本增强框架，以突破小样本场景下的算法泛化困境；推进物理知识与数据联合驱动建模，提升监测精度与物理可解释性；深度融合智能体策略与时空数字孪生技术，构建涵盖数量、质量、生态等多维指标的耕地综合评估体系；进一步依托“人-机-物”融合的智能治理平台，最终形成集实时感知、科学评估与智能决策于一体的智慧监管体系，为构建更高效、更具韧性且可持续的耕地生产生态系统提供关键技术底座。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260330" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-019">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>基于局部网格压平的实景三维模型几何与纹理协同脱敏方法</h3>
+<p>王杰栋; 周倩雯; 张子时; 任娜; 朱长青</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260286</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260286" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260286" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于局部网格压平的实景三维模型几何与纹理协同脱敏方法</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260286 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【意义】实景三维模型纹理中可能包含敏感目标，影响数据在智慧城市建设中的安全共享与应用。现有脱敏方法大多忽略了三维模型中纹理与几何结构的高度耦合关系，导致敏感纹理消除后，其对应的空间几何轮廓仍然保留，存在结构信息泄露风险。 【方法】 本文提出一种基于局部网格压平的实景三维模型几何与纹理协同脱敏方法。首先，采用YOLOv11与LaMa分别完成敏感目标检测和纹理重生成；随后，基于重心坐标建立二维纹理区域至三维网格的映射关系，实现敏感几何区域的准确定位；最后，提取敏感区域外围的非敏感边界顶点拟合局部参考平面，将内部敏感顶点沿该平面法向投影更新，消除敏感目标的局部空间几何轮廓，并保持网格边界连续性。 【结果】 以3个不同区域的实景三维模型为实验对象，共包含687个敏感目标，本文方法敏感目标检测召回率分别为0.95、0.94和0.96，较主流方法平均提高0.1，表明敏感目标检出率显著上升；脱敏后，敏感区域纹理LPIPS分别较主流方法下降0.12、0.11和0.12，纹理重生成区域与三维场景保持良好的感知一致性，同时，表征几何特征残留量的Hausdorff距离由0.35、0.38和0.42 m降至0.012、0.018和0.015 m，表明算法有效消弱了敏感目标在空间结构层面的可识别性。 【结论】 综上，所提方法可在保持纹理视觉自然性和网格边界连续性的同时，协同降低敏感目标的纹理与空间几何可识别性，为实景三维模型的安全共享与合规应用提供技术支撑。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260286" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-020">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>面向遥感影像目标检测的频域多尺度特征高效编码与融合方法F-DETR</h3>
+<p>彭程里; 李嘉睿; 柳杨</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260193</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260193" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260193" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向遥感影像目标检测的频域多尺度特征高效编码与融合方法F-DETR</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260193 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 提取多尺度信息对于提升遥感影像目标检测模型能力具有重要意义。然而，主流模型大多采用复杂结构去编码与融合遥感影像中的多尺度信息，带来了巨大的计算负担。 【方法】 为此，本文从频域的角度出发，提出了一个名为F-DETR的模型来实现高效且精准的遥感影像目标检测，其包含2个高效结构分别用于遥感影像目标检测过程中的多尺度信息的编码与融合。具体而言： ① 本文在VMamba模型的基础上设计了一个名为频域视觉Mamba（Frequency-domain Vision Mamba，FVM）的多尺度信息编码骨干网络。该骨干网络可通过持续增强特征图中高频部分的方式解决主流模型需要额外增加大量计算量来感知小尺度目标的问题； ②本文设计了一个全新的名为频域融合模块（Frequency-domain Fusion Block，FFBlock）的结构来融合不同尺度特征图，该结构通过频段拆分处理的方式快速建立多尺度特征图间的多级关联，解决主流多尺度特征融合方法关联充分性与计算量难平衡的问题。 【结果】 相较于主流方法，本文方法运算效率最高，在2个典型遥感影像目标检测数据集上的结果表明，本文方法的所有检测指标均为最优，且关键指标 mAP 相较于YOLOv5-L、RT-DETR等多个代表性方法可分别提升0.7%~7.1%（DIOR数据集）与1.2%~8.3%（USOD数据集）。 【结论】 本文方法证明在频域视角提升模型精度与效率的可行性，为高时效遥感影像目标检测任务提供了新的解决思路。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260193" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-001-2026v28i10-021">
+<p class="kicker">地球信息科学学报 · FORMAL_ASSIGNMENT</p>
+<h3>融合语义分割与时序分析的高原河谷人工林地块精细提取及其种植年份反演</h3>
+<p>夏昌硕; 赵伟; 冉光泰; 谭剑波; 吴田军; 杨斌</p>
+<dl>
+<div><dt>卷期</dt><dd>V28 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.12082/dqxxkx.2026.260216</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260216" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.12082/dqxxkx.2026.260216" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>融合语义分割与时序分析的高原河谷人工林地块精细提取及其种植年份反演</strong></p><p class="abstract-meta">期刊：地球信息科学学报 · DOI：10.12082/dqxxkx.2026.260216 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">【目的】 在青藏高原雅鲁藏布江中游河谷地区，人工林广泛分布且承担防治水土流失与土地荒漠化等关键生态功能。然而，该区域人工林地块破碎且种植模式差异显著，导致传统基于像元的遥感监测难以同时兼顾空间边界精度与时间信息表达。 【方法】 针对上述问题，本文提出了一套融合语义分割、对象优化与时序分析的人工林监测技术方案。首先基于DeepLabV3模型对高分辨率遥感影像进行初步分割，并结合分水岭与水平集方法实现人工林地块的精细划分与边界优化；在此基础上，利用1988—2024年Landsat与Sentinel-2影像构建地块尺度的生长季长时间序列NDVI数据，并通过年度差分突变检测方法反演人工林种植年份，实现空间单元与时间属性的对应关联。 【结果】 人工林提取平均交并比（ mIoU ）达到88.72%（个别区域最高可达91.33%），总体精度（ OA ）达到90.12%，召回率 （Recall ）可达到90.05%；经实地样方调查结果验证，种植年份反演结果均方根误差为2.78年（约80%控制在±2年以内）；通过与传统基于像元的LandTrendr时序分析方法在典型区域对比发现，本研究能够克服LandTrendr方法因像元尺度显著性判断不准确导致漏检问题（漏检比例高于50%），获得面向地块尺度的100%完整时间信息表达。 【结论】 本文通过融合语义分割和时序分析实现了高原河谷区人工林空间信息与种植年份属性的协同表达，为区域人工林监测、生态工程评估及精细化管理提供了可靠的数据支撑与技术参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.dqxxkx.cn/CN/10.12082/dqxxkx.2026.260216" rel="noopener noreferrer">官方论文页面</a><small>www.dqxxkx.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在编登记</h2>
+<p>本批登记网络优先/在编/Latest Articles 发现 <strong>145</strong> 条（REG-031 V25/OF/Latest、REG-061 I5/I6 Crossref、REG-091 I23-24/I25-27 Crossref；Wiley 官方目录不可用）。上述条目不作为完整期次证据。</p><article class="paper" id="of-reg-031-001">
+<p class="kicker">International Journal of Health Geographics · ONLINE_FIRST</p>
+<h3>Evaluation of location tracking methods to understand human-wildlife contact and pathogen spillover risks</h3>
+<p>Rebecca N. Lim; Joseph Akoi Boré; Tom Tipton; Amaziasizamoria Jumail; Milena Salgado-Lynn; Stephanie Key; Chelsea Baker; Edgar Manrique; Sanaba Boumbaly; Zézé Onivogui; Koly Sovogui; Kpadè Zézé Zoumanigui; Guilé Dopavogui; Siba Koulemou; Léonce Zogbélémou; Guozheng Li; Lin Yan; Miles W. Carroll; Kimberly M. Fornace</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1186/s12942-026-00498-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00498-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1186/s12942-026-00498-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Evaluation of location tracking methods to understand human-wildlife contact and pathogen spillover risks</strong></p><p class="abstract-meta">期刊：International Journal of Health Geographics · DOI：10.1186/s12942-026-00498-y · 摘要来源：账本已存摘要</p><p class="abstract-body">Background Most emerging infectious diseases originate in wildlife populations. As demonstrated by recent epidemics and pandemics, pathogen spillover from zoonotic reservoirs can have devastating public health impacts. Contact between humans and wildlife reservoirs determines spillover risk, but these interactions remain poorly understood. Despite advancements in geolocation technology and its widespread integration into devices available to consumers and researchers, there are significant challenges to collecting fine-scale human movement data in remote areas to assess contact with wildlife. We aimed to evaluate available methods for collecting these data. We applied the findings to identify an optimal method for a case study on pathogen spillover from bats in rural communities of Macenta Prefecture, Republic of Guinea. Methods Among existing methods for collecting location data from humans, we identified two methods as candidates for our case study: (1) a mobile device with the GPSLogger application and (2) a custom-designed wristwatch with geolocation technology. The spatial accuracy, battery life, and user experience of these methods were assessed under field conditions. This preliminary testing was conducted in remote, forested regions of Macenta, Guinea and Malaysian Borneo, which are areas with repeated zoonotic spillover events. Results Overall, both methods enabled collection of fine-scale spatial data on human movement and proximity to wildlife habitats in remote, forested regions. From initial trials, the custom-designed wristwatch had greater accuracy, had longer battery life, and was reported by participants to be more comfortable to carry than the mobile devices. We demonstrated the utility of these methods for quantifying individual heterogeneities in space use and identifying areas and populations with high risk for human-wildlife contact. Conclusion This proof-of-concept study provides evidence of the value of custom-designed location tracking watches, through their application in epidemiologic research in rural Guinea. However, mobile devices may be more accessible and suitable in contexts with high mobile phone usage and service coverage. Further research is needed to integrate these movement data with ecological and demographic data to understand how environment and human behaviour shape the dynamics of disease emergence.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00498-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-031-002">
+<p class="kicker">International Journal of Health Geographics · ONLINE_FIRST</p>
+<h3>Identification of high notification clusters of congenital heart disease in Colombia (2016–2020): a spatial epidemiology and machine learning approach</h3>
+<p>Javier Castro-Monsalve; Juan David Gutiérrez; Andrés Felipe Rubio-Duarte; Claudia Carolina Colmenares-Mejía; Claudia Ximena Flórez-Rodríguez; Doris Cristina Quintero-Lesmes</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1186/s12942-026-00503-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00503-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1186/s12942-026-00503-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Identification of high notification clusters of congenital heart disease in Colombia (2016–2020): a spatial epidemiology and machine learning approach</strong></p><p class="abstract-meta">期刊：International Journal of Health Geographics · DOI：10.1186/s12942-026-00503-4</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00503-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-031-003">
+<p class="kicker">International Journal of Health Geographics · ONLINE_FIRST</p>
+<h3>Integrating explainable machine learning and multi-scale spatial modelling to reveal spatiotemporal dynamics and drivers of aerosol optical depth in a complex-terrain city: a case study of Chengdu Plain region, 2001–2024</h3>
+<p>Liuxing Xu; Ruicheng Xu; Wenfu Peng</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1186/s12942-026-00501-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00501-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1186/s12942-026-00501-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Integrating explainable machine learning and multi-scale spatial modelling to reveal spatiotemporal dynamics and drivers of aerosol optical depth in a complex-terrain city: a case study of Chengdu Plain region, 2001–2024</strong></p><p class="abstract-meta">期刊：International Journal of Health Geographics · DOI：10.1186/s12942-026-00501-6</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00501-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-031-004">
+<p class="kicker">International Journal of Health Geographics · ONLINE_FIRST</p>
+<h3>Openfootprint-HH-sampling: a reproducible building-based sampling framework for spatially explicit household surveys in data-scarce urban environments</h3>
+<p>Mansourou Cissé; Malicki Zorom; Batan Roméo Kadeba; Awa Pounyala Ouoba; Maïmouna Bologo-Traoré; Cécile Tannier; Sina Thiam; Harouna Karambiri; Stéphanie Horion</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1186/s12942-026-00494-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00494-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1186/s12942-026-00494-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Openfootprint-HH-sampling: a reproducible building-based sampling framework for spatially explicit household surveys in data-scarce urban environments</strong></p><p class="abstract-meta">期刊：International Journal of Health Geographics · DOI：10.1186/s12942-026-00494-2</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00494-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-031-005">
+<p class="kicker">International Journal of Health Geographics · ONLINE_FIRST</p>
+<h3>A GIS-based framework for standardized environmental characterization in One-Health surveillance: a case study of highly pathogenic avian influenza monitoring in Italian wetlands</h3>
+<p>Giacomo De Conti; Rodrigo Macario; Luca Martelli; Diletta Fornasiero; Paolo Mulatti; Valentina Panzarin; Matteo Mazzucato</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1186/s12942-026-00504-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00504-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1186/s12942-026-00504-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A GIS-based framework for standardized environmental characterization in One-Health surveillance: a case study of highly pathogenic avian influenza monitoring in Italian wetlands</strong></p><p class="abstract-meta">期刊：International Journal of Health Geographics · DOI：10.1186/s12942-026-00504-3</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00504-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-031-006">
+<p class="kicker">International Journal of Health Geographics · ONLINE_FIRST</p>
+<h3>Spatial-temporal clustering and high-risk area identification of dengue in Thailand: a 20-year national analysis using space-time scan statistics</h3>
+<p>Kittipong Sornlorm; Roshan Kumar Mahato; Sarayu Muntaphan; Kanit Hnuploy; Rajitra Nawawonganun</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1186/s12942-026-00505-2</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00505-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1186/s12942-026-00505-2" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Spatial-temporal clustering and high-risk area identification of dengue in Thailand: a 20-year national analysis using space-time scan statistics</strong></p><p class="abstract-meta">期刊：International Journal of Health Geographics · DOI：10.1186/s12942-026-00505-2 · 摘要来源：账本已存摘要</p><p class="abstract-body">Dengue remains a major public health challenge in Thailand, with substantial geographic variation. This study analyzed national dengue surveillance data (2005–2024; 1,640,368 cases) across five consecutive 4-year intervals to identify spatial clustering patterns, detect space-time clusters, and characterize the evolution of high-risk areas. Province-level pooled incidence rates were assessed using Global Moran’s I, Local Indicators of Spatial Association (LISA), and SaTScan space-time scan statistics with discrete Poisson models. Global Moran’s I showed significant positive spatial autocorrelation in four periods (I = 0.211–0.473, p &lt; 0.01) but not during 2017–2020 (I = 0.065, p = 0.190), indicating spatial fragmentation. LISA revealed a progressive decline in High-High cluster provinces from 11 to 2 and a geographic shift from Central-Eastern to Northern Thailand. SaTScan detected 13 statistically significant clusters; the most likely cluster occurred in Northern Thailand (2013–2016, relative risk = 2.33, p &lt; 0.001). The cluster with the highest cumulative burden encompassed the Central-Western region (2009–2016, 149,010 cases). Dengue exhibits dynamically evolving geographic patterns, with Northern Thailand emerging as the primary high-risk area requiring priority intervention. These findings support geographically stratified control strategies.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00505-2" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-031-007">
+<p class="kicker">International Journal of Health Geographics · ONLINE_FIRST</p>
+<h3>A GIS-based multi-objective optimization strategy for urban automated external defibrillator deployment</h3>
+<p>Jia Wang; Jingyi Zhou; Shaohua Wang; Min Zhang; Jie Shen; Tianhao Zhao; Chenxin Xiao</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1186/s12942-026-00502-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00502-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1186/s12942-026-00502-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A GIS-based multi-objective optimization strategy for urban automated external defibrillator deployment</strong></p><p class="abstract-meta">期刊：International Journal of Health Geographics · DOI：10.1186/s12942-026-00502-5 · 摘要来源：账本已存摘要</p><p class="abstract-body">Background Out-of-hospital cardiac arrest (OHCA) remains a critical urban health challenge due to persistently low survival rates and uneven access to automated external defibrillators (AEDs). Existing deployment strategies often rely on heuristic decisions, limiting their ability to address spatial disparities in emergency response. This study aims to develop a spatially informed, data-driven framework to optimize AED placement and improve urban emergency response capacity. Methods Using Qinhuai District in Nanjing as a case study, we applied Geodetector to identify the spatial determinants of OHCA risk. High-risk population density and its interaction with resident density emerged as dominant factors, informing the construction of a high-resolution AED Demand Index for candidate site selection. We then formulated a multi-objective optimization model to balance service coverage, perceived accessibility, and cost-effectiveness. The model was solved using an enhanced NSGA-II algorithm incorporating tabu search and 2-opt mutation. Results The optimized layouts demonstrated substantial improvements over existing AED configurations. The maximum service distance decreased by 55.3%, and overall satisfaction reached a near-optimal level of 0.997. The enhanced algorithm also achieved notable computational gains compared with standard approaches. Conclusions The proposed GIS-based optimization framework provides a scalable and evidence-based tool for improving AED deployment in dense urban environments. By integrating spatial risk detection with multi-objective optimization, this approach supports urban planners in reducing spatial inequities and strengthening emergency response systems.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00502-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-031-008">
+<p class="kicker">International Journal of Health Geographics · ONLINE_FIRST</p>
+<h3>Ecological context modifies estimated effects of residential greenspace on mental illness mortality: a case study of Washington State, USA</h3>
+<p>Insang Song; Hui Luan</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1186/s12942-026-00497-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00497-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1186/s12942-026-00497-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Ecological context modifies estimated effects of residential greenspace on mental illness mortality: a case study of Washington State, USA</strong></p><p class="abstract-meta">期刊：International Journal of Health Geographics · DOI：10.1186/s12942-026-00497-z</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00497-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-031-009">
+<p class="kicker">International Journal of Health Geographics · ONLINE_FIRST</p>
+<h3>Reducing demographic inequality in emergency medical service: two bi-objective spatial optimization approaches</h3>
+<p>Weicong Luo; Jing Yao; Xinxin Chen; Luyan Zhao; Zihan Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1186/s12942-026-00500-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00500-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1186/s12942-026-00500-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Reducing demographic inequality in emergency medical service: two bi-objective spatial optimization approaches</strong></p><p class="abstract-meta">期刊：International Journal of Health Geographics · DOI：10.1186/s12942-026-00500-7 · 摘要来源：账本已存摘要</p><p class="abstract-body">Background Population demographic structures have become increasingly complex worldwide, posing new challenges for planning Emergency Medical Services (EMS) in ways to improve equality. Existing geographical studies have mainly focused on EMS equality in geographic accessibility or coverage, while demographic equality has received less attention. This study develops spatial optimization models that incorporate demographic equality into facility location planning. Methods Two bi-objective spatial optimization models are developed to improve demographic equality, while maintaining efficiency provision of EMS. In detail, the two models have the same efficiency objective that is to maximize the service coverage ( Z 1 ). Then, the first model (M1) addresses coverage-based demographic equality by minimizing disparities in coverage rates among population groups ( Z 2 ). The second model (M2) focused on accessibility-based demographic equality by minimizing the maximum average travel time among demographic groups ( Z 3 ). The models were applied to Wuhan, China, using age groups as the demographic representation and historical emergency medical service records to estimate spatially varying age-specific risks. Results The empirical results showed that both models were effective in improving demographic equality, although clear trade-offs were observed between equality enhancement and service efficiency. For M1, the nine Pareto-optimal solutions indicated that coverage-based demographic inequality, measured by Z 2 , decreased from 7.64% to 0.61%. This improvement in demographic equality, however, required an efficiency loss of up to 3.94% of total coverage. For M2, improving accessibility for the worst-served demographic group by 1.4 min ( Z 3 ) required a remarkable trade-off. The equality-oriented solution requires a 3.98% of efficiency loss compared with the efficiency-oriented solution. Both models consistently identified southern Hongshan and northern Jiangxia as priority areas for new EMS stations. Conclusions The proposed framework provides a transferable approach for integrating population-group equality into healthcare planning and supports more equitable allocation of EMS resources.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00500-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-031-010">
+<p class="kicker">International Journal of Health Geographics · ONLINE_FIRST</p>
+<h3>Short-term recovery of outdoor exercise after the lifting of COVID-19 restrictions in Beijing: a GPS-based study of urban environmental differences</h3>
+<p>Cailin Qiu; Yijun Zhang; Ning Qiu; Jianquan Cheng; Tianjie Zhang; Luming Yang; Yawei Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1186/s12942-026-00495-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00495-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1186/s12942-026-00495-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Short-term recovery of outdoor exercise after the lifting of COVID-19 restrictions in Beijing: a GPS-based study of urban environmental differences</strong></p><p class="abstract-meta">期刊：International Journal of Health Geographics · DOI：10.1186/s12942-026-00495-1 · 摘要来源：账本已存摘要</p><p class="abstract-body">Background Large infection waves can disrupt health-related physical activity even when outdoor spaces remain accessible. However, little is known about how outdoor activity recovers across different urban environments immediately after public health restrictions are lifted. This study examined short-term changes in outdoor exercise in Beijing after the lifting of COVID-19 restrictions, with particular attention to temporal phases, spatial heterogeneity and differences among urban environmental settings. Methods We analysed 196,524 anonymised walking, running and cycling trajectories recorded by the Keep app from 13 December 2022 to 31 March 2023. Activity in January 2022 was used as a reference period. Daily trajectory counts were modelled as time series to identify recovery phases. Spatial clustering, hotspot statistics and trajectory-based counts were used to compare changes across urban green spaces, active transportation corridors and localised sports facilities, and between central and suburban areas. Results Outdoor exercise did not show a simple linear recovery. Four short-term phases were identified: initial stability, brief disruption, rapid rebound and later stabilisation. The main decline occurred after the infection peak, indicating a delayed behavioural response rather than an immediate reduction when restrictions were lifted. Recovery varied markedly by urban setting. After accounting for differences in spatial extent, urban green spaces showed the most stable activity intensity across phases. Active transportation corridors exhibited the largest relative increase during the rapid recovery phase, particularly in central urban areas, whereas localised sports facilities showed a later increase in activity intensity. These patterns describe differences in observed trajectory activity across exercise-space typologies rather than behavioural preferences of population groups. Spatial differences were also evident, central and suburban areas exhibited different recovery patterns in observed exercise trajectories, with variation in the timing and magnitude of activity changes. Conclusions Outdoor exercise recovery after the lifting of COVID-19 restrictions was phased, delayed and spatially uneven. Analysis of spatially normalized activity intensity and trajectory changes revealed differentiated recovery patterns across exercise-space typologies: urban green spaces showed the greatest stability, active transportation corridors showed the strongest increase during early recovery, and localised sports facilities showed higher activity intensity during later recovery. These findings highlight that different exercise-space typologies exhibited distinct recovery patterns after a major public health shock.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00495-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-031-011">
+<p class="kicker">International Journal of Health Geographics · ONLINE_FIRST</p>
+<h3>Exploring nonlinear associations between environmental and social media variables and active leisure travel</h3>
+<p>Xueying Huang; Jun Zhang; Jia Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1186/s12942-026-00496-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00496-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1186/s12942-026-00496-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Exploring nonlinear associations between environmental and social media variables and active leisure travel</strong></p><p class="abstract-meta">期刊：International Journal of Health Geographics · DOI：10.1186/s12942-026-00496-0</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00496-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-031-012">
+<p class="kicker">International Journal of Health Geographics · ONLINE_FIRST</p>
+<h3>Smoothing-based approaches for detecting age-specific spatial clusters in small-area mortality data: a simulation evaluation</h3>
+<p>Yin-Yee Leong; Chi-Hsiung Lien; Vivian Yi-Ju Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1186/s12942-026-00499-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00499-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1186/s12942-026-00499-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Smoothing-based approaches for detecting age-specific spatial clusters in small-area mortality data: a simulation evaluation</strong></p><p class="abstract-meta">期刊：International Journal of Health Geographics · DOI：10.1186/s12942-026-00499-x · 摘要来源：账本已存摘要</p><p class="abstract-body">Background With the increasing availability of high-resolution rate data such as age-specific mortality and disease incidence rates, it has become feasible to perform cluster detection stratified by age group. However, the accurate identification of spatial clusters in small populations remains challenging due to population sparsity and low event rates. To address this challenge, this study proposes a smoothing-based analytical framework to improve cluster detection performance in SaTScan under sparse and unstable conditions. Methods Three smoothing approaches, the Whittaker–Henderson (WH), Partial Standardized Mortality Ratio (PSMR), and Besag–York–Mollié (BYM2) methods, were evaluated through simulation studies across varying population sizes and age groups. Results The results indicate that all methods substantially improve the detection power of SaTScan compared to unsmoothed data, while WH achieves a better balance between statistical power and false detection rates. When applied to Taiwan’s 2021 female cancer mortality data, the WH method identified a significant hotspot among women aged 70 to 74 in southern Taiwan, primarily associated with elevated lung and liver cancer mortality. Conclusions The findings suggest that WH smoothing provides a practical and statistically reliable solution for stabilizing mortality estimates and identifying meaningful spatial clusters in small-population contexts. This framework offers valuable methodological and applied insights for spatial epidemiology and small-area health surveillance.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1186/s12942-026-00499-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>International Journal of Health Geographics 另有 58 条网络优先/在编/Latest Articles 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-061-001">
+<p class="kicker">Computational Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Sentiment Analysis Using Emotion‐Guided Polarized Capsule Dropout With Bidirectional Long Short‐Term Memory on User Review Data</h3>
+<p>Vallem Sushma Latha; Shanker Chandre; Erukala Sudarshan</p>
+<dl>
+<div><dt>卷期</dt><dd>V42 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1111/coin.70291</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70291" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70291" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Sentiment Analysis Using Emotion‐Guided Polarized Capsule Dropout With Bidirectional Long Short‐Term Memory on User Review Data</strong></p><p class="abstract-meta">期刊：Computational Intelligence · DOI：10.1111/coin.70291 · 摘要来源：账本已存摘要</p><p class="abstract-body">Sentiment Analysis (SA) is an essential task in Natural Language Processing (NLP) to discriminate emotions and opinions expressed in text. Though existing algorithms on sentiment analysis struggle to capture hierarchical semantic structure and contextual dependencies in text data. To address these limitations, this research paper developed Emotion‐Guided Polarized Capsule Dropout with Bidirectional Long Short‐Term Memory (EG‐PCD‐BiLSTM) for effective sentiment analysis. Emotion‐guided routing with a Capsule network is incorporated in BiLSTM to preserve semantic relationships and improve the feature representation of text data. The emotion‐guided routing improves capsule networks by including emotion scores from lexicons. It directed the emotionally rich tokens towards suitable sentiment capsules, enhancing subtle classification. The Polarized Capsule Dropout (PCD) selectively deactivates the low‐confidence capsules based on vector magnitude. This process preserves meaningful feature representation and enhances model generalization by filtering out the noisy features. Moreover, the Bi‐LSTM captures both past and future contextual features in sequential data. The EG‐PCD‐BiLSTM model obtains the highest accuracy of 97.94% on the Amazon review dataset and 99.03% on the IMDB dataset when compared to existing algorithms. The experimental outcomes show that EG‐PCD‐BiLSTM offers superior generalization ability and computational efficiency, making it robust for real‐world sentiment analysis.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/coin.70291" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-061-002">
+<p class="kicker">Computational Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Dual‐Path Higher‐Order Information Interaction With Time‐Frequency Attention and Multi‐Scale Feature Extraction Based Nested U‐Net for Speech Enhancement</h3>
+<p>Shaik AreefaBegam; Sunny Dayal Vanambathina</p>
+<dl>
+<div><dt>卷期</dt><dd>V42 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1111/coin.70289</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70289" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70289" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Dual‐Path Higher‐Order Information Interaction With Time‐Frequency Attention and Multi‐Scale Feature Extraction Based Nested U‐Net for Speech Enhancement</strong></p><p class="abstract-meta">期刊：Computational Intelligence · DOI：10.1111/coin.70289 · 摘要来源：账本已存摘要</p><p class="abstract-body">Speech enhancement plays a crucial role in enhancing the perceptual quality and intelligibility of speech signals that are degraded by noise. Conventional U‐Net‐based architectures effectively capture local spectral patterns but exhibit limited long‐range dependency modeling and may propagate residual noise through skip connections. Transformer‐based approaches enhance global context modeling but often incur high computational cost and insufficient preservation of fine‐grained spectral cues, limiting real‐time applicability. To address these limitations, this paper proposes a novel encoder–decoder speech enhancement framework that integrates Multi‐Scale Feature Extraction (MSFE), Dual‐Path Higher‐Order Information Interaction with Time‐Frequency Attention Module (DPH‐TFA), and Bottleneck‐Guided Feature Calibration (FC) strategy, with its hierarchical extension, Hybrid Cross‐Scale Feature Calibration (H‐CS‐FC). The MSFE blocks extract rich local patterns across multiple receptive fields, capturing both fine‐grained and global time‐frequency cues. While stacked DPH‐TFA blocks at the bottleneck model structured long‐range dependencies along time and frequency axes. The FC and H‐CS‐FC modules perform bottleneck‐ and cross‐scale‐guided feature recalibration to suppress noise leakage in skip pathways and enhance decoder reliability. Experimental results on Common Voice and LibriSpeech datasets demonstrate that the proposed DPH‐TFA‐MSFENet achieves superior perceptual evaluation of speech quality, short‐time objective intelligibility, and signal‐to‐distortion ratio performance, particularly under low‐SNR conditions, while maintaining computational efficiency.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/coin.70289" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-061-003">
+<p class="kicker">Computational Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Multimodal Deep Content‐Based Music Recommendation System Using MIDI and Lyrics</h3>
+<p>Naina Yadav; Anil Kumar Singh</p>
+<dl>
+<div><dt>卷期</dt><dd>V42 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1111/coin.70295</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70295" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70295" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Multimodal Deep Content‐Based Music Recommendation System Using MIDI and Lyrics</strong></p><p class="abstract-meta">期刊：Computational Intelligence · DOI：10.1111/coin.70295 · 摘要来源：账本已存摘要</p><p class="abstract-body">Nowadays, recommendation systems are used in various web applications, which include online music streaming services. Suggesting relevant music in a web application is an open research problem with numerous promising results reported. The most common approach for recommendation systems is learning user preferences, which are based on various modalities. There has been more focus on user modalities like rating information and online reviews to understand the user&#x27;s music preferences. The proposed model uses multimodal auxiliary song information (MIDI and lyrics) to develop the feature representations, improve user satisfaction with the generated recommendation, and overcome the recommendation system&#x27;s cold‐start problem. Our novel contribution to this work is our multimodal music recommendation system, which captures musical features using MIDI data and semantic features using lyrics in an attempt to provide music recommendations with different multimodal fusion techniques. We also present a comparative analysis of varying word embedding models for musical lyrics to analyze which model performed best for our multimodal music recommendation system. The proposed model is a hybrid two‐stage music recommendation model that adequately leverages multimodal item embedding representation to improve recommendation performance substantially.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/coin.70295" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-061-004">
+<p class="kicker">Computational Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>A Survey of Machine Learning and Deep Learning Techniques Over Advanced Robotics in Surgical Applications</h3>
+<p>S. S. P. M. Sharma B; Indrajeet Kumar</p>
+<dl>
+<div><dt>卷期</dt><dd>V42 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1111/coin.70292</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70292" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70292" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Survey of Machine Learning and Deep Learning Techniques Over Advanced Robotics in Surgical Applications</strong></p><p class="abstract-meta">期刊：Computational Intelligence · DOI：10.1111/coin.70292 · 摘要来源：账本已存摘要</p><p class="abstract-body">The innovative robotic surgical approach brings a modern solution to complex minimal procedures through precise execution of small instruments through limited opening sites. Through this technique, multiple advantages emerge, which reduce bleeding as well as shorten patients&#x27; medical stays and accelerate their healing time, mainly affecting bladder, prostate, heart, and digestive conditions. The da Vinci robotic system represents the first‐ever single‐site platform, which served as a foundation for multiple advanced robotic systems that followed. The article provides an exhaustive evaluation of how machine learning (ML), deep learning (DL), generative adversarial networks (GAN), and reinforcement learning (RL) influence robotic surgery. The research targets the analysis of learning technologies and how these technologies improve surgery precision, healthcare results, and clinical management decisions. Also, this study provides an application of robotics surgery in gynecology, oncology, cardiology, neurology, and urology. This review research analyzes the literature thoroughly to present ML and DL methodology implementations across the studied areas, paying attention to the problems of limited data availability, real‐time system adaptivity, and system interoperability challenges. The study adopts new ideas regarding robotic surgery and AI unification through actionable recommendations that enhance performance against data insufficiency and system integration issues. The paper presents detailed information about new trends together with predictions about ML and DL while providing essential knowledge to robotic surgery specialists and artificial intelligence (AI) scientists to advance robotic surgical assimilation with AI technology.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/coin.70292" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-061-005">
+<p class="kicker">Computational Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Gait Data Synthesis for Smartphone User Authentication</h3>
+<p>Jiwoo Choi; Sangil Choi; Taewon Kang</p>
+<dl>
+<div><dt>卷期</dt><dd>V42 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1111/coin.70290</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70290" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70290" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Gait Data Synthesis for Smartphone User Authentication</strong></p><p class="abstract-meta">期刊：Computational Intelligence · DOI：10.1111/coin.70290 · 摘要来源：账本已存摘要</p><p class="abstract-body">Gait, the distinctive and natural pattern of an individual&#x27;s walking behavior, has emerged as an effective biometric for user authentication. Its ability to operate without active user involvement, along with its resistance to replication, makes it particularly well‐suited for continuous smartphone authentication. However, real‐world deployment remains challenging due to diverse user activities and varying environmental conditions. Therefore, this study proposes a data synthesis approach to enhance the robustness and generalization of gait‐based authentication systems in real‐world environment. We introduce a Data Synthetic Model that combines a Variational Autoencoder (VAE) with a Bidirectional Long Short‐Term Memory (Bi‐LSTM) network. This architecture generates synthetic gait sequences that are temporally consistent, reflecting real‐world variability while maintaining essential gait dynamics. Evaluations on the ETRI Lifelog dataset demonstrate that the proposed method enhances performance of the smartphone authentication system, improving accuracy from 0.91 to 0.951 and reducing the Equal Error Rate (EER) from 0.101 to 0.040. These results highlight the potential of data synthesis for advancing real‐world gait authentication. While further improvements are needed for deployment in high‐security applications, this study provides a strong foundation for developing robust and scalable gait‐based biometric systems.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/coin.70290" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-061-006">
+<p class="kicker">Computational Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>EVESUM: Abstractive Multi‐Document Summarization Focused on Crucial Events</h3>
+<p>Peng Yang; Shunhang Ji; Bing Li; Yuankang Sun; Meng Yi</p>
+<dl>
+<div><dt>卷期</dt><dd>V42 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1111/coin.70294</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70294" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70294" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>EVESUM: Abstractive Multi‐Document Summarization Focused on Crucial Events</strong></p><p class="abstract-meta">期刊：Computational Intelligence · DOI：10.1111/coin.70294 · 摘要来源：账本已存摘要</p><p class="abstract-body">Events with their triggers and entity mentions are significant in multi‐document summarization, which provide assistance to the recognition of the vital content of plenty of documents and guarantee the logic of the text. Many existing methods pay attention to leveraging fine‐grained and noun‐centered units like entities to interact with different documents rather than verb‐centered units, where the state changes and salient semantic associations in documents are neglected, causing a lack of logic in summarization. To address these issues, we propose an innovative abstractive multi‐document summarization model focused on events comprised of dynamic triggers and static entities, referred to as Event‐focused Abstractive Multi‐document Summarization (EVESUM), to form high‐quality summaries by explicitly introducing event information from documents. Specifically, we first apply an elaborately designed event‐focused graph attention network to fuse information from events and documents from different encoders, which particularly considers the function of edges in the graph. Additionally, we construct a hierarchical attention mechanism in the decoder to incorporate crucial event messages into summaries, making the generated summaries more succinct, informative, and logical. Experimental results illustrate that compared with state‐of‐the‐art baselines, our model achieves remarkable improvements on the WikiSum and MultiNews datasets.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/coin.70294" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-061-007">
+<p class="kicker">Computational Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Deep Learning‐Based Classification of Diabetic Retinopathy and Macular Edema Diseases</h3>
+<p>Sashi Kanth Betha; J. Beatrice Seventline</p>
+<dl>
+<div><dt>卷期</dt><dd>V42 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1111/coin.70288</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70288" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70288" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Deep Learning‐Based Classification of Diabetic Retinopathy and Macular Edema Diseases</strong></p><p class="abstract-meta">期刊：Computational Intelligence · DOI：10.1111/coin.70288 · 摘要来源：账本已存摘要</p><p class="abstract-body">Diabetic retinopathy (DR) and diabetic macular edema (DME) are eye‐related diseases most commonly seen in persons with diabetes. Existing models did not achieve the desired level of accuracy or success in distinguishing DR and DME. Thus, by resolving this issue, the performance and accuracy of automated classification systems are significantly improved. Therefore, a transfer learning model is developed to simultaneously classify DR and DME grades in retinal images. Initially, the input retinal fundus images are collected from standard databases. These images are given to the proposed Transfer Learning‐based Adaptive Fused Convolutional Neural Networks (TL‐AFCNN). This model fusion is created by using a Residual Attention Network (RAN) with multidilated DenseNet techniques. In order to improve the effectiveness of simultaneous classification using TL‐ACNN, the weights from this network are fine‐tuned via the Fitness Oriented Lotus Effect Optimization Algorithm (FO‐LEA). From, the developed TL‐ACNN model, simultaneous grade classification outcomes of both DR and DME are attained. Therefore, the risk of vision loss is treated effectively by analyzing the grade‐classified outcomes from the proposed model. Finally, the simultaneous classification results attained by the suggested model are compared with existing models to verify its potential.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/coin.70288" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-061-008">
+<p class="kicker">Computational Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Parallel Dynamic Adaptive Transfer Function Based on Population Diversity to Solve High‐Dimensional Cancer Gene Expression Data Feature Selection Problem</h3>
+<p>Yu‐Cai Wang; Shi Li; Jie‐Sheng Wang; Hao‐Ming Song; Yu‐Wei Song; Yu‐Liang Qi; Yi‐Peng Shang‐Guan</p>
+<dl>
+<div><dt>卷期</dt><dd>V42 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1111/coin.70297</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70297" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70297" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Parallel Dynamic Adaptive Transfer Function Based on Population Diversity to Solve High‐Dimensional Cancer Gene Expression Data Feature Selection Problem</strong></p><p class="abstract-meta">期刊：Computational Intelligence · DOI：10.1111/coin.70297 · 摘要来源：账本已存摘要</p><p class="abstract-body">In cancer genomics research, feature selection (FS) of high‐dimensional gene expression data is of great significance to improve classification accuracy and reduce feature number. Aiming at the limitations of traditional transfer functions, such as nonadaptability and being prone to fall into local optimum when dealing with high‐dimensional data, a parallel dynamic adaptive transfer function based on population diversity is proposed. Firstly, a universal mirror symmetric inversion strategy is proposed based on five different types of transfer function (TF) families. Compared with the basic TFs, the proposed strategy considers more possibilities for particles in both positive and negative directions, improving the algorithm&#x27;s ability to escape local optimum. Then, time‐varying factors were taken into account, enabling adaptive adjustment of various TFs. Finally, considering the influence of algorithm population diversity, the population evolution degree (PED) was defined. A dynamic adaptive TF based on population diversity was proposed. Through PED, the TF was dynamically and adaptively adjusted to achieve better binary conversion, enhancing the exploitation and exploration capabilities of the algorithm. In the wrapper FS method, SHO was adopted as the optimizer. The proposed method enables the binary mapping of the algorithm to dynamically adaptively change during the iterative process. Eventually, it adjusts the TF mapping capability for the next iteration based on its own fitness value. In the experimental part, the performance of the proposed strategy was first tested and verified through nine UCI datasets. The results showed that ITV‐VrV1 could achieve better fitness, improve accuracy and effectively reduce the number of features. Then, ITV‐VrV1 was extended to the cancer gene expression datasets. By comparing it with other binary algorithms, it was found that ITV‐VrV1 achieved the lowest average fitness and the highest average classification accuracy on all datasets. According to the Friedman test and Wilcoxon test, it was proved that ITV‐VrV1 ranked first in terms of average fitness and average classification accuracy, ranked second in terms of average number of selected features and showed significant differences from other comparison methods. It can effectively solve the problem of FS for high‐dimensional cancer data.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/coin.70297" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-061-009">
+<p class="kicker">Computational Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Modeling the Cognitive Effects of Social Media Algorithms With Textual and Behavioral Data: A Deep Hybrid DistilBERT, BiLSTM, and CatBoost Analysis</h3>
+<p>Chao Hua Yan</p>
+<dl>
+<div><dt>卷期</dt><dd>V42 · I5</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1111/coin.70300</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70300" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70300" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Modeling the Cognitive Effects of Social Media Algorithms With Textual and Behavioral Data: A Deep Hybrid DistilBERT, BiLSTM, and CatBoost Analysis</strong></p><p class="abstract-meta">期刊：Computational Intelligence · DOI：10.1111/coin.70300 · 摘要来源：账本已存摘要</p><p class="abstract-body">The basic concept of the algorithmic ranking systems in the social media setting is to influence what people watch, read, and eventually think. Focusing on engagement, such algorithms unwillingly intensify selective exposure and modeling behavioral proxies of user attention and selective exposure, but the process by which content curation is converted into different attention has not been empirically studied. In this research, a hybrid DistilBERT‐BiLSTM‐CatBoost model is suggested to quantitatively examine the joint effect of semantic features and behavioral history on user attention and cognition in an algorithmic feed. The framework works at the slate level using the Microsoft news dataset (MIND) that includes impressions level exposure logs and rich textual metadata, but relies on three complementary processes: (1) DistilBERT encodes the semantic content of news titles and abstracts; (2) BiLSTM takes into consideration the sequential user preferences and short term behavioral dynamics; (3) CatBoost is a bias aware learning with the capability to rank semantic content by means of textual, sequential, and contextual covariates, such as position, popularity, rec Counterfactual evaluation techniques (propensity weighted) (IPS weighted NDCG) are used to identify the real relevance and exposure effects. The experimental findings indicate that the proposed model is more superior as compared to five states of the art baselines (XGBoost, LightGBM, Random Forest, Decision Tree, and AdaBoost) with an F1 score of 0.956 and NDCG at 5 of 0.872. The effectiveness of the DistilBERT embedding in generalization is established by comparing across five deep architectures (LSTM, BiLSTM, GRU, CNN BiLSTM, and Transformer Encoder). SHAP attributed feature identification shows position and popularity to be the strongest predictors of attention, then semantic similarity and recency, the latter continuing to have a strong effect on user cognition despite bias correction. The results overall give a replicable, empirically‐driven model of bias conscious ranking analysis in personalized feeds, which provides insights on content algorithms in a scalable way in both maintaining engagement and contributing to the passive process of rationalizing modeling behavioral proxies of user attention and selective exposure.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/coin.70300" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-061-010">
+<p class="kicker">Computational Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Modeling Learner Profiles Through Unsupervised HEXAD‐Based Interaction Analysis</h3>
+<p>Ricardo Tesoriero; Felipe Costa‐Tebar; Jose A. Gallud; Jose A. Gamez</p>
+<dl>
+<div><dt>卷期</dt><dd>V42 · I5</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1111/coin.70299</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70299" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70299" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Modeling Learner Profiles Through Unsupervised HEXAD‐Based Interaction Analysis</strong></p><p class="abstract-meta">期刊：Computational Intelligence · DOI：10.1111/coin.70299 · 摘要来源：账本已存摘要</p><p class="abstract-body">Learner profiling is a key component of adaptive and personalized learning environments. While the HEXAD framework provides a theoretically grounded taxonomy of motivational user types, its practical use in learning management systems (LMS) typically relies on self‐reported questionnaires, which limits scalability and ecological validity. This study investigates whether meaningful learner profiles inspired by HEXAD can be derived directly from behavioral interaction data in a fully unsupervised manner. Using Moodle log data collected across multiple courses, learner activity is aggregated at the student level and represented through two alternative feature encodings: raw event frequencies and TF–IDF weighting. Hierarchical clustering is applied under consistent conditions, and clustering solutions are evaluated in terms of stability under subsampling, internal diagnostics for cluster resolution, and sensitivity to methodological choices. A cluster configuration with is examined as a theory‐informed reference aligned with the HEXAD framework. Results show that TF–IDF representations produce more stable and robust clustering structures than raw frequencies, particularly at the HEXAD‐aligned resolution. To support interpretability, a dictionary‐based surrogate profiling approach is used to characterise behavioral patterns associated with each cluster, without treating these surrogate labels as ground truth. The analysis reveals imbalances in profile prevalence and highlights the importance of representation choices in unsupervised learner modeling. These findings show that interpretable learner profiles can be derived retrospectively from naturally occurring LMS data without relying on questionnaires. They provide a methodological basis for behavior‐based learner modeling, while the feasibility of generating sufficiently stable profiles early enough for time‐sensitive adaptation remains to be evaluated.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/coin.70299" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-061-011">
+<p class="kicker">Computational Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>Federated Attention‐Augmented Hybrid Framework for Real‐Time Intrusion Detection in Cloud Environments: Integrating Transformer‐Enhanced Convolutional Networks With Privacy‐Preserving Stochastic Optimization</h3>
+<p>V. Ramu; S. P. Santhoshkumar; Ramu Vankudoth; Eugene Berna Ignasimuthu; N. Naveen; A. Athiraja</p>
+<dl>
+<div><dt>卷期</dt><dd>V42 · I5</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1111/coin.70298</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70298" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70298" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Federated Attention‐Augmented Hybrid Framework for Real‐Time Intrusion Detection in Cloud Environments: Integrating Transformer‐Enhanced Convolutional Networks With Privacy‐Preserving Stochastic Optimization</strong></p><p class="abstract-meta">期刊：Computational Intelligence · DOI：10.1111/coin.70298 · 摘要来源：账本已存摘要</p><p class="abstract-body">The widespread adoption of cloud services in government and commercial environments has enlarged the attack surface exposed to advanced persistent threats, zero‐day exploits, and polymorphic distributed denial‐of‐service attacks. This paper presents the Federated Attention‐Augmented Hybrid Intrusion Detection Framework (FAAHIDF), which couples four established components through one training and deployment protocol: a Multi‐Head Spatial Attention Convolutional Encoder (MHSACE), a Federated Differential‐Privacy Stochastic Gradient Descent Optimizer (FDP‐SGDO), a Cross‐Domain Normalization and Augmentation Engine (CDNAE), and a Dynamic Threshold Calibration Module (DTCM). The contribution is therefore the coordinated interaction among local–global representation learning, privacy‐bounded federated updating, target‐aware domain alignment, and drift‐responsive decision calibration, rather than novelty of each primitive in isolation. CSE‐CIC‐IDS2018 is used as the labeled source benchmark. For UNSW‐NB15, only an unlabelled target‐development partition is exposed to CDNAE, whereas the held‐out target evaluation subset is excluded from normalization fitting, augmentation, domain alignment, threshold selection, and hyperparameter tuning; this experiment is consequently reported as target‐aware unsupervised domain adaptation rather than a fully unseen external test. Under the fixed experimental configuration, FAAHIDF records 99.87% accuracy, a 0.02% false‐positive rate, 0.9998 AUC, and 0.9981 macro‐F1 on CSE‐CIC‐IDS2018, and 98.74% accuracy with 0.9841 macro‐F1 on the held‐out UNSW‐NB15 target subset. These values are treated as point estimates. The revised manuscript limits statistical and state‐of‐the‐art claims to the available evidence, clarifies the cumulative privacy configuration (epsilon = 2.50, delta = 1e‐5), and adds module‐wise computational, communication, leakage‐control, baseline‐scope, and reproducibility analyses.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/coin.70298" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-061-012">
+<p class="kicker">Computational Intelligence · IN_PROGRESS_ISSUE</p>
+<h3>DAR‐SAC: Dynamic Adaptive Regularization Soft Actor‐Critic</h3>
+<p>Yuwan Gu; Ronghai Miao; Jie Hao; Fang Meng; Yan Chen; Jidong Lv</p>
+<dl>
+<div><dt>卷期</dt><dd>V42 · I5</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1111/coin.70302</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70302" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1111/coin.70302" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>DAR‐SAC: Dynamic Adaptive Regularization Soft Actor‐Critic</strong></p><p class="abstract-meta">期刊：Computational Intelligence · DOI：10.1111/coin.70302 · 摘要来源：账本已存摘要</p><p class="abstract-body">This paper proposes the dynamic adaptive regularization soft actor‐critic (DAR‐SAC) framework. The framework is based on the SAC algorithm, which is a reinforcement learning framework incorporating dynamic environment detection and adaptive optimization, to address the fixed exploration noise stiffness of the traditional SAC algorithm in dynamic environments. For the problems of fixed exploration noise rigidity, strategy oscillation aggravation and Q‐value over‐estimation in traditional SAC algorithms in dynamic environments, this paper firstly introduces a dynamic environment detection module to enable the robot to distinguish dynamic environments, and then combines the hybrid regularization mechanism and adaptive gradient trimming to accelerate convergence while suppressing abrupt changes in the strategy. In the constructed 3D point cloud simulation environment, the DAR‐SAC algorithm achieves significantly higher cumulative rewards and lower collision rates compared with SAC, SARC, DDPG, and TD3 algorithms. To further evaluate the robustness of the proposed framework against non‐stationary environments, we conduct extensive comparisons with state‐of‐the‐art variants, including SAC with adaptive entropy scheduling (SAC + AES), distributional SAC with three refinements (DSAC‐T), and SAC with delayed actor updates and replay mixing (SAC + DA + RM). The experimental results demonstrate that the proposed method exhibits superior path‐planning performance in complex static and dynamic environments.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1111/coin.70302" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Computational Intelligence 另有 7 条网络优先/在编/Latest Articles 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-091-001">
+<p class="kicker">Statistics in Medicine · IN_PROGRESS_ISSUE</p>
+<h3>PROComb: A Practical and Robust Design With Randomization to Optimize Dose Combinations in Drug Combination Trials</h3>
+<p>Yingjie Qiu; Mingyue Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I23-24</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sim.70743</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70743" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70743" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>PROComb: A Practical and Robust Design With Randomization to Optimize Dose Combinations in Drug Combination Trials</strong></p><p class="abstract-meta">期刊：Statistics in Medicine · DOI：10.1002/sim.70743 · 摘要来源：账本已存摘要</p><p class="abstract-body">The US Food and Drug Administration&#x27;s Project Optimus has initiated a paradigm shift in oncology drug development from “more is better” to “less is more.” Methodological development for combination therapy trials remains limited due to their complex dose‐combination space and the need to integrate multi‐source data, including toxicity, clinical efficacy, and biological antitumor outcomes such as pharmacodynamic (PD) activity. We propose PROComb, a practical and robust design with randomization to optimize dose combinations, to address these challenges with minimal assumptions and to facilitate practical implementation. In the first stage, the complex dose‐combination space is efficiently explored through the integration of multi‐source data and the inherent relationships among different dose‐outcomes. Patients are adaptively assigned to dose combinations to establish a therapeutic dose space (TDS), defined as the set of doses with acceptable toxicity and promising efficacy. A recommended Stage II dose set (RS2D) is constructed at the end of Stage I. In the second stage, patients are randomized to RS2D combinations for further monitoring, screening and identification of the optimal biologic dose combination (OBDC). Three PROComb versions are developed to mitigate potential between‐stage drift. Simulation studies demonstrate that PROComb achieves favorable operating characteristics compared with conventional model‐based and model‐assisted designs.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1002/sim.70743" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-091-002">
+<p class="kicker">Statistics in Medicine · IN_PROGRESS_ISSUE</p>
+<h3>A Statistical Perspective on Transformers for Small Longitudinal Cohort Data</h3>
+<p>Kiana Farhadyar; Maren Hackenberg; Kira Ahrens; Charlotte Schenk; Bianca Kollmann; Oliver Tüscher; Klaus Lieb; Michael M. Plichta; Andreas Reif; Raffael Kalisch; Martin Wolkewitz; Moritz Hess; Harald Binder</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I23-24</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sim.70744</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70744" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70744" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Statistical Perspective on Transformers for Small Longitudinal Cohort Data</strong></p><p class="abstract-meta">期刊：Statistics in Medicine · DOI：10.1002/sim.70744 · 摘要来源：账本已存摘要</p><p class="abstract-body">Modeling of longitudinal cohort data typically involves complex temporal dependencies between multiple variables. There, the transformer architecture, which has been highly successful in language and vision applications, allows us to account for the fact that the most recently observed time points in an individual&#x27;s history may not always be the most important for the immediate future. This is achieved by assigning attention weights to observations of an individual based on a transformation of their values. One reason why these ideas have not yet been fully leveraged for longitudinal cohort data is that typically, large datasets are required. Therefore, we present a simplified transformer architecture that retains the core attention mechanism while reducing the number of parameters to be estimated, to be more suitable for small datasets with few time points. Guided by a statistical perspective on transformers, we use an autoregressive model as a starting point and incorporate attention as a kernel‐based operation with temporal decay, where aggregation of multiple transformer heads, that is, different candidate weighting schemes, is expressed as accumulating evidence on different types of underlying characteristics of individuals. This also enables a permutation‐based statistical testing procedure for identifying contextual patterns. In simulation studies, including a controlled simulation on real clinical predictor data, the approach is shown to recover contextual dependencies even with a small number of individuals and time points. In an application to data from a resilience study, we identify temporal patterns in the dynamics of stress and mental health. This indicates that properly adapted transformers can not only achieve competitive predictive performance, but also uncover complex context dependencies in small data settings.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1002/sim.70744" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-091-003">
+<p class="kicker">Statistics in Medicine · IN_PROGRESS_ISSUE</p>
+<h3>Reliable Bayesian Causal Inference for Externally Controlled Single‐Arm Trials Under Transportability Violations</h3>
+<p>Se Yoon Lee</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I23-24</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sim.70748</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70748" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70748" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Reliable Bayesian Causal Inference for Externally Controlled Single‐Arm Trials Under Transportability Violations</strong></p><p class="abstract-meta">期刊：Statistics in Medicine · DOI：10.1002/sim.70748 · 摘要来源：账本已存摘要</p><p class="abstract-body">Externally controlled single‐arm trials are increasingly popular because they do not require randomized controls, thereby substantially reducing financial costs; however, valid causal inference in this setting relies critically on transportability between the trial and external populations, an assumption that is untestable. Frequentist semiparametrically efficient estimators, such as the doubly robust estimator, are typically analyzed under first‐order asymptotics and are designed to mitigate nuisance‐estimation bias under correct specification; however, this framework does not account for structural bias arising under local transportability violations, where bias and stochastic fluctuation occur at the same parametric rate. We propose a reliable Bayesian framework for estimating the average treatment effect on the treated (ATT) that combines synthetic outcome construction with residualized power‐prior borrowing. Flexible machine learning is first used to construct covariate‐aligned synthetic controls, after which Bayesian inference on residualized outcomes allows external borrowing to modulate uncertainty without distorting covariate‐driven heterogeneity. The posterior admits a heavy‐tailed distribution—unlike classical Wald procedures—and the resulting estimator lies outside the class of regular asymptotically linear estimators, thereby revealing behavior beyond first‐order semiparametric asymptotics. We establish a reliability–efficiency trade‐off under local transportability violations. Simulations and a case study on schizophrenia trial design demonstrate the theoretical findings and practical utility.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1002/sim.70748" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-091-004">
+<p class="kicker">Statistics in Medicine · IN_PROGRESS_ISSUE</p>
+<h3>A Nonparametric Data‐Fusion Approach for Identification and Estimation of Nonignorable Missing Data With Shadow Variable</h3>
+<p>Wenxiao Zhou; Bo Fu</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I23-24</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sim.70747</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70747" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70747" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Nonparametric Data‐Fusion Approach for Identification and Estimation of Nonignorable Missing Data With Shadow Variable</strong></p><p class="abstract-meta">期刊：Statistics in Medicine · DOI：10.1002/sim.70747 · 摘要来源：账本已存摘要</p><p class="abstract-body">Missing data can pose fundamental challenges to statistical inference, with nonignorable missing or missing not at random (MNAR) presenting the most severe methodological difficulties. Despite substantial advances in MNAR inference methods, several limitations remain. These generally include interpretability issues, non‐identifiability, unverifiable parametric assumptions, and reliance on external information for which clear practical guidance is often lacking—particularly in sensitivity and Bayesian methods. In this paper, motivated by a real‐world COVID‐19 dataset from the Centers for Disease Control and Prevention (CDC), we study an MNAR scenario in the presence of a shadow variable that may itself also be subject to MNAR. A shadow variable is associated with the primary variable that is MNAR, but is conditionally independent of that variable&#x27;s missingness given the primary variable and other covariates. Under the pattern mixture model framework, we propose a nonparametric inference method that can leverage external data to explicitly address the identification and estimation problems in the primary data. The method requires inference only of an observed data density and an odds of missing function, with the latter forming the core of our approach. We further provide two multiple‐imputation‐based estimation strategies, enhancing transparency and interpretability. The proposed framework can accommodate both covariate MNAR and outcome MNAR settings, as well as different variable types, and extends the existing shadow variable paradigm for MNAR data by relaxing the common assumption that the shadow variable must be fully observed. We evaluate the proposed method through simulation studies and apply it to CDC COVID‐19 surveillance data.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1002/sim.70747" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-091-005">
+<p class="kicker">Statistics in Medicine · IN_PROGRESS_ISSUE</p>
+<h3>A Model‐Robust G‐Computation Method for Analyzing Hybrid Control Studies Without Assuming Exchangeability</h3>
+<p>Zhiwei Zhang; Peisong Han; Wei Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I23-24</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sim.70754</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70754" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70754" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Model‐Robust G‐Computation Method for Analyzing Hybrid Control Studies Without Assuming Exchangeability</strong></p><p class="abstract-meta">期刊：Statistics in Medicine · DOI：10.1002/sim.70754 · 摘要来源：账本已存摘要</p><p class="abstract-body">There is growing interest in a hybrid control design for treatment evaluation, where a randomized controlled trial is augmented with external control data from a previous trial or a real‐world data source. The hybrid control design has the potential to improve efficiency but also carries the risk of introducing bias. The potential bias in a hybrid control study can be mitigated by adjusting for baseline covariates that are related to the control outcome. Existing methods that serve this purpose commonly assume that the internal and external control outcomes are exchangeable upon conditioning on a set of measured covariates. Possible violations of the exchangeability assumption can be addressed using a g‐computation method with variable selection under a correctly specified outcome regression model. In this article, we point out that a particular version of this g‐computation method is protected against misspecification of the outcome regression model. This observation leads to a model‐robust g‐computation method that is remarkably simple and easy to implement, consistent and asymptotically normal under minimal assumptions, and able to improve efficiency by exploiting similarities between the internal and external control groups. The method is evaluated in a simulation study and illustrated using real data from HIV treatment trials.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1002/sim.70754" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-091-006">
+<p class="kicker">Statistics in Medicine · IN_PROGRESS_ISSUE</p>
+<h3>A Bayesian Adaptive Design for Assessing Treatment Effect Consistency in Bridging Studies</h3>
+<p>Xinyi He; Dan Zhao; Zhaoyang Teng; Hua Liu; Ying Yuan</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I23-24</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sim.70749</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70749" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70749" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Bayesian Adaptive Design for Assessing Treatment Effect Consistency in Bridging Studies</strong></p><p class="abstract-meta">期刊：Statistics in Medicine · DOI：10.1002/sim.70749 · 摘要来源：账本已存摘要</p><p class="abstract-body">Bridging studies serve as an efficient approach to evaluate the applicability of findings from an original study to a new population. We propose a Bayesian adaptive design for bridging studies with time‐to‐event endpoints, aiming to assess the consistency of treatment effects with those observed in the original study. The design adopts a group sequential framework, using posterior probabilities at interim and final analyses to evaluate the evidence for consistency between the bridging and original studies. If strong evidence of consistency or inconsistency is observed, the trial may be stopped early to conserve sample size. Additionally, a sample size recalculation strategy based on Bayesian predictive probability is incorporated to enhance flexibility. Simulation studies demonstrate that, compared to a commonly used method, the proposed design offers favorable operating characteristics. It maintains control of the empirical type I error rate through prespecified calibration, accounting for interim analyses (IAs) and sample size adaptation, and yields substantial sample size savings when the treatment effect in the bridging study is either highly consistent or clearly inconsistent with that of the original study.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1002/sim.70749" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-091-007">
+<p class="kicker">Statistics in Medicine · IN_PROGRESS_ISSUE</p>
+<h3>High‐Dimensional Mediation Analysis With Network Mediators: Applications to Pediatric Acute Lymphoblastic Leukemia</h3>
+<p>Jade Xiaoqing Wang; Zhao‐Hua Lu; Wilburn E. Reddick; Heather M. Conklin; John O. Glass; Lisa Jacola; Arzu Onar‐Thomas; Sima Jeha; Cheng Cheng; Xiang Zhou; Yimei Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I23-24</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sim.70756</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70756" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70756" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>High‐Dimensional Mediation Analysis With Network Mediators: Applications to Pediatric Acute Lymphoblastic Leukemia</strong></p><p class="abstract-meta">期刊：Statistics in Medicine · DOI：10.1002/sim.70756 · 摘要来源：账本已存摘要</p><p class="abstract-body">Acute lymphoblastic leukemia (ALL) is the most common childhood cancer, with survivors frequently experiencing long‐term neurocognitive morbidities. Here, we utilize the TOTXVI clinical trial data to elucidate the mechanisms underlying treatment‐related neurocognitive side effects in pediatric ALL patients by incorporating brain connectivity network data. To enable such analysis, we propose a high‐dimensional mediation analysis method with a novel network mediation structural shrinkage (NMSS) prior, which is particularly suited for analyzing high‐dimensional brain structural connectivity network data that serve as mediators. Our method is capable of addressing the structural dependencies of brain connectivity networks including sparsity, effective degrees of nodes, and modularity, yielding accurate estimates of the high‐dimensional coefficients and mediation effects. We demonstrate the effectiveness and superiority of the proposed NMSS method through simulation studies and apply it to the TOTXVI data, revealing significant mediation effects of brain connectivity on visual processing speed directed by IT intensity. The findings shed light on the potential of targeted interventions to mitigate neurocognitive deficits in pediatric ALL survivors.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1002/sim.70756" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-091-008">
+<p class="kicker">Statistics in Medicine · IN_PROGRESS_ISSUE</p>
+<h3>Calibration of Priors for Bayesian Model‐Based Dose‐Finding Trial Designs With Joint Outcomes</h3>
+<p>Emily Alger; Shing M. Lee; Ying Kuen K. Cheung; Christina Yap</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I23-24</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sim.70746</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70746" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70746" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Calibration of Priors for Bayesian Model‐Based Dose‐Finding Trial Designs With Joint Outcomes</strong></p><p class="abstract-meta">期刊：Statistics in Medicine · DOI：10.1002/sim.70746 · 摘要来源：账本已存摘要</p><p class="abstract-body">The goal of dose‐finding oncology trials is to assess the safety of anti‐cancer treatments across multiple doses and to recommend dose(s) for subsequent trials. As patients&#x27; outcomes accrue, trialists dynamically recommend new doses for further investigation during the trial. This adaptive decision‐making lends itself to Bayesian learning, with Bayesian frameworks increasingly guiding dose recommendations in model‐based dose‐finding designs, including the Continual Reassessment Method (CRM). However, such approaches introduce increased complexity, not least when additional outcomes are incorporated within designs. Such trial designs require careful prior selection. Directly applying prior calibration methods developed for single outcome model‐based trial designs to joint outcome trial designs may introduce unintended bias in dose recommendations, potentially limiting dose exploration and failing to accurately reflect trialists&#x27; a priori beliefs. We extend methodology to analytically calibrate priors for model‐based joint outcome trial designs with divergence minimisation. Our method offers an analytical and computationally efficient technique. We demonstrate the flexibility of our calibration method relative to existing approaches in ensemble simulation scenarios, and show that calibrating priors in this way delivers improved accuracy and computational efficiency compared with traditional grid search methods. As Bayesian dose‐finding trial designs continue to advance, research and guidance on the effective calibration of design parameters is essential to support uptake and ensure optimal performance in practice. This method provides an analytical and intuitive approach to prior calibration, highlighting the importance of rigorous prior calibration in improving model accuracy and dose selection for safer, more effective oncology treatments.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1002/sim.70746" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-091-009">
+<p class="kicker">Statistics in Medicine · IN_PROGRESS_ISSUE</p>
+<h3>Group‐Specific Nonlinear Mixed Effects Models for Longitudinal Data With Realignment of Time</h3>
+<p>Ziyue Liu; Sujuan Gao</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I23-24</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sim.70759</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70759" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70759" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Group‐Specific Nonlinear Mixed Effects Models for Longitudinal Data With Realignment of Time</strong></p><p class="abstract-meta">期刊：Statistics in Medicine · DOI：10.1002/sim.70759 · 摘要来源：账本已存摘要</p><p class="abstract-body">We propose group‐specific nonlinear mixed effects models for longitudinal data whose indexing time is right‐aligned to specific events, modeled as the time preceding those events. These models are motivated by dementia cohort studies that examine nonlinear trajectories of longitudinal cognitive test scores in late life, with separate trajectories for individuals with and without dementia in the period leading up to death. The model framework includes three sub‐models: one for group membership, which represents dementia status in our motivating data, one for time to the indexing events, and one for the longitudinal outcome. Group membership is modeled using logistic regression or random forest. Conditional on group memberships, time to indexing events is modeled using accelerated failure time (AFT) models. Given both group membership and time to the indexing event, longitudinal data are modeled using nonlinear mixed effects models. By modeling and integrating out the time to indexing events, individuals whose indexing events have not been observed can be incorporated into the models. Stochastic approximation expectation maximization (SAEM) algorithms are adopted to maximize the likelihood for parameter estimation. In addition to modeling group‐specific longitudinal trajectories aligned to the index time, the proposed models can also be used to predict group memberships or improve the prediction of time to the indexing events. Simulation studies are conducted to evaluate finite sample performance. An application to data from a dementia study is used for illustration.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1002/sim.70759" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-091-010">
+<p class="kicker">Statistics in Medicine · IN_PROGRESS_ISSUE</p>
+<h3>Taking Into Account the Susceptible Window for Exposures in Cox Proportional Hazards Model: A Way Using Splines to Model the Lag‐Risk Relationship</h3>
+<p>Fuyu Guo; Zihan Qian; Wenyi Wang; Fenglei Wang; Bernard Rosner; Molin Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I23-24</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sim.70755</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70755" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70755" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Taking Into Account the Susceptible Window for Exposures in Cox Proportional Hazards Model: A Way Using Splines to Model the Lag‐Risk Relationship</strong></p><p class="abstract-meta">期刊：Statistics in Medicine · DOI：10.1002/sim.70755 · 摘要来源：账本已存摘要</p><p class="abstract-body">External exposures take time to accumulate and affect human health, leading to a time lag between initial exposure and the manifestation of clinical signs. Susceptible time window analysis aims to describe the relationship between the time since exposure and its effects. To obtain unbiased estimates in susceptible time window analysis, researchers may need to adjust for exposures measured at different times simultaneously. Conventional Cox proportional hazards models often fail in this regard due to the strong multicollinearity between lagged exposure terms. In addition to estimation challenges, missing data in historical exposures present another obstacle for long‐term analysis. To address these challenges, we first impose flexible parametric models on the effects across historical exposures by assuming that they follow restricted cubic splines. Based on our proposed restricted cubic spline model, we develop two model selection algorithms to help researchers determine the optimal knot locations in the splines. Additionally, we propose using multiple imputations to handle the missing exposure data. We conducted simulation studies to evaluate the performance of the restricted cubic spline models and the imputation algorithms in various realistic settings. The results show that our model demonstrates strong performance, offering great flexibility and robustness to misspecified maximum length of effect. Compared to the complete‐person‐time analysis, our multiple imputation algorithm exhibits significantly lower variance, with only a slight increase in bias. Finally, as an illustrative example, we apply our proposed models to analyze the effect of folate consumption on colorectal cancer incidence in the Nurses&#x27; Health Study from 1976 to 2016.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1002/sim.70755" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-091-011">
+<p class="kicker">Statistics in Medicine · IN_PROGRESS_ISSUE</p>
+<h3>Evaluating Informative Cluster Size in Cluster Randomized Trials</h3>
+<p>Bryan S. Blette; Zhe Chen; Brennan C. Kahan; Andrew Forbes; Michael O. Harhay; Fan Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I23-24</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sim.70762</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70762" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70762" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Evaluating Informative Cluster Size in Cluster Randomized Trials</strong></p><p class="abstract-meta">期刊：Statistics in Medicine · DOI：10.1002/sim.70762 · 摘要来源：账本已存摘要</p><p class="abstract-body">In cluster randomized trials, the individual‐average treatment effect (i‐ATE) can be different from the cluster‐average treatment effect (c‐ATE) when informative cluster size (ICS) is present, that is, when treatment effects or participant outcomes depend on cluster size. In such scenarios, mixed‐effects models and generalized estimating equations (GEEs) with exchangeable correlation structure are biased for both the i‐ATE and c‐ATE estimands, whereas GEEs with an independence correlation structure or analyses of cluster‐level summaries are recommended in practice. However, when cluster size is non‐informative, mixed‐effects models and GEEs with exchangeable correlation structure can provide unbiased estimation and notable efficiency gains over other methods. Thus, hypothesis tests for ICS would be useful to assess this key phenomenon under cluster randomization. In this work, we develop model‐based, model‐assisted, and randomization‐based tests for ICS in cluster randomized trials. We conduct simulation studies to examine the operating characteristics of these tests, show they have appropriate Type I error rate control and meaningful power, and contrast them to existing model‐based tests used in the observational study setting. The proposed tests are then applied to data from a recent cluster randomized trial, and practical recommendations for using these tests are discussed.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1002/sim.70762" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-091-012">
+<p class="kicker">Statistics in Medicine · IN_PROGRESS_ISSUE</p>
+<h3>Group Sequential Sample Size for Comparing Two Survival Probabilities at a Specific Time Point</h3>
+<p>Susan Halabi; Lu Liu; Chenxi Yu; Yuan Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I23-24</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sim.70750</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70750" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-01 12:11 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sim.70750" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-01 12:11 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Group Sequential Sample Size for Comparing Two Survival Probabilities at a Specific Time Point</strong></p><p class="abstract-meta">期刊：Statistics in Medicine · DOI：10.1002/sim.70750 · 摘要来源：账本已存摘要</p><p class="abstract-body">We propose a novel method that simultaneously determines the sample size for testing two survival probabilities at a pre‐specified time while guaranteeing Type I error control in both fixed and group‐sequential trial designs. Simulations across varying hypothesized differences, failure distributions, censoring proportions, and nominal powers demonstrate consistent performance, while interim analyses highlight maintained nominal Type I error control and increased power at each look relative to the standard binomial approach, regardless of the underlying failure time distribution or spending function. Importantly, our method is especially useful for evaluating survival outcomes at a fixed time in randomized trials where one treatment arm includes neoadjuvant therapy prior to surgery while the other involves surgery alone. Furthermore, it is advantageous when the proportional hazards assumption is not satisfied, as often occurs in immunotherapy trials with delayed or time‐varying treatment effects or crossing survival curves. The method is also applicable to randomized Phase II trials, where smaller sample sizes and the use of intermediate or surrogate time‐to‐event endpoints demand efficient data use and robust error control. We illustrate the approach with motivating examples in renal and prostate cancer. An accompanying R Shiny application enables investigators to compute sample sizes interactively, facilitating practical trial planning in diverse settings.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1002/sim.70750" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>Statistics in Medicine 另有 44 条网络优先/在编/Latest Articles 发现已写入账本，页内从略。</p>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>地球信息科学学报（Magtech）：官方 Y2026/V28/I10 与 Current HTTP 200；claim I10；I7/I8/I9 已 BRIEFED。</li>
+<li>International Journal of Health Geographics（Springer）：Playwright Volumes/V25/OF/Articles OK；开放年卷不 claim。</li>
+<li>Computational Intelligence（Wiley）：Current/LOI/I5/I6/EV 均 Cloudflare 403；Crossref/RSS 仅登记。</li>
+<li>Statistics in Medicine（Wiley）：Current/LOI/I23-24/I25-27/EV 均 Cloudflare 403；Crossref/RSS 仅登记。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>660a2c8f-9818-4f92-86b1-a55aed7fd58f</code></li>
+<li>Commit ID：<code>DAILY-20261101-120853-003bfc7b</code></li>
+<li>Brief ID：<code>DAILY-20261101</code></li>
+<li>去重抑制：0 · 增量复核：0 · 对账任务：4 · 官方源失败计数：2</li>
+<li>正式期刊：REG-001、REG-031、REG-061、REG-091 · 本组无附加信号源</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/11/index.html">返回 2026-11 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
+</body></html>
