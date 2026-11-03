@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 3 组 · 2026-11-03</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/11/index.html">11 月</a> / 第 3 组
+</nav>
+<p class="meta">逻辑日期 2026-11-03 · 完成时间 2026-11-03 12:14 CST · 任务 ROUTINE-20261103-G03 · Commit <code>DAILY-20261103-115008-fe3d4e5d</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 3 组</h1>
+<p class="lede">第 3 组共检查 4 种正式期刊；确认 3 个新完整期次、43 篇正式期次论文、2 篇既有网络优先记录正式归期，以及 167 条网络优先/Early Access 发现。武汉大学学报（信息科学版）官网目录确认并 claim 2026-V51-I10、2026-V51-I11；IEEE Computational Intelligence Magazine 官方 Current Issue claim 2026-V21-I4（Nov. 2026）；Applied Geography 与 Environmental Modelling &amp; Software 因 ScienceDirect 官方页 403 降级，基线保持。其中 2 种期刊因官方源阻断降级完成。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>4</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>4</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>3</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>43</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>167</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">新完整期</span> <strong>武汉大学学报（信息科学版）</strong> — claim 2026-V51-I10、2026-V51-I11（官网当期/过刊目录）；优先发表仅登记。 <span class="evidence"><a href="https://ch.whu.edu.cn/article/current" rel="noopener noreferrer">证据</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 官方目录</small></span></li><li><span class="tag">源阻断</span> <strong>Applied Geography</strong> — ScienceDirect 官方 issues/卷页 403；RSS/Crossref 仅发现；基线 2026-V192 保持。 <span class="evidence"><a href="https://www.sciencedirect.com/journal/applied-geography/issues" rel="noopener noreferrer">证据</a><small>www.sciencedirect.com · 2026-11-03 12:14 CST · 官方目录</small></span></li><li><span class="tag">新完整期</span> <strong>IEEE Computational Intelligence Magazine</strong> — claim 2026-V21-I4（Current Issue Nov.-2026）；过滤非学术条目。 <span class="evidence"><a href="https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=11740818" rel="noopener noreferrer">证据</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 官方目录</small></span></li><li><span class="tag">源阻断</span> <strong>Environmental Modelling &amp; Software</strong> — ScienceDirect 官方 issues/卷页 403；RSS/Crossref 仅发现；基线 2026-V202 保持。 <span class="evidence"><a href="https://www.sciencedirect.com/journal/environmental-modelling-and-software/issues" rel="noopener noreferrer">证据</a><small>www.sciencedirect.com · 2026-11-03 12:14 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-003<br><strong>武汉大学学报（信息科学版）</strong></td><td>2026-V51-I11</td><td>2</td><td>32</td><td>2</td><td>162</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-033<br><strong>Applied Geography</strong></td><td>2026-V192</td><td>0</td><td>0</td><td>0</td><td>0</td><td><code>OFFICIAL_403</code></td><td>DEGRADED</td></tr><tr><td>REG-063<br><strong>IEEE Computational Intelligence Magazine</strong></td><td>2026-V21-I4</td><td>1</td><td>11</td><td>0</td><td>5</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-093<br><strong>Environmental Modelling &amp; Software</strong></td><td>2026-V202</td><td>0</td><td>0</td><td>0</td><td>0</td><td><code>OFFICIAL_403</code></td><td>DEGRADED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-11-03_GIS-AI期刊每日摘要_第3组.png" width="1600" height="900" alt="第3组每日摘要图：4刊，新完整期3，正式文43">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-003-2026-v51-i10"><h3>武汉大学学报（信息科学版） · 2026-V51-I10</h3><p>官网期次目录确认 2026年第51卷第10期；基线 V51-I9 之后未简报完整期，按序 NEW_ISSUE claim。</p><p><span class="evidence"><a href="https://ch.whu.edu.cn/cn/article/2026/10" rel="noopener noreferrer">官方期次目录</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>15</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-003-2026v51i10-001">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>海洋声道研究进展及我国发展的思考</h3>
+<p>刘经南; 赵建虎; 江鹏; 高柯夫</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260375</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260375" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260375" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>海洋声道研究进展及我国发展的思考</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260375 · 摘要来源：出版方摘要</p><p class="abstract-body">海洋声道在水下声信号远程传输、测距定位、水下目标探测、气候声学测温等领域具有十分重要的作用。首先介绍了海洋声道的概念及其空间分布、时空变化等特点；然后介绍了海洋声道研究的关键技术，以及海洋声道参数观测、声信号远程传输、环境变迁与细结构效应、声学层析与气候监测、北极与全尺度声学观测等领域研究的国内外进展；在此基础上，结合我国的海洋声道研究现状，分析了存在的差距，给出了我国海洋声道研究未来应有的重点发展方向。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260375" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-002">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>北斗PNT增强信息处理技术及其应用</h3>
+<p>陈俊平; 张益泽; 王阿昊; 王彬; 周建华</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260353</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260353" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260353" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>北斗PNT增强信息处理技术及其应用</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260353 · 摘要来源：出版方摘要</p><p class="abstract-body">北斗卫星导航系统通过广域增强和精密单点定位服务，构建了从广域差分到精密定位的多层次高精度定位导航授时（positioning, navigation and timing，PNT）增强体系。围绕北斗PNT增强服务信息处理技术，阐述了北斗PNT增强服务实时改正参数体系，介绍了北斗信息处理系统中卫星轨道改正、卫星钟差改正、格网电离层改正、差分码偏差以及分区综合改正等参数的计算方法，总结了北斗PNT增强服务完好性监测方面的进展，给出了基于北斗系统增强参数的用户PNT基本模型，归纳了北斗PNT增强从米级到分米级的服务能力。针对中国综合时空体系建设的发展要求，对异构多体制星座全球PNT增强技术的发展进行了展望。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260353" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-003">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>月球导航星座抗差自适应轨道确定与时间同步</h3>
+<p>徐天河; 贺备; 王棣星</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260310</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260310" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260310" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>月球导航星座抗差自适应轨道确定与时间同步</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260310 · 摘要来源：出版方摘要</p><p class="abstract-body">面向月球导航星座长期自主运行及地月空间定位、导航与授时需求，构建了融合椭圆月球冻结轨道（elliptical lunar frozen orbit，ELFO）和远距离逆行轨道（distant retrograde orbit，DRO）的混合月球导航星座，并利用低轨卫星和北斗卫星导航系统卫星作为地球侧天基参考节点，开展了基于双向单程星间测距的自主轨道确定与时间同步研究。在扩展卡尔曼滤波（extended Kalman filter，EKF）基础上引入抗差自适应卡尔曼滤波（robust adaptive Kalman filtering，RAKF），分别通过调整观测协方差和预测状态协方差抑制观测粗差与状态异常。仿真结果表明，正常状态下ELFO和DRO卫星三维定轨精度分别为6.3 m和14.1 m，时间同步精度分别为0.105 ns和0.118 ns；分别考虑5 m、10 m和20 m的观测异常条件下，RAKF的ELFO卫星三维定轨精度较EKF分别提升50.0%、76.6%和84.0%，时间同步精度相应分别提升34.07%、95.53%、98.24%；DRO卫星定轨精度分别提升73.6%、74.4%和76.9%，时间同步精度分别提升51.29%、96.46%、97.64%；状态异常场景下，RAKF的ELFO三维定轨精度较EKF由331.5 m提升至18.6 m。结果表明，所构建的混合星座可实现稳定的自主轨道确定与亚纳秒级时间同步，采用RAKF能够有效提升异常条件下的月球导航星座的自主定轨和时间同步精度。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260310" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-004">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>人工智能驱动的GNSS大气效应建模、预测与应用研究进展</h3>
+<p>楼益栋; 闭浩航; 刘梦杰; 张卫星; 罗小敏; 任晓东; 张镇驿; 周要宗</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260381</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260381" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260381" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>人工智能驱动的GNSS大气效应建模、预测与应用研究进展</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260381 · 摘要来源：出版方摘要</p><p class="abstract-body">全球导航卫星系统（global navigation satellite system，GNSS）具有全天候、高精度、高时空分辨率观测等优势，已成为开展地球大气探测与效应研究的重要技术手段。近年来，随着人工智能（artificial intelligence,AI）迅猛发展，AI驱动的GNSS大气效应研究已成为卫星导航与大气科学交叉领域的重要前沿方向。围绕GNSS大气效应建模、预测与应用，系统梳理AI在对流层天顶总延迟、天顶湿延迟、斜路径延迟、可降水量、电离层电子总含量、电子密度及电离层闪烁等参数建模与预测中的研究进展，进一步分析总结其在水汽二维建模、三维水汽和电子密度结构反演、高精度GNSS定位和强降水短临预报等方面的应用。现有研究表明，AI在复杂大气条件下对大气参数表现出较强的非线性建模与预测能力，但仍存在训练数据质量和代表性依赖较强、物理可解释性不足、复杂深度模型计算量大、长期与异常事件泛化能力有限等问题，距离工程应用仍有差距。未来研究应重点加强地基GNSS、GNSS掩星、卫星测高及探空等多源观测的协同利用，构建高质量数据集；引入GNSS信号传播过程及大气参数反演等物理约束，提高建模可靠性；发展迁移学习、自监督学习及领域自适应等方法，提高数据稀缺及复杂场景下泛化与自适应能力。同时完善面向实际应用的评价体系，形成“实时监测—智能预测—误差改正—定位/气象应用”闭环，服务于高精度定位、空间天气预警和GNSS气象学。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260381" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-005">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>2026年北斗导航卫星更新维护操作对空间信号测距误差和单点定位影响分析</h3>
+<p>楚彬; 姜卫平; 李宸雨; 刘天骏; 刘洋; 陈华</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260386</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260386" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260386" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>2026年北斗导航卫星更新维护操作对空间信号测距误差和单点定位影响分析</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260386 · 摘要来源：出版方摘要</p><p class="abstract-body">为提升卫星导航系统服务性能和运行稳定性，导航卫星需要开展在轨的更新维护。然而，卫星在轨升级和维护可能会影响卫星广播轨道和钟差精度，进而影响空间信号质量和用户端定位的可靠性。对2026年4月北斗卫星导航系统（BeiDou navigation satellite system，BDS）部分倾斜地球同步轨道卫星和中圆地球轨道卫星更新维护操作进行研究。基于2026年3月—6月的广播星历和全球分布的15个测站观测数据，采用武汉大学国际GNSS服务实时分析中心提供的快速精密轨道和精密钟差产品作为参考，系统分析了BDS更新维护对空间信号测距误差（signal-in-space ranging error，SISRE）、伪距单点定位（single point positioning，SPP）精度和位置精度因子（position dilution of precision，PDOP）的影响。结果表明，在更新维护前，卫星轨道误差和钟差误差整体稳定，轨道径向、切向、法向3个方向误差与钟差误差均方根（root mean square，RMS）分别为0.175 m、0.261 m、0.204 m与0.828 m；在更新维护时间段内，参与维护卫星广播星历钟差和轨道径向出现明显跳变，仅轨道SISRE升至1 m以上，综合SISRE受钟差异常影响出现数十米量级突增，其中C38和C44卫星峰值分别约为58 m和64 m。维护结束后，卫星的SISRE恢复至维护前的数值，约为0.75 m。此外，全球可见卫星数量和PDOP变化统计分析表明，由于部分BDS-2卫星退役，更新维护后全球平均可见BDS卫星数由11.61颗减少至9.64颗，平均减少约1.97颗；全球平均PDOP由1.92增大至2.13，平均增加约0.21。基于全球15个测站的SPP数据评估发现，BDS-3系统更新维护期间，定位性能出现阶段性下降，定位精度RMS由1.5 m变化到2.2 m，维护完成后，SPP定位精度恢复至正常水平。进一步深入分析2026年4月BDS-3卫星更新维护对SISRE及用户定位性能的影响，研究结果可为BDS-3系统运行状态分析、性能监测及其导航定位应用提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260386" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-006">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>多模态遥感影像匹配进展与展望：从传统模式到深度学习</h3>
+<p>王密; 樊仲藜; 叶沅鑫</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260369</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260369" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260369" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>多模态遥感影像匹配进展与展望：从传统模式到深度学习</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260369 · 摘要来源：出版方摘要</p><p class="abstract-body">多模态遥感影像匹配是多源遥感信息融合应用的关键基础，也是摄影测量与遥感领域的国际研究热点。多源传感器能够从不同物理维度获取地表互补特征，在现代遥感应用中,多模态遥感影像正逐渐取代单源数据，成为学术界和工业界的主流数据源。然而，由于成像机理截然不同，多模态遥感影像间存在显著的非线性辐射差异和几何畸变，令传统匹配方法面临严峻挑战，确保影像间的几何一致性与严密空间对齐已成为协同处理的关键瓶颈。回顾并剖析过去十年来多模态遥感影像匹配技术的研究进展，构建了涵盖基于区域的方法、基于特征的方法、深度学习驱动的方法三大核心类别的精细化分类架构，系统归纳并总结了当前算法的内在机制与研究现状，探讨了现存的技术瓶颈及未来演进趋势，并详尽阐述了主流开源数据集与定量评价指标体系。该研究力求为相关研究人员根据应用场景选择合适的匹配方法提供可靠的技术参考和研究指导。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260369" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-007">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>AIGC时代下遥感新闻权威性的反思与风险治理研究</h3>
+<p>张新长; 齐霁; 时天东; 崔浩</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260316</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260316" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260316" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>AIGC时代下遥感新闻权威性的反思与风险治理研究</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260316 · 摘要来源：出版方摘要</p><p class="abstract-body">随着生成式人工智能（artificial inteligence generated content, AIGC）技术的兴起，遥感影像在新闻传播中眼见为实的权威性面临前所未有的挑战，因此旨在系统探讨遥感新闻权威性的社会建构过程、公众的感知模式及其在AIGC冲击下的潜在风险。首先，通过理论分析，解构遥感新闻权威性的三级建构机制，并据此提出关于公众感知的研究假设。其次，为验证这些假设，设计并实施一项包含412份有效样本的问卷调查。实证结果显示，公众总体上对遥感影像表现出较低的疑伪倾向，呈现出具有条件性的真实性预设；相关专业背景有助于改善遥感影像的辨识表现，但这种优势具有领域限定性，未能稳定延伸至非遥感影像。最后，分析AIGC技术造成的影像生成能力与鉴别、溯源及新闻核验能力之间的不对称，以及由此引发的虚假影像被采信与真实证据被否认的双重风险，并从来源认证、传播核验、媒介素养、法律约束与事实核查等方面提出相应的治理对策，为理解AIGC时代遥感新闻权威性的形成及其真实性风险提供了理论与实践参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260316" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-008">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>极地冰盖空天遥感监测：进展与展望</h3>
+<p>程晓; 郑雷; 陈子龙; 梁琦; 陈卓奇; 李刚; 刘岩; 李腾; 李田</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260333</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260333" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260333" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>极地冰盖空天遥感监测：进展与展望</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260333 · 摘要来源：出版方摘要</p><p class="abstract-body">极地冰盖物质损失是全球海平面上升的重要来源，空天遥感技术已成为揭示其变化与失稳过程的主要手段。围绕冰盖/冰架系统过程、内部结构和物质平衡3个方面，系统梳理国内外尤其是国内科学界利用卫星及航空遥感技术在冰盖运动、融化、裂隙、粒雪含水层、冰下湖、接地线和质量平衡变化等要素监测中的进展。空天遥感监测结果表明，格陵兰冰盖物质损失主要受表面消融与溢出冰川加速流出所主导，南极冰盖物质损失则以冰架底部融化、接地线退缩驱动的动力失稳为驱动。现有遥感产品在时空分辨率和误差控制方面仍存在明显不足，内部融水迁移、冰下水系、底部通道及裂隙三维结构仍难以被连续、大范围监测。未来应加强多源遥感协同反演与立体透视探测，完善过程观测至物质平衡估算的不确定性传递，推动空天遥感从冰盖现状监测向失稳过程诊断与风险评估发展。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260333" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-009">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>空天遥感野生动物监测的挑战、进展与展望</h3>
+<p>眭海刚; 冉文艳; 张浩</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260361</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260361" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260361" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>空天遥感野生动物监测的挑战、进展与展望</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260361 · 摘要来源：出版方摘要</p><p class="abstract-body">空天遥感凭借广域覆盖、重复观测和低干扰优势，为野生动物长期监测提供了重要手段，但仍面临弱信号与遮挡、时空采样不完备、复杂场景辨识困难和跨时序关联不稳定等挑战。基于1976—2026年相关研究，构建“信号形成-时空观测-智能解译-动态关联-生态推断”证据链，归纳生境表征与间接推断、动物目标直接观测、多源协同与智能解译3类研究范式，辨析观测证据向生态参数转换的关键条件。文献梳理表明，空天遥感野生动物监测领域正向复杂环境智能传感、空天地遥感集群协同感知、多模态一体化智能解译和个体身份识别发展。未来需以遥感、人工智能与生态学为核心，推动时空智能、分子生物学、声学、传感器工程等多学科深度融合，为野生动物长期监测与保护决策提供技术支撑。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260361" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-010">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>陆域无路导航理论方法与关键技术</h3>
+<p>张过; 王善绣; 徐青; 周新建; 朱春阳</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260301</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260301" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260301" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>陆域无路导航理论方法与关键技术</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260301 · 摘要来源：出版方摘要</p><p class="abstract-body">经典车辆导航系统以道路网络为基础，通过构建道路网拓扑关系以及实时道路交通情况按照交通规则实现路径规划与引导服务，发展已相对成熟。然而在复杂自然环境、灾害应急救援以及野外生产作业等场景中，道路缺失、失能或道路与非道路区域交替出现，经典道路导航难以满足机动需求。聚焦航天遥感支撑的陆域无路导航理论方法，明确无路导航的基本概念、应用需求，围绕陆域通行要素提取的可靠性、时变条件下车辆通过性认知和任务驱动的规划决策引导3个科学问题，梳理“环境感知测量—通过性认知预测—规划决策引导”的理论框架，讨论通行要素遥感智能解译、多尺度通过性动态建模、多主体协同规划与引导及导航服务等关键技术。对地表覆盖数据、几何通过性及支承通过性模型的验证结果分析表明，基于土壤力学参数约束的支承通过性模型能够较好预测车辆速度，实现了从航天遥感信息到车辆通过能力评价的转换。现有结果为陆域通行要素获取和车辆通过性评价提供了依据，为航天遥感信息向陆域导航应用的转化提供分析框架与技术参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260301" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-011">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>遥感视频单目标跟踪：进展与展望</h3>
+<p>董燕妮; 张乐飞; 杜博; 张良培</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260276</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260276" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260276" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>遥感视频单目标跟踪：进展与展望</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260276 · 摘要来源：出版方摘要</p><p class="abstract-body">遥感视频单目标跟踪通过持续获取运动目标的轨迹与状态变化，推动遥感分析由静态识别走向动态过程理解。以无人机视频、卫星视频和高光谱视频中的单目标跟踪为对象，系统介绍观测平台与数据获取、训练数据来源、数据集及评价协议，梳理3个研究分支的方法演进，并从目标表征、时序状态建模、多源信息利用以及跨域适配与高效部署等方面归纳共性技术问题。分析表明，相关研究已由通用视觉模型的直接迁移逐步转向面向不同观测平台、成像方式和连续观测特点的针对性设计，但专用训练基础尚不充分，长期状态维护的可靠性不足，多源输入适配与实际平台运行之间仍缺少协同考虑。最后，从遥感视频数据与训练基础、序列级目标状态建模以及多源输入适配与端侧运行3个方面进行展望。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260276" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-012">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>面向复杂室内退化场景的多源融合机器人定位方法</h3>
+<p>陈锐志; 吴源; 李维; 马然; 陈亮</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260352</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260352" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260352" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向复杂室内退化场景的多源融合机器人定位方法</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260352 · 摘要来源：出版方摘要</p><p class="abstract-body">针对复杂室内环境中单一传感器定位易失效、信号退化与地图特征不足等问题，提出了一套面向复杂场景的多源融合机器人定位方法。构建了融合里程计、音频测距与单线激光雷达点云匹配的机器人定位系统。通过解耦实时位姿输出与准静态参数标定的动态在线标定框架，规避传统滤波方法中时间延迟和参数耦合导致的位姿投影误差与标定发散；同时引入鲁棒损失函数构建自适应加权音频定位算法，有效抑制多径和非视距误差。在机器人定位框架中利用滑窗优化与粒子滤波实现里程计、音频测距和激光雷达地图匹配的稳健融合，有效提升了在特征退化和局部盲区下的连续性和鲁棒性。实验表明，所提方法在复杂室内环境下可实现稳定、连续且高精度的机器人自定位，为低成本移动平台在真实场景中的高可用导航提供了有效方案。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260352" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-013">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>刍议空间智能与地理空间智能</h3>
+<p>刘瑜; 陈琳; 张帆; 董磊; 许立言; 乐阳; 董卫华; 李海峰; 吴志峰; 柴彦威; 孟小峰; 林珲; 陈军</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260391</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260391" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260391" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>刍议空间智能与地理空间智能</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260391 · 摘要来源：出版方摘要</p><p class="abstract-body">人工智能技术正在改变人类认知与改造空间的方式，当前形成两类内涵迥异的空间智能技术。一类来自计算机与人机交互领域的空间智能，面向机器的具身交互；另一类是地理学发展而来的地理空间智能，侧重宏观尺度地表系统分析模拟。两类技术路径的割裂差异，根源在于其依托的空间本体不同，即微观的具身空间与宏观的离身空间，二者在本体论、认识论层面存在第一性的差异。具身空间立足人体尺度，强调主体体验与社会建构，对智能体的情境感知、实时交互能力提出高要求；离身空间强调客观系统观测，面向区域乃至全球尺度，重点解决海量时空数据处理与复杂过程模拟问题。现有研究往往割裂两类范式，较少讨论二者融合的理论基础。基于此，辨析了具身/离身空间的核心差异，对比两套范式对应的技术体系，提出地理空间数字孪生作为统一集成平台，以多尺度空间智能体实现微观与宏观能力贯通，以期为智慧城市、气候变化等复杂人地系统问题提供新的理论视角与实现路径。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260391" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-014">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>城市建成环境多源遥感智能监测技术研究进展与展望</h3>
+<p>陈能成; 江钰尧; 唐炉亮; 陈杰; 耿丹; 王珂; 柳絮</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260387</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260387" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260387" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>城市建成环境多源遥感智能监测技术研究进展与展望</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260387 · 摘要来源：出版方摘要</p><p class="abstract-body">城市建成环境监测是城市体检和城市更新的基础。面向低成本、大范围、高动态监测需求，从监测指标体系、空天协同三维建模与人工表面材质识别、城市“人-车-物”活动流动态监测、动静耦合模拟仿真等方面综述多源遥感智能监测技术进展，介绍遥感智能监测平台及建筑节能、城市更新和人居环境等典型应用，分析不同方法的数据条件、处理特点与适用范围。在此基础上，讨论多无人系统协同自主广域监测、生成式人工智能低成本监测，以及静态空间形态与动态活动过程协同动态监测三项未来挑战。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260387" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i10-015">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ASSIGNMENT</p>
+<h3>三维地籍支撑的土地混合利用立体治理框架</h3>
+<p>应申; 叶腾; 郭仁忠; 赵志刚; 胡渝清</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I10</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260242</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260242" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260242" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>三维地籍支撑的土地混合利用立体治理框架</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260242 · 摘要来源：出版方摘要</p><p class="abstract-body">针对二维地籍难以支撑城市土地混合利用中权属叠合与空间分层的现实困境，探索三维地籍支撑土地混合利用及其立体治理的路径与机制。采用理论分析与案例阐释，构建由复合功能协同治理、立体空间产权表达和三维RRR（rights, restrictions, and responsibilities）配置组成的立体治理框架。结果表明：（1）三维地籍可为兼容性、容量、外部性等要求的识别、表达和核验提供依据；（2）通过三维空间单元、界面关系与连通网络，形成边界清晰、关系明确、可核验的产权对象；（3）支撑形成由权利配置、公共限制与治理责任构成的RRR配置体系，使治理要求落实到具体空间和主体。三维地籍不仅承担立体权属表达的技术功能，更为复杂立体空间资源的精细化治理提供了空间信息基础和产权表达基础，能够有效支撑平面土地管理向立体空间治理的转变。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260242" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-003-2026-v51-i11"><h3>武汉大学学报（信息科学版） · 2026-V51-I11</h3><p>官网期次目录确认 2026年第51卷第11期；基线 V51-I9 之后未简报完整期，按序 NEW_ISSUE claim。</p><p><span class="evidence"><a href="https://ch.whu.edu.cn/cn/article/2026/11" rel="noopener noreferrer">官方期次目录</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>17</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-003-2026v51i11-001">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>星地空天信息智能协同与计算</h3>
+<p>李建成; 邹贤才; 李志伟; 金涛勇</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260397</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260397" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260397" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>星地空天信息智能协同与计算</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260397 · 摘要来源：出版方摘要</p><p class="abstract-body">回顾了武汉大学测绘学科自1956年创建以来，围绕服务国家使命历经传统测绘、数字化测绘、信息化测绘3个阶段的发展历程与主要成就。在精密测量、计算机、人工智能、宇航科技与通信技术交叉融合的背景下，阐述了测绘学科研究对象由地球及其他实体与地理空间分布有关的属性为主拓展为空天信息的变革趋势，明确了空天信息的定义与内涵；结合国家安全、灾害监测与应急、社会治理、自然资源管理、海洋管控、深空探测等领域的案例，指出空天信息事关国家安全和发展全局，是全球争夺的战略制高点。揭示了传统单星采集、地面处理模式在传输、处理、应用等多个维度上的结构性矛盾；系统分析了全球空天竞争由卫星规模比拼转向星上智能处理、星间协同与地面自主决策能力竞争的态势，指出学科转型的方向是空天信息科学与技术，而星地空天信息智能协同与计算正是转型的制高点与切入点，并提出其基本概念、总体架构与关键科学问题。分析了从“天感地算”到星地协同的范式变革，指出其是应对我国未来星座建设关键挑战、把握重大机遇的必然选择，并从人才培养与科研管理模式两个维度讨论了依托传统测绘学科，转型发展建设空天信息国家战略科技力量的可能路径。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260397" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-002">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>物理大地测量学进展</h3>
+<p>罗志才</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260398</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260398" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260398" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>物理大地测量学进展</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260398 · 摘要来源：出版方摘要</p><p class="abstract-body">物理大地测量学的主要任务是用物理方法研究和测定地球形状、地球重力场及各自随时间的变化，揭示地球系统的物质迁移规律及其地球动力学机制。简要介绍物理大地测量学的发展历程，重点梳理了地球重力场探测技术和地球重力场逼近理论的主要进展。面向地球科学前沿研究及大地测量基准、资源勘探和灾害监测等领域的战略需求，指出了物理大地测量学面临的挑战及未来10年的重点发展方向，以期为推动物理大地测量学发展及其与地球物理学、水文学、海洋学和空间科学等众多学科的交叉融合提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260398" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-003">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>面向全球快速厘米级服务的GNSS数据处理研究进展</h3>
+<p>辜声峰; 朱家熹; 毛飞宇; 郭靖; 郭将; 许小龙; 曲墨玉; 郭荣欣; 龚晓鹏; 戴小蕾; 耿江辉; 楼益栋; 赵齐乐</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260351</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260351" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260351" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向全球快速厘米级服务的GNSS数据处理研究进展</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260351 · 摘要来源：出版方摘要</p><p class="abstract-body">北斗卫星导航系统（BeiDou navigation satellite system，BDS）是国家重要的时空信息基础设施，高精度定位与授时正逐步成为基础时空服务能力，实时精密产品是全球快速厘米级服务的重要支撑。随着实时高精度定位由传统精密单点定位（precise point positioning，PPP）向PPP-AR（PPP-ambiguity resolution）发展，利用相位偏差产品实现模糊度固定、加快定位收敛已成为实时精密服务的重要发展方向。系统介绍了武汉大学国际GNSS服务组织（international GNSS service，IGS）实时分析中心多GNSS实时精密产品处理模型与算法研究进展，重点阐述实时精密定轨、高稳定星地钟协同时间基准维持与协调世界时（coodinated universal time，UTC）溯源等关键方法，并在轨道、钟差产品基础上新上线多频相位偏差产品，支撑实时PPP-AR快速模糊度固定。产品评估结果表明，GPS、GLONASS、Galileo和BDS中地球轨道卫星实时轨道三维均方根分别为2.4、4.6、3.8和4.9 cm；UTC(k)频率驾驭使GPS、BDS-3和Galileo的UTC时间传递误差标准差分别降低58.4%、32.8%和76.2%；BDS-3多频相位偏差具有良好的连续性和稳定性。全球测站GPS/Galileo/BDS-3联合PPP-AR实验表明，初始化150 s后，水平和高程误差分别降至3.6 cm和9.9 cm，95%样本误差分别优于3.9 cm和8.6 cm。武汉大学IGS实时分析中心已形成涵盖轨道、钟差和信号偏差的多GNSS实时精密产品体系，实现了由PPP厘米级定位向PPP-AR快速厘米级定位服务拓展。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260351" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-004">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>自适应弹性椭圆海洋划界算法</h3>
+<p>董箭; 王栋; 唐露露; 马梦锴; 谢天; 赵巍</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260302</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260302" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260302" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>自适应弹性椭圆海洋划界算法</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260302 · 摘要来源：出版方摘要</p><p class="abstract-body">针对参考椭球面离散双边界划界中传统弹性圆算法迭代中心（暂停点）稀疏、搜索方向适应性不足及折线离散性较大的问题，提出了自适应弹性椭圆海洋划界算法。利用当前暂停点到两侧边界基点集合的最短大地距离确定辅助椭圆长半轴，以压缩比控制短半轴，根据两侧关联最近基点的有向连线更新长轴方向，在半椭圆范围内定向搜索，并以有界误差圆启发式局部搜索处理超限候选点。实验结果表明，所提方法相较传统弹性圆算法平均偏距和最大偏距分别降低36.82%和19.57%，平均弦偏差降低62.51%，单点平均耗时相较距离等比例线法由25.21 s降至0.80 s。此外，该方法本身具备良好的几何基础，存在几何偏距与计算代价之间的较好折中，且4类适用性场景均正常运行完成。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260302" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-005">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>全球地表质量迁移驱动的21世纪极移长期趋势预测</h3>
+<p>朱圣鸿; 张小红; 焦佳爽; 马鹏飞</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260299</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260299" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260299" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>全球地表质量迁移驱动的21世纪极移长期趋势预测</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260299 · 摘要来源：出版方摘要</p><p class="abstract-body">气候变化导致的冰盖冰川消融与陆地水储量变化会引起地表质量重新分布，并对地球极移的长期变化具有激发作用。以2026—2100年为研究时段，综合采用格陵兰冰盖、南极冰盖、山地冰川和陆地水储量多模型预测数据，选取第六次耦合模式比较计划气候情景框架中的低强迫情景SSP1-2.6和高强迫情景SSP5-8.5，利用旋转弹性地球海平面方程求解引力自洽的海平面指纹，进而计算极移质量激发函数，并通过Liouville方程预测气候诱发极移的长期演化轨迹。在此基础上，定量分析不同质量源的相对贡献、模型集合不确定性及其引起的固体地球极潮效应。研究结果表明，相对于2026年，在SSP1-2.6与SSP5-8.5情景下，至2100年气候驱动的地极位移分别为8.86 m和19.62 m，后者约为前者的2.21倍。4类质量源按照对极移长期趋势的影响程度由大到小排序，依次为格陵兰冰盖、南极冰盖、山地冰川和陆地水储量，其中格陵兰冰盖为最主要的单体贡献源，在SSP5-8.5情景下分别贡献 𝑥 𝑝 和 𝑦 𝑝 分量变化的67%和97%。在高强迫情景下，至2100年气候驱动固体地球极潮垂向位移的最大绝对值约为20.96 mm，部分中纬度区域达到厘米量级。研究结果定量揭示了地表质量迁移对21世纪中后期极移及固体地球极潮的长期影响，可为气候诱发极移分量的预测、毫米级测站坐标改正和高精度地球参考框架维护提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260299" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-006">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>基于TabTransformer的地球等离子体层时空演化特征及磁暴响应分析</h3>
+<p>张琦; 郭艾丽思; 翟长治; 孔建</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260295</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260295" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260295" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于TabTransformer的地球等离子体层时空演化特征及磁暴响应分析</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260295 · 摘要来源：出版方摘要</p><p class="abstract-body">等离子体层作为连接电离层与磁层的关键区域，其等离子体层总电子含量（plasmaspheric total electron content, PTEC）变化对全球导航定位系统定位、空间天气监测及电离层-磁层耦合研究具有重要意义。针对传统观测在空间分布上不均匀、时间分辨率偏低，以及经验模型难以对其复杂时空变化作出准确描述等问题，选取2006—2019年的COSMIC-1顶部总电子含量观测数据，基于TabTransformer构建了全球PTEC模型，并系统性地分析了PTEC的日变化、季节变化、年际变化规律及磁暴扰动响应特征。结果显示，所构建的深度学习模型具有较高精度，测试集上的平均绝对误差为0.678 1 TECU，均方根误差为0.966 6 TECU，相关系数达到0.940 8，且无显著系统性偏差。PTEC表现出明显的多尺度时空变化特征。日变化方面，PTEC整体呈午后单峰结构，峰值主要出现在12:00:00—16:00:00地方时（local time，LT），谷值出现在03:00:00—06:00:00 LT，低纬度地区日周期现象最显著，日变化幅度最大，中纬度地区太阳高年的日周期特征较太阳低年更为明显，而高纬地区几乎没有日周期特征，日变化幅度最小。季节变化上，全球PTEC整体表现为冬至最高、夏至最低、春秋分居中的分布格局，且存在南北半球不对称性。年际变化方面，PTEC主要受太阳活动主导，太阳高年PTEC的变化趋势与F10.7指数高度一致，太阳低年则没有明显的相关性。磁暴期间，PTEC的全球响应表现出显著的纬度、LT及L壳层依赖性：主相阶段随Dst急剧下降而同步大幅上升，原有的日变化特征被完全打破，全球整体以正相暴为主，呈现增强态势；进入恢复相后，全球正相暴逐步衰减，低中纬的负相暴持续扩大，而高纬仍维持正相暴，不同地方时扇区存在增强与减弱并存的空间分异特征。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260295" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-007">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>DCMR-Net：一种面向复杂噪声地震记录的多尺度残差去噪网络</h3>
+<p>陈冠芝; 张成枫; 张涵; 倪四道</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260325</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260325" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260325" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>DCMR-Net：一种面向复杂噪声地震记录的多尺度残差去噪网络</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260325 · 摘要来源：出版方摘要</p><p class="abstract-body">随着深度学习在信号去噪领域的快速发展，基于卷积神经网络的数据驱动方法为复杂噪声背景下的地震信号恢复提供了新的技术途径。去噪卷积神经网络（denoising convolutional neural network，DnCNN）最初面向自然图像去噪任务设计，直接迁移至地震信号去噪时，存在感受野受限、特征尺度单一以及有效震相与噪声区分能力不足等问题。针对上述问题，提出扩张卷积多尺度残差网络（dilated convolution multi-scale residual network，DCMR-Net）。该模型利用不同扩张率的空洞卷积扩大网络感受野，通过多尺度特征融合提取局部震相细节和整体波形结构，并引入注意力机制，增强有效震相特征，抑制无关噪声响应。采用频率-波数域方法构建三分量FK合成地震波信号，分别叠加真实背景噪声、Gaussian噪声、Pink噪声和Combo混合噪声，并选取斯坦福地震数据集（Stanford earthquake dataset，STEAD）中的低信噪比实测地震记录进行模型评估。结果表明，DCMR-Net对4类噪声均具有较强的适应性，能够有效压制不同类型的噪声，同时较好保留原始合成有效信号的振幅和主要震相；在STEAD实测地震记录中，该模型能够有效提高信噪比，减弱P波到达前的背景噪声，并较好保留P波初至及主要震相特征。研究表明，DCMR-Net相较于DnCNN模型在合成数据和真实地震记录中都具有更好的去噪效果和应用潜力。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260325" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-008">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>高分辨率多模态遥感智能解译进展与展望：从遥感基础模型到遥感智能解译脑</h3>
+<p>钟燕飞; 万瑜廷; 马爱龙; 刘寅贺; 李柯凡; 杨若雨; 陈梓航</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260400</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260400" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260400" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>高分辨率多模态遥感智能解译进展与展望：从遥感基础模型到遥感智能解译脑</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260400 · 摘要来源：出版方摘要</p><p class="abstract-body">高分辨率多模态遥感智能解译是实现复杂地学场景感知与理解的重要手段，在地表动态监测、资源环境调查和灾害应急等领域具有重要应用价值。近年来，随着深度学习与基础模型的发展，遥感智能解译在多模态特征感知、语义理解认知和复杂决策服务等方面取得了显著进展。系统梳理了遥感影像基础模型、遥感理解基础模型与遥感决策服务平台的研究进展，并在此基础上提出从遥感基础模型向遥感智能解译脑演进的发展思路。同时，分析了当前高分辨率多模态遥感智能解译面临的多模态统一表征不足、复杂地学知识推理可信性有限、感知认知与决策执行协同不足等关键挑战，并从空天地人一体化感知、多模态多尺度统一表征、知识引导的可信地学认知、线上实时自主决策、软硬一体化系统集成与应用等方面展望未来发展方向，以期为高分辨率多模态遥感智能解译的理论研究与技术发展提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260400" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-009">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>夜光遥感数据挖掘研究进展与展望</h3>
+<p>李熙; 王孟杰; 伍亿真; 李永兴; 谢齐元</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260303</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260303" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260303" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>夜光遥感数据挖掘研究进展与展望</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260303 · 摘要来源：出版方摘要</p><p class="abstract-body">夜光遥感作为表征人类活动空间分布和社会经济发展水平的重要遥感技术，具有覆盖范围广、时间连续性强和空间表达能力突出等优势，已广泛应用于社会经济研究领域。近年来，随着多源夜光数据获取能力提升以及人工智能、数据融合等技术的发展，夜光遥感研究逐渐由传统统计分析向智能化数据挖掘方向发展。系统综述了夜光遥感数据挖掘研究进展，首先介绍夜光遥感主流传感器与数据产品的发展特点；然后总结夜光数据特征表达、数据驱动模型和多模态融合等关键方法的发展现状；进一步归纳夜光遥感在社会经济监测、城市发展、灾害响应、能源与碳排放、生态环境及资源活动监测等方面的应用进展，可为夜光遥感数据挖掘研究及相关应用提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260303" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-010">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>高精度测绘激光雷达研究进展</h3>
+<p>毛庆洲; 周昊; 吴安磊; 周宝定; 段志鑫; 李清泉</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260348</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260348" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260348" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>高精度测绘激光雷达研究进展</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260348 · 摘要来源：出版方摘要</p><p class="abstract-body">高精度测绘激光雷达是以获取目标及场景高精度三维空间信息为核心任务的主动式光电探测系统，在实景三维重建、数字孪生城市和新型基础测绘等重大应用中发挥着不可替代的作用。在概念内涵上，测绘激光雷达与避障激光雷达在任务目标、空间基准和指标侧重上存在本质区别，其性能评价涵盖几何测量、回波探测、时间同步和环境适应性等多个维度。在技术体制上，从探测原理、光源波长、扫描方式和搭载平台4个维度可系统划分其分类体系，各类平台在测程、精度和覆盖范围上呈现明显的分化与互补格局。在关键技术层面，全波形处理、测距模糊与多脉冲解算、扫描机构与精密测角、系统误差标定与动态补偿是决定系统性能的核心环节，国内外在这些领域的研究各有侧重且仍面临若干技术瓶颈。未来，测绘激光雷达将在全波形实时处理、高重频测距模糊解算、扫描机构与精密测角、系统误差标定与动态补偿等本源技术上持续突破，并呈现多体制融合、固态扫描、光子集成以及低成本化等发展趋势。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260348" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-011">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>近景森林感知：现状、挑战与展望</h3>
+<p>梁欣廉; 陈健昌; 庞勇; 丁易; 陈磊; 郑光; 陈佳乐; 王晓晨; 米湘成; 付安民; 吴发云; 张怀清; 雷相东; 臧润国; 陈尔学; 郭庆华; 李增元; 龚健雅</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260399</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260399" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260399" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>近景森林感知：现状、挑战与展望</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260399 · 摘要来源：出版方摘要</p><p class="abstract-body">近景感知以接触、非接触方式从近距离观测目标，具有分辨率高、信息维度广、平台灵活多样、场景适应性强等特点，是获取对象真实特征的重要途径，也是连接地面真实场景与航空、卫星遥感观测的关键桥梁。随着观测平台、传感器和信息解译技术的快速发展，加之行业应用场景持续拓展，近景感知取得跨越式发展，正由静态、单源、单次、人工观测向移动、多源、连续和自主方式演进，已形成较完备的软硬件与应用体系，涵盖平台、传感器、数据融合、识别解译、定量反演、变化检测及行业应用等关键环节。在森林环境中，近景感知通过获取样地、单木乃至枝干、叶片等多尺度结构、光谱及动态信息，实现从宏观林分到微观特征的多级定量表达，支撑森林参数精准反演、生长动态监测及生态过程机理研究，并广泛应用于森林资源监测、碳汇计量、健康评估、生物多样性评价和智慧经营等领域。当前，近景森林感知正处于快速发展阶段，面临观测信息时空完整度不足、多源数据协同能力有限、数据与评价标准不统一、跨区域泛化能力不足及多尺度误差传播等问题。围绕平台与传感器、数据处理、应用场景3个层面，梳理近景森林感知发展脉络，总结研究进展与现状，分析面临的关键挑战。进一步，近景森林感知研究应加强对观测完整性、实施方案标准化、跨平台跨区域迁移能力的关注，推动开发物理生态约束融合解决方案，并结合自主感知、边缘计算和数字孪生，推动观测体系向全面、规范、可信和机理驱动方向发展，构建一体化协同观测与人工智能深度融合的新型森林监测体系。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260399" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-012">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>融合细节⁃全局特征与结构增强的多源遥感影像点注释弱监督语义分割</h3>
+<p>孙根云; 苗静茹; 赵元昊; 张爱竹; 张文娟; 马毅; 孙林</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260280</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260280" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260280" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>融合细节⁃全局特征与结构增强的多源遥感影像点注释弱监督语义分割</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260280 · 摘要来源：出版方摘要</p><p class="abstract-body">点注释弱监督能够显著降低遥感影像语义分割的像素级标注成本，但由于监督信号高度稀疏，模型容易出现类别语义表达不足、目标边界模糊及细小地物遗漏等问题。与此同时，复杂城市区域地物类型多样、尺度差异明显，单源遥感影像难以充分表征地物的光谱、纹理和空间结构特征。因此，融合多源遥感影像的互补信息已成为提升复杂场景语义分割性能的重要方向。然而，现有多源弱监督方法对局部细节互补、全局语义交互和边界结构约束的联合建模仍不充分。针对上述问题，提出一种融合细节-全局特征与结构增强网络（detail-global feature fusion and structure enhancement network，DGSE-Net），用于多源弱监督遥感影像语义分割。DGSE-Net由多尺度特征提取、尺度自适应特征组合以及解码与输出3个部分组成。其中，多尺度特征提取部分采用分割大模型（segment anything model，SAM）的图像编码器和ResNet18编码器，分别提取主源数据与辅助源数据的多尺度特征；尺度自适应特征组合部分首先通过细节-全局多源特征融合（detail-global multi-source feature fusion，DGCF）模块在不同尺度上独立建模局部空间细节互补与全局语义交互，提高多源特征的一致性与判别能力，然后通过结构感知边缘增强（structure-aware edge enhancement，SAEE）模块引入Sobel边缘先验、邻域权重降噪、浅层局部卷积和深层窗口注意力，强化弱监督条件下地物边界、空间结构与细小目标的特征表达；解码与输出部分采用跨分辨率特征集成（cross-resolution feature integration，CRFI）解码模块，对多尺度增强特征进行逐步聚合，恢复空间细节并生成语义分割结果。在ISPRS Potsdam和ISPRS Vaihingen数据集上的点注释弱监督实验表明，DGSE-Net在仅使用0.01%像素点标签的条件下取得了优于对比方法的分割精度，消融实验进一步验证了DGCF、SAEE和CRFI的有效性。DGSE-Net能够在极稀疏点监督条件下有效利用多源遥感数据的互补信息，为低标注成本的高分辨率遥感影像精细语义分割提供了一种有效方法。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260280" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-013">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>科学价值定量化的天问三号着陆区多参数智能选址方法</h3>
+<p>才谨豪; 徐箫剑; 康志忠; 左秉正; 胡昊翔; 叶晨鸣; 吴雨航; 曹震</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260343</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260343" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260343" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>科学价值定量化的天问三号着陆区多参数智能选址方法</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260343 · 摘要来源：出版方摘要</p><p class="abstract-body">火星是探寻地外天体潜在生命痕迹的重要窗口，天问三号火星采样返回任务将探寻潜在生命痕迹、认识火星宜居环境演化作为主要科学任务。着陆区选址不仅关系工程安全性，还直接决定能否获取保存潜在生命痕迹的高科学价值样品。然而，火星宜居环境受多种地质条件控制，部分地貌成因存在多解性，仅靠单一遥感观测难以准确表征科学价值。针对上述问题，提出一种科学价值定量化的天问三号着陆区多参数智能选址方法。研究综合多源遥感数据，对撞击坑、沙丘、凹锥、方山等地貌类型进行系统编目，并采用“工程约束—科学评价”双阶段流程：依据任务需求配置地形条件、表面障碍物、热物理条件等工程约束识别可行区域并构建候选椭圆，利用地貌、地层和矿物进行地质背景与演化历史、物质组成多样性、液态水活动证据、宜居环境与生命标志保存潜力以及后期改造与地质记录保存状态5个科学维度进行可追溯的评价筛选。最终在伊希斯平原尼罗堑沟群、茅尔斯峡谷出口及祝融号着陆区周边3个研究区的工程可行域内绘制54个候选着陆椭圆，分别筛选出1个优选椭圆，并设计多层级敏感性实验评价方法的可靠性。优选椭圆在多维科学价值上表现出较高优先级，可为天问三号任务着陆区优选及后续高分辨率复核提供可追溯、可定量的空间决策依据，也可为后续火星探测任务选址智能化提供方法参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260343" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-014">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>脉冲驱动光谱⁃空间⁃时序建模的多光谱无人机单目标跟踪</h3>
+<p>赖普坚; 张雪娇; 程塨</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260279</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260279" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260279" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>脉冲驱动光谱⁃空间⁃时序建模的多光谱无人机单目标跟踪</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260279 · 摘要来源：出版方摘要</p><p class="abstract-body">得益于不同谱段提供的丰富光谱线索，多光谱无人机单目标跟踪受到广泛关注。然而，现有方法大多依赖功耗较高的人工神经网络进行设计，难以满足无人机平台低能耗的视觉感知需求。为此，提出一种脉冲驱动光谱⁃空间⁃时序建模的多光谱无人机单目标跟踪算法。具体而言，所提算法主要包含记忆扰动增强的光谱⁃空间⁃时序检索模块和脉冲驱动的光谱门控融合模块。记忆扰动增强的光谱-空间-时序模块通过构建紧凑的历史帧目标记忆缓存，引导搜索特征与历史记忆进行递归交互，逐步挖掘目标相关线索。针对历史帧目标记忆缓存中噪声累积或者表征偏移问题，引入记忆扰动机制，通过模拟潜在的记忆偏差，增强模型对不可靠历史信息和背景干扰的鲁棒性。此外，通过时序聚合生成紧凑搜索特征，并沿光谱组维度进行脉冲自注意力建模，实现不同光谱组之间的信息交互。脉冲驱动的光谱门控融合模块可自适应评估不同光谱组特征的重要性，并进行加权融合，从而增强关键光谱组的特征响应，同时抑制光谱冗余信息。在多光谱无人机单目标跟踪数据集上进行实验，所提算法的精度与归一化精度分别达到83.5%和82.2%，能耗仅32.4 mJ。结果表明，所提算法在提升多光谱无人机单目标跟踪精度与复杂场景鲁棒性的同时，仍保持极低的能耗开销。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260279" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-015">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>自主式智慧重载铁路空间智能：概念内涵、技术挑战与应用展望</h3>
+<p>丁雨淋; 苏有斌; 张卫华; 朱庆</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260385</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260385" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260385" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>自主式智慧重载铁路空间智能：概念内涵、技术挑战与应用展望</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260385 · 摘要来源：出版方摘要</p><p class="abstract-body">自主式智慧重载是重载铁路实现安全可靠、高效集约和绿色低碳的重要发展方向，空间智能是支撑其感知、决策与执行闭环的关键基础。探讨自主式智慧重载及其空间智能的概念内涵、提出面向任务范围、环境适应能力与人机分工的自主化能力分析框架，构建空间智能共性参考架构；围绕物理等效数字孪生、多模态空间推理和多专业协同空间智能体，梳理研究进展与关键技术挑战，分析其在产运销一体化运输组织、重载列车群组运行、基础设施少人、无人智能运维及交能融合中的应用机制。重载铁路自主化的关键在于贯通多尺度对象表征、跨专业过程推演与工程约束下的协同行动。空间信息领域需加强与铁路工程、人工智能和自动控制的交叉融合，通过数据、模型与知识协同，将空间信息服务由状态表达拓展至认知推理、决策支持和执行反馈，为重载铁路自主运行提供空间智能支撑。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260385" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-016">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ISSUE</p>
+<h3>城市更新的片区‑地块空间方案生成与优化方法</h3>
+<p>高金顶; 崔学森; 刘耿; 张鸿辉; 刘小平</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260324</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260324" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260324" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>城市更新的片区‑地块空间方案生成与优化方法</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260324 · 摘要来源：出版方摘要</p><p class="abstract-body">城市更新需要在共同场地条件下开展多方案推演，并衔接片区功能组织与地块建筑布局。针对现有生成式城市设计聚焦单一对象、难以支持多情景生成与跨层级调整的问题，提出片区‑地块空间方案生成与调整方法。该方法以共同规划情景统筹用地约束和建设控制参数，贯通分层道路生成、地块构建、多情景用地配置与细分、逐地块建筑布局生成及对象级调整。实验结果表明，所提方法可在同一道路-地块骨架上形成差异明确的多情景用地方案，住宅布局生成取得最低Fréchet Inception距离，4项建设控制参数误差均低于对比模型，并将建筑重叠面积由59.4 m²降至0 m²。广钢新城案例形成4类更新方案，实现道路、地块、用地和建筑布局的一体化生成。该方法可将更新方案组织为可比较、可测算和可局部修正的对象化状态，为城市更新前期方案推演与迭代调整提供支撑。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260324" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-003-2026v51i11-017">
+<p class="kicker">武汉大学学报（信息科学版） · FORMAL_ASSIGNMENT</p>
+<h3>利用改进中心碰撞优化的低空旅游航线规划算法</h3>
+<p>徐虹; 李婷婷; 方志祥; 冯明翔</p>
+<dl>
+<div><dt>卷期</dt><dd>V51 · I11</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260122</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260122" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260122" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>利用改进中心碰撞优化的低空旅游航线规划算法</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260122 · 摘要来源：出版方摘要</p><p class="abstract-body">随着低空空域的逐步开放和电动垂直起降飞行器技术的快速发展，低空旅游作为一种新兴的旅游方式展现出巨大潜力。城市环境下低空飞行旅游航线规划面临景观价值难以量化、建筑密集、特殊功能区禁飞或限飞导致可行域破碎等难题。为此，构建了路径规划的目标函数，提出了基于改进中心碰撞优化（improved centered collision optimizer，ICCO）的低空旅游航线规划算法。该算法采用了基于Sobol序列和反向学习的初始化策略、Levy飞行位置更新策略、边界修正机制以及差分进化等策略，能有效优化初始路径种群的分布，保证算法收敛稳定性以及增强算法的局部搜索能力。实验结果表明，ICCO生成的路径平滑且不违反约束，其求解精度、收敛速度、稳定性和约束处理能力都优于其他对比算法；所提方法能够规划出具有最小目标函数解的路径，有效协调美观、低扰、平稳、经济四大需求，为低空旅游的实践应用提供关键支撑。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260122" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="issue" id="issue-reg-063-2026-v21-i4"><h3>IEEE Computational Intelligence Magazine · 2026-V21-I4</h3><p>IEEE Xplore Current Issue 确认 Volume 21 Issue 4 • Nov.-2026；过滤封面/目录/编委/征稿/年度索引等非学术条目。</p><p><span class="evidence"><a href="https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=11740818" rel="noopener noreferrer">官方期次目录</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>11</strong> 篇（均含摘要抽屉，优先账本/Crossref）。</p></article><article class="paper" id="formal-reg-063-2026v21i4-001">
+<p class="kicker">IEEE Computational Intelligence Magazine · FORMAL_ISSUE</p>
+<h3>A Fuzzy Diversity Handling Technique-Based Multimodal Multi-Objective Evolutionary Algorithm and Its Base Station Location Applications [Research Frontier]</h3>
+<p>Qianlong Dang; Na Lin; Xiaoyu He; Junhu Ruan</p>
+<dl>
+<div><dt>卷期</dt><dd>V21 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3658059</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ieeexplore.ieee.org/document/11659804" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3658059" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Fuzzy Diversity Handling Technique-Based Multimodal Multi-Objective Evolutionary Algorithm and Its Base Station Location Applications [Research Frontier]</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3658059 · 摘要来源：出版方摘要</p><p class="abstract-body">In solving multimodal multi-objective optimization problems (MMOPs), it is very important to retain promising solutions, which helps to obtain multiple equivalent Pareto optimal solution sets. However, many algorithms adopt the selection mechanism based on convergence-first, which leads to the elimination of promising solutions with poor objective values. This paper proposes a fuzzy diversity handling technique-based multimodal multi-objective evolutionary algorithm, which adopts the co-evolution strategy to simultaneously evolve diversity and convergence archives. In the diversity archive, an adaptive piecewise membership function is designed to divide the dominated solutions with good diversity and the non-dominated solutions with good objective values into the same fuzzy subset, and the promising dominated solutions are preserved by the crowding distance in the decision space. In the convergence archive, a dynamic selection strategy is adopted to delete the overcrowded non-dominated solutions by calculating the neighborhood distance, balancing the distribution of solutions. Moreover, this paper proposes a suite of practical test problems about base station location, which need to obtain the optimal location of base station through the calculation of spatial distance. The proposed algorithm and eleven competitive algorithms are compared on 48 benchmark problems and 4 base station location problems. The results demonstrate that the proposed algorithm has superior performance.</p><p class="abstract-meta"><span class="evidence"><a href="https://ieeexplore.ieee.org/document/11659804" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-063-2026v21i4-002">
+<p class="kicker">IEEE Computational Intelligence Magazine · FORMAL_ISSUE</p>
+<h3>Temporal Structure Encoding Drives Accurate and Robust Temporal Processing in Spiking Neural Networks [Research Frontier]</h3>
+<p>Xinyi Chen; Yinsong Yan; Hanwen Liu; Malu Zhang; Yujie Wu; Qinyuan Ren; Huajin Tang; Kay Chen Tan; Jibin Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V21 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3695017</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ieeexplore.ieee.org/document/11659813" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3695017" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Temporal Structure Encoding Drives Accurate and Robust Temporal Processing in Spiking Neural Networks [Research Frontier]</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3695017 · 摘要来源：出版方摘要</p><p class="abstract-body">Neuromorphic computing, inspired by the fundamental structures and principles of biological neural systems, has emerged as a promising paradigm for achieving energy-efficient and robust artificial intelligence. However, effective temporal processing in dynamic scenarios remains a fundamental challenge, as neuromorphic systems must handle temporally varying signals and discriminate their underlying temporal structures over time, a capability that remains limited in existing spiking neural networks (SNNs). To address this challenge, we propose Temporal-structure Encoding spiking neural networks (TE-SNNs), a framework equipped with a Temporal-structure Encoding (TE) module that explicitly encodes salient rhythmic and non-rhythmic temporal structures. By leveraging TE to modulate neuronal dynamics, TE-SNNs substantially enhance the capability to discriminate various temporal structures in cognitive timing tasks. Extensive experiments on sequential benchmarks further reveal that this temporal discrimination supports accurate and robust temporal processing. Finally, we demonstrate the practical significance of TE-SNNs in a closed-loop autonomous driving task, where they are implemented on neuromorphic hardware to generate optimized driving strategies with orders-of-magnitude improvements in energy efficiency.</p><p class="abstract-meta"><span class="evidence"><a href="https://ieeexplore.ieee.org/document/11659813" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-063-2026v21i4-003">
+<p class="kicker">IEEE Computational Intelligence Magazine · FORMAL_ISSUE</p>
+<h3>Fusion Intelligence for Digital Twinning AI Data Centers: A Synergistic GenAI-PhyAI Approach [Research Frontier] [Research Frontier]</h3>
+<p>Ruihang Wang; Minghao Li; Zhiwei Cao; Jimin Jia; Yonggang Wen</p>
+<dl>
+<div><dt>卷期</dt><dd>V21 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3712276</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ieeexplore.ieee.org/document/11659808" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3712276" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Fusion Intelligence for Digital Twinning AI Data Centers: A Synergistic GenAI-PhyAI Approach [Research Frontier] [Research Frontier]</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3712276 · 摘要来源：出版方摘要</p><p class="abstract-body">The explosion in artificial intelligence (AI) applications is pushing the development of AI-dedicated data centers (AIDCs), creating management challenges that traditional methods and standalone AI solutions struggle to address. While digital twins are beneficial for AI-based design validation and operational optimization, current AI methods for their creation face limitations. Specifically, physical AI (PhyAI) aims to capture the underlying physical laws, which demands extensive, case-specific customization, and generative AI (GenAI) can produce inaccurate or hallucinated results. We propose Fusion Intelligence, a novel framework synergizing GenAI’s automation with PhyAI’s domain grounding. In this dual-agent collaboration, GenAI interprets natural language prompts to auto-generate and improve tokenized AIDC digital twins. Subsequently, PhyAI optimizes these generated twins by enforcing physical constraints and assimilating real-time data. Case studies demonstrate the advantages of our framework in automating the creation and validation of AIDC digital twins. These twins deliver predictive analytics to support power usage effectiveness (PUE) optimization in the design stage. With operational data collected, the digital twin accuracy is further improved compared with pure physics-based models developed by human experts. Fusion Intelligence offers a promising pathway to accelerate digital transformation. It enables more reliable and efficient AI-driven digital transformation for a broad range of mission-critical infrastructures.</p><p class="abstract-meta"><span class="evidence"><a href="https://ieeexplore.ieee.org/document/11659808" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-063-2026v21i4-004">
+<p class="kicker">IEEE Computational Intelligence Magazine · FORMAL_ISSUE</p>
+<h3>The Cost of Dreaming: A Survey of Computational Constraints in Generative and Latent World Models</h3>
+<p>Hasaan Ahmad; Haixia Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V21 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3713292</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ieeexplore.ieee.org/document/11663588" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3713292" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>The Cost of Dreaming: A Survey of Computational Constraints in Generative and Latent World Models</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3713292 · 摘要来源：出版方摘要</p><p class="abstract-body">Recent generative architectures such as Genie 3 achieve 24 frames per second at 720p resolution when served from Google Tensor Processing Unit clusters, requiring cloud deployment that introduces latency challenging real-time control in safety-critical robotics. Despite rapid architectural progress, computational efficiency metrics are inconsistently reported across the field; inference latency, parameter counts, and hardware requirements are disclosed selectively, while memory footprint (reported for only 40% of surveyed models) and power consumption (0% of surveyed models) remain largely unmeasured. This reporting gap obscures the efficiency-accuracy frontier and prevents practitioners from making informed deployment decisions. This paper surveys 15 representative world models spanning generative (pixel-space) and latent (joint-embedding) architectures published 2023–2025. We organize these models into a two-tier taxonomy: Tier 1 baseline paradigms (generative vs. latent) and Tier 2 optimization strategies (compression, acceleration, edge deployment). We establish an efficiency frontier spanning five orders of magnitude: from ultra-fast action selection (Deep AIF: 2.37 ms) to multi-second generative models (Cosmos: 383 s per sequence). Our analysis reveals efficiency-optimized models achieving 4.4–75× speedups through latent-space prediction, token compression, and architectural parallelization. We find that high-dimensional sequential operations inside the synchronous control loop appear to be a key bottleneck within the surveyed models, potentially limiting real-time performance. We outline three research priorities toward sub-100 milliseconds on-device models: hierarchical “fast-slow” architectures, dynamics-aware quantization, and standardized efficiency reporting. Our systematic comparison provides actionable deployment guidelines for robotics practitioners navigating the efficiency-expressiveness trade-off.</p><p class="abstract-meta"><span class="evidence"><a href="https://ieeexplore.ieee.org/document/11663588" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-063-2026v21i4-005">
+<p class="kicker">IEEE Computational Intelligence Magazine · FORMAL_ISSUE</p>
+<h3>Actionable Counterfactual Explanations Using Bayesian Networks and Path Planning With Applications to Environmental Quality Improvement [Research Frontier]</h3>
+<p>Enrique Valero-Leal; Pedro Larrañaga; Concha Bielza</p>
+<dl>
+<div><dt>卷期</dt><dd>V21 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3715603</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ieeexplore.ieee.org/document/11659798" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3715603" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Actionable Counterfactual Explanations Using Bayesian Networks and Path Planning With Applications to Environmental Quality Improvement [Research Frontier]</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3715603 · 摘要来源：出版方摘要</p><p class="abstract-body">Counterfactual explanations study what should have changed to obtain alternative results, enabling end users to understand machine learning mechanisms with counterexamples. Actionability is defined as the ability to transform the original case to be explained into a counterfactual case. We develop a method for actionable counterfactual explanations featuring a data-agnostic inference phase: Unlike predecessors, our approach does not directly leverage training data for counterfactual generation. Rather, data are only used initially to learn a density estimator, creating a search landscape in which path planning algorithms are applied to solve the problem and mask endogenous data during the counterfactual generation, which can be sensitive or private. We focus on estimating the data density using Bayesian networks, demonstrating how their enhanced interpretability is useful in high-stakes scenarios. Using a synthetic benchmark composed of 15 datasets, our proposal yields more actionable and simpler counterfactuals than the current state-of-the-art algorithms do. We also test our algorithm with a real-world Environmental Protection Agency dataset and a causal model, with the aim of facilitating a more efficient and equitable study of policies to improve the quality of life in the United States of America counties. Our proposal captures the interaction of variables and allow us to study how policies to improve certain environmental domains (air, water quality, etc.) can be detrimental to others. In particular, the sociodemographic domain is often involved, where we find important variables related to the ongoing housing crisis that can potentially have a severe negative impact on communities.</p><p class="abstract-meta"><span class="evidence"><a href="https://ieeexplore.ieee.org/document/11659798" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-063-2026v21i4-006">
+<p class="kicker">IEEE Computational Intelligence Magazine · FORMAL_ISSUE</p>
+<h3>From Audio Deepfake Detection to AI-Generated Music Detection–A Pathway and Overview</h3>
+<p>Yupei Li; Manuel Milling; Lucia Specia; Björn W. Schuller</p>
+<dl>
+<div><dt>卷期</dt><dd>V21 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3721724</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ieeexplore.ieee.org/document/11701488" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3721724" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>From Audio Deepfake Detection to AI-Generated Music Detection–A Pathway and Overview</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3721724 · 摘要来源：出版方摘要</p><p class="abstract-body">As Artificial Intelligence (AI) technologies continue to evolve, their use in generating realistic, contextually appropriate content has expanded into various domains. Music, an art form and medium for entertainment deeply rooted in human culture, is seeing an increased involvement of AI into its production. However, the unregulated use of AI music generation (AIGM) tools raises concerns about potential negative impacts on the music industry, copyright, and artistic integrity, underscoring the importance of effective AIGM detection. This paper provides a systematic overview of existing AIGM detection methods. We first establish a four-level detection taxonomy: signal-level, feature-level, watermark, and semantic consistency, organising methods according to the type of trace they exploit. Drawing on the more mature field of audio deepfake detection, we then present a stratified transferability analysis that examines which components may or may not transfer to AIGM detection, and under what conditions. A multi-dimensional classification further organises representative methods along input modality, detection granularity, feature type, model type, detection target, robustness setting, and interpretability. We conclude by discussing implications and proposing directions for future research to address ongoing challenges in the field.</p><p class="abstract-meta"><span class="evidence"><a href="https://ieeexplore.ieee.org/document/11701488" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-063-2026v21i4-007">
+<p class="kicker">IEEE Computational Intelligence Magazine · FORMAL_ISSUE</p>
+<h3>Agents Act. Who Decides? [Editor&#x27;s Remarks]</h3>
+<p>Min Jiang</p>
+<dl>
+<div><dt>卷期</dt><dd>V21 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3726101</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ieeexplore.ieee.org/document/11740826" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3726101" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Agents Act. Who Decides? [Editor&#x27;s Remarks]</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3726101</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ieeexplore.ieee.org/document/11740826" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-063-2026v21i4-008">
+<p class="kicker">IEEE Computational Intelligence Magazine · FORMAL_ISSUE</p>
+<h3>The Dogmas of the Quiet Past Are Inadequate to the Stormy Present [President&#x27;s Message]</h3>
+<p>Luis Magdalena</p>
+<dl>
+<div><dt>卷期</dt><dd>V21 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3726104</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ieeexplore.ieee.org/document/11740830" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3726104" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The Dogmas of the Quiet Past Are Inadequate to the Stormy Present [President&#x27;s Message]</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3726104</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ieeexplore.ieee.org/document/11740830" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-063-2026v21i4-009">
+<p class="kicker">IEEE Computational Intelligence Magazine · FORMAL_ISSUE</p>
+<h3>Interview With Founding Editor-in-Chief of IEEE Computational Intelligence Letters [Interview]</h3>
+<p>Min Jiang</p>
+<dl>
+<div><dt>卷期</dt><dd>V21 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3726126</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ieeexplore.ieee.org/document/11740823" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3726126" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Interview With Founding Editor-in-Chief of IEEE Computational Intelligence Letters [Interview]</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3726126</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ieeexplore.ieee.org/document/11740823" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-063-2026v21i4-010">
+<p class="kicker">IEEE Computational Intelligence Magazine · FORMAL_ISSUE</p>
+<h3>CIS Publication Spotlight [Publication Spotlight]</h3>
+<p>Yongduan Song; Dongrui Wu; Carlos A. Coello Coello; Magy Seif El-Nasr; Huajin Tang; Yiu-Ming Cheung; Jun Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V21 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3726127</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ieeexplore.ieee.org/document/11740829" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3726127" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>CIS Publication Spotlight [Publication Spotlight]</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3726127</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ieeexplore.ieee.org/document/11740829" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-063-2026v21i4-011">
+<p class="kicker">IEEE Computational Intelligence Magazine · FORMAL_ISSUE</p>
+<h3>Exploring AI Law and Ethics in Practice: From Algorithms to Accountability [Trustworthy and Responsible AI]</h3>
+<p>Tayo Obafemi-Ajayi; Amanda M. Horzyk; Keeley Crockett; Chiara Gallese; Maja Nišević; Asim Roy; Jose M. Alonso-Moral; Christos Christodoulopoulos; Paul Grefen; Michael van Hartskamp; Alan Perotti; Gianmaria Silvello; Steph Wright</p>
+<dl>
+<div><dt>卷期</dt><dd>V21 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3729296</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ieeexplore.ieee.org/document/11740821" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3729296" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Exploring AI Law and Ethics in Practice: From Algorithms to Accountability [Trustworthy and Responsible AI]</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3729296 · 摘要来源：出版方摘要</p><p class="abstract-body">Effective governance and responsible adoption of AI in high-stakes domains require collaboration across disciplines, sectors, and jurisdictions. The From Algorithms to Accountability: Exploring AI Law and Ethics in Practice workshop, held at the 2026 IEEE World Congress on Computational Intelligence, examined approaches to co-developing standards, accountability mechanisms, and governance frameworks for AI systems. Bringing together experts from diverse fields, the workshop explored current ethical, legal, and regulatory challenges and identified priorities for responsible AI research and practice. This report summarises the key themes, insights, and recommendations emerging from the discussions.</p><p class="abstract-meta"><span class="evidence"><a href="https://ieeexplore.ieee.org/document/11740821" rel="noopener noreferrer">官方论文页面</a><small>ieeexplore.ieee.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在编登记</h2>
+<p>本批登记网络优先/Early Access 发现 <strong>167</strong> 条（武汉大学学报优先发表、IEEE CIM 无卷期 Early Access）。上述条目不作为完整期次证据。</p><article class="paper" id="of-reg-003-001">
+<p class="kicker">武汉大学学报（信息科学版） · ONLINE_FIRST</p>
+<h3>强对流系统遥感监测及气溶胶污染对流调控机制研究进展与展望</h3>
+<p>潘增新; 毛飞跃; 杨羿; 刘帆; 尹建华; 吴红磊; 刘骞禧; 戴曙新; 龚威</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260257</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260257" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260257" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>强对流系统遥感监测及气溶胶污染对流调控机制研究进展与展望</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260257</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260257" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-003-002">
+<p class="kicker">武汉大学学报（信息科学版） · ONLINE_FIRST</p>
+<h3>超短程UWB观测多历元联合非线性估计</h3>
+<p>范云浩; 薛树强; 曹鸿基; 傅浩</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260330</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260330" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260330" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>超短程UWB观测多历元联合非线性估计</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260330</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260330" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-003-003">
+<p class="kicker">武汉大学学报（信息科学版） · ONLINE_FIRST</p>
+<h3>影像三维重建中运动恢复结构的鲁棒方法综述</h3>
+<p>肖腾; 张琦; 舒伟; 叶志伟; 颜青松; 邓非</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260149</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260149" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260149" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>影像三维重建中运动恢复结构的鲁棒方法综述</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260149</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260149" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-003-004">
+<p class="kicker">武汉大学学报（信息科学版） · ONLINE_FIRST</p>
+<h3>一种基于物联网的低成本多模GNSS RTK实时差分定位平台</h3>
+<p>高余婷; 王盛祺; 王亚龙; 赵庆志; 黄功文; 周锋; 白浩宇</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260288</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260288" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260288" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>一种基于物联网的低成本多模GNSS RTK实时差分定位平台</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260288</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260288" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-003-005">
+<p class="kicker">武汉大学学报（信息科学版） · ONLINE_FIRST</p>
+<h3>金字塔映射机制下的超大幅面TIFF遥感影像高效可视化方法</h3>
+<p>袁修孝; 汪训平; 沙洪俊; 袁修柳</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260007</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260007" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260007" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>金字塔映射机制下的超大幅面TIFF遥感影像高效可视化方法</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260007</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260007" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-003-006">
+<p class="kicker">武汉大学学报（信息科学版） · ONLINE_FIRST</p>
+<h3>几何结构感知增强的室内点云由粗到精配准方法</h3>
+<p>孙梦冲; 杨俊涛; 康志忠; 张雪</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260269</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260269" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260269" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>几何结构感知增强的室内点云由粗到精配准方法</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260269</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260269" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-003-007">
+<p class="kicker">武汉大学学报（信息科学版） · ONLINE_FIRST</p>
+<h3>基于多源遥感数据的新疆电网廊道沿线缓慢活动性地质灾害隐患早期识别研究</h3>
+<p>骆靖翔; 张成龙; 李振洪; 王新磊; 邹锦超; 陈毅; 刘振江; 能懿菡; 吕青霖; 杨钰烨</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260058</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260058" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260058" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于多源遥感数据的新疆电网廊道沿线缓慢活动性地质灾害隐患早期识别研究</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260058</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260058" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-003-008">
+<p class="kicker">武汉大学学报（信息科学版） · ONLINE_FIRST</p>
+<h3>基于多层特征聚合与边缘优化的高分辨率遥感影像海陆分割网络</h3>
+<p>祁昆仑; 丁道乐; 魏成博; 吴丽龙; 陈伟; 吴华意</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260046</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260046" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260046" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于多层特征聚合与边缘优化的高分辨率遥感影像海陆分割网络</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260046</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260046" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-003-009">
+<p class="kicker">武汉大学学报（信息科学版） · ONLINE_FIRST</p>
+<h3>顾及监测网布设方案的GNSS变形监测完好性风险评估方法</h3>
+<p>王露阳; 陈渠森; 李昭; 吴云; 谢秉辰; 刘瑞淇</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260266</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260266" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260266" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>顾及监测网布设方案的GNSS变形监测完好性风险评估方法</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260266</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260266" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-003-010">
+<p class="kicker">武汉大学学报（信息科学版） · ONLINE_FIRST</p>
+<h3>地理空间技术支撑建筑全生命周期碳核算的研究进展2</h3>
+<p>李雁; 郑枭于; 李颖; 朱霆; 孙纪虎; 邵振峰</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260134</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260134" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260134" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>地理空间技术支撑建筑全生命周期碳核算的研究进展2</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260134</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260134" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-003-011">
+<p class="kicker">武汉大学学报（信息科学版） · ONLINE_FIRST</p>
+<h3>P2AM-Net：面向模态不变特征学习的异源影像匹配模型</h3>
+<p>徐辛超; 赵显月; 辛鹏飞; 刘明岳; 张晓波</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20260154</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260154" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20260154" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>P2AM-Net：面向模态不变特征学习的异源影像匹配模型</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20260154</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20260154" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-003-012">
+<p class="kicker">武汉大学学报（信息科学版） · ONLINE_FIRST</p>
+<h3>基于BiLSTM的惯导中断数据修复方法及其性能分析</h3>
+<p>张子航; 郑凯; 朱锋; 张小红</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.13203/j.whugis20250280</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20250280" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.13203/j.whugis20250280" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>基于BiLSTM的惯导中断数据修复方法及其性能分析</strong></p><p class="abstract-meta">期刊：武汉大学学报（信息科学版） · DOI：10.13203/j.whugis20250280</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://ch.whu.edu.cn/article/doi/10.13203/j.whugis20250280" rel="noopener noreferrer">官方论文页面</a><small>ch.whu.edu.cn · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<p>武汉大学学报（信息科学版） 另有 150 条网络优先/Early Access 发现已写入账本，页内从略。</p>
+<article class="paper" id="of-reg-063-001">
+<p class="kicker">IEEE Computational Intelligence Magazine · EARLY_ACCESS</p>
+<h3>A Systematic Survey on Large Language Models for Evolutionary Optimization: From Modeling to Solving</h3>
+<p>Yisong Zhang; Ran Cheng; Guoxing Yi; Kay Chen Tan</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3727078</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3727078" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3727078" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Systematic Survey on Large Language Models for Evolutionary Optimization: From Modeling to Solving</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3727078</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3727078" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-063-002">
+<p class="kicker">IEEE Computational Intelligence Magazine · EARLY_ACCESS</p>
+<h3>Genetic Programming-Based Multi-Object Matching for Mussel Floats in Mussel Farm Images</h3>
+<p>Dylon Zeng; Ying Bi; Ivy Liu; Bing Xue; Ross Vennell; Mengjie Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3715424</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3715424" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3715424" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Genetic Programming-Based Multi-Object Matching for Mussel Floats in Mussel Farm Images</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3715424</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3715424" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-063-003">
+<p class="kicker">IEEE Computational Intelligence Magazine · EARLY_ACCESS</p>
+<h3>A Survey for Solving Combinatorial Optimization Problems via Reinforcement Learning</h3>
+<p>Zhengjun Wang; Weifeng Gao; Fuhao Gao; Lingling Huang; Maoguo Gong</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3745033</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3745033" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3745033" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Survey for Solving Combinatorial Optimization Problems via Reinforcement Learning</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3745033</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3745033" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-063-004">
+<p class="kicker">IEEE Computational Intelligence Magazine · EARLY_ACCESS</p>
+<h3>A Knowledge-driven Gray-box Optimization Framework for Solving Large-scale Multi-objective Optimization Problems</h3>
+<p>Zimo Sheng; Ru Zhang; Wanting Liu; Ye Tian; Xingyi Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3732122</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3732122" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3732122" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A Knowledge-driven Gray-box Optimization Framework for Solving Large-scale Multi-objective Optimization Problems</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3732122</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3732122" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-063-005">
+<p class="kicker">IEEE Computational Intelligence Magazine · EARLY_ACCESS</p>
+<h3>Harnessing LLMs in Combinatorial Optimization: A Workflow-Centric Survey and Practical Guidelines</h3>
+<p>Hao Tong; Jialin Liu; Xin Yao</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1109/mci.2026.3728369</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3728369" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-03 12:14 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3728369" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-03 12:14 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Harnessing LLMs in Combinatorial Optimization: A Workflow-Centric Survey and Practical Guidelines</strong></p><p class="abstract-meta">期刊：IEEE Computational Intelligence Magazine · DOI：10.1109/mci.2026.3728369</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1109/mci.2026.3728369" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>武汉大学学报（ch.whu.edu.cn）：Playwright 官方当期/过刊/优先发表 OK；HTTP 裸抓 SSL EOF；文章页频繁访问触发安全验证，未取到的摘要如实标注缺失；DOI 注册机构 CNKI（Crossref 无记录）。</li>
+<li>Applied Geography（ScienceDirect）：issues/Vol.193/AIP 均 403（Cloudflare）→ DEGRADED；RSS/Crossref 仅发现。</li>
+<li>IEEE Computational Intelligence Magazine（Xplore）：Playwright Current Issue OK；Crossref/RSS 交叉核验；文档页摘要 OK。</li>
+<li>Environmental Modelling &amp; Software（ScienceDirect）：issues/Vol.203/AIP 均 403 → DEGRADED；RSS/Crossref 仅发现。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>fe3d4e5d-13e3-4fd6-a44b-ca304e030e58</code></li>
+<li>Commit ID：<code>DAILY-20261103-115008-fe3d4e5d</code></li>
+<li>Brief ID：<code>DAILY-20261103</code></li>
+<li>去重抑制：0 · 增量复核：0 · 对账任务：4 · 官方源失败计数：2</li>
+<li>正式期刊：REG-003、REG-033、REG-063、REG-093 · 本组无附加信号源</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/11/index.html">返回 2026-11 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
+</body></html>
