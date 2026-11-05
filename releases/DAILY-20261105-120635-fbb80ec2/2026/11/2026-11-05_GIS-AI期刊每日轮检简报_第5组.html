@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 5 组 · 2026-11-05</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+<header>
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/11/index.html">11 月</a> / 第 5 组
+</nav>
+<p class="meta">逻辑日期 2026-11-05 · 完成时间 2026-11-05 12:07 CST · 任务 ROUTINE-20261105-G05 · Commit <code>DAILY-20261105-120635-fbb80ec2</code></p>
+<h1>GIS-AI 期刊每日轮检简报 · 第 5 组</h1>
+<p class="lede">第 5 组共检查 4 种正式期刊；确认 1 个新完整期次、6 篇正式期次论文（其中 4 篇为既有在年/网络优先记录正式归期），以及 8 条网络首发/在编期新登记。New Generation Computing 官网目录 claim 2026-V44-I4；Journal of Geographical Systems 与 Geosciences Journal 无新完整期（后者 December 未来期仅登记）；测绘通报因官方/镜像源不可达降级，基线 2026-I6 保持。其中 1 种期刊因官方源阻断降级完成。</p>
+</header>
+<main id="main">
+<section aria-label="关键计数">
+<div class="cards">
+<a class="card" href="#overview"><strong>4</strong><span>已检查正式期刊</span></a>
+<a class="card" href="#overview"><strong>4</strong><span>有更新期刊</span></a>
+<a class="card" href="#formal"><strong>1</strong><span>新完整期次</span></a>
+<a class="card" href="#formal"><strong>6</strong><span>新增正式论文</span></a>
+<a class="card" href="#online-first"><strong>8</strong><span>网络首发/在编</span></a>
+<a class="card" href="#health"><strong>0</strong><span>失败或待修复</span></a>
+</div>
+</section>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention"><li><span class="tag">源阻断</span> <strong>测绘通报</strong> — 官方站连接关闭；sinomaps 500；rhhz 403；CNKI 不可达；Crossref ISSN 404；基线 2026-I6 保持。 <span class="evidence"><a href="https://html.rhhz.net/chtb/html/top.htm" rel="noopener noreferrer">证据</a><small>html.rhhz.net · 2026-11-05 12:07 CST · 官方目录</small></span></li><li><span class="tag">无新期</span> <strong>Journal of Geographical Systems</strong> — Volumes &amp; Issues 最新完整期仍为 V28-I3（已 BRIEFED）；28-4 空页且未列入；OF 新登记 1 条。 <span class="evidence"><a href="https://link.springer.com/journal/10109/volumes-and-issues" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-11-05 12:07 CST · 官方目录</small></span></li><li><span class="tag">新完整期</span> <strong>New Generation Computing</strong> — claim 2026-V44-I4（November 2026，6 articles）；V45-I1 未来期仅登记；正式归期 4 篇。 <span class="evidence"><a href="https://link.springer.com/journal/354/volumes-and-issues/44-4" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-11-05 12:07 CST · 官方目录</small></span></li><li><span class="tag">未来期</span> <strong>Geosciences Journal</strong> — V30-I6（December 2026）目录已有 10 篇但不 claim；I7 空；OF/未来期新登记 6 条；基线保持 V30-I5。 <span class="evidence"><a href="https://link.springer.com/journal/12303/volumes-and-issues/30-6" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-11-05 12:07 CST · 官方目录</small></span></li></ul>
+</section>
+
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-005<br><strong>测绘通报</strong></td><td>2026-I6</td><td>0</td><td>0</td><td>0</td><td>0</td><td><code>OFFICIAL_CONNECTION_FAILED_MIRROR_SHELL_ONLY</code></td><td>DEGRADED</td></tr><tr><td>REG-035<br><strong>Journal of Geographical Systems</strong></td><td>2026-V28-I3</td><td>0</td><td>0</td><td>0</td><td>1</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-065<br><strong>New Generation Computing</strong></td><td>2026-V44-I4</td><td>1</td><td>6</td><td>4</td><td>1</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr><tr><td>REG-095<br><strong>Geosciences Journal</strong></td><td>2026-V30-I5</td><td>0</td><td>0</td><td>0</td><td>6</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-11-05_GIS-AI期刊每日摘要_第5组.png" width="1600" height="900" alt="第5组每日摘要图：4刊，新完整期1，正式文6">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-065-2026-v44-i4"><h3>New Generation Computing · 2026-V44-I4</h3><p>Springer 官网 Volume 44, Issue 4（November 2026）显示“6 articles in this issue”，解析 6 篇，与 Crossref 一致。</p><p><span class="evidence"><a href="https://link.springer.com/journal/354/volumes-and-issues/44-4" rel="noopener noreferrer">官方期次目录</a><small>link.springer.com · 2026-11-05 12:07 CST · 一级完整性证据</small></span></p><p>本简报收录正式论文 <strong>6</strong> 篇（均含摘要抽屉，优先账本/Crossref/官方页）。</p></article><article class="paper" id="formal-reg-065-2026v44i4-001">
+<p class="kicker">New Generation Computing · FORMAL_ISSUE</p>
+<h3>PBSR: Pseudo-Burst Super-Resolution via Zero-Shot Novel View Synthesis</h3>
+<p>Yuki Kondo; Norimichi Ukita</p>
+<dl>
+<div><dt>卷期</dt><dd>V44 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00354-026-00336-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00336-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s00354-026-00336-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>PBSR: Pseudo-Burst Super-Resolution via Zero-Shot Novel View Synthesis</strong></p><p class="abstract-meta">期刊：New Generation Computing · DOI：10.1007/s00354-026-00336-6 · 摘要来源：已核验来源</p><p class="abstract-body">Burst super-resolution (BSR) achieves higher reconstruction fidelity than single-image super-resolution by aggregating sub-pixel information from multiple frames. However, it requires a burst of frames captured under near-static conditions, and such frames are unavailable for single photographs or archival images. We propose Pseudo-Burst Super-Resolution (PBSR), which brings BSR-style reconstruction to the single-image input setting by synthesizing pseudo-burst frames via zero-shot novel view synthesis (NVS). PBSR first generates pseudo-burst frames with realistic parallax using a viewpoint sampling strategy calibrated to the pixel-shift distribution of real burst datasets. The frames are then processed by a BSR backbone equipped with a geometry-aware alignment module that reuses the NVS camera parameters and estimated depth. While the NVS stage is zero-shot, the backbone is fine-tuned with an artifact-aware adaptation so that it can exploit the synthesized frames despite their generative artifacts. Experiments on the BurstSR dataset show that PBSR consistently improves in PSNR, SSIM, and LPIPS over the single-frame baseline with the same reconstruction backbone.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00336-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-065-2026v44i4-002">
+<p class="kicker">New Generation Computing · FORMAL_ISSUE</p>
+<h3>Single-Shuffle Card-Based Protocols for Any Boolean Circuit with Six Cards per Gate</h3>
+<p>Tomoki Ono; Kazumasa Shinagawa; Takeshi Nakai; Yohei Watanabe; Mitsugu Iwamoto</p>
+<dl>
+<div><dt>卷期</dt><dd>V44 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00354-026-00337-5</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00337-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s00354-026-00337-5" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Single-Shuffle Card-Based Protocols for Any Boolean Circuit with Six Cards per Gate</strong></p><p class="abstract-meta">期刊：New Generation Computing · DOI：10.1007/s00354-026-00337-5 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Card-based protocols perform secure computation using physical playing cards, and their efficiency is primarily evaluated by two metrics: the number of cards and the number of shuffles. In this paper, we present three new card-based protocols that reduce the number of cards. The first protocol supports any Boolean circuit and decreases the number of cards. The second protocol extends the first to a committed-format version, while the third is specialized for Boolean circuits without a branched input, achieving an even smaller number of cards. All the proposed protocols are based on Yao’s garbled-circuit framework, similar to previous single-shuffle card-based protocols. Our main contribution is a novel encoding method that represents the truth table of each Boolean gate with fewer cards than existing schemes. Consequently, our protocols require only six cards per gate in a single-shuffle execution, providing a significant improvement in efficiency over prior work. Furthermore, by incorporating the card-based free-XOR introduced by Manabe–Shinagawa, we can further reduce the number of cards in certain configurations.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00337-5" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-065-2026v44i4-003">
+<p class="kicker">New Generation Computing · FORMAL_ASSIGNMENT</p>
+<h3>Empirical Analysis of Goal Hijacking in Large Vision-Language Models via Visual Prompt Injection</h3>
+<p>Subaru Kimura; Ryota Tanaka; Shumpei Miyawaki; Jun Suzuki; Keisuke Sakaguchi</p>
+<dl>
+<div><dt>卷期</dt><dd>V44 · I4</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00354-026-00334-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00334-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s00354-026-00334-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Empirical Analysis of Goal Hijacking in Large Vision-Language Models via Visual Prompt Injection</strong></p><p class="abstract-meta">期刊：New Generation Computing · DOI：10.1007/s00354-026-00334-8 · 摘要来源：Crossref 元数据</p><p class="abstract-body">In this study, we explore visual prompt injection (VPI), a method that exploits the ability of large vision-language models (LVLMs) to follow instructions embedded within input images. LVLMs, such as GPT-4V, are designed to interpret and respond to visual prompts. Although this capability enables valuable applications, it introduces substantial security risks. To address this issue, we propose a new VPI method called “goal hijacking via visual prompt injection” (GHVPI). This method redirects LVLMs from their original execution task to an alternative task specified by an attacker. Our quantitative analysis reveals that GPT-4V is vulnerable to GHVPI, with an attack success rate of 15.8%, posing a significant security risk. Our results also reveal that GHVPI success relies on the character recognition and instruction-following capabilities of LVLMs. These findings highlight a critical vulnerability, raising concerns regarding the secure deployment of LVLMs in practical applications. Future research should prioritize developing robust mitigation strategies to address these vulnerabilities and facilitate the secure integration of LVLMs into sensitive systems. By addressing this underexplored security challenge, our research aims to encourage further research into the responsible use of LVLMs.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00334-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-065-2026v44i4-004">
+<p class="kicker">New Generation Computing · FORMAL_ASSIGNMENT</p>
+<h3>Feature Learning by Induction</h3>
+<p>Hien D. Nguyen; Chiaki Sakama</p>
+<dl>
+<div><dt>卷期</dt><dd>V44 · I4</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00354-026-00333-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00333-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s00354-026-00333-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Feature Learning by Induction</strong></p><p class="abstract-meta">期刊：New Generation Computing · DOI：10.1007/s00354-026-00333-9 · 摘要来源：已核验来源</p><p class="abstract-body">This paper provides an empirical study of feature learning based on induction, presented as a foundational proof-of-concept for bridging raw sensory input and symbolic reasoning. We first encode image data into first-order expression. We then compute their least generalization to extract a common pattern of input data. Next, we introduce two different methods for feature learning. The frequency method extracts pixel values that appear most frequently in each location. The average method computes the average values of the pixels in each location. They are also applied to convolutional methods for data with random location. We perform experiments using the MNIST and CIFAR-10 datasets and show that the proposed methods successfully capture features from training data and classify test data in about 90% accuracies with the MNIST datasets and more than 80% with the CIFAR-10 dataset. Moreover, we show that the proposed method outperforms the convolutional neural network approach with LeNet-5 architecture on small data. The results of this paper show potential for induction in feature learning or pattern recognition from raw data. In particular, we verify the utility of inductive learning on small data. While these results demonstrate the potential for inductive learning to capture human-readable features, they are positioned as a preliminary validation of symbolic properties. The current study serves to identify the prerequisites for interpretable machine learning; however, transitioning to high-risk or safety-critical XAI domains will require future integration of higher-fidelity representations and domain-specific knowledge to meet rigorous real-world demands.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00333-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-065-2026v44i4-005">
+<p class="kicker">New Generation Computing · FORMAL_ASSIGNMENT</p>
+<h3>Graph-Driven Thematic Review Summarization with Knowledge Retention and User Engagement Using Explainable Personalization with LLMs</h3>
+<p>B. Suganya; M. L. Valarmathi</p>
+<dl>
+<div><dt>卷期</dt><dd>V44 · I4</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00354-026-00332-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00332-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s00354-026-00332-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Graph-Driven Thematic Review Summarization with Knowledge Retention and User Engagement Using Explainable Personalization with LLMs</strong></p><p class="abstract-meta">期刊：New Generation Computing · DOI：10.1007/s00354-026-00332-w · 摘要来源：已核验来源</p><p class="abstract-body">Review summarization performs a significant reduction of lengthy user reviews to short summaries, specifying the major opinions about the product or service. Users face difficulty analyzing large volumes of unstructured online reviews. These challenges are overcome by introducing a comprehensive approach for graph-guided thematic review summarization that enhances the analysis of multi-domain reviews with personalization, interpretability, and efficiency as its core attributes. This research introduces text-derived distilling relational spectral graph-based segmentation (TDRSGS) with the Motorbike Courier Optimization algorithm (MCO), efficiently identifies and groups semantically similar review themes for accurate summarization. The large language model, primarily GPT-4, generates concise theme-level and global summaries while preserving semantic insights and reducing redundancy. The transformer engagement predictor (TEP) tailors summaries to fit the user’s preferences, thereby providing personalised and context-aware recommendations. An exact local interpretable model-agnostic explanation increases the quality of trust and user understanding. The experimental evaluation on a variety of datasets, including Amazon, Flipkart, Yelp, TripAdvisor, IMDB, Goodreads, and RateMDs, shows that the model’s performance is excellent, getting a BERTScore of 97.3, ROUGE-L of 98.4, and accuracy of 98.7%, all coupled with lower inference time and parameter usage than the prevailing models. These results show that the proposed framework provides efficient, interpretable, and personalized review summarization with superior performance across multiple benchmark datasets.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00332-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-065-2026v44i4-006">
+<p class="kicker">New Generation Computing · FORMAL_ASSIGNMENT</p>
+<h3>Enhancing Stance Detection with Fuzzy Logic and Bidirectional Long Short-Term Memory Networks</h3>
+<p>K M Poonam; Tene Ramakrishnudu</p>
+<dl>
+<div><dt>卷期</dt><dd>V44 · I4</dd></div>
+<div><dt>门控</dt><dd>METADATA_CHANGED</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00354-026-00331-x</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00331-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s00354-026-00331-x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Enhancing Stance Detection with Fuzzy Logic and Bidirectional Long Short-Term Memory Networks</strong></p><p class="abstract-meta">期刊：New Generation Computing · DOI：10.1007/s00354-026-00331-x · 摘要来源：已核验来源</p><p class="abstract-body">Traditional opinion analysis methods frequently reduce online discussions to simplistic categories, such as favor, against, and none. This oversimplification fails to capture the nuances of opinions, such as the intensity of feelings or the degree to which a stance leans toward favor or against. To address this limitation, a new method called SFLBiL is proposed, which leverages fuzzy logic and BiLSTM to create more nuanced categories for opinions. Specifically, token-based fuzzy matching scores between tweet pairs are transformed into linguistic memberships via fuzzy membership functions and inference rules, which are fused with glove word embeddings and passed through a BiLSTM network that jointly captures ordinal class structure and sequential context. This allows for a more accurate understanding of people’s views, especially in the context of ordered-class classification. The performance of the proposed model is evaluated on two new datasets and the benchmark SemEval-2016 TaskA dataset. The SFLBiL model achieves consistent improvements over state-of-the-art (SOTA) models, with accuracy and F1-score improvements of 4.65% and 0.0464 on D1, 6.54% and 0.0653 on D2, and 1.12% and 0.0322 on the SemEval-2016 TaskA benchmark.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00331-x" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first">
+<h2>网络首发 / 在编登记</h2>
+<p>本批新登记 <strong>8</strong> 条（测绘通报 0、JGS 1、NGC 1、Geosciences Journal 6）：测绘通报无发现；JGS Online First；NGC 未来期 V45-I1；Geosciences Journal 未来期 I6 + Online First。上述条目不作为完整期次证据；已在账本中的条目按去重抑制，不重复简报。</p><article class="paper" id="of-reg-035-001">
+<p class="kicker">Journal of Geographical Systems · ONLINE_FIRST</p>
+<h3>Accounting for terrain slope in transport policy: a spatial machine learning approach to accessibility and carbon emissions evaluation</h3>
+<p>Linyan Luo; Tsutomu Suzuki</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10109-026-00525-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10109-026-00525-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10109-026-00525-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Accounting for terrain slope in transport policy: a spatial machine learning approach to accessibility and carbon emissions evaluation</strong></p><p class="abstract-meta">期刊：Journal of Geographical Systems · DOI：10.1007/s10109-026-00525-3 · 摘要来源：已核验来源</p><p class="abstract-body">Improving accessibility is widely recognized as an effective strategy for reducing car dependence and promoting low-carbon mobility. However, accessibility-oriented policies may generate different carbon mitigation outcomes where terrain constrains travel behavior and modal substitution. This study develops a terrain-sensitive accessibility-carbon framework incorporating neighborhood slope. By integrating geographically weighted random forest feature importance, the framework identifies key factors influencing low-carbon transport across different slope neighborhoods and estimates the carbon reduction potential of terrain-constrained accessibility improvements, providing differentiated strategies for achieving both low-carbon mobility and high accessibility. Using Chengdu and Chongqing as case studies representing relatively flat and mountainous urban conditions, the analysis shows that dominant factors shift from socio-demographic characteristics to transport infrastructure, with a more pronounced transition in Chongqing. Policy simulations compare bike sharing, e-bike sharing, and minibus service as terrain-sensitive accessibility interventions. Bike sharing performs best in flat, transit-served areas, e-bike sharing in moderate slope neighborhoods, and minibus service in steep or transit deficient areas. Optimized deployment increases destination accessibility by approximately 18% in Chengdu and 19% in Chongqing, while reducing transport carbon emissions by only 801.04 kgC/h and 350.61 kgC/h, respectively. These findings indicate that shared-mobility and feeder-service interventions substantially improve accessibility, while greater carbon reductions will require complementary operational, pricing, and demand-management measures.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10109-026-00525-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-065-001">
+<p class="kicker">New Generation Computing · ONLINE_FIRST</p>
+<h3>A Deep Semantic Alignment Framework with Cross-Channel Code-Mixed Attention and Multi-granular Graph Encoding for Grading Tamil and Multilingual YouTube Comments</h3>
+<p>S. Thivaharan; G. Srivatsun</p>
+<dl>
+<div><dt>卷期</dt><dd>V45 · I1</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s00354-026-00339-3</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00339-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s00354-026-00339-3" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Deep Semantic Alignment Framework with Cross-Channel Code-Mixed Attention and Multi-granular Graph Encoding for Grading Tamil and Multilingual YouTube Comments</strong></p><p class="abstract-meta">期刊：New Generation Computing · DOI：10.1007/s00354-026-00339-3 · 摘要来源：已核验来源</p><p class="abstract-body">Sentiment Analysis (SA) classifies text into positive, negative, or neutral categories and is widely used in social media moderation, market research, and behavioral analytics. However, most existing models struggle with multilingual and code-mixed content, especially Tamil-English text that includes transliteration inconsistencies, informal spellings, and limited linguistic resources. To address this gap, this research introduces a Multi-granular Token-level Heterogeneous Graph transformer with Adaptive Revolution Optimization (MTHG-ARO). The system begins with language-aware preprocessing, including token-level language identification, transliteration correction, normalization, and code-mix ratio estimation to reduce noise. Next, multilingual embeddings are generated using IndicBERT (for Tamil) and FastText (for English/German), ensuring cross-lingual semantic alignment. Deeper contextual understanding is achieved through the Cross-Lingual Feature-Attentive Linguistic Signal Encoder (CL-FALSE), which models inter-language relationships, while the Adaptive Multi-modal Gated Fusion with Prompt Learning (AMGF-PL) selectively emphasizes important linguistic cues. Training stability is maintained by the Adaptive Revolution Optimizer (ARO), which uses dynamic inertia control and controlled perturbation to avoid gradient stagnation and improve convergence. Experiments on the DravidianCodeMix-Tamil (DCM-T), German Hate Speech (GHS), and YouTube Comments (YTC) datasets show that MTHG-ARO achieves an average accuracy of 97.83%, outperforming existing models by 4.8%. These results demonstrate that MTHG-ARO captures subtle meanings better, handles linguistic variability more effectively, and provides strong cross-lingual generalization for large-scale sentiment understanding.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s00354-026-00339-3" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-095-001">
+<p class="kicker">Geosciences Journal · ONLINE_FIRST</p>
+<h3>Influence of hydraulic conductivity variability on slope stability modelling in a first-order watershed</h3>
+<p>Tiago D. Martins; Lais M. Ferreira; Alice E. Lueders; Camilla P. Capella; Bianca C. Vieira</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00138-4</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12303-026-00138-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00138-4" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Influence of hydraulic conductivity variability on slope stability modelling in a first-order watershed</strong></p><p class="abstract-meta">期刊：Geosciences Journal · DOI：10.1007/s12303-026-00138-4 · 摘要来源：Crossref 元数据</p><p class="abstract-body">In landslide studies, the definition of geotechnical and hydrological parameters provides the basis for deterministic slope-stability modelling. However, their availability and spatial representativeness remain important limitations for watershed-scale applications. This study evaluated the influence of different saturated hydraulic conductivity (K sat ) spatialization approaches on Factor of Safety (FS) estimates using a deterministic slope-stability model in a first-order watershed. A Digital Terrain Model was used to derive morphometric and hydrological parameters, while field measurements of K sat supported three parameterization approaches: morphology-based, inverse distance weighting (IDW), and a single representative value. Instability scenarios were evaluated using a landslide scar inventory, and soil samples from six K sat measurement points were used to characterize particle-size distribution. Among the tested parameter configurations, maximum soil depth and initial groundwater-table depth produced greater differences in model results than K sat spatialization. K sat showed limited spatial variability, with measurements at 30 cm depth spanning from 10⁻³ to 10⁻⁵ m s⁻¹, whereas those at 50 cm were concentrated around 10⁻⁵ m s⁻¹. Higher clay contents with depth at some sampling points may have contributed to the observed decrease in K sat . Overall, within the observed range of K sat variability, a single representative value provided a practical alternative to spatially distributed parameterization in the studied first-order watershed. These findings are applicable to first-order watersheds where shallow landsliding is recurrent; broader applications involving greater geomorphological diversity and different predominant slope processes may require K sat characterization across a wider range of geomorphological compartments.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12303-026-00138-4" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-095-002">
+<p class="kicker">Geosciences Journal · ONLINE_FIRST</p>
+<h3>Low-cost passive seismic imaging for geothermal characterization and seismic site-response assessment: a HVTFA approach</h3>
+<p>Muhammad Altin Massinai; Andri Moh. Wahyu Laode; Muhammad Fawzy Ismullah Massinai; Rezky; Musawwir; Muhammad Ridwan; Alif Amanullah</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00134-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12303-026-00134-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00134-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Low-cost passive seismic imaging for geothermal characterization and seismic site-response assessment: a HVTFA approach</strong></p><p class="abstract-meta">期刊：Geosciences Journal · DOI：10.1007/s12303-026-00134-8 · 摘要来源：已核验来源</p><p class="abstract-body">Mount Bora in Central Sulawesi, Indonesia, represents a promising, underexplored geothermal field located within a tectonically active zone. This study introduces a low-cost, non-invasive approach using Horizontal-to-Vertical Time–Frequency Analysis (HVTFA) for integrated geothermal characterization and seismic site-response assessment. A total of 25 microtremor measurements were collected across the study area, of which 24 produced HVTFA-derived ellipticity curves that satisfied the adopted clarity and reliability criteria. These curves were used to extract key site-characterization parameters, including the fundamental frequency (f0), the HVTFA-derived relative index (Kg), calculated from the ellipticity peak amplitude and fundamental frequency, and the average shear-wave velocity in the upper 30 m (Vs30). HVTFA was applied to address spectral instability commonly encountered in classical HVSR analysis, particularly in geologically complex environments. Rayleigh wave ellipticity inversion was then used to derive 1D Vs profiles and construct interpolated 2D cross-sections. The results reveal pronounced lateral heterogeneity in subsurface conditions, with zones of relatively low Vs and locally elevated Kg values concentrated in the southern sector near geothermal manifestations. These areas show relatively low Vs and locally elevated Kg values that may reflect spatial variations in subsurface conditions associated with geothermal processes. In contrast, higher Vs and f0 values in the northern and eastern parts of the study area indicate more competent subsurface materials with relatively stiffer subsurface conditions. The integrated HVTFA framework provides a low-cost framework for characterizing shallow subsurface heterogeneity and identifying zones that may be associated with geothermal influence, and supports microzonation efforts in volcanically and tectonically dynamic environments.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12303-026-00134-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-095-003">
+<p class="kicker">Geosciences Journal · ONLINE_FIRST</p>
+<h3>PLS-SEM analysis of landslide susceptibility factors</h3>
+<p>Bongseok Jeong; Sooyeon Han; Sunmin Lee; Moung-Jin Lee</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00132-w</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12303-026-00132-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00132-w" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>PLS-SEM analysis of landslide susceptibility factors</strong></p><p class="abstract-meta">期刊：Geosciences Journal · DOI：10.1007/s12303-026-00132-w · 摘要来源：已核验来源</p><p class="abstract-body">Landslide risk assessment is a core research field for landslide risk management and loss mitigation, and recent studies have increasingly employed artificial intelligence (AI)-based models. However, such models attribute variable importance only after model fitting, offering limited support for deciding which environmental variables should be prioritized for mitigation. Accordingly, this study applied Partial Least Squares Structural Equation Modeling (PLS-SEM), which specifies variable relationships a priori and estimates them within an explicit structural framework. For the Chungju–Jecheon region of Korea, eight candidate latent variables were defined—terrain morphology, terrain position, terrain ruggedness, hydrological concentration, hydrological flow, precipitation, soil characteristics, and forest characteristics—and a PLS-SEM model was constructed to analyze the structural relationships between the Landslide Susceptibility Index (LSI) and these variables. Model evaluation identified two final models, in both of which terrain morphology and soil characteristics were consistently the two dominant influences on the LSI, though their order varied. Model 1, comprising terrain morphology, soil characteristics, and forest characteristics, yielded R² = 0.444, whereas Model 2, in which forest characteristics were replaced by precipitation, showed slightly lower explanatory power (R² = 0.394). Explanatory power remained close to, but below, the moderate threshold, and categorical factors such as geological structure and land cover, together with the dynamic characteristics of precipitation, were not sufficiently captured. Future work should integrate static susceptibility with dynamic triggering, couple statistical and physically based models, and perform spatiotemporal and transfer validation across watersheds, thereby enhancing the reliability and practical applicability of the model.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12303-026-00132-w" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-095-004">
+<p class="kicker">Geosciences Journal · ONLINE_FIRST</p>
+<h3>Relative contributions of sediment sources in the northern Ulleung Basin, East Sea based on clay mineral tracers since the late Pleistocene</h3>
+<p>Suhyun Kim; Chang Hwan Kim; Kiho Yang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00136-6</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12303-026-00136-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00136-6" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Relative contributions of sediment sources in the northern Ulleung Basin, East Sea based on clay mineral tracers since the late Pleistocene</strong></p><p class="abstract-meta">期刊：Geosciences Journal · DOI：10.1007/s12303-026-00136-6 · 摘要来源：已核验来源</p><p class="abstract-body">This study evaluates the provenance and relative contributions of terrigenous sediments during the late Pleistocene–Holocene using clay mineral compositions from the northern Ulleung Basin, East Sea. The East Sea is highly sensitive to sea-level fluctuations, which alter ocean circulation and modulate the Chinese loess influx driven by the East Asian winter monsoon. From the glacial period (&gt; 14.5 ka) to the Holocene (0–11.5 ka), smectite content increased from an average of 26.9 wt% to 47.7 wt%, whereas illite, kaolinite, and chlorite decreased. A marked increase in smectite during the late glacial period (14.5–11.5 ka) indicates enhanced input of sediments derived from Japan rivers (smectite ~ 70 wt%), consistent with current-driven transport through the Tsugaru Strait in response to sea-level rise. During the glacial period, Chinese loess transported by the East Asian winter monsoon was the dominant sediment source. From ~ 14.5 ka onward, continuous smectite supply via bottom currents became significant, although clay mineral compositions remained modulated by monsoon variability. These results indicate a shift in sediment supply to the northern Ulleung Basin from a Chinese loess-dominated system to one increasingly influenced by current-driven transport with rising sea-level. Clay mineral compositions therefore provide a useful proxy for assessing the relative contributions of aeolian and oceanic processes to sediment distribution.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12303-026-00136-6" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-095-005">
+<p class="kicker">Geosciences Journal · ONLINE_FIRST</p>
+<h3>Predicting long-term environmental changes from the perspective of high-level radioactive waste disposal sites: a comparative review of national programs</h3>
+<p>Hyun‑Kwon Do; Suyeong Noh; Hakyung Cho; Sung-Wook Jeen</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00135-7</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12303-026-00135-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00135-7" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Predicting long-term environmental changes from the perspective of high-level radioactive waste disposal sites: a comparative review of national programs</strong></p><p class="abstract-meta">期刊：Geosciences Journal · DOI：10.1007/s12303-026-00135-7 · 摘要来源：已核验来源</p><p class="abstract-body">Geological disposal is widely regarded as a viable long-term management strategy for high-level radioactive waste. Because repository performance is assessed over timescales extending from tens of thousands to, in some cases, up to one million years, potential environmental change is an important consideration in repository safety assessment. Future climatic, geological, hydrological, and ecological processes may influence groundwater flow systems, radionuclide transport pathways, biosphere conditions, and the performance of natural and engineered barriers. Consequently, national repository programs have developed various approaches to incorporate long-term environmental evolution into safety assessments. This review examines how long-term environmental change is addressed in geological disposal programs in Sweden, Finland, Switzerland, France, Canada, and Japan. The review compares national approaches to representing future environmental conditions and discusses common challenges associated with environmental evolution, biosphere and surface-system representation, integration of geosphere, biosphere, and engineered systems, and uncertainty over geological timescales. Although the reviewed programs differ in geological setting, repository concept, climatic history, and regulatory framework, several common themes emerge. Long-term environmental assessments employ scenario-based representations of future conditions, consider interactions among environmental and repository-system processes, and apply structured approaches for addressing uncertainty. At the same time, the environmental processes emphasized in safety assessments vary according to site-specific conditions and programmatic priorities. The reviewed cases suggest that approaches to long-term environmental assessment are shaped by both site-specific considerations and broader assessment objectives. While no single assessment framework is suitable for all repository settings, experience from existing national programs provides useful perspectives for the development of future repository programs and long-term environmental assessment frameworks, including those for Korea.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12303-026-00135-7" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="paper" id="of-reg-095-006">
+<p class="kicker">Geosciences Journal · ONLINE_FIRST</p>
+<h3>Laboratory simulation of rainfall-induced instability in unsaturated c-ϕ soil slopes using tilting flume: identification of precursor threshold ranges for early warning</h3>
+<p>Varun Menon; Amuthavel Ravi; Sreevalsa Kolathayar</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s12303-026-00133-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s12303-026-00133-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-05 12:07 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s12303-026-00133-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-05 12:07 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Laboratory simulation of rainfall-induced instability in unsaturated c-ϕ soil slopes using tilting flume: identification of precursor threshold ranges for early warning</strong></p><p class="abstract-meta">期刊：Geosciences Journal · DOI：10.1007/s12303-026-00133-9 · 摘要来源：已核验来源</p><p class="abstract-body">Rainfall-induced landslides pose significant geohazard risks, yet their occurrence can be anticipated through systematic instrumentation and historical data analysis. A thorough understanding of geological and geotechnical properties facilitates the identification of critical thresholds, which is essential for the development of landslide early warning systems (LEWS). This study presents experimental findings from a laboratory-simulated rainfall-induced landslide using a custom-designed tilting flume. The investigation focuses on variations in gravimetric moisture content (GMC), excess pore water pressure (EPWP), surface particle motion analyzed via particle image velocimetry (PIV), and the loss of fine content under controlled conditions. Experimental trials were conducted at three soil densities, with rainfall intensities of 150 mm/h and 300 mm/h. Instrumentation placed at the slope face and toe recorded significant variations across all monitored parameters, indicating their suitability for LEWS deployment. In contrast, minimal variations were observed at the heel portion. The analysis establishes a relationship between the relative factor of safety (FOS) degradation and variations in GMC, based on the principles of unsaturated soil mechanics. The results identify key parametric thresholds for landslide prediction and early warning in silty sand slopes. They show that instability in suction-dominated silty sand is governed not by rainfall intensity alone, but by its combined interaction with dry density, suction loss, localized moisture accumulation, EPWP development, and kinematic deformation.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s12303-026-00133-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>测绘通报（tb.chinasmp.com / sinomaps / rhhz / CNKI）：官方连接关闭；镜像 500/403；Crossref ISSN 404 → DEGRADED；基线 2026-I6 保持。</li>
+<li>Journal of Geographical Systems（link.springer.com）：Playwright Volumes/I3/OF/Articles OK；I4 空且未列入；Crossref 摘要交叉。</li>
+<li>New Generation Computing（link.springer.com）：Playwright V44-I4（6 articles）/V45-I1/Volumes/Articles OK；Crossref + 官方页摘要补齐。</li>
+<li>Geosciences Journal（link.springer.com）：Playwright V30-I5/I6/OF/Articles OK；I6 为 December 未来期不 claim；I7 空。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul><li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足，今日 attempt 继续计数）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足，今日 attempt 继续计数）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足，今日 attempt 继续计数）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足，今日 attempt 继续计数）</li></ul>
+</section>
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>ac8092f9-9ebd-473c-908f-72d88d2b6975</code></li>
+<li>Commit ID：<code>DAILY-20261105-120635-fbb80ec2</code></li>
+<li>Brief ID：<code>DAILY-20261105</code></li>
+<li>去重抑制：31 · 增量复核：0 · 对账任务：4 · 官方源失败计数：1</li>
+<li>正式期刊：REG-005、REG-035、REG-065、REG-095 · 本组无附加信号源 · issue gate NEW_ISSUE 1</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+</main>
+<footer>
+<p><a href="../../../../2026/11/2026-11-04_GIS-AI期刊每日轮检简报_第4组.html">上一篇</a> · <a href="../../../../2026/11/index.html">返回 2026-11 月度索引</a> · <a href="#top">返回页首</a></p>
+</footer>
+</body></html>

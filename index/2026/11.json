@@ -1,5 +1,5 @@
 {
-  "brief_count": 4,
+  "brief_count": 5,
   "briefs": [
     {
       "brief_id": "DAILY-20261101",
@@ -172,6 +172,49 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 4 组",
       "updated_at": "2026-11-04T12:05:14.198001+08:00"
+    },
+    {
+      "brief_id": "DAILY-20261105",
+      "commit_id": "DAILY-20261105-120635-fbb80ec2",
+      "completed_run_date": "2026-11-05",
+      "counts": {
+        "changed_journals": 4,
+        "complete_issues": 1,
+        "degraded_sources": 1,
+        "formal_articles": 6,
+        "formal_assignments": 4,
+        "journals": 4,
+        "online_first_updates": 8
+      },
+      "format": "HTML",
+      "group_id": 5,
+      "html_sha256": "5c5914f32fbffd62f1ab24e849bc8e1eee2360405ffb6dacc2df72efe57e5ab6",
+      "index_anchor": "brief-DAILY-20261105",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-11-05",
+      "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/11/2026-11-05_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC5%E7%BB%84.html",
+      "release_report": "releases/DAILY-20261105-120635-fbb80ec2/2026/11/2026-11-05_GIS-AI期刊每日轮检简报_第5组.html",
+      "release_summary_image": "releases/DAILY-20261105-120635-fbb80ec2/2026/11/assets/2026-11-05_GIS-AI期刊每日摘要_第5组.png",
+      "report": "2026/11/2026-11-05_GIS-AI期刊每日轮检简报_第5组.html",
+      "scheduled_date": "2026-11-05",
+      "status": "LOCAL_COMMITTED",
+      "summary": "第 5 组共检查 4 种正式期刊；确认 1 个新完整期次、6 篇正式期次论文（其中 4 篇为既有在年/网络优先记录正式归期），以及 8 条网络首发/在编期新登记。New Generation Computing 官网目录 claim 2026-V44-I4；Journal of Geographical Systems 与 Geosciences Journal 无新完整期（后者 December 未来期仅登记）；测绘通报因官方/镜像源不可达降级，基线 2026-I6 保持。其中 1 种期刊因官方源阻断降级完成。",
+      "summary_image": "2026/11/assets/2026-11-05_GIS-AI期刊每日摘要_第5组.png",
+      "summary_image_sha256": "b487f238f2daeb32037c53f7b516db6560e6939a08d5607bec4d91a955ac9c4d",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20261105-G05",
+          "coverage_month": "2026-11",
+          "group": 5,
+          "scheduled_date": "2026-11-05",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20261105-G05",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 5 组",
+      "updated_at": "2026-11-05T12:09:03.348000+08:00"
     }
   ],
   "level": "MONTH",
@@ -189,6 +232,9 @@
     ],
     "2026-11-04": [
       "ROUTINE-20261104-G04"
+    ],
+    "2026-11-05": [
+      "ROUTINE-20261105-G05"
     ]
   },
   "schema_version": "2.1",
@@ -228,9 +274,18 @@
       "logical_date": "2026-11-04",
       "report": "2026/11/2026-11-04_GIS-AI期刊每日轮检简报_第4组.html",
       "scheduled_date": "2026-11-04"
+    },
+    "ROUTINE-20261105-G05": {
+      "anchor": "brief-DAILY-20261105",
+      "brief_id": "DAILY-20261105",
+      "commit_id": "DAILY-20261105-120635-fbb80ec2",
+      "completed_run_date": "2026-11-05",
+      "logical_date": "2026-11-05",
+      "report": "2026/11/2026-11-05_GIS-AI期刊每日轮检简报_第5组.html",
+      "scheduled_date": "2026-11-05"
     }
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-11-04",
+  "updated_date": "2026-11-05",
   "year": 2026
 }
