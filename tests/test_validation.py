@@ -71,7 +71,7 @@ class ValidationTests(unittest.TestCase):
 
     def test_rejects_stale_homepage(self):
         path = self.root / 'index.html'
-        path.write_text(path.read_text().replace('2026/10/2026-10-06_', '2026/10/2026-10-05_'))
+        path.write_text(path.read_text().replace('2026/11/2026-11-06_', '2026/11/2026-11-05_'))
         self.rejects('index.html')
 
     def test_rejects_missing_report(self):
