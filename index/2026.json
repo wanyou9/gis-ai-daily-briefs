@@ -1,5 +1,5 @@
 {
-  "brief_count": 86,
+  "brief_count": 87,
   "level": "YEAR",
   "months": [
     {
@@ -35,7 +35,7 @@
       "status": "READY"
     },
     {
-      "brief_count": 5,
+      "brief_count": 6,
       "index": "2026/11/index.html",
       "manifest": "index/2026/11.json",
       "month": "11",
@@ -45,6 +45,6 @@
   ],
   "schema_version": "2.1",
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-11-05",
+  "updated_date": "2026-11-06",
   "year": 2026
 }
