@@ -1,50 +1,7 @@
 {
-  "brief_count": 87,
+  "brief_count": 88,
   "level": "ROOT",
   "recent_briefs": [
-    {
-      "brief_id": "DAILY-20261007",
-      "commit_id": "DAILY-20261007-131849-e8fb35f9",
-      "completed_run_date": "2026-10-07",
-      "counts": {
-        "changed_journals": 4,
-        "complete_issues": 2,
-        "degraded_sources": 3,
-        "formal_articles": 71,
-        "formal_assignments": 43,
-        "journals": 4,
-        "online_first_updates": 149
-      },
-      "format": "HTML",
-      "group_id": 7,
-      "html_sha256": "8d3e8743d281a6e7afbec730adbaacb00d3886b20737148d55321802d861c41e",
-      "index_anchor": "brief-DAILY-20261007",
-      "kind": "DAILY_ROTATION",
-      "logical_date": "2026-10-07",
-      "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/10/2026-10-07_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC7%E7%BB%84.html",
-      "release_report": "releases/DAILY-20261007-131849-e8fb35f9/2026/10/2026-10-07_GIS-AI期刊每日轮检简报_第7组.html",
-      "release_summary_image": "releases/DAILY-20261007-131849-e8fb35f9/2026/10/assets/2026-10-07_GIS-AI期刊每日摘要_第7组.png",
-      "report": "2026/10/2026-10-07_GIS-AI期刊每日轮检简报_第7组.html",
-      "scheduled_date": "2026-10-07",
-      "status": "LOCAL_COMMITTED",
-      "summary": "第 7 组共检查 4 种正式期刊；确认 2 个新完整期次、71 篇正式期次论文（其中 43 篇为既有网络首发记录正式归期，新论文记录 28 篇），以及 149 条新的网络首发/未来期登记。地理学报官方目录 claim 2026-V81-I9（刊出 2026-09-25）；Science China Information Sciences 官方目录 claim 2026-V69-I9（September 2026）；I10 目录两遍间仍在增加，保持候选；Spatial Statistics 与 Knowledge-Based Systems 官方目录 HTTP 403，降级为 RSS 发现登记。3 种期刊降级完成、无期刊级扫描失败；未发现撤稿，发现 2 条更正声明（仅登记）。",
-      "summary_image": "2026/10/assets/2026-10-07_GIS-AI期刊每日摘要_第7组.png",
-      "summary_image_sha256": "8362a23d843954ab4adaf6cd524b017cb83136d713f6bedff6601005c32d5524",
-      "task_type": "ROUTINE",
-      "tasks": [
-        {
-          "anchor": "task-ROUTINE-20261007-G07",
-          "coverage_month": "2026-10",
-          "group": 7,
-          "scheduled_date": "2026-10-07",
-          "status": "COMPLETED",
-          "task_id": "ROUTINE-20261007-G07",
-          "task_type": "ROUTINE"
-        }
-      ],
-      "title": "GIS-AI 期刊每日轮检简报 · 第 7 组",
-      "updated_at": "2026-10-07T13:20:07.078011+08:00"
-    },
     {
       "brief_id": "DAILY-20261008",
       "commit_id": "DAILY-20261008-121218-110fba68",
@@ -1341,6 +1298,49 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 6 组",
       "updated_at": "2026-11-06T12:11:41.027339+08:00"
+    },
+    {
+      "brief_id": "DAILY-20261107",
+      "commit_id": "DAILY-20261107-115623-72502683",
+      "completed_run_date": "2026-11-07",
+      "counts": {
+        "changed_journals": 4,
+        "complete_issues": 3,
+        "degraded_sources": 2,
+        "formal_articles": 92,
+        "formal_assignments": 41,
+        "journals": 4,
+        "online_first_updates": 122
+      },
+      "format": "HTML",
+      "group_id": 7,
+      "html_sha256": "c9c2ff40d1d2bbe9e597c1688022da429c6b87585cea8466ab02be3f481e0664",
+      "index_anchor": "brief-DAILY-20261107",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-11-07",
+      "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/11/2026-11-07_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC7%E7%BB%84.html",
+      "release_report": "releases/DAILY-20261107-115623-72502683/2026/11/2026-11-07_GIS-AI期刊每日轮检简报_第7组.html",
+      "release_summary_image": "releases/DAILY-20261107-115623-72502683/2026/11/assets/2026-11-07_GIS-AI期刊每日摘要_第7组.png",
+      "report": "2026/11/2026-11-07_GIS-AI期刊每日轮检简报_第7组.html",
+      "scheduled_date": "2026-11-07",
+      "status": "LOCAL_COMMITTED",
+      "summary": "第 7 组共检查 4 种正式期刊；确认 3 个新完整期次、92 篇正式期次论文（其中 41 篇为既有网络首发记录正式归期），以及 122 条网络首发/在编期新登记。地理学报 claim 2026-V81-I10；Science China Information Sciences claim 2026-V69-I10、2026-V69-I11；Spatial Statistics 与 Knowledge-Based Systems 官方目录 403，降级为 RSS 发现登记。其中 2 种期刊因官方源阻断降级完成。",
+      "summary_image": "2026/11/assets/2026-11-07_GIS-AI期刊每日摘要_第7组.png",
+      "summary_image_sha256": "75bb004f959549f8b06090874321bac3d4284506faf2a1f3bcf79de302857a35",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20261107-G07",
+          "coverage_month": "2026-11",
+          "group": 7,
+          "scheduled_date": "2026-11-07",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20261107-G07",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 7 组",
+      "updated_at": "2026-11-07T12:35:36.408292+08:00"
     }
   ],
   "retention": {
@@ -1359,10 +1359,10 @@
     "title": "GIS-AI 期刊每日轮检简报"
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-11-06",
+  "updated_date": "2026-11-07",
   "years": [
     {
-      "brief_count": 87,
+      "brief_count": 88,
       "index": "2026/index.html",
       "manifest": "index/2026.json",
       "month_count": 5,
