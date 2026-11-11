@@ -508,6 +508,9 @@
     ],
     "2026-11-10": [
       "ROUTINE-20261110-G10"
+    ],
+    "2026-11-11": [
+      "ROUTINE-20261111-G11"
     ]
   },
   "schema_version": "2.1",
@@ -601,6 +604,15 @@
       "logical_date": "2026-11-10",
       "report": "2026/11/2026-11-10_GIS-AI期刊每日轮检简报_第10组.html",
       "scheduled_date": "2026-11-10"
+    },
+    "ROUTINE-20261111-G11": {
+      "anchor": "brief-DAILY-20261111",
+      "brief_id": "DAILY-20261111",
+      "commit_id": "DAILY-20261111-121338-d7193724",
+      "completed_run_date": "2026-11-11",
+      "logical_date": "2026-11-11",
+      "report": "2026/11/2026-11-11_GIS-AI期刊每日轮检简报_第11组.html",
+      "scheduled_date": "2026-11-11"
     }
   },
   "timezone": "Asia/Shanghai",
