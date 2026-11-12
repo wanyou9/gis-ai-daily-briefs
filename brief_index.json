@@ -1,50 +1,7 @@
 {
-  "brief_count": 92,
+  "brief_count": 93,
   "level": "ROOT",
   "recent_briefs": [
-    {
-      "brief_id": "DAILY-20261012",
-      "commit_id": "DAILY-20261012-115608-25d232eb",
-      "completed_run_date": "2026-10-12",
-      "counts": {
-        "changed_journals": 3,
-        "complete_issues": 3,
-        "degraded_sources": 0,
-        "formal_articles": 60,
-        "formal_assignments": 18,
-        "journals": 3,
-        "online_first_updates": 4
-      },
-      "format": "HTML",
-      "group_id": 12,
-      "html_sha256": "52d4731838c9760006b05cb909a3c194dd3efd8e7cc32f77b55d9ad119e10e3c",
-      "index_anchor": "brief-DAILY-20261012",
-      "kind": "DAILY_ROTATION",
-      "logical_date": "2026-10-12",
-      "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/10/2026-10-12_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC12%E7%BB%84.html",
-      "release_report": "releases/DAILY-20261012-115608-25d232eb/2026/10/2026-10-12_GIS-AI期刊每日轮检简报_第12组.html",
-      "release_summary_image": "releases/DAILY-20261012-115608-25d232eb/2026/10/assets/2026-10-12_GIS-AI期刊每日摘要_第12组.png",
-      "report": "2026/10/2026-10-12_GIS-AI期刊每日轮检简报_第12组.html",
-      "scheduled_date": "2026-10-12",
-      "status": "LOCAL_COMMITTED",
-      "summary": "第 12 组共检查 3 种正式期刊；确认 3 个新完整期次、60 篇正式论文（新论文记录 42 篇、网络首发正式归期 18 篇），登记网络首发/在编/未来期 4 条；无降级期刊，0 种扫描失败，未发现撤稿或勘误。",
-      "summary_image": "2026/10/assets/2026-10-12_GIS-AI期刊每日摘要_第12组.png",
-      "summary_image_sha256": "5f0ebbdda5e65180f552196ab80d377d227388cc24cb03978225e477088c98fd",
-      "task_type": "ROUTINE",
-      "tasks": [
-        {
-          "anchor": "task-ROUTINE-20261012-G12",
-          "coverage_month": "2026-10",
-          "group": 12,
-          "scheduled_date": "2026-10-12",
-          "status": "COMPLETED",
-          "task_id": "ROUTINE-20261012-G12",
-          "task_type": "ROUTINE"
-        }
-      ],
-      "title": "GIS-AI 期刊每日轮检简报 · 第 12 组",
-      "updated_at": "2026-10-12T12:13:43.397831+08:00"
-    },
     {
       "brief_id": "DAILY-20261013",
       "commit_id": "DAILY-20261013-121016-9104745b",
@@ -1341,6 +1298,49 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 11 组",
       "updated_at": "2026-11-11T12:19:23.493431+08:00"
+    },
+    {
+      "brief_id": "DAILY-20261112",
+      "commit_id": "DAILY-20261112-120857-155fe4b9",
+      "completed_run_date": "2026-11-12",
+      "counts": {
+        "changed_journals": 3,
+        "complete_issues": 1,
+        "degraded_sources": 0,
+        "formal_articles": 12,
+        "formal_assignments": 1,
+        "journals": 3,
+        "online_first_updates": 21
+      },
+      "format": "HTML",
+      "group_id": 12,
+      "html_sha256": "c462568b8954c07ba7a6e97018bfa8825f6319b337f58642711ed6dec9d340f4",
+      "index_anchor": "brief-DAILY-20261112",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-11-12",
+      "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/11/2026-11-12_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC12%E7%BB%84.html",
+      "release_report": "releases/DAILY-20261112-120857-155fe4b9/2026/11/2026-11-12_GIS-AI期刊每日轮检简报_第12组.html",
+      "release_summary_image": "releases/DAILY-20261112-120857-155fe4b9/2026/11/assets/2026-11-12_GIS-AI期刊每日摘要_第12组.png",
+      "report": "2026/11/2026-11-12_GIS-AI期刊每日轮检简报_第12组.html",
+      "scheduled_date": "2026-11-12",
+      "status": "LOCAL_COMMITTED",
+      "summary": "第 12 组共检查 3 种正式期刊；确认 1 个新完整期次、12 篇正式期次论文（其中 1 篇为既有网络首发记录正式归期），以及 21 条网络首发/在编期新登记。International Journal of Geographical Information Science claim 2026-V40-I11；其 Volume 40 Issue 12 印刷日期为 2026-12-02，属未来期，不得 claim。Big Earth Data 官方当期仍为已简报的 2026-V10-I3，未见 Issue 4；Data Mining and Knowledge Discovery 官方卷期目录仍止于 2026-V40-I6，不得 claim 新期。无降级期刊，未发现本轮新的勘误或撤稿。",
+      "summary_image": "2026/11/assets/2026-11-12_GIS-AI期刊每日摘要_第12组.png",
+      "summary_image_sha256": "602abc5daac41872e47fbd19768a0ab2f58fcc2bb38f9db98aa3bdf5974b3d8f",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20261112-G12",
+          "coverage_month": "2026-11",
+          "group": 12,
+          "scheduled_date": "2026-11-12",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20261112-G12",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 12 组",
+      "updated_at": "2026-11-12T12:11:13.328962+08:00"
     }
   ],
   "retention": {
@@ -1359,10 +1359,10 @@
     "title": "GIS-AI 期刊每日轮检简报"
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-11-11",
+  "updated_date": "2026-11-12",
   "years": [
     {
-      "brief_count": 92,
+      "brief_count": 93,
       "index": "2026/index.html",
       "manifest": "index/2026.json",
       "month_count": 5,

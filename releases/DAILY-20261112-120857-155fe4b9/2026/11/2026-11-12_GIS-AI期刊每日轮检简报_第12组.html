@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 12 组 · 2026-11-12</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body id="top">
+<a class="skip" href="#overview">跳到期刊总览</a>
+<header class="hero">
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/11/index.html">11 月</a> / 第 12 组
+</nav>
+<h1>GIS-AI 期刊每日轮检简报 · 第 12 组</h1>
+<p class="lead">第 12 组共检查 3 种正式期刊；确认 1 个新完整期次、12 篇正式期次论文（其中 1 篇为既有网络首发记录正式归期），以及 21 条网络首发/在编期新登记。International Journal of Geographical Information Science claim 2026-V40-I11；其 Volume 40 Issue 12 印刷日期为 2026-12-02，属未来期，不得 claim。Big Earth Data 官方当期仍为已简报的 2026-V10-I3，未见 Issue 4；Data Mining and Knowledge Discovery 官方卷期目录仍止于 2026-V40-I6，不得 claim 新期。无降级期刊，未发现本轮新的勘误或撤稿。</p>
+<p>逻辑日期 2026-11-12（北京时间）· 实际完成 2026-11-12 12:08 CST · 任务类型 ROUTINE · 第 12 组</p>
+<div class="metrics" role="list">
+<div class="metric" role="listitem"><strong>3</strong><span>已检查正式期刊</span></div>
+<div class="metric" role="listitem"><strong>3</strong><span>有更新期刊</span></div>
+<div class="metric" role="listitem"><strong>1</strong><span>新完整期次</span></div>
+<div class="metric" role="listitem"><strong>12</strong><span>新增正式论文</span></div>
+<div class="metric" role="listitem"><strong>21</strong><span>网络首发</span></div>
+<div class="metric" role="listitem"><strong>0</strong><span>失败或待修复</span></div>
+</div>
+</header>
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#online-first">网络首发</a>
+<a href="#corrections">勘误与撤稿</a>
+<a href="#themes">主题与路线</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+<main>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention">
+<li><span class="tag">新完整期</span> <strong>International Journal of Geographical Information Science</strong> — T&amp;F 官方 TOC 两遍（/toc/tgis20/40/11 间隔抓取）各 12 篇正式论文且 DOI 集合一致，连续页码 3429–3765。Crossref 印刷日期 published-print=2026-11-02，不晚于扫描日 2026-11-12，已 claim 2026-V40-I11（正式论文 12 篇，其中既有网络首发归期 1 篇）。官方 Current 已指向 Volume 40 Issue 12，两遍正式 12 DOI 一致且页码 3767–4105，但 Crossref 印刷日期为 2026-12-02，属未来期，仅保留候选不得 claim，不重印已简报 2026-V40-I10。Latest articles 新登记 9 条（账本已见去重抑制 41）。官方目录以 Playwright + 系统 Chrome 快照为准。 <span class="evidence"><a href="https://www.tandfonline.com/toc/tgis20/40/11" rel="noopener noreferrer">证据</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 官方目录</small></span></li>
+<li><span class="tag">未来期</span> <strong>International Journal of Geographical Information Science</strong> — Volume 40 Issue 12 已在官方 Current 发布且目录稳定 12 篇，但印刷日期为 2026-12-02，按规则不得 claim。 <span class="evidence"><a href="https://www.tandfonline.com/toc/tgis20/40/12" rel="noopener noreferrer">证据</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 官方目录</small></span></li>
+<li><span class="tag">有更新</span> <strong>Big Earth Data</strong> — T&amp;F 官方 Current 仍为 Volume 10 Issue 3（已简报完整期 2026-V10-I3），卷次导航仅见 Issue 1–3，未出现 Issue 4，无新完整期可 claim。Latest articles 新登记 5 条（账本已见去重抑制 33）。官方 Latest 页另有 Correction 2 条：2026-09-11 一篇已在账本、2025-01-09 一篇为历史条目，本轮均不回溯补登为新勘误。官方目录以 Playwright + 系统 Chrome 快照为准。 <span class="evidence"><a href="https://www.tandfonline.com/toc/tbed20/current" rel="noopener noreferrer">证据</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 官方目录</small></span></li>
+<li><span class="tag">有更新</span> <strong>Data Mining and Knowledge Discovery</strong> — Springer 官方 Volumes and issues 最新仍为 Volume 40 Issue 6（January–December 2026 仅列 Issue 1–6），未见 Issue 7，不得虚构或提前 claim。Articles 列表首页新登记 Article 114–120 共 7 条（发表日期 2026-10-12 至 2026-10-29）；同页其余 43 条已见于账本（多为已简报正式论文），不回溯补登。官方目录以 Playwright + 系统 Chrome 快照为准。已简报完整期仍为 2026-V40-I6。 <span class="evidence"><a href="https://link.springer.com/journal/10618/volumes-and-issues" rel="noopener noreferrer">证据</a><small>link.springer.com · 2026-11-12 12:08 CST · 官方目录</small></span></li>
+</ul>
+</section>
+
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>OF</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-012<br><strong>International Journal of Geographical Information Science</strong></td><td>2026-V40-I11</td><td>1</td><td>12</td><td>1</td><td>9</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr>
+<tr><td>REG-042<br><strong>Big Earth Data</strong></td><td>2026-V10-I3</td><td>0</td><td>0</td><td>0</td><td>5</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr>
+<tr><td>REG-072<br><strong>Data Mining and Knowledge Discovery</strong></td><td>2026-V40-I6</td><td>0</td><td>0</td><td>0</td><td>7</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-11-12_GIS-AI期刊每日摘要_第12组.png" width="1600" height="900" alt="第12组每日摘要图：3刊，新完整期1，正式文12，网络首发21">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-012-2026-v40-i11"><h3>International Journal of Geographical Information Science · 2026-V40-I11</h3>
+<p>T&amp;F 官方 TOC 两遍（/toc/tgis20/40/11 间隔抓取）各 12 篇正式论文且 DOI 集合一致，连续页码 3429–3765。Crossref 印刷日期 published-print=2026-11-02，不晚于扫描日 2026-11-12，已 claim 2026-V40-I11（正式论文 12 篇，其中既有网络首发归期 1 篇）。官方 Current 已指向 Volume 40 Issue 12，两遍正式 12 DOI 一致且页码 3767–4105，但 Crossref 印刷日期为 2026-12-02，属未来期，仅保留候选不得 claim，不重印已简报 2026-V40-I10。Latest articles 新登记 9 条（账本已见去重抑制 41）。官方目录以 Playwright + 系统 Chrome 快照为准。</p>
+<p><span class="evidence"><a href="https://www.tandfonline.com/toc/tgis20/40/11" rel="noopener noreferrer">官方期次目录</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 一级完整性证据</small></span></p>
+<p>本简报收录正式论文 <strong>12</strong> 篇（均含摘要抽屉；无摘要者不编造）。其中 1 篇为既有网络首发正式归期。</p></article>
+<article class="paper" id="formal-reg-012-2026v40i11-001">
+<p class="kicker">International Journal of Geographical Information Science · FORMAL_ISSUE</p>
+<h3>Rethinking the nexus of GIScience and population ageing: a perspective of gerontological GIS</h3>
+<p>Kai Cao; Xuying Bai; Yuxin Cao; Xueqing Zhou; Ye Liu; Mei-Po Kwan</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2630273</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2630273" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2630273" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Rethinking the nexus of GIScience and population ageing: a perspective of gerontological GIS</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2630273 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Geographic Information Science (GIScience) has made great strides in recent decades, offering an array of sophisticated tools and mediums for exploring, comprehending, analysing, and addressing complex real-world phenomena and scientific challenges. This advancement has also substantially propelled the field of Gerontology, offering a geographical perspective to deeply examine and respond to the increasingly pressing global challenge of population ageing. In this context, a systematic review for GIS applications in gerontological research has been conducted, outlining and synthesising the evolution of key research themes in GIS studies related to Gerontology from both macro and micro perspectives. We further reviewed the development of GIS methods within the domain of gerontological research. In particular, the increasing relevance of AI is becoming a pivotal factor in enhancing research, promoting the creation of intelligent spatial perception, predictive modelling, and dynamic decision support systems. This review seeks to underscore the pivotal role of GIS in addressing the pressing issue of population ageing, while also emphasising the potential of GIS to facilitate gerontological research. Through this comprehensive review, we aim to inspire and attract more interdisciplinary researchers to engage in research and practice within this field, ultimately promoting the sustainable development of an age-friendly society.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2630273" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-012-2026v40i11-002">
+<p class="kicker">International Journal of Geographical Information Science · FORMAL_ISSUE</p>
+<h3>MGIM: a masked modeling framework for land parcel-level Geo-Inference</h3>
+<p>Xiang Zhang; Yao Yao; Chenglong Yu; Zhihui Hu; Geyuan Zhu; Mariko Shibasaki; Liangyang Dai; Yanduo Guo; Qingfeng Guan; Ryosuke Shibasaki</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2630403</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2630403" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2630403" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>MGIM: a masked modeling framework for land parcel-level Geo-Inference</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2630403 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Effective modeling of spatio-temporal contexts to support geographic reasoning is essential for advancing Geospatial Artificial Intelligence. Inspired by masked language models, this paper introduces the Masked Geographical Information Model (MGIM), a novel self-supervised framework for learning context-aware representations from multi-source spatio-temporal data. The framework’s core innovations include a parcel-scale method for multi-source data fusion and a custom self-supervised masking strategy for diverse geographic elements. This integrated modeling approach enables the model to capture complex spatio-temporal relationships and achieve consistently strong performance across diverse geographic reasoning tasks, such as trajectory inference, people flow inference, event identification, and land parcel function analysis. MGIM accurately reasons from spatio-temporal contexts and dynamically adjusts inferences according to contextual changes. The visualization of attention mechanisms further illustrates MGIM’s capacity to construct contextually-aware representations and task-specific attention patterns analogous to natural language processing models. This study presents a new paradigm for general-purpose spatio-temporal modeling in real-world geographic scenarios, offering significant theoretical and practical value, and promising an effective solution for building a geographic foundation model.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2630403" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-012-2026v40i11-003">
+<p class="kicker">International Journal of Geographical Information Science · FORMAL_ISSUE</p>
+<h3>Geospatial knowledge cube: enhancing semantic query in geospatial data cubes with ontology and LLMs</h3>
+<p>Yi Wei; Chenxiao Zhang; Peng Yue; Hao Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2631190</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2631190" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2631190" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Geospatial knowledge cube: enhancing semantic query in geospatial data cubes with ontology and LLMs</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2631190 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Geospatial Data Cubes (GDCs) raise as a new foundational infrastructure for managing multidimensional heterogeneous spatial datasets. Existing GDC efforts mainly focus on improving computational efficiency, ignoring the optimization of heterogeneous data query due to the lack of semantic connections between them. In this paper, we propose Geospatial Knowledge Cube (GKC) to address the above problem. First, we build a semantic description layer grounded in ontology languages and align it with the schema of GDC. In this way, entities, relationships, and attributes are modeled to enable semantic mappings between heterogeneous datasets. Second, we combine large language models (LLMs) with ontology to transfer natural language queries into machine-readable queries, which significantly improves query efficiency and applicability. Experimental results demonstrate that our method achieves 28.4% higher accuracy than text-to-SQL methods on complex factual queries, 36.3% greater precision for analytical queries, and 22.9% overall accuracy improvement with significantly reduced error rates and enhanced robustness. Furthermore, we applied the GKC framework to flood warning scenarios in the Rhine–Meuse Delta in the case study, which validates the capabilities of GKC.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2631190" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-012-2026v40i11-004">
+<p class="kicker">International Journal of Geographical Information Science · FORMAL_ISSUE</p>
+<h3>STGAT-VCA: vector cellular automata model integrated with graph attention network and gated recurrent unit for urban land use change simulation</h3>
+<p>Zhanjun He; YaoKun Yang; Xiaoling Lin; Yuejian Gong; Cheng Liu; Liang Wu; Liufeng Tao</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2632331</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2632331" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2632331" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>STGAT-VCA: vector cellular automata model integrated with graph attention network and gated recurrent unit for urban land use change simulation</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2632331 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Vector cellular automata (VCA) have been widely used in urban land use change (LUC) simulation because of their ability to represent irregular spatial units. However, conventional VCA models cannot simultaneously address the following two issues: (1) inability to quantify heterogeneous spatial interaction among irregular units and (2) failure to model long-term temporal dependencies. To address this limitation, this study proposes a novel spatiotemporal graph attention-based vector cellular automata (STGAT-VCA) model, which integrates graph attention networks (GATs) and gated recurrent units (GRUs). The model employs GAT’s attention mechanism to capture heterogeneous spatial interaction adaptively among neighboring units while leveraging GRU’s sequential modeling capability to learn temporal dependencies in parcel evolution. The integration of GAT and GRU enables a comprehensive modeling of spatiotemporal coupling effects and LUC’s spatiotemporal dynamics. Experimental validation in Jacksonville, Florida in USA demonstrates that STGAT-VCA remarkably outperforms other comparative models across four key evaluation metrics. Results reveal that by explicitly accounting for spatiotemporal coupling effects, STGAT-VCA achieves superior performance in reconstructing LUC dynamics.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2632331" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-012-2026v40i11-005">
+<p class="kicker">International Journal of Geographical Information Science · FORMAL_ISSUE</p>
+<h3>A method for the cross-perspective alignment of geographic entities with spatial context-aware broad perception</h3>
+<p>Meng Wei; Lina Yang; Xu Sun</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>FORMAL_ASSIGNMENT</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2633188</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2633188" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2633188" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A method for the cross-perspective alignment of geographic entities with spatial context-aware broad perception</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2633188 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Differences in multisensory viewpoints often result in inconsistencies in position, shape, scale and entity count, rendering cross-source geographic entity alignment challenging. Existing methods require a shared geographic reference system or local geometric cues among entities, and thus struggle to address rotation, perspective-induced deformation, and missing entities in cross-perspective imagery. To address this issue, a method for the cross-perspective alignment of geographic entities with spatial context-aware broad perception (CPGEA) is proposed. CPGEA encodes the surrounding-entity spatial context of each entity as distance–azimuth vectors and employs the dynamic time warping (DTW) algorithm to robustly match entities when differences in the position, morphology, and entity count exist. The alignment is performed in two stages: the first stage estimates and corrects the global rotation between maps, and the second stage determines the final entity correspondences on the derotated data. Experiments on multiple datasets show that CPGEA achieves an average alignment accuracy of 91% and consistently outperforms representative geometry-based baselines in cases with large viewpoint differences.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2633188" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-012-2026v40i11-006">
+<p class="kicker">International Journal of Geographical Information Science · FORMAL_ISSUE</p>
+<h3>A controlled natural language and interface for formulating geo-analytical questions with Blockly</h3>
+<p>Haiqi Xu; Enkhbold Nyamsuren; Eric J. Top; Simon Scheider</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2635476</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2635476" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2635476" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A controlled natural language and interface for formulating geo-analytical questions with Blockly</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2635476 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">While question-answering (QA) has gained attention in recent years, an often overlooked condition for receiving a valid answer is the quality of the question. The ability to formulate sufficiently clear and specific questions is crucial, in particular, for indirect, geo-analytical question-answering systems that need to generate valid geoprocessing workflows. We present a new method for formulating geo-analytical questions and specifying their semantics by integrating a controlled natural language for expressing geo-analytic intentions with a semantic model of geo-analytical concept transformations. This method is implemented in a customized Google Blockly interface, where users can construct questions by selecting and connecting blocks representing different conceptual components of geo-analytical questions. We conducted a user study to compare the Blockly-based interface with a free-form interface. Results show that the Blockly-based interface effectively constrains question formulation, leading to more standardized, complete, and interpretable questions regardless of users’ GIS expertise levels. However, the Blockly-based interface requires more learning effort and receives a medium-to-low usability rating. Our study shows the potential for template-based geo-analytical QA to foster a particular level of quality as input to QA systems. Future research should combine this controlled language with generative models to enable higher quality, adaptability, and scalability of question answering.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2635476" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-012-2026v40i11-007">
+<p class="kicker">International Journal of Geographical Information Science · FORMAL_ISSUE</p>
+<h3>A spatial approach to anomalous barrier detection in transportation networks from movement trajectories</h3>
+<p>Chang Ren; Jing Tian; Jed A. Long; Luliang Tang; Qingchi Yao; Xin Ma</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2635481</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2635481" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2635481" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A spatial approach to anomalous barrier detection in transportation networks from movement trajectories</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2635481 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Dynamic information about barriers impeding traffic flow is becoming an essential part of transportation analysis in the context of disruptive events. The automated detection of barriers from individual or vehicular tracking data previously relied on various statistical models of traffic counts and geometric patterns of mobility paths. To account for the variance of traffic flow in peripheral parts of a network, often due to limited data or device coverage, we propose a barrier detection method using trajectory data based on the randomized shortest path model, a probabilistic model for trip paths. By overlaying the spatial distribution of multiple trips, we model traffic counts on each edge as a Poisson process and infer potential barriers from edges with unexpectedly low counts. Therefore, the proposed method incorporates a spatial criterion of path distribution and a statistical criterion of traffic counts for barrier detection. We validated the proposed method on both synthetic data and real-world data, by comparing it with methods using statistical and temporal criteria. Our results allow us to discuss the bias of randomized shortest path model for finite-size networks, the advantages of spatial and temporal criteria for this task, and the capability limitations of the proposed method.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2635481" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-012-2026v40i11-008">
+<p class="kicker">International Journal of Geographical Information Science · FORMAL_ISSUE</p>
+<h3>Integrating overlay and spatial optimization in assessing shape compactness</h3>
+<p>Alan T. Murray</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2638310</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2638310" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2638310" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Integrating overlay and spatial optimization in assessing shape compactness</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2638310 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">GIScience has been central in the evaluation and assessment of geographic shape. Reasons for this are many, but no doubt this is driven by the ease of mapping and visualization of an area that enables human reasoning about its shape characteristics. Coupled with the recognition that the most compact shape is a circle, this has led to the development of much theory and associated methods for quantifying the compactness of an area or polygon. An important class of approaches for assessing compactness involves the comparison of a polygon to a corresponding circle. However, for many approaches, left unresolved is what the appropriate circle of comparison is, and in particular, how best to position and size the circle in order to meaningfully quantify shape compactness. This paper formalizes the sizing and positioning problem essential for the assessment of compactness. An approach is developed to structure and solve this using spatial optimization. Empirical assessment highlights the importance and significance of correctly sizing and positioning a comparative circle. Additionally, it is shown that this approach can be readily implemented and applied in any commercial or open-source GIS environment.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2638310" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-012-2026v40i11-009">
+<p class="kicker">International Journal of Geographical Information Science · FORMAL_ISSUE</p>
+<h3>From geometric mimicry to comprehensive generation: a context-informed multimodal diffusion model for urban morphology synthesis</h3>
+<p>Fangshuo Zhou; Huaxia Li; Liuchang Xu; Rui Hu; Sensen Wu; Liang Xu; Hailin Feng; Zhenhong Du</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2639026</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2639026" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2639026" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>From geometric mimicry to comprehensive generation: a context-informed multimodal diffusion model for urban morphology synthesis</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2639026 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Urban morphology is fundamental to determining urban functionality and vitality. Prevailing simulation methods, however, often oversimplify morphological generation as a geometric problem, lacking the fusion of urban semantics and geographical context. To address this limitation, this study proposes ControlCity, a diffusion model that achieves comprehensive urban morphology generation through multimodal information fusion. We first constructed a quadruple ‘image-text-metadata-building footprints’ dataset from 22 cities worldwide. ControlCity utilizes this information as control conditions. Specifically, an enhanced ControlNet encodes image-based spatial constraints, while text and metadata provide semantic guidance and geographical context to collectively direct the generation. Experimental results demonstrate that compared to the unimodal baseline, this method achieves significant advantages in morphological fidelity. Specifically, FID (lower scores indicate less visual error) was reduced by 71.01%, reaching 50.94, and MIoU (higher scores indicate greater spatial overlap) improved by 38.46%, reaching 0.36. Furthermore, the model demonstrates robust knowledge generalization and controllability, enabling cross-city style transfer and zero-shot generation for unknown cities. Ablation studies reveal the distinct roles of images, text, and metadata in the generation. This study confirms that multimodal fusion is crucial for achieving the transition from ‘geometric mimicry’ to ‘comprehensive generation’, providing a novel paradigm for urban morphology research and applications.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2639026" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-012-2026v40i11-010">
+<p class="kicker">International Journal of Geographical Information Science · FORMAL_ISSUE</p>
+<h3>Regional decision-making agent: enhancing geographic decision support through structured resource governance and multi-agent collaboration</h3>
+<p>Zhuo Sun; Songshan Yue; Kaili Yu; Fangzhuo Mu; Zihao Tang; Yongning Wen</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2639623</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2639623" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2639623" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Regional decision-making agent: enhancing geographic decision support through structured resource governance and multi-agent collaboration</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2639623 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Regional decision-making in urban planning, environmental management, and related fields requires the reliable and extensible integration of diverse geographic data and models. Traditional expert-driven approaches rely mainly on the manual configuration of data and models by human users, which is inefficient and suffers from knowledge gaps. Agents based on large language models (LLMs) offer the potential to integrate resources and automate computational processes, but face challenges in handling heterogeneous geospatial data and models and often produce unreliable outputs. We propose the regional decision-making agent (RDMA), which is a multiagent collaborative framework that enhances LLM-based agents with structured resource management and reliability mechanisms to support complex, multistep decision-making processes. The RDMA comprises three modules: data governance, model governance, and agent scheduling. To mitigate LLM hallucinations, three strategies are implemented: knowledge-enhanced retrieval-augmented generation (RAG), confidence self-assessment, and system transparency. Performance evaluations demonstrate high success rates and accuracy across diverse tasks at both the model configuration and workflow composition levels. Ablation studies confirm the essential contributions of quality control and knowledge-enhanced retrieval mechanisms. Case studies in urban planning and stormwater management validate RDMA’s ability to deliver actionable insights. This work advances AI-driven geographic analysis and provides a scalable solution for sustainable regional governance.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2639623" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-012-2026v40i11-011">
+<p class="kicker">International Journal of Geographical Information Science · FORMAL_ISSUE</p>
+<h3>Revealing the co-occurrence patterns of public emotions from social media data</h3>
+<p>Yang Hua; Sijin Li; Wufan Zhao; Jizhe Xia; Haoran Wang; Yang Chen; Liyang Xiong; Guoan Tang</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2640612</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2640612" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2640612" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Revealing the co-occurrence patterns of public emotions from social media data</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2640612 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Perceiving multidimensional emotions from social media data and analyzing their spatiotemporal dynamics constitute a significant topic at the intersection of geographic information science and social management. However, existing methods often oversimplify emotions by neglecting mixed categories, providing representations of spatiotemporal emotion patterns with limited accuracy, and overlooking the influence of environmental factors on emotions. To address this issue, we proposed a framework that integrates the deep learning model with co-occurrence theory to classify individual emotions into single, dominant-subordinate, and compound classes. Emotional graphs and metrics were leveraged to characterize the spatiotemporal distribution of public emotions. The proposed method identified 34 types of complex emotions and revealed that urban environmental factors, such as building volume and night-time light intensity, were closely associated with variations in emotional distribution and dynamics. Compared with valence-based classification methods, the proposed method clearly illustrated the changes in public emotions following a respiratory infectious disease outbreak and subsequent health control measures. Uncertainty analysis conducted for grid- and street-based spatial units demonstrated the robust stability and cross-scale consistency of this method. This study provides deeper insights into collective emotion patterns and their geographic drivers, offering a valuable reference for urban governance and emergency management.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2640612" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-012-2026v40i11-012">
+<p class="kicker">International Journal of Geographical Information Science · FORMAL_ISSUE</p>
+<h3>A mathematical vector operation for the stream power simulation from the digital elevation model</h3>
+<p>Liyang Xiong; Wang Shen; Haoyu Cao; Yanzi Yan</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2641742</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2641742" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2641742" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A mathematical vector operation for the stream power simulation from the digital elevation model</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2641742 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Rivers play a fundamental role in shaping the Earth’s surface and sustaining ecosystems. Accurate modeling and simulation of stream power are essential for understanding fluvial processes. As a measure of the energy exerted by overland flow, stream power possesses both magnitude and directional attributes. However, conventional simulation approaches based on scalar operations often neglect the directional component. In this study, a mathematical vector-based method is proposed to simulate stream power. This approach involves the vectorized representation of flow direction and the computation of the Stream Power Index (SPI) using vector operation rules. The method is validated in typical fluvial landscapes of the Chinese Loess Plateau and compared with conventional scalar-based approaches. Results indicate that the vector-based method effectively reduces the overestimation of stream power by accounting for its directional properties. For example, in Strahler-ordered stream networks, the average overestimation by scalar methods reaches 58.9% in first-order streams and up to 1091.1% in sixth-order streams. These findings demonstrate that the proposed vector-based approach aligns more closely with the actual dynamics of geographical processes. Furthermore, since directional power interactions are widespread in Earth surface processes, adopting a vector perspective in related simulations may significantly enhance the realism and accuracy of geographical modeling.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2641742" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+
+<section id="online-first">
+<h2>网络首发 / 在编登记</h2>
+<p>本批新登记 <strong>21</strong> 条（IJGIS 9、Big Earth Data 5、DMKD 7）。以下为尚未正式 claim 的网络首发或在编记录（不含勘误，不含未来期 I12 目录论文）。</p>
+<article class="issue" id="of-reg-012"><h3>International Journal of Geographical Information Science · 新登记 9 条</h3><article class="paper" id="of-reg-012-001">
+<p class="kicker">International Journal of Geographical Information Science · ONLINE_FIRST</p>
+<h3>Regional gravity: a zoning heuristic for detecting heterogeneous distance decay effect in spatial interaction</h3>
+<p>Hao Guo; Lei Dong; Xiaodong Zhang; Yu Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2751551</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2751551" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2751551" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Regional gravity: a zoning heuristic for detecting heterogeneous distance decay effect in spatial interaction</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2751551 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">The distance decay effect in spatial interaction characterizes the impedance of geographic distance in spatial flows of population, commodities, and others. A large body of empirical evidence suggests that the distance decay effect may exhibit spatial heterogeneity, or variation in its intensity across locations. Among existing approaches to model such heterogeneity, however, locally calibrated gravity models and spatially weighted interaction models face limitations in simplicity as they introduce a large number of additional parameters; grouping-based gravity models require a region partition to be specified a priori. To address these challenges, this study proposes a regional gravity framework for spatial-heterogeneity-aware modeling of origin-destination flow data. Our proposed two-stage K-Interaction-Models (2SKIM) algorithm automatically delineates a given number of geographically connected regions and estimates specific gravity parameters for each pair of origin and destination regions. Simulated data experiments validate the 2SKIM algorithm’s ability to infer the region partition associated with distinct distance decay parameters from flow data. An empirical analysis of inter-city population mobility in China reveals notable regional variations in the distance decay effect.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2751551" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-012-002">
+<p class="kicker">International Journal of Geographical Information Science · ONLINE_FIRST</p>
+<h3>The task utility gap in human mobility modeling: evidence from environmental exposure assessment</h3>
+<p>Xin Jin; Zihan Kan; Sylvia Y. He; Daming Lu; Wenjia Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2755936</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2755936" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2755936" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>The task utility gap in human mobility modeling: evidence from environmental exposure assessment</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2755936 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Human mobility data are essential for applications such as environmental exposure assessment, but privacy constraints limit access to large-scale trajectory datasets. Trajectory generative models offer a promising solution, yet whether statistical-fidelity-based evaluation guarantees task utility remains unclear. Task utility is defined as the agreement between downstream results derived from generated and observed trajectories. Using trajectory data from Beijing and Shenzhen, two cities with contrasting urban structures, we identified a systematic gap between statistical fidelity and task utility. We showed that commonly used trajectory-centered metrics were often weak predictors of downstream performance, whereas metrics reflecting spatial extent and collective flow structure provided more reliable indicators of task utility. Motivated by this gap, we proposed StayMove, an interpretable mechanistic framework coupling empirical activity-state transitions with a behaviorally informed spatial choice model. Across both cities, StayMove achieved high statistical fidelity and robust task utility with transferable parameters and no task-specific tuning. These findings highlight the importance of task-oriented evaluation and provide a practical framework for developing mobility models that are both behaviorally realistic and useful for downstream applications.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2755936" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-012-003">
+<p class="kicker">International Journal of Geographical Information Science · ONLINE_FIRST</p>
+<h3>Pop-HSTM: a multi-scale coupled framework for dynamic population modeling</h3>
+<p>Dehao Li; Sijin Li; Haiping Zhang; Nuozhou Shen; Yang Chen; Guoan Tang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2756585</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2756585" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2756585" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Pop-HSTM: a multi-scale coupled framework for dynamic population modeling</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2756585 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Predicting fine-grained population distributions over time remains challenging because observational proxies are heterogeneous and indirect, and human mobility involves coupled spatial and temporal processes. Existing methods often insufficiently represent multi-scale spatial constraints, especially the interaction between large-scale urban structures and local neighborhood processes. To address this gap, this study proposes Pop-HSTM, a global-local coupled deep learning framework for dynamic population prediction. Pop-HSTM integrates local spatial interaction learning, temporal dependency modeling, and cross-scale spatial fusion to jointly represent neighborhood-level interactions and broader mobility patterns. Using mobile phone data and multi-source geospatial covariates in Beijing, Pop-HSTM outperforms selected state-of-the-art baselines, reducing prediction errors by approximately 20–40%. It also maintains stable performance under extended prediction horizons of up to 96 h and limited historical observations. The results suggest that explicitly coupling global spatial structure with local interactions can improve fine-grained dynamic population modeling and provide a useful framework for spatiotemporal prediction in GIS.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2756585" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-012-004">
+<p class="kicker">International Journal of Geographical Information Science · ONLINE_FIRST</p>
+<h3>From social media to flood 3D scenes: leveraging large language models and knowledge graphs for flood spatiotemporal evolution representation</h3>
+<p>Qingqing Ran; Weilian Li; Juan Liu; Huiqin Li; Pei Dang; Jun Zhu; Qing Zhu; Youness Dehbi</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2749047</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2749047" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2749047" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>From social media to flood 3D scenes: leveraging large language models and knowledge graphs for flood spatiotemporal evolution representation</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2749047 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Flood disaster evolution exhibits strong spatiotemporal coupling and complex causality. Intuitive representations of flood disaster evolution can help the public better understand disaster processes and their underlying evolution mechanisms, thereby enhancing risk awareness. However, most existing studies focus on numerical modeling of flood disaster evolution, which has limited capability in effectively capturing and representing the evolving processes of flood disasters. Social media posts generated during floods contain rich information and provide valuable insights into the evolution of flood events. In this context, this study leverages large language models (LLMs) and knowledge graphs (KGs) to extract flood spatiotemporal knowledge from social media, thereby reconstructing the disaster evolution pathway for representation as 3D scenes. Specifically, ontology-constrained LLMs for flood knowledge extraction, evolutionary pathway reconstruction and 3D representation are introduced in detail. We collected a total of 34,731 tweets related to the 2021 European floods for experimental analysis and developed a prototype system for 3D flood representation. The experimental results demonstrate that the proposed method achieves reliable performance in disaster knowledge extraction and evolutionary pathway reconstruction. Moreover, the augmented 3D representation improves the interpretability and clarity of flood disaster evolution, thereby facilitating a better understanding of disaster processes and supporting disaster prevention and mitigation.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2749047" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-012-005">
+<p class="kicker">International Journal of Geographical Information Science · ONLINE_FIRST</p>
+<h3>Representing spatial dependence and heterogeneity via deep kriging and compressed sensing for urban human activity intensity forecasting</h3>
+<p>Kaiyuan Lei; Kaiqi Chen; Min Deng</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2751553</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2751553" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2751553" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Representing spatial dependence and heterogeneity via deep kriging and compressed sensing for urban human activity intensity forecasting</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2751553 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Forecasting the spatiotemporal distribution of urban human activity intensity is crucial for intelligent urban management but remains challenging due to complex temporal dynamics and geospatial effects. While advanced deep learning models have effectively addressed complex dynamics, they are not designed from a geospatial perspective and often struggle to capture spatial dependence and heterogeneity. Rather than redesigning forecasting models, a more efficient approach is to incorporate geospatial effects using scalable, model-agnostic representation embeddings. However, existing representation methods primarily consider basic geospatial characteristics (e.g. locations, attributes, and relationships), failing to capture more complex geospatial effects. Furthermore, these methods are typically contrastive rather than predictive, limiting their utility for spatiotemporal forecasting. To address these issues, we proposed a novel Kriging and Compressed sensing-based Representation Learning framework (KCRL). This framework (1) employs spatial interpolation and reconstruction to generate embeddings that are more suitable for spatiotemporal forecasting tasks, and (2) leverages kriging and compressed sensing theories to reshape the learning mechanism, enabling it to capture spatial dependence and heterogeneity. Experiments on four real-world datasets of urban human activity intensity demonstrated that, using our KCRL framework, even a simple fully connected neural network could achieve better accuracy than state-of-the-art forecasting models.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2751553" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-012-006">
+<p class="kicker">International Journal of Geographical Information Science · ONLINE_FIRST</p>
+<h3>Unraveling vegetation carbon storage using STVisX: a spatiotemporal visual explainable AI framework</h3>
+<p>Chuan Chen; Yeming Lao; Youjia Liang; Yongheng Feng; Wen Yi; Yongze Song; Liqiu Meng</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2748860</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2748860" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2748860" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Unraveling vegetation carbon storage using STVisX: a spatiotemporal visual explainable AI framework</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2748860 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Understanding vegetation carbon storage dynamics is essential for assessing ecosystem resilience and achieving carbon neutrality, as vegetation governs spatiotemporal variability in carbon sinks and underpins low-carbon planning. Yet existing studies lack the spatial resolution needed to capture fine-scale urban–ecological interactions. Machine learning improves predictive accuracy but remains opaque, and existing explainable AI (XAI) methods rarely preserve the spatial structure of factor contributions or capture their temporal dynamics, limiting their use in rapidly transforming cities. To address these gaps, we introduce the spatiotemporal visual explainable AI (STVisX) framework, which integrates meta-analysis, remote sensing, and XAI to quantify and explain urban vegetation carbon storage. We apply STVisX to Yan’an City, investigating species-level vegetation carbon storage using Sentinel-2 spectral data for twelve dominant species. By combining meta-analysis, remote sensing, and machine learning, we generate high-resolution estimates of seasonal vegetation carbon storage for 2018–2024. STVisX visualizes how the explanatory variables jointly contribute to predicted vegetation carbon storage across seasons and reveals seasonal shifts in their relative contributions, reflecting seasonal relationships between phenology and topography. These insights provide an empirical basis for integrating carbon storage management into urban planning and ecological restoration policies to support greener and more resilient cities.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2748860" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-012-007">
+<p class="kicker">International Journal of Geographical Information Science · ONLINE_FIRST</p>
+<h3>Residualized Local Conditional Mutual Information (LCMI): a scalable information-theoretic framework for interpretable and nonlinear spatially varying effect modelling</h3>
+<p>Lingbo Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2750858</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2750858" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2750858" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Residualized Local Conditional Mutual Information (LCMI): a scalable information-theoretic framework for interpretable and nonlinear spatially varying effect modelling</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2750858 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Understanding nonlinear spatially varying effects remains a central challenge in spatial analysis. Existing spatial models often face a trade-off between local interpretability, nonlinear flexibility, and computational feasibility. To address this challenge, this study proposes a two-stage Local Conditional Mutual Information (LCMI) framework for interpretable, spatially explicit, and scalable modelling of nonlinear spatially varying effects. Stage I estimates residualized local conditional-dependence surfaces as a tractable approximation to conditional relevance, extracts global effect-shape functions, and decomposes each predictor into baseline, local nonlinear adjustment, and total contribution. Stage II uses these outputs as non-negative local information weights to reconstruct signed local coefficients on the recovered effect-shape basis through LCMI-guided weighted local regression. The framework embeds explanation directly into modelling rather than treating it as a separate post hoc step. Synthetic experiments show that the proposed framework accurately recovers nonlinear spatial effect surfaces while remaining computationally efficient. Scalability tests show that the method remains tractable at one million observations in a CPU environment. The study demonstrates that residualized information-theoretic local dependence can provide a practical, model-internal basis for interpretable and scalable spatial modelling of nonlinear geographic processes, while the resulting LCMI surfaces should be interpreted as conditional-dependence approximations rather than direct high-dimensional CMI estimates.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2750858" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-012-008">
+<p class="kicker">International Journal of Geographical Information Science · ONLINE_FIRST</p>
+<h3>Omission error in geographically weighted regression</h3>
+<p>Binbin Lu; Bo Wu; Guanpeng Dong; Paul Harris</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2746632</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2746632" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2746632" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Omission error in geographically weighted regression</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2746632</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2746632" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-012-009">
+<p class="kicker">International Journal of Geographical Information Science · ONLINE_FIRST</p>
+<h3>Efficient computation for continuous Hausdorff and average Euclidean distance between polylines</h3>
+<p>Barry J. Kronenfeld; Barbara P. Buttenfield; Lawrence V. Stanislawski; Ethan Shavers</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/13658816.2026.2669972</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2669972" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/13658816.2026.2669972" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Efficient computation for continuous Hausdorff and average Euclidean distance between polylines</strong></p><p class="abstract-meta">期刊：International Journal of Geographical Information Science · DOI：10.1080/13658816.2026.2669972 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Polyline distance metrics provide a foundation for geospatial analysis tasks ranging from trajectory analysis and movement tracking to assessment of multiscale geospatial databases. Two commonly discussed metrics in these contexts are the maximum (Hausdorff) and average Euclidean distance. However, implementations of these metrics between the continuous paths defining polyline features are lacking. Instead, distances between discrete sets of vertices or between one set of vertices and another continuous polyline are typically computed, often without acknowledgment that these are imperfect approximations of distances between two continuous polylines. This paper reports on an algorithm and functioning code implementation to accurately compute the planar 2D Hausdorff and average Euclidean distances between continuous polylines by traversing one polyline and integrating the continuous distance function to the other. Code accuracy and robustness are verified against 50 synthetic test cases, and application to typical cartographic features is used to assess computational efficiency and to quantify errors associated with commonly used approximations. Results indicate loglinear efficiency with input polylines following similar trajectories. Compared to the true distances, commonly used approximations were found to produce errors of up to 36% and 160.7% for Hausdorff and average Euclidean distance, respectively. Given similar computational efficiencies, continuous polyline distance metrics are recommended over discrete approximations to avoid errors.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2026.2669972" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></article><article class="issue" id="of-reg-042"><h3>Big Earth Data · 新登记 5 条</h3><article class="paper" id="of-reg-042-001">
+<p class="kicker">Big Earth Data · ONLINE_FIRST</p>
+<h3>Emerging vortex street in the ocean from multi-source big data</h3>
+<p>Ge Chen; Linghui Xia; He Gao; Ruijiao Li; Guiyan Han; Baoxiang Huang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/20964471.2026.2753277</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2753277" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/20964471.2026.2753277" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Emerging vortex street in the ocean from multi-source big data</strong></p><p class="abstract-meta">期刊：Big Earth Data · DOI：10.1080/20964471.2026.2753277 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Oceanic vortex streets are a representative wake phenomenon generated by the interaction between oceanic currents and bluff bodies such as islands, reefs, and offshore wind-energy infrastructures. They serve as an important vehicle for investigating coastal material transport, energy cascades, and ecological responses. This review aims to provide an integrative synthesis of recent advances in oceanic vortex street research from the perspectives of simulation data, observational data, and their related applications. We first review the fundamental role of traditional numerical simulations in producing high‑fidelity flow fields and elucidating dynamical mechanisms in oceanic vortex street simulations, as well as the extended value of AI-physics integrated approaches for rapid prediction, sparse reconstruction, and parameter inversion. Then, we review the application of various multi-source remote sensing data, including multispectral imagers and synthetic aperture radar, together with in situ observations and reanalysis products, in the identification and process‑based analysis of oceanic vortex streets, with particular emphasis on the contribution of coordinated multi-source observations to understanding their driving mechanisms and evolution. Building on a multi-source big data framework that integrates remote sensing observations and numerical simulations, we further examine recent progress and emerging applications of oceanic vortex streets in cross-disciplinary fields, including ecological, biological, and biogeochemical studies. Finally, from a data‑oriented perspective, we identify two major challenges currently facing oceanic vortex street research, namely limited observability and insufficient data-driven application, and propose corresponding solutions and recommendations.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2753277" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-042-002">
+<p class="kicker">Big Earth Data · ONLINE_FIRST</p>
+<h3>Scaling inference with remote-sensing foundation models on large datacubes</h3>
+<p>Rati Vardiashvili; Dimitar Mishev; Peter Baumann</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/20964471.2026.2746169</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2746169" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/20964471.2026.2746169" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Scaling inference with remote-sensing foundation models on large datacubes</strong></p><p class="abstract-meta">期刊：Big Earth Data · DOI：10.1080/20964471.2026.2746169 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">High-resolution satellite constellations have grown Earth Observation (EO) archives to petabyte scale. While remote-sensing foundation models offer powerful capabilities for analysing this data, scaling inference across a variety of models to inputs far larger than memory, particularly on modest hardware, remains a challenge. We present GSIP, the GeoSpatial Inference Pipeline, a high-performance inference framework that decouples data processing from the specific ML model, facilitating extensibility and evolution with the rapid advances in remote-sensing models. To maximize hardware utilization in the face of compute and memory constraints, we employ a dynamic data processing strategy built on an adaptive Zone of Responsibility (ZoR) within a producer-consumer pipeline, entirely decoupling input preparation, GPU inference, and output consolidation. The framework automatically adjusts chunk and batch sizes based on available system and GPU memory, ensuring both high performance and robustness even when datasets exceed available memory. Across eight model configurations and two hardware tiers, GSIP runs both conventional classifiers and remote-sensing foundation models, including Prithvi-EO-1.0 and 2.0, SatlasPretrain, and the generative TerraMind model, on Sentinel-1/2 and Harmonized Landsat Sentinel-2 (HLS) inputs. It processes a full Sentinel-2 granule on a 4 GB-VRAM consumer laptop within an 8 GB memory budget (peak process RAM ≤7.00 GB), and classifies a 17.8-gigapixel, 170-scene mosaic covering 1.8 million km² on the same laptop, with peak memory held at 10.51 GB against the 11.3 GB budget it was given, demonstrating that the analysable area is bounded by storage rather than by RAM. Under a matched 8 GB budget it is also faster and more accurate than equivalent pipelines assembled from standard geospatial and deep-learning tooling.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2746169" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-042-003">
+<p class="kicker">Big Earth Data · ONLINE_FIRST</p>
+<h3>A four-decadal (1981–2024) quality-assured ground-based soybean phenology dataset from Northeast China: a FAIR-compliant resource for climate impact and agricultural adaptation studies</h3>
+<p>Quanjun Zhang; Dongli Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/20964471.2026.2735138</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2735138" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/20964471.2026.2735138" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A four-decadal (1981–2024) quality-assured ground-based soybean phenology dataset from Northeast China: a FAIR-compliant resource for climate impact and agricultural adaptation studies</strong></p><p class="abstract-meta">期刊：Big Earth Data · DOI：10.1080/20964471.2026.2735138 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Although satellite remote sensing has been widely used to monitor land surface phenology, long-term, high-quality ground-based observations are essential for validating and calibrating these products, particularly for understanding agricultural ecosystem responses to climate change. However, such ground-truth datasets remain scarce, limiting the full potential of Earth system data applications. Here we present a comprehensive ground-based soybean phenology dataset for Northeast China, a region critical to national food security. The dataset integrates historical paper-based logs (1980s–1990s) with modern electronic records (2000s onwards) from 43 national agrometeorological stations operated by the China Meteorological Administration (CMA), spanning a 15° latitudinal gradient (38–53°N) across Heilongjiang, Jilin, and Liaoning provinces over 44 years (1981–2024). It provides the timing (day of year, DOY) of eight key phenophases (sowing, emergence, three-leaf, branching, flowering, pod formation, seed filling, maturity) and the durations of six intervening growth intervals. A multi-tiered quality assurance framework combining automated consistency checks, statistical outlier detection, and expert arbitration against agronomic principles and auxiliary climate data ensures high data integrity and completeness (&gt;99%; paper era: 93.8%; electronic era: 98.1%). To facilitate reuse, we provide pre-computed kernel density estimates (probability distributions) and univariate linear regression trends for each station and phenological variable, along with 656 diagnostic plots. The dataset is openly available in the Science Data Bank under a CC BY 4.0 license as primary data tables (XLSX) and diagnostic plots (JPEG, 1200 dpi) (https://doi.org/10.57760/sciencedb.37245). As a long-term, spatially explicit, FAIR-compliant ground-truth resource, this dataset is valuable for validating satellite-derived phenology products, calibrating crop modules, and investigating climate-driven impacts on agricultural systems.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2735138" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-042-004">
+<p class="kicker">Big Earth Data · ONLINE_FIRST</p>
+<h3>Reconstruction of daily snow depth at 0.25° resolution over the arid regions of Central Asia from 1980 to 2023 using machine learning</h3>
+<p>Liancheng Zhang; Guli Jiapaer; Tao Yu; Jie Bai; Xiapeng Jiang; Hongwu Liang; Pingping Feng; Tongwei Ju; Philippe De Maeyer; Tim Van de Voorde</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/20964471.2026.2736332</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2736332" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/20964471.2026.2736332" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Reconstruction of daily snow depth at 0.25° resolution over the arid regions of Central Asia from 1980 to 2023 using machine learning</strong></p><p class="abstract-meta">期刊：Big Earth Data · DOI：10.1080/20964471.2026.2736332 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Arid regions of Central Asia (CA) depend heavily on snowmelt, but limited monitoring stations and unreliable snow depth (SD) data hinder effective snow monitoring. In this study, we applied XGBoost (XGB) and random forest (RF) machine learning models to integrate multiple SD products with covariates—including geospatial, snow-related, meteorological, land cover, and time data—along with in situ SD measurements, to enhance SD monitoring in CA. Two modeling approaches were tested: segmented modeling based on snow development stages and whole-period modeling for the entire snow season. The results showed that segmented fusion modeling outperformed whole-period modeling, with XGB-based models capturing SD variations more effectively than RF-based models and existing SD products. Notably, the XGB-based fusion models markedly improved the SD estimates for complex high-elevation terrain. Model performance analysis revealed that accuracy increased with the increasing number of integrated SD products. Moreover, the models incorporating ERA5-Land outperformed those that used the other datasets. While all covariate types enhanced the model performance, geospatial features made the most significant contributions. Ultimately, using the XGB-segmented fusion model, we developed a 0.25° daily SD dataset for CA spanning 1980–2023, providing a reliable resource for snow monitoring in the region.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2736332" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-042-005">
+<p class="kicker">Big Earth Data · ONLINE_FIRST</p>
+<h3>Driving forces of contemporary wildfire severity in the American Southwest: a remote sensing and machine learning case study in Arizona, USA</h3>
+<p>Helen M. Poulos; Sarah Hardy; Jenna Otaola; Andrew M. Barton</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/20964471.2026.2735134</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2735134" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/20964471.2026.2735134" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Driving forces of contemporary wildfire severity in the American Southwest: a remote sensing and machine learning case study in Arizona, USA</strong></p><p class="abstract-meta">期刊：Big Earth Data · DOI：10.1080/20964471.2026.2735134 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">As climate change continues to intensify atmospheric moisture demand across the American Southwest, predicting where wildfires cause severe vegetation mortality remains a major challenge. New thermal and optical harmonized satellite products provide emerging opportunities for evaluating how pre-fire vegetation moisture and water stress influence fire severity compared to other variables. We modeled continuous Relativized differenced Normalized Burn Ratio (RdNBR) for 45 wildfires that burned in the 2019 and 2020 fire seasons using random forest to compare Harmonized Landsat–Sentinel-2 vegetation indices, ECOSTRESS (ECOsystem Spaceborne Thermal Radiometer Experiment on Space Station) evapotranspiration and evaporative-stress metrics, Daymet pre-fire weather variables, LANDFIRE fuels attributes, and topographic predictors across five cumulative pre-ignition windows from 1 week to 3 months before ignition. Despite exceptional drought and anomalous fire-weather conditions, low-severity fire was common over the study period. Integrated models outperformed individual product-family models, indicating that fire severity was best explained by combined antecedent weather, terrain, fuels, vegetation type, and vegetation-moisture predictors. Temperature, elevation, solar radiation, vapor pressure, and HLS Normalized Difference Moisture Index (NDMI) were among the most consistent predictors. NDMI was the most consistent HLS plant-moisture metric, but vegetation moisture alone did not explain fire severity. Canopy cover was also important in woodlands and forests. Models using data from shorter pre-ignition windows outperformed longer pre-fire window models. They varied in performance among vegetation types, with the strongest vegetation-specific performance in forests and woodlands. These findings show that emerging high-resolution satellite products can help characterize pre-fire vegetation conditions and improve fire-risk assessments, especially when integrated with short-term antecedent weather, landscape moisture, and terrain data.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2735134" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></article><article class="issue" id="of-reg-072"><h3>Data Mining and Knowledge Discovery · 新登记 7 条</h3><article class="paper" id="of-reg-072-001">
+<p class="kicker">Data Mining and Knowledge Discovery · ONLINE_FIRST</p>
+<h3>Extending PPCEF: probabilistically plausible counterfactual explanations for regression and heterogeneous tabular data</h3>
+<p>Oleksii Furman; Ł.ukasz Lenkiewicz; Maciej Zięba</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10618-026-01286-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01286-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10618-026-01286-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Extending PPCEF: probabilistically plausible counterfactual explanations for regression and heterogeneous tabular data</strong></p><p class="abstract-meta">期刊：Data Mining and Knowledge Discovery · DOI：10.1007/s10618-026-01286-9 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">The contribution of PPCEF, introduced in our earlier conference paper, generates probabilistically plausible counterfactual explanations for differentiable classifiers on numerical tabular data by combining an unconstrained optimization objective with conditional Normalizing Flow density estimation. This article extends that framework in three directions. First, it adapts the validity objective to regression, enabling counterfactuals to target continuous outcomes while satisfying a density-based plausibility condition. Second, it supports heterogeneous tabular data through dequantization, Gumbel-Softmax relaxation, and post-optimization quantization of categorical features. Third, it incorporates optional actionability constraints for immutable and monotonic features. We evaluate the regression and mixed-data extensions on five additional mixed-type classification datasets and five regression datasets, using linear and non-linear predictors and corresponding mixed-data and regression baselines, and provide new regression-regularization and density-threshold sensitivity analyses. Across the added settings, PPCEF generally achieves high validity and probabilistic plausibility.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01286-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-072-002">
+<p class="kicker">Data Mining and Knowledge Discovery · ONLINE_FIRST</p>
+<h3>Core-driven local community detection in multiplex networks via seed optimization and multilayer modularity</h3>
+<p>Yuxian Zhang; Haiyan Guo; Jing Xiao</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10618-026-01283-y</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01283-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10618-026-01283-y" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Core-driven local community detection in multiplex networks via seed optimization and multilayer modularity</strong></p><p class="abstract-meta">期刊：Data Mining and Knowledge Discovery · DOI：10.1007/s10618-026-01283-y · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Local community detection in multiplex networks faces two critical challenges. First, the result is sensitive to the query seed position. A core seed yields more accurate detection than a peripheral one. Second, nodes near community boundaries often have ambiguous memberships, making their community assignment difficult. These issues limit the accuracy and robustness of existing methods. To address these issues, this paper proposes MLCD-CND (Local Community Detection in Multiplex Networks via Core Node Detection), a two-stage method for local community detection in multiplex networks. In the first stage, MLCD-CND mitigates seed dependency by detecting high-quality core nodes through a novel Node Relation Strength metric, which integrates cross-layer structural similarity (via Jaccard Similarity Coefficient) and interaction density (via Node Influence Area Density). These core nodes replace the initial query seed to form a robust initialization. In the second stage, the algorithm expands the community by optimizing a hybrid metric that balances multiplex local modularity and community relation strength, effectively preventing over-expansion into sparse regions. The experimental results demonstrate that MLCD-CND improves the performance of the F-score by up to 72% compared to the baseline model. The method effectively addresses seed dependency and over-expansion, offering robust performance across diverse networks.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01283-y" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-072-003">
+<p class="kicker">Data Mining and Knowledge Discovery · ONLINE_FIRST</p>
+<h3>Weighting disagreements with likelihood for boolean matrix factorization and correlation clustering</h3>
+<p>Nikolaj Tatti; Florian Adriaens</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10618-026-01278-9</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01278-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10618-026-01278-9" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Weighting disagreements with likelihood for boolean matrix factorization and correlation clustering</strong></p><p class="abstract-meta">期刊：Data Mining and Knowledge Discovery · DOI：10.1007/s10618-026-01278-9 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Boolean matrix factorization is a popular technique for summarizing a binary matrix. The goal in such summary is to find k tiles that are denser than the rest of the data: a typical objective is to minimize the number of (weighted) disagreements with the input data. Another instance of minimizing weighted disagreements is correlation clustering, where we are given a graph with signed edges and are asked to partition a graph minimizing the negative intra edges and the positive inter edges. We argue that weighting disagreements in both cases is crucial, especially for sparse datasets. This leads to a problem of selecting an appropriate weight: a non-trivial problem as we cannot use the original objective directly. To solve this issue we propose an alternative strategy: we search for results that maximize the likelihood of a simple model, based on two Bernoulli variables. We then show that we can find good solutions using a grid search. We develop 2 grid search strategies. The first approach requires O( (1 + ε ⁻¹) log ℓ ) queries, where ℓ is the size of the input, and yields (1 + ε )α guarantee if we can α-approximate the original weighted disagreement problem. The second approach is a pruning technique, based on fractional programming, that reduces the number of queries significantly in practice, especially for small ε. This approach yields (1 + ε ) approximation guarantees, if we can solve the original weighted disagreement problem exactly. We demonstrate empirically that weighting disagreements produces more accurate results, and study the cases where the grid search yields better likelihood scores than the selected baselines.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01278-9" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-072-004">
+<p class="kicker">Data Mining and Knowledge Discovery · ONLINE_FIRST</p>
+<h3>Self-distilled label graph learning for adaptive multi-label feature selection in biological data</h3>
+<p>GuoRong Chen; Na Wu; Chen Hao</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10618-026-01280-1</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01280-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10618-026-01280-1" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Self-distilled label graph learning for adaptive multi-label feature selection in biological data</strong></p><p class="abstract-meta">期刊：Data Mining and Knowledge Discovery · DOI：10.1007/s10618-026-01280-1 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Multi-label feature selection (MFS) is vital for high-dimensional biological data analysis, where samples such as genes or proteins are annotated with multiple functional labels. A major challenge in this setting is that MFS methods must identify informative features while simultaneously modeling complex, and often noisy,inter-label dependencies. Existing MFS methods, however, suffer from three critical limitations in real-world biological applications: (i) prevalent annotation noise, which compromises model reliability; (ii) limited integration of domain-specific knowledge, leading to biologically implausible or spurious label dependencies; and (iii) instability in hierarchical dependency modeling, which propagates errors across prediction stages. To address these challenges, we propose Self-Distilled Label Graph Learning for Adaptive Multi-Label Feature Selection (SDMFS), a unified optimization framework that simultaneously performs feature selection and adaptive label graph learning. First, a self-distillation mechanism generates temporally smoothed teacher targets from the model’s own historical predictions, mitigating annotation noise and stabilizing optimization. Second, an adaptive prior-guided label graph learning module integrates empirical label prior knowledge with data-driven label dependency discovery, ensuring the learned structures are both reliable and interpretable. Finally, the framework jointly leverages these modules to select discriminative features that preserve functional relationships across labels. We develop an efficient alternating minimization algorithm with guaranteed convergence and demonstrate, through extensive experiments on seven benchmark biological datasets, that SDMFS consistently outperforms state-of-the-art MFS methods in predictive performance, robustness, and biological interpretability.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01280-1" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-072-005">
+<p class="kicker">Data Mining and Knowledge Discovery · ONLINE_FIRST</p>
+<h3>Meta additive model: interpretable sparse learning with auto weighting</h3>
+<p>Xuelin Zhang; Xinyue Liu; Hong Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10618-026-01274-z</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01274-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10618-026-01274-z" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Meta additive model: interpretable sparse learning with auto weighting</strong></p><p class="abstract-meta">期刊：Data Mining and Knowledge Discovery · DOI：10.1007/s10618-026-01274-z · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">Sparse additive models have attracted much attention in high-dimensional data analysis due to their flexible representation and strong interpretability. However, most existing models are limited to single-level learning under the mean-squared error criterion, whose empirical performance can degrade significantly in the presence of complex noise, such as non-Gaussian perturbations, outliers, noisy labels, and imbalanced categories. The sample reweighting strategy is widely used to reduce the model’s sensitivity to atypical data. However, it typically requires prespecifying the weighting functions and manually selecting additional hyperparameters. To address this issue, we propose a new meta additive model (MAM) based on the bilevel optimization framework, which learns data-driven weights of individual losses by parameterizing the weighting function via an MLP trained on meta data. MAM is capable of a variety of learning tasks, including variable selection, robust regression estimation, and imbalanced classification. Theoretically, MAM provides guarantees for optimization convergence, algorithmic generalization, and variable selection consistency under mild conditions. Empirically, MAM outperforms several state-of-the-art additive models on both synthetic and real-world data under various types of corruption. The implementation is available at https://github.com/zxlml/MAM.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01274-z" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-072-006">
+<p class="kicker">Data Mining and Knowledge Discovery · ONLINE_FIRST</p>
+<h3>NoDE: noise-decorrelation embedding for robust long-term multivariate time series forecasting</h3>
+<p>Minhyuk Lee; Hyekyung Yoon; Myungjoo Kang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10618-026-01281-0</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01281-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10618-026-01281-0" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>NoDE: noise-decorrelation embedding for robust long-term multivariate time series forecasting</strong></p><p class="abstract-meta">期刊：Data Mining and Knowledge Discovery · DOI：10.1007/s10618-026-01281-0 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">In long-term multivariate time–series forecasting, longer input windows are often assumed to help. However, on some standard benchmarks we observe that, for certain model–dataset combinations, performance becomes non-monotonic and unstable as the look-back length grows. Taking a data-mining perspective, we first characterize correlated input noise on the Weather benchmark, a widely used multivariate forecasting dataset. Residual-denoising analyses on this dataset show that, for some variables and time periods, input perturbations exhibit substantial short-lag autocorrelation rather than behaving as white noise. Building on this evidence, we provide a window-conditional second-order interpretation that relates whole-window embeddings to variance inflation (for linear forecasters) and curvature-dependent bias (for nonlinear forecasters) arising from residual lag covariance under temporally correlated perturbations, and discuss how this interpretation connects to both squared and absolute error criteria used in evaluation. To address this issue in real-world datasets, we introduce NoDE (Noise-Decorrelation Embedding), a simple and model-agnostic structured linear embedding that reduces effective lag covariance via downsampling, permutation-based reshaping (shuffle/unshuffle), and shared affine mappings, while preserving a drop-in interface to common backbones. Our protocol automatically selects the downsampling window in a data-driven manner through a two-stage procedure: candidate resolutions are proposed based on ACF-energy statistics, and the final choice is made via a lightweight quick-train validation. An explicit no-op option is included to disable NoDE when downsampling is not beneficial. Comprehensive experimental evaluations validate that NoDE stabilizes performance under long look-back windows across multiple datasets and backbone families (Transformer, CNN, and MLP). In addition, the protocol’s ability to automatically activate or deactivate NoDE via a no-op option allows it to support standard, patch-wise, and multi-scale front-ends through the same selection interface, enabling robust and architecture-agnostic deployment. Code and models are open-source at https://github.com/lmh9507/NoDE.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01281-0" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-072-007">
+<p class="kicker">Data Mining and Knowledge Discovery · ONLINE_FIRST</p>
+<h3>Feature selection for partial multi-label learning via noise removal and dynamic label correlation</h3>
+<p>Zhenzhen Sun; Shuhao Shan; Yuanlong Yu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1007/s10618-026-01279-8</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01279-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 2026-11-12 12:08 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1007/s10618-026-01279-8" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-12 12:08 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Feature selection for partial multi-label learning via noise removal and dynamic label correlation</strong></p><p class="abstract-meta">期刊：Data Mining and Knowledge Discovery · DOI：10.1007/s10618-026-01279-8 · 语言：en · 摘要来源：已核验来源</p><p class="abstract-body">As an emerging weakly supervised learning paradigm, partial multi-label learning (PML) aims to derive robust predictors from multi-label data with noisy labels. However, apart from label noise, multi-label data usually contain thousands of feature dimensions. Existing PML methods overlook the curse of dimensionality caused by high-dimensional features, which prevents their models from achieving optimal performance. To address the above issues, this paper proposes a novel partial multi-label feature selection method named PMFS-NRDLC, which unifies label noise removal and dimensionality reduction within a single optimization framework. First, by fully utilizing the exclusive prior of PML label noise, we construct a position-constrained regression model with strict zero constraints on noise terms corresponding to non-candidate labels, which fundamentally avoids spurious confidence assignment and achieves precise label denoising. Second, we introduce feature-space manifold topology under the smoothness assumption to regularize label confidence learning, ensuring consistent local structural characteristics between original features and estimated label confidences. Meanwhile, we design an iterative dynamic label graph update strategy to capture time-varying latent label correlations, and further regularize feature weights to guarantee that correlated labels share similar feature importance. Finally, we adopt the l_2,1-norm to impose sparse constraints on feature weights to implement embedded feature selection. Extensive experiments on various benchmark datasets demonstrate that PMFS-NRDLC consistently outperforms state-of-the-art competitors.</p><p class="abstract-meta"><span class="evidence"><a href="https://link.springer.com/article/10.1007/s10618-026-01279-8" rel="noopener noreferrer">官方论文页面</a><small>link.springer.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></article>
+</section>
+
+<section id="corrections"><h2>勘误与撤稿</h2><p>本批未发现新的勘误或撤稿。Big Earth Data Latest articles 中的历史 Correction 条目已见账本或早于本轮窗口，不回溯补登。</p></section>
+
+<section id="themes">
+<h2>主题与阅读路线</h2>
+<p>以下聚类仅依据题名与论文类型等元数据，不从题目推断方法或结果。</p>
+<ul>
+<li>地理信息科学正式期次（2026-V40-I11）题名涉及 Geo-Inference、地理知识立方体、交通障碍探测、公共情绪共现与数字高程水系模拟等，可作该期深读入口。</li>
+<li>网络首发新登记中，IJGIS 题名多见空间建模、洪水三维场景与可解释人工智能；Big Earth Data 题名多见遥感基础模型、物候与雪深数据；Data Mining and Knowledge Discovery 题名多见反事实解释、多层网络社区与时间序列表征。</li>
+</ul>
+</section>
+
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>REG-012 International Journal of Geographical Information Science：<code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code> — T&amp;F 官方 TOC 两遍（/toc/tgis20/40/11 间隔抓取）各 12 篇正式论文且 DOI 集合一致，连续页码 3429–3765。Crossref 印刷日期 published-print=2026-11-02，不晚于扫描日 2026-11-12，已 claim 2026-V40-I11（正式论文 12 篇，其中既有网络首发归期 1 篇）。官方 Current 已指向 Volume 40 Issue 12，两遍正式 12 DOI 一致且页码 3767–4105，但 Crossref 印刷日期为 2026-12-02，属未来期，仅保留候选不得 claim，不重印已简报 2026-V40-I10。Latest articles 新登记 9 条（账本已见去重抑制 41）。官方目录以 Playwright + 系统 Chrome 快照为准。</li>
+<li>REG-042 Big Earth Data：<code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code> — T&amp;F 官方 Current 仍为 Volume 10 Issue 3（已简报完整期 2026-V10-I3），卷次导航仅见 Issue 1–3，未出现 Issue 4，无新完整期可 claim。Latest articles 新登记 5 条（账本已见去重抑制 33）。官方 Latest 页另有 Correction 2 条：2026-09-11 一篇已在账本、2025-01-09 一篇为历史条目，本轮均不回溯补登为新勘误。官方目录以 Playwright + 系统 Chrome 快照为准。</li>
+<li>REG-072 Data Mining and Knowledge Discovery：<code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code> — Springer 官方 Volumes and issues 最新仍为 Volume 40 Issue 6（January–December 2026 仅列 Issue 1–6），未见 Issue 7，不得虚构或提前 claim。Articles 列表首页新登记 Article 114–120 共 7 条（发表日期 2026-10-12 至 2026-10-29）；同页其余 43 条已见于账本（多为已简报正式论文），不回溯补登。官方目录以 Playwright + 系统 Chrome 快照为准。已简报完整期仍为 2026-V40-I6。</li>
+<li>有界对账：本批处理 4 个到期任务，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul>
+<li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足，今日 attempt 继续计数）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足，今日 attempt 继续计数）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足，今日 attempt 继续计数）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足，今日 attempt 继续计数）</li>
+</ul>
+</section>
+
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>155fe4b9-b37f-4099-9f8b-02c13987ef44</code></li>
+<li>Commit ID：<code>DAILY-20261112-120857-155fe4b9</code></li>
+<li>Brief ID：<code>DAILY-20261112</code></li>
+<li>去重抑制：117 · 增量复核：0 · 对账任务：4 · 官方源失败计数：0</li>
+<li>正式期刊：REG-012、REG-042、REG-072 · 本组无附加信号源 · issue gate NEW_ISSUE 1</li>
+<li>下一次计划扫描日：2026-11-13（第 13 组）· 扫前 health --strict PASS · 月度对账至昨日无漏扫（11 月无 31 日任务）</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+
+</main>
+<p><a href="../../../../2026/11/index.html">返回 11 月索引</a></p>
+</body>
+</html>
