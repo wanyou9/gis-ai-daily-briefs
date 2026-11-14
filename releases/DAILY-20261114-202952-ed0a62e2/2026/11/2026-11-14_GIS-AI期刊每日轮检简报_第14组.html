@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 14 组 · 2026-11-14</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}
+#audit summary{min-height:44px;display:flex;align-items:center;cursor:pointer}</style>
+</head>
+<body id="top">
+<a class="skip" href="#overview">跳到期刊总览</a>
+<header class="hero">
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/11/index.html">11 月</a> / 第 14 组
+</nav>
+<h1>GIS-AI 期刊每日轮检简报 · 第 14 组</h1>
+<p class="lead">第 14 组共检查 3 种正式期刊；确认 2 个新完整期次、41 篇正式期次条目（计算机科学与探索 2026-V20-I10 与 2026-V20-I11，各含 1 条投稿须知）；并对 1 个已简报期次做差异复核，新增 1 篇迟到正式论文。Statistical Analysis and Data Mining 的 Volume 19 Issue 6 封面月为 2026 年 12 月，属未来期，仅登记 3 篇、不得 claim。Journal of Spatial Information Science 官方目录仍止于 No. 32 (2026)，无更新。无降级期刊，未发现勘误或撤稿。</p>
+<p>逻辑日期 2026-11-14（北京时间）· 实际完成 2026-11-14 20:29 CST · 任务类型 ROUTINE · 第 14 组</p>
+<div class="metrics" role="list">
+<div class="metric" role="listitem"><strong>3</strong><span>已检查正式期刊</span></div>
+<div class="metric" role="listitem"><strong>2</strong><span>有更新期刊</span></div>
+<div class="metric" role="listitem"><strong>2</strong><span>新完整期次</span></div>
+<div class="metric" role="listitem"><strong>41</strong><span>新增正式条目</span></div>
+<div class="metric" role="listitem"><strong>3</strong><span>未来期登记</span></div>
+<div class="metric" role="listitem"><strong>0</strong><span>失败或待修复</span></div>
+</div>
+</header>
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#delta">差异复核</a>
+<a href="#online-first">未来期登记</a>
+<a href="#corrections">勘误撤稿</a>
+<a href="#themes">主题与路线</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+<main>
+
+<section id="attention">
+<h2>需要关注</h2>
+<ul class="attention">
+<li><span class="tag">新完整期</span> <strong>计算机科学与探索</strong> — 2026-V20-I10（21 条）与 2026-V20-I11（20 条）均经官方 CNKI 目录确认并 claim；各含 1 条《投稿须知》。 <span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/wkTextContent.aspx?colType=4&amp;yt=2026&amp;st=10&amp;mid=kxts" rel="noopener noreferrer">官方期次目录 I10</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/wkTextContent.aspx?colType=3&amp;mid=kxts" rel="noopener noreferrer">官方当期目录 I11</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 一级完整性证据</small></span></li>
+<li><span class="tag">源异常</span> <strong>计算机科学与探索</strong> — 出版方站点 fcst.ceaj.org HTTP 500、CCF 数字图书馆证书不匹配，记官方源失败 2；CNKI 官方目录可用，不降级。 <span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/index.aspx?mid=KXTS" rel="noopener noreferrer">期刊官方平台</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 官方页面</small></span></li>
+<li><span class="tag">差异复核</span> <strong>Statistical Analysis and Data Mining</strong> — 已简报 2026-V19-I5 迟到新增 1 篇，只出该篇并链接原简报。 <span class="evidence"><a href="https://onlinelibrary.wiley.com/toc/19321872a/2026/19/5" rel="noopener noreferrer">官方期次目录</a><small>onlinelibrary.wiley.com · 2026-11-14 20:29 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://wanyou9.github.io/gis-ai-daily-briefs/2026/10/2026-10-14_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC14%E7%BB%84.html" rel="noopener noreferrer">原简报</a><small>wanyou9.github.io · 2026-11-14 20:29 CST · 历史审计</small></span></li>
+<li><span class="tag">未来期</span> <strong>Statistical Analysis and Data Mining</strong> — Volume 19 Issue 6 封面月 December 2026，仅登记 3 篇，不得 claim。 <span class="evidence"><a href="https://onlinelibrary.wiley.com/toc/19321872a/2026/19/6" rel="noopener noreferrer">官方期次目录</a><small>onlinelibrary.wiley.com · 2026-11-14 20:29 CST · 官方目录</small></span></li>
+</ul>
+</section>
+
+
+<section id="overview">
+<h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>差异复核</th><th>OF/未来期</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-044<br><strong>计算机科学与探索</strong></td><td>2026-V20-I10、2026-V20-I11</td><td>2</td><td>41</td><td>0</td><td>0</td><td>0</td><td><code>OFFICIAL_PAGE_OK_VIA_CNKI_PLAYWRIGHT</code></td><td>COMPLETED</td></tr>
+<tr><td>REG-074<br><strong>Statistical Analysis and Data Mining</strong></td><td>2026-V19-I5（差异）/ I6（未来期）</td><td>0</td><td>0</td><td>0</td><td>1</td><td>3</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr>
+<tr><td>REG-014<br><strong>Journal of Spatial Information Science</strong></td><td>No. 32 (2026)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED（无更新）</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-11-14_GIS-AI期刊每日摘要_第14组.png" width="1600" height="900" alt="第14组每日摘要图：3刊，新完整期2，正式条目41，差异复核1，未来期登记3">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure>
+</section>
+
+
+<section id="formal">
+<h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-044-2026-v20-i10"><h3>计算机科学与探索 · 2026-V20-I10</h3>
+<p>出版方站点 fcst.ceaj.org 返回 HTTP 500，CCF 数字图书馆证书与域名不匹配（官方源失败计数 2）；完整性证据以 CNKI 腾云采编平台官方期刊目录为准，因此不降级。相对已简报的 2026-V20-I9，官方过刊目录确认 2026-V20-I10（21 条，含 1 条《投稿须知》，两页目录合并、两遍稳定）与当期目录 2026-V20-I11（20 条，含 1 条《投稿须知》，两遍稳定），issue gate 均为 NEW_ISSUE，本轮 claim 两期。该刊条目无 DOI，账本以期刊+题名+第一作者+年份+CNKI 篇号的稳定 fingerprint 去重；摘要取自官方目录。</p>
+<p><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/wkTextContent.aspx?colType=4&amp;yt=2026&amp;st=10&amp;mid=kxts" rel="noopener noreferrer">官方期次目录</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 一级完整性证据</small></span></p>
+<p>本简报收录该期正式条目 <strong>21</strong> 条（含 1 条《投稿须知》；均含摘要抽屉，无摘要者不编造）。</p></article>
+<article class="paper" id="formal-reg-044-2026v20i10-001">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>YOLO算法在恶劣天气下的自动驾驶目标检测技术应用综述</h3>
+<p>沈锐凡; 张晶</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610001</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=5bbe3ebc-2b87-42e7-9921-839f9a9c5ef2" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>YOLO算法在恶劣天气下的自动驾驶目标检测技术应用综述</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">恶劣天气下自动驾驶目标检测易受到对比度降低、边缘模糊、噪声增强、目标遮挡、跨域分布偏移和车载算力受限等因素影响，进而削弱环境感知系统的可靠性与实时性。YOLO系列算法凭借单阶段端到端检测、推理速度快、结构灵活和部署生态成熟等优势，已成为自动驾驶目标检测的重要基础框架；但在雨、雾、雪、低光照、夜间和沙尘等复杂环境中，仍存在小目标漏检、弱纹理目标定位偏差、分类与回归任务冲突、跨天气泛化不足以及轻量化后鲁棒性下降等问题。围绕上述问题，从恶劣天气退化机制出发，分析其对YOLO检测链路中主干网络（backbone）、颈部网络（neck）、检测头（head）、训练策略和边缘部署环节的影响，并梳理YOLO系列结构演化及其适配价值。在此基础上，将现有改进方法归纳为跨模态融合、单模态特征增强与噪声抑制、域自适应与跨场景泛化、轻量化与部署优化四类技术路线，比较其适用场景、性能瓶颈、失效风险与互补关系。与一般自动驾驶目标检测综述不同，重点讨论YOLO框架在恶劣天气感知中的结构特异性，指出其多尺度特征金字塔、解耦检测头、无锚框预测、端到端检测和轻量化模型族为相关改进提供了明确嵌入位置和工程化基础。总结现有研究在复合天气泛化、任务驱动增强、多模态高效融合、可信检测和车载部署评价等方面的不足，并展望面向全天候自动驾驶感知的未来发展方向。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=5bbe3ebc-2b87-42e7-9921-839f9a9c5ef2" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-002">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>基于视频采集视角的交通事故检测技术综述</h3>
+<p>何悦; 张晓东; 李雷孝; 万剑雄</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610002</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=8c0f8e52-92c9-4d9c-8782-d50b0ef70cd6" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于视频采集视角的交通事故检测技术综述</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">随着全球汽车数量的持续增长，道路交通安全问题日益严峻，发展高效、自动化的交通事故检测技术已成为智能交通系统研究的重要方向。传统方法多依赖于单一视频采集视角，难以全面适应复杂多变的真实交通场景，且纯视觉技术在应对极端光照、天气及遮挡时存在固有局限。突破了传统以算法演进为主线的综述范式，以视频采集视角作为核心分类依据，对基于固定监控摄像头、行车记录仪和无人机的交通事故检测技术进行了系统梳理与对比分析。剖析了三种视角独特的视觉特征、典型应用场景及其带来的根本性技术挑战：监控视角背景稳定但存在视野盲区；行车记录仪视角细节丰富但受自车运动干扰；无人机视角具备全局优势但面临小目标检测难题。纵向梳理各视角下从传统计算机视觉到深度学习，再到时空交互理解的技术演进内在逻辑。通过构建多维度的横向对比框架，揭示了不同视角在数据特性、技术路径、优劣局限及适用事故类型等方面的互补关系。探讨了多视角融合的技术潜力与实现路径，并在现有研究的基础上归纳出面向不同视角与应用需求的评价指标侧重点。针对当前技术瓶颈与多传感器融合的发展趋势，提出了未来关键的五大研究方向：面向复杂场景的小目标检测优化、多视角协同与时空对齐机制、提升模型泛化能力与数据支撑体系建设、面向实际应用的轻量化设计以及基于时空图结构的交互关系建模。旨在从视角分类出发，梳理交通事故检测技术的发展脉络，从而为多视角、多模态协同感知建模方向提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=8c0f8e52-92c9-4d9c-8782-d50b0ef70cd6" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-003">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>区块链分片技术研究</h3>
+<p>倪雪莉; 王群; 马卓</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610003</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=4e600b5c-d390-4d6e-b14a-b027779d4c08" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>区块链分片技术研究</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">传统区块链架构依赖全网数据副本与全局共识机制，虽在数据安全、交易透明和状态一致性等方面优势明显，但系统整体性能与可扩展性面临根本性制约。分片技术作为突破可扩展性瓶颈的关键路径，通过将网络节点、交易负载及系统状态划分为多个可并行处理的片段，实现在保持去中心化与安全性的同时，显著提升系统吞吐量与处理效率。系统梳理区块链分片技术的基本原理，并重点阐述分片共识协议的概念、类型及其特征。围绕分片建立、分片管理与跨分片交易等核心机制，深入剖析分片系统的实现过程、关键技术以及研究重点。在此基础上，选取跨分片交易、负载均衡、智能合约驱动的交易处理、分片动态重组及安全机制等多个研究热点，就其核心机制与原理展开深入分析，并对不同方案的性能表现与适用场景进行系统对比。总结区块链分片技术的研究现状与发展趋势，并展望几个具有前瞻性的未来研究方向。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=4e600b5c-d390-4d6e-b14a-b027779d4c08" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-004">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>基于无监督学习的单幅图像去雾研究进展</h3>
+<p>张梦梦; 杨颖; 赵佳; 王慧玲</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610004</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=1c54d3bf-7d25-4b88-a964-7af47b3cf9fc" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于无监督学习的单幅图像去雾研究进展</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">图像去雾是计算机视觉领域中图像复原的一个重要研究方向。目前公开的数据集主要集中于规模较大的合成雾图数据集和数量较少的真实雾图数据集。近年来，基于有监督学习的图像去雾方法虽然在合成雾图数据集的测试中取得了较好的去雾效果，但是该类模型普遍表现为对真实雾图的复原效果不佳。因此，受限于数据集的影响，为提升模型在真实场景中的泛化能力，研究者逐渐关注基于无监督学习的图像去雾方法。聚焦于基于无监督学习的单幅图像去雾方法，对2019—2025年来自不同数据源的代表性研究文献进行了系统梳理、分类与归纳，并从核心技术、网络结构、监督方式、优势与局限以及适用场景等方面对不同类别的方法进行了对比分析。在此基础上，根据方法所采用的主要学习机制，将现有无监督图像去雾方法归纳为基于物理先验的方法、基于生成对抗网络的方法、基于融合建模的方法以及其他方法四类，梳理其技术演进过程及主要发展脉络。同时，结合公开实验数据，对代表性模型在SOTS-Indoor、SOTS-Outdoor、HSTS、NH-HAZE、I-HAZE、O-HAZE和RTTS等常用数据集上的定量评价结果进行了整理与比较，并进一步从模型参数量、计算量和推理时间等方面分析模型性能与计算复杂度之间的关系。基于上述分析，总结了无监督图像去雾方法在真实场景泛化、训练稳定性、模型复杂度以及评价标准等方面面临的主要挑战，并围绕测试时自适应、动态物理先验、模型轻量化以及扩散模型等方向展望未来研究趋势，为无监督单幅图像去雾方法的研究与实际应用提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=1c54d3bf-7d25-4b88-a964-7af47b3cf9fc" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-005">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>多语种文本纠错技术研究现状与进展综述</h3>
+<p>林楠铠; 韩祎童; 武洪艳; 阮博文; 蒋盛益; 王连喜</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610005</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=7c5c4225-1433-45d8-9c41-962fc02fd818" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>多语种文本纠错技术研究现状与进展综述</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">在世界一体化、全球化交流的大背景下，各国合作交流日益密切，对多语种文本纠错的需求日益增长，但目前仍存在多语种资源分布不均和质量差异等问题。系统性梳理了当前多语种文本纠错的发展历程与研究现状，重点对多语种拼写纠错和语法纠错方法以及主流数据集进行了深入分析和归纳。研究发现，英语和中文等主流语言的文本纠错任务及其数据资源占主导地位，而低资源小语种虽有一定覆盖，但仍较为稀缺，导致多语种文本纠错模型训练和评估的语言平衡性不足，影响低资源语言的文本纠错性能。利用大模型和数据增强等进行纠错的新兴方法在一定程度上缓解了数据资源不足的问题，但纠错性能仍需进一步提升。为多语种文本纠错研究提供了系统性的参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=7c5c4225-1433-45d8-9c41-962fc02fd818" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-006">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>边联合掩码与对比学习增强的图自编码器</h3>
+<p>罗健; 胡会娟; 梅鹏; 贺超波</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610006</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=f74fe19c-7b48-4a4c-b3d3-f623a8c7e710" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>边联合掩码与对比学习增强的图自编码器</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">掩码图自编码器在自监督图表示学习领域被广泛研究，其中基于边掩码-重建范式的边掩码图自编码器能够显式学习节点对之间的关系，在边级与节点级任务中都表现出良好性能。然而，现有边掩码图自编码器仍面临两大制约性能提升的局限性：（1）普遍采用的随机掩码策略没有考虑节点间高阶依赖关系，且没有针对性处理难重建边，无法引导模型捕捉复杂的节点连接关系；（2）现有模型过于依赖单一掩码视图下的边重建目标进行优化，未能充分利用不同掩码视图所反映的结构信息，从而限制模型学习更具判别性的节点嵌入。针对上述问题，提出了一种边联合掩码与对比学习增强的图自编码器。设计基于路径掩码与对抗训练掩码的联合掩码策略，引导模型重建原始图关键路径结构与难重建边；在边掩码重建的基础上构建互补双视图，并进行对比学习，引导模型生成更具判别性的节点嵌入。模型在Cora、CiteSeer和PubMed三个广泛使用的公开数据集上进行了大量实验，并与当前具有代表性的自监督图表示学习方法进行对比。实验结果表明，所提模型能同时在链路预测与节点分类任务中获得最优性能。在三个数据集上，相对于现有边掩码图自编码器，节点分类任务在ACC指标分别提升1.09、1.32和2.49个百分点。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=f74fe19c-7b48-4a4c-b3d3-f623a8c7e710" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-007">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>非对称通信机器人从等边三角形区域疏散算法</h3>
+<p>李鹤; 魏琦; 吴浩男; 滕昊辰</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610007</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=19c94204-667d-493b-b760-bc75431c3b6b" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>非对称通信机器人从等边三角形区域疏散算法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">针对双机器人从等边三角形区域疏散问题展开研究，在原有通信模型（无线、面对面）的基础上提出具有S/R通信模型的双机器人从等边三角形区域疏散问题。S/R通信模型中，一个机器人称为Sender，只能无线发送消息，另一个机器人称为Receiver，只能无线接收消息，且两者还可以进行面对面通信，每个机器人的通信状态为自己和另一个机器人所知。假设最大速度为1且具有S/R通信模型的双机器人起始位置在等边三角形的质心处，出口在等边三角形的边界上，机器人的任务是协作搜索出口并疏散。将最后一个机器人到达出口的时间作为算法的开销，分析算法的效率。通过分析无线、面对面通信模型下的算法思路和机器人轨迹特征，结合S/R通信模型及正三角形的几何特性，提出Sender-Receiver非对称协作疏散算法，分析了算法的效率，且证明了该问题开销下界，分析了S/R通信算法开销与面对面通信和无线通信算法开销之间的关系。算法的显著特点是两个机器人轨迹中固有的非对称性。此外，还通过仿真实验验证了理论分析的正确性。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=19c94204-667d-493b-b760-bc75431c3b6b" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-008">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>抗负迁移与影响力重叠的属性异构网络关键节点识别方法</h3>
+<p>刁欣芸; 李倩; 苏惠敏; 郭红钰</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610008</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=54850f64-2604-4c61-858e-4f73c8066159" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>抗负迁移与影响力重叠的属性异构网络关键节点识别方法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">属性异构网络中的关键节点识别旨在从包含多种节点类型与丰富属性信息的复杂网络中，寻找能够最大化网络信息传播范围的核心节点集合。然而，现有方法在融合拓扑结构与节点属性时，通常采用早期特征融合或对称对比学习，语义噪声极易通过梯度反向传播，引发负迁移污染；同时，基于局部结构相似性的节点选择机制易致使种子节点在少数社区内过度聚集，产生影响力重叠现象，从而限制传播范围。针对上述挑战，提出了一种跨社区对齐与晚期得分融合异构网络方法（HCF-Net）。该方法采用带停止梯度的非对比自监督学习与晚期得分融合策略，使语义分支向拓扑分支进行单向对齐，两分支独立生成节点重要性得分后再行加权融合，抑制语义噪声对拓扑表示学习的干扰；通过构建跨社区语义近邻图建立异社区节点间的远距离语义关联，并引入邻域折扣重排序策略，提升种子节点集的空间分散性与传播覆盖范围。实验结果表明，HCF-Net在排序准确性、空间分散性和传播效果等指标上均优于对比方法。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=54850f64-2604-4c61-858e-4f73c8066159" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-009">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>基于马尔可夫RGB图像的安卓恶意软件抗混淆分类方法研究</h3>
+<p>吴夏; 郭春; 吕晓丹; 李显超</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610009</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=8e2dd768-77d2-4c74-a759-05ba90c22a00" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于马尔可夫RGB图像的安卓恶意软件抗混淆分类方法研究</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">混淆技术是指在保持程序功能不变的前提下，通过变换代码结构、控制流或符号信息以掩盖其真实逻辑的一类反逆向手段；在恶意软件中，该技术被滥用于逃避静态分析与自动化检测。现有基于图像的安卓恶意软件分类方法通常将程序直接映射为灰度图像，忽视了混淆对不同代码层次的影响差异，导致其在面对使用了混淆技术的安卓恶意软件时分类准确性明显下降。分析了混淆的干扰机制，发现操作码序列在符号级混淆下具有高度不变性，其转移结构在结构级混淆下亦能较好保持，可用于构建抗混淆的图像表征。基于此，提出一种面向混淆鲁棒性的安卓恶意软件分类方法（MRODroid）。MRODroid将操作码按类级、方法级和指令级三个粒度分别建模为马尔可夫转移概率矩阵，并将其编码为RGB三通道图像，在单张彩色图像中融合多尺度上下文依赖，有效保留混淆下的稳定信息。针对此类稀疏但具有层次结构的图像表征，设计了一种轻量级卷积网络，引入通道注意力机制以增强关键语义特征，并结合残差连接保障深层信息有效传递，在保持低计算开销的同时提升对安卓恶意软件的判别能力。实验表明，MRODroid在两种混淆场景下的分类性能优于现有数种基于图像的安卓恶意软件分类方法，展现出更强的鲁棒性，且该结果验证了其在抗混淆分类任务中的有效性。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=8e2dd768-77d2-4c74-a759-05ba90c22a00" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-010">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>基于蒙特卡洛树搜索的RAG语料库投毒方法</h3>
+<p>李博涵; 蔡满春; 张腾</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610010</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=1053ced1-ecde-4a5b-b88a-abfe01f0fc30" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于蒙特卡洛树搜索的RAG语料库投毒方法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">检索增强生成系统通过引入外部知识库提升了大语言模型的时效性与事实一致性，但也使系统更易受到语料库投毒的安全威胁，在无法访问模型内部参数的黑盒场景下更为突出。为解决黑盒环境中对抗段落难以在嵌入空间逼近目标查询的问题，提出一种基于结构化搜索的RAG语料库投毒攻击框架。该框架将对抗性样本构造建模为离散文本空间中的高维组合优化问题，引入蒙特卡洛树搜索实现对候选词元序列的全局规划，并利用由GPT-4o生成的动态词汇表提升搜索的语义相关性与效率。生成的段落随后被注入知识库，并通过迭代验证不断调整，从而在黑盒条件下实现稳定的检索劫持。实验表明，该框架在多个基准数据集以及不同规模的Qwen2.5模型上取得了稳健的攻击效果，平均检索结果首位命中率为89.0%，最终答案污染率达到83.9%。实验结果表明，该方法在无需梯度信息和模型内部访问权限的条件下，能够通过结构化搜索有效优化检索排序信号，在攻击成功率和隐蔽性方面均优于现有启发式方法。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=1053ced1-ecde-4a5b-b88a-abfe01f0fc30" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-011">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>TreeWriter：通过递归式任务分解实现任意长度文本生成</h3>
+<p>田锦昊; 李祖超; 沈梦家; 张乐飞; 王胜</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610011</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=822883cf-dc72-4561-b37b-250ec4af14d4" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>TreeWriter：通过递归式任务分解实现任意长度文本生成</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">大语言模型（LLM）虽能处理长上下文，但在长文本生成任务中面临关键挑战：输出篇幅不可控，且内容随长度增加易偏离初始的输入指令。为解决上述局限性，提出了一种名为TreeWriter的新框架。该框架的核心目标是生成任意长度的文本内容，并确保内容在整个生成过程中能够始终与初始设定的写作指令保持一致。TreeWriter框架通过递归式任务分解，将一项复杂的写作任务转化为一棵结构化的“写作树”。在这棵树的结构中，每一个叶节点都代表一个通过递归分解方法派生出的具体写作子任务，从而将宏观的写作目标分解为一系列可管理、可执行的微观步骤。在每个叶节点的具体生成流程中，框架采用了双模型协作的模式。一个推理模型会基于当前节点的特定目标以及已经生成的上文内容，构建一份详尽的写作大纲。一个写作模型则依据这份大纲来生成对应的文本片段。系统会遵循写作树的拓扑结构所规定的顺序，将所有叶节点生成的文本片段进行整合，从而构建出完整的最终文本。为简化框架，还构建了“文本续写数据集”，用以训练单个大语言模型，使其能同时胜任推理和写作的双重角色，从而统一核心功能。在提出的LoFT评测基准上，该方法不仅能将DeepSeek-V3等大规模模型的综合得分从79.53提升至81.18，更能为Qwen2.5-14B等较小规模模型提供稳定的长文生成能力，能够将综合得分从10.79提升到49.85。这些实验结果表明了该方法在长文本生成方面的可靠性和稳定性。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=822883cf-dc72-4561-b37b-250ec4af14d4" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-012">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>基于交叉注意力与动态扩散步长的多人轨迹预测模型</h3>
+<p>乐韩峰; 夏庆锋; 朱良宇; 宋利鹏; 胡凯</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610012</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=756fdd82-959a-40f5-b6c0-a411dbc6a452" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于交叉注意力与动态扩散步长的多人轨迹预测模型</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">近年来，基于扩散模型的多人轨迹预测逐步成为多模态轨迹预测领域的研究热点。现有方法仍面临着固定的去噪步长带来的计算冗余以及时空特征提取过程中与社交特征交互不足这两个关键问题。为应对这些问题，提出一种基于交叉注意力与动态步长机制的多人轨迹预测方法（CADS-Diff）。该方法利用动态步长机制改善了扩散模型固定的去噪步长所带来的计算冗余和过度去噪问题，在保证模型预测性能同时进一步加快了整体推理速度；通过交叉注意力机制实现了社交-时空特征双向指导的时空特征提取，有效提升了模型对时空特征的建模能力，进一步提高了模型的预测精度。在高动态、多交互的NBA数据集上的实验表明，与最佳基线模型相比，所提方法的平均位移误差（ADE）与最终位移误差（FDE）都得到了较好的提升，将1 s时的评价指标降低了6%/7%,4 s时的评价指标降低了1%/2%，同时推理时间减少了48.32%。在典型行人轨迹预测数据集ETH-UCY的个别子集中同样超越了基线模型，在所有子集中的平均指标也表现出较好的预测性能。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=756fdd82-959a-40f5-b6c0-a411dbc6a452" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-013">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>面向多模态情感分析的共享表示引导跨模态动态融合网络</h3>
+<p>李睿; 黄俊臣; 张俊哲; 段宗涛</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610013</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=fa61fae6-49a2-491c-ac67-b4f11dcf98db" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向多模态情感分析的共享表示引导跨模态动态融合网络</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">多模态情感分析旨在通过整合文本、视觉与音频模态的信息，优化情感识别的准确性与鲁棒性。与单一模态方法相比，多模态融合策略在一定程度上规避了个别模态中可能存在的信息不完整与冗余问题。然而，现有方法多侧重于模态一致性建模或静态的跨模态特征融合，较少关注模态之间随语境变化而产生的动态交互关系，难以充分挖掘各模态在具体样本中的情感贡献差异。为应对上述挑战，构建了一种融合共享表示学习与动态融合机制的多模态情感分析框架。该框架基于预训练模型对文本、视觉和音频模态的原始特征进行语义增强，从而提升其在情感相关维度上的表达能力。采用共享表示建模策略，构建三模态间在统一语义空间中的对齐表示，以实现模态协同建模的结构统一。在此基础上，引入以共享表示为引导的动态融合模块，融合跨模态注意力与动态路由机制，依据不同模态的情感贡献动态调整融合权重，实现更精确且自适应的特征整合。通过前馈神经网络对融合特征进行情感分类。在多个公开多模态情感分析基准数据集上的实证结果显示，该方法在平均绝对误差、皮尔逊相关系数及分类准确率等多项指标上均表现出优越性能，具备良好的泛化能力，验证了所提出框架在复杂多模态情感理解任务中的有效性与稳定性。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=fa61fae6-49a2-491c-ac67-b4f11dcf98db" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-014">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>复杂版面下数学古籍筹算公式识别方法</h3>
+<p>郭浩林; 李艳玲; 董杰</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610014</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=a3758ba4-55b9-4d6b-8fda-f1e4e7b20615" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>复杂版面下数学古籍筹算公式识别方法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">筹算公式识别的任务旨在将数学古籍中的算筹排列公式自动转换为对应的、可编辑的计算机编码。该过程要求生成的编码不仅要准确表达其数学含义，还要在形态上与原符号保持高度一致。现有的光学字符识别（OCR）方法处理此类公式面临严峻挑战。古籍图像普遍存在几何变形、墨迹扩散、虫蛀缺损、纸张褶皱等退化，导致算筹笔画断裂或粘连；字符尺度差异显著，“元”面积可达“0”的3倍，且列宽限制使符号常被挤压重叠；类别分布极不均衡，“1（纵）”占比15%而“太”仅0.18%，加剧训练难度。为解决上述问题，提出一种融合特征金字塔网络与Transformer的CRNN-FPT识别框架。该框架将ResNet与特征金字塔网络融合提取多尺度特征，设计部分深度卷积模块以增强抗退化能力，并利用Transformer编码器进行序列建模以捕捉长程空间依赖关系。同时，使用混合损失函数进行联合监督，聚焦难识别的样本并提升特征类内聚集性，增强模型区分易混淆符号的性能。实验结果表明，CRNN-FPT方法在筹算公式识别方面显著优于现有文字识别模型，文本行识别准确率提升了1.5个百分点，字符识别率提高了1.48个百分点。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=a3758ba4-55b9-4d6b-8fda-f1e4e7b20615" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-015">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>肺结节CT图像分析的几何增强多特征核相关协同学习</h3>
+<p>欧芝宏; 周彬; 朱子晗; 蒋春华</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610015</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=50911cf5-b3a1-4861-ab2d-1cf01ecc9e36" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>肺结节CT图像分析的几何增强多特征核相关协同学习</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">肺结节的早期识别对于提高肺癌患者的生存率具有重要意义。针对胸部CT图像中肺结节体积小、边界模糊和形态复杂等问题，构建了一个几何增强的多特征融合优化模型（GMFKC），能够实现早期肺结节分割与分类的协同学习。模型在图像分割阶段以U形网络结构为基础，简化编码深度并引入融合高斯分布与Sobel算子的复合损失函数，以加强对结节中心区域与边缘特征的响应。在分类阶段，基于图像增强处理，并结合灰度共生矩阵和傅里叶描述子，设计特征编码模块，融合形状信息和纹理信息；同时构建特征融合模块，对深度特征与手工特征进行核相关分析与非线性对齐，增强特征的分辨能力。引入分类损失和分割损失联动的权重动态调整策略和协同优化机制，并结合课程式训练策略提高模型收敛效率与稳定性。在LIDC-IDRI数据集上，GMFKC模型能够取得IoU 76.3%和MAE 0.8%的分割结果，同时实现AUC 98.97%和准确率96.53%的分类结果；在LUNA16数据集上则取得IoU 67.3%、MAE 1.2%、AUC 98.21%和准确率97.14%的结果。结果表明了该方法的有效性和准确性。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=50911cf5-b3a1-4861-ab2d-1cf01ecc9e36" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-016">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>检索增强生成架构下重排序基准测试方法</h3>
+<p>刘阔; 宋郅鹏; 包欣蕊; 林雨竹; 沈若枫; 齐恒</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610016</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=490bb38f-adf3-406a-8ade-02bd107533d8" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>检索增强生成架构下重排序基准测试方法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">尽管大型语言模型（LLM）促进了信息检索技术的发展，但其“幻觉”问题制约了实际应用。检索增强生成（RAG）架构通过集成检索器来缓解事实性偏差，并可进一步结合重排序器，其中重排序器通过对初始检索结果进行二次语义优化，显著提高了查询-文档相关性匹配质量。系统梳理了重排序技术的演进历程，将其划分为三个阶段，并指出当前重排序器评估方法存在单一性与全面性不足的局限。为此，提出BT2M-RerankBench基准，该基准创新性地构建了一个覆盖多语言、多领域和大规模式场景的综合评测环境，并引入四维度评估框架，克服了现有基准单一指标的局限，相较传统方法，提升了重排序器评估的全面性。在数据集构建方面，充分调研了近年来被学术界广泛认可的主流基准，以确保测试覆盖广泛的领域和语言。评估体系从检索性能、效率、资源占用和多语言能力四个维度构建多指标评价框架。结果表明，相较于传统单一指标评估，BT2M-RerankBench能更全面、准确地反映重排序器的实际性能，并为技术优化提供关键依据。这种全面性不仅有助于识别重排序器的优势和不足，还为未来技术优化提供了重要参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=490bb38f-adf3-406a-8ade-02bd107533d8" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-017">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>细节增强与频域引导的水下小目标检测算法</h3>
+<p>段孝杨</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610017</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=e6c88aea-7b2d-4b49-8189-e881543b4f50" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>细节增强与频域引导的水下小目标检测算法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">在水下探测、海洋牧场监控和水下机器人等水下视觉任务中，图像常受到噪声散射、小目标纹理弱化和目标与背景高度融合等因素影响，导致检测性能显著下降。针对上述问题，构建了一种细节增强与频域引导的水下小目标检测算法。该算法包含双路径细节增强模块，通过全局语义与局部纹理互补建模强化弱纹理区域。集成了细节保持的特征传递模块，利用抑制模糊的上采样与多尺度动态融合，有效缓解跨层传递过程中的细节稀释。结合频域引导的特征校准模块，基于小波分解实现高低频特征分离与校准，提高目标和背景的可分辨性并增强对姿态变化的适应性。实验结果表明，在DUO数据集上，该算法的平均精度较基线模型DEIM提升了3.5个百分点，小目标平均精度提升了2.2个百分点。在URPC2020数据集上，在平均精度和小目标平均精度上相较于基线模型分别提升了2.5和3.4个百分点。同时，该模型参数量为5.8×10~6，计算量为11.7 GFLOPs，在轻量化条件下保持了较高的检测精度。上述结果表明，该算法能够有效提升复杂水下场景中的目标检测性能与稳定性。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=e6c88aea-7b2d-4b49-8189-e881543b4f50" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-018">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>面向雾天场景的鲁棒深度哈希跨视角地理定位方法</h3>
+<p>王彤; 李阳; 濮毅婷; 王家宝; 苗壮</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610018</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=40f320ef-6cc9-4167-a33c-902aea1ec4a5" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向雾天场景的鲁棒深度哈希跨视角地理定位方法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">跨视角地理定位是无人机在全球卫星导航系统拒止环境下实现自主导航的关键技术。然而，该技术在实际该方法的应用中面临雾天场景视觉特征退化与大规模检索效率低下的双重挑战。尽管哈希技术能有效提升检索效率，但该方法的二值化过程对噪声极度敏感。雾引入的微小特征扰动极易导致汉明空间中的编码错误，从而破坏跨视角语义一致性。针对上述问题，提出了一种面向雾天场景的鲁棒深度哈希跨视角地理定位方法。不同于传统的像素级去雾思路，设计了物理先验特征纯化模块（PPFPM），通过将大气散射模型迁移至特征空间以逆向解耦雾噪声；结合语义锚定特征增强模块（SAFEM），通过抑制背景噪声来增强特征的判别力，确保哈希码重点编码高置信度的地标区域。针对深度哈希训练的冷启动问题，设计了基于混合损失的渐进式训练策略，实现了从连续特征空间到离散汉明空间的平滑过渡。在University-1652和Fog-University数据集上的实验结果表明，该方法在保持高精度的情况下，存储需求压缩为1/128，并实现了1.57倍以上的检索提速，实现了精度与效率的最佳平衡。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=40f320ef-6cc9-4167-a33c-902aea1ec4a5" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-019">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>改进RT-DETR的轻量化航拍图像小目标检测模型</h3>
+<p>王井阳; 薛为民; 张波; 孙秋红</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610019</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=87773e1c-288b-45e5-996a-b7e2c03a3ef7" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>改进RT-DETR的轻量化航拍图像小目标检测模型</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">针对无人机航拍图像小目标检测中漏检误检率高，模型参数量过大，难以部署到边缘设备上等问题，提出一种基于改进RT-DETR的轻量化检测模型EGA-DETR。提出高效上卷积块通道洗牌（EUCB-CS）模块替换RT-DETR的上采样模块，在EUCB模块中融合通道洗牌机制以增强跨通道组的信息交互能力，实现特征图尺度匹配和高效上采样；提出改进多尺度特征聚合模块（IMSFAM）和GatedC2f模块，设计门控网络（GatedNet）代替原有的主干网络，使模型轻量化的同时引入门控卷积块进行特征提取和精炼，实现从粗粒度到细粒度的多尺度特征聚合；在基于注意力的尺度内特征交互（AIFI）中引入高低频注意力（HiLo），提出AIFI＿HiLo模块，以HiLo替代多头自注意力，在高低频分支中引入差异化可学习位置偏置以增强空间感知，并将LayerNorm替换为LayerNorm2d以适配图像二维空间结构、优化特征归一化效果。消融实验、对比实验以及在边缘设备上的部署结果表明：EGA-DETR模型具有良好的检测效果和轻量化性能，为无人机航拍图像中小目标检测提供了一种可行且高效的轻量化解决方案。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=87773e1c-288b-45e5-996a-b7e2c03a3ef7" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-020">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>结构感知的不平衡图像过采样方法</h3>
+<p>唐思雨; 董明刚; 刘文章; 杨瑞</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610020</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=1775c6a3-43a0-4912-8a9e-e7d3c80094ee" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>结构感知的不平衡图像过采样方法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">图像分类任务中广泛存在类别不平衡问题，基于生成模型的过采样方法能有效缓解训练分布偏差的问题。然而，此类过采样方法的采样样本易出现类别混淆与语义漂移等问题，导致分类效果欠佳。提出了一种结构感知的不平衡图像过采样方法。为减少生成类别错误样本，引入了类别条件高斯先验与结构化正则方法，使得样本在潜在空间中形成类内聚合和类间分离，以便潜在表示能准确反映类别信息。为降低语义漂移的影响，利用判别器的类别分支构建可信样本筛选机制，有效剔除语义漂移的采样样本，在保持类别语义一致性的同时，提升下游分类器的泛化能力。提出基于判别器置信反馈的自适应数据增强策略，聚焦识别困难的少数类样本，强化模型对困难样本的判别能力。该方法在四个具有代表性的不平衡图像分类数据集以及一个医学影像数据集上，与五种代表性算法进行对比实验与可视化分析，结果表明，所提方法在平均类别准确率、几何平均数和F1值三项指标上较最优基线平均提升约2.2、2.9和2.6个百分点，验证了其在解决类别不平衡问题上的有效性。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=1775c6a3-43a0-4912-8a9e-e7d3c80094ee" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i10-021">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>《计算机科学与探索》投稿须知</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202610021</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=7c2ae677-f18d-4852-bcc2-7ea04c6a2143" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>《计算机科学与探索》投稿须知</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">《计算机科学与探索》是由中国电子科技集团公司主管、华北计算技术研究所主办的国内外公开发行的高级学术期刊，中国计算机学会会刊，中国百强科技期刊，工业和信息化部优秀科技期刊，北大中文核心期刊，中国科技核心期刊，中国科学引文数据库（CSCD）来源期刊，RCCSE中国核心学术期刊，中国学术期刊综合评价数据库（CAJCED）统计源期刊，中国科技论文与引文数据库（CSTPCD）统计源期刊，中文科技期刊数据库（VIP）收录期刊，并被“荷兰Scopus数据库”“英国《科学文摘》（SA/INSPEC）”“美国《剑桥科学文摘》（CSA）”“美国《乌利希期刊指南》（UPD）”“《日本科学技术振兴机构中国文献数据库》（JST）”“波兰《哥白尼索引》（IC）”“美国EBSCO数据库”“瑞典《开放获取期刊目录》（DOAJ）”收录，入选“庆祝中华人民共和国成立70周年精品期刊展”。月刊，大16开。欢迎踊跃投稿。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=7c2ae677-f18d-4852-bcc2-7ea04c6a2143" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="issue" id="issue-reg-044-2026-v20-i11"><h3>计算机科学与探索 · 2026-V20-I11</h3>
+<p>官方当期目录列 20 条（含 1 条《投稿须知》），两遍抓取稳定，issue gate 为 NEW_ISSUE，本轮 claim。</p>
+<p><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/wkTextContent.aspx?colType=3&amp;mid=kxts" rel="noopener noreferrer">官方当期目录</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 一级完整性证据</small></span></p>
+<p>本简报收录该期正式条目 <strong>20</strong> 条（均含摘要抽屉，无摘要者不编造）。</p></article>
+<article class="paper" id="formal-reg-044-2026v20i11-001">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>区块链智能分片技术综述</h3>
+<p>邸沛; 张琦; 李进; 赵志燕</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611001</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=b9d939db-8c40-49f3-bef0-781bc8fd3c0c" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>区块链智能分片技术综述</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">面向区块链在多场景下的扩展性与安全诉求，以“从静态到智能”的技术脉络，对区块链分片技术进行了系统的回顾与展望，重点梳理了机器学习与强化学习等数据驱动方法在分片决策中的应用，并结合传统分片方法对其性能、适用条件与局限性进行对比分析。在统一的安全与一致性约束下，归纳了哈希和随机分片的工程优势与在业务耦合、跨片成本上的结构性局限；从组合优化的视角梳理了图分区、设施选址与跨片通信开销建模等方法，比较了在降低跨片比例、维持负载均衡与保证原子性方面的取舍；总结了机器学习在分片形成与演化中的作用，包括基于聚类与表示的结构先验、基于时序与生成式模型的交互预测以及对重分片频率与链上参数拨盘的影响；探讨了深度强化学习在分片结构、链上参数及资源分配统一到序贯决策中的最新进展，涵盖在线首放置、成批迁移与多智能体协同等范式，并讨论了在无线信道时变、节点异构与稀疏回报下的建模要点与训练稳定性。通过辨析不同技术路径的优劣，揭示了智能自适应决策在解决分片核心挑战方面的潜力，旨在为应对动态场景下的分片部署挑战提供研究基础与前瞻视角。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=b9d939db-8c40-49f3-bef0-781bc8fd3c0c" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-002">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>推荐系统的可解释性研究综述</h3>
+<p>丁凤; 伊华伟; 兰洁; 王春然; 刘超</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611002</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=00764044-24fd-4b14-be5c-4770d6c12905" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>推荐系统的可解释性研究综述</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">当前大部分推荐系统主要基于深度神经网络模型构建，其复杂的推理机制缺乏透明度，仅输出最终推荐结果而无法对推荐原因作出有效解释，这极易导致用户对推荐系统的信任度降低。在此背景下，可解释推荐系统成为学术界的研究热点，通过为推荐结果生成合理的易懂的解释依据，能够显著提升推荐系统的透明度与可追溯性，进而增强用户信任。系统综述了可解释推荐系统的研究进展，对领域研究现状、数据集、评价方法进行了全面梳理。从解释的生成机制与模型耦合关系的角度，将可解释推荐模型划分为内在可解释、外在可解释和混合式可解释三类，并分析了各类模型核心技术的优势、潜在局限性及其应用场景。详细介绍并比较了常用的可解释推荐数据集，并探讨了在实际应用中如何选择和利用这些数据集。在评价方法方面，总结了可解释推荐的人工评价和离线评价方法，并对两类方法的适用场景、核心优势与内在局限性展开深入分析。对可解释推荐系统的未来发展方向提出相应的建议和展望。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=00764044-24fd-4b14-be5c-4770d6c12905" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-003">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>深度学习在肺结节分类中的研究进展</h3>
+<p>吴佳成; 邓漆时超; 俞键; 陈扶明</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611003</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=f6274696-315d-4814-a811-e80a1ba70e6e" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>深度学习在肺结节分类中的研究进展</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">肺癌是全球范围内发病率和死亡率最高的恶性肿瘤之一，为了提高患者的生存率，对肺结节的早期筛查与精确诊断成为急需投入大量精力发展的技术。传统诊断依赖人工阅片，主观性强，效率低，容易产生误诊、漏诊等情况，难以满足临床高效精准诊断需求。近年来，深度学习技术在医学图像处理领域取得了显著成果，为肺结节的自动化识别与分类提供了新的解决路径。通过系统检索国内外相关文献，统计2017—2026年Web of Science Core Collection中相关文献的年度发文量，分析该领域的研究热度与发展趋势；按照技术演进脉络，对基于卷积神经网络、Transformer、融合模型和医学大模型的分类方法，以及迁移学习、对比学习和集成学习等模型优化策略进行归纳与梳理；从网络结构、核心方法、数据集、数据划分方式、输入形式及评价指标等方面对代表性模型进行横向比较，并结合不同技术路线的发展过程开展纵向分析。在此基础上，进一步总结现有研究在数据质量、模型泛化、外部验证、可解释性及临床适配等方面的问题，并讨论深度学习肺结节分类技术的未来发展方向，以期为相关研究及临床应用提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=f6274696-315d-4814-a811-e80a1ba70e6e" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-004">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>基于量子态编码量子秘密共享协议综述</h3>
+<p>张磊; 吴明熙; 刘宇鹏; 张强; 连帅帅; 张运香</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611004</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=c7b6c4f8-9d6d-44d1-94aa-508bc7e9d76d" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>基于量子态编码量子秘密共享协议综述</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">量子秘密共享是构建分布式量子网络安全机制的重要基础，其核心在于利用量子态的非正交性、纠缠关联与测量扰动特性实现多方协作条件下的秘密安全分发与恢复。随着相关协议与技术分支日益繁杂，不同技术路线的内在物理联系在一定程度上被模糊了。从量子态编码资源的角度出发，系统综述了当前量子秘密共享协议中典型量子态资源的物理机制、协议构造与安全特性。针对离散变量体系，分析了双基与多基编码、Bell态、GHZ态、W态、图态及正交乘积态等资源在秘密编码、份额分发与协作恢复过程中的作用机制；针对连续变量体系，分别探讨了高斯纠缠态与非高斯态在纠缠结构、安全建模与可实现性方面的范式差异。从保真度、迹距离、纠缠度量、密钥生成率与资源效率等多个维度，对不同量子态资源的性能表现与安全阈值进行了比较分析，系统总结了各类协议在攻击模型下的安全边界与检测机制。指出异构量子网络中的跨平台兼容、测量设备无关架构、有限密钥条件下的安全证明以及面向实际噪声环境的统一性能评估，将成为量子秘密共享的重要发展方向。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=c7b6c4f8-9d6d-44d1-94aa-508bc7e9d76d" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-005">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>面向医学问答的检索增强生成方法综述</h3>
+<p>李艳鹏; 斯琴图; 王斯日古楞</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611005</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=08a69b9b-568b-4ea7-a2a7-3d0ef6fcd88f" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向医学问答的检索增强生成方法综述</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">针对大语言模型（LLM）在医学问答中存在的事实幻觉、知识更新滞后和证据可追溯性不足等问题，对医学检索增强生成（RAG）相关研究进行了梳理与分析。围绕医学RAG的关键组成，从知识源增强、系统工作流和应用场景三个层面对现有方法进行归纳：在知识源方面，总结了知识图谱、权威文献、电子健康记录以及多模态医学数据等主要增强路径，分析不同知识载体在证据来源、适用范围和构建成本方面的特点；在工作流方面，归纳了意图识别、知识检索、知识整合与生成控制等关键环节的代表性策略，讨论其在缓解问答幻觉和增强证据约束方面的作用；在应用场景方面，概括了医学RAG在循证问答、个体化诊疗推荐、病因/病理推理、多模态证据辅助问答和患者提问解析等任务中的应用方式。在此基础上，对现有方法的主要特点、适用范围和不足进行总结，并对医学RAG在知识协同、检索优化、证据整合和临床应用等方面的发展方向进行展望。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=08a69b9b-568b-4ea7-a2a7-3d0ef6fcd88f" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-006">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>OntRAG：领域本体GraphRAG的等保报告质量审核框架</h3>
+<p>周志洪; 李建华; 潘理; 易啸宇; 陈秀真; 侍国亮</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611006</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=113a13af-0679-4056-89c8-3619ba953520" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>OntRAG：领域本体GraphRAG的等保报告质量审核框架</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">网络安全等级保护测评报告的质量审核长期依赖专家人工审查，面临报告篇幅大导致前后判定易不一致、隐性逻辑缺陷难以穷尽以及审核规则需随标准演进持续更新等难题。将图检索增强生成（GraphRAG）用于报告质量审核兼具免微调与自然语言灵活交互的优势，但在该场景下仍需克服实体类型漂移、基于本体的隐性缺陷检测缺失、提取与检测耦合三方面障碍。为此，以领域本体为核心提出面向等保报告质量审核的框架OntRAG：以显式禁止Prompt与OntoKG对齐保障领域实体类型可靠；以级联双速规则检测（图模式快筛保召回、大语言模型复核保精确）自动发现跨章节矛盾等隐性缺陷；以三层解耦架构支持审核规则随标准演进低成本更新，并支持以自然语言对单份或全量报告进行交互式审核。在35份真实等保测评报告（逾5万节点、11万条边）上，OntRAG实体类型准确率达98.93%，高风险判例检测经复核后精确率由约0.31升至接近1.00，召回约0.84，文档隔离准确率达100%。其技术内核领域无关，可推广至法律、医疗等合规审核领域。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=113a13af-0679-4056-89c8-3619ba953520" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-007">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>面向学术长文本重构与问答的多智能体RAG框架</h3>
+<p>于尚仟; 郑俊褒</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611007</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=f8e16129-81e8-44fa-abcb-a475c8608d5b" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向学术长文本重构与问答的多智能体RAG框架</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">固定长度切块易破坏复杂学术文档的语义与版面关联，增加检索错配和事实性幻觉风险。为此，提出面向学术长文本重构与问答的多智能体RAG框架。该框架以语义边界切分保留段落和表格结构，通过路由-抽取双智能体将非结构化内容转换为“模型-数据集-指标-数值”四元组，并在问答阶段利用独立审查智能体校验候选答案与证据的一致性，对证据不足的查询执行拒答。从IBM NLP-TDMS数据集中筛选30篇论文并规范化2 984条参考四元组，设置90个分难度问答问题；在统一数据集上比较3种抽取配置和5种问答架构，并测试另一组基座配置。实验表明，框架在结构化抽取阶段的F2值为73.63%；在Hard问题上的ETS为69.27%,Overall为79.75%，均优于Naive RAG。结果表明，分步抽取与独立审查有助于提高学术长文档问答的证据完整性与回答可靠性。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=f8e16129-81e8-44fa-abcb-a475c8608d5b" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-008">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>面向工业园区环境探测的检索增强生成系统设计与实现</h3>
+<p>王颖; 徐海川; 姚东源</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611008</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=1b8199aa-ceeb-4d23-aa1f-915330cbae79" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向工业园区环境探测的检索增强生成系统设计与实现</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">针对工业园区环境急性毒性与污染物探测场景中法规标准、历史任务记录、现场监测数据及多模态信息分散异构，以及大语言模型在垂直领域应用中易产生事实性偏差、证据利用不足和结果可追溯性较弱等问题，设计并实现了一种面向环境监测与辅助决策的检索增强生成系统。系统以统一证据建模为基础，围绕污染物、监测介质、点位、事件、标准条款和处置措施等园区环境监测要素建立可检索、可引用的证据单元，并构建涵盖知识库组织、全文检索与向量检索融合、交叉编码器重排序、图结构关系增强、引用约束生成及一致性校验的技术链路，实现法规标准、监测记录、任务日志、事件摘要与应急预案等多源知识的统一组织和协同利用。在自建环境监测数据集上，围绕知识问答、报告生成和辅助决策等典型任务对系统进行验证。实验结果表明，与仅依赖大语言模型生成以及单一检索路径的方法相比，所构建系统在回答准确性、报告完整性和引用一致性方面表现更优，并在原型部署条件下保持了较稳定的响应性能。研究表明，检索增强生成技术能够增强工业园区环境探测场景下的领域知识利用能力、生成结果可信性和业务支撑能力，可为环境监测智能分析系统的工程化实现提供参考。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=1b8199aa-ceeb-4d23-aa1f-915330cbae79" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-009">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>细粒度混合检索增强的长文本语义一致性优化方法研究</h3>
+<p>袁荷雅; 陈浩林; 朱满庭; 沈潋; 褚娟; 徐子雯; 程大伟</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611009</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=dbaa0b4d-9b50-45ba-ac7e-ace9281efbfd" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>细粒度混合检索增强的长文本语义一致性优化方法研究</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">随着大语言模型在文本密集型领域的广泛应用，通用模型在处理金融研究报告、电力设备文档等高度专业化的长文本时，仍面临专业背景信息不足、长上下文依赖减弱以及自动化评估指标单一等问题。针对上述挑战，提出了一套采用细粒度混合检索增强的长文本语义一致性优化方法。在知识支撑层面，面向金融与电力行业构建细粒度专业知识库，并采用向量化索引与混合检索技术，为模型提供稳健的外部事实支撑。在检索策略层面，设计了包含子查询拆分、混合检索与重排序的知识检索流程，以提升多主题长文本的检索命中率。在评估层面，建立了涵盖专业性、事实准确性与逻辑严谨性的多维度评价体系及自动化评估与修正链路。在金融与电力双领域的语义一致性评估任务中，实验结果表明，所提框架相较于Qwen-Max、DeepSeek-V3.2等基座模型均表现出显著的性能优势。该框架为垂直领域长文本的自动化质量评估与修正提供了一种高精度且具备可解释性的解决方案，对大语言模型在严谨工业场景中的落地应用具有理论意义与实践价值。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=dbaa0b4d-9b50-45ba-ac7e-ace9281efbfd" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-010">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>面向弱模式场景的结构感知检索增强Text-to-SQL方法</h3>
+<p>黄江; 谢真强; 胡婷; 欧政远; 王俊华</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611010</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=3b55da64-61cf-4bc2-b40e-2f2060c63c1a" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>面向弱模式场景的结构感知检索增强Text-to-SQL方法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">为了解决文本到结构化查询语言（Text-to-SQL）模型在缺失物理外键的弱模式场景下拓扑推理失效问题，提出一种面向弱模式场景的结构感知检索增强方法。采用云边协同架构，通过隐式逻辑恢复策略，利用边缘侧检索从历史查询日志中挖掘潜在的表连接模式，构建软模式以动态补全缺失的元数据拓扑结构。为平衡数据隐私与计算效率，设计基于最小特权原则的自适应上下文剪裁算法，利用显式语义与隐式历史频次双重约束，在物理层面阻断敏感数据泄露并滤除无关上下文噪声。构建基于确定性有限状态自动机的动态矫正模型，利用执行反馈驱动逻辑闭环修正，收敛结构性幻觉解空间。在自定义Spider-Schema-Lean挑战集以及大型真实工业数据集BIRD上的交叉验证表明，该方法不仅有效克服了前沿SOTA方法（如DIN-SQL）在复杂歧义场景下的推理失效，还将DeepSeek-V3的零样本执行准确率从38.8%提升至67.7%（其中BIRD数据集提升23.3个百分点），且敏感字段屏蔽率达73.53%。研究验证了隐式逻辑恢复与最小特权剪裁对多跳推理的促进作用，为高敏感工业场景下的安全可信Text-to-SQL应用提供了理论依据与可行方案。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=3b55da64-61cf-4bc2-b40e-2f2060c63c1a" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-011">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>融合知识图谱与多粒度重构的国家标准RAG智能体研究</h3>
+<p>尹旭东; 张红旗; 田富君</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611011</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=e14a1317-5812-49ee-9678-015e7285bc68" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>融合知识图谱与多粒度重构的国家标准RAG智能体研究</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">通用大语言模型（LLM）在处理国家标准知识问答时，经常因为专业性强和引用关系复杂等特征产生事实性幻觉。而传统的检索增强生成（RAG）架构虽然能在一定程度上缓解该类幻觉，但仍存在文本分块粒度与查询意图失配、结构化知识召回困难和系统调度僵化等问题，难以满足国标领域的问答需求。提出了融合知识图谱（KG）与多粒度重构的国家标准RAG智能体架构（Std-Agent）。构建了包含轻量化知识图谱、条款内容与主题向量的异构知识底座，实现了国标多维知识的精确表征；提出了多粒度上下文自适应重构算法，通过逆向层级溯源与模型动态决策提取最优粒度文本块，实现了文本块粒度与复合查询意图的精准适配；设计了意图驱动的多工具调度机制，精准解析复合查询意图并动态调度专项检索工具，实现了不同类型查询意图的精准应答。为了验证该架构的有效性，构建了国标领域问答测试集进行评估。实验结果表明，该架构能够有效缓解粒度失配、知识召回困难与调度局限等痛点，在一定程度上减少事实性幻觉，切实满足国家标准领域高精度知识问答的技术要求。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=e14a1317-5812-49ee-9678-015e7285bc68" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-012">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>联合自编码器与注意力机制的多模态实体对齐方法</h3>
+<p>任剑; 吴靖榆; 叶珂廷; 韩继伟; 李道桢</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611012</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=114c35bd-cc09-43a8-8217-4fd7a9edfc09" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>联合自编码器与注意力机制的多模态实体对齐方法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">实体对齐是知识图谱融合中的关键任务，旨在识别不同知识图谱中指向同一对象的等价实体。现有方法多依赖名称、结构或属性等单一信息，难以完整刻画实体特征；已有多模态实体对齐方法虽引入图像等辅助信息，但多停留在简单嵌入与融合层面，对模态间关联和分布差异的处理仍不充分。为此，提出一种联合自编码器与注意力机制的多模态实体对齐方法。对实体的图结构、名称、关系、属性和图像信息分别进行编码，其中图结构采用图注意力网络建模，名称、关系、属性和图像特征映射到统一隐含空间；针对缺失图像的实体，根据已有图像特征的统计分布生成补全表示，以减小模态缺失带来的影响。利用多头跨模态注意力机制学习不同模态及其交互关系的权重，得到多模态融合表示。通过解码器重构各模态特征，并引入KL散度模态对齐正则项，约束融合表示与各模态表示之间的分布差异。实验在FBDB15K和FBYG15K上进行，结果表明，该方法在Hits@1、Hits@10和MRR等指标上整体取得较好结果，在不同种子实体比例下具有较稳定的对齐效果。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=114c35bd-cc09-43a8-8217-4fd7a9edfc09" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-013">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>融合层级感知与注意力机制的认知诊断模型</h3>
+<p>丛鑫; 邹依珂; 康楠楠</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611013</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=98e2e556-1a6a-495c-bb76-6ad20d8172f9" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>融合层级感知与注意力机制的认知诊断模型</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">认知诊断作为教育数据挖掘核心任务，旨在通过学生历史作答记录推断其对知识概念的掌握程度，是个性化学习服务的重要基础。现有方法仍存在三方面不足：一是多依赖静态Q矩阵表示习题与知识点关系，难以适配学生动态认知状态；二是层级约束多集中于学生能力单侧划分，忽略习题难度层级对作答表现的影响；三是在作答记录稀疏条件下，对未练习知识点的推断能力有限。针对上述问题，提出融合双侧层级约束与知识点感知的认知诊断模型（BH-KCD）。设计知识点依赖感知模块，在保留Q矩阵专家先验的基础上，融合知识点层级特征、作答统计信息和学生知识熟练度，生成动态适配学生认知状态的T矩阵；构建双侧层级约束模块，分别建模学生能力层级和习题难度层级，并将两类层级表示融入预测交互函数，以刻画学生能力与题目认知需求共同作用下的作答规律；引入基于高阶潜在技能空间的隐式知识关联建模，增强未练习知识点的可推断性；设计置信度加权机制，自适应调节个体知识状态与层级先验信息的贡献。多个真实数据集上的实验结果表明，BH-KCD在预测性能上总体优于选取的对比模型，并能够提升知识表征的动态适配性、二维层级响应一致性和稀疏知识点诊断稳定性，具有较好的可解释性与教学适配性。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=98e2e556-1a6a-495c-bb76-6ad20d8172f9" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-014">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>融合语义对齐与对比学习的多模态假新闻检测</h3>
+<p>王靖; 魏彬</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611014</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=4e4b2272-704a-419a-b525-0483c66a896e" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>融合语义对齐与对比学习的多模态假新闻检测</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">针对多模态假新闻检测任务中存在的图文语义关联复杂、实体序列长度不一致、特征对齐困难以及跨模态特征融合自适应能力不足等问题，提出基于多粒度语义对齐与双级对比学习的多模态假新闻检测方法。该方法分别从图文全局和细粒度两个层面提取新闻特征，采用RoBERTa提取文本的全局语义特征，使用ResNeXt提取图像的全局特征；分别提取文本中的实体和截取图像中实体区域，通过CLIP对实体统一编码；在双向交叉注意力机制中引入动态时间规整修正相似度矩阵，以实现跨模态细粒度特征的精准对齐；通过门控注意力动态加权融合多模态多粒度特征，将融合后的特征作为分类器的输入；设计双级对比学习机制强化特征判别性与语义一致性，联合多任务损失函数优化模型。在Weibo、Weibo21等公开数据集上的实验显示，该方法准确率、F1值均优于现有主流方法，验证了其在多模态假新闻检测任务中的有效性。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=4e4b2272-704a-419a-b525-0483c66a896e" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-015">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>结合无预训练剪枝与自学习量化的神经网络压缩方法</h3>
+<p>赵佳琪; 李钊; 秦婷; 杜亚飞; 闫玉婷</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611015</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=3593910e-6dd7-4002-963f-f3e105387641" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>结合无预训练剪枝与自学习量化的神经网络压缩方法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">近年来，卷积神经网络在图像识别、目标检测等任务中取得了显著成果，但其庞大的参数量与高计算复杂度严重制约了模型在嵌入式设备与边缘计算场景中的应用。随着模型规模的不断扩大，如何在保证精度的同时显著降低存储与计算开销，已成为深度学习模型轻量化研究的重要方向。现有的模型压缩方法多依赖预训练模型，且在剪枝与量化时往往存在训练过程复杂、精度损失明显等问题。针对上述问题，提出了一种结合无预训练剪枝与自学习量化的神经网络压缩方法，以实现高效模型压缩与轻量化部署。该方法基于梯度敏感度与结构重要性双重评分机制设计单次全局剪枝策略，在不依赖预训练的情况下有效识别并剔除冗余权重；引入具有自学习步长的4bit量化机制，通过动态调整量化尺度进一步减少参数位宽，降低推理开销。实验结果表明，该方法在多个模型上均实现了高达16倍的压缩比，其中Resnet56在CIFAR-10数据集上压缩后仍保持90.01%的分类准确率。在无需预训练的条件下兼顾了压缩比、准确率与鲁棒性，验证了该方法在低资源环境下的创新性与实用价值。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=3593910e-6dd7-4002-963f-f3e105387641" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-016">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>少数类别原型引导的扩散模型过采样方法</h3>
+<p>刘文章; 董明刚; 唐思雨; 杨瑞</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611016</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=71ffec9e-0576-4300-9f65-1e5062351b83" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>少数类别原型引导的扩散模型过采样方法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">扩散模型在高质量图像合成及相关任务中表现出巨大潜力，但在面对不平衡数据集时，生成图像样本多样性欠佳，导致分类模型泛化能力不足。此外，当少数类样本不足时，扩散模型中的U-Net的跳跃连接层设计会抑制主干网络的去噪能力，可能导致生成图像边缘细节异常，降低模型分类性能。因此，提出一种基于少数类别原型引导的条件扩散方法。该方法提出了少数类别原型引导机制，使模型在扩散过程中能够学习到保持语义差异的多样化特征，以提升少数类样本的表达能力，增加了生成图像的多样性。此外，方法设计了自适应缩放因子的特征调控方法，用于调控通道权重与跳跃连接频域滤波强度，实现去噪能力与细节保留之间的平衡，减少了图像边缘细节异常。在CIFAR10-LT、CIFAR100-LT、Tiny-ImageNet-LT长尾数据集上，与五种代表性算法进行了对比实验与可视化分析，提出的方法在生成图像质量（FID）和过采样后的分类性能上（ACSA、GM、F1）均表现出色。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=71ffec9e-0576-4300-9f65-1e5062351b83" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-017">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>融合亮度引导与自适应扫描的低照度图像增强方法</h3>
+<p>韦富元; 肖斌; 龚捷; 张兴鹏</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611017</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=d89f4597-1536-4f14-9a2b-5d798a37f5b9" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>融合亮度引导与自适应扫描的低照度图像增强方法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">低照度图像增强旨在从退化图像中恢复清晰的结构细节与真实色彩，但在噪声抑制与亮度提升间仍难以取得有效平衡。现有基于HVI色彩空间的方法通常依赖双分支交互建模亮度与色度信息，但频繁的跨分支交互易导致结构耦合；固定扫描策略的序列状态空间建模难以适应低照度图像中复杂纹理的各向异性分布。针对上述问题，提出了一种新型网络MAG-Net，从颜色解耦表示与全局结构建模两个方面协同提升低照度图像的增强效果。该方法在HVI空间下构建亮度-色度解耦的双分支架构，并在关键尺度处引入亮度引导机制，利用亮度结构信息对色度特征进行调制，以抑制暗区色彩噪声；通过自适应二维选择性扫描与混合Mamba门控建模增强模型对复杂结构的全局与多尺度表征能力。大量实验结果表明，所提出方法在LOLv1、LOLv2和VV等多个基准数据集上均取得了较优的客观评价指标与视觉效果，并在结构保持和细节恢复方面表现出明显优势。该方法在保证增强效果的同时保持了较低的计算复杂度与较快的推理速度，在增强性能与运行效率之间取得了较好的平衡。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=d89f4597-1536-4f14-9a2b-5d798a37f5b9" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-018">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>EHA-RETR：改进复杂环境下的车辆行人检测算法</h3>
+<p>李郑波; 刘巍</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611018</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=083c9d9c-5d17-44a3-95f0-140c13263b40" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>EHA-RETR：改进复杂环境下的车辆行人检测算法</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">在复杂背景干扰以及低光、模糊等复杂环境条件下的行车道路检测任务中，目标尺度差异显著，易造成检测模型的泛化能力不足，从而导致检测性能下降。基于此，提出了一种面向复杂环境的道路目标检测模型EHA-RETR。该模型以RT-DETR为基准，通过引入增强动态多尺度卷积模块（EDCMB）实现卷积核权重的自适应调整，以增强对多尺度目标分布的建模能力；结合动态直方图自注意力（DHSA）机制对雨雾、沙暴等天气退化特征进行有效建模与抑制；借鉴多模态特征融合思想，将空间域与频率域特征交互，提升低光、模糊道路检测环境下的特征表达质量。损失函数中采用Focaler-IoU，对IoU区间进行分段调制，改善样本梯度分布不均问题，提高模型在复杂场景下的定位精度与鲁棒性。在公开数据集BDD100K与DAWN上的实验结果表明，模型的准确度、mAP50和mAP50:95相较于原始算法分别提升了11.3、4.2、5.3个百分点和7.1、5.6、4.8个百分点；模型参数分别降低了4.0×10~6和4.1×10~6。提出的改进模型在降低计算开销的同时，实现了复杂环境下高效与精准的车辆行人检测，为道路视觉目标感知任务提供了新的解决方案。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=083c9d9c-5d17-44a3-95f0-140c13263b40" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-019">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>TER-YOLO：基于协同优化范式的工业表面缺陷检测模型</h3>
+<p>王凤英; 樊冰洁; 杜利明; 张明亮; 李君科</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611019</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=6a1637c7-7dd4-479e-8840-2f01ffd0a304" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>TER-YOLO：基于协同优化范式的工业表面缺陷检测模型</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">针对现有工业表面缺陷检测方法在复杂环境下存在鲁棒性不足、微小缺陷识别能力弱的问题，提出了一种面向可信检测的协同优化算法TER-YOLO(trust-enhanced robust YOLO)。该算法构建了训练策略与网络结构的联合优化框架，利用对抗训练增强特征表征的扰动稳定性，并结合边缘引导与多尺度融合进一步提升了微小缺陷的可分性与定位精度。在训练策略层面，基于YOLOv11n轻量骨干网络引入PGD(projected gradient descent)对抗训练，通过生成对抗样本逼近工业场景扰动分布，增强特征提取对非缺陷干扰的抑制能力与表征稳定性；在网络结构层面，设计了边缘引导多尺度协同增强模块（EMCEM），利用移位窗口自注意力实现局部上下文渐进建模，并在边缘先验引导下强化缺陷轮廓语义表达，同时构建并行多分支深度卷积特征增强模块（PMDCFEM），通过双分支深度卷积进行纹理增强与尺度补偿，并与边缘引导模块形成上下文建模到细节增强的互补机制。在PKU-Market-PCB数据集上的实验结果表明，该方法在干扰条件下，mAP_(50)最高可达95.4%；且在最具挑战性的低光照测试集中，模型取得了81.3%的mAP_(50)，较基线模型提升了13.3个百分点，显著提升了检测精度，并有效降低了漏检与误检率，验证了该方法在复杂工业缺陷检测场景中的有效性与可信赖性。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=6a1637c7-7dd4-479e-8840-2f01ffd0a304" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-044-2026v20i11-020">
+<p class="kicker">计算机科学与探索 · FORMAL_ISSUE</p>
+<h3>《计算机科学与探索》投稿须知</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V20 · I11</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>N/A</dd></div>
+<div><dt>PII</dt><dd>KXTS202611020</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=fea298a0-cfe9-4e1b-b95c-506f621ff026" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>《计算机科学与探索》投稿须知</strong></p><p class="abstract-meta">期刊：计算机科学与探索 · 语言：zh · 摘要来源：已核验来源</p><p class="abstract-body">《计算机科学与探索》是由中国电子科技集团公司主管、华北计算技术研究所主办的国内外公开发行的高级学术期刊,中国计算机学会会刊,中国百强科技期刊,工业和信息化部优秀科技期刊,北大中文核心期刊,中国科技核心期刊,中国科学引文数据库(CSCD)来源期刊,RCCSE中国核心学术期刊,中国学术期刊综合评价数据库(CAJCED)统计源期刊,中国科技论文与引文数据库(CSTPCD)统计源期刊,中文科技期刊数据库(VIP)收录期刊,并被“荷兰Scopus数据库”“英国《科学文摘》(SA/INSPEC)”“美国《剑桥科学文摘》(CSA)”“美国《乌利希期刊指南》(UPD)”“《日本科学技术振兴机构中国文献数据库》(JST)”“波兰《哥白尼索引》(IC)”“美国EBSCO数据库”“瑞典《开放获取期刊目录》(DOAJ)”收录,入选“庆祝中华人民共和国成立70周年精品期刊展”。月刊,大16开。欢迎踊跃投稿。</p><p class="abstract-meta"><span class="evidence"><a href="https://kxts.cbpt.cnki.net/WKI/WebPublication/paperDigest.aspx?paperID=fea298a0-cfe9-4e1b-b95c-506f621ff026" rel="noopener noreferrer">官方论文页面</a><small>kxts.cbpt.cnki.net · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+
+<section id="delta">
+<h2>已简报期次差异复核</h2>
+<p>以下仅列出官方目录相对已简报集合的迟到新增，并链接原简报；不得把已简报期次再生成整期卡片。</p>
+<article class="issue" id="issue-reg-074-2026-v19-i5"><h3>Statistical Analysis and Data Mining · 2026-V19-I5 · 迟到新增 1 篇</h3>
+<p>Wiley 官方 2026 年目录列至 Volume 19 Issue 6。已于 2026-10-14 简报的 2026-V19-I5（October 2026）官方 TOC 现为 7 篇研究论文加 1 条 Issue Information，相对已简报 6 篇集合哈希已变化，gate 为 DELTA_REVIEW_REQUIRED；本轮只输出迟到新增 1 篇（10.1002/sam.70116）并链接原简报，不重印整期。Volume 19 Issue 6 封面月为 December 2026，属未来期，仅登记 3 篇研究论文，不得 claim。官方目录以 Playwright + 系统 Chrome 快照为准。</p>
+<p><span class="evidence"><a href="https://onlinelibrary.wiley.com/toc/19321872a/2026/19/5" rel="noopener noreferrer">官方期次目录</a><small>onlinelibrary.wiley.com · 2026-11-14 20:29 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://wanyou9.github.io/gis-ai-daily-briefs/2026/10/2026-10-14_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC14%E7%BB%84.html" rel="noopener noreferrer">原简报</a><small>wanyou9.github.io · 2026-11-14 20:29 CST · 历史审计</small></span></p>
+</article>
+<article class="paper" id="delta-reg-074-i5-001">
+<p class="kicker">Statistical Analysis and Data Mining · FORMAL_ISSUE</p>
+<h3>Importance Weighted Directed Graph Variationalauto‐Encoder for Block Modeling of Complex Networks</h3>
+<p>S. Niang; C. Bouveyron; M. Corneli; P. Latouche</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I5</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sam.70116</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70116" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sam.70116" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-14 20:29 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Importance Weighted Directed Graph Variationalauto‐Encoder for Block Modeling of Complex Networks</strong></p><p class="abstract-meta">期刊：Statistical Analysis and Data Mining · DOI：10.1002/sam.70116 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">This paper addresses the fundamental challenge of jointly performing node clustering and representation learning in directed and valued graphs, which needs both global and local network structures to be captured. While these two tasks are highly interdependent, they are often treated separately in existing works. We propose the deep zero‐inflated latent position block model (Deep‐ZLPBM) in the context of directed and valued networks characterized by non‐symmetric adjacency matrices with positive integer entries. Our approach leverages a variational autoencoder (VAE) framework, combining a deep neural network encoder designed to handle directed edges and a zero‐inflated Poisson (ZIP) block modeling decoder to model sparse, integer‐weighted interactions. Recognizing the limitations of the standard evidence lower bound (ELBO) in VAEs, we explore the importance weighted ELBO (iw‐ELBO), a tighter bound on the marginal log‐likelihood optimized via gradient ascent, to enhance inference. Extensive experiments on synthetic datasets demonstrate that iw‐ELBO optimization yields significant performance gains. Moreover, our results validate that Deep‐ZLPBM effectively models complex network structures, providing interpretable partial memberships and insightful visualizations for directed, valued graphs.</p><p class="abstract-meta"><span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70116" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+
+<section id="online-first">
+<h2>网络首发 / 未来期登记</h2>
+<p>本批新登记 <strong>3</strong> 条，全部来自 Statistical Analysis and Data Mining Volume 19 Issue 6（封面月 December 2026，未来期，不得 claim）。</p>
+<article class="issue" id="of-reg-074"><h3>Statistical Analysis and Data Mining · 2026-V19-I6 未来期登记 3 条</h3>
+<p><span class="evidence"><a href="https://onlinelibrary.wiley.com/toc/19321872a/2026/19/6" rel="noopener noreferrer">官方期次目录</a><small>onlinelibrary.wiley.com · 2026-11-14 20:29 CST · 官方目录</small></span> <span class="evidence"><a href="https://onlinelibrary.wiley.com/loi/19321872a/year/2026" rel="noopener noreferrer">官方年度目录</a><small>onlinelibrary.wiley.com · 2026-11-14 20:29 CST · 官方目录</small></span></p>
+<article class="paper" id="of-reg-074-i6-001">
+<p class="kicker">Statistical Analysis and Data Mining · ONLINE_FIRST</p>
+<h3>Random‐X Prediction Error Under Model Misspecification</h3>
+<p>Alvaro Cia‐Mina; Laura Deldossi; Jesus Lopez‐Fidalgo; Chiara Tommasi</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sam.70117</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70117" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sam.70117" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-14 20:29 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Random‐X Prediction Error Under Model Misspecification</strong></p><p class="abstract-meta">期刊：Statistical Analysis and Data Mining · DOI：10.1002/sam.70117 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">In recent years, advances in computing, particularly the internet, have enabled the collection of Big Data. This has been the key of the current boom of Artificial Intelligence, fed with huge amounts of data, not necessarily of good quality. Processing them with traditional analyses may be unaffordable and new techniques are continuously being developed. Optimal subsampling addresses this challenge by selecting a representative subset that preserves predictive accuracy while reducing computational and labeling costs. When the sampling strategy depends on an assumed model, a critical issue is model misspecification. We develop a theoretical framework for subsampling under misspecification with the goal to minimize a prediction error metric obtained integrating with respect to the marginal distribution of explanatory variables. A key contribution is a theorem that provides an analytical expression for “the best” inclusion probabilities in a Poisson sampling scheme, by connecting sampling theory and optimal experimental design for probability sub‐measures. Theoretical results are validated through simulations, focusing on simple linear regression with explicit solutions. A real data application is also considered.</p><p class="abstract-meta"><span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70117" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-074-i6-002">
+<p class="kicker">Statistical Analysis and Data Mining · ONLINE_FIRST</p>
+<h3>Penalized Ridge Regression for Error‐Prone Additive Hazards Models</h3>
+<p>Li‐Pang Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sam.70118</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70118" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sam.70118" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-14 20:29 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Penalized Ridge Regression for Error‐Prone Additive Hazards Models</strong></p><p class="abstract-meta">期刊：Statistical Analysis and Data Mining · DOI：10.1002/sam.70118 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">In this paper, we develop a penalized ridge regression approach for the additive hazards model in the presence of measurement error, collinearity, and uninformative covariates. These challenges frequently arise in survival data with multivariate covariates but are rarely addressed simultaneously. Specifically, we propose to minimize the error‐corrected deviance with constraints, which is used to control variable selection. For the numerical computation, we adopt the Newton‐barrier iteration to solve the constrained minimization problem. Theoretically, we establish some asymptotic properties, including variable selection consistency and asymptotic normality of the proposed estimator. Simulation studies under various magnitudes of measurement error, collinearity, and censoring rates demonstrate the validity of the proposed method and verify the stability and efficiency of the estimator. We further illustrate its practical utility through an application to the ACTG clinical trial data.</p><p class="abstract-meta"><span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70118" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-074-i6-003">
+<p class="kicker">Statistical Analysis and Data Mining · ONLINE_FIRST</p>
+<h3>Supervised Matrix Factorization for Estimating Individualized Treatment Rule: Incorporating Medical Notes in Decision Making</h3>
+<p>Crystal Zang; Rebecca A. Deek; Lu Tang</p>
+<dl>
+<div><dt>卷期</dt><dd>V19 · I6</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1002/sam.70120</dd></div>
+<div><dt>证据层级</dt><dd>METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70120" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 2026-11-14 20:29 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1002/sam.70120" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-14 20:29 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Supervised Matrix Factorization for Estimating Individualized Treatment Rule: Incorporating Medical Notes in Decision Making</strong></p><p class="abstract-meta">期刊：Statistical Analysis and Data Mining · DOI：10.1002/sam.70120 · 语言：en · 摘要来源：Crossref 元数据</p><p class="abstract-body">Precision medicine aims to tailor treatments to the unique characteristics of individual patients. In this paper, we develop a classification‐based approach to estimate an individualized treatment rule (ITR) by leveraging both structured quantitative data and high‐dimensional unstructured text documents. To tackle the challenge of incorporating text data, we propose an outcome‐driven supervised nonnegative matrix factorization (NMF) method that extracts relevant topics for ITR estimation in a one‐step procedure. Our proposed method factorizes vectorized documents into a document‐topic matrix and a topic‐word matrix, guided by the outcome. For estimation, we construct a weighted and penalized objective function, solved by a projected gradient approach, to jointly estimate the document representation and the ITR. Our formulation enables the interpretability of the effect of the learned topics on the ITR. We demonstrate the performance of our method through simulation studies and a real‐world example from the MIMIC‐IV intensive care unit dataset. Applied to MIMIC‐IV radiology notes, supervised NMF identifies predictive but less prevalent topics, improves interpretability by refining broad topics, and achieves a 4.2% reduction in classification error and 4.1% lower RMSE than two‐stage learning using NMF.</p><p class="abstract-meta"><span class="evidence"><a href="https://onlinelibrary.wiley.com/doi/10.1002/sam.70120" rel="noopener noreferrer">官方论文页面</a><small>onlinelibrary.wiley.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</article>
+</section>
+
+<section id="corrections"><h2>勘误与撤稿</h2><p>本批未发现新的勘误或撤稿。</p></section>
+
+<section id="themes">
+<h2>主题与阅读路线</h2>
+<p>以下聚类仅依据题名与论文类型等元数据，不从题目推断方法或结果。</p>
+<ul>
+<li>计算机科学与探索 2026-V20-I10 与 I11 题名多见目标检测、区块链分片、大模型与知识图谱等综述及应用研究，可作两期深读入口。</li>
+<li>Statistical Analysis and Data Mining 已简报期迟到新增 1 篇，题名涉及有向加权网络的块模型与变分自编码器。</li>
+<li>Statistical Analysis and Data Mining 未来期 Volume 19 Issue 6 已登记 3 篇，须待该期封面月到期且目录稳定后再评估完整性。</li>
+</ul>
+</section>
+
+
+<section id="health">
+<h2>数据源健康</h2>
+<ul>
+<li>REG-044 计算机科学与探索：<code>OFFICIAL_PAGE_OK_VIA_CNKI_PLAYWRIGHT</code> — 出版方站点 fcst.ceaj.org 返回 HTTP 500，CCF 数字图书馆证书与域名不匹配（官方源失败计数 2）；完整性证据以 CNKI 腾云采编平台官方期刊目录为准，因此不降级。相对已简报的 2026-V20-I9，官方过刊目录确认 2026-V20-I10（21 条，含 1 条《投稿须知》，两页目录合并、两遍稳定）与当期目录 2026-V20-I11（20 条，含 1 条《投稿须知》，两遍稳定），issue gate 均为 NEW_ISSUE，本轮 claim 两期。该刊条目无 DOI，账本以期刊+题名+第一作者+年份+CNKI 篇号的稳定 fingerprint 去重；摘要取自官方目录。</li>
+<li>REG-074 Statistical Analysis and Data Mining：<code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code> — Wiley 官方 2026 年目录列至 Volume 19 Issue 6。已于 2026-10-14 简报的 2026-V19-I5（October 2026）官方 TOC 现为 7 篇研究论文加 1 条 Issue Information，相对已简报 6 篇集合哈希已变化，gate 为 DELTA_REVIEW_REQUIRED；本轮只输出迟到新增 1 篇（10.1002/sam.70116）并链接原简报，不重印整期。Volume 19 Issue 6 封面月为 December 2026，属未来期，仅登记 3 篇研究论文，不得 claim。官方目录以 Playwright + 系统 Chrome 快照为准。</li>
+<li>REG-014 Journal of Spatial Information Science：<code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code> — JOSIS 官方 Current 与 Archives 第 2 页的最新完整期仍为已核验基线 No. 32 (2026)（2026-07-01），未见 No. 33；issue gate 不触发，无新完整期、无网络首发，不 claim。 <span class="evidence"><a href="https://josis.org/index.php/josis/issue/current" rel="noopener noreferrer">官方当期目录</a><small>josis.org · 2026-11-14 20:29 CST · 官方目录</small></span> <span class="evidence"><a href="https://josis.org/index.php/josis/issue/archive/2" rel="noopener noreferrer">官方过刊目录</a><small>josis.org · 2026-11-14 20:29 CST · 官方目录</small></span></li>
+<li>有界对账：本批处理 4 个到期任务，newly_enqueued=0，目录侧不足时保持 FAILED_RETRYABLE。</li>
+</ul>
+<ul>
+<li>job 54 REG-013 Transactions in GIS → 保持 FAILED_RETRYABLE（有界对账目录侧不足，今日 attempt 继续计数）</li><li>job 58 REG-017 Geo-spatial Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足，今日 attempt 继续计数）</li><li>job 59 REG-018 Cartography and Geographic Information Science → 保持 FAILED_RETRYABLE（有界对账目录侧不足，今日 attempt 继续计数）</li><li>job 65 REG-024 Remote Sensing of Environment → 保持 FAILED_RETRYABLE（有界对账目录侧不足，今日 attempt 继续计数）</li>
+</ul>
+</section>
+
+
+<section id="audit">
+<h2>证据与审计信息</h2>
+<details open>
+<summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>ed0a62e2-f678-4558-8f02-16188ff9b4dc</code></li>
+<li>Commit ID：<code>DAILY-20261114-202952-ed0a62e2</code></li>
+<li>Brief ID：<code>DAILY-20261114</code></li>
+<li>去重抑制：0 · 增量复核：1 · 对账任务：4 · 官方源失败计数：2</li>
+<li>正式期刊：REG-014、REG-044、REG-074 · 本组无附加信号源 · issue gate NEW_ISSUE 2（claim）、DELTA_REVIEW_REQUIRED 1、未来期登记 1（不 claim）</li>
+<li>下一次计划扫描日：2026-11-15（第 15 组）· 扫前 health --strict PASS · 月度对账至昨日无漏扫（11 月无 31 日任务）</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul>
+</details>
+</section>
+
+</main>
+<p><a href="../../../../2026/11/index.html">返回 11 月索引</a></p>
+</body>
+</html>
