@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 第 17 组 · 2026-11-17</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}
+#audit summary{min-height:44px;display:flex;align-items:center;cursor:pointer}</style>
+</head>
+<body id="top">
+<a class="skip" href="#overview">跳到期刊总览</a>
+<header class="hero">
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/11/index.html">11 月</a> / 第 17 组
+</nav>
+<h1>GIS-AI 期刊每日轮检简报 · 第 17 组</h1>
+<p class="lead">第 17 组共检查 3 种正式期刊；确认 5 个新完整期次、36 篇正式论文（含归期 7 篇）：中国科学：信息科学 claim 2026-V56-I10（17 篇）；已简报 I9 集合未变不重印；I11 官方空目录仅登记、不 claim。Big Data 官方目录恢复，claim 2026-V14-I3 至 I6（共 19 篇，其中归期 7 篇），新登记 OnlineFirst 2 篇。Geo-spatial Information Science 官方当期仍为已简报的 2026-V29-I4，差异复核 4 篇（不再出现于官方目录），不重印、不 claim；新登记 OnlineFirst 13 篇，T&amp;F 摘要抓取连续 403 后停止，标“暂无摘要”，不编造。未发现撤稿或勘误。无降级期刊。</p>
+<p>逻辑日期 2026-11-17（北京时间）· 实际完成 2026-11-17 12:21 CST · 任务类型 ROUTINE · 第 17 组</p>
+<div class="metrics" role="list">
+<div class="metric" role="listitem"><strong>3</strong><span>已检查正式期刊</span></div>
+<div class="metric" role="listitem"><strong>3</strong><span>有更新期刊</span></div>
+<div class="metric" role="listitem"><strong>5</strong><span>新完整期次</span></div>
+<div class="metric" role="listitem"><strong>36</strong><span>新增正式论文</span></div>
+<div class="metric" role="listitem"><strong>4</strong><span>差异复核</span></div>
+<div class="metric" role="listitem"><strong>15</strong><span>网络首发/未来期</span></div>
+</div>
+</header>
+<nav class="toc" aria-label="页内导航">
+<strong>快速导航</strong>
+<a href="#overview">期刊总览</a>
+<a href="#formal">新完整期次</a>
+<a href="#delta">差异复核</a>
+<a href="#online-first">网络首发</a>
+<a href="#corrections">勘误撤稿</a>
+<a href="#themes">主题与路线</a>
+<a href="#health">数据源健康</a>
+<a href="#audit">证据与审计</a>
+</nav>
+<main>
+
+<section id="attention"><h2>需要关注</h2><ul class="attention">
+<li><span class="tag">新完整期</span> <strong>中国科学：信息科学</strong> — 官方确认 2026-V56-I10（17 篇）并 claim。 <span class="evidence"><a href="https://www.sciengine.com/SSI/issue/56/10" rel="noopener noreferrer">官方期次目录</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://www.sciengine.com/SSI/coverStories" rel="noopener noreferrer">官方当期/封面故事</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span></li>
+<li><span class="tag">新完整期</span> <strong>Big Data</strong> — 官方目录恢复，确认并 claim 2026-V14-I3（5）、I4（7）、I5（3，归期）、I6（4，归期，官方 current）。 <span class="evidence"><a href="https://journals.sagepub.com/toc/BIG/current" rel="noopener noreferrer">官方当期目录</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://journals.sagepub.com/loi/BIG" rel="noopener noreferrer">官方过刊目录</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span></li>
+<li><span class="tag">差异复核</span> <strong>Geo-spatial Information Science</strong> — 已简报 2026-V29-I4 官方目录由 50 篇变为 46 篇，差异复核 4 篇，不重印、不 claim。 <span class="evidence"><a href="https://www.tandfonline.com/toc/tgsi20/current" rel="noopener noreferrer">官方当期目录</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://wanyou9.github.io/gis-ai-daily-briefs/2026/09/2026-09-17_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC17%E7%BB%84.html" rel="noopener noreferrer">原简报 2026-09-17</a><small>wanyou9.github.io · 2026-11-17 12:21 CST · 已简报期次入口</small></span></li>
+<li><span class="tag">空目录</span> <strong>中国科学：信息科学</strong> — 2026-V56-I11 官方页为 No data，仅登记，不得 claim。 <span class="evidence"><a href="https://www.sciengine.com/SSI/issue/56/11" rel="noopener noreferrer">官方 I11 目录</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 官方目录</small></span></li>
+</ul></section>
+
+<section id="overview"><h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>差异复核</th><th>OF/未来期</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-017<br><strong>Geo-spatial Information Science</strong></td><td>2026-V29-I4（已简报，差异复核）</td><td>0</td><td>0</td><td>0</td><td>4</td><td>13</td><td><code>OFFICIAL_TOC_OK_INTERMITTENT_CF403_RSS_OK</code></td><td>COMPLETED</td></tr>
+<tr><td>REG-047<br><strong>中国科学：信息科学</strong></td><td>2026-V56-I10（claim）/ I9 已简报 / I11 空目录</td><td>1</td><td>17</td><td>0</td><td>0</td><td>0</td><td><code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code></td><td>COMPLETED</td></tr>
+<tr><td>REG-077<br><strong>Big Data</strong></td><td>2026-V14-I3 至 I6（claim）</td><td>4</td><td>19</td><td>7</td><td>0</td><td>2</td><td><code>OFFICIAL_TOC_OK_VIA_PLAYWRIGHT_RSS_OK</code></td><td>COMPLETED</td></tr>
+</tbody></table></div>
+<figure>
+<img src="assets/2026-11-17_GIS-AI期刊每日摘要_第17组.png" width="1600" height="900" alt="第17组每日摘要图：3刊，新完整期5，正式论文36，归期7，差异复核4，网络首发15，降级0">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。</figcaption>
+</figure></section>
+
+<section id="formal"><h2>新完整期次与正式论文</h2>
+<article class="issue" id="issue-reg-047-2026-v56-i10"><h3>中国科学：信息科学 · 2026-V56-I10</h3>
+<p>官方期次目录确认 2026-V56-I10（Volume 56, Issue 10, 2026）已关闭，17 篇（含编者按与专题导言），gate-issue=NEW_ISSUE，予以 claim。15 篇摘要来自官方目录，编者按与专题导言无摘要，标“暂无摘要”，不编造。已简报的 2026-V56-I9 文章集合哈希未变（ALREADY_BRIEFED），页面现标注 in progress，不重印、不 claim。2026-V56-I11 官方页显示 Volume 56, Issue 11 且 “No data”，视为未出刊/空目录，仅登记，不得 claim。</p>
+<p><span class="evidence"><a href="https://www.sciengine.com/SSI/issue/56/10" rel="noopener noreferrer">官方期次目录</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://www.sciengine.com/SSI/issue" rel="noopener noreferrer">官方 latest issue</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://www.sciengine.com/SSI/coverStories" rel="noopener noreferrer">官方封面故事/过刊列表</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span></p>
+<p>本简报收录该期正式论文 <strong>17</strong> 篇。15 篇摘要来自官方目录；编者按与专题导言无摘要，标“暂无摘要”，不编造。</p></article>
+<article class="paper" id="formal-reg-047-2026v56i10-001">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>编者按</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0520</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0520" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0520" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>编者按</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0520</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0520" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-002">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Smart environments and integrated sensing and communication: opportunities and challenges from link design to network cooperation</h3>
+<p>Kaitao MENG; Rui WANG; Meng HUA; Fan LIU</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0199</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0199" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0199" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Smart environments and integrated sensing and communication: opportunities and challenges from link design to network cooperation</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0199 · 摘要来源：已核验来源</p><p class="abstract-body">Smart environments and integrated sensing and communication (ISAC) are steering 6G from “signal transmission&quot; toward “collaborative environmental perception and proactive control&quot;. Unlike conventional designs that treat the environment as an external random factor, smart environments leverage programmable metasurfaces, intelligent transmissive and reflective surfaces, vehicle-mounted surfaces, unmanned aerial vehicles (UAVs) and other autonomous platforms, reconfigurable antennas, and multi-base-station cooperative networks to transform propagation paths, array geometries, coverage topologies, and node cooperation into optimizable degrees of freedom. ISAC, through shared waveforms, spectrum, and infrastructure, provides real-time feedback on environmental understanding, target localization, blockage awareness, and state prediction, forming a closed loop where “the environment empowers sensing and communication, and sensing and communication in turn refine the environment&quot;. This paper systematically surveys the conceptual boundaries, core technologies, typical architectures, key gain mechanisms, and network-level cooperation modes of smart environments and ISAC, with emphasis on how fixed surfaces, target-mounted surfaces, hybrid sensing surfaces, UAV platforms, fluid antennas, and multi-base-station cooperative ISAC networks contribute to coverage extension, channel rank reshaping, target resolvability enhancement, multi-static sensing, and sensing-assisted communication. Furthermore, we summarize the common design issues concerning performance metrics, optimization variables, and closed-loop system operation, with particular emphasis on the structural tradeoffs between maximizing coherent beamforming gains for communication and maintaining high-rank observation structures for sensing, as well as between user-centric local communication cooperation and target-centric multi-view sensing cooperation. Finally, key challenges in typical scenarios, including vehicle-to-everything (V2X), industrial manufacturing, indoor spaces, and integrated space-air-ground networks, are summarized, along with promising directions for future research.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0199" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-003">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Integrated communication, sensing and computing for space-air-ground global fusion: architecture, technologies and prospects</h3>
+<p>Yifei XIE; Yuanzhi HE; Zhi LIN; Ruiqian MA</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0181</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0181" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0181" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Integrated communication, sensing and computing for space-air-ground global fusion: architecture, technologies and prospects</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0181 · 摘要来源：已核验来源</p><p class="abstract-body">With the evolution of the sixth-generation (6G) mobile networks, wireless networks are expanding from terrestrial cellular networks to integrated space-air-ground coverage, and extending from information transmission towards multi-objective applications such as environmental sensing and intelligent services. Against this backdrop, the space-air-ground integrated network (SAGIN) integrates space-based, air-based, and ground-based infrastructures to construct a network foundation that supports 6G ubiquitous services. Meanwhile, the development of millimeter-wave/terahertz frequency bands and the maturation of technologies such as massive multiple-input multiple-output (mMIMO) have enabled the deep integration of communication, sensing, and computing functions on shared platforms and spectrum resources, giving rise to integrated communication, sensing and computing (ICSC) technology. By sharing platforms and resources while jointly coordinating diverse service demands, ICSC achieves synergistic gains, which are crucial for reducing end-to-end latency, enhancing spectrum efficiency, and supporting intelligent network operations. However, the natural heterogeneity across the layers of SAGIN in channel propagation characteristics, hardware capabilities, and service types intensifies the competition among the demands of communication, sensing, and computing for resources such as time slots, spectrum, spatial domains, power, and computing, severely constraining the synergistic improvement of multi-service performance. To address these challenges, this paper systematically reviews the ICSC technology framework for SAGIN, and establishes a unified analytical framework from four dimensions: cross-layer cooperative architecture, end-to-end signal processing, multi-dimensional resource scheduling, and intelligent management and control. Furthermore, it prospectively explores future research directions such as lightweight ICSC design, semantic fusion, large model-assisted approaches, and trustworthy cooperation, providing fundamental theoretical foundations and feasible technical pathways for 6G ubiquitous intelligent coverage.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0181" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-004">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Reconfigurable satellite swarms for communication, sensing, and computing: concepts, key technologies, and applications</h3>
+<p>Ziyuan ZHENG; Qingqing WU; Haiying HU; Wen CHEN; Xin LIN; Wenpeng JING</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0203</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0203" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0203" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Reconfigurable satellite swarms for communication, sensing, and computing: concepts, key technologies, and applications</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0203 · 摘要来源：已核验来源</p><p class="abstract-body">Satellite systems supporting low-Earth-orbit networking, distributed Earth observation, and onboard intelligence are evolving from fixed configurations and predefined functional assignments toward task-driven multi-satellite cooperation. This survey develops a system-level framework for communication, sensing, and computing in reconfigurable satellite swarms. It first distinguishes reconfigurable swarms from fixed constellations, formation flying, fractionated spacecraft, software-defined satellites, and reconfigurable antennas. Directly adjustable system objects are organized into four coupled dimensions: formation, link, function, and resource reconfiguration. A four-layer operating architecture then connects state awareness, network organization, task execution, and reconfiguration decisions. For finite task windows, the survey introduces a net-benefit evaluation principle based on predeclared and well-tuned baselines, separate cost budgets, hard feasibility constraints, risk bounds, and task-level outcomes. Common technical foundations include task-driven formation selection and control, cross-satellite synchronization and cooperative calibration, dynamic inter-satellite networking and task-aware routing, multi-timescale resource coordination, programmable payloads, and swarm task-runtime mechanisms. Representative applications are reviewed for communications, sensing, and computing, ranging from distributed MIMO, direct-to-device access, hotspot enhancement, and service-aware routing to signals-of-opportunity positioning, non-cooperative emitter localization, distributed SAR, event-driven observation, onboard screening, collaborative inference, and state migration. Across these problem families, the model-baseline-metric-evidence template is used to identify minimum modeling assumptions, fair comparisons, task-level metrics, and falsifiable validation questions. The resulting synthesis clarifies when reconfiguration is worthwhile, which system objects should be adjusted, and how its performance boundaries can be established using reproducible evidence.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0203" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-005">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Cooperative beamforming for STAR-RIS assisted 6G integrated sensing and communications</h3>
+<p>Qing XUE; Di LIU; Bingpeng ZHOU; Guangji CHEN; Yi WANG; Qianbin CHEN</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0147</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0147" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0147" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Cooperative beamforming for STAR-RIS assisted 6G integrated sensing and communications</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0147 · 摘要来源：已核验来源</p><p class="abstract-body">Integrated sensing and communications (ISAC) is a key enabling technology for future intelligent connectivity. However, its performance heavily relies on the quality of line-of-sight links and is often limited by signal blockage and sensing degradation in complex propagation environments. To address these challenges, this paper introduces a simultaneous transmitting and reflecting reconfigurable intelligent surface (STAR-RIS), which enables flexible manipulation of the wireless environment to achieve enhanced coverage and improved sensing capability in ISAC systems. Compared with conventional reconfigurable intelligent surface (RIS) that operates only in reflection mode, STAR-RIS provides higher degrees of freedom for the joint design of communication and sensing. To maximize the multi-user sum rate under sensing performance constraints, we investigate a joint optimization problem of active, passive, and transmit beamforming in a STAR-RIS-assisted ISAC system. The resulting problem is highly non-convex due to the strong coupling among multiple variables. To tackle this issue, a weighted minimum mean square error-based transformation and an alternating optimization framework are adopted to decompose the original problem into two subproblems, namely transmit beamforming design and STAR-RIS transmission-reflection coefficient optimization. These subproblems are efficiently solved via successive convex approximation and semidefinite relaxation techniques. Simulation results demonstrate that the proposed scheme effectively enhances communication performance while satisfying sensing requirements, and achieves superior performance over conventional RIS-assisted schemes in multi-region scenarios.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0147" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-006">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Design of a world-model-assisted reinforcement learning method for RIS adaptive beam alignment</h3>
+<p>Zonghao ZHANG; Feng XING; Zifan WANG; Haowen QIN; Shu XU; Chunguo LI; Luxi YANG</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0195</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0195" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0195" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Design of a world-model-assisted reinforcement learning method for RIS adaptive beam alignment</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0195 · 摘要来源：已核验来源</p><p class="abstract-body">This paper investigates adaptive beam alignment for large-scale reconfigurable intelligent surface (RIS)-aided millimeter-wave communication systems under imperfect channel state information (CSI). Existing RIS beam alignment methods mainly rely on predefined codebook search or online reinforcement learning exploration, which suffer from high pilot overhead, slow cold-start exploration, and strong coupling between two-dimensional phase variables. To address these problems, a two-stage beam alignment method, termed world-model-assisted twin delayed deep deterministic policy gradient (WM-TD3), is proposed with world-model prior guidance and online deep reinforcement learning fine-tuning. First, the spatial structure of the RIS cascaded channel is exploited to decompose the high-dimensional phase optimization problem into horizontal and vertical low-dimensional subproblems. Then, a cognitive world model learns latent channel states from wide-beam amplitude and phase observations, and provides initial beam priors and reward-estimation baselines for online learning. Furthermore, a decoupled dual-agent TD3 (DDA-TD3) mechanism fine-tunes the horizontal and vertical phase variables through a shared differential reward related to the end-to-end signal-to-noise ratio (SNR). Simulation results show that WM-TD3 achieves faster beam alignment and more stable received SNR performance with lower search overhead than hierarchical search and pure TD3.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0195" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-007">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Robust joint beamforming and antenna position optimization for RIS and MA-assisted low-latency ISAC networks</h3>
+<p>Wei GAO; Peng WU; Ning GUO; Yulin HU</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0180</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0180" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0180" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Robust joint beamforming and antenna position optimization for RIS and MA-assisted low-latency ISAC networks</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0180 · 摘要来源：已核验来源</p><p class="abstract-body">This paper investigates robust joint beamforming and antenna position optimization for a low-latency integrated sensing and communication (ISAC) network aided by movable antennas (MAs) and a reconfigurable intelligent surface (RIS). Considering the imperfect channel state information (CSI) feedback of both the sensing and communication links and finite-blocklength (FBL) transmission, a robust max-min rate optimization problem is formulated to jointly design the transmit beamforming vectors, RIS phase shifts, and MA positions while guaranteeing the required sensing signal-to-noise ratio (SNR). The formulated problem is highly nonconvex due to the semi-infinite constraints induced by CSI uncertainty, the complicated FBL rate expression, and the strong coupling among the optimization variables. To tackle these challenges, the S-procedure is first employed to eliminate the CSI error and reformulate the robust constraints as tractable linear matrix inequalities, while successive convex approximation is applied to construct convex surrogates for the remaining nonconvex terms. Next, a penalty concave-convex procedure-based alternating optimization algorithm is developed to iteratively update the transmit beamforming vectors, RIS phase shifts, and MA positions. Numerical results demonstrate that the proposed algorithm achieves a higher minimum achievable rate than the benchmarks. Moreover, the impact of FBL transmission on the minimum achievable rate is analyzed.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0180" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-008">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Secure broadcast transmission based on fluid and reconfigurable antennas</h3>
+<p>Jiangong CHEN; Xia LEI; Kaitao MENG; Hong NIU; Yuchen ZHANG</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0194</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0194" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0194" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Secure broadcast transmission based on fluid and reconfigurable antennas</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0194 · 摘要来源：已核验来源</p><p class="abstract-body">To address the insufficient spatial degrees of freedom of conventional multi-antenna physical layer security methods in antenna-resource-limited scenarios such as the Internet of Things and machine communications, this paper proposes a secure broadcast transmission framework based on fluid antennas (FA) and pattern reconfigurable antennas (PRA). Without increasing the number of transmit antennas, the proposed framework enhances the differential regulation capability of the transmitter over legitimate and eavesdropping directions by jointly exploiting multiple degrees of freedom, including digital precoding, artificial noise (AN), FA element positions, and PRA electromagnetic precoding matrices. First, a unified channel model is established for the considered scenario, where, for PRA, a continuous model based on spherical-harmonic-enabled arbitrary pattern synthesis and a discrete model based on measured-data-driven pattern selection are respectively considered. Then, with the objective of maximizing the minimum secrecy rate, a non-convex problem is formulated for the joint optimization of the information precoder, AN, FA antenna positions, and PRA electromagnetic precoding matrices. Finally, to address the difficulties caused by multi-variable coupling, nonlinear fractional summations, and non-convex spherical-manifold constraints, multiple convex-relaxation-based methods, including block coordinate descent, semidefinite relaxation, successive convex approximation, and majorization-minimization, are organically combined to decouple, convexify, and efficiently solve the original problem under convergence guarantees. Simulation results show that the proposed method can significantly enhance spatial energy focusing and eavesdropping-direction suppression, and achieve secrecy rates close to those of conventional large-scale fixed arrays with only a small number of antennas, making it suitable for low-cost, low-power, and compact secure communication networks.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0194" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-009">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Integrated sensing and communication beamforming for pinching antenna surface systems: a multi-scale attention deep learning approach</h3>
+<p>Qihan ZHANG; Fenghao SHENG; Haiyang ZHANG; Longxiang YANG</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0201</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0201" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0201" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Integrated sensing and communication beamforming for pinching antenna surface systems: a multi-scale attention deep learning approach</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0201 · 摘要来源：已核验来源</p><p class="abstract-body">Integrated sensing and communication (ISAC) is widely recognized as a key enabling technology for sixth-generation mobile communications. Pinching antenna surface systems (PASS), which allow flexible antenna placement along dielectric waveguides, offer additional spatial degrees of freedom unavailable in conventional fixed arrays for joint sensing-communication beamforming. This paper addresses the transmit power minimization problem in PASS-ISAC systems under a given antenna deployment, subject to joint communication signal-to-interference-plus-noise ratio (SINR) and sensing beampattern gain constraints. To handle the non-convexity and real-time requirements, we propose MSA-BFNet-ISAC, a multi-scale attention beamforming network whose core is a four-pathway joint feature processing architecture comprising cross-domain channel fusion, multi-scale spatial feature extraction, sensing target angle encoding, and steering vector encoding. A two-stage hybrid training strategy—optimization-guided pre-training followed by unsupervised fine-tuning—is further designed to efficiently optimize across communication constraints, sensing constraints, and the power objective. Simulations at 150 GHz sub-THz band show that the proposed method achieves transmit power within 1 dB of the iterative optimization benchmark while providing two-orders-of-magnitude inference speedup, significantly outperforms time-division ISAC, and steadily reduces power as the antenna count grows; comparisons with conventional fixed-position arrays and different PASS layouts further validate the architectural gain of PASS, and systematic ablation studies quantify the contribution and complexity overhead of each network component, confirming the potential of PASS in ISAC scenarios.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0201" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-010">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Resolvability analysis of pinching-antenna-enabled bistatic near-field sensing systems</h3>
+<p>Yanglin HU; Tiankui ZHANG; Xiaoxia XU; Song ZHAO</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0202</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0202" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0202" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Resolvability analysis of pinching-antenna-enabled bistatic near-field sensing systems</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0202 · 摘要来源：已核验来源</p><p class="abstract-body">Pinching-antenna systems (PASS) form a large-scale reconfigurable aperture through dielectric waveguides and deployable pinching antennas, providing a new hardware architecture for near-field integrated sensing and communication systems. Unlike conventional independent antenna-array reception, the echo components received by multiple activated PAs at the PASS receiver are first aggregated within the waveguide and then fed into subsequent processing through limited digital outputs. This introduces coupling among the number of activated PAs, the equivalent channel response, inter-waveguide response difference, and noise accumulation. This paper investigates the position resolvability of a PASS-enabled bistatic near-field sensing system. To characterize the position resolvability under the single-RF-chain multi-PA aggregated-output structure and its variation with the number of activated PAs, a near-field aggregated-output model for multi-waveguide PASS is established. With respect to a reference position, a one-dimensional position parameter is introduced, and a closed-form expression of the equivalent Fisher information for this parameter is derived as the performance metric. First, the position resolvability is decomposed into the product of the aggregated-output signal-to-noise ratio and the inter-waveguide response difference. The derived result shows that the impact of the number of activated PAs on system resolvability is jointly determined by the equivalent channel response strength, the inter-waveguide response difference, and the noise-normalization effect. On this basis, an intra-waveguide aggregation residual metric is constructed, and a criterion for the system equivalent Fisher information when adding a PA within the same waveguide is provided, showing that intra-waveguide aggregation-induced mixing itself does not directly determine the position resolvability of PASS. Numerical simulations validate the above theoretical derivations, showing that under the single-RF-chain multi-PA aggregated-output structure, the position resolvability of PASS does not monotonically improve with the number of activated PAs, but is determined by the joint evolution of the aggregated-output signal-to-noise ratio and the inter-waveguide response difference. Specifically, variations in the number of activated PAs simultaneously affect the equivalent channel response strength, the inter-waveguide response difference, and the noise-normalization effect, leading to different variation patterns of system resolvability across different activated-PA-number ranges.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0202" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-011">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Rotatable antenna-enabled air-ground cooperative integrated sensing, communication, and computing</h3>
+<p>Beixiong ZHENG; Qiyao WANG; Zhiwei TAN; Jie TANG; Shaoe LIN</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0191</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0191" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0191" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Rotatable antenna-enabled air-ground cooperative integrated sensing, communication, and computing</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0191 · 摘要来源：已核验来源</p><p class="abstract-body">Integrated sensing, communication, and computing (ISCC) is a key enabling paradigm for future sixth-generation (6G) mobile networks. However, conventional fixed-antenna architectures limit the exploitation of spatial degrees of freedom and the adaptability of ISCC systems to dynamic wireless environments. To address this issue, this paper proposes a rotatable antenna (RA)-enabled air-ground cooperative ISCC framework. Specifically, the RA boresight direction is introduced as a new optimizable spatial degree of freedom and jointly designed with communication receive beamforming, the probing-signal covariance matrix, and mobile edge computing (MEC) computing resource allocation, thereby transforming the spatial controllability of RAs into cooperative sensing, communication, and computing gains. We consider an RA-enabled air-ground cooperative ISCC system with multiple vehicle terminals, an unmanned aerial vehicle (UAV) sensing target, an RA-equipped base station, and a base-station-side MEC server, where computation-related data are offloaded to the MEC server and sensing beams are transmitted for UAV target sensing. The multi-UAV-target case can be extended by introducing multiple echo-power constraints, while this paper focuses on the single-UAV-target case for algorithm design and simulation. The computation resource allocation, receive beamforming matrix, probing-signal covariance matrix, and RA pointing matrix are jointly optimized to minimize the maximum task execution latency under the sensing performance constraint. To solve this non-convex problem, an alternating optimization (AO) framework is developed, where the computation resource allocation is obtained via one-dimensional search, the communication receive beamforming matrix and probing-signal covariance matrix are respectively derived based on the minimum mean-square error (MMSE) criterion and a closed-form solution, and the RA pointing matrix is optimized using fractional programming and successive convex approximation. Simulation results demonstrate that the proposed scheme significantly reduces the maximum task execution latency while improving air-ground communication quality and UAV target sensing capability.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0191" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-012">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Fluid antenna assisted federated unlearning system</h3>
+<p>Yixuan CHEN; Zhaohui YANG; Hao XU; Cheng ZENG; Yuqi CHEN; Kai-Kit WONG; Zhaoyang ZHANG</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0205</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0205" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0205" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Fluid antenna assisted federated unlearning system</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0205 · 摘要来源：已核验来源</p><p class="abstract-body">Federated unlearning (FU) enables users to revoke their data contributions from federated learning models, but its multiple model-calibration rounds introduce considerable computation and communication overhead. To reduce the FU completion time in wireless edge networks, this paper investigates a fluid antenna (FA)-assisted wireless FU system. Under a spatially correlated Rician channel, a mixed discrete-continuous problem is formulated to jointly optimize the active FA port sets, CPU frequencies, uplink transmit powers, transmission delays, and bandwidth allocation. A joint optimization algorithm based on dynamic programming and nested bisection search is proposed. Dynamic programming determines the optimal port sets subject to the minimum spacing constraint, while nested bisection search obtains the communication resource allocation. Simulation results show that the proposed scheme effectively reduces the FU completion time compared with the fixed-antenna, equal-bandwidth, and random-port-selection schemes. At a maximum transmit power of 10 dBm, it achieves an approximately 31.4 % delay reduction over the fixed-antenna scheme. Fashion-MNIST experiments further evaluate the post-unlearning model utility and unlearning effectiveness.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0205" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-013">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Ternary equilibrium optimization theory for blockchain: coupled modeling and attractor regulation mechanisms for system security</h3>
+<p>Jin DONG; Faguo WU; Zhiming ZHENG</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2025-0498</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2025-0498" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0498" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Ternary equilibrium optimization theory for blockchain: coupled modeling and attractor regulation mechanisms for system security</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2025-0498 · 摘要来源：已核验来源</p><p class="abstract-body">Blockchain has become a trusted infrastructure for the digital economy by enabling new industries, business models, and application paradigms, and by accelerating the deep integration of digital technologies into the real economy. With its wide deployment in complex scenarios such as cross-chain coordination, government services, and financial supervision, the dynamic tension among security, efficiency, and decentralization has become increasingly prominent, exhibiting nonlinear conflicts, mutual constraints, and feedback amplification typical of complex systems. Conventional static, experience-driven parameter tuning is inadequate for structural changes and long-horizon evolution; moreover, workload fluctuations induced by cross-chain interactions and large-scale on-chain data, together with strong coupling and nonlinearity, make fixed parameters and heuristic rules insufficient for providing interpretable and verifiable regulation. To address the lack of a unified analytical model for trilemma evolution and the absence of provable guarantees for long-term stability, this paper proposes a ternary equilibrium optimization framework based on nonlinear dynamical systems, systematically characterizing the coupled evolution of security, efficiency, and decentralization. Under feasible-state and bounded-control assumptions, we prove the structural unattainability of the ternary optimal state, and develop Lyapunov-based structure-attractor and bias-attractor regulation mechanisms to achieve dynamic balance and goal-oriented optimization within a macro safety boundary. Using the ChainMaker platform, we construct on-chain metric mappings and closed-loop regulation paths, and demonstrate the theory&#x27;s explanatory power, controllability, and engineering applicability through simulation-based evaluation, providing a theoretical foundation and regulation framework for the secure and sustainable operation of complex blockchain systems.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2025-0498" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-014">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>New path for high-efficiency advanced computing: generative structure computing</h3>
+<p>Fan ZHANG; Yanzhao GAO; Jiangxing WU; Xiaofeng QI; Wei CAO; Xinsheng YU; Yaqiong QIAO</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2024-0346</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2024-0346" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2024-0346" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>New path for high-efficiency advanced computing: generative structure computing</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2024-0346 · 摘要来源：已核验来源</p><p class="abstract-body">As Moore&#x27;s Law and Dennard Scaling gradually approach their physical limits, relying on advancements in integrated circuit manufacturing processes to enhance computing system performance and efficiency faces increasingly severe challenges. In this context, the research and development of advanced computing has become a recognized breakthrough direction in the industry. This paper first analyzes the development dilemma faced by computing systems in the era of intelligent computing and summarizes the development vision for advanced computing. In response to the current dilemma, this paper proposes corresponding strategies to break the deadlock. Subsequently, from the key perspectives of software-defined nodes and generative interconnect structures, this paper delves into the core concepts and technical implementation pathways of generative structure computing. Finally, based on a comprehensive analysis of the characteristics required for the ideal carrier of generative structure computing, this paper introduces software-defined system-on-chip, and presents one of the typical generative structure computing applications, aiming to provide a feasible technical pathway for the innovation of future computing architectures.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2024-0346" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-015">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>MSLAT: multi-stream lip-aware transformer for temporal forgery localization</h3>
+<p>Li WANG; Ziguang LI; Lingyun YU; Hongtao XIE; Yongdong ZHANG</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2025-0323</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2025-0323" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0323" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>MSLAT: multi-stream lip-aware transformer for temporal forgery localization</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2025-0323 · 摘要来源：已核验来源</p><p class="abstract-body">The development of deepfake technology has brought serious challenges to the security of multimedia content and promoted the demand for deepfake detection research. To overcome the limitations of previous binary-based methods on segment-level forgery detection, many recent works have studied temporal forgery localization to detect fake segments in audio-visual multimedia content. However, existing methods are deficient in cross-modal forgery trace mining: (1) they only focus on global facial features but lack special attention to the lip region, which is most relevant to audio; (2) they do not fully exploit unimodal features and their multimodal fusion is shallow. To solve the above problems, we propose a multi-stream lip-aware transformer (MSLAT), which jointly models forgery traces in both global facial and lip regions, thoroughly mines unimodal features and enhances multimodal fusion to achieve high-precision forgery localization. First, a lip synchronization expert model is trained via contrastive learning to mine forgery traces in the lip region, and a synchronization enhancement module is designed to improve the perception of long-distance lip synchronization. Second, a parameter-sharing multi-stream transformer network is introduced, incorporating a fusion stream that encodes visual, audio, and fused features in parallel. A multimodal enhanced feature pyramid network is designed to strengthen cross-modal interactions, fully mine unimodal and cross-modal information, and reduce computational cost. Finally, experiments on four mainstream deepfake detection and localization datasets demonstrate the effectiveness and superiority of the proposed method.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2025-0323" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-016">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Emergency decision-making method for contingency disposal on large ship flight decks</h3>
+<p>Yibo GUO; Yingkang ZHANG; Tian LIANG; Shaocan WANG; Yafei LI; Mingliang XU</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2025-0304</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2025-0304" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2025-0304" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Emergency decision-making method for contingency disposal on large ship flight decks</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2025-0304 · 摘要来源：已核验来源</p><p class="abstract-body">Due to the “island effect&quot; of large ships in the maritime environment, effective intervention of external support is difficult to achieve, which makes the losses caused by any contingency hard to recover in the short term and thus significantly amplifies their negative impact on flight deck support operations. At present, there is a lack of effective theoretical and methodological support for the problem of contingency disposal during flight deck support operations, and relevant studies mostly abstract this problem as a dynamic scheduling problem. However, the effective disposal window is extremely short after the occurrence of a contingency, and the cascading effects it triggers spread rapidly on the flight deck, making it difficult for existing dynamic scheduling methods to be directly applied. Taking a certain type of large American ship as the research object, this paper, based on the life cycle theory of sudden events and focusing on the complex scenario where support operations and contingency disposal operations coexist, proposes a modeling method for the contingency diffusion mechanism based on the non-homogeneous Poisson process. Meanwhile, based on the simulation environment constructed by this modeling, a dynamic scheduling method for contingency disposal resources integrating soft actor-critic (SAC) and attention mechanism is put forward. Simulation experiments show that, compared with baseline algorithms, the proposed method increases the original task completion rate by 12.8 % and reduces material loss by 16.5 % in such coexistence scenarios. It significantly improves the efficiency of emergency response and minimizes the negative impact of emergencies on flight deck operations.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2025-0304" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-047-2026v56i10-017">
+<p class="kicker">中国科学：信息科学 · FORMAL_ISSUE</p>
+<h3>Special topic: 6G networks: large AI model technologies and agentic AI communication</h3>
+<p>Qimei CUI; Kezhi WANG; Cunhua PAN; Yunhao LIU; Quan PAN; Feibo JIANG; Marco DI RENZO; Mérouane DEBBAH</p>
+<dl>
+<div><dt>卷期</dt><dd>V56 · I10</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1360/ssi-2026-0511</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0511" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1360/ssi-2026-0511" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Special topic: 6G networks: large AI model technologies and agentic AI communication</strong></p><p class="abstract-meta">期刊：中国科学：信息科学 · DOI：10.1360/ssi-2026-0511</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciengine.com/SSI/doi/10.1360/ssi-2026-0511" rel="noopener noreferrer">官方论文页面</a><small>www.sciengine.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="issue" id="issue-reg-077-2026-v14-i3"><h3>Big Data · 2026-V14-I3（June 2026）</h3>
+<p>官方完整期，5 篇均为新论文记录。摘要来自 Crossref，经 enrich 路径写入。</p>
+<p><span class="evidence"><a href="https://journals.sagepub.com/toc/BIG/14/3" rel="noopener noreferrer">官方期次目录</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span></p></article>
+<article class="paper" id="formal-reg-077-2026v14i3-001">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>KSG: A Symbolic Semantics Graph Generation Method of Smart Contract Based on the K Framework</h3>
+<p>Jie Li; Yucheng Zhao; Xiaoyu Yang; Yi Ding; Yidan Zou; Jun Jin</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261430300</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261430300" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261430300" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>KSG: A Symbolic Semantics Graph Generation Method of Smart Contract Based on the K Framework</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261430300 · 摘要来源：Crossref 元数据</p><p class="abstract-body">The formal semantics of blockchain smart contracts are the foundation of formal verification. They can be used to establish formal models to verify the security of contracts and help developers understand the specific execution rules of contracts. However, the mathematical logic involved in such modeling poses a high barrier to entry and cannot be directly integrated with other program analysis methods. This article proposes a semantic graph generation approach, KSG, for blockchain smart contracts. First, the semantic rules of the contract language are formally defined, and a semantic interpreter and prover are constructed to automatically transform smart contract code into a scalable semantic graph. This graph incorporates semantic control flow information, semantic data flow information, execution rules, and verification constraints. Next, the generated semantic graph can be utilized for vulnerability detection and symbolic execution and supports iterative optimization based on the analysis results. Finally, the detailed process of semantic graph generation and analysis is demonstrated through the verification of the reentrancy contract and the honeypot contract.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261430300" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i3-002">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>E-Commerce Network Search System Based on Target Webpage Positioning and Sentiment Analysis Recommendation</h3>
+<p>Yu-Chung Hsiao</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261435867</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261435867" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261435867" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>E-Commerce Network Search System Based on Target Webpage Positioning and Sentiment Analysis Recommendation</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261435867 · 摘要来源：Crossref 元数据</p><p class="abstract-body">With the rise of e-commerce network search systems, product search efficiency and user satisfaction have become increasingly important. To address the low accuracy of consumer sentiment analysis in existing product recommendation scenarios, a webpage localization and sentiment analysis recommendation model is proposed that combines an improved web search algorithm with a bidirectional long short-term memory network and an attention mechanism. An e-commerce network search system is then designed around this model. Experimental results show that the sentiment analysis recommendation model achieves an accuracy of 98.88% and an average mean squared error of 1.027, outperforming all comparison models. The average root-mean-square error is 0.476, recall is 98.92%, the F1 score is 97.78%, and the recognition accuracy for each of the four emotional tendencies exceeds 95%. In addition, the integrated system delivers an average search time of 87.6 ms, a central processing unit occupancy of 44.68%, a missed-search rate of 1.42%, and a user satisfaction of 99.34%, all superior to the comparison systems. The system offers a ready-to-deploy solution for sentiment-aware product search and provides a theoretical basis for future research in e-commerce search systems.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261435867" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i3-003">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>MuTemAPR: Enhance Multilocation Patches with Template-Based Neural Program Repair</h3>
+<p>Tao Zhang; Yu Zhu</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261428016</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261428016" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261428016" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>MuTemAPR: Enhance Multilocation Patches with Template-Based Neural Program Repair</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261428016 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Automated program repair (APR) has been studied extensively in recent years. Existing approaches mainly generate single-position patches that fail to address multilocation faults effectively. While existing multistep repair approaches can iteratively generate patches for each fault position sequentially, their data augmentation methodologies lack rationality and deviate from real-world scenarios. Furthermore, they overlook the interdependencies between faulty statements, leading to patches learned from erroneous contextual patterns. In this article, we propose MuTemAPR, an APR approach that iteratively generates multilocation patches. MuTemAPR incorporates templates with neural machine translation. Specifically, our method introduces three key innovations. First, we design a template-based data augmentation framework that transforms single-line faulty code into multilocation faulty code through 35 mutation templates. It simulates a real-world environment by establishing variable-type mapping tables for more accurate repair augmentation. Second, we propose a reinforced faulty context training method that employs progressive annotation to incrementally learn repair processes from top to bottom in multifault code. Third, we implement a semantic constraint mechanism during training that enforces syntactic and semantic rules through differential analysis between templates, input code, and generated patches. We evaluate MuTemAPR on the widely used Defects4j benchmark. Experimental results demonstrate that our approach can effectively repair multilocation faults, successfully fixing five additional bugs compared with state-of-the-art methods on Defects4j v1.2 and v2.0.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261428016" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i3-004">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>AI-Based Forecasting of National Tourism Revenues: Integrating Economic, Fiscal, Political, and Environmental Determinants Through Regression-Oriented Hybrid Models</h3>
+<p>Yueyan Liu; Hyung Jong Na; Jiang Xue</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261431683</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261431683" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261431683" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>AI-Based Forecasting of National Tourism Revenues: Integrating Economic, Fiscal, Political, and Environmental Determinants Through Regression-Oriented Hybrid Models</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261431683 · 摘要来源：Crossref 元数据</p><p class="abstract-body">This study proposes an advanced framework for forecasting national tourism revenues by systematically comparing machine learning (ML), deep learning (DL), and hybrid architectures on a country–year panel. Baseline models using only trade and economic indicators have limited explanatory power, whereas adding fiscal, political, and environmental variables substantially improves accuracy. Among ML methods, LightGBM performs best; among DL models, the Transformer excels by capturing nonlinear interactions and temporal dependencies. Building on these results, we introduce a hybrid residual boosting model that integrates the Transformer’s predictive strength with LightGBM’s structural interpretability. The hybrid model outperforms single models across mean absolute error, root mean square error, mean absolute percentage error, and R 2 , simultaneously minimizing errors and maximizing explanatory power. Methodologically and theoretically, the framework advances tourism economics while offering policymakers actionable guidance on fiscal planning, political stability, and environmental sustainability. Importantly, the empirical results are correlational and reflect predictive associations; they should not be interpreted as causal effects of policy interventions. Methodological novelty lies in a regression-oriented, two-stage residual-boosting design that (1) learns a Transformer as the primary forecaster on the country–year panel, (2) fits LightGBM to the Transformer residuals to correct systematic errors under distributional heterogeneity, and (3) yields a decomposed forecast (base + residual correction) that facilitates transparent error attribution beyond prior DL–DL stacking hybrids. Importantly, the reported relationships are associational and derived from predictive modeling; they should not be interpreted as causal effects of policy levers.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261431683" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i3-005">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>DS 2 PT: A Deep Two-Stage Patent Text Segmentation Framework Informed by Low-Latency Neural Network Characteristics</h3>
+<p>Boting Geng; Hongxia Wang; Pengliang Zhang; Jin Xue</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I3</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261447812</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261447812" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261447812" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>DS 2 PT: A Deep Two-Stage Patent Text Segmentation Framework Informed by Low-Latency Neural Network Characteristics</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261447812 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Patent text segmentation is a fundamental task in patent data mining, enabling applications such as patent analysis and search. The objective is to decompose structurally complex, lengthy sentences into grammatically complete, semantically equivalent short sentences to facilitate downstream processing. Traditional approaches rely on manually defined rules or feature-based machine learning methods, which are labor-intensive, domain-specific, and exhibit limited generalizability. To overcome these limitations, this study proposes a Deep Segmentation Model for Patent Text (DS 2 PT), a two-stage fine-grained segmentation framework based on ALBERT. The first stage employs a conditional random field model to perform coarse segmentation of patent paragraphs into shorter clauses based on structural cues. The second stage utilizes the ALBERT model to perform deep, context-aware segmentation of complex clauses into syntactically independent and semantically complete sentences. Compared to conventional methods, DS 2 PT effectively captures hierarchical contextual information across two stages, significantly improving segmentation accuracy without semantic loss. Furthermore, this research draws inspiration from advancements in cross-lingual speech-to-text systems with low-latency neural networks for real-time applications. While the domains differ, the core technical challenges are analogous: both require models to process sequential, information-dense input (audio streams or long sentences) into structured, meaningful units (transcribed text or segmented clauses) with high accuracy and efficiency. The principles of low-latency neural networks—such as efficient context modeling, parallelizable architectures, and real-time incremental processing—inform the design of our segmentation pipeline to enhance its scalability and potential for integration into real-time patent analysis systems. Similarly, the cross-lingual capability highlights the importance of model generalization, which aligns with our goal of developing a domain-adaptive segmentation tool for diverse patent corpora.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261447812" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="issue" id="issue-reg-077-2026-v14-i4"><h3>Big Data · 2026-V14-I4（August 2026）</h3>
+<p>官方完整期，7 篇均为新论文记录。特刊引言无摘要则标“暂无摘要”。其余摘要来自 Crossref。</p>
+<p><span class="evidence"><a href="https://journals.sagepub.com/toc/BIG/14/4" rel="noopener noreferrer">官方期次目录</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span></p></article>
+<article class="paper" id="formal-reg-077-2026v14i4-001">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>Special Issue on “Agentic AI for Explainable Big Data Exploration and Visual Analytics”</h3>
+<p>Sunil Prajapat; Mohammad Shabaz; Muhammad Asim Saleem; Shams Al Ajrawi</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261472285</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261472285" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261472285" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Special Issue on “Agentic AI for Explainable Big Data Exploration and Visual Analytics”</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261472285</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261472285" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i4-002">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>Big Data-Driven Explainable Agentic AI Decision Frameworks for Enterprise Innovation in FinTech Ecosystems</h3>
+<p>Hangbo Liu; Jia Li; Yujia Nie; Yulin Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261432592</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261432592" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261432592" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Big Data-Driven Explainable Agentic AI Decision Frameworks for Enterprise Innovation in FinTech Ecosystems</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261432592 · 摘要来源：Crossref 元数据</p><p class="abstract-body">FinTech ecosystems are growing at a rapid pace, creating large-scale, heterogeneous, and highly interconnected data environments that pose challenges to traditional frameworks for innovation management and decision support. Even while artificial intelligence (AI) is being used more and more to make use of this data, the majority of current methods are still opaque, reactive, and not well-suited to the needs of human-centered decision-making. In order to facilitate enterprise innovation in intricate FinTech ecosystems, this study suggests an explainable agentic AI-driven big data decision framework. The platform combines explainable big data analytics and visual analytics pipelines with autonomous AI agents that are capable of goal-directed reasoning, adaptive collaboration, and continuous learning. The suggested method permits transparent investigation of extensive financial, transactional, and behavioral data by fusing network-aware data modeling, agent-based decision orchestration, and interpretable machine learning processes. By converting agent recommendations into clear, traceable insights for strategic innovation planning, visual analytics interfaces further support human–AI co-decision-making. When compared with black-box AI models, the framework’s capacity to improve decision accuracy, adaptability, and trust is demonstrated through a case-driven evaluation inside real FinTech scenarios. The findings show that by coordinating AI with organizational, ethical, and legal restrictions, explainable agentic AI can greatly enhance company innovation outcomes. By providing a scalable and comprehensible decision framework for next-generation FinTech innovation ecosystems, this work advances the developing field of agentic AI for explainable large data exploration and visual analytics.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261432592" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i4-003">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>Explainable Agentic AI for Big Data–Driven Evaluation and Visual Analytics of Digital Literacy in Higher Vocational Teacher Education</h3>
+<p>Wen Shao</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261432584</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261432584" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261432584" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Explainable Agentic AI for Big Data–Driven Evaluation and Visual Analytics of Digital Literacy in Higher Vocational Teacher Education</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261432584 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Large-scale, diverse data produced by higher vocational teacher colleges’ digital transformation challenges traditional methods for evaluating digital literacy. The reliability of current analytics and black-box artificial intelligence (AI) models for educational decision-making is limited by their frequent lack of autonomy and transparency. In order to assess digital literacy at higher vocational teacher colleges using big data and visual analytics, this study suggests an Explainable Agentic AI framework. In order to facilitate adaptive data exploration, competency evaluation, and insight generation across multimodal educational data, such as learning behavior logs, assessment records, and digital engagement indicators, the framework combines autonomous agentic intelligence with explainable AI (XAI). While XAI methods offer clear explanations of literacy aspects, decision rationale, and uncertainty, agentic components dynamically handle data processing, feature reasoning, and model selection. Effective human–AI collaboration is made possible by an interactive visual analytics layer that allows for layered investigation of learner patterns, temporal dynamics, and cohort heterogeneity. When compared with traditional machine learning techniques, experimental results on large-scale datasets from higher vocational teacher colleges show better assessment accuracy, robustness, and interpretability. This work demonstrates the promise of agentic AI for explainable big data exploration and promotes reliable instructional intelligence by combining agentic autonomy, explainability, and visual analytics within a scalable big data paradigm.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261432584" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i4-004">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>Agentic Artificial Intelligence-Driven Explainable Deep Learning for Deciphering Noncoding Pathogenic Mechanisms of Delirium Through Genomic Big Data Integration</h3>
+<p>Jidong Yang; Xiong Wang; Lishuang Peng; Jianfu Tang; Shanshan Cai; Yuting Xue</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261463929</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261463929" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261463929" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Agentic Artificial Intelligence-Driven Explainable Deep Learning for Deciphering Noncoding Pathogenic Mechanisms of Delirium Through Genomic Big Data Integration</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261463929 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Delirium is a prevalent neuropsychiatric syndrome affecting up to 50% of hospitalized elderly patients, associated with increased mortality, cognitive decline, and health care costs exceeding $164 billion annually. Despite its clinical burden, the genetic architecture underlying susceptibility to delirium remains poorly characterized. We developed an agentic artificial intelligence pipeline integrating genome-wide association study (GWAS) data from FinnGen Release 12 (6854 cases; 384,461 controls) with causal transcriptome-wide association study (cTWAS) using brain-specific eQTL data from Genotype-Tissue Expression. Spatial transcriptomics analysis (gsMap) was performed on the human dorsolateral prefrontal cortex to characterize layer-specific expression patterns. Deep learning models (Enformer, SpliceTransformer) were applied to predict functional consequences of identified variants. GWAS identified a strongly associated locus on chromosome 19q13.32, with lead variant rs429358 ( P = 2.79 × 10 −70 ) defining the apolipoprotein E ( APOE ) ε4 allele. cTWAS analysis identified two causal genes: APOE (posterior inclusion probabilities [PIP] = 0.871, Z = −8.44) and ZNF226 (PIP = 0.604, Z = 5.63), exhibiting opposite directional effects. APOE downregulation increased susceptibility to delirium, while ZNF226 upregulation conferred an elevated risk. Spatial transcriptomics revealed significant GWAS enrichment in Layer 5 ( P &lt; 0.001), with distinct layer-specific expression patterns for both genes. Enformer predicted that rs429358 substantially altered chromatin accessibility at promoter regions (H3K4me3 SNP Activity Difference = 0.30). SpliceTransformer identified significant splice site perturbations (maximum Δ = 0.45). This study provides a comprehensive genetic dissection of delirium through agentic artificial intelligence-driven multiomics integration. We identify APOE and ZNF226 as causal genes with distinct mechanisms and spatial expression patterns. These findings establish a molecular framework for understanding delirium pathophysiology and identify potential therapeutic targets.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261463929" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i4-005">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>Big Data-Driven Video Anomaly Detection Using VideoMAE for Visual Analytics in CCTV Surveillance</h3>
+<p>Pinnapureddy Manasa; Maragoni Mahendar; Purude Vaishali Narayanrao; Satwik Komuravelli; [...]; View all</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261463938</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261463938" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261463938" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Big Data-Driven Video Anomaly Detection Using VideoMAE for Visual Analytics in CCTV Surveillance</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261463938 · 摘要来源：Crossref 元数据</p><p class="abstract-body">In the rapidly evolving industry, the need for surveillance is highly needed for the safety of confidential and highly sensitive organizations. With this rise, the demand for efficient security systems has become critical. So, the question is: How to achieve the highest form of security? The obvious answer, which already exists, is a manual monitoring of video footage to check for any suspicious activity. Traditional systems require a lot of manpower as video footage is monitored manually. Imagine a surveillance room full of 50 monitors that display the security footage, and there are just two men observing the footage. How chaotic it is for just two men to manage the whole room and also be vigilant always, to ensure no wrong activity happens. But this isn’t very convenient for today’s time, it not only overwhelms the observers but also risks critical events being missed due to human limitations. To resolve the issue, we have come up with an intelligent artificial intelligence (AI)-powered system that is capable of spotting anomalous activities in the surveillance footage without any manual effort or stress. An AI-driven system offers seamless, accurate, and proactive monitoring, paving the way for enhanced security in high-stakes environments. We have made use of a deep learning framework for video understanding tasks, which is the Video Masked Autoencoder model, and also a transformer model—Video Vision transformers—for effortless detection of suspicious activity. We have also designed a very simple and attractive web interface where the user can upload the security footage and wait for the model to do its magic. The model detects the anomaly and displays the type of anomaly with the time frame in which the anomaly is occurring. This technique is very effective to find suspicious activities more quickly and efficiently.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261463938" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i4-006">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>Explainable Machine Learning-Based Prediction of Postoperative Hypoxemia in Elderly Patients Undergoing General Anesthesia</h3>
+<p>Qin Sha; Long Zhang; Lijun Song; Yunjin Ji</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261466190</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261466190" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261466190" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Explainable Machine Learning-Based Prediction of Postoperative Hypoxemia in Elderly Patients Undergoing General Anesthesia</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261466190 · 摘要来源：Crossref 元数据</p><p class="abstract-body">In order to predict the risk of postoperative hypoxemia in elderly patients undergoing general anesthesia, this study developed, validated, and interpreted explainable machine learning-based models. One thousand six hundred senior individuals (≥60 years) participated in a retrospective, single-center cohort research. Comprehensive perioperative data were gathered, including laboratory indices, intraoperative physiological parameters, comorbidities, and demographics. To improve the interpretability of the model, feature selection was carried out using least absolute shrinkage and selection operator (LASSO) regression after thorough data preparation. A held-out test dataset was used to design and internally validate four machine learning algorithms: logistic regression, support vector machine, random forest, and extreme gradient boosting (XGBoost). The area under the receiver operating characteristic curve (AUC), accuracy, sensitivity, specificity, calibration curves, and decision curve analysis were used to evaluate the model’s performance. To give clear justifications for model predictions, feature importance evaluations were carried out. About 15.0% (240/1,600) of patients experienced postoperative hypoxemia. Preoperative serum albumin level, lowest intraoperative mean arterial pressure, age, total crystalloid infusion volume, and a history of chronic obstructive pulmonary disease were important prognostic factors that were consistently found across models. The XGBoost-based explainable AI model outperformed the other models in terms of predictive performance, with the highest AUC of 0.994 (95% CI: 0.990–0.998), good calibration, and a notable net therapeutic benefit on decision curve analysis. The suggested explainable machine learning XGBoost model predicts postoperative hypoxemia in elderly patients receiving general anesthesia with accuracy and interpretability. This method facilitates focused interventions to improve surgical respiratory outcomes by supporting early risk stratification and informed perioperative decision-making by clarifying important risk factors influencing individual predictions.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261466190" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i4-007">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>Personalized Driven Instruction Through Explainable Agentic AI in Multicultural Higher Education Environments</h3>
+<p>Conglin Qiu; Kunkun Cui; Zilong Wang; Lifeng Hou</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I4</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261463927</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261463927" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261463927" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Personalized Driven Instruction Through Explainable Agentic AI in Multicultural Higher Education Environments</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261463927 · 摘要来源：Crossref 元数据</p><p class="abstract-body">The need for intelligent, transparent, and adaptive personalized instruction systems has increased due to the quick diversification of higher education settings and the exponential expansion of educational big data. In order to address the pedagogical, cultural, and cognitive variability present in multicultural higher education settings, this study suggests a Big Data–Driven Personalized Instruction framework powered by Explainable Agentic Artificial Intelligence (X-AI). The suggested approach uses autonomous agentic AI architectures that can orchestrate goal-directed learning, dynamic learner profiling, and real-time instructional adaption by utilizing large-scale, multimodal educational data, namely the HarvardX-MITx Person-Course Dataset. Explainability mechanisms are incorporated at both the model and decision levels to guarantee pedagogical trustworthiness and ethical deployment. This allows for interpretable insights into learner performance projections, instructional recommendations, and adaptive intervention tactics. To assist teachers in comprehending cross-cultural learning patterns and reducing algorithmic bias, the system incorporates feature attribution, causal inference, and visual analytics. When compared to traditional data-driven personalization techniques, the suggested methodology dramatically increases learning outcome prediction accuracy F 1 = 0.88 , instructional relevance, and student engagement, according to experimental evaluations carried out on diverse higher education datasets. This work advances a scalable and culturally responsive paradigm for personalized education by combining big data analytics, agentic autonomy, and explainable AI. It provides educators, institutions, and policymakers looking to transform higher education systems in an equitable, transparent, and data-driven manner with practical insights.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261463927" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="issue" id="issue-reg-077-2026-v14-i5"><h3>Big Data · 2026-V14-I5（October 2026）</h3>
+<p>官方完整期，3 篇均由此前 OnlineFirst 归期。摘要来自 Crossref。</p>
+<p><span class="evidence"><a href="https://journals.sagepub.com/toc/BIG/14/5" rel="noopener noreferrer">官方期次目录</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span></p></article>
+<article class="paper" id="formal-reg-077-2026v14i5-001">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>TS-PET: A Novel Framework for Fine-Tuning Pretrained Time-Series Models</h3>
+<p>Liyang Zheng; Baisuo Jin</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I5</dd></div>
+<div><dt>门控</dt><dd>FORMAL_ASSIGNMENT</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261439005</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261439005" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261439005" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>TS-PET: A Novel Framework for Fine-Tuning Pretrained Time-Series Models</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261439005 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Time series foundation models offer powerful zero-shot capabilities but face significant adaptation challenges: (1) inefficient fine-tuning due to computational constraints and unreliable sensitivity scores in existing variants to the low-rank adaptation (LoRA) method, and (2) parameter-heavy prediction heads causing overfitting. We propose time series parameter-efficient transformer (TS-PET), a novel fine-tuning framework featuring: (1) A lightweight prediction module that reduces parameters by &gt;80%, mitigating overfitting while maintaining performance; (2) Specialized pruned LoRA, which introduces robust rank allocation via identifying synergistic parameter interactions, enabling stochastic approximation for efficiency. Extensive experiments on eight benchmarks (Electricity Transforming Temperature, Exchange, Weather, etc.) show TS-PET achieves state-of-the-art accuracy—outperforming MOMENT (linear probing), PatchTST, and adaptive LoRA variants—while demonstrating superior parameter efficiency. Our solution enables scalable adaptation of time series foundation models without compromising performance.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261439005" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i5-002">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>An Edge-Enabled Low-Latency Cross-Lingual Speech-to-Text Framework for Efficient Human–Robot Interaction</h3>
+<p>Abdullah Albuali; Nishant Tripathi; Mahesh T.R.; Ahlam Almusharraf; Muhammad Faisal Abrar; [...]; View all</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I5</dd></div>
+<div><dt>门控</dt><dd>FORMAL_ASSIGNMENT</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261438099</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261438099" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261438099" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>An Edge-Enabled Low-Latency Cross-Lingual Speech-to-Text Framework for Efficient Human–Robot Interaction</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261438099 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Humanoid robots are being introduced in places where people do not speak the same language and people expect quick, natural responses. In such situations, speech interaction cannot afford noticeable delays. Most of the present speech-to-text systems are mainly maintained with cloud servers, leading to latency problems, reliance on dependable connectivity, and failures on the fly when used in real time. These shortcomings become especially evident when robots are expected to autonomously and continuously interact with human users. To address these limitations, this project proposes a new edge-centric speech-to-text framework tailored specifically for the multilingual humanoid robot domain. Instead of sending audio data to the cloud, this method performs speech processing directly within the robot. This technology includes lightweight neural models for real-time streaming, an onboard mechanism that allows for real-time identification of the target language, and local caching methods for quicker retrieval of repeated or known speech patterns. Combine these and you can get quicker, more trustworthy transcription without burning a hole in network resources. The system reduces communication delays to a great extent, while providing transcribed data in multiple languages due to local handling of speech from the wireless edge network. The time taken in overall response is more than 60% lower than the response time used in cloud-based systems; it has been found in experiments. More critically, the framework does a good job with fluctuating network bandwidth, loss of packets, and background noise. It is concluded that edge-based and multilingual speech-to-text systems will be important for humanoid robots to enhance responsivity and contextuality. Understanding faster results in faster reactions, smoother conversations, and moments of interaction that feel more natural is a major step toward pragmatic and reliable communication between humans and robots in the working world.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261438099" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i5-003">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>ThinkAI: A Natural Language Processing-based Intelligent framework for Mental Health</h3>
+<p>Kashish Ara Shakil; Mudasir Ahmad Wani; Faiz Ullah; Younhyun Jung; Shakir Khan; Gufran Ahmad Ansari</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I5</dd></div>
+<div><dt>门控</dt><dd>FORMAL_ASSIGNMENT</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261438100</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261438100" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261438100" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>ThinkAI: A Natural Language Processing-based Intelligent framework for Mental Health</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261438100 · 摘要来源：Crossref 元数据</p><p class="abstract-body">In the current digital era, emotional and mental health challenges are becoming very common. Therefore, it is essential to find new and effective ways to support emotional well-being. In this work, we propose ThinkAI helps individuals to better understand and manage their mental health. This platform offers a secure, explainable, and private space where users can express their thoughts and feelings through journaling. ThinkAI then leverages the help of natural language processing (NLP)-based algorithms to analyze these writings to identify emotional patterns. It tracks the changes in the mental well-being of individuals over time. It also offers visual insights that help users see how their emotional states have evolved during that time period, encouraging reflection, and self-awareness. The proposed system also generates alerts in case of adverse situations. ThinkAI comprises two main components: one focused on detecting early signs of depression, and the other on analyzing emotions. The system uses a combination of classical machine learning methods and modern transformer-based models to achieve accurate and reliable results. Both kinds of models were tested. For traditional models, the Support Vector Machine model reported the highest accuracy (0.920) and Receiver Operating Characteristic – Area Under the Curve (ROC-AUC) (0.97) for depression detection, while Naive Bayes had the best recall (0.947). For emotion analysis, Bidirectional Encoder Representations from Transformers (BERT) performed best with an accuracy of 0.945 and an F1-score of 0.9446, closely followed by robustly optimized BERT approach (RoBERTa) and Distilled Robustly Optimized BERT Approach (DistilRoBERTa). Furthermore, to provide a more comprehensive evaluation of the proposed models, we analyzed the training and validation loss across all models up to five epochs, in addition to reporting accuracy. The results highlight how combining classic algorithms with modern transformer-based deep learning models can create powerful tools for understanding emotional and mental health. Thus, ThinkAI offers a promising step toward real-time monitoring of mental health. This work contributes a technically validated and ethically grounded framework. It can be used for real-time monitoring of an individual’s mental well-being, digital therapeutics, and large-scale psychological data analysis.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261438100" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+<article class="issue" id="issue-reg-077-2026-v14-i6"><h3>Big Data · 2026-V14-I6（December 2026，官方 current）</h3>
+<p>官方当期完整期，4 篇均由此前 OnlineFirst 归期。封面月为 2026 年 12 月，但官方已将其列为 current，不属于未出版未来期。摘要来自 Crossref。</p>
+<p><span class="evidence"><a href="https://journals.sagepub.com/toc/BIG/14/6" rel="noopener noreferrer">官方期次目录</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://journals.sagepub.com/toc/BIG/current" rel="noopener noreferrer">官方当期目录</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span></p></article>
+<article class="paper" id="formal-reg-077-2026v14i6-001">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>Cross-Lingual Real-Time Speech Interaction for Embodied Intelligence: Architecture, Challenges, and Prospects</h3>
+<p>Shuai Wang; Guanzhe Jiao; Yicheng Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I6</dd></div>
+<div><dt>门控</dt><dd>FORMAL_ASSIGNMENT</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261487329</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261487329" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261487329" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Cross-Lingual Real-Time Speech Interaction for Embodied Intelligence: Architecture, Challenges, and Prospects</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261487329 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Embodied intelligence is rapidly evolving toward natural human–machine interaction, where real-time cross-lingual speech processing is essential for robots to understand and execute commands across languages. This study reviews research progress from January 2010 to November 1, 2025, using CiteSpace to analyze knowledge structure, hotspots, and trends. The year 2010 was selected as the start date because it marks the early emergence of foundational theoretical discussions on embodied intelligence internationally, providing a comprehensive baseline to observe the entire evolutionary trajectory of the field, even though substantive domestic research emerged later around 2015. Results show a sharp rise in research interest after 2023, driven by multilingual interaction and robotics applications. Current hotspots include multimodal representation learning, low-latency speech-to-text models, cross-lingual semantic alignment, and embodied control. The field has progressed through three stages: conceptual foundations, real-time neural integration, and large-model-driven general embodiment. We summarize the technical framework spanning speech recognition, semantic grounding, and action execution, and identify challenges such as latency reduction, noise robustness, and cross-lingual knowledge transfer. Future work should focus on unified speech–action representation, scalable low-latency architectures, adaptive learning, and ethical governance. This study outlines development trends and prospects for cross-lingual real-time speech interaction in embodied intelligence.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261487329" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i6-002">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>Enhancing Long Short-Term Memory Framework Using Hybrid Meta-Heuristic Optimization Techniques for Traffic Flow Forecasting</h3>
+<p>Rajalakshmi Gurusamy</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I6</dd></div>
+<div><dt>门控</dt><dd>FORMAL_ASSIGNMENT</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261481477</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261481477" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261481477" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Enhancing Long Short-Term Memory Framework Using Hybrid Meta-Heuristic Optimization Techniques for Traffic Flow Forecasting</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261481477 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Short-term traffic flow forecasting is essential for travel safety, congestion avoidance, and effective traffic management as an integral part of intelligent transport systems. Long short-term memory (LSTM) has become a promising technique for forecasting traffic flow. Unfortunately, the LSTM model does not achieve adequate forecast accuracy due to noisy traffic data and poor selection of hyperparameter optimization values. To address these limitations, this study proposes a composite SFFSDF-LSTM model that integrates sinusoidal firefly feature selection (SFFS) and dragonfly (DF) algorithms with an LSTM network. The SFFS algorithm performs adaptive feature selection, while the DF algorithm optimizes hyperparameters to improve convergence and prediction accuracy. The proposed model efficiently identifies the optimal set of LSTM features, weights, biases, and hyperparameters for domain traffic flow prediction while minimizing training errors. From the perspective of error analysis and predictive analytics, the predictive accuracy of the combined model is evaluated and found to be superior to traditional nonparametric and baseline deep learning models.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261481477" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i6-003">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>Neural Gas Network-Based Distinction Between Brain Cysts and Tumors from Magnetic Resonance Images Using a Hybrid Deep Learning Algorithm</h3>
+<p>Mete Yağanoğlu; Öznur Özaltın; Orhan Coşkun</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I6</dd></div>
+<div><dt>门控</dt><dd>FORMAL_ASSIGNMENT</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261490062</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261490062" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261490062" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Neural Gas Network-Based Distinction Between Brain Cysts and Tumors from Magnetic Resonance Images Using a Hybrid Deep Learning Algorithm</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261490062 · 摘要来源：Crossref 元数据</p><p class="abstract-body">The early and accurate diagnosis of brain tumors is critically important, as timely intervention significantly reduces mortality and improves patient outcomes. While magnetic resonance imaging (MRI) is the preferred diagnostic tool, differentiating malignant brain tumors from benign cysts remains a clinical challenge due to overlapping visual features. This study introduces a technically novel hybrid deep learning framework that integrates denoising, segmentation, and classification stages in a unified pipeline. First, a neural gas network is employed for precise segmentation of MRI images, enhancing boundary delineation between cystic and tumorous regions. To mitigate class imbalance and improve generalization, the Synthetic Minority Oversampling Technique is applied. A unique architectural contribution of this study lies in the integration of three pretrained convolutional neural networks (CNNs)—EfficientNetB0, MobileNetV2, and ResNet50—into a fused hybrid model that combines their complementary feature extraction capabilities. This model is fine-tuned using a grid search-based hyperparameter optimization strategy, early stopping, and cross-validation. Comparative experiments on four distinct datasets (including balanced and segmented versions) demonstrate that the proposed hybrid model consistently outperforms conventional models such as VGG16, InceptionV3, and individual CNN baselines. Achieving a peak accuracy of 97% on the balanced, augmented, and segmented dataset, this work highlights a novel and robust Artificial Intelligence (AI)-based strategy for distinguishing brain cysts from tumors in MRI, with superior performance in complex diagnostic scenarios.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261490062" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="formal-reg-077-2026v14i6-004">
+<p class="kicker">Big Data · FORMAL_ISSUE</p>
+<h3>Automated Product Carbon Footprint Estimation via Low-Latency Neural Language Processing in Multilingual, Real-Time Supply Chains</h3>
+<p>Shixiong Guo; Xinzhi Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V14 · I6</dd></div>
+<div><dt>门控</dt><dd>FORMAL_ASSIGNMENT</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261481461</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261481461" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261481461" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Automated Product Carbon Footprint Estimation via Low-Latency Neural Language Processing in Multilingual, Real-Time Supply Chains</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261481461 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Real-time product carbon footprint (PCF) reporting is increasingly required in global supply chains, yet conventional life cycle assessment (LCA) remains difficult to scale due to fragmented multitier data, heterogeneous formats, and substantial manual effort. This article proposes Auto-LCA, a system-level architecture for continuous, product-level carbon estimation that integrates (i) automated supply-chain data acquisition, (ii) low-latency multilingual natural language processing for extracting life-cycle-relevant attributes from unstructured documents, (iii) a structured product carbon data model, and (iv) machine-learning-based completion of missing life cycle inventory parameters with provenance and confidence tags. A central mechanism is the “carbon header,” which packages accumulated embodied and operational emissions as transferable, version-controlled metadata associated with product identifiers and propagated incrementally across supply-chain tiers. Auto-LCA is designed as an open Application Programming Interface (API) layer to interface with enterprise systems (e.g., ERP/PLM/MES) and supports update-driven recomputation that recalculates only affected nodes in the supply-chain graph, improving scalability for large product portfolios and deep supplier networks. Case studies in the steel, cement, and automotive sectors demonstrate that Auto-LCA yields estimates close to representative conventional LCA benchmarks (typically within ±4%), while enabling broader coverage and more frequent updates under realistic data availability constraints. The framework also aligns with emerging digital product passport and sustainability reporting needs by enabling traceable, machine-readable carbon metadata exchange across organizations.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261481461" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="delta"><h2>已简报期次的差异复核</h2>
+<article class="issue" id="delta-reg-017-2026-v29-i4"><h3>Geo-spatial Information Science · 2026-V29-I4 差异复核</h3>
+<p>官方 Current Issue 与 /toc/tgsi20/29/4 均为 Volume 29, Issue 4 (2026)，已于 2026-09-17 claim。官方 TOC 现为 46 篇（研究论文 44、综述 2），账本原为 50 篇；4 篇不再出现于官方目录，现列于 Latest articles，差异复核仅列这 4 篇并链原简报，不重印、不 claim。OnlineFirst 新登记 13 篇。Taylor &amp; Francis 摘要抓取连续 3 次 HTTP 403 后停止，这 13 篇及差异条目标“暂无摘要”，不编造。SciOpen RSS 可用，仅作发现源。HTTP 直接访问官方页仍为 Cloudflare 403，正式目录以 Playwright 为准。</p>
+<p><span class="evidence"><a href="https://www.tandfonline.com/toc/tgsi20/current" rel="noopener noreferrer">官方当期目录</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://www.tandfonline.com/toc/tgsi20/29/4" rel="noopener noreferrer">官方 I4 目录</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 一级完整性证据</small></span> <span class="evidence"><a href="https://wanyou9.github.io/gis-ai-daily-briefs/2026/09/2026-09-17_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC17%E7%BB%84.html" rel="noopener noreferrer">原简报 2026-09-17 第 17 组</a><small>wanyou9.github.io · 2026-11-17 12:21 CST · 已简报期次入口</small></span> <span class="evidence"><a href="https://www.sciopen.com/journal/rss/1009-5020" rel="noopener noreferrer">SciOpen RSS（发现源）</a><small>www.sciopen.com · 2026-11-17 12:21 CST · 发现信号，不证明完整性</small></span></p>
+<p>账本原 50 篇，官方目录现 46 篇，交集 46 篇。下列 <strong>4</strong> 篇不再出现于官方 I4 目录，仅列差异，不重印整期、不重新 claim。T&amp;F 摘要抓取因 403 停止，标“暂无摘要”，不编造。</p></article>
+<article class="paper" id="delta-reg-017-2026v29i4-001">
+<p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
+<h3>A typology-based dasymetric mapping approach for plot-level population estimation Using residential building morphology</h3>
+<p>Youmei Peng; Jiwen Han; Li Bao</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I4</dd></div>
+<div><dt>门控</dt><dd>ALREADY_FORMAL</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2717925</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2717925" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2717925" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A typology-based dasymetric mapping approach for plot-level population estimation Using residential building morphology</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2717925</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2717925" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="delta-reg-017-2026v29i4-002">
+<p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
+<h3>Cross-regional performance and generalization of deep learning models for fine-grained semantic segmentation of marine aquaculture cages</h3>
+<p>Jialiang Liu; Xiaomei Yang; Zhihua Wang; Yueming Liu; Meiqi Zhou; Jie Jiang</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I4</dd></div>
+<div><dt>门控</dt><dd>ALREADY_FORMAL</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2719215</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2719215" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2719215" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Cross-regional performance and generalization of deep learning models for fine-grained semantic segmentation of marine aquaculture cages</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2719215</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2719215" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="delta-reg-017-2026v29i4-003">
+<p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
+<h3>A self-supervised mask-enhanced dual-branch convolutional neural network for reconstructing regional TEC over China</h3>
+<p>Xiangwen Zheng; Yibin Yao; Xing Chen; Nian Liu; Weitang Wang; Rong Wang; Liang Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I4</dd></div>
+<div><dt>门控</dt><dd>ALREADY_FORMAL</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2722514</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2722514" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2722514" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A self-supervised mask-enhanced dual-branch convolutional neural network for reconstructing regional TEC over China</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2722514</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2722514" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="delta-reg-017-2026v29i4-004">
+<p class="kicker">Geo-spatial Information Science · FORMAL_ISSUE</p>
+<h3>A hidden variables approach: assessing the influence of environmental, flight and processing parameters on LiDAR accuracy in wet heathlands in the northwest of Spain</h3>
+<p>Patricia Rodriguez Dorribo; Ramón Alberto Díaz-Varela</p>
+<dl>
+<div><dt>卷期</dt><dd>V29 · I4</dd></div>
+<div><dt>门控</dt><dd>ALREADY_FORMAL</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2728347</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2728347" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2728347" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A hidden variables approach: assessing the influence of environmental, flight and processing parameters on LiDAR accuracy in wet heathlands in the northwest of Spain</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2728347</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2728347" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article>
+</section>
+
+<section id="online-first"><h2>网络首发与未出刊期次登记</h2>
+<p>本批新登记网络首发 <strong>15</strong> 条：Geo-spatial Information Science 13 篇，Big Data 2 篇。中国科学：信息科学 2026-V56-I11 官方目录为 No data，不列入论文卡片。</p>
+<article class="issue" id="of-reg-017"><h3>Geo-spatial Information Science · 新登记 OnlineFirst 13 条</h3>
+<p>官方 Latest articles 页新出现且账本中尚无记录的 13 篇。Taylor &amp; Francis 摘要抓取连续 3 次 Cloudflare 403 后按规则停止，不绕过反爬，一律标“暂无摘要”，不编造。</p>
+<p><span class="evidence"><a href="https://www.tandfonline.com/action/showAxaArticles?journalCode=tgsi20" rel="noopener noreferrer">官方 OnlineFirst</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 官方在线首发目录</small></span> <span class="evidence"><a href="https://www.sciopen.com/journal/rss/1009-5020" rel="noopener noreferrer">SciOpen RSS（发现源）</a><small>www.sciopen.com · 2026-11-17 12:21 CST · 发现信号，不证明完整性</small></span></p>
+<article class="paper" id="of-reg-017-001">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>A multi-resolution terrain elevation dataset from ICESat-2 photon-counting laser altimetry data</h3>
+<p>Xu Wang; Pasi Häkli; Hannu Koivula; Yunsheng Wang; Huan Xie; Xinlian Liang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2759570</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2759570" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2759570" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A multi-resolution terrain elevation dataset from ICESat-2 photon-counting laser altimetry data</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2759570</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2759570" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-017-002">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>A visibility-aware framework for façade-level building height estimation using multi-view street-view imagery and building footprints</h3>
+<p>Yuxuan Zhou; Haosheng Huang; Jinbin Zhang; Shiyu Tang; Yingpeng Li; Nico Van de Weghe</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2757296</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2757296" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2757296" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A visibility-aware framework for façade-level building height estimation using multi-view street-view imagery and building footprints</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2757296</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2757296" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-017-003">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>Theoretical framework and key technologies of spatio-temporal intelligence for satellite remote sensing constellations</h3>
+<p>Mi Wang; Tengteng Dong; Jing Xiao; Qianyu Wu; Deren Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2753896</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2753896" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2753896" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Theoretical framework and key technologies of spatio-temporal intelligence for satellite remote sensing constellations</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2753896</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2753896" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-017-004">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>Polar remote sensing in China: advances, integrated observation systems, and future perspectives</h3>
+<p>Xiao Cheng; Ye Peng; Chuyue Peng; Tian Yang; Yibo Li; Bangsong Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2759438</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2759438" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2759438" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Polar remote sensing in China: advances, integrated observation systems, and future perspectives</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2759438</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2759438" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-017-005">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>Gridded population mapping of Chinese mainland (1982–2020) using a geographically and temporally neural network‑weighted nonlinear regression</h3>
+<p>Zhen Lei; Bei Liu; Penggen Cheng; Yunju Nie</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2754612</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2754612" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2754612" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Gridded population mapping of Chinese mainland (1982–2020) using a geographically and temporally neural network‑weighted nonlinear regression</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2754612</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2754612" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-017-006">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>Construction of an infrastructure system for high-quality development enabled by aerospace information technology</h3>
+<p>Jingnan Liu; Kefu Gao; Huihui Liu; Peng Jiang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2755172</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2755172" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2755172" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Construction of an infrastructure system for high-quality development enabled by aerospace information technology</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2755172</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2755172" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-017-007">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>Crop biophysical parameter estimation via AI-enhanced hyperspectral remote sensing</h3>
+<p>Bing Zhang; Dailiang Peng; Jinkang Hu; Zihang Lou; Ke Zheng; Quanjun Jiao; Shanshan Li; Yizhou Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2754604</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2754604" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2754604" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Crop biophysical parameter estimation via AI-enhanced hyperspectral remote sensing</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2754604</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2754604" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-017-008">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>2Dinsight3D: an multi-modal urban scene dataset for point cloud semantic segmentation from remote sensing imagery</h3>
+<p>Yiping Chen; Chenlu Lin; Ting Han; Weiquan Liu; Yu Zang; Jonathan Li; Cheng Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2752329</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2752329" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2752329" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>2Dinsight3D: an multi-modal urban scene dataset for point cloud semantic segmentation from remote sensing imagery</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2752329</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2752329" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-017-009">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>Spatiotemporal dynamics and environmental drivers of older pedestrian traffic crashes in Hong Kong: a spatial machine learning approach</h3>
+<p>Jian Liu; Ketong Shen; Farasath Hasan; Xintao Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2754613</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2754613" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2754613" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Spatiotemporal dynamics and environmental drivers of older pedestrian traffic crashes in Hong Kong: a spatial machine learning approach</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2754613</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2754613" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-017-010">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>From heterogeneous signals to consistent wind fields: a unified framework for sea surface wind speed retrieval with multi-GNSS reflections</h3>
+<p>Ziheng Wu; Fei Guo; Zhiyu Zhang; Zheng Li; Xiaohong Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2753898</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2753898" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2753898" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>From heterogeneous signals to consistent wind fields: a unified framework for sea surface wind speed retrieval with multi-GNSS reflections</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2753898</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2753898" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-017-011">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>Unlocking the potential: multi-task deep learning for spaceborne quantitative monitoring of fugitive methane plumes</h3>
+<p>Guoxin Si; Shiliang Fu; Wei Yao</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2741747</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2741747" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2741747" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Unlocking the potential: multi-task deep learning for spaceborne quantitative monitoring of fugitive methane plumes</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2741747</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2741747" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-017-012">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>Tracking lightning-induced mangrove canopy gaps in Panama using multi-temporal remote sensing</h3>
+<p>Jing Miao; Le Wang; Wayne P. Sousa</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2751778</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2751778" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2751778" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Tracking lightning-induced mangrove canopy gaps in Panama using multi-temporal remote sensing</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2751778</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2751778" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-017-013">
+<p class="kicker">Geo-spatial Information Science · ONLINE_FIRST</p>
+<h3>Carbon sink potential and evolution of vegetation suitable zones in China during the dual-carbon period (2020–2060)</h3>
+<p>Jiayun Niu; Wei Gong; Shuo Shi; Jinyang Wu; Minghui Wu; Xingtao Tang; Zixi Shi; Chenxi Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1080/10095020.2026.2730036</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2730036" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1080/10095020.2026.2730036" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Carbon sink potential and evolution of vegetation suitable zones in China during the dual-carbon period (2020–2060)</strong></p><p class="abstract-meta">期刊：Geo-spatial Information Science · DOI：10.1080/10095020.2026.2730036</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2026.2730036" rel="noopener noreferrer">官方论文页面</a><small>www.tandfonline.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></article>
+<article class="issue" id="of-reg-077"><h3>Big Data · 新登记 OnlineFirst 2 条</h3>
+<p>官方 OnlineFirst 目录中尚未进入 I3–I6 的新论文。摘要来自 Crossref。</p>
+<p><span class="evidence"><a href="https://journals.sagepub.com/toc/BIG/0/0" rel="noopener noreferrer">官方 OnlineFirst</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 官方在线首发目录</small></span></p>
+<article class="paper" id="of-reg-077-001">
+<p class="kicker">Big Data · ONLINE_FIRST</p>
+<h3>From Statistics to Analytics: A Novel Quantum-Based Framework for Traffic Analyses</h3>
+<p>Jayasudha M. Mudaliar; Jigna Patel; Parita Oza</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261502269</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261502269" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261502269" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>From Statistics to Analytics: A Novel Quantum-Based Framework for Traffic Analyses</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261502269 · 摘要来源：Crossref 元数据</p><p class="abstract-body">In the evolving landscape of advancements cities are developing rapidly. To meet basic needs people are increasingly using personal vehicles, which increases traffic and the complexity of driving. The primary goal of this research is to ingest, store, and analyze the traffic dataset using a novel technique. While surveying the existing methods it was found that data ingestion and management techniques were quite limited; the existing studies primarily focused on analyzing data using deep network architectures, which require higher computational resources due to their complex architecture. To overcome these gaps we proposed the incremental histogram and quantile partition as quantum approximate optimization algorithm (IHQ-QAOA) technique, which utilizes histogram binning and quantile techniques to ingest data more efficiently with minimal resources. The QAOA technique addresses the clusters by optimizing the cost and identifying the lane change behavior of the vehicles. We extracted insights to analyze traffic patterns using online analytical processing techniques (pivoting, drill-through, slicing, and dicing), which supported the segregation of features from section to lane level, resulting in better data visualization. The proposed techniques are compared with the state-of-the-art using the Next Generation SIMulation (NGSIM) and New Era of Urban Traffic Monitoring with Aerial footage (pNEUMA) datasets, resulting in an average data ingestion efficiency of 75.53%; for lane change analysis, the pNEUMA dataset was tested on a model trained on the NGSIM dataset, and overall accuracies of more than 0.96 were obtained. These achievements show that the suggested approach is reliable and effective for traffic data analysis.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261502269" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="of-reg-077-002">
+<p class="kicker">Big Data · ONLINE_FIRST</p>
+<h3>Agentic Intelligence for Scalable Metadata Mining in Telecom Big Data Systems</h3>
+<p>Bhola Gan Chaudhuri; Shalli Rani; Awad M. Awadelkarim; Anas Bushnag</p>
+<dl>
+<div><dt>卷期</dt><dd>V · IOF</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1177/2167647x261498697</dd></div>
+<div><dt>证据层级</dt><dd>OFFICIAL_DIRECTORY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261498697" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 2026-11-17 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1177/2167647x261498697" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-17 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Agentic Intelligence for Scalable Metadata Mining in Telecom Big Data Systems</strong></p><p class="abstract-meta">期刊：Big Data · DOI：10.1177/2167647x261498697 · 摘要来源：Crossref 元数据</p><p class="abstract-body">The high rate at which telecommunication services are changing has yielded a volume of heterogeneous data never seen before such as call detail records, signaling data, and subscriber activity traces. These datasets are crucial in relation to optimization and business intelligence, but effective use of such datasets requires quality metadata. Traditional metadata management is mostly manual and centralized, which cannot support the pace and scale of the new telecom big data systems. As a solution to these shortcomings, the present article suggests a scalable metadata mining strategy that is founded on agentic intelligence. In comparison to more traditional machine learning pipelines, agentic intelligence enables the use of autonomous goal-oriented AI agents, capable of reasoning in a hard data space and relevant to new network topologies and network schemas. The proposed architecture will include a multiagent architecture at a distributed level, having specialized agents: (1) schema drifting ingestion and monitoring agents of data flows; (2) semantic mining actors based on natural language processing to infer contextual metadata; (3) process-aware agents for process mining to determine lineage and dependencies between data; and (4) compliance with policy and metadata retrospect: government agents. A major effect of the work is the integration of agentic intelligence and scalable infrastructures of big data such as cloud-native analytics platforms and distributed data lakes. These agents coordinate themselves using lightweight coordination mechanisms to provide a persistent metadata knowledge layer that facilitates system interoperability and robust downstream analytics. The design concepts are geared toward horizontal scalability and fault tolerance, enabling the distribution of the agents at dynamically evolving manner regarding the workload peak. Besides, agents also enhance their strategies upon continuous feedback to handle concept drift as well. Typical examples of telecom applications such as monitoring network performance and fraud detection have demonstrated that such an approach far outperforms a rule-based approach in the accuracy, coverage, and timeliness of metadata. And lastly, the framework will be capable of offering more dynamic and sustainable data management within the telecom sector.</p><p class="abstract-meta"><span class="evidence"><a href="https://journals.sagepub.com/doi/abs/10.1177/2167647X261498697" rel="noopener noreferrer">官方论文页面</a><small>journals.sagepub.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></article>
+<article class="issue" id="future-reg-047-i11"><h3>中国科学：信息科学 · 2026-V56-I11（空目录，仅登记）</h3>
+<p>官方页标题为 Volume 56, Issue 11，正文为 “No data”，无 DOI、无论文。视为未出刊/目录不稳定，仅登记，不得 claim。</p>
+<p><span class="evidence"><a href="https://www.sciengine.com/SSI/issue/56/11" rel="noopener noreferrer">官方 I11 目录</a><small>www.sciengine.com · 2026-11-17 12:21 CST · 官方目录</small></span></p>
+</article>
+</section>
+
+<section id="corrections"><h2>勘误与撤稿</h2>
+<p>本批未发现勘误或撤稿。</p>
+</section>
+
+<section id="themes"><h2>主题与阅读路线</h2>
+<p>以下聚类仅依据题名与论文类型等元数据，不从题目推断方法或结果。</p>
+<ul>
+<li>中国科学：信息科学 2026-V56-I10 题名多见智能环境、通感算一体、可重构天线/RIS、区块链与计算等。</li>
+<li>Big Data 2026-V14-I3 至 I6 题名多见智能体、可解释分析、医疗与交通时间序列、跨语言交互等；I4 为 Agentic AI 特刊。</li>
+<li>Geo-spatial Information Science 新登记 OnlineFirst 题名多见遥感、地形、碳汇、城市与极地观测等；差异条目仅列不再属于已简报 I4 官方目录的 4 篇。</li>
+</ul></section>
+
+<section id="health"><h2>数据源健康</h2>
+<ul>
+<li>REG-017 Geo-spatial Information Science：<code>OFFICIAL_TOC_OK_INTERMITTENT_CF403_RSS_OK</code> — 官方 Current Issue 与 /toc/tgsi20/29/4 均为 Volume 29, Issue 4 (2026)，已于 2026-09-17 claim。官方 TOC 现为 46 篇（研究论文 44、综述 2），账本原为 50 篇；4 篇不再出现于官方目录，现列于 Latest articles，差异复核仅列这 4 篇并链原简报，不重印、不 claim。OnlineFirst 新登记 13 篇。Taylor &amp; Francis 摘要抓取连续 3 次 HTTP 403 后停止，这 13 篇及差异条目标“暂无摘要”，不编造。SciOpen RSS 可用，仅作发现源。HTTP 直接访问官方页仍为 Cloudflare 403，正式目录以 Playwright 为准。</li>
+<li>REG-047 中国科学：信息科学：<code>OFFICIAL_PAGE_OK_VIA_PLAYWRIGHT</code> — 官方期次目录确认 2026-V56-I10（Volume 56, Issue 10, 2026）已关闭，17 篇（含编者按与专题导言），gate-issue=NEW_ISSUE，予以 claim。15 篇摘要来自官方目录，编者按与专题导言无摘要，标“暂无摘要”，不编造。已简报的 2026-V56-I9 文章集合哈希未变（ALREADY_BRIEFED），页面现标注 in progress，不重印、不 claim。2026-V56-I11 官方页显示 Volume 56, Issue 11 且 “No data”，视为未出刊/空目录，仅登记，不得 claim。</li>
+<li>REG-077 Big Data：<code>OFFICIAL_TOC_OK_VIA_PLAYWRIGHT_RSS_OK</code> — 官方目录经 Playwright 恢复可访问（current 为 Volume 14 Issue 6, December 2026；All Issues 列出 I1–I6）。I3（6 月，5 篇）、I4（8 月，7 篇）、I5（10 月，3 篇）、I6（12 月，4 篇）均为官方已出版完整期，gate-issue 均为 NEW_ISSUE，予以 claim。其中 I5/I6 共 7 篇由此前 OnlineFirst 归期，I3/I4 共 12 篇为新论文记录。OnlineFirst 另新登记 2 篇。特刊引言与社论无摘要则标“暂无摘要”。双 RSS（eTOC 与 OnlineFirst）本次 HTTP 200，仅作发现源，不以 RSS claim。</li>
+<li>有界对账：本批处理 4 个到期任务，newly_enqueued=0，既有 FAILED_RETRYABLE 保持原状态。例外复核不替代当天任务。</li>
+<li>T&amp;F 论文摘要抓取：连续 3 次 403 后停止，不绕过反爬。</li>
+</ul><ul><li>job 54（他组到期 MONTHLY 对账）→ 保持 FAILED_RETRYABLE（newly_enqueued=0）</li><li>job 58 REG-017（本组到期 MONTHLY 对账）→ 保持 FAILED_RETRYABLE（newly_enqueued=0）</li><li>job 59（他组到期 MONTHLY 对账）→ 保持 FAILED_RETRYABLE（newly_enqueued=0）</li><li>job 65（他组到期 MONTHLY 对账）→ 保持 FAILED_RETRYABLE（newly_enqueued=0）</li></ul></section>
+
+<section id="audit"><h2>证据与审计信息</h2>
+<details open><summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>b04f68e3-c6f3-49ab-9b0f-b4f624930917</code></li>
+<li>Commit ID：<code>DAILY-20261117-122102-b04f68e3</code></li>
+<li>Brief ID：<code>DAILY-20261117</code></li>
+<li>去重抑制：0 · 增量复核：4 · 对账任务：4 · 官方源失败计数：1 · 降级期刊：0 · 勘误：0</li>
+<li>正式期刊：REG-017、REG-047、REG-077 · issue gate NEW_ISSUE 5（claim 2026-V56-I10 与 2026-V14-I3/I4/I5/I6）、DELTA_REVIEW_REQUIRED 1（2026-V29-I4 不重印）、ALREADY_BRIEFED 1（2026-V56-I9 集合未变）、空目录仅登记（2026-V56-I11）</li>
+<li>下一次计划扫描日：2026-11-18（第 18 组）· 扫前 health --strict PASS · 月度对账至昨日无漏扫（11 月无 31 日任务）</li>
+<li>摘要抽屉：共享渲染器=ON</li>
+</ul></details></section>
+</main>
+<p><a href="../../../../2026/11/index.html">返回 11 月索引</a> · <a href="https://wanyou9.github.io/gis-ai-daily-briefs/2026/11/2026-11-16_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC16%E7%BB%84.html">上一篇（第 16 组）</a></p>
+</body>
+</html>
