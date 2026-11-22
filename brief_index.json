@@ -631,7 +631,7 @@
     },
     {
       "brief_id": "DAILY-20261106",
-      "commit_id": "DAILY-20261106-115134-cdcd02a2",
+      "commit_id": "DAILY-20261106-112027-d7a0453b",
       "completed_run_date": "2026-11-06",
       "counts": {
         "changed_journals": 3,
@@ -644,14 +644,32 @@
       },
       "format": "HTML",
       "group_id": 6,
-      "html_sha256": "2e3470f99e587a992664ef71256efd1e9ddfd9685580644f9752dcb27af1c564",
+      "html_sha256": "97bc6938b6b241787ba9ad93ddae506eb7ea7a566019378e8646cd8255e35a41",
       "index_anchor": "brief-DAILY-20261106",
       "kind": "DAILY_ROTATION",
       "logical_date": "2026-11-06",
+      "original_commit_id": "DAILY-20261106-115134-cdcd02a2",
       "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/11/2026-11-06_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC6%E7%BB%84.html",
-      "release_report": "releases/DAILY-20261106-115134-cdcd02a2/2026/11/2026-11-06_GIS-AI期刊每日轮检简报_第6组.html",
-      "release_summary_image": "releases/DAILY-20261106-115134-cdcd02a2/2026/11/assets/2026-11-06_GIS-AI期刊每日摘要_第6组.png",
+      "release_report": "releases/DAILY-20261106-112027-d7a0453b/2026/11/2026-11-06_GIS-AI期刊每日轮检简报_第6组.html",
+      "release_summary_image": "releases/DAILY-20261106-112027-d7a0453b/2026/11/assets/2026-11-06_GIS-AI期刊每日摘要_第6组.png",
       "report": "2026/11/2026-11-06_GIS-AI期刊每日轮检简报_第6组.html",
+      "revision": 2,
+      "revisions": [
+        {
+          "commit_id": "DAILY-20261106-115134-cdcd02a2",
+          "html_sha256": "2e3470f99e587a992664ef71256efd1e9ddfd9685580644f9752dcb27af1c564",
+          "kind": "ORIGINAL",
+          "revision": 1
+        },
+        {
+          "commit_id": "DAILY-20261106-112027-d7a0453b",
+          "created_at": "2026-11-22T11:20:27+08:00",
+          "html_sha256": "97bc6938b6b241787ba9ad93ddae506eb7ea7a566019378e8646cd8255e35a41",
+          "kind": "CONTENT_TEXT_REVISION",
+          "note": "1 abstract: empty Graphical Abstract heading removed; claims/counts unchanged",
+          "revision": 2
+        }
+      ],
       "scheduled_date": "2026-11-06",
       "status": "PUBLISHED",
       "summary": "第 6 组共检查 4 种正式期刊；确认 4 个新完整期次、91 篇正式期次论文（其中 26 篇为既有网络首发记录正式归期），以及 20 条网络首发/在编期新登记。遥感学报 claim 2026-V30-I10；Journal of Geovisualization and Spatial Analysis claim 2026-V10-I1；Nature Geoscience claim 2026-V19-I10、2026-V19-I11；Journal of Intelligent Information Systems 无新完整期（V64-I6 December 未来期仅登记）。无期刊级扫描失败。",
@@ -670,7 +688,7 @@
         }
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 6 组",
-      "updated_at": "2026-11-06T12:11:41.027339+08:00"
+      "updated_at": "2026-11-22T13:33:59.118724+08:00"
     },
     {
       "brief_id": "DAILY-20261107",
