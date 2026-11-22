@@ -874,7 +874,7 @@
     },
     {
       "brief_id": "DAILY-20261120",
-      "commit_id": "DAILY-20261120-121254-b7e6ba27",
+      "commit_id": "DAILY-20261120-112027-a4de2e97",
       "completed_run_date": "2026-11-20",
       "counts": {
         "changed_journals": 3,
@@ -887,14 +887,32 @@
       },
       "format": "HTML",
       "group_id": 20,
-      "html_sha256": "ec8f9c1720e5a318ccaf001f2a844b410ac3669d445e62a4b9c8b9776013fa5b",
+      "html_sha256": "6e5ae2c29990f935e2c32a3612db0ca700391269422047e9b4a3571cec53ef39",
       "index_anchor": "brief-DAILY-20261120",
       "kind": "DAILY_ROTATION",
       "logical_date": "2026-11-20",
+      "original_commit_id": "DAILY-20261120-121254-b7e6ba27",
       "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/11/2026-11-20_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC20%E7%BB%84.html",
-      "release_report": "releases/DAILY-20261120-121254-b7e6ba27/2026/11/2026-11-20_GIS-AI期刊每日轮检简报_第20组.html",
-      "release_summary_image": "releases/DAILY-20261120-121254-b7e6ba27/2026/11/assets/2026-11-20_GIS-AI期刊每日摘要_第20组.png",
+      "release_report": "releases/DAILY-20261120-112027-a4de2e97/2026/11/2026-11-20_GIS-AI期刊每日轮检简报_第20组.html",
+      "release_summary_image": "releases/DAILY-20261120-112027-a4de2e97/2026/11/assets/2026-11-20_GIS-AI期刊每日摘要_第20组.png",
       "report": "2026/11/2026-11-20_GIS-AI期刊每日轮检简报_第20组.html",
+      "revision": 2,
+      "revisions": [
+        {
+          "commit_id": "DAILY-20261120-121254-b7e6ba27",
+          "html_sha256": "ec8f9c1720e5a318ccaf001f2a844b410ac3669d445e62a4b9c8b9776013fa5b",
+          "kind": "ORIGINAL",
+          "revision": 1
+        },
+        {
+          "commit_id": "DAILY-20261120-112027-a4de2e97",
+          "created_at": "2026-11-22T11:20:27+08:00",
+          "html_sha256": "6e5ae2c29990f935e2c32a3612db0ca700391269422047e9b4a3571cec53ef39",
+          "kind": "CONTENT_TEXT_REVISION",
+          "note": "REG-050 titles: 30 double-escaped HTML entities restored; claims/counts unchanged",
+          "revision": 2
+        }
+      ],
       "scheduled_date": "2026-11-20",
       "status": "PUBLISHED",
       "summary": "第 20 组共检查 3 种正式期刊；确认 4 个新完整期次、61 篇正式论文（含归期 48 篇）：Environment and Planning B claim 2026-V53-I6（17）、I7（15）、I8（14）与当期 I9（15）；注册基线 2026-V53-I5 不重印不 claim。中国科学院院刊官方站点不可达，DEGRADED，不 claim；Crossref 新登记 142 条（含 I9/I10 发现与 Z1 预出版），已知抑制 47 条，无摘要不编造。Applied Soft Computing 官方 ScienceDirect 目录 curl 与 Playwright 均 403，DEGRADED，不 claim；RSS 新登记 100 条（至 V206，部分封面月 2027-02），已知抑制 0 条，无摘要不编造。未发现撤稿或新勘误。",
@@ -913,7 +931,7 @@
         }
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 20 组",
-      "updated_at": "2026-11-20T12:17:57.229641+08:00"
+      "updated_at": "2026-11-22T13:36:28.024287+08:00"
     },
     {
       "brief_id": "DAILY-20261121",
@@ -1270,9 +1288,10 @@
     "ROUTINE-20261120-G20": {
       "anchor": "brief-DAILY-20261120",
       "brief_id": "DAILY-20261120",
-      "commit_id": "DAILY-20261120-121254-b7e6ba27",
+      "commit_id": "DAILY-20261120-112027-a4de2e97",
       "completed_run_date": "2026-11-20",
       "logical_date": "2026-11-20",
+      "original_commit_id": "DAILY-20261120-121254-b7e6ba27",
       "report": "2026/11/2026-11-20_GIS-AI期刊每日轮检简报_第20组.html",
       "scheduled_date": "2026-11-20"
     },
