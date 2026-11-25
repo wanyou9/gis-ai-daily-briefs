@@ -1,5 +1,5 @@
 {
-  "brief_count": 24,
+  "brief_count": 25,
   "briefs": [
     {
       "brief_id": "DAILY-20261101",
@@ -1104,7 +1104,7 @@
       "release_summary_image": "releases/DAILY-20261124-121645-72c06799/2026/11/assets/2026-11-24_GIS-AI期刊每日摘要_第24组.png",
       "report": "2026/11/2026-11-24_GIS-AI期刊每日轮检简报_第24组.html",
       "scheduled_date": "2026-11-24",
-      "status": "LOCAL_COMMITTED",
+      "status": "PUBLISHED",
       "summary": "第 24 组共检查 3 种正式期刊；确认 1 个新完整期次、121 篇正式论文（含归期 98 篇），已见表期次差异复核 62 篇；登记网络首发/未来期 398 条，重复抑制 159 条；IEEE TPAMI 2026-V48-I11 已 claim；I10 官方目录由 99 篇增至 161 篇，只输出差异、不重印；Evolutionary Intelligence 2026-V19-I6（2026 年 12 月）与 2027-V20-I1 只登记不 claim；Remote Sensing of Environment 官方目录 403，降级且不 claim 任何完整期。未发现新的勘误或撤稿。",
       "summary_image": "2026/11/assets/2026-11-24_GIS-AI期刊每日摘要_第24组.png",
       "summary_image_sha256": "31fd3c96d46d9f4fab666ad41392df4e818d4b1c1d8f45613f45e5bcdbec16a4",
@@ -1122,6 +1122,49 @@
       ],
       "title": "GIS-AI 期刊每日轮检简报 · 第 24 组",
       "updated_at": "2026-11-24T12:18:59.237596+08:00"
+    },
+    {
+      "brief_id": "DAILY-20261125",
+      "commit_id": "DAILY-20261125-121634-0ad96f2f",
+      "completed_run_date": "2026-11-25",
+      "counts": {
+        "changed_journals": 3,
+        "complete_issues": 4,
+        "degraded_sources": 1,
+        "formal_articles": 35,
+        "formal_assignments": 27,
+        "journals": 3,
+        "online_first_updates": 90
+      },
+      "format": "HTML",
+      "group_id": 25,
+      "html_sha256": "ff9ab16b9655176d7602c58a5fe77ba7d10e6f7acfcc3ec542f0d9266f7d096b",
+      "index_anchor": "brief-DAILY-20261125",
+      "kind": "DAILY_ROTATION",
+      "logical_date": "2026-11-25",
+      "public_url": "https://wanyou9.github.io/gis-ai-daily-briefs/2026/11/2026-11-25_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC25%E7%BB%84.html",
+      "release_report": "releases/DAILY-20261125-121634-0ad96f2f/2026/11/2026-11-25_GIS-AI期刊每日轮检简报_第25组.html",
+      "release_summary_image": "releases/DAILY-20261125-121634-0ad96f2f/2026/11/assets/2026-11-25_GIS-AI期刊每日摘要_第25组.png",
+      "report": "2026/11/2026-11-25_GIS-AI期刊每日轮检简报_第25组.html",
+      "scheduled_date": "2026-11-25",
+      "status": "LOCAL_COMMITTED",
+      "summary": "第 25 组共检查 3 种正式期刊；确认 4 个新完整期次、35 篇正式论文（含归期 27 篇），已见表期次差异复核 0 篇；登记网络首发/未来期 90 条，重复抑制 227 条；IJAIT 2026-V35-I3/I4/I5 已 claim，官方当期 I6 与 Online Ready 只登记不 claim；Journal of Combinatorial Optimization 2026-V52-I4 已 claim，I3 集合未变不重印，I5（2026 年 12 月）只登记；ISPRS Journal 官方目录 403，降级且不 claim 任何完整期。IJAIT 所 claim 期次官方目录含 2 篇勘误（无摘要）。",
+      "summary_image": "2026/11/assets/2026-11-25_GIS-AI期刊每日摘要_第25组.png",
+      "summary_image_sha256": "ccbb3cc41cb80f180a28b6b49db70ef158b2dd79e17cc4e2938b504128816049",
+      "task_type": "ROUTINE",
+      "tasks": [
+        {
+          "anchor": "task-ROUTINE-20261125-G25",
+          "coverage_month": "2026-11",
+          "group": 25,
+          "scheduled_date": "2026-11-25",
+          "status": "COMPLETED",
+          "task_id": "ROUTINE-20261125-G25",
+          "task_type": "ROUTINE"
+        }
+      ],
+      "title": "GIS-AI 期刊每日轮检简报 · 第 25 组",
+      "updated_at": "2026-11-25T12:24:41.615790+08:00"
     }
   ],
   "level": "MONTH",
@@ -1199,6 +1242,9 @@
     ],
     "2026-11-24": [
       "ROUTINE-20261124-G24"
+    ],
+    "2026-11-25": [
+      "ROUTINE-20261125-G25"
     ]
   },
   "schema_version": "2.1",
@@ -1423,9 +1469,18 @@
       "logical_date": "2026-11-24",
       "report": "2026/11/2026-11-24_GIS-AI期刊每日轮检简报_第24组.html",
       "scheduled_date": "2026-11-24"
+    },
+    "ROUTINE-20261125-G25": {
+      "anchor": "brief-DAILY-20261125",
+      "brief_id": "DAILY-20261125",
+      "commit_id": "DAILY-20261125-121634-0ad96f2f",
+      "completed_run_date": "2026-11-25",
+      "logical_date": "2026-11-25",
+      "report": "2026/11/2026-11-25_GIS-AI期刊每日轮检简报_第25组.html",
+      "scheduled_date": "2026-11-25"
     }
   },
   "timezone": "Asia/Shanghai",
-  "updated_date": "2026-11-24",
+  "updated_date": "2026-11-25",
   "year": 2026
 }
