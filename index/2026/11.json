@@ -1190,7 +1190,7 @@
       "release_summary_image": "releases/DAILY-20261126-115941-f28453c4/2026/11/assets/2026-11-26_GIS-AI期刊每日摘要_第26组.png",
       "report": "2026/11/2026-11-26_GIS-AI期刊每日轮检简报_第26组.html",
       "scheduled_date": "2026-11-26",
-      "status": "LOCAL_COMMITTED",
+      "status": "PUBLISHED",
       "summary": "第 26 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式论文（含归期 0 篇），已见表期次差异复核 0 篇；登记网络首发/在编年度卷 315 条，重复抑制 770 条；IEEE TGRS 2026-V64 与 Wiley IJIS 2026-V2026-I1 官方目录已核验但仍为开放年度卷，只登记不 claim；JRSS Series A 官方目录 403，降级且不 claim 候选 2026-V189-I4（仅登记发现源）。",
       "summary_image": "2026/11/assets/2026-11-26_GIS-AI期刊每日摘要_第26组.png",
       "summary_image_sha256": "5779832d7deb8db24af48a095b8353c5c3b911a90f027715d02394f5aac03ba0",
