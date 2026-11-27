@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS-AI 期刊每日轮检简报 · 2026-11-27 · 第 27 组</title>
+<style>:root{--ink:#17324a;--muted:#526877;--bg:#edf4f2;--paper:#fff;--brand:#075f68;--line:#c9d8d6;--ok:#147748;--warn:#9a5b00;--bad:#aa2430}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.62;overflow-wrap:anywhere;overflow-x:hidden}a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#075f68;text-decoration:underline;text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #e3a72f;outline-offset:3px}.skip{position:fixed;top:-80px;left:12px;background:#fff;padding:8px 14px;z-index:99}.skip:focus{top:12px}.hero{padding:25px max(22px,calc((100vw - 1180px)/2)) 28px;background:linear-gradient(135deg,#073d58,#08737a);color:#fff}.crumbs a{color:#fff}.hero h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.3rem 0}.lead{font-size:clamp(1rem,2vw,1.25rem);max-width:1060px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric{background:#ffffff1c;border:1px solid #ffffff45;border-radius:13px;padding:10px 13px}.metric strong{display:block;font-size:1.7rem}.metric span{font-size:.84rem}.attention{margin-top:13px;background:#fff4d1;color:#4d3b0d;border-left:5px solid #e1a62b;padding:11px 14px;border-radius:8px}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:6px;overflow-x:auto}.nav a{padding:5px 10px;white-space:nowrap;text-decoration:none}main{max-width:1180px;margin:auto;padding:22px 18px 60px}section{scroll-margin-top:68px;margin-bottom:28px}.summary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}.summary img{display:block;width:100%;height:auto}.head{display:flex;align-items:center;gap:11px}.head b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff}.panel,.alert,.issue,.discover,.paper,.jcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.alert{border-left:6px solid var(--warn);margin:12px 0}.pass{color:var(--ok)}.degraded{color:var(--warn)}.failed{color:var(--bad)}.evidence{display:inline-flex;flex-direction:column;align-items:flex-start;vertical-align:top;margin:3px 12px 7px 0;max-width:100%}.evidence small{color:var(--muted);font-size:.7rem}.missing{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.paper{scroll-margin-top:70px}.kicker{color:var(--brand);font-weight:800;font-size:.78rem}.paper h3{font-size:1rem}.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:7px}.paper dl div{background:#f4f9f8;padding:7px;border-radius:8px}.paper dt{font-size:.72rem;color:var(--muted)}.paper dd{margin:0}.discover{margin:12px 0}.discover summary{display:flex;justify-content:space-between;gap:12px;min-height:44px;cursor:pointer}.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1100px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:#e4efed}.mobile{display:none}.audit{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.audit div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.audit strong{display:block;font-size:1.35rem}.foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.audit{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero{padding:15px}.metrics{grid-template-columns:repeat(2,1fr);gap:7px}.metric{padding:7px 9px}.metric strong{font-size:1.35rem}.nav{position:static;justify-content:flex-start}main{padding:14px 11px 50px}.table-wrap{display:none}.mobile{display:grid;gap:10px}.paper dl{grid-template-columns:1fr}.discover summary{flex-direction:column}.evidence{margin-right:0}.summary{padding:6px}}
+/* g15 overflow fixes */
+img, .summary img { max-width: 100%; height: auto; }
+body, main, header, footer { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; }
+.evidence a { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Abstract drawers (NotebookLM-oriented progressive disclosure) */
+.paper details.abstract-drawer,
+article.paper details.abstract-drawer,
+.abstract-drawer {
+  margin: 10px 0 6px;
+  border: 1px solid var(--line, #c9d8d6);
+  border-radius: 10px;
+  background: #f7fbfa;
+  padding: 0 12px;
+}
+.abstract-drawer > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand, #075f68);
+}
+.abstract-drawer > summary::-webkit-details-marker { display: none; }
+.abstract-drawer > summary::after {
+  content: "展开";
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted, #526877);
+}
+.abstract-drawer[open] > summary::after { content: "收起"; }
+.abstract-drawer .abstract-body {
+  margin: 0 0 12px;
+  padding-top: 2px;
+  color: var(--ink, #17324a);
+  font-size: .95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.abstract-drawer .abstract-meta {
+  margin: 0 0 10px;
+  color: var(--muted, #526877);
+  font-size: .72rem;
+}
+.abstract-drawer .abstract-missing {
+  margin: 0 0 12px;
+  color: var(--muted, #526877);
+  font-size: .9rem;
+}</style>
+</head>
+<body>
+<a class="skip" href="#overview">跳到期刊总览</a>
+<header class="hero">
+<nav class="crumb" aria-label="面包屑">
+<a href="../../../../index.html">根索引</a> / <a href="../../../../2026/index.html">2026</a> / <a href="../../../../2026/11/index.html">11 月</a> / 第 27 组
+</nav>
+<h1>GIS-AI 期刊每日轮检简报 · 第 27 组</h1>
+<p class="lead">第 27 组共检查 3 种正式期刊；确认 0 个新完整期次、0 篇正式论文（含归期 0 篇），已见表期次差异复核 0 篇；登记网络首发/在编/未来期 58 条，重复抑制 632 条；三种正式期刊的官方目录在 curl 与 Playwright 下均为 Cloudflare 403，全部降级且不 claim（JAG 候选 2026-V153 及发现源 V154/V155；IJPRAI 候选 2026-V40-I11 及 I12–I15；JRSS B 候选 2026-V88-I4 及发现源 I5）。</p>
+<p>逻辑日期 2026-11-27（北京时间）· 实际完成 2026-11-27 12:21 CST · 任务类型 ROUTINE · 第 27 组</p>
+<div class="metrics" role="list">
+<div class="metric" role="listitem"><strong>3</strong><span>已检查正式期刊</span></div>
+<div class="metric" role="listitem"><strong>0</strong><span>新完整期次</span></div>
+<div class="metric" role="listitem"><strong>0</strong><span>正式论文</span></div>
+<div class="metric" role="listitem"><strong>0</strong><span>归期论文</span></div>
+<div class="metric" role="listitem"><strong>58</strong><span>网络首发</span></div>
+<div class="metric" role="listitem"><strong>0</strong><span>勘误撤稿</span></div>
+</div>
+<p class="next">上一期：<a href="https://wanyou9.github.io/gis-ai-daily-briefs/2026/11/2026-11-26_GIS-AI%E6%9C%9F%E5%88%8A%E6%AF%8F%E6%97%A5%E8%BD%AE%E6%A3%80%E7%AE%80%E6%8A%A5_%E7%AC%AC26%E7%BB%84.html">2026-11-26 第 26 组</a> · 下一次计划扫描日：2026-11-28（第 28 组）</p>
+</header>
+<main>
+<nav class="toc" aria-label="页内目录">
+<strong>目录</strong>
+<ol>
+<li><a href="#attention">需要关注</a></li>
+<li><a href="#overview">期刊总览</a></li>
+<li><a href="#formal">完整期次</a></li>
+<li><a href="#delta">差异复核</a></li>
+<li><a href="#online-first">网络首发</a></li>
+<li><a href="#corrections">勘误撤稿</a></li>
+<li><a href="#themes">主题与阅读路线</a></li>
+<li><a href="#health">数据源健康</a></li>
+<li><a href="#audit">审计与状态</a></li>
+</ol>
+</nav>
+
+<section id="attention"><h2>需要关注</h2><ul class="attention">
+<li><span class="tag">降级</span> <strong>JAG / IJAEOG 官方目录 403</strong> — 首页、卷期表、V152–V155 与 Articles in Press 在 curl 与 Playwright 下均为 Cloudflare 挑战页。不得用 RSS/Crossref claim 候选 2026-V153 或发现源中的 V154/V155。V155 在发现源中篇数明显少于已见表卷，更像在编。 <span class="evidence"><a href="https://www.sciencedirect.com/journal/international-journal-of-applied-earth-observation-and-geoinformation/issues" rel="noopener noreferrer">官方卷期表（403）</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 官方目录不可用，不能作为完整期证据</small></span> <span class="evidence"><a href="https://www.sciencedirect.com/journal/international-journal-of-applied-earth-observation-and-geoinformation/vol/153/suppl/C" rel="noopener noreferrer">官方 V153 目录（403）</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 官方目录不可用</small></span> <span class="evidence"><a href="https://rss.sciencedirect.com/publication/science/15698432" rel="noopener noreferrer">ScienceDirect RSS（发现源）</a><small>rss.sciencedirect.com · 2026-11-27 12:21 CST · 发现信号，完整性以官方目录为准</small></span></li>
+<li><span class="tag">降级</span> <strong>IJPRAI 官方目录 403</strong> — 首页、卷期表、I10–I12 与 Online Ready 均为 Cloudflare 挑战页。发现源显示 I11–I14 刊出月份已到、I15（2026-12-15）为未来期，一律只登记不 claim。 <span class="evidence"><a href="https://www.worldscientific.com/toc/ijprai/40/11" rel="noopener noreferrer">官方 I11 目录（403）</a><small>www.worldscientific.com · 2026-11-27 12:21 CST · 官方目录不可用，不能作为完整期证据</small></span> <span class="evidence"><a href="https://www.worldscientific.com/action/showFeed?feed=rss&amp;jc=ijprai&amp;type=etoc" rel="noopener noreferrer">平台 RSS（发现源）</a><small>www.worldscientific.com · 2026-11-27 12:21 CST · 发现信号，不得作为完整期证据</small></span></li>
+<li><span class="tag">降级</span> <strong>JRSS Series B 官方目录 403</strong> — 首页、88/3、88/4 与 Advance Articles 均为 Cloudflare 挑战页。Latest Issue RSS 指向 I4，Crossref 另列 I5，均不得作为完整期证据。 <span class="evidence"><a href="https://academic.oup.com/jrsssb/issue/88/4" rel="noopener noreferrer">官方 I4 目录（403）</a><small>academic.oup.com · 2026-11-27 12:21 CST · 官方目录不可用，不能作为完整期证据</small></span> <span class="evidence"><a href="https://academic.oup.com/rss/site_6513/4147.xml" rel="noopener noreferrer">Current Issue RSS（发现源）</a><small>academic.oup.com · 2026-11-27 12:21 CST · 发现信号，完整性以官方目录为准</small></span></li>
+</ul></section>
+
+<section id="overview"><h2>期刊更新总览</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>期刊</th><th>焦点期次</th><th>新完整期</th><th>新正式文</th><th>归期</th><th>差异复核</th><th>OF/在编</th><th>源健康</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>REG-027<br><strong>International Journal of Applied Earth Observation and Geoinformation</strong></td><td>官方目录 403，不 claim 候选 V153；仅登记 V154/V155 发现源</td><td>0</td><td>0</td><td>0</td><td>0</td><td>40</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr>
+<tr><td>REG-057<br><strong>International Journal of Pattern Recognition and Artificial Intelligence</strong></td><td>官方目录 403，不 claim 候选 I11 及 I12–I15；仅登记发现源</td><td>0</td><td>0</td><td>0</td><td>0</td><td>7</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr>
+<tr><td>REG-087<br><strong>Journal of the Royal Statistical Society Series B: Statistical Methodology</strong></td><td>官方目录 403，不 claim 候选 I4 及发现源 I5；仅登记 Advance</td><td>0</td><td>0</td><td>0</td><td>0</td><td>11</td><td><code>OFFICIAL_403_CLOUDFLARE</code></td><td>DEGRADED</td></tr>
+</tbody></table></div>
+<div class="mobile">
+<article class="jcard"><h3>REG-027 International Journal of Applied Earth Observation and Geoinformation</h3><p>新完整期 0 · 正式文 0 · 差异复核 0 · 发现源登记 40 · DEGRADED（官方 403）</p></article>
+<article class="jcard"><h3>REG-057 International Journal of Pattern Recognition and Artificial Intelligence</h3><p>新完整期 0 · 正式文 0 · 差异复核 0 · 发现源登记 7 · DEGRADED（官方 403）</p></article>
+<article class="jcard"><h3>REG-087 Journal of the Royal Statistical Society Series B: Statistical Methodology</h3><p>新完整期 0 · 正式文 0 · 差异复核 0 · 发现源登记 11 · DEGRADED（官方 403）</p></article>
+</div>
+<figure>
+<img src="assets/2026-11-27_GIS-AI期刊每日摘要_第27组.png" width="1600" height="900" alt="第27组每日摘要图：3刊，新完整期0，正式论文0，归期0，差异复核0，网络首发58，降级3，重复抑制632">
+<figcaption>每日摘要图（1600×900）文本等价计数见上表。图中仅含期刊级聚合，不含论文题名、作者、DOI 或摘要。</figcaption>
+</figure></section>
+
+<section id="formal"><h2>新完整期次与正式论文</h2>
+<p>本批确认 <strong>0</strong> 个新完整期次、共 <strong>0</strong> 篇正式论文。三种正式期刊的官方目录均不可用（curl 与 Playwright 均为 Cloudflare 403），不得把 RSS/Crossref 当作完整期证据，因此不 claim 候选 2026-V153、2026-V40-I11 或 2026-V88-I4，也不 claim 发现源中看起来已到刊出月份的后续卷期。</p>
+</section>
+
+<section id="delta"><h2>已见表期次差异复核</h2>
+<p>本批差异复核 <strong>0</strong> 篇。JAG 基线 2026-V152、IJPRAI 基线 2026-V40-I10、JRSS Series B 基线 2026-V88-I3 均因官方目录 403 无法核验集合变化，不重印、不据发现源做差异 claim。</p>
+</section>
+
+<section id="online-first"><h2>网络首发与在编/未来期登记</h2>
+<p>本批共新登记 <strong>58</strong> 条网络首发/在编/未来期记录（JAG 40、IJPRAI 7、JRSS Series B 11）。正式归期按 DOI 合并，不建第二篇、不重复计数。无摘要条目在抽屉中标注为暂无摘要，不编造。</p>
+<section class="issue" id="of-reg-027-v155"><h3>JAG · 发现源所示 2026-V155（December 2026，疑似在编）新登记 20 条</h3>
+<p>ScienceDirect RSS 与 Crossref 将部分新条目归入 Volume 155，发现源篇数（RSS 17 / Crossref 20）明显少于已见表卷（V152/V154 约 88 篇），更像在编或未来卷，只登记不 claim。题名举例：AXIA: An Asymmetric X-modal Injection Architecture with pa…；GMAT: satellite image time-series crop classification via …；Global 30 m forest canopy height mapping through harmonize…；Delineate anything flow: fast, country-level field boundar…；Multi-angular remote sensing-derived directional fractiona…</p>
+<p><span class="evidence"><a href="https://www.sciencedirect.com/journal/international-journal-of-applied-earth-observation-and-geoinformation/vol/155/suppl/C" rel="noopener noreferrer">官方 V155 目录（403）</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 官方目录不可用</small></span> <span class="evidence"><a href="https://rss.sciencedirect.com/publication/science/15698432" rel="noopener noreferrer">ScienceDirect RSS（发现源）</a><small>rss.sciencedirect.com · 2026-11-27 12:21 CST · 发现信号，不得作为完整期证据</small></span></p>
+<article class="paper" id="REG-027-V155-001">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>AXIA: An Asymmetric X-modal Injection Architecture with parameter-efficient adapters for RGB-X remote sensing semantic segmentation</h3>
+<p>Xiang Li; Jianfeng Li; Shuo Zhang; Siyu Cheng; Chenxu Wang; Xinsheng Wang</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105681</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005972" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105681" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>AXIA: An Asymmetric X-modal Injection Architecture with parameter-efficient adapters for RGB-X remote sensing semantic segmentation</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105681</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005972" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-002">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>GMAT: satellite image time-series crop classification via a gated mamba-attention fusion network</h3>
+<p>Qishuai Ren; Xinhui Wang; Hong Wang; Shilong Ma; Xiaoning Zhai; Penghui Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105685</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226006011" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105685" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>GMAT: satellite image time-series crop classification via a gated mamba-attention fusion network</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105685</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226006011" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-003">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Global 30 m forest canopy height mapping through harmonized GEDI and ICESat-2 LiDAR integration with multi-source images</h3>
+<p>Sheng Nie; Xiaoxiao Zhu; Cheng Wang; Xiaohuan Xi; Dong Li; Baokun Feng</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105693</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226006096" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105693" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Global 30 m forest canopy height mapping through harmonized GEDI and ICESat-2 LiDAR integration with multi-source images</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105693</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226006096" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-004">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Delineate anything flow: fast, country-level field boundary detection from any source</h3>
+<p>Mykola Lavreniuk; Nataliia Kussul; Andrii Shelestov; Yevhenii Salii; Volodymyr Kuzin; Sergii Skakun; Zoltan Szantoi</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105683</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005996" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105683" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Delineate anything flow: fast, country-level field boundary detection from any source</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105683</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005996" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-005">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Multi-angular remote sensing-derived directional fractional vegetation cover for improved C-factor estimation in RUSLE modeling</h3>
+<p>Rui Tan; Geng Guo; Yu Tao; Ying Pan; Zicheng Liu; Lin Chen; Xin Liu; Jie Lin</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105689</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226006059" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105689" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multi-angular remote sensing-derived directional fractional vegetation cover for improved C-factor estimation in RUSLE modeling</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105689</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226006059" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-006">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>High spatial resolution Greenland Ice Sheet mass change linked to Greenland Blocking and North Atlantic Oscillation</h3>
+<p>Zhuoya Shi; Zemin Wang; Baojun Zhang; Shuang Wu; Nicholas E. Barrand; Yong Su; Hong Geng; Jiachun An; Qian Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105327</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226002438" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105327" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>High spatial resolution Greenland Ice Sheet mass change linked to Greenland Blocking and North Atlantic Oscillation</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105327</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226002438" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-007">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Satellite embedding‑based mapping of grassland mowing frequency and its response to drought in Denmark</h3>
+<p>Rodolfo Ceriani; Francesco Fava; Michele Meroni; Mogens Humlekrog Greve; Lars Uldall-Jessen; Søren Kolind Hvid; Diego Abalos; Klaus Butterbach-Bahl; Jaber Rahimi</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105687</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226006035" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105687" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Satellite embedding‑based mapping of grassland mowing frequency and its response to drought in Denmark</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105687</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226006035" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-008">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>A spatially and temporally comparable Remote Sensing Ecological Index via de-gradient national PCA for China’s resource-based cities</h3>
+<p>Yedong Chen; Rongbing Xu; Sihao Gu; Zixuan Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105679</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005959" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105679" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A spatially and temporally comparable Remote Sensing Ecological Index via de-gradient national PCA for China’s resource-based cities</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105679</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005959" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-009">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>How should rural residential land in metropolitan suburbs be governed in the future? Evidence from Beijing using RGB-encoded multidimensional drivers and CNN prediction</h3>
+<p>Zehao Qiao; Maojun Wang; Wenyu Xu; Xuexia Zhang; Weizhong Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105680</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005960" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105680" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>How should rural residential land in metropolitan suburbs be governed in the future? Evidence from Beijing using RGB-encoded multidimensional drivers and CNN prediction</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105680</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005960" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-010">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Hierarchical active learning for annotation-efficient 3D object detection in construction-scene LiDAR sensing</h3>
+<p>You Li; Jialu Sui; Yasong Shi; Xiaokang Zhang; Shengjun Tang; Ruisheng Wang; Renzhong Guo</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105678</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005947" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105678" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Hierarchical active learning for annotation-efficient 3D object detection in construction-scene LiDAR sensing</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105678</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005947" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-011">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>PSGRNet: Multi-scale spectral–frequency representation learning with gated residual fusion for coastal wetland classification using UAV hyperspectral imagery</h3>
+<p>Jun Zhao; Hongjun Su; Hui Yang; Yang Tao; Qian Du</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105674</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S156984322600590X" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105674" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>PSGRNet: Multi-scale spectral–frequency representation learning with gated residual fusion for coastal wetland classification using UAV hyperspectral imagery</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105674</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S156984322600590X" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-012">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>DBEFNet: a dual-branch fusion network integrating remote sensing imagery and building morphology for urban village segmentation</h3>
+<p>Zhonglin Yang; Yimin Chen; Haifeng Li; Wufan Zhao; Ying Sun; Mengwei Liu</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105682</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005984" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105682" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>DBEFNet: a dual-branch fusion network integrating remote sensing imagery and building morphology for urban village segmentation</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105682</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005984" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-013">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>High resolution sediment-specific surface soil moisture retrieval using Sentinel-1 time series and auxiliary data</h3>
+<p>Alireza Hamedianfar; Oleg Antropov; Matthieu Molinier; Ulla Salmela; Hanna Kukkula; Lauri Seitsonen; Pauliina Liwata-Kenttälä; Maarit Middleton</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105665</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005819" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105665" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>High resolution sediment-specific surface soil moisture retrieval using Sentinel-1 time series and auxiliary data</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105665</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005819" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-014">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Process-informed deep learning for interpretable forested wetland mapping under dense canopy</h3>
+<p>Jing Lv; Hengxing Xiang; Yanbiao Xi; Xianglong Xing; Weihong Zhu; Dehua Mao; Kaidong Feng</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105672</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005881" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105672" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Process-informed deep learning for interpretable forested wetland mapping under dense canopy</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105672</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005881" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-015">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Sentinel-1 and Sentinel-2 responses to Hansen-reported forest loss in the Peruvian Amazon: Timing and spatial sensitivity</h3>
+<p>Bojana Petrovic; Jan Banout; Aleš Kučera; Adam Hruška; Tomáš Goga; Hynek Roubík</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105677</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005935" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105677" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Sentinel-1 and Sentinel-2 responses to Hansen-reported forest loss in the Peruvian Amazon: Timing and spatial sensitivity</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105677</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005935" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-016">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>ObsGate-SST: observation-gated background–detail learning for global daily sea surface temperature reconstruction</h3>
+<p>Wei Chen; Xiaoping Cheng; Jianfang Fei; Xiaogang Huang</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105676</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005923" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105676" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>ObsGate-SST: observation-gated background–detail learning for global daily sea surface temperature reconstruction</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105676</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005923" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-017">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>A novel approach for soil moisture retrieval via fusing multi-spaceborne GNSS-R observations in entire Tibetan Plateau</h3>
+<p>Wenzhou Xu; Haohan Wei; Shuanggen Jin; Dong Chen; Hongtao Shi; Tianjie Zhao; Zhehui Shen; Cong Yin; Rongrong Li; Wentao Dai; Songbo Qu; Mengfei Liu; Jinyao Zheng</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105667</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005832" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105667" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A novel approach for soil moisture retrieval via fusing multi-spaceborne GNSS-R observations in entire Tibetan Plateau</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105667</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005832" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-018">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Truth-driven adaptive unmixing for multi-scenario hyperspectral mineral abundance mapping</h3>
+<p>Qunjia Zhang; Hua Shi; Lei Liu; Jiacheng Mei</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105692</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105692" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105692" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Truth-driven adaptive unmixing for multi-scenario hyperspectral mineral abundance mapping</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105692</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105692" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-019">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Why sub-Saharan African cropland maps fail and pathways forward: A review of persistent mapping challenges</h3>
+<p>Kelsee H. Bratley; Foster Mensah; Curtis E. Woodcock</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105671</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105671" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105671" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Why sub-Saharan African cropland maps fail and pathways forward: A review of persistent mapping challenges</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105671</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105671" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V155-020">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Multi-source remote sensing-based damage assessment of Iranian nuclear facilities following military strikes</h3>
+<p>Chencheng Li; Zhiping Jiao; Xuguo Shi; Liming Jiang; Zhiwei Zhou; Bo Yang; Zhenyan Lai; Bin Yan; Zhangyi Feng; Heping Sun</p>
+<dl>
+<div><dt>卷期</dt><dd>V155 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105686</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105686" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105686" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Multi-source remote sensing-based damage assessment of Iranian nuclear facilities following military strikes</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105686</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105686" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section>
+<section class="issue" id="of-reg-027-v154"><h3>JAG · 发现源所示 2026-V154（November 2026）新登记 20 条</h3>
+<p>Crossref 显示 V154 共 88 篇、V153 共 80 篇；V153 条目此前已入账。本批新 DOI 主要来自 V154 发现源。官方目录不可用，不 claim。题名举例：From 2D toward 3D: City-scale artificial light at night di…；Corrigendum to “Reference-anchored envelope modelling for …；Satellite-derived metrics characterize long-term structura…；CLPS: a prior-guided diffuse-fraction parameterization for…；Tree crown mortality and defoliation assessment in tempera…</p>
+<p><span class="evidence"><a href="https://www.sciencedirect.com/journal/international-journal-of-applied-earth-observation-and-geoinformation/vol/154/suppl/C" rel="noopener noreferrer">官方 V154 目录（403）</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 官方目录不可用</small></span> <span class="evidence"><a href="https://www.sciencedirect.com/journal/international-journal-of-applied-earth-observation-and-geoinformation/vol/153/suppl/C" rel="noopener noreferrer">官方 V153 目录（403）</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 官方目录不可用；发现源条目已在账本，不重印</small></span></p>
+<article class="paper" id="REG-027-V154-001">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>From 2D toward 3D: City-scale artificial light at night distribution by super-resolution augmented spatiotemporal data modelling</h3>
+<p>Qixiu Hu; Rui Zhu; Yuyan Wan; Guonian Lü; Man Sing Wong; Hou Jiang; Huiping Jiang; Xi Li; Zheng Qin; Yanqing Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105661</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005777" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105661" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>From 2D toward 3D: City-scale artificial light at night distribution by super-resolution augmented spatiotemporal data modelling</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105661</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005777" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-002">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Corrigendum to “Reference-anchored envelope modelling for predicting tree mortality hotspots driven by drought” [Int. J. Appl. Earth Observ. Geoinform. 154 (2026) 105609]</h3>
+<p>Filippos Eliades; Dimitrios Sarris; Felix Bachofer; Silas Michaelides; Chris Danezis; Diofantos Hadjimitsis</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105654</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005704" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105654" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Corrigendum to “Reference-anchored envelope modelling for predicting tree mortality hotspots driven by drought” [Int. J. Appl. Earth Observ. Geoinform. 154 (2026) 105609]</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105654</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005704" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-003">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Satellite-derived metrics characterize long-term structural connectivity and flow associations across contrasting lake systems</h3>
+<p>Han Zhou; Jun Qiu; Fangfang Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105675</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005911" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105675" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Satellite-derived metrics characterize long-term structural connectivity and flow associations across contrasting lake systems</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105675</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005911" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-004">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>CLPS: a prior-guided diffuse-fraction parameterization for global horizontal irradiance separation</h3>
+<p>Wei Wang; Dongdong Wang; Ziqiang Ma; Ning Jiang</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105673</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005893" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105673" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>CLPS: a prior-guided diffuse-fraction parameterization for global horizontal irradiance separation</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105673</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005893" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-005">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Tree crown mortality and defoliation assessment in temperate forests using aerial imagery and deep learning</h3>
+<p>Mirela Beloiu; Elias Berger; Simon Ecke; Zhongyu Xia; Yixin Zhou; Cécile Reichmuth; Arthur Gessler; Hans-Joachim Klemmt; Jonas Glatthorn; Jonas Stillhard; Lars T. Waser; Verena C. Griess</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105657</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S156984322600573X" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105657" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Tree crown mortality and defoliation assessment in temperate forests using aerial imagery and deep learning</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105657</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S156984322600573X" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-006">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Improving urban green space quality for low‑carbon access in the 15‑minute city: an Access‑to‑Abatement framework</h3>
+<p>Xincheng Zheng; Eduardo Dias; Eric Koomen; Dong Xu; Yimeng Song; Yongze Song</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105669</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005856" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105669" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Improving urban green space quality for low‑carbon access in the 15‑minute city: an Access‑to‑Abatement framework</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105669</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005856" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-007">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Online ecological-prior-guided bitemporal Transformer for mapping potential Spartina alterniflora eradication areas in coastal tidal flats</h3>
+<p>Kexin Wang; Bo Fang; Yigong Hu; Jinlong Hu; Yajing Yang; Yan Liu; Jing Yao; Xiaoxiang Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105664</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005807" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105664" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Online ecological-prior-guided bitemporal Transformer for mapping potential Spartina alterniflora eradication areas in coastal tidal flats</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105664</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005807" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-008">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Assessing Dothistroma needle blight severity in Pinus radiata using UAV multispectral imagery</h3>
+<p>Ning Ye; Justin Morgenroth; Will Stout; Sai Krishna Arojju; Luis A. Apiolaza; Mark F. Paget; Yadi Wu; Na Chen; Panxing He; Joseph Avis; Cong Xu; Qianhui Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105663</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005790" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105663" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Assessing Dothistroma needle blight severity in Pinus radiata using UAV multispectral imagery</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105663</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005790" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-009">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Driver-specific temporal shifts in post-fire vegetation recovery: a multi-year Landsat-based analysis of the 2022 Uljin forest fire, South Korea</h3>
+<p>Min Seok Kim; Hyun Cheol Seo; Ji Soo Lee; Yoon Ha Lee</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105670</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005868" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105670" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Driver-specific temporal shifts in post-fire vegetation recovery: a multi-year Landsat-based analysis of the 2022 Uljin forest fire, South Korea</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105670</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005868" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-010">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>High‑resolution L‑VOD mapping over China: A downscaling framework based on a differencing paradigm integrated with physical constraints (PhyDiF)</h3>
+<p>Dunyue Cui; Xiang Zhang; Aminjon Gulakhmadov; Xiaojun Li; Yupeng Li; Rabindra Kumar Panda; Mahlatse Kganyago; Veber Costa; Hongliang Ma; Xihui Gu; Subhaprada Dash; Uma Charan Mohanty; Longgang Xiang; Won-Ho Nam; Nengcheng Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105662</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005789" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105662" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>High‑resolution L‑VOD mapping over China: A downscaling framework based on a differencing paradigm integrated with physical constraints (PhyDiF)</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105662</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005789" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-011">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>From pixel-level retrievals to bay-scale nutrient dynamics in Pärnu Bay using Sentinel-3 OLCI</h3>
+<p>Tuuli Soomets; Tiit Kutser</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105658</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005741" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105658" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>From pixel-level retrievals to bay-scale nutrient dynamics in Pärnu Bay using Sentinel-3 OLCI</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105658</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005741" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-012">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Satellite observations reveal expanding high-latitude warming hotspots and regional contrasts on global surface temperature change</h3>
+<p>Menglin Si; Zhao-Liang Li; Xiangyang Liu; Chen Ru; Yazhen Jiang; Pengke Shen; Chenyang Ma; Jiani He; Bo-Hui Tang</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105668</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005844" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105668" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Satellite observations reveal expanding high-latitude warming hotspots and regional contrasts on global surface temperature change</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105668</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005844" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-013">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Assessing forest structural dynamics and post-disturbance early-stage recovery using PlanetScope imagery and photogrammetric point clouds</h3>
+<p>Nisham Thapa; Lana L. Narine; Tamara F. Milton; Heather D. Alexander; Adam O. Maggard</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105659</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005753" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105659" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Assessing forest structural dynamics and post-disturbance early-stage recovery using PlanetScope imagery and photogrammetric point clouds</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105659</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005753" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-014">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Dem-assisted visual geolocation integrating ephemeris-based orientation correction with Multi-Scale skyline features</h3>
+<p>Yanyan Chen; Fang Ren; Pengfei Liu; HongYuan Huo; Yi Lian; Xingwei Dang; Peng Guo; Qing Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105660</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005765" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105660" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Dem-assisted visual geolocation integrating ephemeris-based orientation correction with Multi-Scale skyline features</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105660</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005765" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-015">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>The Bovine Slurry Index (BSI): An integrated framework for manure pond mapping using GeoFM-derived cattle-operation detection and Sentinel-2 spectral formulation</h3>
+<p>Ashutosh Pawar; Vasit Sagan; Derek Tesser; Alessandro Farbo; Edward Boyda; Aaron Davitt</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105656</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005728" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105656" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>The Bovine Slurry Index (BSI): An integrated framework for manure pond mapping using GeoFM-derived cattle-operation detection and Sentinel-2 spectral formulation</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105656</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005728" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-016">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Mapping the spatial extent of agroforestry lands across Africa by characterizing tree spatial arrangements</h3>
+<p>Minxuan Sun; Martin Brandt; Philippe Ciais; David Makowski; Youngryel Ryu; Yidi Xu; Mengjie Han; Yi Leng; Zhixuan Guo; Xiaomeng Du; Jianchu Xu; Florian Reiner; Jingbo Chen; Jiaying He; Xin Jiao; Wei Li</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105644</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005601" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105644" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Mapping the spatial extent of agroforestry lands across Africa by characterizing tree spatial arrangements</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105644</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005601" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-017">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>A retrieval method for passive microwave LST integrating radiative transfer-informed land-air environmental conditions</h3>
+<p>Weizhen Ji; Siquan Yang; Hongquan Sun; Qichao Yao</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105653</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005698" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105653" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>A retrieval method for passive microwave LST integrating radiative transfer-informed land-air environmental conditions</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105653</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005698" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-018">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Towards fractional vegetation cover mapping in complex mountain environments through a knowledge-guided unmixing framework</h3>
+<p>Yi Zhang; Bowen Li; Tao Yu; Shiming Li; Guiru Liu; Qing Liu; Letong Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105652</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005686" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105652" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Towards fractional vegetation cover mapping in complex mountain environments through a knowledge-guided unmixing framework</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105652</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005686" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-019">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Score-space knowledge graph propagation for generalized multi-label zero-shot classification of remote sensing images</h3>
+<p>Rui Cao; Zhizheng Zhang; Hong Shu; Zhenfeng Shao</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105647</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005637" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105647" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Score-space knowledge graph propagation for generalized multi-label zero-shot classification of remote sensing images</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105647</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.sciencedirect.com/science/article/pii/S1569843226005637" rel="noopener noreferrer">官方论文页面</a><small>www.sciencedirect.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-027-V154-020">
+<p class="kicker">International Journal of Applied Earth Observation and Geoinformation · ONLINE_FIRST</p>
+<h3>Editorial Board</h3>
+<p>作者未在官方目录完整给出</p>
+<dl>
+<div><dt>卷期</dt><dd>V154 · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1016/j.jag.2026.105690</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105690" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105690" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Editorial Board</strong></p><p class="abstract-meta">期刊：International Journal of Applied Earth Observation and Geoinformation · DOI：10.1016/j.jag.2026.105690</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1016/j.jag.2026.105690" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section>
+<section class="issue" id="of-reg-057-i15"><h3>IJPRAI · 发现源所示未来期 2026-V40-I15（cover 2026-12-15）新登记 1 条</h3>
+<p>平台 RSS 与 Crossref 列出 Volume 40 Issue 15，cover date 为 2026 年 12 月 15 日，刊出月份尚未到达，按规则只登记不 claim。题名举例：Guest Editorial for Part 1</p>
+<p><span class="evidence"><a href="https://www.worldscientific.com/toc/ijprai/40/15" rel="noopener noreferrer">官方 I15 目录（未核验）</a><small>www.worldscientific.com · 2026-11-27 12:21 CST · 官方目录不可用；即使可访问，未来期也不得 claim</small></span> <span class="evidence"><a href="https://www.worldscientific.com/action/showFeed?feed=rss&amp;jc=ijprai&amp;type=etoc" rel="noopener noreferrer">平台 RSS（发现源）</a><small>www.worldscientific.com · 2026-11-27 12:21 CST · 发现信号，未来期只登记</small></span></p>
+<article class="paper" id="REG-057-I15-001">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>Guest Editorial for Part 1</h3>
+<p>Jian Su; Yu Xue; Ferrante Neri; Xiaolong Xu</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I15</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001426020027</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.worldscientific.com/doi/abs/10.1142/S0218001426020027" rel="noopener noreferrer">官方论文页面</a><small>www.worldscientific.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426020027" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Guest Editorial for Part 1</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001426020027</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://www.worldscientific.com/doi/abs/10.1142/S0218001426020027" rel="noopener noreferrer">官方论文页面</a><small>www.worldscientific.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section>
+<section class="issue" id="of-reg-057-of"><h3>IJPRAI · Online Ready / 其他发现源新登记 6 条</h3>
+<p>包含 Online Ready 与 Crossref 所示 I14 等未入账条目。I11–I13 发现源条目此前已入账。官方目录不可用，不 claim 候选 I11。题名举例：A Knowledge-Augmented Large Language Model for Power Syste…；Masked Autoencoder with Noise-Adaptive Gated Attention for…；A Deep Time–Frequency Pattern Recognition Framework for Br…；SMART-DST: A Schema-Guided Multi-turn Adaptive Routing Met…；Quantum-Enhanced Photo-Thermoelastic Multi-Temperature Hea…</p>
+<p><span class="evidence"><a href="https://www.worldscientific.com/toc/ijprai/0/0" rel="noopener noreferrer">官方 Online Ready（403）</a><small>www.worldscientific.com · 2026-11-27 12:21 CST · 官方目录不可用</small></span> <span class="evidence"><a href="https://www.worldscientific.com/toc/ijprai/40/11" rel="noopener noreferrer">官方 I11 目录（403）</a><small>www.worldscientific.com · 2026-11-27 12:21 CST · 官方目录不可用，不能作为完整期证据</small></span></p>
+<article class="paper" id="REG-057-OF-001">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>A Knowledge-Augmented Large Language Model for Power System Security Risk Reasoning</h3>
+<p>Kai Li; Junqiang Jia; Meihui Hu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001426400781</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://www.worldscientific.com/doi/abs/10.1142/S0218001426400781" rel="noopener noreferrer">官方论文页面</a><small>www.worldscientific.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426400781" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Knowledge-Augmented Large Language Model for Power System Security Risk Reasoning</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001426400781 · 摘要来源：Crossref 元数据</p><p class="abstract-body">With the increasing complexity of modern power systems caused by renewable energy integration, distributed energy resources, and cyber–physical interactions, accurate and trustworthy security risk reasoning has become increasingly important. Existing data-driven methods mainly focus on risk prediction based on statistical correlations, while lacking the capability to model causal risk evolution and generate interpretable explanations. This paper proposes a knowledge-augmented large language model framework for power system security risk reasoning (KALLM-PSR). The proposed framework integrates structured power system knowledge with large language model reasoning capabilities to construct knowledge-enhanced representations, perform multi-stage risk propagation analysis, and generate reliability-aware explanations. A consistency evaluation mechanism is further introduced to improve the trustworthiness of reasoning results. Extensive experiments on IEEE 14-bus, 39-bus, and 118-bus systems demonstrate that KALLM-PSR outperforms conventional deep learning models, general large language models (LLMs), and retrieval-augmented approaches in risk identification accuracy, reasoning consistency, explanation quality, and robustness under disturbance conditions. The proposed framework provides an effective approach for intelligent and trustworthy power system security management.</p><p class="abstract-meta"><span class="evidence"><a href="https://www.worldscientific.com/doi/abs/10.1142/S0218001426400781" rel="noopener noreferrer">官方论文页面</a><small>www.worldscientific.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-057-OF-002">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>Masked Autoencoder with Noise-Adaptive Gated Attention for Multimodal Cultural Relic Image Inpainting</h3>
+<p>Long Zhang; Chenye Zhang</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s021800142640080x</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s021800142640080x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s021800142640080x" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Masked Autoencoder with Noise-Adaptive Gated Attention for Multimodal Cultural Relic Image Inpainting</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s021800142640080x · 摘要来源：Crossref 元数据</p><p class="abstract-body">Traditional mural image inpainting methods mostly rely on visual information from known image areas, suffering from weak semantic understanding, missing damaged content, and low consistency between restoration outputs and textual semantic descriptions. To tackle these challenges, this paper designs a Masked Autoencoder equipped with noise-adaptive gated attention (MAE GA) for multimodal cultural heritage image restoration. Joint weighted optimization is performed over pixel reconstruction, multi-granularity semantic alignment, perceptual quality, and spatial continuity. Evaluated on the Dunhuang mural subset from the CulTi multimodal dataset, our model obtains PSNR = 30.45 dB, SSIM = 0.938, and Recall@1 = 0.658 for the text-image retrieval task. Comprehensive ablation experiments demonstrate that the proposed semantic and spatial constraints consistently improve semantic recall, perceptual quality, and edge continuity, while introducing an interpretable trade-off in pixel-level PSNR/SSIM: the configuration without alignment achieves higher PSNR/SSIM, but exhibits substantially lower Recall@1, poorer FID, and weaker edge continuity. Five-fold cross-validation, repeated random-seed experiments, and robustness experiments under multiple degradation patterns further demonstrate the model&#x27;s stable generalization capability. Subjective evaluations by experts confirm the high texture fidelity and semantic plausibility of the restored outputs. This study further examines performance degradation when textual descriptions are inaccurate, incomplete, ambiguous, or unavailable, and discusses the corresponding limitations. The proposed algorithm provides a feasible technical reference for multimodal image restoration of cultural heritage artifacts.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s021800142640080x" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-057-OF-003">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>A Deep Time–Frequency Pattern Recognition Framework for Broadband Wireless Signal Detection</h3>
+<p>Boyuan Liu; Yuegang Song</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001426400811</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426400811" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426400811" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A Deep Time–Frequency Pattern Recognition Framework for Broadband Wireless Signal Detection</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001426400811 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Broadband spectrum monitoring requires coexisting signals to be detected, localized, and classified simultaneously. Representing an in-phase/quadrature (I/Q) capture as a time–frequency image turns this task into a multimodal recognition problem. Classical detectors return only a binary occupancy decision, whereas deep classifiers return one label per input; neither reports the class, extent, and reliability of every coexisting signal. This paper formulates the task as object detection in the time–frequency plane. An STFT front-end, with its parameters selected through a sensitivity analysis, feeds a YOLOv8n detector that predicts the class and bounding box of every signal in one pass. The detector is standard; the contributions are the task formulation, the representation-selection procedure, and a validation covering STFT sensitivity, ablation, detector and task baselines, channel impairments, low SNR, cross-validation, and calibration. On a 1,250-image test set, the pipeline reaches mAP@0.5 = 0.540; on a separate larger campaign, it achieves mAP@0.5 = 0.772 and a mean localization IoU of 0.9234. Its F1-optimal operating point yields precision 0.70 and recall 0.90. At 10 dB, multipath fading changes object-level recall by at most 0.03 relative to AWGN, while impulsive and harmonic interference are the dominant failure modes. Isotonic recalibration reduces the expected calibration error (ECE) from 0.225 to 0.050. Because the larger campaign also differs in STFT and training settings, the scale result is reported as an indication rather than an isolated estimate; at the reduced scale, a detector with 3.7 times as many parameters brings no accuracy gain. The framework returns the class, extent, and confidence of every signal, together with a recalibration procedure that supports autonomous spectrum management.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001426400811" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-057-OF-004">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>SMART-DST: A Schema-Guided Multi-turn Adaptive Routing Method for Dialogue State Tracking and Slot Updating</h3>
+<p>Ruiqi Li; Yongjiao Yang; Jiaxin Lin; Yuetian Huang; Zeqi Zhu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001426400793</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426400793" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426400793" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>SMART-DST: A Schema-Guided Multi-turn Adaptive Routing Method for Dialogue State Tracking and Slot Updating</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001426400793 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Dialogue state tracking (DST) is a core component of multi-turn task-oriented question answering, as it continuously maintains and updates the structured belief state from user interactions. In realistic conversational scenarios, however, DST often encounters unstable slot updates caused by domain switching, implicit reference, omitted information, and user self-correction across turns. These challenges are particularly evident when the model relies only on surface semantic matching while underutilizing the schema structure behind domain-slot-value definitions. More specifically, existing methods still lack an explicit mechanism for slot selection before update and often underexploit schema as a structural routing signal for belief state evolution. To address this issue, this paper proposes SMART-DST, a schema-guided multi-turn adaptive routing method for dialogue state tracking and slot updating. The proposed method treats schema not merely as a static ontology constraint, but as an active signal for routing dialogue understanding and belief state evolution. Specifically, SMART-DST first performs schema-aware state routing by modeling domain-slot associations, slot dependency relations, and value-type priors, enabling the model to focus on the most relevant subspace of the dialogue state under the current utterance. On this basis, a dual-stage slot update mechanism is introduced to decide whether a slot should be retained, modified, overwritten, or cleared before estimating its final value. This design reduces error propagation in long conversational contexts and improves the robustness of slot transitions under ambiguous user expressions. Meanwhile, the explicit incorporation of schema semantics also enhances the interpretability of state updates. Experimental results on multi-turn dialogue benchmarks show that SMART-DST consistently improves dialogue state tracking accuracy and slot update reliability over competitive baselines, for example achieving 64.7% joint goal accuracy on MultiWOZ 2.1 and 66.2% overall joint goal accuracy on SGD, compared with 61.5% and 63.0% obtained by the strongest baseline, respectively, especially in complex cases involving cross-domain shifts, ellipsis, and user self-revision.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001426400793" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-057-OF-005">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>Quantum-Enhanced Photo-Thermoelastic Multi-Temperature Heat Transfer and Wave Propagation in Laser-Excited Semiconductors</h3>
+<p>Hala H. Taha; Gamal M. Ismail; Lotfi Jlali; Ibrahim S. Elshazly; Khaled Lotfy</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001427400039</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001427400039" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001427400039" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Quantum-Enhanced Photo-Thermoelastic Multi-Temperature Heat Transfer and Wave Propagation in Laser-Excited Semiconductors</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001427400039 · 摘要来源：Crossref 元数据</p><p class="abstract-body">This study develops a novel theoretical framework for analyzing wave propagation in semiconductor media based on a generalized multi-temperature quantum photo-thermoelastic model. The formulation extends classical photo-thermoelastic semiconductor theory by incorporating nonequilibrium heat transport through a multi-temperature approach, in which conductive and thermodynamic temperatures interact via coupling parameters. Quantum carrier transport is introduced using a density-gradient model, leading to a higher-order diffusion term that captures nonlocal effects at micro- and nano-scales. The resulting system describes the fully coupled interaction among elastic deformation, multi-temperature heat conduction, and photogenerated carrier dynamics under laser excitation. A normal-mode analysis is employed to derive the governing dispersion relations and obtain analytical expressions for the physical fields. Numerical simulations, performed for silicon as a representative semiconductor, are used to examine the influence of multi-temperature parameters on temperature distribution, displacement, carrier density, and stress components. The results demonstrate that the multi-temperature formulation significantly modifies thermal wave behavior, enhances energy redistribution, and reduces stress concentration compared with classical single-temperature models. Moreover, the interplay between quantum diffusion and multi-temperature effects leads to smoother field profiles and increased attenuation. The proposed model provides new insights for the design of advanced optoelectronic and nano-scale semiconductor devices operating under ultrafast thermal loading.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001427400039" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-057-OF-006">
+<p class="kicker">International Journal of Pattern Recognition and Artificial Intelligence · ONLINE_FIRST</p>
+<h3>Editorial — Special Issue on Explainable and/or Interpretable AI for Biomedical and Health Informatics, Part 2</h3>
+<p>KC Santosh</p>
+<dl>
+<div><dt>卷期</dt><dd>V40 · I14</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1142/s0218001426020015</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426020015" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1142/s0218001426020015" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（暂无）</summary><p class="kicker">论文题名</p><p><strong>Editorial — Special Issue on Explainable and/or Interpretable AI for Biomedical and Health Informatics, Part 2</strong></p><p class="abstract-meta">期刊：International Journal of Pattern Recognition and Artificial Intelligence · DOI：10.1142/s0218001426020015</p><p class="abstract-missing">本条暂无已入库或可核验摘要；题名与元数据见上。</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1142/s0218001426020015" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section>
+<section class="issue" id="of-reg-087-aa"><h3>JRSS Series B · Advance Articles RSS 新登记 4 条</h3>
+<p>Advance Articles RSS 4 条均为新记录，只登记不归期。题名举例：Functional principal component analysis for distribution-v…；Optimized conformal selection: powerful selective inferenc…；A response-adaptive multi-arm design for continuous endpoi…；Blessing of dimension in Bayesian inference on covariance …</p>
+<p><span class="evidence"><a href="https://academic.oup.com/rss/site_6513/advanceAccess_4147.xml" rel="noopener noreferrer">Advance Articles RSS（发现源）</a><small>academic.oup.com · 2026-11-27 12:21 CST · 发现信号，Advance Articles 只登记</small></span></p>
+<article class="paper" id="REG-087-AA-001">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Functional principal component analysis for distribution-valued processes</h3>
+<p>Hang Zhou; Hans-Georg Müller</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag144</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://academic.oup.com/jrsssb/advance-article/doi/10.1093/jrsssb/qkag144/9133699" rel="noopener noreferrer">官方论文页面</a><small>academic.oup.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag144" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Functional principal component analysis for distribution-valued processes</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag144 · 摘要来源：Crossref 元数据</p><p class="abstract-body">We develop statistical models for samples of distribution-valued stochastic processes with time-indexed univariate distributions, with a focus on functional principal component analysis. The proposed framework is intrinsic and is built on a transport process representation under the Wasserstein metric, which resolves the challenge of centring distribution-valued processes and yields an interpretable decomposition of each trajectory into a subject-specific transport and a real-valued latent process. This representation leverages a scalar multiplication operation in transport space, making functional principal component analysis compatible with the underlying geometric structure of Wasserstein space. We develop estimators for both densely and sparsely observed settings and establish their asymptotic properties. The numerical advantages of the proposed method are demonstrated through simulations and applications to three real-world datasets.</p><p class="abstract-meta"><span class="evidence"><a href="https://academic.oup.com/jrsssb/advance-article/doi/10.1093/jrsssb/qkag144/9133699" rel="noopener noreferrer">官方论文页面</a><small>academic.oup.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-087-AA-002">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Optimized conformal selection: powerful selective inference after data-dependent score construction</h3>
+<p>Tian Bai; Ying Jin</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag139</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://academic.oup.com/jrsssb/advance-article/doi/10.1093/jrsssb/qkag139/9121269" rel="noopener noreferrer">官方论文页面</a><small>academic.oup.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag139" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Optimized conformal selection: powerful selective inference after data-dependent score construction</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag139 · 摘要来源：Crossref 元数据</p><p class="abstract-body">We study data-driven score construction in conformal selection, which uses conformal p-values and multiple testing to select ‘interesting’ instances with large unobserved labels from a pool of unlabelled data, while controlling the FDR in finite sample. While existing solutions require the score function to be constructed independent of the calibration and test data, it is desirable to select or construct powerful conformity score in a data-driven manner and to leverage all labelled data for score training when presented with many score choices and limited labelled data. We propose Optimized Conformal Selection (OptCS), a general framework that allows valid multiple testing after flexible data-driven score construction. We introduce general conditions under which OptCS constructs valid conformal p-values despite substantial data reuse and handles complex p-value dependencies to maintain finite-sample FDR control. We instantiate this general recipe to propose three FDR-controlling procedures, each optimizing the models differently: (i) selecting a powerful score function among multiple candidates, (ii) training the score with all labelled data without sample splitting, and (iii) combining full-sample training and model selection. We demonstrate the efficacy of our methods via simulation studies and real applications in drug discovery and large language models.</p><p class="abstract-meta"><span class="evidence"><a href="https://academic.oup.com/jrsssb/advance-article/doi/10.1093/jrsssb/qkag139/9121269" rel="noopener noreferrer">官方论文页面</a><small>academic.oup.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-087-AA-003">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>A response-adaptive multi-arm design for continuous endpoints based on a weighted information measure</h3>
+<p>Gianmarco Caruso; Pavel Mozgunov</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag148</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://academic.oup.com/jrsssb/advance-article/doi/10.1093/jrsssb/qkag148/9121082" rel="noopener noreferrer">官方论文页面</a><small>academic.oup.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag148" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A response-adaptive multi-arm design for continuous endpoints based on a weighted information measure</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag148 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Multi-arm trials are gaining interest in practice given the statistical and logistical advantages they can offer. The standard approach uses a fixed allocation ratio, but there is a call for making it adaptive and skewing the allocation of patients towards better-performing arms. However, it is well-known that these approaches might suffer from lower statistical power. We present a response-adaptive design for continuous endpoints which explicitly allows to control the trade-off between the number of patients allocated to the ‘optimal’ arm and the statistical power. Such a balance is achieved through the calibration of a tuning parameter, and we explore robust procedures to select it. The proposed criterion is based on a context-dependent information measure which gives greater weight to treatment arms with characteristics close to a pre-specified clinical target. We establish conditions under which the procedure consistently selects the target arm and derive the corresponding limiting allocation ratios. We also introduce a simulation-based hypothesis testing procedure which focuses on selecting the target arm and discuss strategies to effectively control the type-I error rate. The practical implementation of the proposed criterion and its potential advantage over currently used alternatives are illustrated in the context of early Phase IIa proof-of-concept oncology trials.</p><p class="abstract-meta"><span class="evidence"><a href="https://academic.oup.com/jrsssb/advance-article/doi/10.1093/jrsssb/qkag148/9121082" rel="noopener noreferrer">官方论文页面</a><small>academic.oup.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-087-AA-004">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Blessing of dimension in Bayesian inference on covariance matrices</h3>
+<p>Shounak Chattopadhyay; Anru R Zhang; David B Dunson</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag147</dd></div>
+<div><dt>证据层级</dt><dd>RSS_DISCOVERY</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://academic.oup.com/jrsssb/advance-article/doi/10.1093/jrsssb/qkag147/9121027" rel="noopener noreferrer">官方论文页面</a><small>academic.oup.com · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag147" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Blessing of dimension in Bayesian inference on covariance matrices</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag147 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Bayesian factor analysis is routinely used for dimensionality reduction in modeling of high-dimensional covariance matrices. Factor analytic decompositions express the covariance as a sum of low-rank and diagonal matrices. In practice, Gibbs sampling algorithms are typically used for posterior computation, alternating between updating the latent factors, loadings, and residual variances. In this article, we exploit a blessing of dimensionality to develop a provably accurate posterior approximation for the covariance matrix that bypasses the need for Gibbs or other variants of Markov chain Monte Carlo sampling. Our proposed Factor Analysis with BLEssing of dimensionality (FABLE) approach relies on a first-stage singular value decomposition (SVD) to estimate the latent factors, and then defines a jointly conjugate prior for the loadings and residual variances. The accuracy of the resulting posterior approximation for the covariance improves with increasing samples as well as increasing dimensionality. We show that FABLE has excellent performance in high-dimensional covariance matrix estimation, including producing well-calibrated credible intervals, both theoretically and through simulation experiments. We also demonstrate the strength of our approach in terms of accurate inference and computational efficiency by applying it to a gene expression dataset.</p><p class="abstract-meta"><span class="evidence"><a href="https://academic.oup.com/jrsssb/advance-article/doi/10.1093/jrsssb/qkag147/9121027" rel="noopener noreferrer">官方论文页面</a><small>academic.oup.com · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section>
+<section class="issue" id="of-reg-087-cr"><h3>JRSS Series B · Crossref 未编期/Advance 发现源新登记 7 条</h3>
+<p>Crossref 另有 7 条本刊 DOI 前缀、尚未归入已见表 I1–I3 且未出现在 Advance RSS 列表的新记录，仅作发现登记。Latest Issue RSS 所示 I4（19 条）与 Crossref I5（15 条）均已在账本，不重印、不 claim。</p>
+<p><span class="evidence"><a href="https://academic.oup.com/rss/site_6513/4147.xml" rel="noopener noreferrer">Current Issue RSS（发现源）</a><small>academic.oup.com · 2026-11-27 12:21 CST · 发现信号，指向 I4，不得作为完整期证据</small></span> <span class="evidence"><a href="https://academic.oup.com/jrsssb/issue/88/5" rel="noopener noreferrer">官方 I5 目录（403/未核验）</a><small>academic.oup.com · 2026-11-27 12:21 CST · 官方目录不可用；Crossref 不能作为完整期证据</small></span></p>
+<article class="paper" id="REG-087-CR-001">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Network cross-validation and model selection via subsampling</h3>
+<p>Sayan Chakrabarty; Srijan Sengupta; Yuguo Chen</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag142</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag142" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag142" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Network cross-validation and model selection via subsampling</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag142 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Complex and larger networks are becoming increasingly prevalent in scientific applications in various domains. Although a number of models and methods exist for such networks, cross-validation on networks remains challenging due to the unique structure of network data. In this paper, we propose a general cross-validation procedure called NETCROP (NETwork CRoss-validation using Overlapping Partitions—R Package). The key idea is to divide the original network into multiple subnetworks with a shared overlap part, producing training sets consisting of the subnetworks and a test set with the node pairs between the subnetworks. This train-test split provides the basis for a network cross-validation procedure that can be applied on a wide range of model selection and parameter tuning problems for networks. The method is computationally efficient for large networks as it uses smaller subnetworks for the training step. We provide methodological details and theoretical guarantees for several model selection and parameter tuning tasks using NETCROP. Numerical results demonstrate that NETCROP performs accurate cross-validation on a diverse set of network model selection and parameter tuning problems. The results also indicate that NETCROP is computationally much faster while being often more accurate than the existing methods for network cross-validation.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag142" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-087-CR-002">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Regression discontinuity designs for functional data and random objects in geodesic spaces</h3>
+<p>Daisuke Kurisu; Yidong Zhou; Taisuke Otsu; Hans-Georg Müller</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag143</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag143" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag143" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Regression discontinuity designs for functional data and random objects in geodesic spaces</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag143 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Regression discontinuity designs (RDDs) are widely used for causal inference in observational studies with cutoff-based treatment assignment, primarily for Euclidean outcomes. We propose the geodesic regression discontinuity design (GRDD), which extends RDDs to complex non-Euclidean outcomes, including networks, compositional data, functional data, and other random objects in geodesic metric spaces. Since algebraic operations are unavailable in such spaces, we define the causal effect at the cutoff as the geodesic connecting the local Fréchet means of untreated and treated outcomes, recovering the classical local average treatment effect in the scalar case. Estimation is conducted intrinsically via local Fréchet regression to preserve geometric validity and interpretability. For inference, we adopt an extrinsic approach by embedding the metric space into a Hilbert space, enabling tractable asymptotic analysis. We establish asymptotic normality and develop bootstrap-based procedures for hypothesis testing and confidence intervals for the treatment effect magnitude. We also propose a data-adaptive bandwidth selection method tailored to RDDs in metric spaces and study its empirical performance. Applications include compositional voting outcomes in UK elections and daily CO concentration curves after the Taipei metro introduction, and we extend the framework to fuzzy designs with imperfect compliance.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag143" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-087-CR-003">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>A decorrelation method for general regression adjustment in randomized experiments</h3>
+<p>Fangzhou Su; Wenlong Mou; Peng Ding; Martin J Wainwright</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag145</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag145" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag145" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>A decorrelation method for general regression adjustment in randomized experiments</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag145 · 摘要来源：Crossref 元数据</p><p class="abstract-body">We study regression adjustment with general function class approximations for estimating the average treatment effect in the design-based setting. Standard regression adjustment involves bias due to sample re-use, and controlling this bias either leads to suboptimal dependence on the sample size or requires restrictive assumptions. Our main contribution is to introduce a novel decorrelation approach that circumvents these issues. We prove guarantees, both asymptotic and nonasymptotic, relative to the oracle functions that are targeted by a given regression adjustment procedure. The same independence structure also yields conditional normal approximation bounds and finite-sample coverage guarantees that do not require consistency of the regression step. We illustrate our method by applying it to various high-dimensional and nonparametric problems, exhibiting improved sample complexity and weakened assumptions relative to known approaches.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag145" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-087-CR-004">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Stochastic gradient descent: a nonlinear time series perspective</h3>
+<p>Jiaqi Li; Zhipeng Lou; Stefan Richter; Wei Biao Wu</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag141</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag141" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag141" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Stochastic gradient descent: a nonlinear time series perspective</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag141 · 摘要来源：Crossref 元数据</p><p class="abstract-body">This paper investigates the statistical behaviour of stochastic gradient descent (SGD) with constant step size under the framework of iterated random functions. Compared with previous studies establishing the convergence of SGD in probability measure, e.g. Wasserstein distance, our approach directly provides the convergence in Euclidean distance by showing the geometric moment contraction of SGD. This new convergence can address the nonstationarity of SGD due to fixed initial points and can provide more refined asymptotics of SGD. Specifically, we prove quenched central limit theorem, invariance principle and α-stable convergence for averaged SGD (ASGD) regardless of initialization. Furthermore, we provide a novel perspective to understand the impact of step sizes in SGD by studying its derivative with respect to the step size. The existence of stationary solutions for the derivative processes is shown, enabling the use of interpolation to recover the full-trajectory of SGD. Subsequently, we utilize multiple step sizes and show an enhanced Richardson–Romberg extrapolation with improved bias representation, which brings ASGD estimates closer to the global optimum. Finally, we propose an online inference method and a bias-reduced variant for the extrapolated ASGD. Empirical confidence intervals are constructed and the coverage probabilities approach the nominal level as n grows.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag141" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-087-CR-005">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Causal inference with dyadic data in randomized experiments</h3>
+<p>Yilin Li; Lu Deng; Yong Wang; Wang Miao</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag140</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag140" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag140" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Causal inference with dyadic data in randomized experiments</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag140 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Estimating treatment effects in networked settings is a central challenge in online controlled experiments, particularly on social media platforms. We investigate a scenario where the unit-level outcome of interest comprises a series of dyadic outcomes that record pairwise interactions between units, ranging from point-to-point messaging at the microscale to bilateral trade flows at the macroscale. Because the response is defined at the dyadic level, the treatment assigned to one unit can affect the outcomes of all dyads that involve it, inducing a form of network interference. We propose a design-based causal inference framework for randomized experiments with dyadic outcomes. Within this framework, we propose estimators of the global average treatment effect under Bernoulli, complete, and cluster randomization, derive the convergence rates, and establish a central limit theorem for Bernoulli randomization. We further construct a class of variance estimators that are asymptotically conservative and establish asymptotic confidence-interval guarantees under degree and variance-scale conditions. Numerical studies show that the proposed estimators can reduce bias and mean squared error relative to estimators based on unit-level outcomes in a range of finite-sample settings. We illustrate the methods using two large-scale online experiments, evaluating the impact of a recommendation algorithm and a calling feature.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag140" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-087-CR-006">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Nonparametric modelling of continuous-time Markov chains with scalable exact and approximate gradients</h3>
+<p>Filippo Monti; Xiang Ji; Yucai Shao; Marc A Suchard</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag138</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag138" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag138" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Nonparametric modelling of continuous-time Markov chains with scalable exact and approximate gradients</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag138 · 摘要来源：Crossref 元数据</p><p class="abstract-body">Inferring the infinitesimal rates of continuous-time Markov chains (CTMCs) is a central challenge in many scientific domains. This task is hindered by 3 factors: quadratic growth in the number of rates as the CTMC state space expands, strong dependencies among rates, and incomplete information for many transitions. We introduce a new Bayesian framework that flexibly models CTMC rates by incorporating covariates through Gaussian processes. This approach improves inference by integrating new information and deepens our understanding of CTMC stochastic behaviour by shedding light on potential external drivers. Unlike previous approaches limited to linear covariate effects, our method captures complex nonlinear relationships, enabling fuller use of covariate information and more accurate characterization of their influence. For efficient posterior inference, we employ Hamiltonian Monte Carlo. To avoid the prohibitive cost of repeated matrix-exponential derivatives under existing approaches, we develop 2 scalable strategies for exact and approximate gradient computation. Given N observations and K CTMC states, these strategies reduce the cost from O(NK3), with a substantial constant, to O(K3+NK2), with cheaper constants. We demonstrate the method in Bayesian phylogenetic and phylogeographic inference, showing strong performance on synthetic and real datasets and empirical quadratic scaling in K, even when N&lt;K.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag138" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article><article class="paper" id="REG-087-CR-007">
+<p class="kicker">Journal of the Royal Statistical Society Series B: Statistical Methodology · ONLINE_FIRST</p>
+<h3>Asymptotic theory of the quadratic assignment procedure for dyadic data analysis</h3>
+<p>Lei Shi; Peng Ding</p>
+<dl>
+<div><dt>卷期</dt><dd>V · I—</dd></div>
+<div><dt>门控</dt><dd>NEW_ARTICLE</dd></div>
+<div><dt>DOI</dt><dd>10.1093/jrsssb/qkag136</dd></div>
+<div><dt>证据层级</dt><dd>CROSSREF_METADATA</dd></div>
+</dl><p>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag136" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 2026-11-27 12:21 CST · 论文身份与出版状态证据</small></span>
+<span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag136" rel="noopener noreferrer">DOI</a><small>doi.org · 2026-11-27 12:21 CST · 规范化论文身份</small></span>
+</p>
+<details class="abstract-drawer"><summary>摘要（可展开，供朗读/NotebookLM）</summary><p class="kicker">论文题名</p><p><strong>Asymptotic theory of the quadratic assignment procedure for dyadic data analysis</strong></p><p class="abstract-meta">期刊：Journal of the Royal Statistical Society Series B: Statistical Methodology · DOI：10.1093/jrsssb/qkag136 · 摘要来源：Crossref 元数据</p><p class="abstract-body">The quadratic assignment procedure (QAP) is a popular tool for analysing dyadic data in medical and social sciences. To test the association between 2 dyadic measurements represented by 2 symmetric matrices, QAP calculates the p-value by permuting the units, or equivalently, by permuting the rows and columns of 1 matrix in the same way. Its extension to the regression setting, known as the multiple regression QAP, has also gained popularity, especially in psychometrics. However, the statistical theory for QAP has not been fully established in the literature. We fill the gap in this paper. We formulate the dyadic models underlying various QAPs. We derive (a) the asymptotic sampling distributions of some canonical test statistics and (b) the corresponding asymptotic permutation distributions induced by QAP under strong and weak null hypotheses. Task (a) relies on applying the theory of U-statistics, and task (b) relies on applying the theory of double-indexed permutation statistics. Our asymptotic theory combines tasks (a) and (b), and suggests that we must use properly studentized statistics in QAP to ensure that it is finite-sample exact under the strong null hypothesis and preserves the asymptotic type I error rate under the weak null hypothesis.</p><p class="abstract-meta"><span class="evidence"><a href="https://doi.org/10.1093/jrsssb/qkag136" rel="noopener noreferrer">官方论文页面</a><small>doi.org · 论文页面</small></span></p></details>
+<p class="back"><a href="#top">返回页首</a></p></article></section>
+</section>
+
+<section id="corrections"><h2>勘误与撤稿</h2>
+<p>本批新登记条目中未见新的勘误或撤稿公告（计数 0）。</p>
+</section>
+
+<section id="themes"><h2>主题与阅读路线</h2>
+<p>以下仅根据已取得的题名与摘要做主题归类，便于浏览；不补充未出现的方法、数据、结果或创新点。</p>
+<ul>
+<li><strong>地球观测与地理信息（JAG 发现源 V154/V155）</strong>：新登记覆盖遥感分类、冠层高度、农田边界与时间序列等。代表题名：AXIA: An Asymmetric X-modal Injection Architecture with pa…；GMAT: satellite image time-series crop classification via …；Global 30 m forest canopy height mapping through harmonize…。</li>
+<li><strong>模式识别与人工智能（IJPRAI 未来期/Online Ready）</strong>：本批新记录包含 12 月未来期与 Online Ready。代表题名：Guest Editorial for Part 1；A Knowledge-Augmented Large Language Model for Power Syste…；Masked Autoencoder with Noise-Adaptive Gated Attention for…。</li>
+<li><strong>统计方法（JRSS Series B Advance Articles）</strong>：新登记主要为 Advance Articles 与未编期发现源，官方目录待复核后才能作为完整期。代表题名：Functional principal component analysis for distribution-v…；Optimized conformal selection: powerful selective inferenc…；A response-adaptive multi-arm design for continuous endpoi…。</li>
+</ul></section>
+
+<section id="health"><h2>数据源健康</h2>
+<ul>
+<li>International Journal of Applied Earth Observation and Geoinformation：curl 与 Playwright 官方页均为 403 / Cloudflare 挑战；RSS 与 Crossref 仅作发现与元数据。源健康 <code>OFFICIAL_403_CLOUDFLARE</code>，结果 DEGRADED，不 claim。</li>
+<li>International Journal of Pattern Recognition and Artificial Intelligence：curl 与 Playwright 官方页均为 403 / Cloudflare 挑战；平台 RSS 与 Crossref 仅作发现源。源健康 <code>OFFICIAL_403_CLOUDFLARE</code>，结果 DEGRADED，不 claim。</li>
+<li>Journal of the Royal Statistical Society Series B: Statistical Methodology：curl 与 Playwright 官方页均为 403 / Cloudflare 挑战；Latest Issue RSS、Advance RSS 与 Crossref 仅作发现源。源健康 <code>OFFICIAL_403_CLOUDFLARE</code>，结果 DEGRADED，不 claim。</li>
+<li>科学网—地球科学（REG-100，信号源）：栏目页 https://news.sciencenet.cn/fieldlist.aspx?id=10 可达，仅作发现/交叉核验，不计入正式完成数。</li>
+<li>有界对账 4 项（limit=4，newly_enqueued=0）：REG-043 / REG-073 / REG-014 为 2026-08 起到期的 PENDING 月度检查点，本批保持原状态；REG-017 为 FAILED_RETRYABLE（attempt_count=69），保持 fail-closed。例外复核不替代当天任务。</li>
+<li>月末 31 日对账：已幂等执行 reconcile-month-end-audits --from-date 2026-11-26 --through-date 2026-11-26，audit_count=0，11 月无 31 日任务，未虚构。</li>
+</ul></section>
+<section id="audit"><h2>证据与审计信息</h2>
+<details open><summary>运行标识与计数</summary>
+<ul>
+<li>Run ID：<code>b95523a4-6574-47ac-b3bd-b4556b8e0bbd</code></li>
+<li>Commit ID：<code>DAILY-20261127-115947-b95523a4</code></li>
+<li>Brief ID：<code>DAILY-20261127</code></li>
+<li>去重抑制：632 · 增量复核：0 · 对账任务：4 · 官方源失败计数：3 · 降级期刊：3 · 勘误撤稿：0</li>
+<li>正式期刊：REG-027、REG-057、REG-087 · 辅助信号源：REG-100 · 本批不 claim 任何完整期（官方目录 403；发现源不得作为完整性证据）</li>
+<li>下一次计划扫描日：2026-11-28（第 28 组）· 扫前 health --strict PASS · 月度对账至昨日无漏扫（11 月无 31 日任务）</li>
+<li>摘要抽屉：共享渲染器=ON · 正式论文摘要 0/0 · 差异条目摘要 0/0 · 网络首发摘要 16/58</li>
+</ul></details></section>
+</main>
+</body>
+</html>
